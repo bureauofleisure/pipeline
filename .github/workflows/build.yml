@@ -1,0 +1,35 @@
+name: Build posts
+
+on:
+  push:
+    paths: ["batches/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-posts
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install pillow numpy opencv-python-headless
+      - name: Build slides
+        run: python build/build_posts.py
+      - name: Publish slides
+        run: |
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add docs
+          git diff --cached --quiet && echo "Nothing new" && exit 0
+          git commit -m "Build slides"
+          git push
