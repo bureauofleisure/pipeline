@@ -11,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "grade"))
 from PIL import ImageDraw  # noqa: E402
-from atlas_grade import _font, _soft_backing, card_slide, label, CREAM, INK, MARGIN  # noqa: E402
+from atlas_grade import _font, _fit, _soft_backing, card_slide, label, CREAM, INK, MARGIN  # noqa: E402
 
 BRAND = "BUREAU OF LEISURE"
 
@@ -35,15 +35,23 @@ def _top_line(img, left_text, credit, size=22):
 
 def cover_slide(img, index_no, place_line, word, credit):
     img = _top_line(img, f"{BRAND} NO. {index_no}", credit, size=24)
-    f1, f2 = _font(True, 38), _font(False, 28)
-    l1, l2 = place_line.upper(), f"IN A WORD: {word.upper()}"
-    w = max(f1.getlength(l1), f2.getlength(l2)) + 48
-    h = 38 + 14 + 28 + 40
+    max_w = img.size[0] - 2 * MARGIN - 48
+    # the place line shrinks, then wraps, so a long name never runs off the slide
+    lines, f1 = _fit(place_line.upper(), True, 38, max_w, 28)
+    f2 = _font(False, 28)
+    l2 = f"IN A WORD: {word.upper()}"
+    asc, desc = f1.getmetrics()
+    lh = asc + desc + 4
+    w = max(max(f1.getlength(l) for l in lines), f2.getlength(l2)) + 48
+    h = lh * len(lines) + 10 + 28 + 40
     x0, y0 = MARGIN, img.size[1] - MARGIN - h
     d = ImageDraw.Draw(img)
     d.rectangle((x0, y0, x0 + w, y0 + h), fill=CREAM)
-    d.text((x0 + 24, y0 + 18), l1, font=f1, fill=INK)
-    d.text((x0 + 24, y0 + 18 + 52), l2, font=f2, fill=INK)
+    y = y0 + 18
+    for l in lines:
+        d.text((x0 + 24, y), l, font=f1, fill=INK)
+        y += lh
+    d.text((x0 + 24, y + 6), l2, font=f2, fill=INK)
     return img
 
 
