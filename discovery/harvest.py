@@ -64,39 +64,122 @@ def parse_feed(body):
     return [i for i in items if i["link"]]
 
 
+def _stem(url):
+    """Filename with size/sequence suffixes stripped, so one project's gallery shares a stem."""
+    name = url.split("?")[0].rsplit("/", 1)[-1].lower()
+    name = re.sub(r"\.(jpe?g|png|webp)$", "", name)
+    name = re.sub(r"(_dezeen)?(_\d{3,4})?(_col|_sq\w*|_hero\d*|_featured|_\d+|-\d+x\d+|-scaled|-\d+)+$", "", name)
+    return name
+
+
 def images_from(page, base):
-    """Candidate photos, largest variant of each, with any width hint."""
+    """The article's own photos, largest variant of each.
+    1. Only the article body (inside <article>, or <main>, else the whole page).
+    2. Picks up src, data-src, data-lazy-src, srcset, data-srcset and direct <a href> to an image.
+    3. Keeps the largest cluster of filenames sharing a stem (a gallery), plus the og:image's cluster,
+       so related-article thumbnails are left behind."""
+    body = page
+    for tag in ("article", "main"):
+        m = re.search(rf"<{tag}[\s>].*?</{tag}>", page, re.S | re.I)
+        if m and len(m.group(0)) > 2000:
+            body = m.group(0)
+            break
+    og = None
+    m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page)
+    if m:
+        og = urljoin(base, html.unescape(m.group(1)))
     found = {}
-    for m in re.finditer(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page):
-        found.setdefault(urljoin(base, html.unescape(m.group(1))), 0)
-    for m in re.finditer(r'<img[^>]+>', page):
+
+    def add(u, w):
+        u = urljoin(base, html.unescape(u.strip()))
+        if not re.search(r"\.(jpe?g|png|webp)(\?|$)", u, re.I):
+            return
+        low = u.lower()
+        if any(x in low for x in ("logo", "icon", "avatar", "badge", "sprite", "advert", "/ads/", "gravatar")):
+            return
+        found[u] = max(found.get(u, 0), w)
+
+    for m in re.finditer(r"<img[^>]+>", body):
         tag = m.group(0)
-        srcset = re.search(r'srcset=["\']([^"\']+)', tag)
-        best, best_w = None, 0
-        if srcset:
-            for part in srcset.group(1).split(","):
-                bits = part.strip().split()
-                if not bits:
-                    continue
-                w = int(bits[1][:-1]) if len(bits) > 1 and bits[1].endswith("w") and bits[1][:-1].isdigit() else 0
-                if w >= best_w:
-                    best, best_w = bits[0], w
-        if not best:
-            src = re.search(r'\ssrc=["\']([^"\']+)', tag)
-            best = src.group(1) if src else None
-            wm = re.search(r'\swidth=["\']?(\d+)', tag)
-            best_w = int(wm.group(1)) if wm else 0
-        if best and not best.startswith("data:"):
-            u = urljoin(base, html.unescape(best))
-            if re.search(r"\.(jpe?g|png|webp)(\?|$)", u, re.I) and "logo" not in u.lower() and "icon" not in u.lower():
-                found[u] = max(found.get(u, 0), best_w)
-    return [{"url": u, "width_hint": w} for u, w in found.items()][:40]
+        for attr in ("srcset", "data-srcset", "data-lazy-srcset"):
+            ss = re.search(attr + r'=["\']([^"\']+)', tag)
+            if ss:
+                for part in ss.group(1).split(","):
+                    bits = part.strip().split()
+                    if bits:
+                        w = int(bits[1][:-1]) if len(bits) > 1 and bits[1][:-1].isdigit() else 0
+                        add(bits[0], w)
+        for attr in ("data-src", "data-lazy-src", "data-original", "src"):
+            sv = re.search(r"\s" + attr + r'=["\']([^"\']+)', tag)
+            if sv and not sv.group(1).startswith("data:"):
+                wm = re.search(r'\swidth=["\']?(\d+)', tag)
+                add(sv.group(1), int(wm.group(1)) if wm else 0)
+    for m in re.finditer(r'<a[^>]+href=["\']([^"\']+\.(?:jpe?g|png|webp))["\']', body, re.I):
+        add(m.group(1), 0)
+
+    if not found:
+        return []
+    clusters = {}
+    for u in found:
+        clusters.setdefault(_stem(u), []).append(u)
+    keep = set()
+    biggest = max(clusters.values(), key=len)
+    if len(biggest) >= 3:
+        keep.update(biggest)
+    if og:
+        keep.update(clusters.get(_stem(og), []))
+        keep.add(og)
+    if not keep:
+        keep = set(found)
+    # Dezeen serves a 2364-wide version of every gallery image; prefer it
+    out = []
+    for u in sorted(keep):
+        if "dezeen.com" in u:
+            u2 = re.sub(r"_dezeen_(\d{3,4})_", "_dezeen_2364_", u)
+            u2 = re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u2)
+            out.append({"url": u2, "width_hint": 2364 if "_2364_" in u2 else found.get(u, 0)})
+        else:
+            out.append({"url": re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u) if "wp-content" in u else u,
+                        "width_hint": found.get(u, 0)})
+    return out[:40]
+
+
+def harvest_links(links, label="shortlist"):
+    """Re-harvest a fixed list of article links (used after a review picks its shortlist)."""
+    out = []
+    for link in links:
+        rec = {"link": link}
+        try:
+            page = get(link)
+            text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
+            text = html.unescape(re.sub(r"<[^>]+>", " ", text))
+            text = re.sub(r"\s+", " ", text)
+            t = re.search(r"<title>(.*?)</title>", page, re.S)
+            rec["title"] = html.unescape(t.group(1).strip()) if t else ""
+            rec["text"] = text[:6000]
+            rec["photos"] = images_from(page, link)
+            rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:8]
+            rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:2500])})
+        except Exception as e:  # noqa: BLE001
+            rec["page_error"] = type(e).__name__
+        out.append(rec)
+        time.sleep(0.4)
+    os.makedirs(os.path.join(HERE, "harvest"), exist_ok=True)
+    path = os.path.join(HERE, "harvest", f"{label}.json")
+    json.dump({"harvested": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "items": out}, open(path, "w"), indent=1)
+    print(f"{len(out)} links harvested to {path}")
 
 
 def main():
+    shortlist = os.path.join(HERE, "shortlist.json")
+    if os.environ.get("HARVEST_SHORTLIST") and os.path.exists(shortlist):
+        harvest_links(json.load(open(shortlist))["links"])
+        return
     src = json.load(open(os.path.join(HERE, "sources.json")))["sources"]
     out, pages = [], 0
     for s in src:
+        if s.get("disabled") or not s.get("url"):
+            continue
         if not s.get("feed"):
             continue
         try:

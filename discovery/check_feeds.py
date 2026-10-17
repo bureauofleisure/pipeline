@@ -33,6 +33,8 @@ def main():
     src = json.load(open(os.path.join(HERE, "sources.json")))["sources"]
     report = []
     for s in src:
+        if s.get("disabled") or not s.get("url"):
+            continue
         row = {"name": s["name"], "tier": s["tier"], "category": s["category"], "site": None, "feed": None, "items": 0}
         try:
             code, _ = get(s["url"])

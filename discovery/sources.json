@@ -1,122 +1,950 @@
 {
-  "_about": "Bureau of Leisure source list v1. tier 1 = gives full-size photos with credits; tier 2 = leads and sometimes photos; tier 3 = leads only, never photos. Every lead is routed to a tier 1 source for photos. 'feed' is checked by check_feeds.py on every run; a broken feed is reported, never silently skipped. 'archive' = worth mining back through the years, since new means new to most people.",
-  "categories": {
-    "studio": "Design studio portfolios. Best photos, credited, curated by the makers.",
-    "photographer": "Architecture and interiors photographers. Full-size and beautiful by definition.",
-    "press_room": "Hotel group press rooms. High-resolution photos intended for editorial use.",
-    "design_press": "Design and architecture press. Widest net; photos often resized, so leads first.",
-    "awards": "Design award programmes. Pre-filtered for quality.",
-    "city_press": "City openings press. What is new; poor photos; leads only.",
-    "leisure": "Clubs, baths, pools, lidos. The thin category, so it gets its own feeds.",
-    "historic": "Preserved and historic places. The nostalgia supply.",
-    "booking": "Curated hotel booking sites with big photos."
+ "_about": "Bureau of Leisure source list v1. tier 1 = gives full-size photos with credits; tier 2 = leads and sometimes photos; tier 3 = leads only, never photos. Every lead is routed to a tier 1 source for photos. 'feed' is checked by check_feeds.py on every run; a broken feed is reported, never silently skipped. 'archive' = worth mining back through the years, since new means new to most people.",
+ "categories": {
+  "studio": "Design studio portfolios. Best photos, credited, curated by the makers.",
+  "photographer": "Architecture and interiors photographers. Full-size and beautiful by definition.",
+  "press_room": "Hotel group press rooms. High-resolution photos intended for editorial use.",
+  "design_press": "Design and architecture press. Widest net; photos often resized, so leads first.",
+  "awards": "Design award programmes. Pre-filtered for quality.",
+  "city_press": "City openings press. What is new; poor photos; leads only.",
+  "leisure": "Clubs, baths, pools, lidos. The thin category, so it gets its own feeds.",
+  "historic": "Preserved and historic places. The nostalgia supply.",
+  "booking": "Curated hotel booking sites with big photos."
+ },
+ "sources": [
+  {
+   "name": "Dezeen interiors",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.dezeen.com/interiors/",
+   "feed": "https://www.dezeen.com/interiors/feed/",
+   "archive": true,
+   "notes": "Also tag pages: /tag/hotels/, /tag/restaurants/, /tag/bars/. Labels renders; skip anything marked visualisation."
   },
-  "sources": [
-    {"name": "Dezeen interiors", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.dezeen.com/interiors/", "feed": "https://www.dezeen.com/interiors/feed/", "archive": true, "notes": "Also tag pages: /tag/hotels/, /tag/restaurants/, /tag/bars/. Labels renders; skip anything marked visualisation."},
-    {"name": "Dezeen hotels", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.dezeen.com/tag/hotels/", "feed": "https://www.dezeen.com/tag/hotels/feed/", "archive": true},
-    {"name": "Dezeen bars", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.dezeen.com/tag/bars/", "feed": "https://www.dezeen.com/tag/bars/feed/", "archive": true},
-    {"name": "Dezeen restaurants", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.dezeen.com/tag/restaurants/", "feed": "https://www.dezeen.com/tag/restaurants/feed/", "archive": true},
-    {"name": "Yellowtrace", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.yellowtrace.com.au/", "feed": "https://www.yellowtrace.com.au/feed/", "archive": true, "notes": "Strong on hospitality and nostalgic interiors. Feed verified 2026-10-16 but malformed; parser must be lenient."},
-    {"name": "Hospitality Design", "category": "design_press", "tier": 2, "region": "us", "url": "https://hospitalitydesign.com/", "feed": "https://hospitalitydesign.com/feed/", "archive": true, "notes": "US hotel and restaurant projects, names designers. Verified 2026-10-16."},
-    {"name": "Sight Unseen", "category": "design_press", "tier": 2, "region": "us", "url": "https://www.sightunseen.com/", "feed": "https://www.sightunseen.com/feed/", "archive": true, "notes": "Verified 2026-10-16."},
-    {"name": "The Spaces", "category": "design_press", "tier": 2, "region": "global", "url": "https://thespaces.com/", "feed": "https://thespaces.com/feed/", "archive": true, "notes": "Verified 2026-10-16."},
-    {"name": "Wallpaper", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.wallpaper.com/travel", "feed": "https://www.wallpaper.com/feed", "archive": true},
-    {"name": "Architectural Digest", "category": "design_press", "tier": 2, "region": "us", "url": "https://www.architecturaldigest.com/", "feed": "https://www.architecturaldigest.com/feed/rss", "archive": true, "notes": "AD100 list is a yearly studio shortlist."},
-    {"name": "Elle Decor", "category": "design_press", "tier": 2, "region": "us", "url": "https://www.elledecor.com/", "feed": "https://www.elledecor.com/rss/all.xml/", "archive": true},
-    {"name": "Frame", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.frameweb.com/", "feed": "https://www.frameweb.com/rss", "archive": true},
-    {"name": "Sleeper", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.sleepermagazine.com/", "feed": "https://www.sleepermagazine.com/feed/", "archive": true, "notes": "Hotel design trade press. Names designers and photographers."},
-    {"name": "Interior Design magazine", "category": "design_press", "tier": 2, "region": "us", "url": "https://interiordesign.net/", "feed": "https://interiordesign.net/feed/", "archive": true},
-    {"name": "Designboom architecture", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.designboom.com/architecture/", "feed": "https://www.designboom.com/architecture/feed/", "archive": true, "notes": "Heavy on renders; the AI and render filter matters most here."},
-    {"name": "ArchDaily", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.archdaily.com/", "feed": "https://www.archdaily.com/feed", "archive": true, "notes": "Project pages list photographer and full image galleries. Filter to hospitality categories."},
-    {"name": "Design Milk", "category": "design_press", "tier": 2, "region": "us", "url": "https://design-milk.com/", "feed": "https://design-milk.com/feed/", "archive": true},
-    {"name": "Cereal", "category": "design_press", "tier": 2, "region": "global", "url": "https://readcereal.com/", "feed": null, "archive": true, "notes": "No feed. Crawl the places section."},
-    {"name": "Monocle", "category": "design_press", "tier": 3, "region": "global", "url": "https://monocle.com/", "feed": null, "archive": true, "notes": "Leads only; paywalled."},
-    {"name": "Hotel Designs", "category": "design_press", "tier": 2, "region": "global", "url": "https://www.hoteldesigns.net/", "feed": "https://www.hoteldesigns.net/feed/", "archive": true},
-
-    {"name": "Roman and Williams", "category": "studio", "tier": 1, "region": "us", "url": "https://www.romanandwilliams.com/", "feed": null, "archive": true},
-    {"name": "Studio Chzon (Dorothee Meilichzon)", "category": "studio", "tier": 1, "region": "global", "url": "https://chzon.com/", "feed": null, "archive": true},
-    {"name": "Dimorestudio", "category": "studio", "tier": 1, "region": "global", "url": "https://dimorestudio.eu/", "feed": null, "archive": true},
-    {"name": "Kelly Wearstler", "category": "studio", "tier": 1, "region": "us", "url": "https://www.kellywearstler.com/", "feed": null, "archive": true},
-    {"name": "Workstead", "category": "studio", "tier": 1, "region": "us", "url": "https://www.workstead.com/", "feed": null, "archive": true},
-    {"name": "Home Studios", "category": "studio", "tier": 1, "region": "us", "url": "https://homestudios.nyc/", "feed": null, "archive": true},
-    {"name": "Islyn Studio", "category": "studio", "tier": 1, "region": "us", "url": "https://islynstudio.com/", "feed": null, "archive": true},
-    {"name": "Fettle", "category": "studio", "tier": 1, "region": "global", "url": "https://fettle.co.uk/", "feed": null, "archive": true},
-    {"name": "Yabu Pushelberg", "category": "studio", "tier": 1, "region": "global", "url": "https://www.yabupushelberg.com/", "feed": null, "archive": true},
-    {"name": "Child Studio", "category": "studio", "tier": 1, "region": "global", "url": "https://child-studio.com/", "feed": null, "archive": true},
-    {"name": "Lore Group", "category": "studio", "tier": 1, "region": "global", "url": "https://www.loregroup.com/", "feed": null, "archive": true, "notes": "Hotel group with in-house design; Hotel Park Ave, Sea Containers, Pulitzer."},
-    {"name": "Martin Brudnizki Design Studio", "category": "studio", "tier": 1, "region": "global", "url": "https://mbds.com/", "feed": null, "archive": true},
-    {"name": "Post Company", "category": "studio", "tier": 1, "region": "us", "url": "https://postcompany.co/", "feed": null, "archive": true},
-    {"name": "Studio Robert McKinley", "category": "studio", "tier": 1, "region": "us", "url": "https://studiorobertmckinley.com/", "feed": null, "archive": true},
-    {"name": "Sella Concept", "category": "studio", "tier": 1, "region": "global", "url": "https://sella-concept.com/", "feed": null, "archive": true},
-    {"name": "Giancarlo Valle", "category": "studio", "tier": 1, "region": "us", "url": "https://giancarlovalle.com/", "feed": null, "archive": true},
-    {"name": "Beata Heuman", "category": "studio", "tier": 1, "region": "global", "url": "https://www.beataheuman.com/", "feed": null, "archive": true},
-    {"name": "GRT Architects", "category": "studio", "tier": 1, "region": "us", "url": "https://grtarchitects.com/", "feed": null, "archive": true},
-    {"name": "Ash", "category": "studio", "tier": 1, "region": "us", "url": "https://ashnyc.com/", "feed": null, "archive": true},
-    {"name": "Studio Paolo Ferrari", "category": "studio", "tier": 1, "region": "global", "url": "https://studiopaoloferrari.com/", "feed": null, "archive": true},
-    {"name": "Hollie Bowden", "category": "studio", "tier": 1, "region": "global", "url": "https://holliebowden.com/", "feed": null, "archive": true},
-    {"name": "Studio KO", "category": "studio", "tier": 1, "region": "global", "url": "https://www.studioko.fr/", "feed": null, "archive": true},
-    {"name": "Charles Zana", "category": "studio", "tier": 1, "region": "global", "url": "https://www.charleszana.com/", "feed": null, "archive": true},
-    {"name": "Mazzarini & Co", "category": "studio", "tier": 1, "region": "us", "url": "https://mazzarini.co/", "feed": null, "archive": true},
-    {"name": "Bureau of Places candidates: AD100 studios", "category": "studio", "tier": 1, "region": "global", "url": "https://www.architecturaldigest.com/ad100", "feed": null, "archive": true, "notes": "Yearly list; each studio's own site is the photo source. Expand the studio list from here twice a year."},
-
-    {"name": "Adrian Gaut", "category": "photographer", "tier": 1, "region": "us", "url": "https://adriangaut.com/", "feed": null, "archive": true},
-    {"name": "Nicole Franzen", "category": "photographer", "tier": 1, "region": "us", "url": "https://www.nicolefranzen.com/", "feed": null, "archive": true},
-    {"name": "Stephen Kent Johnson", "category": "photographer", "tier": 1, "region": "us", "url": "https://stephenkentjohnson.com/", "feed": null, "archive": true},
-    {"name": "William Jess Laird", "category": "photographer", "tier": 1, "region": "us", "url": "https://williamjesslaird.com/", "feed": null, "archive": true},
-    {"name": "Christian Harder", "category": "photographer", "tier": 1, "region": "us", "url": "https://christianharder.com/", "feed": null, "archive": true},
-    {"name": "Matthew Williams", "category": "photographer", "tier": 1, "region": "us", "url": "https://matthewwilliamsphotographer.com/", "feed": null, "archive": true},
-    {"name": "Salva Lopez", "category": "photographer", "tier": 1, "region": "global", "url": "https://salvalopez.com/", "feed": null, "archive": true},
-    {"name": "Robert Rieger", "category": "photographer", "tier": 1, "region": "global", "url": "https://robertrieger.com/", "feed": null, "archive": true},
-    {"name": "Yoshihiro Makino", "category": "photographer", "tier": 1, "region": "us", "url": "https://yoshihiromakino.com/", "feed": null, "archive": true},
-    {"name": "Simon Watson", "category": "photographer", "tier": 1, "region": "global", "url": "https://simonwatson.com/", "feed": null, "archive": true},
-    {"name": "Nathan Browning", "category": "photographer", "tier": 1, "region": "global", "url": "https://nathanbrowning.com/", "feed": null, "archive": true},
-
-    {"name": "Ace Hotel press", "category": "press_room", "tier": 1, "region": "us", "url": "https://acehotel.com/press/", "feed": null, "archive": true},
-    {"name": "Aman press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.aman.com/press", "feed": null, "archive": true},
-    {"name": "Belmond press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.belmond.com/press", "feed": null, "archive": true},
-    {"name": "Six Senses press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.sixsenses.com/en/press", "feed": null, "archive": true},
-    {"name": "Soho House press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.sohohouse.com/press", "feed": null, "archive": true},
-    {"name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.ennismore.com/press", "feed": null, "archive": true},
-    {"name": "Auberge Resorts press", "category": "press_room", "tier": 1, "region": "us", "url": "https://aubergeresorts.com/press/", "feed": null, "archive": true},
-    {"name": "Proper Hotels press", "category": "press_room", "tier": 1, "region": "us", "url": "https://www.properhotel.com/press/", "feed": null, "archive": true, "notes": "Kelly Wearstler interiors."},
-    {"name": "Palisociety press", "category": "press_room", "tier": 1, "region": "us", "url": "https://www.palisociety.com/press", "feed": null, "archive": true},
-    {"name": "Firmdale press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.firmdalehotels.com/press/", "feed": null, "archive": true},
-    {"name": "Rosewood press", "category": "press_room", "tier": 1, "region": "global", "url": "https://www.rosewoodhotels.com/en/press", "feed": null, "archive": true},
-    {"name": "Standard Hotels press", "category": "press_room", "tier": 1, "region": "us", "url": "https://www.standardhotels.com/press", "feed": null, "archive": true},
-    {"name": "Kimpton press", "category": "press_room", "tier": 1, "region": "us", "url": "https://www.ihg.com/kimptonhotels/content/us/en/press", "feed": null, "archive": true},
-
-    {"name": "Design Hotels", "category": "booking", "tier": 1, "region": "global", "url": "https://www.designhotels.com/", "feed": null, "archive": true, "notes": "Member hotels are pre-curated for design. Big galleries with credits."},
-    {"name": "Tablet Hotels", "category": "booking", "tier": 2, "region": "global", "url": "https://www.tablethotels.com/", "feed": null, "archive": true},
-    {"name": "Mr & Mrs Smith", "category": "booking", "tier": 2, "region": "global", "url": "https://www.mrandmrssmith.com/", "feed": null, "archive": true},
-
-    {"name": "AHEAD Awards", "category": "awards", "tier": 2, "region": "global", "url": "https://www.aheadawards.com/", "feed": null, "archive": true, "notes": "Hospitality design awards by region. Shortlists are hundreds of candidates a year."},
-    {"name": "Dezeen Awards hospitality", "category": "awards", "tier": 2, "region": "global", "url": "https://www.dezeen.com/awards/", "feed": null, "archive": true},
-    {"name": "Restaurant & Bar Design Awards", "category": "awards", "tier": 2, "region": "global", "url": "https://restaurantandbardesignawards.com/", "feed": null, "archive": true},
-    {"name": "Frame Awards", "category": "awards", "tier": 2, "region": "global", "url": "https://www.frameweb.com/awards", "feed": null, "archive": true},
-    {"name": "Prix Versailles", "category": "awards", "tier": 2, "region": "global", "url": "https://www.prix-versailles.com/", "feed": null, "archive": true, "notes": "Hotels, restaurants, shops."},
-    {"name": "Surface Travel Awards", "category": "awards", "tier": 2, "region": "global", "url": "https://www.surfacemag.com/", "feed": null, "archive": true},
-
-    {"name": "The Infatuation New York", "category": "city_press", "tier": 3, "region": "us-nyc", "url": "https://www.theinfatuation.com/new-york", "feed": null, "archive": false},
-    {"name": "The Infatuation Los Angeles", "category": "city_press", "tier": 3, "region": "us-la", "url": "https://www.theinfatuation.com/los-angeles", "feed": null, "archive": false},
-    {"name": "The Infatuation Miami", "category": "city_press", "tier": 3, "region": "us-miami", "url": "https://www.theinfatuation.com/miami", "feed": null, "archive": false},
-    {"name": "The Infatuation Austin", "category": "city_press", "tier": 3, "region": "us-austin", "url": "https://www.theinfatuation.com/austin", "feed": null, "archive": false},
-    {"name": "Eater New York", "category": "city_press", "tier": 3, "region": "us-nyc", "url": "https://ny.eater.com/", "feed": "https://ny.eater.com/rss/index.xml", "archive": false, "notes": "Site blocks automated fetching from some networks; the Actions runner should be tested."},
-    {"name": "Eater Los Angeles", "category": "city_press", "tier": 3, "region": "us-la", "url": "https://la.eater.com/", "feed": "https://la.eater.com/rss/index.xml", "archive": false},
-    {"name": "Eater Miami", "category": "city_press", "tier": 3, "region": "us-miami", "url": "https://miami.eater.com/", "feed": "https://miami.eater.com/rss/index.xml", "archive": false},
-    {"name": "Eater Austin", "category": "city_press", "tier": 3, "region": "us-austin", "url": "https://austin.eater.com/", "feed": "https://austin.eater.com/rss/index.xml", "archive": false},
-    {"name": "Time Out New York", "category": "city_press", "tier": 3, "region": "us-nyc", "url": "https://www.timeout.com/newyork", "feed": null, "archive": false},
-    {"name": "Resy", "category": "city_press", "tier": 3, "region": "us", "url": "https://blog.resy.com/", "feed": "https://blog.resy.com/feed/", "archive": false},
-    {"name": "Conde Nast Traveler", "category": "city_press", "tier": 3, "region": "global", "url": "https://www.cntraveler.com/", "feed": "https://www.cntraveler.com/feed/rss", "archive": true, "notes": "Hot List each spring is a hotel shortlist."},
-    {"name": "Travel + Leisure", "category": "city_press", "tier": 3, "region": "global", "url": "https://www.travelandleisure.com/", "feed": null, "archive": true, "notes": "It List each year."},
-
-    {"name": "Culture of Bathing", "category": "leisure", "tier": 3, "region": "global", "url": "https://cultureofbathing.substack.com/", "feed": "https://cultureofbathing.substack.com/feed", "archive": true, "notes": "Bathhouses, saunas, pools."},
-    {"name": "Soho House clubs", "category": "leisure", "tier": 1, "region": "global", "url": "https://www.sohohouse.com/houses", "feed": null, "archive": true},
-    {"name": "Historic lidos and pools", "category": "leisure", "tier": 3, "region": "global", "url": "https://www.lidoguide.co.uk/", "feed": null, "archive": true, "notes": "Leads; photos from press or Wikimedia."},
-    {"name": "Racquet and swim clubs", "category": "leisure", "tier": 3, "region": "us", "url": "https://www.classic-racquet-clubs.com/", "feed": null, "archive": true, "notes": "Placeholder: the weekly job searches for new members' clubs, racquet clubs and bathhouses by city instead of a fixed feed."},
-
-    {"name": "Historic Hotels of America", "category": "historic", "tier": 2, "region": "us", "url": "https://www.historichotels.org/", "feed": null, "archive": true, "notes": "Hundreds of preserved US hotels, many with professional galleries."},
-    {"name": "Wikimedia Commons", "category": "historic", "tier": 1, "region": "global", "url": "https://commons.wikimedia.org/", "feed": null, "archive": true, "notes": "Free-licence, often high-resolution photos of landmark interiors. Credit the photographer and licence as the file page states."},
-    {"name": "Untapped New York", "category": "historic", "tier": 3, "region": "us-nyc", "url": "https://untappedcities.com/", "feed": "https://untappedcities.com/feed/", "archive": true},
-    {"name": "Counter Culture diners (James and Karla Murray)", "category": "historic", "tier": 3, "region": "us-nyc", "url": "https://jamesandkarlamurray.com/", "feed": null, "archive": true, "notes": "Classic NYC diners and storefronts. Leads for the nostalgia supply."}
-  ]
+  {
+   "name": "Dezeen hotels",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.dezeen.com/tag/hotels/",
+   "feed": "https://www.dezeen.com/tag/hotels/feed/",
+   "archive": true
+  },
+  {
+   "name": "Dezeen bars",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.dezeen.com/tag/bars/",
+   "feed": "https://www.dezeen.com/tag/bars/feed/",
+   "archive": true
+  },
+  {
+   "name": "Dezeen restaurants",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.dezeen.com/tag/restaurants/",
+   "feed": "https://www.dezeen.com/tag/restaurants/feed/",
+   "archive": true
+  },
+  {
+   "name": "Yellowtrace",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.yellowtrace.com.au/",
+   "feed": "https://www.yellowtrace.com.au/feed/",
+   "archive": true,
+   "notes": "Strong on hospitality and nostalgic interiors. Feed verified 2026-10-16 but malformed; parser must be lenient."
+  },
+  {
+   "name": "Hospitality Design",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://hospitalitydesign.com/",
+   "feed": "https://hospitalitydesign.com/feed/",
+   "archive": true,
+   "notes": "Blocks bots (403). Re-enable if a feed route is found.",
+   "disabled": true
+  },
+  {
+   "name": "Sight Unseen",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://www.sightunseen.com/",
+   "feed": "https://www.sightunseen.com/feed/",
+   "archive": true,
+   "notes": "Verified 2026-10-16."
+  },
+  {
+   "name": "The Spaces",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://thespaces.com/",
+   "feed": "https://thespaces.com/feed/",
+   "archive": true,
+   "notes": "Verified 2026-10-16."
+  },
+  {
+   "name": "Wallpaper",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.wallpaper.com/travel",
+   "feed": "https://www.wallpaper.com/feeds.xml",
+   "archive": true
+  },
+  {
+   "name": "Architectural Digest",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://www.architecturaldigest.com/",
+   "feed": "https://www.architecturaldigest.com/feed/rss",
+   "archive": true,
+   "notes": "AD100 list is a yearly studio shortlist."
+  },
+  {
+   "name": "Elle Decor",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://www.elledecor.com/",
+   "feed": "https://www.elledecor.com/rss/all.xml/",
+   "archive": true
+  },
+  {
+   "name": "Frame",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.frameweb.com/",
+   "feed": "https://www.frameweb.com/rss",
+   "archive": true
+  },
+  {
+   "name": "Sleeper",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.sleepermagazine.com/",
+   "feed": "https://www.sleepermagazine.com/feed/",
+   "archive": true,
+   "notes": "Hotel design trade press. Names designers and photographers."
+  },
+  {
+   "name": "Interior Design magazine",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://interiordesign.net/",
+   "feed": "https://interiordesign.net/feed/",
+   "archive": true
+  },
+  {
+   "name": "Designboom architecture",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.designboom.com/architecture/",
+   "feed": "https://www.designboom.com/architecture/feed/",
+   "archive": true,
+   "notes": "Heavy on renders; the AI and render filter matters most here."
+  },
+  {
+   "name": "ArchDaily",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.archdaily.com/",
+   "feed": "https://www.archdaily.com/feed",
+   "archive": true,
+   "notes": "Project pages list photographer and full image galleries. Filter to hospitality categories."
+  },
+  {
+   "name": "Design Milk",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "url": "https://design-milk.com/",
+   "feed": "https://design-milk.com/feed/",
+   "archive": true
+  },
+  {
+   "name": "Cereal",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://readcereal.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "No feed. Crawl the places section."
+  },
+  {
+   "name": "Monocle",
+   "category": "design_press",
+   "tier": 3,
+   "region": "global",
+   "url": "https://monocle.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Leads only; paywalled."
+  },
+  {
+   "name": "Hotel Designs",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.hoteldesigns.net/",
+   "feed": "https://www.hoteldesigns.net/feed/",
+   "archive": true
+  },
+  {
+   "name": "Roman and Williams",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.romanandwilliams.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Studio Chzon (Dorothee Meilichzon)",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://chzon.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Dimorestudio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://dimorestudio.eu/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Kelly Wearstler",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.kellywearstler.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Workstead",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.workstead.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Home Studios",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://homestudios.nyc/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Islyn Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://islynstudio.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Fettle",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.fettle.design/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Yabu Pushelberg",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.yabupushelberg.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Child Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://child-studio.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Official domain not found by probe. Find via Instagram bio, then enable."
+  },
+  {
+   "name": "Lore Group",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.loregroup.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Hotel group with in-house design; Hotel Park Ave, Sea Containers, Pulitzer."
+  },
+  {
+   "name": "Martin Brudnizki Design Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://mbds.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Post Company",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://postcompany.co/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Studio Robert McKinley",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.robertmckinley.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Sella Concept",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://sella-concept.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Giancarlo Valle",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://giancarlovalle.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Beata Heuman",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.beataheuman.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "GRT Architects",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://grtarchitects.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Ash",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://ashnyc.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Studio Paolo Ferrari",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://studiopaoloferrari.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Official domain not found by probe. Find via Instagram bio, then enable."
+  },
+  {
+   "name": "Hollie Bowden",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://holliebowden.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Studio KO",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.studioko.fr/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Charles Zana",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.charleszana.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Mazzarini & Co",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://mazzarini.co/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Bureau of Places candidates: AD100 studios",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.architecturaldigest.com/ad100",
+   "feed": null,
+   "archive": true,
+   "notes": "Yearly list; each studio's own site is the photo source. Expand the studio list from here twice a year."
+  },
+  {
+   "name": "Adrian Gaut",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://adriangaut.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Official domain not found by probe."
+  },
+  {
+   "name": "Nicole Franzen",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.nicolefranzen.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Stephen Kent Johnson",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://stephenkentjohnson.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "William Jess Laird",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://williamjesslaird.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Christian Harder",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://christianharder.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Site refuses bot TLS. Credit by name only."
+  },
+  {
+   "name": "Matthew Williams",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://matthewwilliamsphotographer.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Salva Lopez",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://salvalopez.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Robert Rieger",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://robertrieger.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Yoshihiro Makino",
+   "category": "photographer",
+   "tier": 1,
+   "region": "us",
+   "url": "https://yoshihiromakino.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Official domain not found by probe."
+  },
+  {
+   "name": "Simon Watson",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://simonwatson.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Nathan Browning",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://nathanbrowning.com/",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "Site refuses bot TLS. Credit by name only."
+  },
+  {
+   "name": "Ace Hotel press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://acehotel.com/press/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Aman press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.aman.com/press",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Belmond press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.belmond.com/en",
+   "feed": null,
+   "archive": true,
+   "notes": "No press room reachable by bot; mine the hotel pages."
+  },
+  {
+   "name": "Six Senses press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.sixsenses.com/en/press",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "403 to bots."
+  },
+  {
+   "name": "Soho House press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.sohohouse.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Press room blocked; mine house pages."
+  },
+  {
+   "name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.ennismore.com/press",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Auberge Resorts press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://aubergeresorts.com/press/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Proper Hotels press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.properhotel.com/press/",
+   "feed": null,
+   "archive": true,
+   "notes": "Kelly Wearstler interiors."
+  },
+  {
+   "name": "Palisociety press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.palisociety.com/press",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Firmdale press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.firmdalehotels.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Press room blocked; mine hotel pages."
+  },
+  {
+   "name": "Rosewood press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.rosewoodhotels.com/en/press",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Standard Hotels press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.standardhotels.com/press",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "403 to bots."
+  },
+  {
+   "name": "Kimpton press",
+   "category": "press_room",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.ihg.com/kimptonhotels/content/us/en/press",
+   "feed": null,
+   "archive": true,
+   "disabled": true,
+   "notes": "403 to bots."
+  },
+  {
+   "name": "Design Hotels",
+   "category": "booking",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.designhotels.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Member hotels are pre-curated for design. Big galleries with credits."
+  },
+  {
+   "name": "Tablet Hotels",
+   "category": "booking",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.tablethotels.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Mr & Mrs Smith",
+   "category": "booking",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.mrandmrssmith.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "AHEAD Awards",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.aheadawards.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Hospitality design awards by region. Shortlists are hundreds of candidates a year."
+  },
+  {
+   "name": "Dezeen Awards hospitality",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.dezeen.com/awards/",
+   "feed": "https://www.dezeen.com/tag/dezeen-awards/feed/",
+   "archive": true
+  },
+  {
+   "name": "Restaurant & Bar Design Awards",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://restaurantandbardesignawards.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Frame Awards",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.frameweb.com/awards",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Prix Versailles",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.prix-versailles.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Hotels, restaurants, shops."
+  },
+  {
+   "name": "Surface Travel Awards",
+   "category": "awards",
+   "tier": 2,
+   "region": "global",
+   "url": "https://www.surfacemag.com/",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "The Infatuation New York",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-nyc",
+   "url": "https://www.theinfatuation.com/new-york",
+   "feed": null,
+   "archive": false
+  },
+  {
+   "name": "The Infatuation Los Angeles",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-la",
+   "url": "https://www.theinfatuation.com/los-angeles",
+   "feed": null,
+   "archive": false
+  },
+  {
+   "name": "The Infatuation Miami",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-miami",
+   "url": "https://www.theinfatuation.com/miami",
+   "feed": null,
+   "archive": false
+  },
+  {
+   "name": "The Infatuation Austin",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-austin",
+   "url": "https://www.theinfatuation.com/austin",
+   "feed": null,
+   "archive": false
+  },
+  {
+   "name": "Eater New York",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-nyc",
+   "url": "https://ny.eater.com/",
+   "feed": "https://ny.eater.com/rss/index.xml",
+   "archive": false,
+   "notes": "Site blocks automated fetching from some networks; the Actions runner should be tested."
+  },
+  {
+   "name": "Eater Los Angeles",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-la",
+   "url": "https://la.eater.com/",
+   "feed": "https://la.eater.com/rss/index.xml",
+   "archive": false
+  },
+  {
+   "name": "Eater Miami",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-miami",
+   "url": "https://miami.eater.com/",
+   "feed": "https://miami.eater.com/rss/index.xml",
+   "archive": false
+  },
+  {
+   "name": "Eater Austin",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-austin",
+   "url": "https://austin.eater.com/",
+   "feed": "https://austin.eater.com/rss/index.xml",
+   "archive": false
+  },
+  {
+   "name": "Time Out New York",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us-nyc",
+   "url": "https://www.timeout.com/newyork",
+   "feed": null,
+   "archive": false
+  },
+  {
+   "name": "Resy",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us",
+   "url": "https://blog.resy.com/",
+   "feed": "https://blog.resy.com/feed/",
+   "archive": false
+  },
+  {
+   "name": "Conde Nast Traveler",
+   "category": "city_press",
+   "tier": 3,
+   "region": "global",
+   "url": "https://www.cntraveler.com/",
+   "feed": "https://www.cntraveler.com/feed/rss",
+   "archive": true,
+   "notes": "Hot List each spring is a hotel shortlist."
+  },
+  {
+   "name": "Travel + Leisure",
+   "category": "city_press",
+   "tier": 3,
+   "region": "global",
+   "url": "https://www.travelandleisure.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "403 to bots. It List checked by hand each spring.",
+   "disabled": true
+  },
+  {
+   "name": "Culture of Bathing",
+   "category": "leisure",
+   "tier": 3,
+   "region": "global",
+   "url": "https://cultureofbathe-ing.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Substack redirects here. Verify by eye."
+  },
+  {
+   "name": "Soho House clubs",
+   "category": "leisure",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.sohohouse.com/houses",
+   "feed": null,
+   "archive": true
+  },
+  {
+   "name": "Historic lidos and pools",
+   "category": "leisure",
+   "tier": 3,
+   "region": "global",
+   "url": null,
+   "feed": null,
+   "archive": true,
+   "notes": "Replaced by a weekly city search: 'historic pool' 'bathhouse' 'lido' + city, run by the review job.",
+   "disabled": true
+  },
+  {
+   "name": "Racquet and swim clubs",
+   "category": "leisure",
+   "tier": 3,
+   "region": "us",
+   "url": null,
+   "feed": null,
+   "archive": true,
+   "notes": "Replaced by a weekly city search: 'racquet club' 'members club' 'swim club' interiors + city.",
+   "disabled": true
+  },
+  {
+   "name": "Historic Hotels of America",
+   "category": "historic",
+   "tier": 2,
+   "region": "us",
+   "url": "https://www.historichotels.org/",
+   "feed": null,
+   "archive": true,
+   "notes": "Hundreds of preserved US hotels, many with professional galleries."
+  },
+  {
+   "name": "Wikimedia Commons",
+   "category": "historic",
+   "tier": 1,
+   "region": "global",
+   "url": "https://commons.wikimedia.org/",
+   "feed": null,
+   "archive": true,
+   "notes": "Free-licence, often high-resolution photos of landmark interiors. Credit the photographer and licence as the file page states."
+  },
+  {
+   "name": "Untapped New York",
+   "category": "historic",
+   "tier": 3,
+   "region": "us-nyc",
+   "url": "https://untappedcities.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Feed 404. Site only."
+  },
+  {
+   "name": "Counter Culture diners (James and Karla Murray)",
+   "category": "historic",
+   "tier": 3,
+   "region": "us-nyc",
+   "url": "https://jamesandkarlamurray.com/",
+   "feed": null,
+   "archive": true,
+   "notes": "Classic NYC diners and storefronts. Leads for the nostalgia supply."
+  }
+ ]
 }

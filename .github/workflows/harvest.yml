@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "23 12 * * 1"    # Mondays 8:23am New York, after the source check
   workflow_dispatch:
+    inputs:
+      shortlist:
+        description: "Re-harvest discovery/shortlist.json only"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -18,6 +23,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: python discovery/harvest.py
+        env:
+          HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
       - name: Save the harvest
         run: |
           git config user.name "Bureau of Leisure"
