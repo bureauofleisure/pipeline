@@ -41,6 +41,11 @@ MAX_PHOTOS = 6
 # To be validated on the first real same-venue set.
 SET_L_SPREAD = 25.0
 SET_B_SPREAD = 12.0
+# Quality gate, before grading. No enlarging at all: the 4:5 crop must already be at least
+# 1080 x 1350. Soft or heavily compressed photos are rejected too.
+MIN_CROP = (1080, 1350)
+MIN_SHARPNESS = 60.0       # Laplacian variance at 1080 wide; sharp interiors score well over 100
+MAX_BLOCKINESS = 1.35      # JPEG 8-pixel block edges relative to neighbouring pixels
 BASE_URL = os.environ.get("PAGES_BASE_URL", "https://bureauofleisure.github.io/pipeline")
 UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"
 WORD_BANK = {w.strip().upper() for w in open(os.path.join(ROOT, "build", "word_bank.txt")) if w.strip()}
@@ -102,6 +107,26 @@ def is_duplicate(h, seen, max_bits=12):
     return any(int((h != s).sum()) <= max_bits for s in seen)
 
 
+def quality(raw, focal):
+    """Returns (ok, reason). Checks the 4:5 crop at output size, never enlarged."""
+    crop = _crop_45(raw, focal)
+    if crop.size[0] < MIN_CROP[0] or crop.size[1] < MIN_CROP[1]:
+        return False, f"too small ({crop.size[0]}x{crop.size[1]} after crop, need {MIN_CROP[0]}x{MIN_CROP[1]})"
+    g = np.asarray(crop.resize(MIN_CROP, Image.LANCZOS).convert("L"), dtype=np.float32)
+    sharp = cv2.Laplacian(g, cv2.CV_32F).var()
+    if sharp < MIN_SHARPNESS:
+        return False, f"too soft (sharpness {sharp:.0f}, need {MIN_SHARPNESS:.0f})"
+    # blockiness: differences across 8-pixel JPEG block boundaries vs inside blocks
+    gs = np.asarray(crop.convert("L"), dtype=np.float32)
+    dx = np.abs(np.diff(gs, axis=1))
+    at = dx[:, 7::8].mean()
+    inside = np.delete(dx, np.s_[7::8], axis=1).mean()
+    block = at / max(inside, 1e-6)
+    if block > MAX_BLOCKINESS:
+        return False, f"compression artifacts (blockiness {block:.2f})"
+    return True, ""
+
+
 def score(img):
     """Higher is better. Measured on the ungraded photo so grain does not count as sharpness."""
     g = np.asarray(img.convert("L"), dtype=np.float32)
@@ -153,6 +178,10 @@ def build_post(p, out_root):
             result["notes"].append(f"photo {i + 1} is a near-duplicate, dropped")
             continue
         seen.append(hs)
+        ok, why = quality(raw, focal)
+        if not ok:
+            result["notes"].append(f"photo {i + 1} rejected: {why}")
+            continue
         try:
             img = grade(raw, focal=focal, seed=i)
         except HoldForReview as e:
