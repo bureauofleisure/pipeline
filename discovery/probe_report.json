@@ -1,369 +1,81 @@
 {
- "probed": "2026-10-17T02:48:32Z",
+ "probed": "2026-10-17T23:55:55Z",
  "results": {
-  "Fettle": [
+  "Lorenzo Bongiovanni": [
    {
-    "url": "https://fettle.design/",
-    "error": "URLError: <urlopen error timed out>"
+    "url": "https://www.lorenzobongiovanni.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
    },
    {
-    "url": "https://www.fettle.design/",
+    "url": "https://lorenzobongiovanni.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://www.lorenzobongiovanni.net/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://lorenzobongiovanniphoto.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://www.lorenzobongiovanni.co/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   }
+  ],
+  "Bar Susanne": [
+   {
+    "url": "https://www.barsusanne.com/",
     "status": 200,
-    "final": "https://www.fettle.design/",
-    "kind": "html",
-    "bytes": 2963
-   },
-   {
-    "url": "https://fettle.co.uk/",
-    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn"
-   },
-   {
-    "url": "https://www.fettle-design.com/",
-    "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
-   }
-  ],
-  "Child Studio": [
-   {
-    "url": "https://child-studio.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://www.child-studio.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://child-studio.co.uk/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://childstudio.co.uk/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   }
-  ],
-  "Studio Robert McKinley": [
-   {
-    "url": "https://www.studiorobertmckinley.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://studiorobertmckinley.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://www.robertmckinley.com/",
-    "status": 200,
-    "final": "https://www.robertmckinley.com/",
-    "kind": "html",
-    "bytes": 92801
-   },
-   {
-    "url": "https://robertmckinley.com/",
-    "status": 200,
-    "final": "https://www.robertmckinley.com/",
-    "kind": "html",
-    "bytes": 92801
-   }
-  ],
-  "Studio Paolo Ferrari": [
-   {
-    "url": "https://www.studiopaoloferrari.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://studiopaoloferrari.com/",
-    "error": "URLError: <urlopen error [Errno -5] No address associated with hostname>"
-   },
-   {
-    "url": "https://www.studio-paoloferrari.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://paoloferrari.ca/",
-    "error": "URLError: <urlopen error timed out>"
-   }
-  ],
-  "Adrian Gaut": [
-   {
-    "url": "https://www.adriangaut.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://adriangaut.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://www.adrian-gaut.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   }
-  ],
-  "Christian Harder": [
-   {
-    "url": "https://www.christianharder.com/",
-    "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
-   },
-   {
-    "url": "https://christianharder.com/",
-    "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
-   },
-   {
-    "url": "https://www.christianharderphoto.com/",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://christianharder.co/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   }
-  ],
-  "Yoshihiro Makino": [
-   {
-    "url": "https://www.yoshihiromakino.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://yoshihiromakino.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://www.makinophoto.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://makinophoto.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   }
-  ],
-  "Nathan Browning": [
-   {
-    "url": "https://www.nathanbrowning.com/",
-    "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
-   },
-   {
-    "url": "https://nathanbrowning.com/",
-    "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
-   },
-   {
-    "url": "https://www.nathanbrowning.co.uk/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   },
-   {
-    "url": "https://nathanbrowningphotography.com/",
-    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
-   }
-  ],
-  "Belmond press": [
-   {
-    "url": "https://www.belmond.com/press",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.belmond.com/press-room",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.belmond.com/news",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.belmond.com/",
-    "status": 200,
-    "final": "https://www.belmond.com/en",
+    "final": "https://www.barsusanne.com/",
     "kind": "html",
     "bytes": 200000
-   }
-  ],
-  "Six Senses press": [
-   {
-    "url": "https://www.sixsenses.com/en/press",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
    },
    {
-    "url": "https://www.sixsenses.com/en/press-room",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.sixsenses.com/en/news",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.sixsenses.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   }
-  ],
-  "Soho House press": [
-   {
-    "url": "https://www.sohohouse.com/press",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.sohohouse.com/en-us/press",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.sohohouseco.com/press",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.sohohouse.com/",
+    "url": "https://barsusanne.com/",
     "status": 200,
-    "final": "https://www.sohohouse.com/",
+    "final": "https://www.barsusanne.com/",
     "kind": "html",
-    "bytes": 200000
-   }
-  ],
-  "Firmdale press": [
-   {
-    "url": "https://www.firmdalehotels.com/press",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.firmdalehotels.com/press-room",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.firmdalehotels.com/news",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.firmdalehotels.com/",
-    "status": 200,
-    "final": "https://www.firmdalehotels.com/",
-    "kind": "html",
-    "bytes": 193935
-   }
-  ],
-  "Standard Hotels press": [
-   {
-    "url": "https://www.standardhotels.com/press",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.standardhotels.com/press-room",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.standardhotels.com/culture",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.standardhotels.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   }
-  ],
-  "Kimpton press": [
-   {
-    "url": "https://www.kimptonhotels.com/press",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.ihgplc.com/en/news",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.kimptonhotels.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   }
-  ],
-  "Dezeen Awards hospitality": [
-   {
-    "url": "https://www.dezeen.com/awards/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.dezeen.com/awards/2025/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.dezeen.com/tag/dezeen-awards/feed/",
-    "status": 200,
-    "final": "https://www.dezeen.com/tag/dezeen-awards/feed/",
-    "kind": "feed",
-    "bytes": 200000
-   }
-  ],
-  "Travel + Leisure": [
-   {
-    "url": "https://www.travelandleisure.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.travelandleisure.com/hotels-resorts",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.travelandleisure.com/rss",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   }
-  ],
-  "Culture of Bathing": [
-   {
-    "url": "https://cultureofbathing.substack.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://cultureofbathing.substack.com/feed",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.cultureofbathing.com/",
-    "status": 200,
-    "final": "https://cultureofbathe-ing.com/",
-    "kind": "html",
-    "bytes": 200000
-   }
-  ],
-  "Untapped New York": [
-   {
-    "url": "https://untappedcities.com/feed/",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://untappedcities.com/feed",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.untappedcities.com/feed/",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   }
-  ],
-  "Hospitality Design": [
-   {
-    "url": "https://hospitalitydesign.com/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://hospitalitydesign.com/feed/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://www.hospitalitydesign.com/feed/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   },
-   {
-    "url": "https://hospitalitydesign.com/projects/feed/",
-    "error": "HTTPError: HTTP Error 403: Forbidden"
-   }
-  ],
-  "Wallpaper": [
-   {
-    "url": "https://www.wallpaper.com/feed",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.wallpaper.com/feed/all",
-    "error": "HTTPError: HTTP Error 404: Not Found"
-   },
-   {
-    "url": "https://www.wallpaper.com/feeds.xml",
-    "status": 200,
-    "final": "https://www.wallpaper.com/feeds.xml",
-    "kind": "feed",
     "bytes": 200000
    },
    {
-    "url": "https://www.wallpaper.com/feeds/all",
+    "url": "https://www.barsusannenyc.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://www.cafesusanne.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://cafesusanne.nyc/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://www.susannenyc.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   }
+  ],
+  "Matthew Maddy": [
+   {
+    "url": "https://www.matthewmaddy.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://matthewmaddy.com/",
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
+   },
+   {
+    "url": "https://www.maddystudio.com/",
     "status": 200,
-    "final": "https://www.wallpaper.com/feeds.xml",
-    "kind": "feed",
+    "final": "https://www.maddystudio.com/",
+    "kind": "html",
+    "bytes": 73386
+   },
+   {
+    "url": "https://www.homestudios.nyc/",
+    "status": 200,
+    "final": "https://www.homestudios.nyc/",
+    "kind": "html",
     "bytes": 200000
    }
   ]
