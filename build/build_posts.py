@@ -241,6 +241,8 @@ def build_post(p, out_root):
         urls.append(f"{BASE_URL}/posts/{idx}/{name}")
     result["slides"] = urls
     result["cover_source_photo"] = graded[0]["i"] + 1
+    # which source photo (1-based, as listed in the batch) sits behind each photo slide, so a review can name a cover
+    result["slide_sources"] = [g["i"] + 1 for g in graded]
     result["caption_card"] = "\n".join(p["card"])
     result["alt_text"] = alt_text(p)
     return finish(result, out_dir, done)

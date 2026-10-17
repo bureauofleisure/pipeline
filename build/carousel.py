@@ -31,7 +31,7 @@ def _backing(img, box):
     return Image.composite(dark, img, mask)
 
 BRAND = "BUREAU OF LEISURE"
-LAYOUT_VERSION = "v2.1"   # bump when a layout change should re-render every post
+LAYOUT_VERSION = "v2.2"   # bump when a layout change should re-render every post
 
 
 def _top_line(img, left_text, credit, size=22):
