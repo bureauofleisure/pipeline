@@ -27,7 +27,7 @@ KEEP = re.compile(r"\b(hotel|hotels|inn|resort|lodge|guesthouse|bar|bars|cocktai
 WARN = re.compile(r"\b(render|rendering|renders|visuali[sz]ation|visuali[sz]ed|concept|unbuilt|proposal|"
                   r"proposed|speculative|midjourney|ai[- ]generated|generated|imagined|coming soon|"
                   r"will open|set to open|planned)\b", re.I)
-CREDIT = re.compile(r"(?:photograph(?:y|s|er|ed)?|photos?|images?)\s*(?:by|:|courtesy of|©)\s*([A-Z][\w.'&\- ]{2,60})", re.I)
+CREDIT = re.compile(r"(?:photograph(?:y|s|er|ed)?|photos?|images?)\s*(?:is|are|was|were)?\s*(?:by|:|courtesy of|©)\s*([A-Z][\w.'&\- ]{2,50}?)(?=[,.;]|\s+(?:unless|and|for|at|in|the)\b)", re.I)
 DESIGN = re.compile(r"(?:designed by|design(?:er)?s?:|interiors? by|architects?:|by)\s+([A-Z][\w.'&\- ]{2,60}?)(?:[,.]|\s+(?:for|at|in)\b)", re.I)
 
 
@@ -144,6 +144,34 @@ def images_from(page, base):
     return out[:40]
 
 
+def _exists(url):
+    req = urllib.request.Request(url, headers={"User-Agent": UA}, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return r.status == 200
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def expand_dezeen(photos):
+    """Dezeen lazy-loads its galleries. Given the photos the page exposed, probe the rest of the sequence."""
+    stems = {}
+    for p in photos:
+        m = re.match(r"(https://static\.dezeen\.com/uploads/\d{4}/\d{2}/.+?_dezeen_2364_col_)\d+\.jpg$", p["url"])
+        if m:
+            stems[m.group(1)] = True
+    known = {p["url"] for p in photos}
+    extra = []
+    for stem in stems:
+        for n in range(0, 24):
+            u = f"{stem}{n}.jpg"
+            if u not in known and _exists(u):
+                extra.append({"url": u, "width_hint": 2364})
+                known.add(u)
+            time.sleep(0.15)
+    return photos + extra
+
+
 def harvest_links(links, label="shortlist"):
     """Re-harvest a fixed list of article links (used after a review picks its shortlist)."""
     out = []
@@ -157,7 +185,12 @@ def harvest_links(links, label="shortlist"):
             t = re.search(r"<title>(.*?)</title>", page, re.S)
             rec["title"] = html.unescape(t.group(1).strip()) if t else ""
             rec["text"] = text[:6000]
-            rec["photos"] = images_from(page, link)
+            photos = images_from(page, link)
+            seen, uniq = set(), []
+            for p in photos:
+                if p["url"] not in seen:
+                    seen.add(p["url"]); uniq.append(p)
+            rec["photos"] = expand_dezeen(uniq) if "dezeen.com" in link else uniq
             rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:8]
             rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:2500])})
         except Exception as e:  # noqa: BLE001
