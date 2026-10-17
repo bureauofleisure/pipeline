@@ -15,6 +15,7 @@ A post is rebuilt only when its batch entry changes, so re-runs are cheap and sa
 One bad post never stops the others: every failure is caught and recorded.
 """
 import glob
+import shutil
 import hashlib
 import io
 import json
@@ -255,8 +256,10 @@ def main():
     out_root = os.path.join(ROOT, "docs")
     os.makedirs(out_root, exist_ok=True)
     open(os.path.join(out_root, ".nojekyll"), "w").close()
-    with open(os.path.join(out_root, "index.html"), "w") as f:
-        f.write('<!doctype html><meta charset="utf-8"><title>Bureau of Leisure</title><p>Bureau of Leisure.</p>\n')
+    # the public link page and the profile seal live at the site root, next to the posts
+    site = os.path.join(os.path.dirname(os.path.abspath(__file__)), "site")
+    shutil.copy(os.path.join(site, "index.html"), os.path.join(out_root, "index.html"))
+    shutil.copy(os.path.join(ROOT, "brand", "avatar.jpg"), os.path.join(out_root, "avatar.jpg"))
     posts = []
     for path in sorted(glob.glob(os.path.join(ROOT, "batches", "*.json"))):
         try:
