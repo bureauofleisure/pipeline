@@ -1,0 +1,51 @@
+{
+ "batch": "test-bar-susanne",
+ "posts": [
+  {
+   "index": "0012",
+   "place": "Bar Susanne",
+   "neighborhood": "Domino Park, Williamsburg",
+   "city": "Brooklyn",
+   "category": "Bar",
+   "designer": "Matthew Maddy with Marisa Maddy Ripo",
+   "credit": "Lorenzo Bongiovanni",
+   "word": "SALTY",
+   "reminds": "a Cap d'Antibes beach bar",
+   "card": [
+    "BUREAU OF LEISURE NO. 0012",
+    "BAR SUSANNE. 6 RIVER STREET, WILLIAMSBURG.",
+    "A RAW BAR ON THE EAST RIVER. OPENED MAY 2026.",
+    "SEVENTY-FIVE SEATS. A WALL OF WINDOWS.",
+    "RECYCLED OAK FLOORS, MARBLE, AMBER LIGHT.",
+    "BY MATTHEW MADDY OF LILIA AND PUBLIC RECORDS.",
+    "IN A WORD: SALTY."
+   ],
+   "alt_hint": "A riverfront raw bar with oak floors, a marble bar, amber light and a wall of windows.",
+   "source_url": "https://greenpointers.com/2026/05/15/bar-susanne-opens-today-with-cocktails-and-seafood-in-domino-park/",
+   "venue_handle": "barsusannenyc",
+   "photographer_handle": "",
+   "bring": "BRING SOMEONE WHO WILL ORDER THE MARTINI.",
+   "photos": [
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Interior2_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Interior_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Interior1_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Interior3_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Bar_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Seafood-Tower_Lorenzo-Bongiovanni-scaled.jpeg",
+    "https://greenpointers.com/wp-content/uploads/2026/05/Bar-Susanne_Fish-Shaped-Galette_Lorenzo-Bongiovanni.jpeg",
+    "https://diningout.com/wp-content/uploads/2026/05/NYC_Bar-Susanne_Raw-Bar_Lorenzo-Bongiovanni.jpeg",
+    "https://diningout.com/wp-content/uploads/2026/05/NYC_Bar-Susanne_Interior_Lorenzo-Bongiovanni.jpeg",
+    "https://diningout.com/wp-content/uploads/2026/05/NYC_Bar-Susanne_Interior2_Lorenzo-Bongiovanni.jpeg",
+    "https://diningout.com/wp-content/uploads/2026/05/NYC_Bar-Susanne_Bar_Lorenzo-Bongiovanni.jpeg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-2.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-11.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-21.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-24.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-35.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-46.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-58.jpg",
+    "https://www.bkmag.com/wp-content/uploads/2026/05/susanne-64.jpg"
+   ]
+  }
+ ]
+}
