@@ -10,8 +10,25 @@ import os
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "grade"))
-from PIL import ImageDraw  # noqa: E402
-from atlas_grade import _font, _fit, _soft_backing, card_slide, label, CREAM, INK, MARGIN  # noqa: E402
+import numpy as np  # noqa: E402
+from PIL import Image, ImageDraw, ImageFilter  # noqa: E402
+from atlas_grade import _font, _fit, card_slide, label, CREAM, INK, MARGIN  # noqa: E402
+
+
+def _backing(img, box):
+    """Darken the area behind small cream text in proportion to how bright it is, so the stamp and the
+    credit read on a white ceiling as well as on a dark bar. Grade v1.0's own backing is left untouched."""
+    x0, y0, x1, y1 = [int(v) for v in box]
+    region = np.asarray(img.crop((x0, y0, x1, y1)).convert("L")).astype(np.float32)
+    mean = float(region.mean()) if region.size else 0.0
+    if mean < 70:
+        return img
+    strength = min(0.72, 0.22 + (mean - 70) / 185 * 0.5)
+    mask = Image.new("L", img.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((x0 - 14, y0 - 9, x1 + 14, y1 + 9), 10, fill=int(255 * strength))
+    mask = mask.filter(ImageFilter.GaussianBlur(9))
+    dark = Image.new("RGB", img.size, (12, 10, 9))
+    return Image.composite(dark, img, mask)
 
 BRAND = "BUREAU OF LEISURE"
 
@@ -19,14 +36,14 @@ BRAND = "BUREAU OF LEISURE"
 def _top_line(img, left_text, credit, size=22):
     img = img.copy()
     fs, fc = _font(False, size), _font(False, 18)
-    img = _soft_backing(img, (MARGIN, MARGIN, MARGIN + fs.getlength(left_text), MARGIN + size + 4))
+    img = _backing(img, (MARGIN, MARGIN, MARGIN + fs.getlength(left_text), MARGIN + size + 4))
     cx = None
     credit = credit or "UNCREDITED"
     if credit:
         ct = f"PHOTO: {credit.upper()}"
         cw = fc.getlength(ct)
         cx = img.size[0] - MARGIN - cw
-        img = _soft_backing(img, (cx, MARGIN + 3, cx + cw, MARGIN + 25))
+        img = _backing(img, (cx, MARGIN + 3, cx + cw, MARGIN + 25))
     d = ImageDraw.Draw(img)
     d.text((MARGIN, MARGIN), left_text, font=fs, fill=CREAM)
     if credit:

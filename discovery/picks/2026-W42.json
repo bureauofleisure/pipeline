@@ -1,7 +1,7 @@
 {
  "batch": "2026-W42",
  "reviewed": "2026-10-16",
- "notes": "First real batch from the 2026-10-17 harvest. 139 items in, 18 shortlisted, 12 picked. US share is low this week (4 of 12); no archive sources mined yet. Dive (Marylebone) held back: only 3 usable photos.",
+ "notes": "First real batch from the 2026-10-17 harvest. 139 items in, 18 shortlisted, 12 picked. US share is low this week (4 of 12); no archive sources mined yet. Dive (Marylebone) held back: only 3 usable photos. Oberon (0002) held: Dezeen's interior photos are under the size gate, only exteriors passed; re-source from OMA. Focacha (0007) and Upstairs at Hausu (0008) benched by the build: compression artifacts on Dezeen's copies.",
  "posts": [
   {
    "index": "0001",
@@ -25,28 +25,6 @@
    "alt_hint": "A small cocktail bar lined in steel-blue modular shelving with a walnut bar and burgundy seats.",
    "source_url": "https://www.dezeen.com/2026/10/08/josh-greenspan-usm-vvs-cocktail-room-new-york/",
    "bring": "BRING THE ONE WHO SAYS THEY DON'T LIKE COCKTAILS."
-  },
-  {
-   "index": "0002",
-   "place": "Oberon",
-   "neighborhood": "Bowery",
-   "city": "New York",
-   "category": "Restaurant",
-   "designer": "OMA New York",
-   "credit": "Alex Fradkin",
-   "word": "HUSHED",
-   "reminds": "a jewel box in a lobby",
-   "card": [
-    "BUREAU OF LEISURE NO. 0002",
-    "OBERON. NEW MUSEUM, BOWERY, NEW YORK.",
-    "A METAL BOX IN THE LOBBY, 2026.",
-    "BLACK CORK BOOTHS AND CEILING.",
-    "FROSTED GLASS BAND. HIDDEN IN PLAIN SIGHT.",
-    "OMA NEW YORK. ALL DAY.",
-    "IN A WORD: HUSHED."
-   ],
-   "alt_hint": "A compact restaurant lined in black expanded cork, with booths and a frosted glass band.",
-   "source_url": "https://www.dezeen.com/2026/07/18/oma-oberon-restaurant-new-museum-new-york-city/"
   },
   {
    "index": "0003",
