@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.4 (draft, untested until the Meta app exists)
+ * Bureau of Leisure Publisher v0.5 (publishing untested until the Meta app exists; importBatch works now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -40,6 +40,7 @@ function setupTrigger() {
   ScriptApp.newTrigger('publishDue').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('refreshToken').timeBased().everyDays(7).create();
   ScriptApp.newTrigger('dailyCheck').timeBased().everyDays(1).atHour(7).create();
+  ScriptApp.newTrigger('importBatch').timeBased().everyHours(6).create();
 }
 
 /** Where alerts go. Script Property ALERT_EMAIL, else the script owner. */
@@ -275,4 +276,88 @@ function lines_(v) {
 
 function setCell_(sheet, r, c, value) {
   sheet.getRange(r + 1, c + 1).setValue(value);
+}
+
+
+/**
+ * importBatch, every 6 hours (v0.5):
+ * Reads the build manifest from GitHub Pages and fills the Posts tab.
+ *   New index  -> new row, Status DRAFT, every column filled from the manifest.
+ *   Known index, still DRAFT -> slide links, alt text, card and credits refreshed (a rebuild changed them).
+ *   Known index, any other status -> left alone. A person's decision is never overwritten.
+ *   Built posts that fail (BENCHED / ERROR) -> appended to the Candidates tab with the reason, once.
+ * Script Property MANIFEST_URL overrides the default.
+ */
+function importBatch() {
+  const props = PropertiesService.getScriptProperties();
+  const url = props.getProperty('MANIFEST_URL') || 'https://bureauofleisure.github.io/pipeline/manifest.json';
+  let manifest;
+  try {
+    const res = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+    if (res.getResponseCode() !== 200) throw new Error('HTTP ' + res.getResponseCode());
+    manifest = JSON.parse(res.getContentText());
+  } catch (e) {
+    log_('importBatch', 'manifest unreachable: ' + e);
+    const last = Number(props.getProperty('MANIFEST_FAIL_SINCE') || 0);
+    if (!last) props.setProperty('MANIFEST_FAIL_SINCE', String(Date.now()));
+    else if (Date.now() - last > 24 * 3600000) notify_('Manifest unreachable for a day', url + '\n' + e);
+    return;
+  }
+  props.deleteProperty('MANIFEST_FAIL_SINCE');
+
+  const ss = SpreadsheetApp.getActive();
+  const sheet = ss.getSheetByName(SHEET_NAME);
+  const values = sheet.getDataRange().getValues();
+  const col = indexHeaders_(values[0]);
+  const rowOf = {};
+  for (let r = 1; r < values.length; r++) rowOf[String(values[r][col['Index No.']]).trim()] = r;
+
+  const cands = ss.getSheetByName('Candidates') || ss.insertSheet('Candidates');
+  const seen = new Set(cands.getDataRange().getValues().map(r => String(r[0]).trim()));
+
+  let added = 0, refreshed = 0, benched = 0;
+  (manifest.posts || []).forEach(p => {
+    const idx = String(p.index).trim();
+    if (p.status !== 'BUILT') {
+      if (!seen.has(idx)) {
+        cands.appendRow([idx, p.place || '', p.status, (p.notes || []).join('; '), new Date()]);
+        seen.add(idx); benched++;
+      }
+      return;
+    }
+    const m = p.meta || {};
+    const fields = {
+      'Index No.': idx, 'Place': p.place || '', 'Neighborhood': m.neighborhood || '', 'City': m.city || '',
+      'Category': m.category || '', 'Card text': p.caption_card || '', 'Designer': m.designer || '',
+      'Designer handle': m.designer_handle || '', 'Venue handle': m.venue_handle || '',
+      'Photographer': m.credit || '', 'Photographer handle': m.photographer_handle || '',
+      'Source handle': m.source_handle || '', 'Cover slide': p.cover_source_photo || '',
+      'Slide links': (p.slides || []).join('\n'), 'Alt text': (p.alt_text || []).join('\n'),
+    };
+    if (idx in rowOf) {
+      const r = rowOf[idx];
+      if (String(values[r][col['Status']]).trim() !== 'DRAFT') return;
+      ['Slide links', 'Alt text', 'Card text', 'Photographer', 'Cover slide'].forEach(h => {
+        if (h in col) sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]);
+      });
+      refreshed++;
+      return;
+    }
+    const row = new Array(values[0].length).fill('');
+    Object.keys(fields).forEach(h => { if (h in col) row[col[h]] = fields[h]; });
+    row[col['Status']] = 'DRAFT';
+    if ('Notes' in col) row[col['Notes']] = (m.bring ? 'BRING idea: ' + m.bring + '\n' : '') +
+                                            (m.reminds ? 'Reminds: ' + m.reminds + '\n' : '') +
+                                            (m.source_url ? 'Source: ' + m.source_url : '');
+    sheet.appendRow(row);
+    added++;
+  });
+  log_('importBatch', `${added} new, ${refreshed} refreshed, ${benched} benched`);
+  if (added) notify_(`${added} new posts to review`, `${added} new DRAFT rows in the Posts tab. Approve by setting Status to APPROVED.`);
+}
+
+function log_(what, msg) {
+  const ss = SpreadsheetApp.getActive();
+  const log = ss.getSheetByName('Log') || ss.insertSheet('Log');
+  log.appendRow([new Date(), what, msg]);
 }

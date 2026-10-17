@@ -157,7 +157,11 @@ def build_post(p, out_root):
         if prev.get("entry_hash") == h:
             return prev           # unchanged since last build
     result = {"index": idx, "place": p["place"], "status": "BUILT", "notes": [],
-              "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d")}
+              "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d"),
+              # everything the sheet needs, passed straight through from the batch file
+              "meta": {k: p.get(k, "") for k in ("neighborhood", "city", "category", "word", "reminds", "credit",
+                                                  "designer", "designer_handle", "venue_handle",
+                                                  "photographer_handle", "source_handle", "source_url", "bring")}}
 
     problems = validate_card(p)
     if problems:
