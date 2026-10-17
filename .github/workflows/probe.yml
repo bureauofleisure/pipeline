@@ -1,0 +1,26 @@
+name: Probe source addresses
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python discovery/probe.py
+      - run: |
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add discovery/probe_report.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Probe report $(date -u +%Y-%m-%d)"
+          git pull --rebase -q origin main
+          git push
