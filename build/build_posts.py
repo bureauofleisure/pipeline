@@ -144,7 +144,7 @@ def alt_text(p):
 
 
 def entry_hash(p):
-    return hashlib.sha1(json.dumps(p, sort_keys=True).encode()).hexdigest()[:12]
+    return hashlib.sha1((json.dumps(p, sort_keys=True) + GRADE_VERSION + carousel.LAYOUT_VERSION).encode()).hexdigest()[:12]
 
 
 # ---------------------------------------------------------------- build
