@@ -193,6 +193,10 @@ def harvest_links(links, label="shortlist"):
             rec["photos"] = expand_dezeen(uniq) if "dezeen.com" in link else uniq
             rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:8]
             rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:2500])})
+            # internal links, so a review can walk from a studio's index page to its project pages
+            rec["links"] = sorted({urljoin(link, html.unescape(m.group(1)))
+                                   for m in re.finditer(r'href=["\']([^"\'#?]+)', page)
+                                   if not m.group(1).startswith(("mailto:", "tel:", "javascript:"))})[:300]
         except Exception as e:  # noqa: BLE001
             rec["page_error"] = type(e).__name__
         out.append(rec)
