@@ -1,22 +1,23 @@
 {
- "Fettle": ["https://fettle.design/", "https://www.fettle.design/", "https://fettle.co.uk/", "https://www.fettle-design.com/"],
- "Child Studio": ["https://child-studio.com/", "https://www.child-studio.com/", "https://child-studio.co.uk/", "https://childstudio.co.uk/"],
- "Studio Robert McKinley": ["https://www.studiorobertmckinley.com/", "https://studiorobertmckinley.com/", "https://www.robertmckinley.com/", "https://robertmckinley.com/"],
- "Studio Paolo Ferrari": ["https://www.studiopaoloferrari.com/", "https://studiopaoloferrari.com/", "https://www.studio-paoloferrari.com/", "https://paoloferrari.ca/"],
- "Adrian Gaut": ["https://www.adriangaut.com/", "https://adriangaut.com/", "https://www.adrian-gaut.com/"],
- "Christian Harder": ["https://www.christianharder.com/", "https://christianharder.com/", "https://www.christianharderphoto.com/", "https://christianharder.co/"],
- "Yoshihiro Makino": ["https://www.yoshihiromakino.com/", "https://yoshihiromakino.com/", "https://www.makinophoto.com/", "https://makinophoto.com/"],
- "Nathan Browning": ["https://www.nathanbrowning.com/", "https://nathanbrowning.com/", "https://www.nathanbrowning.co.uk/", "https://nathanbrowningphotography.com/"],
- "Belmond press": ["https://www.belmond.com/press", "https://www.belmond.com/press-room", "https://www.belmond.com/news", "https://www.belmond.com/"],
- "Six Senses press": ["https://www.sixsenses.com/en/press", "https://www.sixsenses.com/en/press-room", "https://www.sixsenses.com/en/news", "https://www.sixsenses.com/"],
- "Soho House press": ["https://www.sohohouse.com/press", "https://www.sohohouse.com/en-us/press", "https://www.sohohouseco.com/press", "https://www.sohohouse.com/"],
- "Firmdale press": ["https://www.firmdalehotels.com/press", "https://www.firmdalehotels.com/press-room", "https://www.firmdalehotels.com/news", "https://www.firmdalehotels.com/"],
- "Standard Hotels press": ["https://www.standardhotels.com/press", "https://www.standardhotels.com/press-room", "https://www.standardhotels.com/culture", "https://www.standardhotels.com/"],
- "Kimpton press": ["https://www.kimptonhotels.com/press", "https://www.ihgplc.com/en/news", "https://www.kimptonhotels.com/"],
- "Dezeen Awards hospitality": ["https://www.dezeen.com/awards/", "https://www.dezeen.com/awards/2025/", "https://www.dezeen.com/tag/dezeen-awards/feed/"],
- "Travel + Leisure": ["https://www.travelandleisure.com/", "https://www.travelandleisure.com/hotels-resorts", "https://www.travelandleisure.com/rss"],
- "Culture of Bathing": ["https://cultureofbathing.substack.com/", "https://cultureofbathing.substack.com/feed", "https://www.cultureofbathing.com/"],
- "Untapped New York": ["https://untappedcities.com/feed/", "https://untappedcities.com/feed", "https://www.untappedcities.com/feed/"],
- "Hospitality Design": ["https://hospitalitydesign.com/", "https://hospitalitydesign.com/feed/", "https://www.hospitalitydesign.com/feed/", "https://hospitalitydesign.com/projects/feed/"],
- "Wallpaper": ["https://www.wallpaper.com/feed", "https://www.wallpaper.com/feed/all", "https://www.wallpaper.com/feeds.xml", "https://www.wallpaper.com/feeds/all"]
+ "Lorenzo Bongiovanni": [
+  "https://www.lorenzobongiovanni.com/",
+  "https://lorenzobongiovanni.com/",
+  "https://www.lorenzobongiovanni.net/",
+  "https://lorenzobongiovanniphoto.com/",
+  "https://www.lorenzobongiovanni.co/"
+ ],
+ "Bar Susanne": [
+  "https://www.barsusanne.com/",
+  "https://barsusanne.com/",
+  "https://www.barsusannenyc.com/",
+  "https://www.cafesusanne.com/",
+  "https://cafesusanne.nyc/",
+  "https://www.susannenyc.com/"
+ ],
+ "Matthew Maddy": [
+  "https://www.matthewmaddy.com/",
+  "https://matthewmaddy.com/",
+  "https://www.maddystudio.com/",
+  "https://www.homestudios.nyc/"
+ ]
 }
