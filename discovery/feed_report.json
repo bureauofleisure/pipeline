@@ -1,0 +1,789 @@
+{
+  "checked": "2026-10-17T01:31:29Z",
+  "sources": [
+    {
+      "name": "Dezeen interiors",
+      "tier": 2,
+      "category": "design_press",
+      "site": "error: HTTPError",
+      "feed": "200 lenient",
+      "items": 21
+    },
+    {
+      "name": "Dezeen hotels",
+      "tier": 2,
+      "category": "design_press",
+      "site": "error: HTTPError",
+      "feed": "200 lenient",
+      "items": 20
+    },
+    {
+      "name": "Dezeen bars",
+      "tier": 2,
+      "category": "design_press",
+      "site": "error: HTTPError",
+      "feed": "200 lenient",
+      "items": 19
+    },
+    {
+      "name": "Dezeen restaurants",
+      "tier": 2,
+      "category": "design_press",
+      "site": "error: HTTPError",
+      "feed": "200 lenient",
+      "items": 20
+    },
+    {
+      "name": "Yellowtrace",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Hospitality Design",
+      "tier": 2,
+      "category": "design_press",
+      "site": "error: HTTPError",
+      "feed": "error: HTTPError",
+      "items": 0
+    },
+    {
+      "name": "Sight Unseen",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 12
+    },
+    {
+      "name": "The Spaces",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 20
+    },
+    {
+      "name": "Wallpaper",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "error: HTTPError",
+      "items": 0
+    },
+    {
+      "name": "Architectural Digest",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 30
+    },
+    {
+      "name": "Elle Decor",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 50
+    },
+    {
+      "name": "Frame",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 lenient",
+      "items": 0
+    },
+    {
+      "name": "Sleeper",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 30
+    },
+    {
+      "name": "Interior Design magazine",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 0
+    },
+    {
+      "name": "Designboom architecture",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "ArchDaily",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 24
+    },
+    {
+      "name": "Design Milk",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 12
+    },
+    {
+      "name": "Cereal",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Monocle",
+      "tier": 3,
+      "category": "design_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Hotel Designs",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 lenient",
+      "items": 34
+    },
+    {
+      "name": "Roman and Williams",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio Chzon (Dorothee Meilichzon)",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dimorestudio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Kelly Wearstler",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Workstead",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Home Studios",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Islyn Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Fettle",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Yabu Pushelberg",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Child Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Lore Group",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Martin Brudnizki Design Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Post Company",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio Robert McKinley",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Sella Concept",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Giancarlo Valle",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Beata Heuman",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "GRT Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ash",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio Paolo Ferrari",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Hollie Bowden",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio KO",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Charles Zana",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Mazzarini & Co",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bureau of Places candidates: AD100 studios",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Adrian Gaut",
+      "tier": 1,
+      "category": "photographer",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Nicole Franzen",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Stephen Kent Johnson",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "William Jess Laird",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Christian Harder",
+      "tier": 1,
+      "category": "photographer",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Matthew Williams",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Salva Lopez",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Robert Rieger",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Yoshihiro Makino",
+      "tier": 1,
+      "category": "photographer",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Simon Watson",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Nathan Browning",
+      "tier": 1,
+      "category": "photographer",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ace Hotel press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Aman press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Belmond press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Six Senses press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Soho House press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Auberge Resorts press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Proper Hotels press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Palisociety press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Firmdale press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Rosewood press",
+      "tier": 1,
+      "category": "press_room",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Standard Hotels press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Kimpton press",
+      "tier": 1,
+      "category": "press_room",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Design Hotels",
+      "tier": 1,
+      "category": "booking",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Tablet Hotels",
+      "tier": 2,
+      "category": "booking",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Mr & Mrs Smith",
+      "tier": 2,
+      "category": "booking",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "AHEAD Awards",
+      "tier": 2,
+      "category": "awards",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dezeen Awards hospitality",
+      "tier": 2,
+      "category": "awards",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Restaurant & Bar Design Awards",
+      "tier": 2,
+      "category": "awards",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Frame Awards",
+      "tier": 2,
+      "category": "awards",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Prix Versailles",
+      "tier": 2,
+      "category": "awards",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Surface Travel Awards",
+      "tier": 2,
+      "category": "awards",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "The Infatuation New York",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "The Infatuation Los Angeles",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "The Infatuation Miami",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "The Infatuation Austin",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Eater New York",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Eater Los Angeles",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Eater Miami",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Eater Austin",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Time Out New York",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Resy",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Conde Nast Traveler",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 30
+    },
+    {
+      "name": "Travel + Leisure",
+      "tier": 3,
+      "category": "city_press",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Culture of Bathing",
+      "tier": 3,
+      "category": "leisure",
+      "site": "error: HTTPError",
+      "feed": "error: HTTPError",
+      "items": 0
+    },
+    {
+      "name": "Soho House clubs",
+      "tier": 1,
+      "category": "leisure",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Historic lidos and pools",
+      "tier": 3,
+      "category": "leisure",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Racquet and swim clubs",
+      "tier": 3,
+      "category": "leisure",
+      "site": "error: URLError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Historic Hotels of America",
+      "tier": 2,
+      "category": "historic",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Wikimedia Commons",
+      "tier": 1,
+      "category": "historic",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Untapped New York",
+      "tier": 3,
+      "category": "historic",
+      "site": 200,
+      "feed": "error: HTTPError",
+      "items": 0
+    },
+    {
+      "name": "Counter Culture diners (James and Karla Murray)",
+      "tier": 3,
+      "category": "historic",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    }
+  ]
+}
