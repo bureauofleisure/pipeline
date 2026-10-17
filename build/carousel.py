@@ -21,6 +21,7 @@ def _top_line(img, left_text, credit, size=22):
     fs, fc = _font(False, size), _font(False, 18)
     img = _soft_backing(img, (MARGIN, MARGIN, MARGIN + fs.getlength(left_text), MARGIN + size + 4))
     cx = None
+    credit = credit or "UNCREDITED"
     if credit:
         ct = f"PHOTO: {credit.upper()}"
         cw = fc.getlength(ct)

@@ -217,6 +217,7 @@ function buildCaption_(row, col) {
   if (place) lines.push(place + at(cell_(row, col, 'Venue handle')));
   if (cell_(row, col, 'Designer')) lines.push('Design: ' + cell_(row, col, 'Designer') + at(cell_(row, col, 'Designer handle')));
   if (cell_(row, col, 'Photographer')) lines.push('Photo: ' + cell_(row, col, 'Photographer') + at(cell_(row, col, 'Photographer handle')));
+  else lines.push('Photo credit on request. DM us.');
   if (cell_(row, col, 'Source handle')) lines.push('Via' + at(cell_(row, col, 'Source handle')));
   return [cell_(row, col, 'Card text'), lines.join('\n')].filter(Boolean).join('\n.\n').slice(0, 2200);
 }

@@ -1,0 +1,30 @@
+name: Check sources
+
+on:
+  schedule:
+    - cron: "17 11 * * 1"    # Mondays, before the weekly discovery run
+  workflow_dispatch:
+  push:
+    paths: ["discovery/sources.json", "discovery/check_feeds.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python discovery/check_feeds.py
+      - name: Save the report
+        run: |
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add discovery/feed_report.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Source check $(date -u +%Y-%m-%d)"
+          git push
