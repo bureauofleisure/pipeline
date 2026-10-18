@@ -1,13 +1,115 @@
 {
- "searched": "2026-10-18T15:14:58Z",
+ "searched": "2026-10-18T15:17:05Z",
  "flickr": false,
  "stats": {
   "hits": 536,
   "licence": 0,
-  "size": 336,
-  "type": 200,
+  "size": 337,
+  "type": 199,
   "errors": [],
-  "licences_seen": {}
+  "licences_seen": {},
+  "samples": [
+   {
+    "title": "File:A manual of the geography and natural and civil history of Prince Edward Island (microform) - for the use of schools, families and emigrants (IA cihm 41208).pdf",
+    "keys": [
+     "imageinfo",
+     "imagerepository",
+     "index",
+     "ns",
+     "pageid",
+     "title"
+    ],
+    "ii_keys": [
+     "descriptionshorturl",
+     "descriptionurl",
+     "extmetadata",
+     "height",
+     "pagecount",
+     "size",
+     "thumbattribs",
+     "thumbheight",
+     "thumburl",
+     "thumbwidth",
+     "url",
+     "user",
+     "width"
+    ],
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/A_manual_of_the_geography_and_natural_and_civil_history_of_Prince_Edward_Island_%28microform%29_-_for_the_use_of_schools%2C_families_and_emigrants_%28IA_cihm_41208%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1170,
+    "height": 1425,
+    "licence": {
+     "value": "Public domain",
+     "source": "commons-desc-page",
+     "hidden": ""
+    }
+   },
+   {
+    "title": "File:Bemelmans logo.jpg",
+    "keys": [
+     "imageinfo",
+     "imagerepository",
+     "index",
+     "ns",
+     "pageid",
+     "title"
+    ],
+    "ii_keys": [
+     "descriptionshorturl",
+     "descriptionurl",
+     "extmetadata",
+     "height",
+     "size",
+     "thumbattribs",
+     "thumbheight",
+     "thumburl",
+     "thumbwidth",
+     "url",
+     "user",
+     "width"
+    ],
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Bemelmans_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 973,
+    "height": 231,
+    "licence": {
+     "value": "Public domain",
+     "source": "commons-desc-page",
+     "hidden": ""
+    }
+   },
+   {
+    "title": "File:Caffe Reggio 01.jpg",
+    "keys": [
+     "imageinfo",
+     "imagerepository",
+     "index",
+     "ns",
+     "pageid",
+     "title"
+    ],
+    "ii_keys": [
+     "descriptionshorturl",
+     "descriptionurl",
+     "extmetadata",
+     "height",
+     "size",
+     "thumbattribs",
+     "thumbheight",
+     "thumburl",
+     "thumbwidth",
+     "url",
+     "user",
+     "width"
+    ],
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Caffe_Reggio_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4288,
+    "height": 2848,
+    "licence": {
+     "value": "CC BY-SA 3.0",
+     "source": "commons-desc-page",
+     "hidden": ""
+    }
+   }
+  ]
  },
  "targets": [
   {
