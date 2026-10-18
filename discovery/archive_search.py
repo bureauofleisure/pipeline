@@ -30,7 +30,8 @@ def api(params):
 
 
 def commons(query, limit=30):
-    data = api({"action": "query", "format": "json", "generator": "search", "gsrsearch": query, "gsrnamespace": 6,
+    q = f'"{query}" filetype:bitmap' if '"' not in query else f"{query} filetype:bitmap"
+    data = api({"action": "query", "format": "json", "generator": "search", "gsrsearch": q, "gsrnamespace": 6,
                 "gsrlimit": limit, "prop": "imageinfo", "iiprop": "url|size|extmetadata|user", "iiurlwidth": 2500})
     out = []
     pages = list(data.get("query", {}).get("pages", {}).values())
@@ -51,9 +52,11 @@ def commons(query, limit=30):
         if (ii.get("width") or 0) < MIN_WIDE or (ii.get("height") or 0) < 1350:
             STATS["size"] += 1
             continue
-        if not re.search(r"\.(jpe?g|png|tiff?)$", ii.get("url", ""), re.I):
+        clean_url = (ii.get("url") or "").split("?")[0]
+        if not re.search(r"\.(jpe?g|png|tiff?)$", clean_url, re.I) or re.search(r"logo|map|plan|poster|menu|ticket|stamp", page["title"], re.I):
             STATS["type"] += 1
             continue
+        ii["url"] = clean_url
         author = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")).strip()
         out.append({"title": page["title"].replace("File:", ""), "url": ii["url"], "width": ii["width"], "height": ii["height"],
                     "licence": lic, "author": author or ii.get("user", ""),
