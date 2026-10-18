@@ -1,0 +1,325 @@
+{
+ "photographers": {
+  "hoshino resorts": {
+   "name": "Hoshino Resorts",
+   "seen": 6,
+   "resolved": true,
+   "url": "https://hoshinoresorts.com/jp/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "jonas bjerrepoulsen": {
+   "name": "Jonas Bjerre-Poulsen",
+   "seen": 6,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "peninsula london": {
+   "name": "Peninsula London",
+   "seen": 6,
+   "resolved": true,
+   "url": "https://www.peninsulalondon.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "ed reeve": {
+   "name": "Ed Reeve",
+   "seen": 4,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "fabian martinez": {
+   "name": "Fabián Martinez",
+   "seen": 4,
+   "resolved": true,
+   "url": "https://fabianmartinez.design/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "luca argenton": {
+   "name": "Luca Argenton",
+   "seen": 4,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "common studio": {
+   "name": "Common Studio",
+   "seen": 3,
+   "resolved": true,
+   "url": "https://commonstudio.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "adam firman": {
+   "name": "Adam Firman",
+   "seen": 3,
+   "resolved": true,
+   "url": "https://adamfirman.com/",
+   "platform": "wordpress",
+   "checked": "2026-10-18"
+  },
+  "virgile simon bertrand": {
+   "name": "Virgile Simon Bertrand",
+   "seen": 3,
+   "resolved": true,
+   "url": "https://www.virgilebertrand.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "alex lesage": {
+   "name": "Alex Lesage",
+   "seen": 3,
+   "resolved": true,
+   "url": "https://www.alexlesage.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "axel aurejac": {
+   "name": "Axel Aurejac",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.axelaurejac.com/",
+   "platform": "webflow",
+   "checked": "2026-10-18"
+  },
+  "read mckendree": {
+   "name": "Read McKendree",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.readmckendree.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "joe thomas": {
+   "name": "Joe Thomas",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.joethomasphoto.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "fujio emura": {
+   "name": "Fujio Emura",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.fujioemura.com/",
+   "platform": "format",
+   "checked": "2026-10-18"
+  },
+  "jong hyup": {
+   "name": "Jong Hyup",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://jonghyup.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "carolina mossin": {
+   "name": "Carolina Mossin",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.carolinamossin.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "vigo jansons": {
+   "name": "Vigo Jansons",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://vigojansons.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "oscar mendoza": {
+   "name": "Oscar Mendoza",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.oscarmendozaphoto.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "ruben cabrera": {
+   "name": "Ruben Cabrera",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://cnm.com/buy-domain/rubencabrera",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "dan ahn": {
+   "name": "Dan Ahn",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.brandintention.com/name/DanAhn.com",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "zoo yong gyun": {
+   "name": "Zoo Yong Gyun",
+   "seen": 2,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "patrick michael chin": {
+   "name": "Patrick Michael Chin",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.patrickmichaelchin.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "karel balas": {
+   "name": "Karel Balas",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.karelbalas.com/",
+   "platform": "format",
+   "checked": "2026-10-18"
+  },
+  "brian w": {
+   "name": "Brian W",
+   "seen": 2,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "lam yik": {
+   "name": "Lam Yik",
+   "seen": 2,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "jack lovel": {
+   "name": "Jack Lovel",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.jacklovel.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "dunka opalko": {
+   "name": "Dunka Opalko",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "ema peter": {
+   "name": "Ema Peter",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.emapeter.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "danielle siobhan": {
+   "name": "Daniëlle Siobhán",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://daniellesiobhan.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "kaye song": {
+   "name": "Kaye Song",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.kayesong.com/",
+   "platform": "wix",
+   "checked": "2026-10-18"
+  },
+  "guowei liu": {
+   "name": "Guowei Liu",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "ruth ward": {
+   "name": "Ruth Ward",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.ruthward.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "ollie tomlinson": {
+   "name": "Ollie Tomlinson",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.ollietomlinson.com/",
+   "platform": "wix",
+   "checked": "2026-10-18"
+  },
+  "mike schwartz": {
+   "name": "Mike Schwartz",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.mikeschwartzphoto.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "ahmad alnaji": {
+   "name": "Ahmad Alnaji",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.sarab.art/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "kimpton ashbel": {
+   "name": "Kimpton Ashbel",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "aichan mama": {
+   "name": "Aichan Mama",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-18"
+  },
+  "milo hutchings": {
+   "name": "Milo Hutchings",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.milohutchings.com/",
+   "platform": "squarespace",
+   "checked": "2026-10-18"
+  },
+  "pichan sujaritsatit": {
+   "name": "Pichan Sujaritsatit",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://pichansujaritsatit.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  },
+  "alex fradkin": {
+   "name": "Alex Fradkin",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.alexfradkin.com/",
+   "platform": "unknown",
+   "checked": "2026-10-18"
+  }
+ },
+ "studios": {}
+}
