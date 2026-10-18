@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.6 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.6.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -333,7 +333,8 @@ function importBatch() {
       'Designer handle': m.designer_handle || '', 'Venue handle': m.venue_handle || '',
       'Photographer': m.credit || '', 'Photographer handle': m.photographer_handle || '',
       'Source handle': m.source_handle || '', 'Cover slide': p.cover_source_photo || '',
-      'Slide links': (p.slides || []).join('\n'), 'Alt text': (p.alt_text || []).join('\n'),
+      'Slide links': (p.slides || []).join('\n'),
+      'Alt text': Array.isArray(p.alt_text) ? p.alt_text.join('\n') : String(p.alt_text || ''),
     };
     if (idx in rowOf) {
       const r = rowOf[idx];
