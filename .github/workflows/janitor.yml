@@ -1,0 +1,22 @@
+name: Archive janitor
+
+on:
+  schedule:
+    - cron: "41 13 1 * *"   # first of the month, 9:41am New York
+  workflow_dispatch:
+
+jobs:
+  janitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install boto3
+      - run: python build/janitor.py
+        env:
+          ARCHIVE_ENDPOINT: ${{ secrets.ARCHIVE_ENDPOINT }}
+          ARCHIVE_BUCKET: ${{ secrets.ARCHIVE_BUCKET }}
+          ARCHIVE_KEY_ID: ${{ secrets.ARCHIVE_KEY_ID }}
+          ARCHIVE_SECRET: ${{ secrets.ARCHIVE_SECRET }}

@@ -243,7 +243,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
             path = u[len(base.rstrip("/")):].strip("/")
             if not path or path.count("/") > 2:
                 continue
-            if re.search(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login)", path, re.I):
+            if re.search(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\.well-known|sitemap)", path, re.I):
                 continue
             if u not in seen and u not in links:
                 links.append(u)
@@ -269,7 +269,8 @@ def portfolio_harvest(sources, seen_path, per_source=6):
             except Exception as e:  # noqa: BLE001
                 rec["page_error"] = type(e).__name__
             seen.add(u)
-            out.append(rec)
+            if rec.get("photos") and len(rec["photos"]) >= 3:
+                out.append(rec)       # pages without a gallery are not projects
             time.sleep(0.4)
     json.dump(sorted(seen), open(seen_path, "w"))
     print(f"portfolio: {fetched} new project pages from {sum(1 for s in sources if s.get('category') in ('photographer','studio') and not s.get('disabled') and not s.get('feed'))} sites")

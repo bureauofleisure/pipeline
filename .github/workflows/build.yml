@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install
-        run: pip install pillow numpy opencv-python-headless
+        run: pip install pillow numpy opencv-python-headless boto3
 
       # Finished slides live on the gh-pages branch, which is rewritten as a single commit each run.
       # That keeps main free of image files and the repository small for years.
@@ -36,6 +36,11 @@ jobs:
 
       - name: Build slides
         run: python build/build_posts.py
+        env:
+          ARCHIVE_ENDPOINT: ${{ secrets.ARCHIVE_ENDPOINT }}
+          ARCHIVE_BUCKET: ${{ secrets.ARCHIVE_BUCKET }}
+          ARCHIVE_KEY_ID: ${{ secrets.ARCHIVE_KEY_ID }}
+          ARCHIVE_SECRET: ${{ secrets.ARCHIVE_SECRET }}
 
       - name: Prune posts built more than 120 days ago
         run: python build/prune.py 120

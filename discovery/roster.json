@@ -1,27 +1,11 @@
 {
  "photographers": {
-  "hoshino resorts": {
-   "name": "Hoshino Resorts",
-   "seen": 6,
-   "resolved": true,
-   "url": "https://hoshinoresorts.com/jp/",
-   "platform": "unknown",
-   "checked": "2026-10-18"
-  },
   "jonas bjerrepoulsen": {
    "name": "Jonas Bjerre-Poulsen",
    "seen": 6,
    "resolved": false,
    "url": null,
    "platform": null,
-   "checked": "2026-10-18"
-  },
-  "peninsula london": {
-   "name": "Peninsula London",
-   "seen": 6,
-   "resolved": true,
-   "url": "https://www.peninsulalondon.com/",
-   "platform": "unknown",
    "checked": "2026-10-18"
   },
   "ed reeve": {
@@ -46,14 +30,6 @@
    "resolved": false,
    "url": null,
    "platform": null,
-   "checked": "2026-10-18"
-  },
-  "common studio": {
-   "name": "Common Studio",
-   "seen": 3,
-   "resolved": true,
-   "url": "https://commonstudio.com/",
-   "platform": "unknown",
    "checked": "2026-10-18"
   },
   "adam firman": {
@@ -141,22 +117,6 @@
    "seen": 2,
    "resolved": true,
    "url": "https://www.oscarmendozaphoto.com/",
-   "platform": "unknown",
-   "checked": "2026-10-18"
-  },
-  "ruben cabrera": {
-   "name": "Ruben Cabrera",
-   "seen": 2,
-   "resolved": true,
-   "url": "https://cnm.com/buy-domain/rubencabrera",
-   "platform": "unknown",
-   "checked": "2026-10-18"
-  },
-  "dan ahn": {
-   "name": "Dan Ahn",
-   "seen": 2,
-   "resolved": true,
-   "url": "https://www.brandintention.com/name/DanAhn.com",
    "platform": "unknown",
    "checked": "2026-10-18"
   },
@@ -269,14 +229,6 @@
    "seen": 1,
    "resolved": true,
    "url": "https://www.mikeschwartzphoto.com/",
-   "platform": "squarespace",
-   "checked": "2026-10-18"
-  },
-  "ahmad alnaji": {
-   "name": "Ahmad Alnaji",
-   "seen": 1,
-   "resolved": true,
-   "url": "https://www.sarab.art/",
    "platform": "squarespace",
    "checked": "2026-10-18"
   },

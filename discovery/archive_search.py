@@ -16,9 +16,10 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "BureauOfLeisureBot/1.0 (https://bureauofleisure.co; hello@bureauofleisure.co)"
-OK_LICENCE = re.compile(r"\b(pd|public domain|cc0|cc-by(?:-sa)?(?:-[0-9.]+)?|cc by(?: sa)?)\b", re.I)
-BAD_LICENCE = re.compile(r"\b(nc|nd|non-?commercial|no derivatives|fair use|copyright(?:ed)?\b(?! free))", re.I)
+OK_LICENCE = re.compile(r"(public domain|\bpd\b|pd-|cc0|cc[ -]?by(?:[ -]?sa)?\b|no known copyright|no restrictions)", re.I)
+BAD_LICENCE = re.compile(r"(\bnc\b|\bnd\b|non-?commercial|no ?derivative|fair use|all rights reserved|copyrighted)", re.I)
 MIN_WIDE = 1800
+STATS = {"hits": 0, "licence": 0, "size": 0, "type": 0, "errors": [], "licences_seen": {}}
 
 
 def api(params):
@@ -32,15 +33,21 @@ def commons(query, limit=30):
     data = api({"action": "query", "format": "json", "generator": "search", "gsrsearch": query, "gsrnamespace": 6,
                 "gsrlimit": limit, "prop": "imageinfo", "iiprop": "url|size|extmetadata|user", "iiurlwidth": 2500})
     out = []
-    for page in data.get("query", {}).get("pages", {}).values():
+    pages = list(data.get("query", {}).get("pages", {}).values())
+    STATS["hits"] += len(pages)
+    for page in pages:
         ii = (page.get("imageinfo") or [{}])[0]
         meta = ii.get("extmetadata", {})
         lic = (meta.get("LicenseShortName", {}).get("value") or meta.get("License", {}).get("value") or "").strip()
         if not lic or BAD_LICENCE.search(lic) or not OK_LICENCE.search(lic):
+            STATS["licence"] += 1
+            STATS["licences_seen"][lic or "(none)"] = STATS["licences_seen"].get(lic or "(none)", 0) + 1
             continue
         if (ii.get("width") or 0) < MIN_WIDE or (ii.get("height") or 0) < 1350:
+            STATS["size"] += 1
             continue
         if not re.search(r"\.(jpe?g|png|tiff?)$", ii.get("url", ""), re.I):
+            STATS["type"] += 1
             continue
         author = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")).strip()
         out.append({"title": page["title"].replace("File:", ""), "url": ii["url"], "width": ii["width"], "height": ii["height"],
@@ -81,6 +88,7 @@ def main():
             try:
                 found += commons(q)
             except Exception as e:  # noqa: BLE001
+                STATS["errors"].append(f"commons {q}: {type(e).__name__} {str(e)[:120]}")
                 print("commons error", q, type(e).__name__)
             if key:
                 try:
@@ -94,7 +102,8 @@ def main():
                 seen.add(f["url"]); uniq.append(f)
         results.append({**{k: t[k] for k in ("place", "city", "era", "notes") if k in t}, "candidates": uniq[:25], "count": len(uniq)})
         print(f"{t['place']}: {len(uniq)} licensed candidates")
-    json.dump({"searched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "flickr": bool(key), "targets": results},
+    STATS["licences_seen"] = dict(sorted(STATS["licences_seen"].items(), key=lambda kv: -kv[1])[:30])
+    json.dump({"searched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "flickr": bool(key), "stats": STATS, "targets": results},
               open(os.path.join(HERE, "archive_candidates.json"), "w"), indent=1, ensure_ascii=False)
 
 

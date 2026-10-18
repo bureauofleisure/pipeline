@@ -34,6 +34,7 @@ sys.path.insert(0, os.path.join(ROOT, "grade"))
 sys.path.insert(0, HERE)
 from atlas_grade import grade, check, check_carousel, export, _crop_45, GRADE_VERSION, HoldForReview  # noqa: E402
 import carousel  # noqa: E402
+import archive  # noqa: E402
 
 MIN_PHOTOS = 4
 MAX_PHOTOS = 6
@@ -85,18 +86,22 @@ def validate_card(p):
 
 # ---------------------------------------------------------------- photos
 def fetch(src):
+    """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive."""
     if src.startswith("http"):
         req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "image/*"})
         last = None
         for attempt in range(3):
             try:
                 with urllib.request.urlopen(req, timeout=30) as r:
-                    return Image.open(io.BytesIO(r.read())).convert("RGB")
+                    data = r.read()
+                    ctype = r.headers.get("Content-Type", "").split(";")[0].strip()
+                    return Image.open(io.BytesIO(data)).convert("RGB"), data, ctype
             except Exception as e:  # noqa: BLE001
                 last = e
                 time.sleep(2 * (attempt + 1))
         raise last
-    return Image.open(os.path.join(ROOT, src)).convert("RGB")
+    data = open(os.path.join(ROOT, src), "rb").read()
+    return Image.open(io.BytesIO(data)).convert("RGB"), data, ""
 
 
 def ahash(img):
@@ -170,11 +175,11 @@ def build_post(p, out_root):
         result["notes"] = ["copy: " + x for x in problems]
         return finish(result, out_dir, done)
 
-    graded, seen = [], []
+    graded, seen, originals = [], [], []
     focal = tuple(p.get("focal", (0.5, 0.5)))
     for i, src in enumerate(p["photos"]):
         try:
-            raw = fetch(src)
+            raw, raw_bytes, raw_type = fetch(src)
         except Exception as e:  # noqa: BLE001  unreachable, blocked, not an image
             result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__})")
             continue
@@ -198,6 +203,9 @@ def build_post(p, out_root):
             continue
         pre = _crop_45(raw, focal).resize((1080, 1350), Image.LANCZOS)
         graded.append({"i": i, "score": score(pre), "img": img, "report": rep})
+        # every photo that passes the gate is archived at source resolution, used in the carousel or not
+        originals.append({"n": i + 1, "url": src, "bytes": raw_bytes, "content_type": raw_type,
+                          "width": raw.size[0], "height": raw.size[1], "used_as_slide": False})
 
     if len(graded) < MIN_PHOTOS:
         result["status"] = "BENCHED"
@@ -240,6 +248,12 @@ def build_post(p, out_root):
         export(s, os.path.join(out_dir, name))
         urls.append(f"{BASE_URL}/posts/{idx}/{name}")
     result["slides"] = urls
+    used = {g["i"] + 1 for g in graded}
+    for o in originals:
+        o["used_as_slide"] = o["n"] in used
+    result["archive"] = archive.store(idx, {"place": p["place"], "neighborhood": p.get("neighborhood", ""), "city": p.get("city", ""),
+                                            "designer": p.get("designer", ""), "credit": p.get("credit", ""),
+                                            "source_url": p.get("source_url", ""), "licence": p.get("licence", "")}, originals)
     result["cover_source_photo"] = graded[0]["i"] + 1
     # which source photo (1-based, as listed in the batch) sits behind each photo slide, so a review can name a cover
     result["slide_sources"] = [g["i"] + 1 for g in graded]

@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.5 (publishing untested until the Meta app exists; importBatch works now)
+ * Bureau of Leisure Publisher v0.6 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -41,6 +41,7 @@ function setupTrigger() {
   ScriptApp.newTrigger('refreshToken').timeBased().everyDays(7).create();
   ScriptApp.newTrigger('dailyCheck').timeBased().everyDays(1).atHour(7).create();
   ScriptApp.newTrigger('importBatch').timeBased().everyHours(6).create();
+  ScriptApp.newTrigger('syncStatuses').timeBased().everyHours(6).create();
 }
 
 /** Where alerts go. Script Property ALERT_EMAIL, else the script owner. */
@@ -360,4 +361,58 @@ function log_(what, msg) {
   const ss = SpreadsheetApp.getActive();
   const log = ss.getSheetByName('Log') || ss.insertSheet('Log');
   log.appendRow([new Date(), what, msg]);
+}
+
+
+/**
+ * syncStatuses, every 6 hours (v0.6):
+ * Writes every row's Status, Publish at and Live link to discovery/statuses.json in the GitHub repo, so the
+ * build side knows what was POSTED (keep the originals forever) and what was KILLED (the janitor removes
+ * the originals after 60 days). Needs Script Property GH_TOKEN: a fine-grained GitHub token for
+ * bureauofleisure/pipeline with Contents: read and write. Without it this does nothing and logs once a day.
+ */
+function syncStatuses() {
+  const props = PropertiesService.getScriptProperties();
+  const token = props.getProperty('GH_TOKEN');
+  if (!token) {
+    const last = Number(props.getProperty('GH_TOKEN_WARNED') || 0);
+    if (Date.now() - last > 24 * 3600000) { log_('syncStatuses', 'GH_TOKEN not set; statuses not synced'); props.setProperty('GH_TOKEN_WARNED', String(Date.now())); }
+    return;
+  }
+  const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
+  const values = sheet.getDataRange().getValues();
+  const col = indexHeaders_(values[0]);
+  const rows = {};
+  for (let r = 1; r < values.length; r++) {
+    const idx = String(values[r][col['Index No.']] || '').trim();
+    if (!idx) continue;
+    const when = values[r][col['Publish at']];
+    rows[idx] = {
+      status: String(values[r][col['Status']] || '').trim(),
+      publish_at: when instanceof Date ? when.toISOString() : String(when || ''),
+      live_link: String(values[r][col['Live link']] || ''),
+      updated: new Date().toISOString(),
+    };
+  }
+  const body = JSON.stringify({ synced: new Date().toISOString(), rows }, null, 1);
+  const api = 'https://api.github.com/repos/bureauofleisure/pipeline/contents/discovery/statuses.json';
+  const headers = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  let sha = null;
+  const cur = UrlFetchApp.fetch(api, { headers, muteHttpExceptions: true });
+  if (cur.getResponseCode() === 200) {
+    const j = JSON.parse(cur.getContentText());
+    sha = j.sha;
+    const existing = Utilities.newBlob(Utilities.base64Decode(j.content.replace(/\n/g, ''))).getDataAsString();
+    try {
+      if (JSON.stringify(JSON.parse(existing).rows) === JSON.stringify(rows)) return;   // nothing changed
+    } catch (e) { /* rewrite */ }
+  }
+  const payload = { message: 'Statuses from the sheet', content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
+  if (sha) payload.sha = sha;
+  const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
+  if (res.getResponseCode() >= 300) {
+    log_('syncStatuses', 'GitHub write failed: ' + res.getResponseCode() + ' ' + res.getContentText().slice(0, 200));
+  } else {
+    log_('syncStatuses', Object.keys(rows).length + ' rows synced');
+  }
 }

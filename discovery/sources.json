@@ -947,30 +947,6 @@
    "notes": "Classic NYC diners and storefronts. Leads for the nostalgia supply."
   },
   {
-   "name": "Hoshino Resorts",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://hoshinoresorts.com/jp/",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "unknown",
-   "notes": "Added automatically from 6 credit(s) in the harvest, 2026-10-18."
-  },
-  {
-   "name": "Peninsula London",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://www.peninsulalondon.com/",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "unknown",
-   "notes": "Added automatically from 6 credit(s) in the harvest, 2026-10-18."
-  },
-  {
    "name": "Fabián Martinez",
    "category": "photographer",
    "tier": 1,
@@ -981,18 +957,6 @@
    "auto": true,
    "platform": "unknown",
    "notes": "Added automatically from 4 credit(s) in the harvest, 2026-10-18."
-  },
-  {
-   "name": "Common Studio",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://commonstudio.com/",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "unknown",
-   "notes": "Added automatically from 3 credit(s) in the harvest, 2026-10-18."
   },
   {
    "name": "Adam Firman",
@@ -1127,30 +1091,6 @@
    "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18."
   },
   {
-   "name": "Ruben Cabrera",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://cnm.com/buy-domain/rubencabrera",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "unknown",
-   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18."
-  },
-  {
-   "name": "Dan Ahn",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://www.brandintention.com/name/DanAhn.com",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "unknown",
-   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18."
-  },
-  {
    "name": "Patrick Michael Chin",
    "category": "photographer",
    "tier": 1,
@@ -1252,18 +1192,6 @@
    "tier": 1,
    "region": "global",
    "url": "https://www.mikeschwartzphoto.com/",
-   "feed": null,
-   "archive": true,
-   "auto": true,
-   "platform": "squarespace",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18."
-  },
-  {
-   "name": "Ahmad Alnaji",
-   "category": "photographer",
-   "tier": 1,
-   "region": "global",
-   "url": "https://www.sarab.art/",
    "feed": null,
    "archive": true,
    "auto": true,

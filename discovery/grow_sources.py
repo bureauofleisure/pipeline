@@ -22,7 +22,8 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 MAX_NEW_PER_RUN = int(os.environ.get("GROW_MAX", "40"))
 
 # words that mean a "credit" is not a person or studio
-NOT_A_NAME = re.compile(r"\b(courtesy|supplied|dezeen|unless|stated|the|hotel|hotels|resort|group|hospitality|"
+NOT_A_NAME = re.compile(r"\b(courtesy|supplied|dezeen|unless|stated|the|hotel|hotels|resort|resorts|group|hospitality|"
+                        r"london|paris|york|tokyo|kimpton|inn|house|collection|brand|studio|architects?|design|"
                         r"press|instagram|getty|shutterstock|alamy|unsplash|stock|inc|llc|ltd|corporation|"
                         r"architects? and|design and|photo|photos|photography|images?)\b", re.I)
 PLATFORMS = (("squarespace", "squarespace"), ("format.com", "format"), ("cargo.site", "cargo"), ("cargocollective", "cargo"),
@@ -94,13 +95,21 @@ def fetch(url):
         return r.geturl(), r.read(300_000).decode("utf-8", "replace")
 
 
-def verify(name, body):
-    """The page must mention the name (surname at least) in its title, meta or first visible text."""
+PARKED = re.compile(r"buy-domain|domain for sale|this domain|brandintention|hugedomains|sedo|afternic|godaddy|dan\.com|parkingcrew", re.I)
+
+
+def verify(name, body, final_url, asked_url):
+    """The page must be theirs: the surname appears in the page, the final host still carries the name
+    (so a redirect to a parking page or an unrelated site is rejected), and it is not a domain-for-sale page."""
     low = body.lower()
     parts = slug(name).split()
     surname = parts[-1] if parts else ""
-    head = low[:60_000]
-    return bool(surname) and len(surname) > 2 and surname in head
+    if not surname or len(surname) <= 2 or surname not in low[:60_000]:
+        return False
+    host = re.sub(r"^https?://(www\.)?", "", final_url).split("/")[0].lower()
+    if PARKED.search(final_url) or PARKED.search(low[:20_000]):
+        return False
+    return surname in host.replace("-", "") or "".join(parts) in host.replace("-", "")
 
 
 def platform(body):
@@ -117,7 +126,7 @@ def resolve(name, kind):
             final, body = fetch(url)
         except Exception:  # noqa: BLE001
             continue
-        if verify(name, body):
+        if verify(name, body, final, url):
             return {"url": final, "platform": platform(body)}
         time.sleep(0.2)
     return None
@@ -140,7 +149,7 @@ def collect_names():
                 d = clean(d)
                 if 4 <= len(d) <= 40 and len(d.split()) <= 4 and not GENERIC.match(d) \
                         and re.search(r"\b(studio|architects?|design|atelier|office|workshop|partners|associates)\b", d, re.I) \
-                        and not NOT_A_NAME.search(d.replace("Design", "").replace("Architects", "")):
+                        and not re.search(r"\b(courtesy|supplied|dezeen|hotel|hotels|resort|group|inc|llc|ltd)\b", d, re.I):
                     studios[d] = studios.get(d, 0) + 1
     # the reviewed pick files carry verified names: count them double
     for path in glob.glob(os.path.join(HERE, "picks", "*.json")):

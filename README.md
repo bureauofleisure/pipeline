@@ -18,6 +18,26 @@ An Instagram index of beautifully designed places, run almost entirely by machin
 7. **Daily 7am, Apps Script `dailyCheck`.** Gives approved rows the next free slot, alerts if the queue is thin or stalled.
 8. **Hourly, Apps Script `publishDue`.** Posts the next approved carousel through the Instagram API. Weekly token refresh.
 
+## Sourcing without outreach
+- `discovery/grow_sources.py` turns every photographer and studio credited in the harvest into a verified tier-1 source
+  (portfolio domain found, name confirmed on the page, parked domains rejected). Unresolved names wait in `roster.json`.
+- `harvest.py` crawls those portfolio sites weekly (new project pages only) and rewrites thumbnails to each platform's
+  largest rendition (Squarespace 2500w, WordPress originals, Wix 2500, Format 2500).
+- `discovery/watch.py` keeps a watch list of posts benched for photo reasons and re-checks their venue, studio and
+  photographer pages every Monday. READY means four or more full-size candidates appeared.
+- `discovery/archive_search.py` pulls licensed, full-size archive photographs from Wikimedia Commons (and Flickr with a
+  FLICKR_KEY secret) for the places in `archive_targets.json`, with licence and author recorded for the credit line.
+
+## The originals archive
+Every photograph that passes the gate is stored untouched, at source resolution, in an S3-compatible bucket
+(`build/archive.py`; Cloudflare R2 recommended). Layout: `originals/<index>/<index>-<nn>.<ext>` plus a sidecar
+`<index>.json` (place, source, credit, licence, per-photo size, sha1, used as slide or not) and a running
+`originals/index.jsonl`. The 4:5 slides are derivatives; books, PDFs and prints are made from the originals.
+Secrets: ARCHIVE_ENDPOINT, ARCHIVE_BUCKET, ARCHIVE_KEY_ID, ARCHIVE_SECRET. Without them the build records
+`archive: not configured` on each post. The sheet writes `discovery/statuses.json` back (publisher `syncStatuses`,
+needs Script Property GH_TOKEN); the monthly janitor removes originals of posts KILLED more than 60 days ago.
+Budget: roughly 300 MB a week at 8 posts, 15 GB a year, about $0.25 a month on R2 after the free 10 GB.
+
 ## Where things live
 - `discovery/sources.json` the source list (tiers, categories, feeds). `disabled: true` keeps a dead one on record.
 - `discovery/LENS.md` the rulebook the weekly review applies.
