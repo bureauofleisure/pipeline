@@ -40,6 +40,14 @@ jobs:
       - name: Prune posts built more than 120 days ago
         run: python build/prune.py 120
 
+      - name: Put photo-starved posts on the watch list
+        run: |
+          python discovery/watch.py add docs/manifest.json
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add discovery/watchlist.json
+          git diff --cached --quiet || (git commit -q -m "Watch list updated after build" && git pull --rebase -q origin main && git push -q origin HEAD:main)
+
       - name: Publish to gh-pages
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}

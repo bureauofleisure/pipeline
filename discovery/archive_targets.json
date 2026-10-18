@@ -1,0 +1,29 @@
+{
+ "_about": "Places worth an archive post. The weekly archive search looks each one up on Wikimedia Commons (and Flickr when a key is set) and keeps only licensed, full-size photographs. Add a place by name; add 'queries' when the name alone is ambiguous.",
+ "targets": [
+  {"place": "Grand Central Oyster Bar", "city": "New York", "era": "1913", "queries": ["Grand Central Oyster Bar interior", "Oyster Bar Grand Central Guastavino"]},
+  {"place": "Bemelmans Bar", "city": "New York", "era": "1947", "queries": ["Bemelmans Bar Carlyle"]},
+  {"place": "Caffe Reggio", "city": "New York", "era": "1927", "queries": ["Caffe Reggio interior"]},
+  {"place": "Russian and Turkish Baths", "city": "New York", "era": "1892", "queries": ["Russian and Turkish Baths East Village"]},
+  {"place": "The Campbell", "city": "New York", "era": "1923", "queries": ["Campbell Apartment Grand Central"]},
+  {"place": "Rainbow Room", "city": "New York", "era": "1934", "queries": ["Rainbow Room Rockefeller Center interior"]},
+  {"place": "TWA Hotel", "city": "New York", "era": "1962", "queries": ["TWA Flight Center interior", "TWA Hotel Saarinen"]},
+  {"place": "Hotel Chelsea", "city": "New York", "era": "1884", "queries": ["Hotel Chelsea lobby", "Chelsea Hotel interior"]},
+  {"place": "Fontainebleau Miami Beach", "city": "Miami", "era": "1954", "queries": ["Fontainebleau Miami Beach Lapidus lobby", "Fontainebleau Hotel Miami Beach"]},
+  {"place": "Eden Roc", "city": "Miami", "era": "1956", "queries": ["Eden Roc Miami Beach Lapidus"]},
+  {"place": "The Raleigh", "city": "Miami", "era": "1940", "queries": ["Raleigh Hotel Miami Beach pool"]},
+  {"place": "Venetian Pool", "city": "Miami", "era": "1924", "queries": ["Venetian Pool Coral Gables"]},
+  {"place": "Driskill Hotel", "city": "Austin", "era": "1886", "queries": ["Driskill Hotel lobby Austin"]},
+  {"place": "Barton Springs Pool", "city": "Austin", "era": "1920s", "queries": ["Barton Springs Pool Austin"]},
+  {"place": "Musso & Frank Grill", "city": "Los Angeles", "era": "1919", "queries": ["Musso and Frank Grill interior"]},
+  {"place": "The Beverly Hills Hotel", "city": "Los Angeles", "era": "1912", "queries": ["Beverly Hills Hotel Polo Lounge", "Beverly Hills Hotel interior"]},
+  {"place": "Chateau Marmont", "city": "Los Angeles", "era": "1929", "queries": ["Chateau Marmont interior"]},
+  {"place": "Sunnylands", "city": "Palm Springs", "era": "1966", "queries": ["Sunnylands Annenberg interior"]},
+  {"place": "Hotel Okura", "city": "Tokyo", "era": "1962", "queries": ["Hotel Okura Tokyo lobby 1962"]},
+  {"place": "Hotel Il Pellicano", "city": "Porto Ercole", "era": "1965", "queries": ["Il Pellicano Porto Ercole"]},
+  {"place": "Gellért Baths", "city": "Budapest", "era": "1918", "queries": ["Gellért Baths interior"]},
+  {"place": "Café Central", "city": "Vienna", "era": "1876", "queries": ["Café Central Vienna interior"]},
+  {"place": "Les Bains Douches", "city": "Paris", "era": "1885", "queries": ["Les Bains Paris pool"]},
+  {"place": "Tooting Bec Lido", "city": "London", "era": "1906", "queries": ["Tooting Bec Lido"]}
+ ]
+}

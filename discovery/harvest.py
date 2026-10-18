@@ -207,6 +207,75 @@ def harvest_links(links, label="shortlist"):
     print(f"{len(out)} links harvested to {path}")
 
 
+# ---------------------------------------------------------------- portfolio sources (no feed)
+def fullsize(url, platform):
+    """Rewrite a thumbnail URL to the platform's largest public rendition."""
+    if "squarespace" in url or platform == "squarespace":
+        return re.sub(r"\?.*$", "", url) + "?format=2500w"
+    if platform == "wordpress" or "wp-content" in url:
+        return re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", url)
+    if platform == "wix" or "wixstatic" in url:
+        return re.sub(r"/v1/fill/[^/]+/", "/v1/fill/w_2500,h_2500,al_c,q_90/", url)
+    if "format.com" in url or platform == "format":
+        return re.sub(r"/(?:w_|h_)?\d{3,4}(?=/|$)", "/w_2500", url)
+    return url
+
+
+def portfolio_harvest(sources, seen_path, per_source=6):
+    """Walk photographer and studio sites: homepage -> project pages -> full-size images.
+    Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds."""
+    seen = set(json.load(open(seen_path))) if os.path.exists(seen_path) else set()
+    out, fetched = [], 0
+    for s in sources:
+        if s.get("feed") or s.get("disabled") or not s.get("url") or s.get("category") not in ("photographer", "studio"):
+            continue
+        try:
+            home = get(s["url"])
+        except Exception as e:  # noqa: BLE001
+            out.append({"source": s["name"], "error": f"home {type(e).__name__}"})
+            continue
+        base = s["url"]
+        links = []
+        for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
+            u = urljoin(base, html.unescape(m.group(1)))
+            if not u.startswith(base.rstrip("/")):
+                continue
+            path = u[len(base.rstrip("/")):].strip("/")
+            if not path or path.count("/") > 2:
+                continue
+            if re.search(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login)", path, re.I):
+                continue
+            if u not in seen and u not in links:
+                links.append(u)
+        for u in links[:per_source]:
+            fetched += 1
+            rec = {"source": s["name"], "tier": s.get("tier", 1), "category": s["category"], "link": u, "title": "", "date": "", "summary": ""}
+            try:
+                page = get(u)
+                t = re.search(r"<title>(.*?)</title>", page, re.S)
+                rec["title"] = html.unescape(t.group(1).strip()) if t else u
+                text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
+                text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text)))
+                rec["text"] = text[:3000]
+                photos, uniq = images_from(page, u), {}
+                for ph in photos:
+                    fu = fullsize(ph["url"], s.get("platform", ""))
+                    uniq[fu] = max(uniq.get(fu, 0), ph["width_hint"])
+                rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
+                rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:5]
+                rec["designers"] = [s["name"]] if s["category"] == "studio" else []
+                rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:1500])})
+                rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
+            except Exception as e:  # noqa: BLE001
+                rec["page_error"] = type(e).__name__
+            seen.add(u)
+            out.append(rec)
+            time.sleep(0.4)
+    json.dump(sorted(seen), open(seen_path, "w"))
+    print(f"portfolio: {fetched} new project pages from {sum(1 for s in sources if s.get('category') in ('photographer','studio') and not s.get('disabled') and not s.get('feed'))} sites")
+    return out
+
+
 def main():
     shortlist = os.path.join(HERE, "shortlist.json")
     if os.environ.get("HARVEST_SHORTLIST") and os.path.exists(shortlist):
@@ -243,6 +312,7 @@ def main():
                     rec["page_error"] = type(e).__name__
                 time.sleep(0.4)
             out.append(rec)
+    out += portfolio_harvest(src, os.path.join(HERE, "seen_pages.json"))
     os.makedirs(os.path.join(HERE, "harvest"), exist_ok=True)
     path = os.path.join(HERE, "harvest", time.strftime("%Y-%m-%d") + ".json")
     json.dump({"harvested": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "pages_fetched": pages, "items": out},

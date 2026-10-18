@@ -25,11 +25,19 @@ jobs:
       - run: python discovery/harvest.py
         env:
           HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
+      - name: Grow sources from credits, re-check the watch list, search the archives
+        if: ${{ !inputs.shortlist }}
+        env:
+          FLICKR_KEY: ${{ secrets.FLICKR_KEY }}
+        run: |
+          python discovery/grow_sources.py
+          python discovery/watch.py check
+          python discovery/archive_search.py
       - name: Save the harvest
         run: |
           git config user.name "Bureau of Leisure"
           git config user.email "lewie@flow.agency"
-          git add discovery/harvest
+          git add discovery
           git diff --cached --quiet && exit 0
           git commit -m "Harvest $(date -u +%Y-%m-%d)"
           git pull --rebase -q origin main
