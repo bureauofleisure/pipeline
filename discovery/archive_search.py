@@ -29,21 +29,47 @@ def api(params):
         return json.load(r)
 
 
-def commons(query, limit=30):
-    q = f'"{query}" filetype:bitmap' if '"' not in query else f"{query} filetype:bitmap"
-    data = api({"action": "query", "format": "json", "generator": "search", "gsrsearch": q, "gsrnamespace": 6,
-                "gsrlimit": limit, "prop": "imageinfo", "iiprop": "url|size|extmetadata|user", "iiurlwidth": 2500})
+IIPROPS = {"prop": "imageinfo", "iiprop": "url|size|extmetadata|user", "iiextmetadatafilter": "LicenseShortName|License|Artist|DateTimeOriginal|ImageDescription"}
+
+
+def _pages(params):
+    data = api({"action": "query", "format": "json", **IIPROPS, **params})
+    return list(data.get("query", {}).get("pages", {}).values())
+
+
+def commons(query, limit=40, words=None):
+    """Three routes, merged: the Commons category named after the place (where curated sets live), its
+    subcategories, and a full-text search restricted to bitmaps. Hits must mention the place words."""
+    pages = []
+    cat = "Category:" + query
+    try:
+        pages += _pages({"generator": "categorymembers", "gcmtitle": cat, "gcmtype": "file", "gcmlimit": limit})
+        subs = api({"action": "query", "format": "json", "list": "categorymembers", "cmtitle": cat, "cmtype": "subcat", "cmlimit": 10})
+        for sc in subs.get("query", {}).get("categorymembers", [])[:6]:
+            pages += _pages({"generator": "categorymembers", "gcmtitle": sc["title"], "gcmtype": "file", "gcmlimit": limit})
+    except Exception as e:  # noqa: BLE001
+        STATS["errors"].append(f"category {cat}: {type(e).__name__}")
+    pages += _pages({"generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": 6, "gsrlimit": limit})
+    words = words or [w for w in re.findall(r"[a-z]{4,}", query.lower()) if w not in ("hotel", "interior", "lobby", "beach", "pool", "miami", "york", "angeles")]
     out = []
-    pages = list(data.get("query", {}).get("pages", {}).values())
     STATS["hits"] += len(pages)
+    seen_titles = set()
     if len(STATS.setdefault("samples", [])) < 3 and pages:
         pg = dict(pages[0]); ii0 = (pg.get("imageinfo") or [{}])[0]
         STATS["samples"].append({"title": pg.get("title"), "keys": sorted(pg.keys()), "ii_keys": sorted(ii0.keys()),
                                  "url": ii0.get("url"), "width": ii0.get("width"), "height": ii0.get("height"),
                                  "licence": (ii0.get("extmetadata") or {}).get("LicenseShortName")})
     for page in pages:
+        if page.get("title") in seen_titles:
+            continue
+        seen_titles.add(page.get("title"))
         ii = (page.get("imageinfo") or [{}])[0]
         meta = ii.get("extmetadata", {})
+        desc = re.sub(r"<[^>]+>", "", meta.get("ImageDescription", {}).get("value", "")).lower()
+        hay = (page.get("title", "") + " " + desc).lower()
+        if words and not any(w in hay for w in words):
+            STATS["offtopic"] = STATS.get("offtopic", 0) + 1
+            continue
         lic = (meta.get("LicenseShortName", {}).get("value") or meta.get("License", {}).get("value") or "").strip()
         if not lic or BAD_LICENCE.search(lic) or not OK_LICENCE.search(lic):
             STATS["licence"] += 1
