@@ -9,6 +9,10 @@ on:
         description: "Re-harvest discovery/shortlist.json only"
         type: boolean
         default: false
+      archive_only:
+        description: "Run only the archive search"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -23,10 +27,16 @@ jobs:
         with:
           python-version: "3.11"
       - run: python discovery/harvest.py
+        if: ${{ !inputs.archive_only }}
         env:
           HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
+      - name: Archive search only
+        if: ${{ inputs.archive_only }}
+        env:
+          FLICKR_KEY: ${{ secrets.FLICKR_KEY }}
+        run: python discovery/archive_search.py
       - name: Grow sources from credits, re-check the watch list, search the archives
-        if: ${{ !inputs.shortlist }}
+        if: ${{ !inputs.shortlist && !inputs.archive_only }}
         env:
           FLICKR_KEY: ${{ secrets.FLICKR_KEY }}
         run: |

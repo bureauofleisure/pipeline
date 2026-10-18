@@ -35,6 +35,11 @@ def commons(query, limit=30):
     out = []
     pages = list(data.get("query", {}).get("pages", {}).values())
     STATS["hits"] += len(pages)
+    if len(STATS.setdefault("samples", [])) < 3 and pages:
+        pg = dict(pages[0]); ii0 = (pg.get("imageinfo") or [{}])[0]
+        STATS["samples"].append({"title": pg.get("title"), "keys": sorted(pg.keys()), "ii_keys": sorted(ii0.keys()),
+                                 "url": ii0.get("url"), "width": ii0.get("width"), "height": ii0.get("height"),
+                                 "licence": (ii0.get("extmetadata") or {}).get("LicenseShortName")})
     for page in pages:
         ii = (page.get("imageinfo") or [{}])[0]
         meta = ii.get("extmetadata", {})
