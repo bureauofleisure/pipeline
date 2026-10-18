@@ -93,7 +93,8 @@ def main(batch_name):
         post = {k: p[k] for k in ("index", "place", "neighborhood", "city", "word", "reminds", "card", "credit",
                                   "alt_hint", "source_url") if k in p}
         for k in ("category", "designer", "designer_handle", "venue_handle", "photographer_handle",
-                  "source_handle", "bring", "cover", "focal", "discovered_via", "archive", "era", "published_year", "licence"):
+                  "source_handle", "bring", "cover", "focal", "discovered_via", "archive", "era", "published_year", "licence",
+                  "drop_photos", "rotate", "edited_at"):
             if k in p:
                 post[k] = p[k]
         post["photos"] = photos

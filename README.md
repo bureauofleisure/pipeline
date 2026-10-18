@@ -14,7 +14,8 @@ An Instagram index of beautifully designed places, run almost entirely by machin
    `gh-pages` branch. Prunes posts older than 120 days.
 5. **Every 6 hours, Apps Script `importBatch`.** Reads the manifest, adds new posts to the Posts tab as DRAFT with every column
    filled, refreshes DRAFT rows if a rebuild changed them, lists benched posts in Candidates, emails when new rows arrive.
-6. **Lewie** opens the sheet, looks at the slides, sets Status to APPROVED (or KILLED). That is the only human step.
+6. **Lewie** opens the review page (Apps Script web app: slides, caption, Approve / Edits / Kill). That is the only
+   human step. Edits go back through the daily edits job and return as DRAFT marked "Edited".
 7. **Daily 7am, Apps Script `dailyCheck`.** Gives approved rows the next free slot, alerts if the queue is thin or stalled.
 8. **Hourly, Apps Script `publishDue`.** Posts the next approved carousel through the Instagram API. Weekly token refresh.
 

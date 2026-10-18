@@ -18,8 +18,10 @@ import glob
 import shutil
 import hashlib
 import io
+import math
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -113,6 +115,63 @@ def is_duplicate(h, seen, max_bits=12):
     return any(int((h != s).sum()) <= max_bits for s in seen)
 
 
+BED_WORDS = re.compile(r"bed(room)?s?\b|guest-?rooms?|suites?\b|sleep|king-?room|queen-?room|bunk|pillow", re.I)
+
+
+def looks_like_bedroom(src, alt=""):
+    """Beds never make the cut. Cheap filter on the filename and any caption the harvest kept."""
+    name = src.split("?")[0].rsplit("/", 1)[-1]
+    return bool(BED_WORDS.search(name) or BED_WORDS.search(alt or ""))
+
+
+def measure_keystone(img):
+    """How much the verticals lean toward each other, in degrees (positive = converging upward).
+    Rotation is handled by the grade; this catches the camera-tilted-up look that rotation cannot fix."""
+    gray = cv2.cvtColor(np.asarray(img.convert("RGB")), cv2.COLOR_RGB2GRAY)
+    edges = cv2.Canny(gray, 60, 160)
+    h, w = gray.shape
+    lines = cv2.HoughLinesP(edges, 1, np.pi / 720, threshold=80, minLineLength=int(h * 0.2), maxLineGap=10)
+    if lines is None:
+        return 0.0
+    left, right = [], []
+    for x1, y1, x2, y2 in np.asarray(lines).reshape(-1, 4):
+        ang = math.degrees(math.atan2(x2 - x1, y2 - y1))
+        if ang > 90:
+            ang -= 180
+        if ang < -90:
+            ang += 180
+        if abs(ang) > 12:
+            continue
+        xm = (x1 + x2) / 2
+        if xm < w * 0.4:
+            left.append(ang)
+        elif xm > w * 0.6:
+            right.append(ang)
+    if len(left) < 2 or len(right) < 2:
+        return 0.0
+    aL, aR = float(np.median(left)), float(np.median(right))
+    # converging upward: left lines lean right (+), right lines lean left (-)
+    return (aL - aR) / 2.0
+
+
+def fix_keystone(img, deg):
+    """Pull the verticals back to vertical and crop away the empty wedges."""
+    w, h = img.size
+    dx = math.tan(math.radians(abs(deg))) * h / 2.0
+    src = np.float32([[0, 0], [w, 0], [w, h], [0, h]])
+    if deg > 0:   # top narrower than it should be: push the top corners outward
+        dst = np.float32([[-dx, 0], [w + dx, 0], [w, h], [0, h]])
+    else:         # bottom narrower
+        dst = np.float32([[0, 0], [w, 0], [w + dx, h], [-dx, h]])
+    m = cv2.getPerspectiveTransform(src, dst)
+    out = cv2.warpPerspective(np.asarray(img.convert("RGB")), m, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REFLECT)
+    crop = int(dx) + 2
+    return Image.fromarray(out).crop((crop, 0, w - crop, h))
+
+
+KEYSTONE_MIN, KEYSTONE_MAX = 0.8, 4.0
+
+
 def quality(raw, focal):
     """Returns (ok, reason). Checks the 4:5 crop at output size, never enlarged."""
     crop = _crop_45(raw, focal)
@@ -165,6 +224,7 @@ def build_post(p, out_root):
     result = {"index": idx, "place": p["place"], "status": "BUILT", "notes": [],
               "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d"),
               # everything the sheet needs, passed straight through from the batch file
+              "edited_at": p.get("edited_at", ""),      # set by the edits job when it applies a request
               "meta": {k: p.get(k, "") for k in ("neighborhood", "city", "category", "word", "reminds", "credit",
                                                   "designer", "designer_handle", "venue_handle",
                                                   "photographer_handle", "source_handle", "source_url", "bring")}}
@@ -177,12 +237,27 @@ def build_post(p, out_root):
 
     graded, seen, originals = [], [], []
     focal = tuple(p.get("focal", (0.5, 0.5)))
+    drop = {int(n) for n in p.get("drop_photos", [])}          # 1-based, set by an edit
+    manual_rotate = {int(k): float(v) for k, v in (p.get("rotate") or {}).items()}
     for i, src in enumerate(p["photos"]):
+        if i + 1 in drop:
+            result["notes"].append(f"photo {i + 1} dropped by edit")
+            continue
+        if looks_like_bedroom(src):
+            result["notes"].append(f"photo {i + 1} skipped: looks like a bedroom")
+            continue
         try:
             raw, raw_bytes, raw_type = fetch(src)
         except Exception as e:  # noqa: BLE001  unreachable, blocked, not an image
             result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__})")
             continue
+        if i + 1 in manual_rotate and manual_rotate[i + 1]:
+            raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
+            result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
+        ks = measure_keystone(raw)
+        if KEYSTONE_MIN <= abs(ks) <= KEYSTONE_MAX:
+            raw = fix_keystone(raw, ks)
+            result["notes"].append(f"photo {i + 1} keystone corrected {ks:+.1f} deg")
         hs = ahash(raw)
         if is_duplicate(hs, seen):
             result["notes"].append(f"photo {i + 1} is a near-duplicate, dropped")

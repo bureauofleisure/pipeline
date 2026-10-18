@@ -22,6 +22,8 @@ the archive. 80% US (New York, then Austin, Miami, Los Angeles), 20% abroad.
 - Logos, signage or branding as the subject of the shot.
 - Places that have closed.
 - Stock photography, lifestyle shots with models, food close-ups. The subject is the room.
+- Beds. No bedrooms, no guest rooms, no suites, ever. A hotel is shown through its lobby, bar, restaurant, pool,
+  corridor, bathhouse, terrace. If a hotel's only good photos are of beds, it is not a post.
 - Watermarked images.
 - Any photo under 1080 x 1350 after the 4:5 crop. Nothing is ever enlarged.
 
@@ -62,6 +64,12 @@ Enforced by make_batch.py; a batch that breaks these does not build.
 - US floor 60%, target 80%. New York first, then Austin, Miami, Los Angeles.
 - We take at most two of the fifteen or so hospitality interiors the press runs each week, chosen on era and
   shareability, which are not their criteria. Same raw material, different eye, different photos, different words.
+
+## Edits
+A reviewer can send a post back with a note instead of killing it (Status EDITS). The daily edits job reads the
+note, translates it into pick fields (drop_photos, rotate, cover, word, card lines, photos list), sets edited_at,
+rebuilds, and the post returns to DRAFT marked "Edited" for a second look. Small tilts and keystone are corrected
+automatically in the build; an edit note about a crooked slide usually means drop that photo or rotate it by hand.
 
 ## Source yield
 Every source gets a running yield: candidates found, candidates that built, candidates approved.

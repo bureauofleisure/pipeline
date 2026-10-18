@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.7.2 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.8 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -359,9 +359,22 @@ function importBatch() {
     fields['Caption'] = captionFrom_(fields);   // visible and editable before approval; what posts is what is in the cell
     if (idx in rowOf) {
       const r = rowOf[idx];
-      if (String(values[r][col['Status']]).trim() !== 'DRAFT') return;   // a decision was made: leave it
-      // still DRAFT: everything the build knows is refreshed, so a rebuild or a corrected card lands here
-      Object.keys(fields).forEach(h => { if (h in col) sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]); });
+      const st = String(values[r][col['Status']]).trim();
+      if (st !== 'DRAFT' && st !== 'EDITS') return;   // a decision was made: leave it
+      // still open: everything the build knows is refreshed, so a rebuild or a corrected card lands here
+      Object.keys(fields).forEach(h => { if (h in col && h !== 'Caption') sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]); });
+      if (st === 'DRAFT' || !cell_(values[r], col, 'Caption')) sheet.getRange(r + 1, col['Caption'] + 1).setValue(fields['Caption']);
+      if (st === 'EDITS') {
+        // the edit request carries a timestamp; a build dated after it means the edit was applied
+        const m = String(values[r][col['Notes']] || '').match(/EDITS (\d{4}-\d{2}-\d{2} \d{2}:\d{2})/);
+        const built = String(p.built || '');
+        const edited = p.edited_at ? String(p.edited_at) : '';
+        if (m && edited && edited > m[1].replace(' ', 'T')) {
+          sheet.getRange(r + 1, col['Status'] + 1).setValue('DRAFT');
+          sheet.getRange(r + 1, col['Notes'] + 1).setValue(('Edited, please re-review.\n' + String(values[r][col['Notes']] || '')).slice(0, 5000));
+          sheet.getRange(r + 1, col['Caption'] + 1).setValue(fields['Caption']);
+        }
+      }
       refreshed++;
       return;
     }
@@ -411,6 +424,8 @@ function syncStatuses() {
       status: String(values[r][col['Status']] || '').trim(),
       publish_at: when instanceof Date ? when.toISOString() : String(when || ''),
       live_link: String(values[r][col['Live link']] || ''),
+      notes: String(values[r][col['Notes']] || '').slice(0, 2000),
+      caption: String(values[r][col['Caption']] || '').slice(0, 2200),
       updated: new Date().toISOString(),
     };
   }
@@ -473,16 +488,22 @@ function statusCounts_(values, col) {
 }
 
 /** Called from the review page. Sets Status on one row. Returns the new counts. */
-function setStatus(rowNumber, status, index) {
-  if (['APPROVED', 'KILLED', 'DRAFT'].indexOf(status) < 0) throw new Error('Bad status');
+function setStatus(rowNumber, status, index, note) {
+  if (['APPROVED', 'KILLED', 'DRAFT', 'EDITS'].indexOf(status) < 0) throw new Error('Bad status');
   const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
   const values = sheet.getDataRange().getValues();
   const col = indexHeaders_(values[0]);
   const row = values[rowNumber - 1];
   const idx = String(row[col['Index No.']] || '');
   if (idx !== String(index)) throw new Error('Row moved; reload the page');
+  if (status === 'EDITS') {
+    if (!note || !String(note).trim()) throw new Error('Say what to change');
+    const stamp = Utilities.formatDate(new Date(), 'America/New_York', "yyyy-MM-dd HH:mm");
+    const existing = cell_(row, col, 'Notes');
+    sheet.getRange(rowNumber, col['Notes'] + 1).setValue(('EDITS ' + stamp + ': ' + String(note).trim() + (existing ? '\n' + existing : '')).slice(0, 5000));
+  }
   sheet.getRange(rowNumber, col['Status'] + 1).setValue(status);
-  log_('review', idx + ' -> ' + status);
+  log_('review', idx + ' -> ' + status + (note ? ' (' + String(note).slice(0, 80) + ')' : ''));
   return statusCounts_(sheet.getDataRange().getValues(), col);
 }
 
@@ -504,13 +525,13 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  .meta .notes{font-size:12px;color:#6E2A22;white-space:pre-wrap;margin-bottom:12px}
  .btns{display:flex;gap:10px}
  button{font:bold 14px "Courier Prime",monospace;letter-spacing:.1em;text-transform:uppercase;padding:12px 16px;border:2px solid #2A2420;background:#F1E9DC;color:#2A2420;cursor:pointer}
- button.approve:hover{background:#2A2420;color:#F1E9DC} button.kill{border-color:#6E2A22;color:#6E2A22} button.kill:hover{background:#6E2A22;color:#F1E9DC}
+ button.approve:hover{background:#2A2420;color:#F1E9DC} button.edits:hover{background:#2A2420;color:#F1E9DC} button.kill{border-color:#6E2A22;color:#6E2A22} button.kill:hover{background:#6E2A22;color:#F1E9DC}
  button:disabled{opacity:.4;cursor:default}
  .empty{padding:60px 20px;font-size:15px}
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
- <a href="?show=DRAFT">Draft</a><a href="?show=APPROVED">Approved</a><a href="?show=KILLED">Killed</a><a href="?show=POSTED">Posted</a><a href="?show=ALL">All</a>
+ <a href="?show=DRAFT">Draft</a><a href="?show=EDITS">Edits</a><a href="?show=APPROVED">Approved</a><a href="?show=KILLED">Killed</a><a href="?show=POSTED">Posted</a><a href="?show=ALL">All</a>
  <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
 <? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
 <? posts.forEach(function(p){ ?>
@@ -523,6 +544,7 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
   <? if (p.notes) { ?><div class="notes"><?= p.notes ?></div><? } ?>
   <div class="btns">
    <button class="approve" onclick="go(<?= p.row ?>,'APPROVED','<?= p.index ?>',this)">Approve</button>
+   <button class="edits" onclick="edits(<?= p.row ?>,'<?= p.index ?>')">Edits</button>
    <button class="kill" onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>',this)">Kill</button>
    <? if (p.status !== 'DRAFT') { ?><button onclick="go(<?= p.row ?>,'DRAFT','<?= p.index ?>',this)">Back to draft</button><? } ?>
   </div>
@@ -530,12 +552,16 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
 </section>
 <? }); ?>
 <script>
-function go(row, status, index, btn){
+function edits(row, index){
+  const note = prompt('What should change? Plain words. e.g. "slide 2 is crooked", "drop the bed photo", "cover should be the bar shot", "word should be CLUBBY".');
+  if (note && note.trim()) go(row, 'EDITS', index, null, note.trim());
+}
+function go(row, status, index, btn, note){
   const sec = document.getElementById('p'+row); sec.querySelectorAll('button').forEach(b => b.disabled = true);
   google.script.run.withSuccessHandler(function(counts){
     document.getElementById('s'+row).textContent = status; sec.classList.add('done');
     document.getElementById('counts').textContent = Object.keys(counts).map(k => k+' '+counts[k]).join(' · ');
   }).withFailureHandler(function(e){ alert(e.message); sec.querySelectorAll('button').forEach(b => b.disabled = false); })
-  .setStatus(row, status, index);
+  .setStatus(row, status, index, note || '');
 }
 </script></body></html>`;
