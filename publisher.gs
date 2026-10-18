@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.6.2 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.6.3 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -360,6 +360,7 @@ function importBatch() {
                                             (m.reminds ? 'Reminds: ' + m.reminds + '\n' : '') +
                                             (m.source_url ? 'Source: ' + m.source_url : '');
     sheet.appendRow(row);
+    sheet.getRange(sheet.getLastRow(), col['Index No.'] + 1).setNumberFormat('@').setValue(idx);
     added++;
   });
   log_('importBatch', `${added} new, ${refreshed} refreshed, ${benched} benched`);
@@ -389,7 +390,8 @@ function syncStatuses() {
   const col = indexHeaders_(values[0]);
   const rows = {};
   for (let r = 1; r < values.length; r++) {
-    const idx = String(values[r][col['Index No.']] || '').trim();
+    let idx = String(values[r][col['Index No.']] || '').trim();
+    if (/^\d+$/.test(idx)) idx = idx.padStart(4, '0');
     if (!idx) continue;
     const when = values[r][col['Publish at']];
     rows[idx] = {
