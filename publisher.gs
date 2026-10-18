@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.6.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.6.2 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -310,8 +310,16 @@ function importBatch() {
   const sheet = ss.getSheetByName(SHEET_NAME);
   const values = sheet.getDataRange().getValues();
   const col = indexHeaders_(values[0]);
+  // Index No. must stay text ("0009", never 9): format the column, and normalise what is already there
+  sheet.getRange(2, col['Index No.'] + 1, Math.max(sheet.getMaxRows() - 1, 1), 1).setNumberFormat('@');
+  const norm = v => { const t = String(v || '').trim(); return /^\d+$/.test(t) ? t.padStart(4, '0') : t; };
   const rowOf = {};
-  for (let r = 1; r < values.length; r++) rowOf[String(values[r][col['Index No.']]).trim()] = r;
+  for (let r = 1; r < values.length; r++) {
+    const idx = norm(values[r][col['Index No.']]);
+    if (!idx) continue;
+    if (idx !== String(values[r][col['Index No.']])) sheet.getRange(r + 1, col['Index No.'] + 1).setValue(idx);
+    rowOf[idx] = r;
+  }
 
   const cands = ss.getSheetByName('Candidates') || ss.insertSheet('Candidates');
   const seen = new Set(cands.getDataRange().getValues().map(r => String(r[0]).trim()));
@@ -338,16 +346,16 @@ function importBatch() {
     };
     if (idx in rowOf) {
       const r = rowOf[idx];
-      if (String(values[r][col['Status']]).trim() !== 'DRAFT') return;
-      ['Slide links', 'Alt text', 'Card text', 'Photographer', 'Cover slide'].forEach(h => {
-        if (h in col) sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]);
-      });
+      if (String(values[r][col['Status']]).trim() !== 'DRAFT') return;   // a decision was made: leave it
+      // still DRAFT: everything the build knows is refreshed, so a rebuild or a corrected card lands here
+      Object.keys(fields).forEach(h => { if (h in col) sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]); });
       refreshed++;
       return;
     }
     const row = new Array(values[0].length).fill('');
     Object.keys(fields).forEach(h => { if (h in col) row[col[h]] = fields[h]; });
     row[col['Status']] = 'DRAFT';
+    row[col['Index No.']] = idx;   // text, see the column format above
     if ('Notes' in col) row[col['Notes']] = (m.bring ? 'BRING idea: ' + m.bring + '\n' : '') +
                                             (m.reminds ? 'Reminds: ' + m.reminds + '\n' : '') +
                                             (m.source_url ? 'Source: ' + m.source_url : '');
