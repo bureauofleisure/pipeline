@@ -10,6 +10,8 @@
  *   1. Paste this file as "Updater.gs" and the manifest from apps_script/appsscript.json.
  *   2. Turn on the Apps Script API for your Google account: script.google.com/home/usersettings.
  *   3. Run installUpdater() once and authorize.
+ * Talks to the Apps Script REST API directly with the script's own OAuth token, so no advanced service
+ * needs adding in the editor.
  */
 
 const REPO_RAW = 'https://raw.githubusercontent.com/bureauofleisure/pipeline/main/';
@@ -32,10 +34,16 @@ function pullFromGitHub() {
   if (sha === props.getProperty('CODE_SHA')) return;          // nothing new
 
   const scriptId = ScriptApp.getScriptId();
-  const current = Script.Projects.getContent(scriptId);
+  const api = 'https://script.googleapis.com/v1/projects/' + scriptId + '/content';
+  const headers = { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() };
+  const got = UrlFetchApp.fetch(api, { headers, muteHttpExceptions: true });
+  if (got.getResponseCode() !== 200) { log_('updater', 'read project failed: ' + got.getResponseCode() + ' ' + got.getContentText().slice(0, 160)); return; }
+  const current = JSON.parse(got.getContentText());
   const keep = current.files.filter(f => f.name !== CODE_NAME);
   const files = keep.concat([{ name: CODE_NAME, type: 'SERVER_JS', source }]);
-  Script.Projects.updateContent({ files }, scriptId);
+  const put = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json',
+                                       payload: JSON.stringify({ files }), muteHttpExceptions: true });
+  if (put.getResponseCode() !== 200) { log_('updater', 'write project failed: ' + put.getResponseCode() + ' ' + put.getContentText().slice(0, 160)); return; }
   props.setProperty('CODE_SHA', sha);
   const version = (source.match(/Publisher v([\d.]+)/) || [])[1] || '?';
   log_('updater', 'publisher updated to v' + version);
