@@ -1,16 +1,18 @@
 {
- "searched": "2026-10-18T15:17:05Z",
+ "searched": "2026-10-18T15:18:31Z",
  "flickr": false,
  "stats": {
-  "hits": 536,
-  "licence": 0,
-  "size": 337,
-  "type": 199,
+  "hits": 73,
+  "licence": 1,
+  "size": 55,
+  "type": 0,
   "errors": [],
-  "licences_seen": {},
+  "licences_seen": {
+   "FAL": 1
+  },
   "samples": [
    {
-    "title": "File:A manual of the geography and natural and civil history of Prince Edward Island (microform) - for the use of schools, families and emigrants (IA cihm 41208).pdf",
+    "title": "File:Palm Court at Campbell Apartment, Grand Central Terminal.jpg",
     "keys": [
      "imageinfo",
      "imagerepository",
@@ -24,7 +26,6 @@
      "descriptionurl",
      "extmetadata",
      "height",
-     "pagecount",
      "size",
      "thumbattribs",
      "thumbheight",
@@ -34,17 +35,17 @@
      "user",
      "width"
     ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/A_manual_of_the_geography_and_natural_and_civil_history_of_Prince_Edward_Island_%28microform%29_-_for_the_use_of_schools%2C_families_and_emigrants_%28IA_cihm_41208%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 1170,
-    "height": 1425,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Palm_Court_at_Campbell_Apartment%2C_Grand_Central_Terminal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6000,
+    "height": 4000,
     "licence": {
-     "value": "Public domain",
+     "value": "CC BY-SA 4.0",
      "source": "commons-desc-page",
      "hidden": ""
     }
    },
    {
-    "title": "File:Bemelmans logo.jpg",
+    "title": "File:Bitpixdigital twa 0483.jpg",
     "keys": [
      "imageinfo",
      "imagerepository",
@@ -67,17 +68,17 @@
      "user",
      "width"
     ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Bemelmans_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 973,
-    "height": 231,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Bitpixdigital_twa_0483.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4032,
+    "height": 3024,
     "licence": {
-     "value": "Public domain",
+     "value": "CC BY-SA 4.0",
      "source": "commons-desc-page",
      "hidden": ""
     }
    },
    {
-    "title": "File:Caffe Reggio 01.jpg",
+    "title": "File:ChelseaLobby.JPG",
     "keys": [
      "imageinfo",
      "imagerepository",
@@ -100,11 +101,11 @@
      "user",
      "width"
     ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Caffe_Reggio_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 4288,
-    "height": 2848,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ChelseaLobby.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
     "licence": {
-     "value": "CC BY-SA 3.0",
+     "value": "CC BY 3.0",
      "source": "commons-desc-page",
      "hidden": ""
     }
@@ -144,8 +145,20 @@
    "place": "The Campbell",
    "city": "New York",
    "era": "1923",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Palm Court at Campbell Apartment, Grand Central Terminal.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Palm_Court_at_Campbell_Apartment%2C_Grand_Central_Terminal.jpg",
+     "width": 6000,
+     "height": 4000,
+     "licence": "CC BY-SA 4.0",
+     "author": "TheCatalyst31",
+     "date": "2025-10-16 12:05:33",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Palm_Court_at_Campbell_Apartment,_Grand_Central_Terminal.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Rainbow Room",
@@ -158,22 +171,113 @@
    "place": "TWA Hotel",
    "city": "New York",
    "era": "1962",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Bitpixdigital twa 0483.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Bitpixdigital_twa_0483.jpg",
+     "width": 4032,
+     "height": 3024,
+     "licence": "CC BY-SA 4.0",
+     "author": "Bitpixdigital",
+     "date": "2015-10-18 13:45:29",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Bitpixdigital_twa_0483.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Bitpixdigital twa 0487.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bitpixdigital_twa_0487.jpg",
+     "width": 3024,
+     "height": 4032,
+     "licence": "CC BY-SA 4.0",
+     "author": "Bitpixdigital",
+     "date": "2015-10-18 13:45:57",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Bitpixdigital_twa_0487.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "TWA Flight Center interior.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/TWA_Flight_Center_interior.jpg",
+     "width": 6661,
+     "height": 3891,
+     "licence": "CC BY-SA 2.0",
+     "author": "Victor Grigas  https://www.flickr.com/people/140897960@N03",
+     "date": "23 July 2019, 16:33",
+     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_interior.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "TWA Flight Center interior departures board.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/TWA_Flight_Center_interior_departures_board.jpg",
+     "width": 3012,
+     "height": 2968,
+     "licence": "CC0",
+     "author": "Warren LeMay from Cullowhee, NC, United States",
+     "date": "3 August 2019, 18:09",
+     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_interior_departures_board.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 4
   },
   {
    "place": "Hotel Chelsea",
    "city": "New York",
    "era": "1884",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "ChelseaLobby.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ChelseaLobby.JPG",
+     "width": 4000,
+     "height": 3000,
+     "licence": "CC BY 3.0",
+     "author": "Historystuff2",
+     "date": "",
+     "source_page": "https://commons.wikimedia.org/wiki/File:ChelseaLobby.JPG",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Hotel Chelsea lobby.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Hotel_Chelsea_lobby.jpg",
+     "width": 2972,
+     "height": 2012,
+     "licence": "CC BY-SA 4.0",
+     "author": "Nickvud",
+     "date": "2013-06-16",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Hotel_Chelsea_lobby.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Fontainebleau Miami Beach",
    "city": "Miami",
    "era": "1954",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Fontainebleau Hotel, Miami Beach, Florida. LOC gsc.5a23508.tif",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Fontainebleau_Hotel%2C_Miami_Beach%2C_Florida._LOC_gsc.5a23508.tif",
+     "width": 5829,
+     "height": 4607,
+     "licence": "Public domain",
+     "author": "Gottscho-Schleisner Collection",
+     "date": "1955",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hotel,_Miami_Beach,_Florida._LOC_gsc.5a23508.tif",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Fontainebleau Hotel, Miami Beach, Florida. LOC gsc.5a23512.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Fontainebleau_Hotel%2C_Miami_Beach%2C_Florida._LOC_gsc.5a23512.jpg",
+     "width": 5453,
+     "height": 4410,
+     "licence": "Public domain",
+     "author": "Gottscho-Schleisner Collection",
+     "date": "1955",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hotel,_Miami_Beach,_Florida._LOC_gsc.5a23512.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Eden Roc",
@@ -193,8 +297,42 @@
    "place": "Venetian Pool",
    "city": "Miami",
    "era": "1924",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Coral Gables - The Venetian Pool.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Coral_Gables_-_The_Venetian_Pool.jpg",
+     "width": 3243,
+     "height": 2039,
+     "licence": "Public domain",
+     "author": "R. E. Simpson",
+     "date": "1936",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_-_The_Venetian_Pool.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Venetian Pool Coral Gables 1924 (8707586802).jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Venetian_Pool_Coral_Gables_1924_%288707586802%29.jpg",
+     "width": 3021,
+     "height": 2191,
+     "licence": "CC BY 2.0",
+     "author": "Phillip Pessar from Miami, USA",
+     "date": "2013-05-04 08:57",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_Coral_Gables_1924_(8707586802).jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Venetian pool coral gables florida.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Venetian_pool_coral_gables_florida.jpg",
+     "width": 3072,
+     "height": 2304,
+     "licence": "CC BY 3.0",
+     "author": "Jesper Rautell Balle",
+     "date": "",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_pool_coral_gables_florida.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 3
   },
   {
    "place": "Driskill Hotel",
@@ -277,8 +415,64 @@
    "place": "Tooting Bec Lido",
    "city": "London",
    "era": "1906",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Tooting Bec Lido, entrance.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tooting_Bec_Lido%2C_entrance.jpg",
+     "width": 6016,
+     "height": 4000,
+     "licence": "CC BY-SA 4.0",
+     "author": "Rwendland",
+     "date": "2019-06-03 12:15:52",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido,_entrance.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Tooting Bec Lido, north standang.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tooting_Bec_Lido%2C_north_standang.jpg",
+     "width": 6016,
+     "height": 3384,
+     "licence": "CC BY-SA 4.0",
+     "author": "Rwendland",
+     "date": "2019-06-03 12:15:19",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido,_north_standang.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Tooting Bec Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Tooting_Bec_Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
+     "width": 4000,
+     "height": 3000,
+     "licence": "CC BY-SA 2.0",
+     "author": "Des Blenkinsopp",
+     "date": "2015-03-31 13:21:46",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Tooting Bec Lido 20080724.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Tooting_Bec_Lido_20080724.JPG",
+     "width": 3264,
+     "height": 1780,
+     "licence": "CC BY-SA 3.0",
+     "author": "Nick Cooper (talk)",
+     "date": "2008-07-24",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido_20080724.JPG",
+     "provider": "Wikimedia Commons"
+    },
+    {
+     "title": "Tooting Bec Lido entrance.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tooting_Bec_Lido_entrance.jpg",
+     "width": 2816,
+     "height": 2120,
+     "licence": "Public domain",
+     "author": "PGibbons at English Wikipedia",
+     "date": "5 January 2007 (original upload date)",
+     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido_entrance.jpg",
+     "provider": "Wikimedia Commons"
+    }
+   ],
+   "count": 5
   }
  ]
 }
