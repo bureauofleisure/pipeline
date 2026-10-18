@@ -1,3 +1,46 @@
 {
- "items": []
+ "items": [
+  {
+   "index": "0007",
+   "place": "Focacha",
+   "city": "Barcelona",
+   "designer": "Isern Serra",
+   "credit": "",
+   "source_url": "https://www.dezeen.com/2026/06/28/barcelona-cocktail-bar-isern-serra-space-age-interiors/",
+   "pages": [],
+   "added": "2026-10-18",
+   "reason": "photo 1 rejected: compression artifacts (blockiness 1.48) ; photo 2 rejected: compression artifacts (blockiness 1.54) ; photo 3 held: tilt -5.1 deg is over the limit ; photo 6 is a near-duplicate, dropped ; photo 7 HOLD: tilt ; photo 9 rejected: compression artifacts (blockiness 1.64) ; only 3 photo",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0008",
+   "place": "Upstairs at Hausu",
+   "city": "London",
+   "designer": "Eva Gold",
+   "credit": "Adam Firman",
+   "source_url": "https://www.dezeen.com/2026/05/11/upstairs-at-hausu-london-listening-bar-interiors/",
+   "pages": [],
+   "added": "2026-10-18",
+   "reason": "photo 1 rejected: compression artifacts (blockiness 1.51) ; photo 2 HOLD: tilt ; photo 3 rejected: compression artifacts (blockiness 1.56) ; photo 4 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 5 rejected: compression artifacts (blockiness 1.60) ; photo 6 rejected: compression ",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0012",
+   "place": "Bar Susanne",
+   "city": "Brooklyn",
+   "designer": "Matthew Maddy with Marisa Maddy Ripo",
+   "credit": "Lorenzo Bongiovanni",
+   "source_url": "https://greenpointers.com/2026/05/15/bar-susanne-opens-today-with-cocktails-and-seafood-in-domino-park/",
+   "pages": [],
+   "added": "2026-10-18",
+   "reason": "photo 2 could not be fetched (HTTPError) ; photo 3 could not be fetched (HTTPError) ; photo 4 could not be fetched (HTTPError) ; photo 5 could not be fetched (HTTPError) ; photo 6 could not be fetched (HTTPError) ; photo 7 rejected: too small (922x1153 after crop, need 1080x1350) ; photo 8 rejected:",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  }
+ ]
 }
