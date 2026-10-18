@@ -1,6 +1,14 @@
 {
- "searched": "2026-10-18T14:59:55Z",
+ "searched": "2026-10-18T15:14:58Z",
  "flickr": false,
+ "stats": {
+  "hits": 536,
+  "licence": 0,
+  "size": 336,
+  "type": 200,
+  "errors": [],
+  "licences_seen": {}
+ },
  "targets": [
   {
    "place": "Grand Central Oyster Bar",
