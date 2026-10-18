@@ -19,6 +19,9 @@ function dailyCheck()    { return run_('dailyCheck'); }
 function refreshToken()  { return run_('refreshToken'); }
 function importBatch()   { return run_('importBatch'); }
 function syncStatuses()  { return run_('syncStatuses'); }
+// the review web app
+function doGet(e)        { return runWith_('doGet', [e]); }
+function setStatus(row, status, index) { return runWith_('setStatus', [row, status, index]); }
 
 /** Force the next run to fetch fresh code (handy right after a change is pushed). */
 function refreshCode() {
@@ -39,6 +42,14 @@ function source_() {
   if (src.length < 2000 || src.indexOf('Bureau of Leisure Publisher') < 0) throw new Error('publisher.gs looks wrong; not running it');
   try { cache.put('publisher_src', src, CACHE_SECONDS); } catch (e) { /* over the cache size limit: just run uncached */ }
   return src;
+}
+
+function runWith_(name, args) {
+  const src = source_();
+  const pick = new Function(src + '\nreturn (typeof ' + name + ' === "function") ? ' + name + ' : null;');
+  const fn = pick();
+  if (!fn) throw new Error(name + ' is not defined in publisher.gs');
+  return fn.apply(null, args);
 }
 
 function run_(name) {

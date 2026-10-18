@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.6.3 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.7 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -213,15 +213,23 @@ function publishCarousel_(row, col, skipTags) {
 function buildCaption_(row, col) {
   const manual = cell_(row, col, 'Caption');
   if (manual) return manual.slice(0, 2200);
+  const f = {};
+  ['Place', 'City', 'Venue handle', 'Designer', 'Designer handle', 'Photographer', 'Photographer handle', 'Source handle', 'Card text']
+    .forEach(h => f[h] = cell_(row, col, h));
+  return captionFrom_(f);
+}
+
+/** The caption exactly as it will post: the index card, then place, design and photo credits. */
+function captionFrom_(f) {
   const at = h => (h ? ' @' + String(h).replace(/^@/, '') : '');
-  const place = [cell_(row, col, 'Place'), cell_(row, col, 'City')].filter(Boolean).join(', ');
+  const place = [f['Place'], f['City']].filter(Boolean).join(', ');
   const lines = [];
-  if (place) lines.push(place + at(cell_(row, col, 'Venue handle')));
-  if (cell_(row, col, 'Designer')) lines.push('Design: ' + cell_(row, col, 'Designer') + at(cell_(row, col, 'Designer handle')));
-  if (cell_(row, col, 'Photographer')) lines.push('Photo: ' + cell_(row, col, 'Photographer') + at(cell_(row, col, 'Photographer handle')));
+  if (place) lines.push(place + at(f['Venue handle']));
+  if (f['Designer']) lines.push('Design: ' + f['Designer'] + at(f['Designer handle']));
+  if (f['Photographer']) lines.push('Photo: ' + f['Photographer'] + at(f['Photographer handle']));
   else lines.push('Photo credit on request. DM us.');
-  if (cell_(row, col, 'Source handle')) lines.push('Via' + at(cell_(row, col, 'Source handle')));
-  return [cell_(row, col, 'Card text'), lines.join('\n')].filter(Boolean).join('\n.\n').slice(0, 2200);
+  if (f['Source handle']) lines.push('Via' + at(f['Source handle']));
+  return [f['Card text'], lines.join('\n')].filter(Boolean).join('\n.\n').slice(0, 2200);
 }
 
 function cell_(row, col, name) {
@@ -344,6 +352,7 @@ function importBatch() {
       'Slide links': (p.slides || []).join('\n'),
       'Alt text': Array.isArray(p.alt_text) ? p.alt_text.join('\n') : String(p.alt_text || ''),
     };
+    fields['Caption'] = captionFrom_(fields);   // visible and editable before approval; what posts is what is in the cell
     if (idx in rowOf) {
       const r = rowOf[idx];
       if (String(values[r][col['Status']]).trim() !== 'DRAFT') return;   // a decision was made: leave it
@@ -423,3 +432,106 @@ function syncStatuses() {
     log_('syncStatuses', Object.keys(rows).length + ' rows synced');
   }
 }
+
+
+/* ------------------------------------------------------------------ review page (v0.7)
+ * Deploy once: Deploy > New deployment > Web app, Execute as Me, Who has access: Only myself. Bookmark the URL.
+ * Shows every DRAFT post as its real slides with card, caption and credit. Approve and Kill write to the sheet.
+ * Deployment never needs redoing: the Loader's doGet stub always runs the current publisher from GitHub.
+ */
+function doGet(e) {
+  const show = (e && e.parameter && e.parameter.show) || 'DRAFT';
+  const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
+  const values = sheet.getDataRange().getValues();
+  const col = indexHeaders_(values[0]);
+  const posts = [];
+  for (let r = 1; r < values.length; r++) {
+    const row = values[r];
+    const status = String(row[col['Status']] || '').trim();
+    if (show !== 'ALL' && status !== show) continue;
+    posts.push({
+      row: r + 1, index: String(row[col['Index No.']] || ''), status,
+      place: cell_(row, col, 'Place'), neighborhood: cell_(row, col, 'Neighborhood'), city: cell_(row, col, 'City'),
+      designer: cell_(row, col, 'Designer'), photographer: cell_(row, col, 'Photographer'),
+      card: cell_(row, col, 'Card text'), caption: buildCaption_(row, col), notes: cell_(row, col, 'Notes'),
+      slides: lines_(row[col['Slide links']]),
+    });
+  }
+  const t = HtmlService.createTemplate(REVIEW_HTML);
+  t.posts = posts; t.show = show; t.counts = statusCounts_(values, col);
+  return t.evaluate().setTitle('Bureau of Leisure: review').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+function statusCounts_(values, col) {
+  const c = {};
+  for (let r = 1; r < values.length; r++) { const s = String(values[r][col['Status']] || '').trim() || 'BLANK'; c[s] = (c[s] || 0) + 1; }
+  return c;
+}
+
+/** Called from the review page. Sets Status on one row. Returns the new counts. */
+function setStatus(rowNumber, status, index) {
+  if (['APPROVED', 'KILLED', 'DRAFT'].indexOf(status) < 0) throw new Error('Bad status');
+  const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
+  const values = sheet.getDataRange().getValues();
+  const col = indexHeaders_(values[0]);
+  const row = values[rowNumber - 1];
+  const idx = String(row[col['Index No.']] || '');
+  if (idx !== String(index)) throw new Error('Row moved; reload the page');
+  sheet.getRange(rowNumber, col['Status'] + 1).setValue(status);
+  log_('review', idx + ' -> ' + status);
+  return statusCounts_(sheet.getDataRange().getValues(), col);
+}
+
+const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+ body{margin:0;background:#F1E9DC;color:#2A2420;font-family:"Courier Prime",Courier,monospace}
+ header{position:sticky;top:0;background:#F1E9DC;border-bottom:2px solid #2A2420;padding:14px 20px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;z-index:2}
+ header h1{font-size:16px;letter-spacing:.12em;margin:0;text-transform:uppercase}
+ header a{color:#2A2420;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+ header .counts{font-size:13px;margin-left:auto}
+ .post{border-bottom:1px solid #2A2420;padding:22px 20px;display:grid;grid-template-columns:1fr 360px;gap:22px}
+ .post.done{opacity:.35}
+ .strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
+ .strip img{height:440px;flex:none;border:1px solid #2A2420;background:#fff}
+ .meta h2{margin:0 0 4px;font-size:18px;text-transform:uppercase;letter-spacing:.06em}
+ .meta .sub{font-size:13px;margin-bottom:12px}
+ .meta pre{white-space:pre-wrap;font:13px/1.55 "Courier Prime",monospace;background:#fff8;border:1px solid #2A2420;padding:12px;margin:0 0 12px;max-height:260px;overflow:auto}
+ .meta .notes{font-size:12px;color:#6E2A22;white-space:pre-wrap;margin-bottom:12px}
+ .btns{display:flex;gap:10px}
+ button{font:bold 14px "Courier Prime",monospace;letter-spacing:.1em;text-transform:uppercase;padding:12px 16px;border:2px solid #2A2420;background:#F1E9DC;color:#2A2420;cursor:pointer}
+ button.approve:hover{background:#2A2420;color:#F1E9DC} button.kill{border-color:#6E2A22;color:#6E2A22} button.kill:hover{background:#6E2A22;color:#F1E9DC}
+ button:disabled{opacity:.4;cursor:default}
+ .empty{padding:60px 20px;font-size:15px}
+ @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
+</style></head><body>
+<header><h1>Bureau of Leisure: review</h1>
+ <a href="?show=DRAFT">Draft</a><a href="?show=APPROVED">Approved</a><a href="?show=KILLED">Killed</a><a href="?show=POSTED">Posted</a><a href="?show=ALL">All</a>
+ <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
+<? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
+<? posts.forEach(function(p){ ?>
+<section class="post" id="p<?= p.row ?>">
+ <div class="strip"><? p.slides.forEach(function(u){ ?><img loading="lazy" src="<?= u ?>"><? }); ?></div>
+ <div class="meta">
+  <h2>No. <?= p.index ?> · <?= p.place ?></h2>
+  <div class="sub"><?= [p.neighborhood, p.city].filter(Boolean).join(', ') ?><? if (p.designer) { ?> · Design: <?= p.designer ?><? } ?><? if (p.photographer) { ?> · Photo: <?= p.photographer ?><? } ?> · <span id="s<?= p.row ?>"><?= p.status ?></span></div>
+  <pre><?= p.caption ?></pre>
+  <? if (p.notes) { ?><div class="notes"><?= p.notes ?></div><? } ?>
+  <div class="btns">
+   <button class="approve" onclick="go(<?= p.row ?>,'APPROVED','<?= p.index ?>',this)">Approve</button>
+   <button class="kill" onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>',this)">Kill</button>
+   <? if (p.status !== 'DRAFT') { ?><button onclick="go(<?= p.row ?>,'DRAFT','<?= p.index ?>',this)">Back to draft</button><? } ?>
+  </div>
+ </div>
+</section>
+<? }); ?>
+<script>
+function go(row, status, index, btn){
+  const sec = document.getElementById('p'+row); sec.querySelectorAll('button').forEach(b => b.disabled = true);
+  google.script.run.withSuccessHandler(function(counts){
+    document.getElementById('s'+row).textContent = status; sec.classList.add('done');
+    document.getElementById('counts').textContent = Object.keys(counts).map(k => k+' '+counts[k]).join(' · ');
+  }).withFailureHandler(function(e){ alert(e.message); sec.querySelectorAll('button').forEach(b => b.disabled = false); })
+  .setStatus(row, status, index);
+}
+</script></body></html>`;
