@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.7 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.7.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -46,8 +46,11 @@ function setupTrigger() {
 
 /** Where alerts go. Script Property ALERT_EMAIL, else the script owner. */
 function notify_(subject, body) {
-  const to = PropertiesService.getScriptProperties().getProperty('ALERT_EMAIL') || Session.getEffectiveUser().getEmail();
-  MailApp.sendEmail(to, '[Bureau of Leisure] ' + subject, body);
+  const props = PropertiesService.getScriptProperties();
+  const to = props.getProperty('ALERT_EMAIL') || Session.getEffectiveUser().getEmail();
+  const review = props.getProperty('REVIEW_URL');
+  const foot = review ? '\n\nReview desk: ' + review : '';
+  MailApp.sendEmail(to, '[Bureau of Leisure] ' + subject, body + foot);
 }
 
 /**
