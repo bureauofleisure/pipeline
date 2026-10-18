@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.8 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.8.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -478,6 +478,7 @@ function doGet(e) {
   }
   const t = HtmlService.createTemplate(REVIEW_HTML);
   t.posts = posts; t.show = show; t.counts = statusCounts_(values, col);
+  t.base = ScriptApp.getService().getUrl();   // absolute links: the page runs inside a Google frame
   return t.evaluate().setTitle('Bureau of Leisure: review').addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 
@@ -531,7 +532,7 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
- <a href="?show=DRAFT">Draft</a><a href="?show=EDITS">Edits</a><a href="?show=APPROVED">Approved</a><a href="?show=KILLED">Killed</a><a href="?show=POSTED">Posted</a><a href="?show=ALL">All</a>
+ <? ['DRAFT','EDITS','APPROVED','KILLED','POSTED','ALL'].forEach(function(k){ ?><a href="<?= base ?>?show=<?= k ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?></a><? }); ?>
  <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
 <? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
 <? posts.forEach(function(p){ ?>
