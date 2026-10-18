@@ -22,6 +22,17 @@ BRING THE FRIEND WHO LAUGHS FUNNY.
 # RESERVED
 BRING YOUR MOTHER.          | max once a month; 50s/60s-looking places only; never with SULTRY or SMOKY
 #
+# CONDITIONAL: only when the post's cuisine or reference matches the condition
+BRING SOMEONE WHO HAS BEEN TO THAILAND.          | Thai
+BRING SOMEONE WHO HAS BEEN TO ITALY AND WON'T STOP TALKING ABOUT IT.   | Italian
+BRING SOMEONE WHO HAS BEEN TO GREECE.            | Greek
+BRING SOMEONE WHO HAS BEEN TO JAPAN. TWICE.      | Japanese, listening bars, kissaten
+BRING SOMEONE WHO HAS BEEN TO MEXICO CITY.       | Mexican, or the place is in Mexico
+BRING SOMEONE WHO HAS BEEN TO PARIS ALONE.       | French bistros, brasseries
+BRING SOMEONE WHO GREW UP IN CHICAGO.            | taverns, Chicago references
+BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL. | pools, lidos, beach clubs
+BRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT. | baths, saunas
+#
 # DRAFT, positive ideas for Lewie to cut or keep
 BRING SOMEONE WHO ALWAYS ORDERS DESSERT.
 BRING THE FRIEND WHO KNOWS EVERYONE'S BIRTHDAY.
