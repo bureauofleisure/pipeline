@@ -36,7 +36,7 @@ const API_VERSION = 'v25.0';
 const SHEET_NAME = 'Posts';
 
 function setupTrigger() {
-  ScriptApp.getProjectTriggers().forEach(t => ScriptApp.deleteTrigger(t));
+  ScriptApp.getProjectTriggers().forEach(t => { if (t.getHandlerFunction() !== 'pullFromGitHub') ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger('publishDue').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('refreshToken').timeBased().everyDays(7).create();
   ScriptApp.newTrigger('dailyCheck').timeBased().everyDays(1).atHour(7).create();
@@ -357,11 +357,7 @@ function importBatch() {
   if (added) notify_(`${added} new posts to review`, `${added} new DRAFT rows in the Posts tab. Approve by setting Status to APPROVED.`);
 }
 
-function log_(what, msg) {
-  const ss = SpreadsheetApp.getActive();
-  const log = ss.getSheetByName('Log') || ss.insertSheet('Log');
-  log.appendRow([new Date(), what, msg]);
-}
+// log_ lives in Updater.gs (shared by both files)
 
 
 /**
