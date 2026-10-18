@@ -31,7 +31,7 @@ def _backing(img, box):
     return Image.composite(dark, img, mask)
 
 BRAND = "BUREAU OF LEISURE"
-LAYOUT_VERSION = "v2.2"   # bump when a layout change should re-render every post
+LAYOUT_VERSION = "v2.3"   # bump when a layout change should re-render every post
 
 
 def _top_line(img, left_text, credit, size=22):
@@ -39,7 +39,7 @@ def _top_line(img, left_text, credit, size=22):
     fs, fc = _font(False, size), _font(False, 18)
     img = _backing(img, (MARGIN, MARGIN, MARGIN + fs.getlength(left_text), MARGIN + size + 4))
     cx = None
-    credit = credit or "UNCREDITED"
+    # no credit, no stamp: the caption carries "DM for credit" instead
     if credit:
         ct = f"PHOTO: {credit.upper()}"
         cw = fc.getlength(ct)

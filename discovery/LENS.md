@@ -41,9 +41,8 @@ The feed is full of invented hotel lobbies. A candidate passes only if ALL of th
 Anything that fails is benched with "possible AI or render" so the pattern can be reviewed.
 
 ## Credits
-- Photographer named when the source names one. If no name exists anywhere, the slide carries
-  PHOTO: UNCREDITED and the caption carries "Photo credit on request. DM us." Credits are added later
-  when they turn up.
+- Photographer named on every slide when the source names one. If no name exists anywhere, the slides carry
+  no credit line at all and the caption ends with "DM for credit." Credits are added later when they turn up.
 - Designer named when known. Venue handle always.
 - Every photo's source URL is recorded in the batch file, so there is always an answer to "where did this come from".
 

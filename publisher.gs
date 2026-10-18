@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.7.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.7.2 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -230,9 +230,10 @@ function captionFrom_(f) {
   if (place) lines.push(place + at(f['Venue handle']));
   if (f['Designer']) lines.push('Design: ' + f['Designer'] + at(f['Designer handle']));
   if (f['Photographer']) lines.push('Photo: ' + f['Photographer'] + at(f['Photographer handle']));
-  else lines.push('Photo credit on request. DM us.');
   if (f['Source handle']) lines.push('Via' + at(f['Source handle']));
-  return [f['Card text'], lines.join('\n')].filter(Boolean).join('\n.\n').slice(0, 2200);
+  const parts = [f['Card text'], lines.join('\n')];
+  if (!f['Photographer']) parts.push('DM for credit.');     // the very last line, only when no name exists
+  return parts.filter(Boolean).join('\n.\n').slice(0, 2200);
 }
 
 function cell_(row, col, name) {
