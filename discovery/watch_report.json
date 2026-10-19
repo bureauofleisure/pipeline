@@ -1,4 +1,23 @@
 {
- "checked": "2026-10-18T15:14:31Z",
- "items": []
+ "checked": "2026-10-19T13:13:08Z",
+ "items": [
+  {
+   "index": "0007",
+   "place": "Focacha",
+   "status": "READY",
+   "ready_photos": 6
+  },
+  {
+   "index": "0008",
+   "place": "Upstairs at Hausu",
+   "status": "READY",
+   "ready_photos": 4
+  },
+  {
+   "index": "0012",
+   "place": "Bar Susanne",
+   "status": "WATCHING",
+   "ready_photos": 0
+  }
+ ]
 }

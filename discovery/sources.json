@@ -1497,6 +1497,114 @@
    "auto": true,
    "platform": "squarespace",
    "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18."
+  },
+  {
+   "name": "Parts and Labor Design",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://partsandlabordesign.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 3 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Josh Greenspan",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.joshgreenspan.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "USM",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://usmstudio.ru/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Busta Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.bustastudio.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Fabio Fantolino",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://fabiofantolino.com/en/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Isern Serra",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.isernserra.com/en",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Eva Gold",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://evagold.co/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Gundry & Ducker",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.gundryducker.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "cargo",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+  },
+  {
+   "name": "Ivy Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://ivystudio.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
   }
  ]
 }
