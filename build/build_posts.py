@@ -125,33 +125,10 @@ def looks_like_bedroom(src, alt=""):
 
 
 def measure_keystone(img):
-    """How much the verticals lean toward each other, in degrees (positive = converging upward).
-    Rotation is handled by the grade; this catches the camera-tilted-up look that rotation cannot fix."""
-    gray = cv2.cvtColor(np.asarray(img.convert("RGB")), cv2.COLOR_RGB2GRAY)
-    edges = cv2.Canny(gray, 60, 160)
-    h, w = gray.shape
-    lines = cv2.HoughLinesP(edges, 1, np.pi / 720, threshold=80, minLineLength=int(h * 0.2), maxLineGap=10)
-    if lines is None:
-        return 0.0
-    left, right = [], []
-    for x1, y1, x2, y2 in np.asarray(lines).reshape(-1, 4):
-        ang = math.degrees(math.atan2(x2 - x1, y2 - y1))
-        if ang > 90:
-            ang -= 180
-        if ang < -90:
-            ang += 180
-        if abs(ang) > 12:
-            continue
-        xm = (x1 + x2) / 2
-        if xm < w * 0.4:
-            left.append(ang)
-        elif xm > w * 0.6:
-            right.append(ang)
-    if len(left) < 2 or len(right) < 2:
-        return 0.0
-    aL, aR = float(np.median(left)), float(np.median(right))
-    # converging upward: left lines lean right (+), right lines lean left (-)
-    return (aL - aR) / 2.0
+    """Keystone from the grade's lean measurement, so the build and the grade agree on what is tilt."""
+    from atlas_grade import measure_lean
+    # measure_lean reports converging-upward as negative; fix_keystone expects positive for a narrow top
+    return -measure_lean(img)[1]
 
 
 def fix_keystone(img, deg):
@@ -169,7 +146,7 @@ def fix_keystone(img, deg):
     return Image.fromarray(out).crop((crop, 0, w - crop, h))
 
 
-KEYSTONE_MIN, KEYSTONE_MAX = 0.8, 4.0
+KEYSTONE_MIN, KEYSTONE_MAX = 0.8, 3.0   # gentle correction only; stronger wide-angle lean is left as shot, never benched
 
 
 def quality(raw, focal):
@@ -254,10 +231,18 @@ def build_post(p, out_root):
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
             result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
+        # straighten first (true rotation only), so a rotated wide-angle shot shows its lean clearly
+        from atlas_grade import measure_lean, _rotate_fill
+        rot0, _ = measure_lean(raw)
+        if 0.3 <= abs(rot0) <= 8.0:
+            raw = _rotate_fill(raw, rot0)
+            result["notes"].append(f"photo {i + 1} straightened {rot0:+.1f} deg")
         ks = measure_keystone(raw)
         if KEYSTONE_MIN <= abs(ks) <= KEYSTONE_MAX:
             raw = fix_keystone(raw, ks)
             result["notes"].append(f"photo {i + 1} keystone corrected {ks:+.1f} deg")
+        elif abs(ks) > KEYSTONE_MAX:
+            result["notes"].append(f"photo {i + 1} wide-angle lean {ks:+.1f} deg left as shot")
         hs = ahash(raw)
         if is_duplicate(hs, seen):
             result["notes"].append(f"photo {i + 1} is a near-duplicate, dropped")

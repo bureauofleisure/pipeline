@@ -26,12 +26,12 @@ import cv2
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageCms
 
 # ---------------------------------------------------------------- settings
-GRADE_VERSION = "v1.0"
+GRADE_VERSION = "v1.1"   # v1.1: rotation measured separately from wide-angle lean
 GRADE_V1 = {
     "out_size": (1080, 1350),          # 4:5
     "max_upscale": 1.25,
     "straighten_min_deg": 0.3,
-    "straighten_max_deg": 3.0,         # beyond this: HOLD for review
+    "straighten_max_deg": 8.0,         # true rotation beyond this: HOLD for review (wide-angle lean never counts)
     "wb_target_a": 1.0,                # Lab a* target for neutrals (a touch warm, never green)
     "wb_target_b": 8.0,                # Lab b* target for neutrals (slightly warm)
     "wb_cap_a": 4.0,
@@ -56,7 +56,7 @@ CHECK_LIMITS = {
     "max_mean_saturation": 0.45,       # cool and neon hues only; warm hues are exempt
     "max_clipped_highlights": 0.005,
     "max_crushed_shadows": 0.005,
-    "max_tilt_deg": 0.3,
+    "max_tilt_deg": 1.0,               # residual rotation after straightening; keystone is not tilt
 }
 
 CREAM = (241, 233, 220)   # #F1E9DC
@@ -81,25 +81,46 @@ def _to_img(arr):
     return Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8), "RGB")
 
 
-def measure_tilt(img):
-    """Median deviation of near-vertical lines from true vertical, in degrees."""
+def measure_lean(img):
+    """Split the lean of the verticals into rotation and keystone.
+
+    A level camera with a wide lens makes the left walls lean right and the right walls lean left (keystone).
+    That is not tilt. Rotation is what the two sides share: the mean of the left and right medians.
+    Keystone is half their difference. Returns (rotation_deg, keystone_deg)."""
     gray = cv2.cvtColor(np.asarray(img.convert("RGB")), cv2.COLOR_RGB2GRAY)
     edges = cv2.Canny(gray, 60, 160)
-    h = gray.shape[0]
+    h, w = gray.shape
     lines = cv2.HoughLinesP(edges, 1, np.pi / 720, threshold=80,
                             minLineLength=int(h * 0.15), maxLineGap=10)
     if lines is None:
-        return 0.0
-    devs = []
+        return 0.0, 0.0
+    left, mid, right = [], [], []
     for x1, y1, x2, y2 in np.asarray(lines).reshape(-1, 4):
         ang = math.degrees(math.atan2(x2 - x1, y2 - y1))
         if ang > 90:
             ang -= 180
         if ang < -90:
             ang += 180
-        if abs(ang) <= 10:
-            devs.append(ang)
-    return float(np.median(devs)) if devs else 0.0
+        if abs(ang) > 12:
+            continue
+        xm = (x1 + x2) / 2
+        (left if xm < w * 0.38 else right if xm > w * 0.62 else mid).append(ang)
+    if len(left) >= 2 and len(right) >= 2:
+        aL, aR = float(np.median(left)), float(np.median(right))
+        return (aL + aR) / 2.0, (aL - aR) / 2.0
+    if len(mid) >= 2:                      # one side empty: centre lines are least affected by keystone
+        return float(np.median(mid)), 0.0
+    allv = left + mid + right
+    if len(allv) >= 3:
+        # one-sided and no centre lines: we cannot tell lean from tilt, so trust it only when it is small
+        r = float(np.median(allv))
+        return (r, 0.0) if abs(r) <= 2.0 else (0.0, r)
+    return 0.0, 0.0
+
+
+def measure_tilt(img):
+    """Rotation only (degrees). Wide-angle keystone is excluded; see measure_lean."""
+    return measure_lean(img)[0]
 
 
 def _rotate_fill(img, deg):

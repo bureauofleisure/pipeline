@@ -65,6 +65,13 @@ Enforced by make_batch.py; a batch that breaks these does not build.
 - We take at most two of the fifteen or so hospitality interiors the press runs each week, chosen on era and
   shareability, which are not their criteria. Same raw material, different eye, different photos, different words.
 
+## Straight lines
+Wide-angle photographs are welcome. The grade separates true rotation (the camera was tilted sideways) from
+wide-angle lean (walls converging because the camera pointed up or the lens is wide). Rotation up to 8 degrees
+is corrected automatically; beyond 8 the photo is held. Lean up to 3 degrees is gently corrected; stronger lean
+is left as shot and never benched. Anything that still looks off is caught on the review page and sent back
+with an Edits note.
+
 ## Edits
 A reviewer can send a post back with a note instead of killing it (Status EDITS). The daily edits job reads the
 note, translates it into pick fields (drop_photos, rotate, cover, word, card lines, photos list), sets edited_at,
