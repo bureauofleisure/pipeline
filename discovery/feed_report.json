@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-17T01:31:29Z",
+  "checked": "2026-10-19T11:50:33Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -23,7 +23,7 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 19
+      "items": 18
     },
     {
       "name": "Dezeen restaurants",
@@ -40,14 +40,6 @@
       "site": 200,
       "feed": "200 ok",
       "items": 10
-    },
-    {
-      "name": "Hospitality Design",
-      "tier": 2,
-      "category": "design_press",
-      "site": "error: HTTPError",
-      "feed": "error: HTTPError",
-      "items": 0
     },
     {
       "name": "Sight Unseen",
@@ -70,8 +62,8 @@
       "tier": 2,
       "category": "design_press",
       "site": 200,
-      "feed": "error: HTTPError",
-      "items": 0
+      "feed": "200 lenient",
+      "items": 14
     },
     {
       "name": "Architectural Digest",
@@ -159,7 +151,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 34
+      "items": 35
     },
     {
       "name": "Roman and Williams",
@@ -221,7 +213,7 @@
       "name": "Fettle",
       "tier": 1,
       "category": "studio",
-      "site": "error: URLError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -230,14 +222,6 @@
       "tier": 1,
       "category": "studio",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Child Studio",
-      "tier": 1,
-      "category": "studio",
-      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -269,7 +253,7 @@
       "name": "Studio Robert McKinley",
       "tier": 1,
       "category": "studio",
-      "site": "error: URLError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -314,14 +298,6 @@
       "items": 0
     },
     {
-      "name": "Studio Paolo Ferrari",
-      "tier": 1,
-      "category": "studio",
-      "site": "error: URLError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Hollie Bowden",
       "tier": 1,
       "category": "studio",
@@ -362,14 +338,6 @@
       "items": 0
     },
     {
-      "name": "Adrian Gaut",
-      "tier": 1,
-      "category": "photographer",
-      "site": "error: URLError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Nicole Franzen",
       "tier": 1,
       "category": "photographer",
@@ -390,14 +358,6 @@
       "tier": 1,
       "category": "photographer",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Christian Harder",
-      "tier": 1,
-      "category": "photographer",
-      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -426,26 +386,10 @@
       "items": 0
     },
     {
-      "name": "Yoshihiro Makino",
-      "tier": 1,
-      "category": "photographer",
-      "site": "error: URLError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Simon Watson",
       "tier": 1,
       "category": "photographer",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Nathan Browning",
-      "tier": 1,
-      "category": "photographer",
-      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -469,15 +413,7 @@
       "name": "Belmond press",
       "tier": 1,
       "category": "press_room",
-      "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Six Senses press",
-      "tier": 1,
-      "category": "press_room",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -485,7 +421,7 @@
       "name": "Soho House press",
       "tier": 1,
       "category": "press_room",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -525,7 +461,7 @@
       "name": "Firmdale press",
       "tier": 1,
       "category": "press_room",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -534,22 +470,6 @@
       "tier": 1,
       "category": "press_room",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Standard Hotels press",
-      "tier": 1,
-      "category": "press_room",
-      "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Kimpton press",
-      "tier": 1,
-      "category": "press_room",
-      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -590,8 +510,8 @@
       "tier": 2,
       "category": "awards",
       "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
+      "feed": "200 lenient",
+      "items": 15
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -714,19 +634,11 @@
       "items": 30
     },
     {
-      "name": "Travel + Leisure",
-      "tier": 3,
-      "category": "city_press",
-      "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Culture of Bathing",
       "tier": 3,
       "category": "leisure",
-      "site": "error: HTTPError",
-      "feed": "error: HTTPError",
+      "site": 200,
+      "feed": null,
       "items": 0
     },
     {
@@ -734,22 +646,6 @@
       "tier": 1,
       "category": "leisure",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Historic lidos and pools",
-      "tier": 3,
-      "category": "leisure",
-      "site": "error: URLError",
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Racquet and swim clubs",
-      "tier": 3,
-      "category": "leisure",
-      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -774,13 +670,381 @@
       "tier": 3,
       "category": "historic",
       "site": 200,
-      "feed": "error: HTTPError",
+      "feed": null,
       "items": 0
     },
     {
       "name": "Counter Culture diners (James and Karla Murray)",
       "tier": 3,
       "category": "historic",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Fabi\u00e1n Martinez",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Adam Firman",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Virgile Simon Bertrand",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Alex Lesage",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Axel Aurejac",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Read McKendree",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Joe Thomas",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Fujio Emura",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jong Hyup",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Carolina Mossin",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Vigo Jansons",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Oscar Mendoza",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Patrick Michael Chin",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Karel Balas",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jack Lovel",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ema Peter",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dani\u00eblle Siobh\u00e1n",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Kaye Song",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ruth Ward",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ollie Tomlinson",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Mike Schwartz",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Milo Hutchings",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Pichan Sujaritsatit",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Alex Fradkin",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ruben Cabrera",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ludovic Balay",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Rodolphe Parente",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Alixe Lay",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bre Furlong",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Elevine Berge",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Barbara Karant",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "MW Editions",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bruzkus Greenberg",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Aaron Richter",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Boz Gagovski",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Lauren Arzbaecher",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Softer Volumes",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Common Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Joyce Wang Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Akin Atelier",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio DADO",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Str\u00f6m Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Invisible Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Courtney Applebaum Design",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio Vero",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Stack Studio",
+      "tier": 1,
+      "category": "studio",
       "site": 200,
       "feed": null,
       "items": 0
