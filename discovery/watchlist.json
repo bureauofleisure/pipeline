@@ -56,6 +56,76 @@
    "last_check": "2026-10-19",
    "ready_photos": 0,
    "candidate_photos": []
+  },
+  {
+   "index": "0013",
+   "place": "The Campbell",
+   "city": "New York",
+   "designer": "Augustus N. Allen",
+   "credit": "TheCatalyst31, CC BY-SA 4.0, via Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_dining_area,_Grand_Central_Terminal_01.jpg",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 2 HOLD: tilt ; photo 3 HOLD: tilt ; photo 4 HOLD: tilt ; photo 5 held: tilt -4.8 deg is over the limit ; photo 6 HOLD: tilt ; only 1 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0015",
+   "place": "Venetian Pool",
+   "city": "Miami",
+   "designer": "Phineas Paist with Denman Fink",
+   "credit": "Daniel Di Palma, CC BY-SA 4.0, via Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_01.jpg",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 1 HOLD: tilt ; photo 3 HOLD: tilt ; photo 5 HOLD: brightness, tilt ; photo 6 HOLD: tilt ; photo 7 HOLD: tilt ; photo 8 HOLD: tilt ; only 2 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0016",
+   "place": "Fontainebleau",
+   "city": "Miami",
+   "designer": "Morris Lapidus",
+   "credit": "Acroterion, CC BY-SA 4.0, via Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Hotel_Lobby_FL2.jpg",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 2 held: tilt 4.0 deg is over the limit ; photo 4 HOLD: tilt ; only 3 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0017",
+   "place": "The Polo Lounge",
+   "city": "Los Angeles",
+   "designer": "",
+   "credit": "Alan Light, CC BY 2.0, via Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_inside_(3715406002).jpg",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 1 HOLD: tilt ; photo 2 held: tilt 8.4 deg is over the limit ; photo 4 HOLD: tilt ; photo 5 HOLD: tilt ; only 2 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0019",
+   "place": "Sisters",
+   "city": "Brooklyn",
+   "designer": "Home Studios",
+   "credit": "Oliver Haslegrave and Paul Quitoriano",
+   "source_url": "https://homestudios.nyc/sisters",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350) ; photo 4 rejected: too small (1066x1333 after crop, need 1080x1350) ; only 2 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
   }
  ]
 }
