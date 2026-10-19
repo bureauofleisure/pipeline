@@ -1,7 +1,7 @@
 {
  "batch": "2026-W43",
  "reviewed": "2026-10-19",
- "notes": "Batch 2026-W43 from the 2026-10-19 harvest (240 items: 140 feed, 100 portfolio) plus the first archive mining. Five archive posts (Commons, CC and PD), two portfolio posts (Joe Thomas, Home Studios), two watch-list returns (Focacha, Hausu). Dropped: Fedora (Post Company page has only 2 photos), The Twenty Two New York (Yellowtrace copies too small; find Child Studio or Alixe Lay page), Love Thy Neighbor (good, but a third Dezeen post would break the 25% cap; source it from Wild Form next week), Oberon 0002 (still only press copies under the gate). Archive photos chosen by Commons title and author, not viewed: the sandbox cannot fetch images.",
+ "notes": "Batch 2026-W43 from the 2026-10-19 harvest (240 items: 140 feed, 100 portfolio) plus the first archive mining. Five archive posts (Commons, CC and PD), two portfolio posts (Joe Thomas, Home Studios), two watch-list returns (Focacha, Hausu). Dropped: Fedora (Post Company page has only 2 photos), The Twenty Two New York (Yellowtrace copies too small; find Child Studio or Alixe Lay page), Love Thy Neighbor (good, but a third Dezeen post would break the 25% cap; source it from Wild Form next week), Oberon 0002 (still only press copies under the gate). Archive photos chosen by Commons title and author, not viewed: the sandbox cannot fetch images. Second build: Campbell, Venetian Pool and Fontainebleau re-tried with different Commons authors after the first sets were held for tilt.",
  "posts": [
   {
    "index": "0013",
@@ -10,7 +10,7 @@
    "city": "New York",
    "category": "Bar",
    "designer": "Augustus N. Allen",
-   "credit": "TheCatalyst31, CC BY-SA 4.0, via Wikimedia Commons",
+   "credit": "Ɱ, CC BY-SA 4.0, via Wikimedia Commons",
    "licence": "CC BY-SA 4.0",
    "archive": true,
    "era": "1923",
@@ -26,15 +26,13 @@
     "IN A WORD: HUSHED."
    ],
    "alt_hint": "A high-ceilinged bar room inside Grand Central Terminal with a painted beamed ceiling and a tall leaded window.",
-   "source_url": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_dining_area,_Grand_Central_Terminal_01.jpg",
+   "source_url": "https://commons.wikimedia.org/wiki/File:GCT_Campbell_1.jpg",
    "discovered_via": "https://en.wikipedia.org/wiki/Campbell_Apartment",
    "photos": [
-    "https://upload.wikimedia.org/wikipedia/commons/0/0c/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_01.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/4/49/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_02.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/3/3b/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_03.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/a/af/Palm_Court_at_Campbell_Apartment%2C_Grand_Central_Terminal.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/4/44/Campbell_Apartment_staircase%2C_Grand_Central_Terminal.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/4/44/Campbell_Apartment_entrance%2C_Grand_Central_Terminal%2C_October_2025.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/8/87/GCT_Campbell_1.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/9a/GCT_Campbell_2.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a9/GCT_Campbell_3.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/0/05/GCT_Campbell_Palm_Court.jpg"
    ],
    "bring": "BRING WHOEVER YOU OWE A DINNER."
   },
@@ -84,8 +82,8 @@
    "city": "Miami",
    "category": "Pool",
    "designer": "Phineas Paist with Denman Fink",
-   "credit": "Daniel Di Palma, CC BY-SA 4.0, via Wikimedia Commons",
-   "licence": "CC BY-SA 4.0",
+   "credit": "Ebyabe, CC BY-SA 3.0, via Wikimedia Commons",
+   "licence": "CC BY-SA 3.0",
    "archive": true,
    "era": "1924",
    "word": "LEAFY",
@@ -100,17 +98,15 @@
     "IN A WORD: LEAFY."
    ],
    "alt_hint": "A public swimming pool set in a former limestone quarry, with coral rock walls, palms, a waterfall and a bridge to an island.",
-   "source_url": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_01.jpg",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool01.jpg",
    "discovered_via": "https://en.wikipedia.org/wiki/Venetian_Pool",
    "photos": [
-    "https://upload.wikimedia.org/wikipedia/commons/5/53/Venetian_Pool_01.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/9/99/Venetian_Pool_06.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/7/73/Venetian_Pool_12.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/4/48/Venetian_Pool_14.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/d/d7/Venetian_Pool_16.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/6/60/Venetian_Pool_17.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/1/1b/Venetian_Pool_18.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/5/57/Venetian_Pool_20.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/5/5e/Coral_Gables_FL_Venetian_Pool01.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/c1/Coral_Gables_FL_Venetian_Pool02.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/2/25/Coral_Gables_FL_Venetian_Pool03.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/2/22/Coral_Gables_FL_Venetian_Pool04.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/0/07/Coral_Gables_FL_Venetian_Pool05.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/b/b3/Coral_Gables_FL_Venetian_Pool06.jpg"
    ],
    "bring": "BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL."
   },
@@ -121,8 +117,8 @@
    "city": "Miami",
    "category": "Hotel",
    "designer": "Morris Lapidus",
-   "credit": "Acroterion, CC BY-SA 4.0, via Wikimedia Commons",
-   "licence": "CC BY-SA 4.0",
+   "credit": "Visitor7, CC BY-SA 3.0, via Wikimedia Commons",
+   "licence": "CC BY-SA 3.0",
    "archive": true,
    "era": "1954",
    "word": "GLAMOROUS",
@@ -137,14 +133,19 @@
     "IN A WORD: GLAMOROUS."
    ],
    "alt_hint": "The lobby of a 1954 Miami Beach resort hotel with a floating staircase, marble floors and columns.",
-   "source_url": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Hotel_Lobby_FL2.jpg",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg",
    "discovered_via": "https://en.wikipedia.org/wiki/Fontainebleau_Miami_Beach",
    "photos": [
-    "https://upload.wikimedia.org/wikipedia/commons/1/16/Fontainebleau_Miami_Hotel_Lobby_FL2.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fontainebleau_Miami_Hotel_Lobby_FL3.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fontainebleau_Miami_Hotel_Lobby_FL4.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/6/68/Fontainebleau_Miami_interior_FL1.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/d/dd/Fontainebleau_Hotel_Miami_Beach_FL1.jpg"
+    "https://upload.wikimedia.org/wikipedia/commons/6/61/Fontainebleau-1.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/c9/Fontainebleau-2.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/0/0b/Fontainebleau-5.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/8/81/Fontainebleau-6.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/7/76/Fontainebleau-7.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/e/e3/Fontainebleau-8.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/7/7f/Fontainebleau-9.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/2/29/Fontainebleau-10.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/6/60/Fontainebleau-11.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/9e/Fontainebleau-12.jpg"
    ]
   },
   {
