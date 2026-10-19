@@ -126,6 +126,20 @@
    "status": "WATCHING",
    "last_check": null,
    "ready_photos": 0
+  },
+  {
+   "index": "0010",
+   "place": "Cassette",
+   "city": "London",
+   "designer": "Gundry & Ducker",
+   "credit": "Ed Reeve",
+   "source_url": "https://www.dezeen.com/2026/10/12/gundry-ducker-french-dining-culture-london-cassette/",
+   "pages": [],
+   "added": "2026-10-19",
+   "reason": "photo 1 HOLD: tilt ; photo 3 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 7 straightened +1.1 deg ; photo 7 keystone corrected -2.5 deg ; photo 9 is a near-duplicate, dropped ; photo 10 straightened +0.4 deg ; photo 2 dropped: did not match the set ; photo 8 dropped: did not ma",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
   }
  ]
 }
