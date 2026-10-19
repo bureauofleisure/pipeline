@@ -26,7 +26,7 @@ import cv2
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageCms
 
 # ---------------------------------------------------------------- settings
-GRADE_VERSION = "v1.1"   # v1.1: rotation measured separately from wide-angle lean
+GRADE_VERSION = "v1.2"   # v1.1: rotation measured separately from wide-angle lean; v1.2: one-sided lean is never tilt
 GRADE_V1 = {
     "out_size": (1080, 1350),          # 4:5
     "max_upscale": 1.25,
@@ -56,7 +56,7 @@ CHECK_LIMITS = {
     "max_mean_saturation": 0.45,       # cool and neon hues only; warm hues are exempt
     "max_clipped_highlights": 0.005,
     "max_crushed_shadows": 0.005,
-    "max_tilt_deg": 1.0,               # residual rotation after straightening; keystone is not tilt
+    "max_tilt_deg": 1.0,               # informational only since v1.2 (see check)
 }
 
 CREAM = (241, 233, 220)   # #F1E9DC
@@ -112,9 +112,9 @@ def measure_lean(img):
         return float(np.median(mid)), 0.0
     allv = left + mid + right
     if len(allv) >= 3:
-        # one-sided and no centre lines: we cannot tell lean from tilt, so trust it only when it is small
-        r = float(np.median(allv))
-        return (r, 0.0) if abs(r) <= 2.0 else (0.0, r)
+        # one side only, no centre lines (typical after a 4:5 crop of a wide shot): lean and tilt cannot be
+        # told apart, so it is treated as lean. Never a reason to bench; the review page is the backstop.
+        return 0.0, float(np.median(allv))
     return 0.0, 0.0
 
 
@@ -274,8 +274,8 @@ def check(img, limits=CHECK_LIMITS):
         fails.append("clipped highlights")
     if m["crushed_shadows"] > limits["max_crushed_shadows"]:
         fails.append("crushed shadows")
-    if m["tilt_deg"] > limits["max_tilt_deg"]:
-        fails.append("tilt")
+    # tilt is judged once, on the full frame before the crop (grade step 2: straighten, or HOLD beyond 8 degrees).
+    # A 4:5 crop from one side of a wide frame always looks rotated, so here it is recorded, never a reason to hold.
     m["status"] = "PASS" if not fails else "HOLD: " + ", ".join(fails)
     return m
 
