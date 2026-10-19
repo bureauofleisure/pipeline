@@ -24,6 +24,11 @@
   {"place": "Gellért Baths", "city": "Budapest", "era": "1918", "queries": ["Gellért Baths interior"]},
   {"place": "Café Central", "city": "Vienna", "era": "1876", "queries": ["Café Central Vienna interior"]},
   {"place": "Les Bains Douches", "city": "Paris", "era": "1885", "queries": ["Les Bains Paris pool"]},
-  {"place": "Tooting Bec Lido", "city": "London", "era": "1906", "queries": ["Tooting Bec Lido"]}
+  {"place": "Tooting Bec Lido", "city": "London", "era": "1906", "queries": ["Tooting Bec Lido"]},
+  {"place": "Biltmore Hotel", "city": "Miami", "era": "1926", "queries": ["Biltmore Hotel Coral Gables lobby", "Biltmore Hotel Coral Gables pool"]},
+  {"place": "Deep Eddy Pool", "city": "Austin", "era": "1915", "queries": ["Deep Eddy Pool Austin"]},
+  {"place": "Hotel San José", "city": "Austin", "era": "1936", "queries": ["Hotel San Jose Austin South Congress"]},
+  {"place": "Millennium Biltmore Hotel", "city": "Los Angeles", "era": "1923", "queries": ["Millennium Biltmore Hotel Los Angeles lobby", "Biltmore Hotel Los Angeles Rendezvous Court"]},
+  {"place": "Keens Steakhouse", "city": "New York", "era": "1885", "queries": ["Keens Steakhouse interior", "Keens Chophouse pipes"]}
  ]
 }
