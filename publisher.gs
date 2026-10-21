@@ -168,9 +168,10 @@ function verifyConnection_() {
       break;
     }
     props.setProperty('IG_VERIFIED_FOR', stamp);
+    props.setProperty('IG_VERIFIED_AT', String(Date.now()));
     log_('verify', `@${me.username} ok; ${dry}`);
     notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\nPublishing is now on. ` +
-      'Approved posts go out at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day.');
+      'Approved posts go out at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day. Any approved post whose date has already passed is moved to the next free morning slot.');
     return true;
   } catch (e) {
     log_('verify', 'FAILED: ' + String(e).slice(0, 400));
@@ -220,6 +221,8 @@ function publishDue() {
   try {
     if (paused_()) return;                       // a PAUSE tab stops everything
     if (!verifyConnection_()) return;            // token and account proven before anything goes public
+    const verifiedAt = Number(PropertiesService.getScriptProperties().getProperty('IG_VERIFIED_AT') || 0);
+    if (Date.now() - verifiedAt < 50 * 60000) return;   // the verifying run never publishes
     const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
     const values = sheet.getDataRange().getValues();
     const col = indexHeaders_(values[0]);
@@ -238,6 +241,13 @@ function publishDue() {
       if (row[col['Status']] !== 'APPROVED') continue;
       const when = row[col['Publish at']];
       if (!(when instanceof Date) || when > now) continue;
+      // more than 6 hours late (outage, pause, or approved with an old date): never fire at a random hour.
+      // Clear the date; the 7am dailyCheck gives it the next free 9am slot.
+      if (now.getTime() - when.getTime() > 6 * 3600000) {
+        setCell_(sheet, r, col['Publish at'], '');
+        setCell_(sheet, r, col['Notes'], 'Missed its slot; rescheduled to the next free morning slot ' + now.toISOString());
+        continue;
+      }
 
       // every slide must be live on the public host before Instagram is asked to fetch it
       const missing = lines_(row[col['Slide links']]).filter(u => !urlLive_(u));
