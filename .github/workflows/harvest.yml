@@ -32,13 +32,9 @@ jobs:
           HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
       - name: Archive search only
         if: ${{ inputs.archive_only }}
-        env:
-          FLICKR_KEY: ${{ secrets.FLICKR_KEY }}
         run: python discovery/archive_search.py
       - name: Grow sources from credits, re-check the watch list, search the archives
         if: ${{ !inputs.shortlist && !inputs.archive_only }}
-        env:
-          FLICKR_KEY: ${{ secrets.FLICKR_KEY }}
         run: |
           python discovery/grow_sources.py
           python discovery/watch.py check

@@ -1,144 +1,189 @@
-"""Archive photographs from the commons, for the nostalgic half of the feed.
+"""Archive photographs for the nostalgic half of the feed, from professional collections only.
 
-Reads discovery/archive_targets.json (places worth an archive post), asks Wikimedia Commons for images of
-each, keeps only files whose licence allows reuse (public domain, CC0, CC BY, CC BY-SA) and whose width
-clears the gate, and records the licence, author and source page so the credit line can be exact.
-Flickr Commons is searched too when a FLICKR_KEY secret is present.
+Wikimedia Commons and open Flickr were dropped on 2026-10-21: they are mostly visitors' phone and wide-angle
+snapshots, and every post built from them was killed. Licence filters cannot tell a snapshot from a real
+photograph; the collection can. So this searches only Library of Congress collections made by working
+architectural and documentary photographers (view cameras, true verticals, controlled light):
 
-Writes discovery/archive_candidates.json. Nothing is picked here; the weekly review reads it.
+  - Gottscho-Schleisner Collection (gsc): New York interiors, restaurants, bars, hotels, 1930s to 1970s
+  - Carol M. Highsmith Archive (highsm): large-format and high-resolution digital, donated to the public domain
+  - Historic American Buildings Survey (hhh): measured large-format survey photographs
+
+Reads discovery/archive_targets.json, keeps items with no known publication restrictions and a full-size file
+that clears the gate, records photographer, date and the LoC item page for the credit line.
+Writes discovery/archive_candidates.json (same shape as before). Nothing is picked here; the weekly review reads it.
 """
 import json
 import os
 import re
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-UA = "BureauOfLeisureBot/1.0 (https://bureauofleisure.co; hello@bureauofleisure.co)"
-OK_LICENCE = re.compile(r"(public domain|\bpd\b|pd-|cc0|cc[ -]?by(?:[ -]?sa)?\b|no known copyright|no restrictions)", re.I)
-BAD_LICENCE = re.compile(r"(\bnc\b|\bnd\b|non-?commercial|no ?derivative|fair use|all rights reserved|copyrighted)", re.I)
-MIN_WIDE = 1800
-STATS = {"hits": 0, "licence": 0, "size": 0, "type": 0, "errors": [], "licences_seen": {}}
+UA = "BureauOfLeisureBot/1.1 (https://bureauofleisure.co; lewie@flow.agency)"
+MIN_WIDE, MIN_TALL = 1800, 1350
+PER_SEARCH = 25          # results read per collection search
+ITEMS_PER_TARGET = 12    # item pages opened per target (each is one request)
+COLLECTIONS = [
+    ("gottscho-schleisner collection", "Gottscho-Schleisner Collection, Library of Congress"),
+    ("carol m. highsmith archive", "Carol M. Highsmith Archive, Library of Congress"),
+    ("historic american buildings survey/historic american engineering record/historic american landscapes survey",
+     "Historic American Buildings Survey, Library of Congress"),
+]
+RESTRICTED = re.compile(r"(rights status not evaluated|restricted|permission|copyright (?:held|owned)|may be protected)", re.I)
+FREE = re.compile(r"(no known restrictions|public domain|no known copyright)", re.I)
+SKIP_TITLE = re.compile(r"\b(plan|elevation|section|drawing|map|sketch|logo|menu|poster|detail of hardware|measured)\b", re.I)
+STOP = {"hotel", "interior", "lobby", "beach", "pool", "miami", "york", "angeles", "the", "and", "bar", "restaurant", "new"}
+STATS = {"searches": 0, "results": 0, "items_opened": 0, "offtopic": 0, "rights": 0, "size": 0, "type": 0,
+         "errors": [], "rights_seen": {}, "sample_files": None}
+_last = [0.0]
 
 
-def api(params):
-    url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=25) as r:
-        return json.load(r)
+def get(url):
+    # loc.gov asks for gentle clients: about 2 requests a second keeps well under its limits
+    wait = 0.6 - (time.time() - _last[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last[0] = time.time()
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 2:
+                time.sleep(10 * (attempt + 1)); continue
+            raise
 
 
-IIPROPS = {"prop": "imageinfo", "iiprop": "url|size|extmetadata|user", "iiextmetadatafilter": "LicenseShortName|License|Artist|DateTimeOriginal|ImageDescription"}
+def words_for(t):
+    src = " ".join([t["place"]] + (t.get("queries") or []))
+    return sorted({w for w in re.findall(r"[a-z]{4,}", src.lower()) if w not in STOP})
 
 
-def _pages(params):
-    data = api({"action": "query", "format": "json", **IIPROPS, **params})
-    return list(data.get("query", {}).get("pages", {}).values())
+def search(query, partof):
+    params = {"q": query, "fa": "partof:" + partof, "fo": "json", "c": PER_SEARCH, "at": "results"}
+    data = get("https://www.loc.gov/photos/?" + urllib.parse.urlencode(params))
+    STATS["searches"] += 1
+    res = data.get("results") or []
+    STATS["results"] += len(res)
+    return res
 
 
-def commons(query, limit=40, words=None):
-    """Three routes, merged: the Commons category named after the place (where curated sets live), its
-    subcategories, and a full-text search restricted to bitmaps. Hits must mention the place words."""
-    pages = []
-    cat = "Category:" + query
-    try:
-        pages += _pages({"generator": "categorymembers", "gcmtitle": cat, "gcmtype": "file", "gcmlimit": limit})
-        subs = api({"action": "query", "format": "json", "list": "categorymembers", "cmtitle": cat, "cmtype": "subcat", "cmlimit": 10})
-        for sc in subs.get("query", {}).get("categorymembers", [])[:6]:
-            pages += _pages({"generator": "categorymembers", "gcmtitle": sc["title"], "gcmtype": "file", "gcmlimit": limit})
-    except Exception as e:  # noqa: BLE001
-        STATS["errors"].append(f"category {cat}: {type(e).__name__}")
-    pages += _pages({"generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": 6, "gsrlimit": limit})
-    words = words or [w for w in re.findall(r"[a-z]{4,}", query.lower()) if w not in ("hotel", "interior", "lobby", "beach", "pool", "miami", "york", "angeles")]
+def flat_files(item_json):
     out = []
-    STATS["hits"] += len(pages)
-    seen_titles = set()
-    if len(STATS.setdefault("samples", [])) < 3 and pages:
-        pg = dict(pages[0]); ii0 = (pg.get("imageinfo") or [{}])[0]
-        STATS["samples"].append({"title": pg.get("title"), "keys": sorted(pg.keys()), "ii_keys": sorted(ii0.keys()),
-                                 "url": ii0.get("url"), "width": ii0.get("width"), "height": ii0.get("height"),
-                                 "licence": (ii0.get("extmetadata") or {}).get("LicenseShortName")})
-    for page in pages:
-        if page.get("title") in seen_titles:
-            continue
-        seen_titles.add(page.get("title"))
-        ii = (page.get("imageinfo") or [{}])[0]
-        meta = ii.get("extmetadata", {})
-        desc = re.sub(r"<[^>]+>", "", meta.get("ImageDescription", {}).get("value", "")).lower()
-        hay = (page.get("title", "") + " " + desc).lower()
-        if words and not any(w in hay for w in words):
-            STATS["offtopic"] = STATS.get("offtopic", 0) + 1
-            continue
-        lic = (meta.get("LicenseShortName", {}).get("value") or meta.get("License", {}).get("value") or "").strip()
-        if not lic or BAD_LICENCE.search(lic) or not OK_LICENCE.search(lic):
-            STATS["licence"] += 1
-            STATS["licences_seen"][lic or "(none)"] = STATS["licences_seen"].get(lic or "(none)", 0) + 1
-            continue
-        if (ii.get("width") or 0) < MIN_WIDE or (ii.get("height") or 0) < 1350:
-            STATS["size"] += 1
-            continue
-        clean_url = (ii.get("url") or "").split("?")[0]
-        if not re.search(r"\.(jpe?g|png|tiff?)$", clean_url, re.I) or re.search(r"logo|map|plan|poster|menu|ticket|stamp", page["title"], re.I):
-            STATS["type"] += 1
-            continue
-        ii["url"] = clean_url
-        author = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")).strip()
-        out.append({"title": page["title"].replace("File:", ""), "url": ii["url"], "width": ii["width"], "height": ii["height"],
-                    "licence": lic, "author": author or ii.get("user", ""),
-                    "date": re.sub(r"<[^>]+>", "", meta.get("DateTimeOriginal", {}).get("value", ""))[:40],
-                    "source_page": ii.get("descriptionurl", ""), "provider": "Wikimedia Commons"})
+    for res in item_json.get("resources") or []:
+        for group in res.get("files") or []:
+            for f in (group if isinstance(group, list) else [group]):
+                if isinstance(f, dict) and f.get("url"):
+                    out.append(f)
     return out
 
 
-def flickr(query, key, limit=30):
-    params = {"method": "flickr.photos.search", "api_key": key, "text": query, "license": "1,2,4,5,7,9,10",
-              "extras": "url_o,license,owner_name,date_taken,o_dims", "per_page": limit, "format": "json", "nojsoncallback": 1,
-              "content_type": 1, "sort": "relevance"}
-    req = urllib.request.Request("https://api.flickr.com/services/rest/?" + urllib.parse.urlencode(params), headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=25) as r:
-        data = json.load(r)
-    names = {"1": "CC BY-NC-SA", "2": "CC BY-NC", "4": "CC BY", "5": "CC BY-SA", "7": "No known copyright", "9": "CC0", "10": "PD"}
+def iiif_full(tif_url):
+    """tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00100/5a00123u.tif
+       -> tile.loc.gov/image-services/iiif/service:pnp:gsc:5a00000:5a00100:5a00123u/full/pct:100/0/default.jpg"""
+    m = re.search(r"/storage-services/(service/[^?#]+?)\.tiff?$", tif_url, re.I)
+    if not m:
+        return ""
+    return "https://tile.loc.gov/image-services/iiif/" + m.group(1).replace("/", ":") + "/full/pct:100/0/default.jpg"
+
+
+def best_image(files):
+    """The largest JPEG at gate size; failing that, the master TIFF served as a full-size JPEG through IIIF."""
+    def dims(f):
+        return int(f.get("width") or 0), int(f.get("height") or 0)
+    jpgs = [f for f in files if "jpeg" in (f.get("mimetype") or "") or re.search(r"\.jpe?g($|\?)", f["url"], re.I)]
+    jpgs = [f for f in jpgs if "/iiif/" not in f["url"] or "/full/" in f["url"]]
+    jpgs.sort(key=lambda f: dims(f)[0] * dims(f)[1], reverse=True)
+    for f in jpgs:
+        w, h = dims(f)
+        if w >= MIN_WIDE and h >= MIN_TALL:
+            return f["url"].split("#")[0], w, h
+    tifs = [f for f in files if "tiff" in (f.get("mimetype") or "") or re.search(r"\.tiff?$", f["url"], re.I)]
+    tifs.sort(key=lambda f: dims(f)[0] * dims(f)[1], reverse=True)
+    for f in tifs:
+        w, h = dims(f)
+        url = iiif_full(f["url"])
+        if url and w >= MIN_WIDE and h >= MIN_TALL:
+            return url, w, h
+    return None
+
+
+def as_text(v):
+    if isinstance(v, list):
+        return " ".join(as_text(x) for x in v)
+    return str(v or "")
+
+
+def candidates_for(t):
+    words = words_for(t)
+    hits, seen = [], set()
+    for q in t.get("queries") or [t["place"]]:
+        for partof, label in COLLECTIONS:
+            try:
+                for r in search(q, partof):
+                    rid = r.get("id") or r.get("url")
+                    if not rid or rid in seen:
+                        continue
+                    seen.add(rid)
+                    hay = (as_text(r.get("title")) + " " + as_text(r.get("description")) + " " + as_text(r.get("subject"))).lower()
+                    if words and not any(w in hay for w in words):
+                        STATS["offtopic"] += 1; continue
+                    if SKIP_TITLE.search(as_text(r.get("title"))):
+                        STATS["type"] += 1; continue
+                    hits.append((r, label))
+            except Exception as e:  # noqa: BLE001
+                STATS["errors"].append(f"search {q} / {partof[:20]}: {type(e).__name__} {str(e)[:100]}")
     out = []
-    for p in data.get("photos", {}).get("photo", []):
-        lic = names.get(str(p.get("license")), "")
-        if not p.get("url_o") or BAD_LICENCE.search(lic) or not OK_LICENCE.search(lic):
+    for r, label in hits[:ITEMS_PER_TARGET]:
+        rid = r.get("id") or r.get("url")
+        try:
+            item = get(rid.rstrip("/") + "/?fo=json")
+            STATS["items_opened"] += 1
+        except Exception as e:  # noqa: BLE001
+            STATS["errors"].append(f"item {rid}: {type(e).__name__}"); continue
+        meta = item.get("item") or {}
+        rights = as_text(meta.get("rights_advisory") or item.get("rights_advisory") or meta.get("rights"))
+        if RESTRICTED.search(rights) or not FREE.search(rights):
+            STATS["rights"] += 1
+            key = rights[:80] or "(none)"
+            STATS["rights_seen"][key] = STATS["rights_seen"].get(key, 0) + 1
             continue
-        if int(p.get("width_o", 0)) < MIN_WIDE or int(p.get("height_o", 0)) < 1350:
-            continue
-        out.append({"title": p.get("title", ""), "url": p["url_o"], "width": int(p["width_o"]), "height": int(p["height_o"]),
-                    "licence": lic, "author": p.get("ownername", ""), "date": (p.get("datetaken") or "")[:10],
-                    "source_page": f"https://www.flickr.com/photos/{p['owner']}/{p['id']}", "provider": "Flickr"})
+        files = flat_files(item)
+        if STATS["sample_files"] is None and files:
+            STATS["sample_files"] = {"item": rid, "files": [{k: f.get(k) for k in ("url", "mimetype", "width", "height")} for f in files[:8]]}
+        pick = best_image(files)
+        if not pick:
+            STATS["size"] += 1; continue
+        url, w, h = pick
+        author = as_text(meta.get("contributor_names") or meta.get("creator") or r.get("contributor")).strip()
+        out.append({"title": as_text(meta.get("title") or r.get("title"))[:200], "url": url, "width": w, "height": h,
+                    "licence": "No known restrictions (Library of Congress)", "author": author or label.split(",")[0],
+                    "collection": label, "date": as_text(meta.get("date") or r.get("date"))[:40],
+                    "source_page": rid, "provider": "Library of Congress"})
     return out
 
 
 def main():
     targets = json.load(open(os.path.join(HERE, "archive_targets.json")))["targets"]
-    key = os.environ.get("FLICKR_KEY", "")
     results = []
     for t in targets:
-        found = []
-        for q in t.get("queries") or [t["place"]]:
-            try:
-                found += commons(q)
-            except Exception as e:  # noqa: BLE001
-                STATS["errors"].append(f"commons {q}: {type(e).__name__} {str(e)[:120]}")
-                print("commons error", q, type(e).__name__)
-            if key:
-                try:
-                    found += flickr(q, key)
-                except Exception as e:  # noqa: BLE001
-                    print("flickr error", q, type(e).__name__)
-            time.sleep(0.5)
-        seen, uniq = set(), []
+        found = candidates_for(t)
+        uniq, seen = [], set()
         for f in found:
             if f["url"] not in seen:
                 seen.add(f["url"]); uniq.append(f)
         results.append({**{k: t[k] for k in ("place", "city", "era", "notes") if k in t}, "candidates": uniq[:25], "count": len(uniq)})
-        print(f"{t['place']}: {len(uniq)} licensed candidates")
-    STATS["licences_seen"] = dict(sorted(STATS["licences_seen"].items(), key=lambda kv: -kv[1])[:30])
-    json.dump({"searched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "flickr": bool(key), "stats": STATS, "targets": results},
+        print(f"{t['place']}: {len(uniq)} candidates")
+    STATS["rights_seen"] = dict(sorted(STATS["rights_seen"].items(), key=lambda kv: -kv[1])[:20])
+    STATS["errors"] = STATS["errors"][:40]
+    json.dump({"searched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "provider": "Library of Congress",
+               "collections": [c[1] for c in COLLECTIONS], "stats": STATS, "targets": results},
               open(os.path.join(HERE, "archive_candidates.json"), "w"), indent=1, ensure_ascii=False)
+    print(json.dumps({k: v for k, v in STATS.items() if k != "sample_files"}, indent=1)[:1500])
 
 
 if __name__ == "__main__":

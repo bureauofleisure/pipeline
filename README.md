@@ -26,8 +26,9 @@ An Instagram index of beautifully designed places, run almost entirely by machin
   largest rendition (Squarespace 2500w, WordPress originals, Wix 2500, Format 2500).
 - `discovery/watch.py` keeps a watch list of posts benched for photo reasons and re-checks their venue, studio and
   photographer pages every Monday. READY means four or more full-size candidates appeared.
-- `discovery/archive_search.py` pulls licensed, full-size archive photographs from Wikimedia Commons (and Flickr with a
-  FLICKR_KEY secret) for the places in `archive_targets.json`, with licence and author recorded for the credit line.
+- `discovery/archive_search.py` pulls public-domain archive photographs from professional Library of Congress
+  collections only (Gottscho-Schleisner, Carol M. Highsmith, HABS) for the places in `archive_targets.json`.
+  Wikimedia Commons and open Flickr were dropped 2026-10-21: phone snapshots, every post from them was killed.
 
 ## The originals archive
 Every photograph that passes the gate is stored untouched, at source resolution, in an S3-compatible bucket
