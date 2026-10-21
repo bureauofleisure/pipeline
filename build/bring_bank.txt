@@ -1,7 +1,8 @@
 # BRING bank. One per post, on roughly one post in three.
 # Rule: a BRING line names a person the reader already knows. It is a reason to send the post, not a joke about the place.
 # Positive by default: the people you want more time with, not the ones you want to fix.
-# Status: APPROVED may be used by the weekly review. RESERVED has a condition. DRAFT waits for Lewie.
+# Status: APPROVED may be used by the weekly review. RESERVED and CONDITIONAL only when their condition holds.
+# LOCKED 2026-10-21. Closed list: the review never writes a BRING line of its own. New lines are added here by Lewie only.
 #
 # APPROVED
 BRING WHOEVER STILL OWNS A BLAZER.
@@ -18,6 +19,10 @@ BRING THE FRIENDS WHO TURN BRUNCH INTO AN AFTERNOON.
 BRING YOUR GO-TO DINNER GROUP.
 BRING SOMEONE WHO LOVES A THREE-HOUR DINNER.
 BRING THE FRIEND WHO LAUGHS FUNNY.
+BRING SOMEONE WHO ALWAYS ORDERS DESSERT.
+BRING SOMEONE WHO TELLS A LONG STORY WELL.
+BRING WHOEVER TAUGHT YOU TO DRINK MARTINIS.
+BRING SOMEONE WHO STILL SENDS POSTCARDS.
 #
 # RESERVED
 BRING YOUR MOTHER.          | max once a month; 50s/60s-looking places only; never with SULTRY or SMOKY
@@ -32,11 +37,3 @@ BRING SOMEONE WHO HAS BEEN TO PARIS ALONE.       | French bistros, brasseries
 BRING SOMEONE WHO GREW UP IN CHICAGO.            | taverns, Chicago references
 BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL. | pools, lidos, beach clubs
 BRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT. | baths, saunas
-#
-# DRAFT, positive ideas for Lewie to cut or keep
-BRING SOMEONE WHO ALWAYS ORDERS DESSERT.
-BRING THE FRIEND WHO KNOWS EVERYONE'S BIRTHDAY.
-BRING SOMEONE WHO TELLS A LONG STORY WELL.
-BRING WHOEVER TAUGHT YOU TO DRINK MARTINIS.
-BRING THE FRIEND WHO ALWAYS SAYS YES.
-BRING SOMEONE WHO STILL SENDS POSTCARDS.
