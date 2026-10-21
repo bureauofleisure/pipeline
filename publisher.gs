@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.11 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.12 (MODE: DRYRUN default, QUIET, LIVE)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -678,6 +678,9 @@ function statusCounts_(values, col) {
 
 /** Called from the review page. Sets Status on one row. Returns the new counts. */
 function setStatus(rowNumber, status, index, note) {
+  // The page sends {index, note} as the third argument so a Loader with only three arguments
+  // in its stub (the original paste) still carries the note through.
+  if (index && typeof index === 'object') { note = note || index.note; index = index.index; }
   if (['APPROVED', 'KILLED', 'DRAFT', 'EDITS'].indexOf(status) < 0) throw new Error('Bad status');
   const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
   const values = sheet.getDataRange().getValues();
@@ -717,6 +720,9 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  button.approve:hover{background:#2A2420;color:#F1E9DC} button.edits:hover{background:#2A2420;color:#F1E9DC} button.kill{border-color:#6E2A22;color:#6E2A22} button.kill:hover{background:#6E2A22;color:#F1E9DC}
  button:disabled{opacity:.4;cursor:default}
  .empty{padding:60px 20px;font-size:15px}
+ .editbox{margin-top:12px}
+ .editbox textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Courier Prime",monospace;border:2px solid #2A2420;background:#fff8;padding:10px;margin-bottom:10px;resize:vertical}
+ .err{font-size:12px;color:#6E2A22;margin-top:10px;white-space:pre-wrap}
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
@@ -732,25 +738,38 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
   <pre><?= p.caption ?></pre>
   <? if (p.notes) { ?><div class="notes"><?= p.notes ?></div><? } ?>
   <div class="btns">
-   <button class="approve" onclick="go(<?= p.row ?>,'APPROVED','<?= p.index ?>',this)">Approve</button>
-   <button class="edits" onclick="edits(<?= p.row ?>,'<?= p.index ?>')">Edits</button>
-   <button class="kill" onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>',this)">Kill</button>
-   <? if (p.status !== 'DRAFT') { ?><button onclick="go(<?= p.row ?>,'DRAFT','<?= p.index ?>',this)">Back to draft</button><? } ?>
+   <button class="approve" onclick="go(<?= p.row ?>,'APPROVED','<?= p.index ?>')">Approve</button>
+   <button class="edits" onclick="openEdits(<?= p.row ?>)">Edits</button>
+   <button class="kill" onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>')">Kill</button>
+   <? if (p.status !== 'DRAFT') { ?><button onclick="go(<?= p.row ?>,'DRAFT','<?= p.index ?>')">Back to draft</button><? } ?>
   </div>
+  <div class="editbox" id="e<?= p.row ?>" hidden>
+   <textarea id="t<?= p.row ?>" rows="4" placeholder="What should change? e.g. slide 2 is crooked, drop the bed photo, cover should be the bar shot, word should be CLUBBY"></textarea>
+   <div class="btns"><button class="approve" onclick="sendEdits(<?= p.row ?>,'<?= p.index ?>')">Send edits</button><button onclick="closeEdits(<?= p.row ?>)">Cancel</button></div>
+  </div>
+  <div class="err" id="x<?= p.row ?>"></div>
  </div>
 </section>
 <? }); ?>
 <script>
-function edits(row, index){
-  const note = prompt('What should change? Plain words. e.g. "slide 2 is crooked", "drop the bed photo", "cover should be the bar shot", "word should be CLUBBY".');
-  if (note && note.trim()) go(row, 'EDITS', index, null, note.trim());
+function openEdits(row){ const b=document.getElementById('e'+row); b.hidden=false; document.getElementById('t'+row).focus(); }
+function closeEdits(row){ document.getElementById('e'+row).hidden=true; }
+function sendEdits(row, index){
+  const t=document.getElementById('t'+row), note=t.value.trim();
+  if (!note) { document.getElementById('x'+row).textContent='Type what should change first.'; t.focus(); return; }
+  go(row, 'EDITS', index, note);
 }
-function go(row, status, index, btn, note){
-  const sec = document.getElementById('p'+row); sec.querySelectorAll('button').forEach(b => b.disabled = true);
+document.addEventListener('keydown', function(ev){
+  if (ev.target.tagName==='TEXTAREA' && ev.key==='Enter' && (ev.metaKey||ev.ctrlKey)) { const row=ev.target.id.slice(1); ev.target.closest('.editbox').querySelector('button').click(); }
+});
+function go(row, status, index, note){
+  const sec=document.getElementById('p'+row), err=document.getElementById('x'+row);
+  err.textContent=''; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = true);
   google.script.run.withSuccessHandler(function(counts){
     document.getElementById('s'+row).textContent = status; sec.classList.add('done');
+    const box=document.getElementById('e'+row); if (box) box.hidden=true;
     document.getElementById('counts').textContent = Object.keys(counts).map(k => k+' '+counts[k]).join(' · ');
-  }).withFailureHandler(function(e){ alert(e.message); sec.querySelectorAll('button').forEach(b => b.disabled = false); })
-  .setStatus(row, status, index, note || '');
+  }).withFailureHandler(function(e){ err.textContent = 'Not saved: ' + e.message; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = false); })
+  .setStatus(row, status, {index: String(index), note: note || ''}, note || '');
 }
 </script></body></html>`;

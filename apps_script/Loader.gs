@@ -21,7 +21,7 @@ function importBatch()   { return run_('importBatch'); }
 function syncStatuses()  { return run_('syncStatuses'); }
 // the review web app
 function doGet(e)        { return runWith_('doGet', [e]); }
-function setStatus(row, status, index, note) { return runWith_('setStatus', [row, status, index, note]); }
+function setStatus() { return runWith_('setStatus', Array.prototype.slice.call(arguments)); }  // forwards every argument
 
 /** Force the next run to fetch fresh code (handy right after a change is pushed). */
 function refreshCode() {
