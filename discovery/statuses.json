@@ -1,5 +1,5 @@
 {
- "synced": "2026-10-21T10:32:59.834Z",
+ "synced": "2026-10-21T16:32:59.086Z",
  "rows": {
   "0001": {
    "status": "DRAFT",
@@ -7,7 +7,7 @@
    "live_link": "",
    "notes": "BRING idea: BRING THE ONE WHO SAYS THEY DON'T LIKE COCKTAILS.\nReminds: a Tokyo hi-fi den\nSource: https://www.dezeen.com/2026/10/08/josh-greenspan-usm-vvs-cocktail-room-new-york/",
    "caption": "BUREAU OF LEISURE NO. 0001\nVV'S COCKTAIL ROOM. CHELSEA, NEW YORK.\nEIGHTEEN SEATS. OMAKASE PACE.\nSTEEL BLUE USM HALLER SHELVING, WALL TO WALL.\nWALNUT BAR, BURGUNDY BANQUETTES.\nBUILT BY A RESTAURATEUR AND HIS FATHER.\nIN A WORD: LACQUERED.\n.\nVV's Cocktail Room, New York\nDesign: Josh Greenspan with USM\n.\nDM for credit.",
-   "updated": "2026-10-21T10:32:59.833Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0003": {
    "status": "DRAFT",
@@ -15,7 +15,7 @@
    "live_link": "",
    "notes": "Reminds: a Bangkok family house\nSource: https://www.dezeen.com/2026/09/04/surrane-design-hommali-west-village-new-york/",
    "caption": "BUREAU OF LEISURE NO. 0003\nHOMMALI. WEST VILLAGE, NEW YORK.\nA THAI HOUSE, REBUILT INDOORS.\nTERRACOTTA FLOOR. A CENTRAL COURTYARD.\nFLUTED SAND TILE BAR. LEATHER AND VELVET.\nRICE PLANT LIGHT AT THE DOOR.\nIN A WORD: SUNLIT.\n.\nHommali, New York\nDesign: Surrane Design\n.\nDM for credit.",
-   "updated": "2026-10-21T10:32:59.833Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0004": {
    "status": "KILLED",
@@ -23,7 +23,7 @@
    "live_link": "",
    "notes": "BRING idea: BRING YOUR MOTHER.\nReminds: a Park Avenue apartment\nSource: https://www.dezeen.com/2026/08/14/busta-studio-kimpton-ashbel-hotel/",
    "caption": "BUREAU OF LEISURE NO. 0004\nKIMPTON ASHBEL. PARK AVENUE, NEW YORK.\nA 1928 BEAUX-ARTS BUILDING.\nVELVET, LINEN, LEATHER, BOUCLE.\nJEWEL TONES ON A NEUTRAL GROUND.\nLOUVRES AT STREET LEVEL FOR PRIVACY.\nIN A WORD: PLUSH.\n.\nKimpton Ashbel, New York\nDesign: Busta Studio\nPhoto: Courtesy of Kimpton Ashbel",
-   "updated": "2026-10-21T10:32:59.833Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0005": {
    "status": "KILLED",
@@ -31,7 +31,7 @@
    "live_link": "",
    "notes": "Reminds: a Chicago neighborhood tavern\nSource: https://www.dezeen.com/2026/10/09/nota-taverna-mexico-city-formant-studio/",
    "caption": "BUREAU OF LEISURE NO. 0005\nNOTA TAVERN. ESCANDÓN, MEXICO CITY.\nHALF OF AN OLD HACIENDA HOUSE.\nTWO FLOORS. ITALIAN-AMERICAN.\nCUSTOM FURNITURE BY FORMANT STUDIO.\nANTIQUES BY GALERÍA CÓRDOBA.\nIN A WORD: CLUBBY.\n.\nNota Tavern, Mexico City\nDesign: Formant Studio\nPhoto: Fabián Martinez",
-   "updated": "2026-10-21T10:32:59.833Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0006": {
    "status": "FAILED",
@@ -39,7 +39,7 @@
    "live_link": "",
    "notes": "Error: {\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"IGApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"A1rdKC4MF_v9isPdHfky4LN\"}",
    "caption": "BUREAU OF LEISURE NO. 0006\nLÈVE OFFICE BAR. TURIN.\nA 1920S BUILDING, ONCE A CAFE AND A BOOKSHOP.\nSTAINLESS STEEL BAR. CANTILEVER CHAIRS.\nWOOD PANELLING. MIRRORED WALLS.\nPOST-WAR AMERICAN OFFICE, REIMAGINED.\nIN A WORD: BRASSY.\n.\nLève Office Bar, Turin\nDesign: Fabio Fantolino\nPhoto: Luca Argenton",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0009": {
    "status": "FAILED",
@@ -47,15 +47,15 @@
    "live_link": "",
    "notes": "Error: {\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"IGApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"AFMk1R3Tm8bo695lao30kSI\"}",
    "caption": "BUREAU OF LEISURE NO. 0009\nPERIDOT. THE HENDERSON, HONG KONG.\n38TH FLOOR OF A ZAHA HADID TOWER.\nTWENTY THOUSAND TINY LIGHTS.\nLIME GREEN, FLOOR TO CEILING.\nTIMELESS FUTURISM, SAYS THE STUDIO.\nIN A WORD: GILDED.\n.\nPeridot, Hong Kong\nDesign: Studio Paolo Ferrari\nPhoto: Virgile Simon Bertrand",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0010": {
-   "status": "APPROVED",
+   "status": "FAILED",
    "publish_at": "2026-10-21T13:00:00.000Z",
    "live_link": "",
-   "notes": "Reminds: a Paris bistro at lunch\nSource: https://www.dezeen.com/2026/10/12/gundry-ducker-french-dining-culture-london-cassette/",
+   "notes": "Error: {\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"IGApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"A19Iu4bxDCle2WyhRsSJlQ6\"}",
    "caption": "BUREAU OF LEISURE NO. 0010\nCASSETTE. COVENT GARDEN, LONDON.\nA GOTHIC WORKSHOP, GRADE II LISTED.\nDOUBLE HEIGHT. GLASS FACADE.\nFIFTY-TWO SEATS OVER TWO FLOORS.\nA NEIGHBOURHOOD BISTRO IN THE CENTRE OF TOWN.\nIN A WORD: CRISP.\n.\nCassette, London\nDesign: Gundry & Ducker\nPhoto: Ed Reeve",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0011": {
    "status": "APPROVED",
@@ -63,7 +63,7 @@
    "live_link": "",
    "notes": "Reminds: a Kyoto kissaten\nSource: https://www.dezeen.com/2026/08/01/minnibar-restaurant-montreal-ivy-studio/",
    "caption": "BUREAU OF LEISURE NO. 0011\nMINNIBAR. DOWNTOWN, MONTREAL.\nTWENTY-FOOT CEILINGS. A CORNER ROOM.\nTHE STRUCTURE LEFT BARE.\nPALE STONE COUNTER, OMAKASE LEDGE.\nIVY STUDIO'S FIRST CHAIRS.\nIN A WORD: UNHURRIED.\n.\nMinnibar, Montreal\nDesign: Ivy Studio\nPhoto: Alex Lesage",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0014": {
    "status": "DRAFT",
@@ -71,7 +71,7 @@
    "live_link": "",
    "notes": "Reminds: Catch Me If You Can\nSource: https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_151.jpg",
    "caption": "BUREAU OF LEISURE NO. 0014\nTWA HOTEL. JFK AIRPORT, NEW YORK.\nEERO SAARINEN'S FLIGHT CENTER, OPENED 1962.\nTHE SUNKEN LOUNGE, RESTORED WITHOUT ASHTRAYS.\nTWO SOLARI SPLIT-FLAP BOARDS. 512 ROOMS.\nFIFTEEN MILLION PENNY TILES. A HOTEL SINCE 2019.\nIN A WORD: SNAZZY.\n.\nTWA Hotel, New York\nDesign: Eero Saarinen\nPhoto: Epicgenius, CC BY-SA 4.0, via Wikimedia Commons",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0015": {
    "status": "DRAFT",
@@ -79,7 +79,7 @@
    "live_link": "",
    "notes": "BRING idea: BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.\nReminds: Hearst Castle's Neptune Pool\nSource: https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool01.jpg",
    "caption": "BUREAU OF LEISURE NO. 0015\nVENETIAN POOL. CORAL GABLES, MIAMI.\nOPENED 1924 AS THE VENETIAN CASINO.\nCUT FROM A FOUR-ACRE LIMESTONE QUARRY.\nPHINEAS PAIST WITH DENMAN FINK. A GRAND WATERFALL.\n820,000 GALLONS OF WELL WATER. LISTED IN 1981.\nIN A WORD: LEAFY.\n.\nVenetian Pool, Miami\nDesign: Phineas Paist with Denman Fink\nPhoto: Ebyabe, CC BY-SA 3.0, via Wikimedia Commons",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0016": {
    "status": "DRAFT",
@@ -87,7 +87,7 @@
    "live_link": "",
    "notes": "Reminds: Goldfinger's opening shot\nSource: https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg",
    "caption": "BUREAU OF LEISURE NO. 0016\nFONTAINEBLEAU. MIAMI BEACH, MIAMI.\nMORRIS LAPIDUS, 1954. BOW TIES IN THE DESIGN.\nBUILT ON THE OLD HARVEY FIRESTONE ESTATE.\nTHE STAIRCASE TO NOWHERE, PRESERVED.\nGOLDFINGER'S OPENING SHOT. SINATRA'S 1960 SPECIAL.\nIN A WORD: GLAMOROUS.\n.\nFontainebleau, Miami\nDesign: Morris Lapidus\nPhoto: Visitor7, CC BY-SA 3.0, via Wikimedia Commons",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0017": {
    "status": "DRAFT",
@@ -95,7 +95,7 @@
    "live_link": "",
    "notes": "BRING idea: BRING SOMEONE WHO LOVES GOSSIP.\nReminds: a Slim Aarons afternoon\nSource: https://commons.wikimedia.org/wiki/File:Polo_Lounge,_inside_(3715406002).jpg",
    "caption": "BUREAU OF LEISURE NO. 0017\nTHE POLO LOUNGE. BEVERLY HILLS, LOS ANGELES.\nNAMED FOR THE POLO PLAYERS WHO TOASTED HERE.\nPEACHY PINK WALLS. DARK GREEN BOOTHS.\nA PLUG-IN PHONE AT EVERY BOOTH.\nSOFTENED IN 1974 WITH TABLE LAMPS AND FLOWERS.\nIN A WORD: SWANKY.\n.\nThe Polo Lounge, Los Angeles\nPhoto: Alan Light, CC BY 2.0, via Wikimedia Commons",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   },
   "0018": {
    "status": "DRAFT",
@@ -103,7 +103,7 @@
    "live_link": "",
    "notes": "Reminds: the Bradbury Building, Los Angeles\nSource: https://www.joethomasphoto.com/beekmanhotel/",
    "caption": "BUREAU OF LEISURE NO. 0018\nTHE BEEKMAN. FINANCIAL DISTRICT, NEW YORK.\nTEMPLE COURT, 1883. SILLIMAN AND FARNSWORTH.\nA NINE-STOREY ATRIUM UNDER A PYRAMID SKYLIGHT.\nCAST-IRON BRACKETS SHAPED LIKE DRAGONS.\nEMPTY FROM 2001. A HOTEL SINCE 2016.\nIN A WORD: BURNISHED.\n.\nThe Beekman, New York\nDesign: Martin Brudnizki\nPhoto: Joe Thomas",
-   "updated": "2026-10-21T10:32:59.834Z"
+   "updated": "2026-10-21T16:32:59.086Z"
   }
  }
 }
