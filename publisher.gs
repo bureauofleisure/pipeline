@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.8.1 (publishing untested until the Meta app exists; importBatch and syncStatuses work now)
+ * Bureau of Leisure Publisher v0.9 (Meta app live: Flow Publisher, Instagram Login, Development mode)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -14,7 +14,18 @@
  *                      or graph.facebook.com (Facebook Login)
  *   3. Run setupTrigger() once and approve the permissions.
  *      This creates the hourly publisher and a weekly token refresh (tokens die after 60 days unrefreshed).
- *   4. Test with a separate test account before pointing it at the real one.
+ *   4. Nothing else. The first hourly run verifies the token and dry-runs one carousel (built on
+ *      Instagram's side, never published) and emails the result. Publishing stays off until that passes.
+ *
+ * v0.9 safety rails:
+ *   PAUSE         add a tab named PAUSE to the sheet and nothing publishes; delete it to resume.
+ *   Tags          photographer, designer/studio and venue handles are tagged on slide 1 automatically
+ *                 (User tags column overrides). A bad or private handle never sinks a post: it retries
+ *                 without tags, posts, and emails you which post went out untagged.
+ *   Quota         checks Instagram's daily publishing limit before every post.
+ *   Token         refreshed weekly; a failed refresh emails you at once, and the daily check warns if the
+ *                 token has gone 14 days without a successful refresh (it dies at 60).
+ *   Weekly line   Monday 7am email: what went live last week, what failed, what is queued.
  *
  * Sheet tab "Posts", header row 1. Columns this script uses (by header name):
  *   Status        DRAFT | APPROVED | KILLED | PUBLISHING | POSTED | FAILED
@@ -86,7 +97,93 @@ function dailyCheck() {
     if (d > now) queued++;
   }
   if (queued < 7) notify_(`Only ${queued} approved posts queued`, 'Approve next week in the Bureau of Leisure Index sheet, Posts tab.');
-  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
+  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
+
+  // token health: refreshed weekly; warn if two weekly refreshes in a row have failed
+  const refreshed = Number(props.getProperty('TOKEN_REFRESHED_AT') || props.getProperty('TOKEN_SET_AT') || 0);
+  if (!refreshed) props.setProperty('TOKEN_SET_AT', String(Date.now()));
+  else if (now.getTime() - refreshed > 14 * 86400000) {
+    notify_('Instagram token not refreshed in ' + Math.round((now.getTime() - refreshed) / 86400000) + ' days',
+      'It dies 60 days after the last good refresh. Check the Log tab for TOKEN REFRESH FAILED.');
+  }
+
+  if (now.getDay() === 1) weeklySummary_(values, col, now);
+}
+
+/** Monday: one short email of what went live, what failed and what is queued. */
+function weeklySummary_(values, col, now) {
+  const weekAgo = now.getTime() - 7 * 86400000;
+  const live = [], failed = [];
+  let queued = 0;
+  values.slice(1).forEach(row => {
+    const st = row[col['Status']], d = row[col['Publish at']], name = row[col['Index No.']] + ' ' + (cellByName_(row, col, 'Place') || '');
+    if (st === 'POSTED' && d instanceof Date && d.getTime() > weekAgo) live.push(name.trim() + '  ' + (row[col['Live link']] || ''));
+    if (st === 'FAILED') failed.push(name.trim());
+    if (st === 'APPROVED') queued++;
+  });
+  const body = [`Went live (${live.length}):`, ...(live.length ? live : ['none']), '',
+                `Failed (${failed.length}):`, ...(failed.length ? failed : ['none']), '',
+                `Approved and queued: ${queued}`, paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
+  notify_(`Week: ${live.length} live, ${failed.length} failed, ${queued} queued`, body);
+}
+
+function cellByName_(row, col, name) { return name in col ? String(row[col[name]] || '').trim() : ''; }
+
+/** A tab named PAUSE stops all publishing. */
+function paused_() { return !!SpreadsheetApp.getActive().getSheetByName('PAUSE'); }
+
+/**
+ * First-run check, and again whenever the token changes. Confirms the token belongs to IG_USER_ID, then builds
+ * one real carousel on Instagram's side WITHOUT publishing it (unpublished containers expire on their own).
+ * Emails the result. Returns true when publishing is safe.
+ */
+function verifyConnection_() {
+  const props = PropertiesService.getScriptProperties();
+  const token = props.getProperty('IG_TOKEN') || '';
+  const stamp = Utilities.base64Encode(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, token)).slice(0, 12);
+  if (props.getProperty('IG_VERIFIED_FOR') === stamp) return true;
+  const tries = Number(props.getProperty('IG_VERIFY_TRIES_' + stamp) || 0);
+  if (tries >= 3) return false;                      // already emailed three failures for this token; wait for a new one
+  props.setProperty('IG_VERIFY_TRIES_' + stamp, String(tries + 1));
+
+  const host = props.getProperty('GRAPH_HOST') || 'graph.instagram.com';
+  const base = `https://${host}/${API_VERSION}`;
+  const igId = props.getProperty('IG_USER_ID');
+  try {
+    const me = get_(`${base}/me?fields=user_id,username&access_token=${encodeURIComponent(token)}`);
+    if (String(me.user_id) !== String(igId) && String(me.id) !== String(igId)) {
+      throw new Error(`Token belongs to @${me.username} (${me.user_id || me.id}), but IG_USER_ID is ${igId}`);
+    }
+    let dry = 'no row with live slides to dry-run yet; account and token check passed';
+    const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
+    const values = sheet.getDataRange().getValues();
+    const col = indexHeaders_(values[0]);
+    for (let r = 1; r < values.length; r++) {
+      const st = values[r][col['Status']];
+      if (st !== 'APPROVED' && st !== 'DRAFT') continue;
+      const slides = lines_(values[r][col['Slide links']]);
+      if (slides.length < 2 || !slides.every(urlLive_)) continue;
+      const carousel = publishCarousel_(values[r], col, false, true);
+      dry = `built carousel ${carousel} for ${values[r][col['Index No.']]} (${slides.length} slides, tags included) and did NOT publish it`;
+      break;
+    }
+    props.setProperty('IG_VERIFIED_FOR', stamp);
+    log_('verify', `@${me.username} ok; ${dry}`);
+    notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\nPublishing is now on. ` +
+      'Approved posts go out at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day.');
+    return true;
+  } catch (e) {
+    log_('verify', 'FAILED: ' + String(e).slice(0, 400));
+    notify_('Instagram connection check failed', String(e).slice(0, 1000) + '\n\nNothing will publish until this passes. ' +
+      'It retries hourly, three times per token.');
+    return false;
+  }
+}
+
+function log_(what, msg) {
+  const ss = SpreadsheetApp.getActive();
+  const log = ss.getSheetByName('Log') || ss.insertSheet('Log');
+  log.appendRow([new Date(), what, msg]);
 }
 
 /**
@@ -103,9 +200,17 @@ function refreshToken() {
   try {
     const body = get_(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(props.getProperty('IG_TOKEN'))}`);
     props.setProperty('IG_TOKEN', body.access_token);
+    props.setProperty('TOKEN_REFRESHED_AT', String(Date.now()));
     log.appendRow([new Date(), 'TOKEN REFRESHED', `expires in ${Math.round(body.expires_in / 86400)} days`]);
   } catch (e) {
     log.appendRow([new Date(), 'TOKEN REFRESH FAILED', String(e).slice(0, 500)]);
+    // a token under 24 hours old cannot be refreshed yet; that is expected, not a fault
+    if (!/24 hours|too soon|not.*eligible/i.test(String(e))) {
+      notify_('Instagram token refresh failed', String(e).slice(0, 800) +
+        '\n\nThe token still works until it expires (60 days from the last good refresh). ' +
+        'If this repeats next week, generate a new token in the Meta app dashboard (Flow Publisher > Use cases > ' +
+        'API setup with Instagram login > Generate token) and paste it into Script Property IG_TOKEN.');
+    }
   }
 }
 
@@ -113,6 +218,8 @@ function publishDue() {
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(10000)) return;           // never two runs at once
   try {
+    if (paused_()) return;                       // a PAUSE tab stops everything
+    if (!verifyConnection_()) return;            // token and account proven before anything goes public
     const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
     const values = sheet.getDataRange().getValues();
     const col = indexHeaders_(values[0]);
@@ -141,6 +248,8 @@ function publishDue() {
         continue;                                          // stays APPROVED, retried next hour
       }
 
+      if (quotaFull_()) { setCell_(sheet, r, col['Notes'], 'Waiting: Instagram daily publishing limit reached ' + new Date().toISOString()); break; }
+
       setCell_(sheet, r, col['Status'], 'PUBLISHING');   // claim the row first
       SpreadsheetApp.flush();
       try {
@@ -149,7 +258,7 @@ function publishDue() {
           permalink = publishCarousel_(row, col, false);
         } catch (first) {
           // The most common avoidable failure is a bad tag handle. Retry once without tags.
-          if (!String(row[col['User tags']] || '').trim()) throw first;
+          if (!tagsFor_(row, col).length) throw first;
           permalink = publishCarousel_(row, col, true);
           note = 'Posted WITHOUT TAGS (tag error: ' + String(first).slice(0, 200) + ') ';
           notify_('Posted without tags: ' + row[col['Index No.']], note);
@@ -169,7 +278,27 @@ function publishDue() {
   }
 }
 
-function publishCarousel_(row, col, skipTags) {
+/** Instagram's rolling 24-hour publishing limit. Never blocks on an error reading it. */
+function quotaFull_() {
+  try {
+    const props = PropertiesService.getScriptProperties();
+    const base = `https://${props.getProperty('GRAPH_HOST') || 'graph.instagram.com'}/${API_VERSION}`;
+    const q = get_(`${base}/${props.getProperty('IG_USER_ID')}/content_publishing_limit?fields=quota_usage,config&access_token=${encodeURIComponent(props.getProperty('IG_TOKEN'))}`);
+    const d = (q.data || [])[0] || {};
+    return d.config && d.quota_usage >= d.config.quota_total;
+  } catch (e) { return false; }
+}
+
+/** Handles to tag on slide 1: the User tags column if filled, else photographer, designer/studio and venue. */
+function tagsFor_(row, col) {
+  const manual = cellByName_(row, col, 'User tags');
+  const raw = manual ? manual.split(',') :
+    ['Photographer handle', 'Designer handle', 'Venue handle'].map(h => cellByName_(row, col, h));
+  const seen = new Set();
+  return raw.map(s => String(s).trim().replace(/^@/, '').toLowerCase()).filter(h => h && !seen.has(h) && seen.add(h)).slice(0, 5);
+}
+
+function publishCarousel_(row, col, skipTags, dryRun) {
   const props = PropertiesService.getScriptProperties();
   const igId = props.getProperty('IG_USER_ID');
   const token = props.getProperty('IG_TOKEN');
@@ -180,10 +309,8 @@ function publishCarousel_(row, col, skipTags) {
   const alts = lines_(row[col['Alt text']]);
   if (slides.length < 2 || slides.length > 10) throw new Error(`Need 2 to 10 slides, found ${slides.length}`);
 
-  const tags = skipTags ? [] : String(row[col['User tags']] || '')
-    .split(',').map(s => s.trim().replace(/^@/, '')).filter(Boolean)
-    .slice(0, 5)
-    .map((username, i) => ({ username, x: 0.15 + 0.15 * i, y: 0.9 }));
+  const tags = skipTags ? [] : tagsFor_(row, col)
+    .map((username, i) => ({ username, x: 0.2 + 0.2 * i, y: 0.88 }));
 
   // 1. one container per slide
   const children = slides.map((url, i) => {
@@ -205,6 +332,7 @@ function publishCarousel_(row, col, skipTags) {
   if (collabs.length && !skipTags) carouselParams.collaborators = JSON.stringify(collabs);
   const carousel = post_(`${base}/${igId}/media`, carouselParams).id;
   waitFinished_(base, carousel, token);
+  if (dryRun) return carousel;
 
   // 3. publish, then fetch the live link
   const mediaId = post_(`${base}/${igId}/media_publish`, { creation_id: carousel, access_token: token }).id;
