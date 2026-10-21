@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.9 (Meta app live: Flow Publisher, Instagram Login, Development mode)
+ * Bureau of Leisure Publisher v0.10 (Meta app live; MODE gates public posting, default DRYRUN)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -16,6 +16,12 @@
  *      This creates the hourly publisher and a weekly token refresh (tokens die after 60 days unrefreshed).
  *   4. Nothing else. The first hourly run verifies the token and dry-runs one carousel (built on
  *      Instagram's side, never published) and emails the result. Publishing stays off until that passes.
+ *
+ * MODE (Script Property). Nothing posts publicly unless MODE is exactly LIVE.
+ *   DRYRUN (default, also when MODE is missing): at each 9am slot the due post is built on Instagram's side
+ *                 with its tags, checked, and NOT published. Row becomes DRY RUN with a note. One a day,
+ *                 so the whole daily rhythm, token refresh and alerts run for real with zero exposure.
+ *   LIVE          publishes. On the first LIVE run every DRY RUN row goes back to APPROVED with a fresh slot.
  *
  * v0.9 safety rails:
  *   PAUSE         add a tab named PAUSE to the sheet and nothing publishes; delete it to resume.
@@ -97,7 +103,7 @@ function dailyCheck() {
     if (d > now) queued++;
   }
   if (queued < 7) notify_(`Only ${queued} approved posts queued`, 'Approve next week in the Bureau of Leisure Index sheet, Posts tab.');
-  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
+  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_() && live_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
 
   // token health: refreshed weekly; warn if two weekly refreshes in a row have failed
   const refreshed = Number(props.getProperty('TOKEN_REFRESHED_AT') || props.getProperty('TOKEN_SET_AT') || 0);
@@ -113,17 +119,19 @@ function dailyCheck() {
 /** Monday: one short email of what went live, what failed and what is queued. */
 function weeklySummary_(values, col, now) {
   const weekAgo = now.getTime() - 7 * 86400000;
-  const live = [], failed = [];
+  const live = [], failed = [], dry = [];
   let queued = 0;
   values.slice(1).forEach(row => {
     const st = row[col['Status']], d = row[col['Publish at']], name = row[col['Index No.']] + ' ' + (cellByName_(row, col, 'Place') || '');
     if (st === 'POSTED' && d instanceof Date && d.getTime() > weekAgo) live.push(name.trim() + '  ' + (row[col['Live link']] || ''));
     if (st === 'FAILED') failed.push(name.trim());
+    if (st === 'DRY RUN') dry.push(name.trim() + '  ' + String(row[col['Notes']] || '').slice(0, 60));
     if (st === 'APPROVED') queued++;
   });
   const body = [`Went live (${live.length}):`, ...(live.length ? live : ['none']), '',
                 `Failed (${failed.length}):`, ...(failed.length ? failed : ['none']), '',
-                `Approved and queued: ${queued}`, paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
+                `Dry runs (${dry.length}):`, ...(dry.length ? dry : ['none']), '',
+                `Approved and queued: ${queued}`, live_() ? 'MODE: LIVE' : 'MODE: DRYRUN (nothing posts publicly)', paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
   notify_(`Week: ${live.length} live, ${failed.length} failed, ${queued} queued`, body);
 }
 
@@ -131,6 +139,9 @@ function cellByName_(row, col, name) { return name in col ? String(row[col[name]
 
 /** A tab named PAUSE stops all publishing. */
 function paused_() { return !!SpreadsheetApp.getActive().getSheetByName('PAUSE'); }
+
+/** Public posting only when MODE is exactly LIVE. Anything else, including unset, is a dry run. */
+function live_() { return PropertiesService.getScriptProperties().getProperty('MODE') === 'LIVE'; }
 
 /**
  * First-run check, and again whenever the token changes. Confirms the token belongs to IG_USER_ID, then builds
@@ -170,8 +181,8 @@ function verifyConnection_() {
     props.setProperty('IG_VERIFIED_FOR', stamp);
     props.setProperty('IG_VERIFIED_AT', String(Date.now()));
     log_('verify', `@${me.username} ok; ${dry}`);
-    notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\nPublishing is now on. ` +
-      'Approved posts go out at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day. Any approved post whose date has already passed is moved to the next free morning slot.');
+    notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\n` + (live_() ? 'MODE is LIVE: publishing is on. ' : 'MODE is DRYRUN: nothing will post publicly. At each slot the due post is built and checked, not published. ') +
+      'Approved posts are handled at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day. Any approved post whose date has already passed is moved to the next free morning slot.');
     return true;
   } catch (e) {
     log_('verify', 'FAILED: ' + String(e).slice(0, 400));
@@ -228,6 +239,19 @@ function publishDue() {
     const col = indexHeaders_(values[0]);
     const now = new Date();
 
+    const props = PropertiesService.getScriptProperties();
+    if (live_() && !props.getProperty('WENT_LIVE_AT')) {
+      // first LIVE run: everything that passed a dry run returns to the queue with a fresh 9am slot
+      for (let r = 1; r < values.length; r++) {
+        if (values[r][col['Status']] !== 'DRY RUN') continue;
+        setCell_(sheet, r, col['Status'], 'APPROVED'); setCell_(sheet, r, col['Publish at'], '');
+      }
+      props.setProperty('WENT_LIVE_AT', String(Date.now()));
+      log_('mode', 'LIVE: dry-run rows returned to APPROVED');
+      return;                                    // dailyCheck assigns their slots; first post at the next 9am
+    }
+    if (!live_() && Date.now() - Number(props.getProperty('LAST_DRYRUN_AT') || 0) < 20 * 3600 * 1000) return;
+
     // never more than one post in any 20-hour window, even when catching up after an outage
     let lastPosted = 0;
     values.slice(1).forEach(row => {
@@ -258,6 +282,20 @@ function publishDue() {
         continue;                                          // stays APPROVED, retried next hour
       }
 
+      if (!live_()) {
+        try {
+          const c = publishCarousel_(row, col, false, true);
+          setCell_(sheet, r, col['Status'], 'DRY RUN');
+          setCell_(sheet, r, col['Notes'], `DRY RUN passed ${new Date().toISOString()}: built ${c} with tags [${tagsFor_(row, col).join(', ')}], not published`);
+          log_('dryrun', `${row[col['Index No.']]} ok`);
+        } catch (e) {
+          setCell_(sheet, r, col['Status'], 'DRY RUN');
+          setCell_(sheet, r, col['Notes'], 'DRY RUN FAILED (would have failed live): ' + String(e).slice(0, 400));
+          notify_('Dry run failed: ' + row[col['Index No.']], String(e).slice(0, 1000));
+        }
+        props.setProperty('LAST_DRYRUN_AT', String(Date.now()));
+        break;
+      }
       if (quotaFull_()) { setCell_(sheet, r, col['Notes'], 'Waiting: Instagram daily publishing limit reached ' + new Date().toISOString()); break; }
 
       setCell_(sheet, r, col['Status'], 'PUBLISHING');   // claim the row first
