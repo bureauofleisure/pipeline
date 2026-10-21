@@ -25,7 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "BureauOfLeisureBot/1.1 (https://bureauofleisure.co; lewie@flow.agency)"
 MIN_WIDE, MIN_TALL = 1800, 1350
 PER_SEARCH = 25          # results read per collection search
-ITEMS_PER_TARGET = 12    # item pages opened per target (each is one request)
+ITEMS_PER_TARGET = 16    # item pages opened per target (each is one request)
 COLLECTIONS = [
     ("gottscho-schleisner collection", "Gottscho-Schleisner Collection, Library of Congress"),
     ("carol m. highsmith archive", "Carol M. Highsmith Archive, Library of Congress"),
@@ -50,11 +50,15 @@ def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=60) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < 2:
+            if e.code in (429, 500, 502, 503, 504) and attempt < 2:
                 time.sleep(10 * (attempt + 1)); continue
+            raise
+        except (TimeoutError, urllib.error.URLError, ConnectionError):
+            if attempt < 2:
+                time.sleep(5 * (attempt + 1)); continue
             raise
 
 
@@ -82,33 +86,57 @@ def flat_files(item_json):
     return out
 
 
-def iiif_full(tif_url):
-    """tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00100/5a00123u.tif
-       -> tile.loc.gov/image-services/iiif/service:pnp:gsc:5a00000:5a00100:5a00123u/full/pct:100/0/default.jpg"""
-    m = re.search(r"/storage-services/(service/[^?#]+?)\.tiff?$", tif_url, re.I)
+def iiif_ids(tif_url):
+    """A master TIFF such as .../storage-services/master/pnp/gsc/5a23000/5a23400/5a23488u.tif is served full size
+    as JPEG by the IIIF image server. Its id is the path with colons; with and without the trailing 'u' are tried."""
+    m = re.search(r"/storage-services/(?:master|service)/(.+?)\.tiff?$", tif_url, re.I)
     if not m:
-        return ""
-    return "https://tile.loc.gov/image-services/iiif/" + m.group(1).replace("/", ":") + "/full/pct:100/0/default.jpg"
+        return []
+    base = "service:" + m.group(1).replace("/", ":")
+    ids = [base]
+    if base.endswith("u"):
+        ids.append(base[:-1])
+    return ["https://tile.loc.gov/image-services/iiif/" + x for x in ids]
+
+
+def iiif_resolve(tif_url):
+    for root in iiif_ids(tif_url):
+        try:
+            info = get(root + "/info.json")
+        except Exception as e:  # noqa: BLE001
+            STATS.setdefault("iiif_misses", []).append(f"{root[-40:]}: {type(e).__name__}")
+            continue
+        w, h = int(info.get("width") or 0), int(info.get("height") or 0)
+        v3 = "3" in str(info.get("@context", ""))
+        size = "max" if v3 else "full"
+        STATS.setdefault("iiif_ok", 0); STATS["iiif_ok"] += 1
+        if STATS.get("iiif_sample") is None:
+            STATS["iiif_sample"] = {"id": root, "width": w, "height": h, "context": info.get("@context"),
+                                    "maxWidth": info.get("maxWidth"), "maxArea": info.get("maxArea")}
+        mw = int(info.get("maxWidth") or 0)
+        if mw and mw < w:   # server caps the size: report what we will actually get
+            h, w = int(h * mw / w), mw
+        return f"{root}/full/{size}/0/default.jpg", w, h
+    return None
 
 
 def best_image(files):
-    """The largest JPEG at gate size; failing that, the master TIFF served as a full-size JPEG through IIIF."""
+    """The largest JPEG at gate size; failing that, the master TIFF served full size as JPEG through IIIF."""
     def dims(f):
         return int(f.get("width") or 0), int(f.get("height") or 0)
     jpgs = [f for f in files if "jpeg" in (f.get("mimetype") or "") or re.search(r"\.jpe?g($|\?)", f["url"], re.I)]
-    jpgs = [f for f in jpgs if "/iiif/" not in f["url"] or "/full/" in f["url"]]
     jpgs.sort(key=lambda f: dims(f)[0] * dims(f)[1], reverse=True)
     for f in jpgs:
         w, h = dims(f)
         if w >= MIN_WIDE and h >= MIN_TALL:
             return f["url"].split("#")[0], w, h
     tifs = [f for f in files if "tiff" in (f.get("mimetype") or "") or re.search(r"\.tiff?$", f["url"], re.I)]
-    tifs.sort(key=lambda f: dims(f)[0] * dims(f)[1], reverse=True)
-    for f in tifs:
-        w, h = dims(f)
-        url = iiif_full(f["url"])
-        if url and w >= MIN_WIDE and h >= MIN_TALL:
-            return url, w, h
+    for f in tifs[:2]:
+        got = iiif_resolve(f["url"])
+        if got and got[1] >= MIN_WIDE and got[2] >= MIN_TALL:
+            return got
+        if got:
+            STATS["small_masters"] = STATS.get("small_masters", 0) + 1
     return None
 
 
@@ -121,7 +149,8 @@ def as_text(v):
 def candidates_for(t):
     words = words_for(t)
     hits, seen = [], set()
-    for q in t.get("queries") or [t["place"]]:
+    queries = [t["place"]] + [q for q in (t.get("queries") or []) if q.lower() != t["place"].lower()]
+    for q in queries:
         for partof, label in COLLECTIONS:
             try:
                 for r in search(q, partof):
