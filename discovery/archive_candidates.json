@@ -1,145 +1,70 @@
 {
- "searched": "2026-10-19T13:13:46Z",
- "flickr": false,
+ "searched": "2026-10-21T21:10:15Z",
+ "provider": "Library of Congress",
+ "collections": [
+  "Gottscho-Schleisner Collection, Library of Congress",
+  "Carol M. Highsmith Archive, Library of Congress",
+  "Historic American Buildings Survey, Library of Congress"
+ ],
  "stats": {
-  "hits": 313,
-  "licence": 0,
-  "size": 73,
+  "searches": 104,
+  "results": 35,
+  "items_opened": 14,
+  "offtopic": 1,
+  "rights": 1,
+  "size": 13,
   "type": 0,
-  "errors": [],
-  "licences_seen": {},
-  "samples": [
-   {
-    "title": "File:Grand Central Oyster Bar & Restaurant (Manhattan, New York) 002.jpg",
-    "keys": [
-     "imageinfo",
-     "imagerepository",
-     "index",
-     "ns",
-     "pageid",
-     "title"
-    ],
-    "ii_keys": [
-     "descriptionshorturl",
-     "descriptionurl",
-     "extmetadata",
-     "height",
-     "size",
-     "url",
-     "user",
-     "width"
-    ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Grand_Central_Oyster_Bar_%26_Restaurant_%28Manhattan%2C_New_York%29_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 4000,
-    "height": 3000,
-    "licence": {
-     "value": "CC BY-SA 3.0",
-     "source": "commons-desc-page",
-     "hidden": ""
-    }
-   },
-   {
-    "title": "File:Bemelmans logo.jpg",
-    "keys": [
-     "imageinfo",
-     "imagerepository",
-     "index",
-     "ns",
-     "pageid",
-     "title"
-    ],
-    "ii_keys": [
-     "descriptionshorturl",
-     "descriptionurl",
-     "extmetadata",
-     "height",
-     "size",
-     "url",
-     "user",
-     "width"
-    ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Bemelmans_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 973,
-    "height": 231,
-    "licence": {
-     "value": "Public domain",
-     "source": "commons-desc-page",
-     "hidden": ""
-    }
-   },
-   {
-    "title": "File:Caffe Reggio 01.jpg",
-    "keys": [
-     "imageinfo",
-     "imagerepository",
-     "index",
-     "ns",
-     "pageid",
-     "title"
-    ],
-    "ii_keys": [
-     "descriptionshorturl",
-     "descriptionurl",
-     "extmetadata",
-     "height",
-     "size",
-     "url",
-     "user",
-     "width"
-    ],
-    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Caffe_Reggio_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "width": 4288,
-    "height": 2848,
-    "licence": {
-     "value": "CC BY-SA 3.0",
-     "source": "commons-desc-page",
-     "hidden": ""
-    }
-   }
+  "errors": [
+   "search Russian and Turkish Baths East Village / gottscho-schleisner : TimeoutError The read operation timed out",
+   "item http://www.loc.gov/item/2018727437/: TimeoutError",
+   "item http://www.loc.gov/item/2018739010/: TimeoutError",
+   "search Venetian Pool Coral Gables / historic american bu: TimeoutError The read operation timed out",
+   "search Hotel Okura Tokyo lobby 1962 / gottscho-schleisner : TimeoutError The read operation timed out",
+   "search Biltmore Hotel Coral Gables pool / gottscho-schleisner : TimeoutError The read operation timed out",
+   "search Hotel San Jose Austin South Congress / carol m. highsmith a: TimeoutError The read operation timed out",
+   "search Millennium Biltmore Hotel Los Angeles lobby / gottscho-schleisner : TimeoutError The read operation timed out",
+   "search Biltmore Hotel Los Angeles Rendezvous Court / historic american bu: TimeoutError The read operation timed out"
   ],
-  "offtopic": 5
+  "rights_seen": {
+   "No known restrictions on images made by the U.S. Government; images     copied f": 1
+  },
+  "sample_files": {
+   "item": "http://www.loc.gov/item/2018727417/",
+   "files": [
+    {
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23488u.tif",
+     "mimetype": "image/tiff",
+     "width": 0,
+     "height": 0
+    },
+    {
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488_150px.jpg",
+     "mimetype": "image/jpeg",
+     "width": 150,
+     "height": 118
+    },
+    {
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488t.gif",
+     "mimetype": "image/gif",
+     "width": 150,
+     "height": 118
+    },
+    {
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488r.jpg",
+     "mimetype": "image/jpeg",
+     "width": 535,
+     "height": 420
+    }
+   ]
+  }
  },
  "targets": [
   {
    "place": "Grand Central Oyster Bar",
    "city": "New York",
    "era": "1913",
-   "candidates": [
-    {
-     "title": "Grand Central Oyster Bar & Restaurant (Manhattan, New York) 002.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Grand_Central_Oyster_Bar_%26_Restaurant_%28Manhattan%2C_New_York%29_002.jpg",
-     "width": 4000,
-     "height": 3000,
-     "licence": "CC BY-SA 3.0",
-     "author": "Leonard J. DeFrancisci",
-     "date": "2014-06-05 12:18:04",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Grand_Central_Oyster_Bar_%26_Restaurant_(Manhattan,_New_York)_002.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Oyster Bar ceiling west jeh.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Oyster_Bar_ceiling_west_jeh.jpg",
-     "width": 4224,
-     "height": 3168,
-     "licence": "CC0",
-     "author": "Jim.henderson",
-     "date": "Taken on 20 February 2010",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Oyster_Bar_ceiling_west_jeh.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Staircase to MNR platforms, Grand Central Terminal, New York City, NY.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Staircase_to_MNR_platforms%2C_Grand_Central_Terminal%2C_New_York_City%2C_NY.jpg",
-     "width": 3024,
-     "height": 4032,
-     "licence": "CC0",
-     "author": "Warren LeMay",
-     "date": "2019-05-10 14:50:52",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Staircase_to_MNR_platforms,_Grand_Central_Terminal,_New_York_City,_NY.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 3
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Bemelmans Bar",
@@ -152,1011 +77,57 @@
    "place": "Caffe Reggio",
    "city": "New York",
    "era": "1927",
-   "candidates": [
-    {
-     "title": "Caffe Reggio 01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Caffe_Reggio_01.jpg",
-     "width": 4288,
-     "height": 2848,
-     "licence": "CC BY-SA 3.0",
-     "author": "Joe Mabel",
-     "date": "Taken on 1 April 2012",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caffe_Reggio_01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Caffe Reggio 02.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Caffe_Reggio_02.jpg",
-     "width": 4288,
-     "height": 2848,
-     "licence": "CC BY-SA 3.0",
-     "author": "Joe Mabel",
-     "date": "Taken on 1 April 2012",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caffe_Reggio_02.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 2
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Russian and Turkish Baths",
    "city": "New York",
    "era": "1892",
-   "candidates": [
-    {
-     "title": "Russian and Turkish Baths sign, East Village, New York City, New York, USA.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Russian_and_Turkish_Baths_sign%2C_East_Village%2C_New_York_City%2C_New_York%2C_USA.jpg",
-     "width": 4080,
-     "height": 3072,
-     "licence": "CC BY-SA 2.0",
-     "author": "gruntzooki",
-     "date": "2024-12-27 09:29:06",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Russian_and_Turkish_Baths_sign,_East_Village,_New_York_City,_New_York,_USA.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Russian n Turkish Baths 268 E10th jeh.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Russian_n_Turkish_Baths_268_E10th_jeh.jpg",
-     "width": 2560,
-     "height": 2693,
-     "licence": "CC0",
-     "author": "Jim.henderson",
-     "date": "Taken on 7 August 2010",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Russian_n_Turkish_Baths_268_E10th_jeh.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 2
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "The Campbell",
    "city": "New York",
    "era": "1923",
-   "candidates": [
-    {
-     "title": "Campbell Apartment Entrance (WTM by official-ly cool 083).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Campbell_Apartment_Entrance_%28WTM_by_official-ly_cool_083%29.jpg",
-     "width": 2048,
-     "height": 1536,
-     "licence": "CC BY-SA 3.0",
-     "author": "This photo was taken by participant/team official-ly cool as part of the Commons:Wikipedia Takes Manhattan project on April 4, 2008.\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/3.0CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 truetrue",
-     "date": "2008-04-04",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_Entrance_(WTM_by_official-ly_cool_083).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment Entrance (WTM by official-ly cool 084).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Campbell_Apartment_Entrance_%28WTM_by_official-ly_cool_084%29.jpg",
-     "width": 2048,
-     "height": 1536,
-     "licence": "CC BY-SA 3.0",
-     "author": "This photo was taken by participant/team official-ly cool as part of the Commons:Wikipedia Takes Manhattan project on April 4, 2008.\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/3.0CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 truetrue",
-     "date": "2008-04-04",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_Entrance_(WTM_by_official-ly_cool_084).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment dining area, Grand Central Terminal 01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_01.jpg",
-     "width": 6000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:09:03",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_dining_area,_Grand_Central_Terminal_01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment dining area, Grand Central Terminal 02.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_02.jpg",
-     "width": 6000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:09:10",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_dining_area,_Grand_Central_Terminal_02.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment dining area, Grand Central Terminal 03.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Campbell_Apartment_dining_area%2C_Grand_Central_Terminal_03.jpg",
-     "width": 6000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:09:16",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_dining_area,_Grand_Central_Terminal_03.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment entrance, Grand Central Terminal, October 2025.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Campbell_Apartment_entrance%2C_Grand_Central_Terminal%2C_October_2025.jpg",
-     "width": 6000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:04:00",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_entrance,_Grand_Central_Terminal,_October_2025.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment nyc1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Campbell_Apartment_nyc1.jpg",
-     "width": 3024,
-     "height": 4032,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ceoil",
-     "date": "2022-04-15 15:30:21",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_nyc1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment nyc2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Campbell_Apartment_nyc2.jpg",
-     "width": 4032,
-     "height": 3024,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ceoil",
-     "date": "2022-04-15 15:28:25",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_nyc2.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment nyc3.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Campbell_Apartment_nyc3.jpg",
-     "width": 3024,
-     "height": 4032,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ceoil",
-     "date": "2022-04-15 15:28:56",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_nyc3.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Campbell Apartment staircase, Grand Central Terminal.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Campbell_Apartment_staircase%2C_Grand_Central_Terminal.jpg",
-     "width": 4000,
-     "height": 6000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:05:07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Campbell_Apartment_staircase,_Grand_Central_Terminal.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Exterior entrance to the Campbell Apartment, September 2025.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Exterior_entrance_to_the_Campbell_Apartment%2C_September_2025.jpg",
-     "width": 3276,
-     "height": 2454,
-     "licence": "CC BY-SA 4.0",
-     "author": "Pi.1415926535",
-     "date": "Taken on 10 September 2025",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Exterior_entrance_to_the_Campbell_Apartment,_September_2025.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "GCT Campbell 1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/GCT_Campbell_1.jpg",
-     "width": 5920,
-     "height": 3864,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ɱ",
-     "date": "2019-01-07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:GCT_Campbell_1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "GCT Campbell 2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/GCT_Campbell_2.jpg",
-     "width": 5644,
-     "height": 3882,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ɱ",
-     "date": "2019-01-07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:GCT_Campbell_2.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "GCT Campbell 3.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/GCT_Campbell_3.jpg",
-     "width": 5916,
-     "height": 3877,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ɱ",
-     "date": "2019-01-07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:GCT_Campbell_3.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "GCT Campbell Palm Court.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/GCT_Campbell_Palm_Court.jpg",
-     "width": 5429,
-     "height": 3800,
-     "licence": "CC BY-SA 4.0",
-     "author": "Ɱ",
-     "date": "2019-01-07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:GCT_Campbell_Palm_Court.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Interior entrance to the Campbell Apartment, September 2025.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Interior_entrance_to_the_Campbell_Apartment%2C_September_2025.jpg",
-     "width": 3000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "Pi.1415926535",
-     "date": "Taken on 10 September 2025",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Interior_entrance_to_the_Campbell_Apartment,_September_2025.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Palm Court at Campbell Apartment, Grand Central Terminal.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Palm_Court_at_Campbell_Apartment%2C_Grand_Central_Terminal.jpg",
-     "width": 6000,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "TheCatalyst31",
-     "date": "2025-10-16 12:05:33",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Palm_Court_at_Campbell_Apartment,_Grand_Central_Terminal.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 17
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Rainbow Room",
    "city": "New York",
    "era": "1934",
-   "candidates": [
-    {
-     "title": "Assignment- 48-DPA-04-11-08 SOI K Af-Am Exp) Fundraising gala for the National Park Foundation's African American Experience Fund (AAEF) at the Rainbow Room in Rockefeller Center, N - DPLA - 6167b9f126f244f194695e5a6a68d55f.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp%29_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_%28AAEF%29_at_the_Rainbow_Room_in_Rockefeller_Center%2C_N_-_DPLA_-_6167b9f126f244f194695e5a6a68d55f.JPG",
-     "width": 4288,
-     "height": 2848,
-     "licence": "Public domain",
-     "author": "Department of the Interior. National Business Center. Administrative Operations Directorate. Division of Employee and Public Services. Creative Communications Branch. Photographic Services. 2000",
-     "date": "10 April 2008",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp)_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_(AAEF)_at_the_Rainbow_Room_in_Rockefeller_Center,_N_-_DPLA_-_6167b9f126f244f194695e5a6a68d55f.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Assignment- 48-DPA-04-11-08 SOI K Af-Am Exp) Fundraising gala for the National Park Foundation's African American Experience Fund (AAEF) at the Rainbow Room in Rockefeller Center, N - DPLA - 733d56d9c7fac6eb8ca9e2de8061a65a.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp%29_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_%28AAEF%29_at_the_Rainbow_Room_in_Rockefeller_Center%2C_N_-_DPLA_-_733d56d9c7fac6eb8ca9e2de8061a65a.JPG",
-     "width": 4288,
-     "height": 2848,
-     "licence": "Public domain",
-     "author": "Department of the Interior. National Business Center. Administrative Operations Directorate. Division of Employee and Public Services. Creative Communications Branch. Photographic Services. 2000",
-     "date": "10 April 2008",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp)_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_(AAEF)_at_the_Rainbow_Room_in_Rockefeller_Center,_N_-_DPLA_-_733d56d9c7fac6eb8ca9e2de8061a65a.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Assignment- 48-DPA-04-11-08 SOI K Af-Am Exp) Fundraising gala for the National Park Foundation's African American Experience Fund (AAEF) at the Rainbow Room in Rockefeller Center, N - DPLA - de459159d680351c4e38f8b892df0f51.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp%29_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_%28AAEF%29_at_the_Rainbow_Room_in_Rockefeller_Center%2C_N_-_DPLA_-_de459159d680351c4e38f8b892df0f51.JPG",
-     "width": 4288,
-     "height": 2848,
-     "licence": "Public domain",
-     "author": "Department of the Interior. National Business Center. Administrative Operations Directorate. Division of Employee and Public Services. Creative Communications Branch. Photographic Services. 2000",
-     "date": "10 April 2008",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp)_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_(AAEF)_at_the_Rainbow_Room_in_Rockefeller_Center,_N_-_DPLA_-_de459159d680351c4e38f8b892df0f51.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Assignment- 48-DPA-04-11-08 SOI K Af-Am Exp) Fundraising gala for the National Park Foundation's African American Experience Fund (AAEF) at the Rainbow Room in Rockefeller Center, N - DPLA - fbb2654bbb2a8bf196780530d4f77508.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp%29_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_%28AAEF%29_at_the_Rainbow_Room_in_Rockefeller_Center%2C_N_-_DPLA_-_fbb2654bbb2a8bf196780530d4f77508.JPG",
-     "width": 4288,
-     "height": 2848,
-     "licence": "Public domain",
-     "author": "Department of the Interior. National Business Center. Administrative Operations Directorate. Division of Employee and Public Services. Creative Communications Branch. Photographic Services. 2000",
-     "date": "10 April 2008",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Assignment-_48-DPA-04-11-08_SOI_K_Af-Am_Exp)_Fundraising_gala_for_the_National_Park_Foundation%27s_African_American_Experience_Fund_(AAEF)_at_the_Rainbow_Room_in_Rockefeller_Center,_N_-_DPLA_-_fbb2654bbb2a8bf196780530d4f77508.JPG",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 4
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "TWA Hotel",
    "city": "New York",
    "era": "1962",
-   "candidates": [
-    {
-     "title": "TWA Flight Center interior.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/TWA_Flight_Center_interior.jpg",
-     "width": 6661,
-     "height": 3891,
-     "licence": "CC BY-SA 2.0",
-     "author": "Victor Grigas  https://www.flickr.com/people/140897960@N03",
-     "date": "23 July 2019, 16:33",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_interior.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center, John F. Kennedy International Airport, Jamaica, Queens, New York City, NY - 48581082716.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/TWA_Flight_Center%2C_John_F._Kennedy_International_Airport%2C_Jamaica%2C_Queens%2C_New_York_City%2C_NY_-_48581082716.jpg",
-     "width": 3024,
-     "height": 4032,
-     "licence": "CC0",
-     "author": "w_lemay",
-     "date": "2019-08-03 20:00:32",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center,_John_F._Kennedy_International_Airport,_Jamaica,_Queens,_New_York_City,_NY_-_48581082716.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center (6253596342).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/TWA_Flight_Center_%286253596342%29.jpg",
-     "width": 2144,
-     "height": 1424,
-     "licence": "CC BY 2.0",
-     "author": "Seamus Murray from New York, USA",
-     "date": "2011-10-16 14:33",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_(6253596342).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center (Hotel) (48550304557).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/TWA_Flight_Center_%28Hotel%29_%2848550304557%29.jpg",
-     "width": 2924,
-     "height": 3365,
-     "licence": "CC BY 2.0",
-     "author": "airbus777 from Washington, DC, USA",
-     "date": "2019-08-12 19:03",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_(Hotel)_(48550304557).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center 2015.8.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/TWA_Flight_Center_2015.8.JPG",
-     "width": 2288,
-     "height": 1712,
-     "licence": "CC BY-SA 4.0",
-     "author": "Fultonferryres",
-     "date": "2015-10-18 13:15:08",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_2015.8.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center 2015.9.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/TWA_Flight_Center_2015.9.JPG",
-     "width": 2288,
-     "height": 1712,
-     "licence": "CC BY-SA 4.0",
-     "author": "Fultonferryres",
-     "date": "2015-10-18 12:36:47",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_2015.9.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center 2015.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/TWA_Flight_Center_2015.JPG",
-     "width": 2234,
-     "height": 1540,
-     "licence": "CC BY-SA 4.0",
-     "author": "Fultonferryres",
-     "date": "2015-10-18 13:46:59",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_2015.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 115.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/TWA_Flight_Center_Dec_2025_115.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:31:39",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_115.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 116.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/TWA_Flight_Center_Dec_2025_116.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:31:47",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_116.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 117.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/TWA_Flight_Center_Dec_2025_117.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:31:59",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_117.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 151.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/TWA_Flight_Center_Dec_2025_151.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:46:21",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_151.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 152.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/TWA_Flight_Center_Dec_2025_152.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:46:27",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_152.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 153.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/TWA_Flight_Center_Dec_2025_153.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:38:33",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_153.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 154.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/TWA_Flight_Center_Dec_2025_154.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:38:58",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_154.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 155.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/TWA_Flight_Center_Dec_2025_155.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:39:03",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_155.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 156.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/TWA_Flight_Center_Dec_2025_156.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:39:08",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_156.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 157.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/TWA_Flight_Center_Dec_2025_157.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:39:18",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_157.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 158.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/TWA_Flight_Center_Dec_2025_158.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 13:42:13",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_158.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 26.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/TWA_Flight_Center_Dec_2025_26.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:30:25",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_26.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 31.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/TWA_Flight_Center_Dec_2025_31.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:31:44",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_31.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 32.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/TWA_Flight_Center_Dec_2025_32.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:31:48",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_32.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 34.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/TWA_Flight_Center_Dec_2025_34.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:32:22",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_34.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 37.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/TWA_Flight_Center_Dec_2025_37.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:32:59",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_37.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 38.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/TWA_Flight_Center_Dec_2025_38.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:33:06",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_38.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "TWA Flight Center Dec 2025 39.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/TWA_Flight_Center_Dec_2025_39.jpg",
-     "width": 4080,
-     "height": 3060,
-     "licence": "CC BY-SA 4.0",
-     "author": "Epicgenius",
-     "date": "2025-12-13 12:33:08",
-     "source_page": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_39.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 73
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Hotel Chelsea",
    "city": "New York",
    "era": "1884",
-   "candidates": [
-    {
-     "title": "ChelseaLobby.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ChelseaLobby.JPG",
-     "width": 4000,
-     "height": 3000,
-     "licence": "CC BY 3.0",
-     "author": "Historystuff2",
-     "date": "",
-     "source_page": "https://commons.wikimedia.org/wiki/File:ChelseaLobby.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Chelsea Hotel Toronto Lobby 2023.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Chelsea_Hotel_Toronto_Lobby_2023.jpg",
-     "width": 4032,
-     "height": 3024,
-     "licence": "CC BY 4.0",
-     "author": "Canmenwalker",
-     "date": "2023",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Chelsea_Hotel_Toronto_Lobby_2023.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fountain at Delta Chelsea Hotel (49975513643).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Fountain_at_Delta_Chelsea_Hotel_%2849975513643%29.jpg",
-     "width": 1867,
-     "height": 2800,
-     "licence": "CC BY-SA 2.0",
-     "author": "Ben Schumin from Montgomery Village, Maryland, USA",
-     "date": "1999-08-10 00:00",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fountain_at_Delta_Chelsea_Hotel_(49975513643).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fountain at Delta Chelsea Hotel (49975513643).png",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Fountain_at_Delta_Chelsea_Hotel_%2849975513643%29.png",
-     "width": 1867,
-     "height": 2800,
-     "licence": "CC BY-SA 2.0",
-     "author": "Ben Schumin from Montgomery Village, Maryland, USA",
-     "date": "1999-08-10 02:14",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fountain_at_Delta_Chelsea_Hotel_(49975513643).png",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Hotel Chelsea lobby.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Hotel_Chelsea_lobby.jpg",
-     "width": 2972,
-     "height": 2012,
-     "licence": "CC BY-SA 4.0",
-     "author": "Nickvud",
-     "date": "2013-06-16",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Hotel_Chelsea_lobby.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Hyatt Place New York Chelsea lobby.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Hyatt_Place_New_York_Chelsea_lobby.jpg",
-     "width": 4080,
-     "height": 3072,
-     "licence": "CC BY-SA 4.0",
-     "author": "Sdkb",
-     "date": "2025-10-18 23:12:11",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Hyatt_Place_New_York_Chelsea_lobby.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "The Gibson - cocktail at Hotel Chelsea, Manhattan.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/The_Gibson_-_cocktail_at_Hotel_Chelsea%2C_Manhattan.jpg",
-     "width": 3060,
-     "height": 4080,
-     "licence": "CC BY 4.0",
-     "author": "Paul Lowry",
-     "date": "2025-06-23 15:40:22",
-     "source_page": "https://commons.wikimedia.org/wiki/File:The_Gibson_-_cocktail_at_Hotel_Chelsea,_Manhattan.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Breakfast at the Hyatt Place New York Chelsea.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Breakfast_at_the_Hyatt_Place_New_York_Chelsea.jpg",
-     "width": 4080,
-     "height": 3072,
-     "licence": "CC BY-SA 4.0",
-     "author": "Sdkb",
-     "date": "2025-10-17 09:03:58",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Breakfast_at_the_Hyatt_Place_New_York_Chelsea.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Hyatt Place New York Chelsea room interior.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Hyatt_Place_New_York_Chelsea_room_interior.jpg",
-     "width": 4080,
-     "height": 3072,
-     "licence": "CC BY-SA 4.0",
-     "author": "Sdkb",
-     "date": "2025-10-19 09:37:48",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Hyatt_Place_New_York_Chelsea_room_interior.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Two beds room of Hyatt place New York Chelsea.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Two_beds_room_of_Hyatt_place_New_York_Chelsea.jpg",
-     "width": 4032,
-     "height": 2268,
-     "licence": "CC BY-SA 4.0",
-     "author": "গীতাশ্ৰী গগৈ আপ্তে",
-     "date": "15 October 2025 (according to Exif data)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Two_beds_room_of_Hyatt_place_New_York_Chelsea.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 10
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Fontainebleau Miami Beach",
    "city": "Miami",
    "era": "1954",
-   "candidates": [
-    {
-     "title": "Fontainebleau-1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Fontainebleau-1.jpg",
-     "width": 3648,
-     "height": 5472,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:31:50",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-10.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Fontainebleau-10.jpg",
-     "width": 5472,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:20:50",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-10.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-11.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Fontainebleau-11.jpg",
-     "width": 5472,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:19:36",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-11.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-12.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Fontainebleau-12.jpg",
-     "width": 3611,
-     "height": 4514,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:20:32",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-12.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Fontainebleau-2.jpg",
-     "width": 5472,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:30:36",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-2.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-5.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Fontainebleau-5.jpg",
-     "width": 3489,
-     "height": 5233,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:26:38",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-5.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-6.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Fontainebleau-6.jpg",
-     "width": 3547,
-     "height": 2838,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:25:37",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-6.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-7.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fontainebleau-7.jpg",
-     "width": 5472,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:22:31",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-7.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-8.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Fontainebleau-8.jpg",
-     "width": 3187,
-     "height": 4781,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:23:37",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-8.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau-9.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Fontainebleau-9.jpg",
-     "width": 5472,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Visitor7",
-     "date": "Taken on 16 March 2014, 09:21:36",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau-9.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Hilton, Miami Beach, Florida LCCN2017711379.tif",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Fontainebleau_Hilton%2C_Miami_Beach%2C_Florida_LCCN2017711379.tif",
-     "width": 3632,
-     "height": 5203,
-     "licence": "Public domain",
-     "author": "John Margolies",
-     "date": "1982",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hilton,_Miami_Beach,_Florida_LCCN2017711379.tif",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Hilton, Miami Beach, Florida LCCN2017711387.tif",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Fontainebleau_Hilton%2C_Miami_Beach%2C_Florida_LCCN2017711387.tif",
-     "width": 5217,
-     "height": 3609,
-     "licence": "Public domain",
-     "author": "John Margolies",
-     "date": "1982",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hilton,_Miami_Beach,_Florida_LCCN2017711387.tif",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Hilton, Miami Beach, Florida LCCN2017711388.tif",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Fontainebleau_Hilton%2C_Miami_Beach%2C_Florida_LCCN2017711388.tif",
-     "width": 5294,
-     "height": 3661,
-     "licence": "Public domain",
-     "author": "John Margolies",
-     "date": "1982",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hilton,_Miami_Beach,_Florida_LCCN2017711388.tif",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Hotel Miami Beach FL1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Fontainebleau_Hotel_Miami_Beach_FL1.jpg",
-     "width": 4962,
-     "height": 3878,
-     "licence": "CC BY-SA 4.0",
-     "author": "Acroterion",
-     "date": "Taken on 6 November 2012",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Hotel_Miami_Beach_FL1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Miami Beach Aerial 2025.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Fontainebleau_Miami_Beach_Aerial_2025.jpg",
-     "width": 5280,
-     "height": 3956,
-     "licence": "CC BY 4.0",
-     "author": "InvadingInvader",
-     "date": "2025-07-06 15:11:29",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Beach_Aerial_2025.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Miami Hotel Lobby FL2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Fontainebleau_Miami_Hotel_Lobby_FL2.jpg",
-     "width": 3858,
-     "height": 3369,
-     "licence": "CC BY-SA 4.0",
-     "author": "Acroterion",
-     "date": "Taken on 6 November 2012",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Hotel_Lobby_FL2.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Miami Hotel Lobby FL3.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fontainebleau_Miami_Hotel_Lobby_FL3.jpg",
-     "width": 5184,
-     "height": 3207,
-     "licence": "CC BY-SA 4.0",
-     "author": "Acroterion",
-     "date": "2012-011-06",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Hotel_Lobby_FL3.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Miami Hotel Lobby FL4.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fontainebleau_Miami_Hotel_Lobby_FL4.jpg",
-     "width": 5078,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "Acroterion",
-     "date": "Taken on 6 November 2012",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_Hotel_Lobby_FL4.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Fontainebleau Miami interior FL1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Fontainebleau_Miami_interior_FL1.jpg",
-     "width": 5184,
-     "height": 3470,
-     "licence": "CC BY-SA 4.0",
-     "author": "Acroterion",
-     "date": "2012-11-06",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Fontainebleau_Miami_interior_FL1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach - Air view of Hotel Fontainebleau.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Miami_Beach_-_Air_view_of_Hotel_Fontainebleau.jpg",
-     "width": 3248,
-     "height": 2009,
-     "licence": "Public domain",
-     "author": "Tichnor Brothers, Inc.",
-     "date": "1954",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Air_view_of_Hotel_Fontainebleau.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach - Fountain, Fontainebleau Hotel.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Miami_Beach_-_Fountain%2C_Fontainebleau_Hotel.jpg",
-     "width": 6048,
-     "height": 4024,
-     "licence": "CC BY 4.0",
-     "author": "P. Hughes",
-     "date": "2025-10-31",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Fountain,_Fontainebleau_Hotel.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach - Hotel Fontainebleau 01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Miami_Beach_-_Hotel_Fontainebleau_01.jpg",
-     "width": 3242,
-     "height": 2026,
-     "licence": "Public domain",
-     "author": "Tichnor Brothers, Inc.",
-     "date": "1954",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Hotel_Fontainebleau_01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach FL Fontainebleau01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Miami_Beach_FL_Fontainebleau01.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-04-21 17:39:50",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Fontainebleau01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach FL Fontainebleau05.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Miami_Beach_FL_Fontainebleau05.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-04-21 17:36:15",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Fontainebleau05.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Miami Beach FL Fontainebleau door01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Miami_Beach_FL_Fontainebleau_door01.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-04-21 17:36:27",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Miami_Beach_FL_Fontainebleau_door01.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 31
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Eden Roc",
    "city": "Miami",
    "era": "1956",
-   "candidates": [
-    {
-     "title": "Washington Plaza Hotel, Thomas Circle, Washington, D.C LCCN2010641699.tif",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Washington_Plaza_Hotel%2C_Thomas_Circle%2C_Washington%2C_D.C_LCCN2010641699.tif",
-     "width": 4604,
-     "height": 2958,
-     "licence": "Public domain",
-     "author": "Carol M. Highsmith",
-     "date": "Taken on 19 September 2010, 17:16 (accor",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Washington_Plaza_Hotel,_Thomas_Circle,_Washington,_D.C_LCCN2010641699.tif",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 1
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "The Raleigh",
@@ -1169,421 +140,22 @@
    "place": "Venetian Pool",
    "city": "Miami",
    "era": "1924",
-   "candidates": [
-    {
-     "title": "Coral Gables - The Venetian Pool.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Coral_Gables_-_The_Venetian_Pool.jpg",
-     "width": 3243,
-     "height": 2039,
-     "licence": "Public domain",
-     "author": "R. E. Simpson",
-     "date": "1936",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_-_The_Venetian_Pool.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Coral_Gables_FL_Venetian_Pool01.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:36",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool02.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Coral_Gables_FL_Venetian_Pool02.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:49",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool02.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool03.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Coral_Gables_FL_Venetian_Pool03.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:57",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool03.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool04.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Coral_Gables_FL_Venetian_Pool04.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:34:39",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool04.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool05.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Coral_Gables_FL_Venetian_Pool05.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:35:56",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool05.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool06.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Coral_Gables_FL_Venetian_Pool06.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:38:06",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool06.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool NRHP plaque01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Coral_Gables_FL_Venetian_Pool_NRHP_plaque01.jpg",
-     "width": 2448,
-     "height": 3264,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:12",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool_NRHP_plaque01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool gate01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Coral_Gables_FL_Venetian_Pool_gate01.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:26",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool_gate01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool plaque01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Coral_Gables_FL_Venetian_Pool_plaque01.jpg",
-     "width": 3264,
-     "height": 2448,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:36:19",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool_plaque01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Coral Gables FL Venetian Pool stairs01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Coral_Gables_FL_Venetian_Pool_stairs01.jpg",
-     "width": 2448,
-     "height": 3264,
-     "licence": "CC BY-SA 3.0",
-     "author": "Ebyabe",
-     "date": "2011-03-19 16:37:07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool_stairs01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "House at the Venetian Pool.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/House_at_the_Venetian_Pool.JPG",
-     "width": 2048,
-     "height": 1536,
-     "licence": "CC BY-SA 3.0",
-     "author": "Camille45457",
-     "date": "1899-11-30",
-     "source_page": "https://commons.wikimedia.org/wiki/File:House_at_the_Venetian_Pool.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 01.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Venetian_Pool_01.jpg",
-     "width": 3864,
-     "height": 5152,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_01.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 06.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Venetian_Pool_06.jpg",
-     "width": 3864,
-     "height": 5152,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_06.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 12.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Venetian_Pool_12.jpg",
-     "width": 3864,
-     "height": 5152,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_12.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 14.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Venetian_Pool_14.jpg",
-     "width": 5152,
-     "height": 3864,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_14.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 16.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Venetian_Pool_16.jpg",
-     "width": 5152,
-     "height": 3864,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_16.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 17.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Venetian_Pool_17.jpg",
-     "width": 3864,
-     "height": 3996,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_17.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 18.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Venetian_Pool_18.jpg",
-     "width": 3864,
-     "height": 3792,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_18.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool 20.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Venetian_Pool_20.jpg",
-     "width": 3864,
-     "height": 5152,
-     "licence": "CC BY-SA 4.0",
-     "author": "Daniel Di Palma",
-     "date": "2016-06-17",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_20.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian Pool Coral Gables 1924 (8707586802).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Venetian_Pool_Coral_Gables_1924_%288707586802%29.jpg",
-     "width": 3021,
-     "height": 2191,
-     "licence": "CC BY 2.0",
-     "author": "Phillip Pessar from Miami, USA",
-     "date": "2013-05-04 08:57",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_Pool_Coral_Gables_1924_(8707586802).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian pool coral gables florida.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Venetian_pool_coral_gables_florida.jpg",
-     "width": 3072,
-     "height": 2304,
-     "licence": "CC BY 3.0",
-     "author": "Jesper Rautell Balle",
-     "date": "",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_pool_coral_gables_florida.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Venetian pool with waterfall and palms at Coral Gables, Miami.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Venetian_pool_with_waterfall_and_palms_at_Coral_Gables%2C_Miami.jpg",
-     "width": 2761,
-     "height": 2029,
-     "licence": "Public domain",
-     "author": "Bertrand Carlin",
-     "date": "6 December 2006, 13:21:25 (according to ",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Venetian_pool_with_waterfall_and_palms_at_Coral_Gables,_Miami.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 23
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Driskill Hotel",
    "city": "Austin",
    "era": "1886",
-   "candidates": [
-    {
-     "title": "2011-365-62 Party Hat (5495136061).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/2011-365-62_Party_Hat_%285495136061%29.jpg",
-     "width": 4650,
-     "height": 3100,
-     "licence": "CC BY 2.0",
-     "author": "cogdogblog",
-     "date": "2011-03-03 10:38:05",
-     "source_page": "https://commons.wikimedia.org/wiki/File:2011-365-62_Party_Hat_(5495136061).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Driskill Lobby HDR (6287314477).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Driskill_Lobby_HDR_%286287314477%29.jpg",
-     "width": 1911,
-     "height": 2000,
-     "licence": "CC BY 2.0",
-     "author": "Ken Zirkel from Providence",
-     "date": "2011-10-23 08:59",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Driskill_Lobby_HDR_(6287314477).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Inside the Driskill, 2013 IMG 6506.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Inside_the_Driskill%2C_2013_IMG_6506.JPG",
-     "width": 4608,
-     "height": 3456,
-     "licence": "CC BY-SA 3.0",
-     "author": "No machine-readable author provided. Billy Hathorn assumed (based on copyright claims).",
-     "date": "20 January 2013 (according to Exif data)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Inside_the_Driskill,_2013_IMG_6506.JPG",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 3
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Barton Springs Pool",
    "city": "Austin",
    "era": "1920s",
-   "candidates": [
-    {
-     "title": "Andrew Jackson Zilker TxHM (3161557917).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Andrew_Jackson_Zilker_TxHM_%283161557917%29.jpg",
-     "width": 2112,
-     "height": 2816,
-     "licence": "CC BY-SA 2.0",
-     "author": "QuesterMark from Where the West Begins, United States",
-     "date": "2008-07-02 14:37",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Andrew_Jackson_Zilker_TxHM_(3161557917).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Creek Austin, Texas.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Barton_Creek_Austin%2C_Texas.jpg",
-     "width": 1936,
-     "height": 2592,
-     "licence": "CC BY-SA 4.0",
-     "author": "jcutrer",
-     "date": "2012-07-30 11:37:29",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Creek_Austin,_Texas.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Springs- Austin, Texas.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Barton_Springs-_Austin%2C_Texas.jpg",
-     "width": 3648,
-     "height": 2736,
-     "licence": "CC BY-SA 2.0",
-     "author": "Todd Dwyer from Austin, Texas, USA",
-     "date": "2008-05-20 18:14",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Springs-_Austin,_Texas.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Springs - Morning sun - panoramio.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Barton_Springs_-_Morning_sun_-_panoramio.jpg",
-     "width": 2736,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Todd Dwyer",
-     "date": "Taken on 8 August 2009",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Springs_-_Morning_sun_-_panoramio.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Springs .jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Barton_Springs_.jpg",
-     "width": 3984,
-     "height": 2988,
-     "licence": "CC BY-SA 3.0",
-     "author": "Wordandgesture",
-     "date": "13 August 2014 (according to Exif data)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Springs_.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Springs Backflip - panoramio.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Barton_Springs_Backflip_-_panoramio.jpg",
-     "width": 3648,
-     "height": 2736,
-     "licence": "CC BY-SA 3.0",
-     "author": "Todd Dwyer",
-     "date": "Taken on 8 August 2009",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Springs_Backflip_-_panoramio.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Barton Springs Heron - panoramio.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Barton_Springs_Heron_-_panoramio.jpg",
-     "width": 2736,
-     "height": 3648,
-     "licence": "CC BY-SA 3.0",
-     "author": "Todd Dwyer",
-     "date": "Taken on 8 August 2009",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Barton_Springs_Heron_-_panoramio.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Heron at Barton Springs - panoramio.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Heron_at_Barton_Springs_-_panoramio.jpg",
-     "width": 3648,
-     "height": 2736,
-     "licence": "CC BY-SA 3.0",
-     "author": "Todd Dwyer",
-     "date": "Taken on 8 August 2009",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Heron_at_Barton_Springs_-_panoramio.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "“Comanche Peak” Texas Historical Commission plaque.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/%E2%80%9CComanche_Peak%E2%80%9D_Texas_Historical_Commission_plaque.jpg",
-     "width": 4284,
-     "height": 5712,
-     "licence": "CC0",
-     "author": "Slamforeman",
-     "date": "2023-12-24 14:50:49",
-     "source_page": "https://commons.wikimedia.org/wiki/File:%E2%80%9CComanche_Peak%E2%80%9D_Texas_Historical_Commission_plaque.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "バルトンスプリングス - Flickr - p.lu.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/%E3%83%90%E3%83%AB%E3%83%88%E3%83%B3%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9_-_Flickr_-_p.lu.jpg",
-     "width": 4928,
-     "height": 3264,
-     "licence": "CC BY 2.0",
-     "author": "Patrick Lu from Austin, USA",
-     "date": "Taken on 10 September 2013, 17:40",
-     "source_page": "https://commons.wikimedia.org/wiki/File:%E3%83%90%E3%83%AB%E3%83%88%E3%83%B3%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9_-_Flickr_-_p.lu.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 10
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Musso & Frank Grill",
@@ -1596,97 +168,8 @@
    "place": "The Beverly Hills Hotel",
    "city": "Los Angeles",
    "era": "1912",
-   "candidates": [
-    {
-     "title": "Arty time exposure, Polo Lounge (3715418672).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Arty_time_exposure%2C_Polo_Lounge_%283715418672%29.jpg",
-     "width": 2592,
-     "height": 1944,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-10 22:43",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Arty_time_exposure,_Polo_Lounge_(3715418672).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Marco Polo Lounge @ Shangri-La Taipei 2011.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Marco_Polo_Lounge_%40_Shangri-La_Taipei_2011.jpg",
-     "width": 4592,
-     "height": 3056,
-     "licence": "CC BY-SA 2.0",
-     "author": "wcc1980",
-     "date": "2011-01-30 14:33:32",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Marco_Polo_Lounge_@_Shangri-La_Taipei_2011.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Polo Lounge, inside (3715406002).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Polo_Lounge%2C_inside_%283715406002%29.jpg",
-     "width": 2592,
-     "height": 1944,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-11 10:29",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_inside_(3715406002).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Polo Lounge, patio (3714595467).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Polo_Lounge%2C_patio_%283714595467%29.jpg",
-     "width": 1944,
-     "height": 2592,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-11 10:47",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_patio_(3714595467).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Polo Lounge, patio (3715405180).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Polo_Lounge%2C_patio_%283715405180%29.jpg",
-     "width": 2592,
-     "height": 1944,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-11 10:29",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_patio_(3715405180).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Polo Lounge, patio (3715405426).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Polo_Lounge%2C_patio_%283715405426%29.jpg",
-     "width": 1944,
-     "height": 2592,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-11 10:46",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_patio_(3715405426).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Polo Lounge (3715416118).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Polo_Lounge_%283715416118%29.jpg",
-     "width": 2592,
-     "height": 1944,
-     "licence": "CC BY 2.0",
-     "author": "Alan Light",
-     "date": "2009-07-12 09:35",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Polo_Lounge_(3715416118).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "1940 Census Enumeration District Descriptions - Tennessee - Knox County - ED 47-1A, ED 47-1B, ED 47-2, ED 47-3A, ED 47-3B, ED 47-4 - NARA - 5881253.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/1940_Census_Enumeration_District_Descriptions_-_Tennessee_-_Knox_County_-_ED_47-1A%2C_ED_47-1B%2C_ED_47-2%2C_ED_47-3A%2C_ED_47-3B%2C_ED_47-4_-_NARA_-_5881253.jpg",
-     "width": 4712,
-     "height": 2488,
-     "licence": "Public domain",
-     "author": "Unknown authorUnknown author or not provided",
-     "date": "1850 – 1950",
-     "source_page": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Descriptions_-_Tennessee_-_Knox_County_-_ED_47-1A,_ED_47-1B,_ED_47-2,_ED_47-3A,_ED_47-3B,_ED_47-4_-_NARA_-_5881253.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 8
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Chateau Marmont",
@@ -1720,281 +203,15 @@
    "place": "Gellért Baths",
    "city": "Budapest",
    "era": "1918",
-   "candidates": [
-    {
-     "title": "Gellert Thermal Spa A.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gellert_Thermal_Spa_A.jpg",
-     "width": 2728,
-     "height": 2045,
-     "licence": "CC BY 2.0",
-     "author": "Carnaval.com Studios",
-     "date": "2023-05-08",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Gellert_Thermal_Spa_A.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 1
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Café Central",
    "city": "Vienna",
    "era": "1876",
-   "candidates": [
-    {
-     "title": "Cafe Central.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Cafe_Central.jpg",
-     "width": 2226,
-     "height": 3861,
-     "licence": "Public domain",
-     "author": "Reinraum",
-     "date": "2009-10-30",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Cafe_Central.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Cafe Central (47575508682).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Cafe_Central_%2847575508682%29.jpg",
-     "width": 5005,
-     "height": 3337,
-     "licence": "CC BY 2.0",
-     "author": "a.canvas.of.light from Melbourne, Australia",
-     "date": "2019-04-05 18:14",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Cafe_Central_(47575508682).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Cafe central in Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cafe_central_in_Vienna.jpg",
-     "width": 4032,
-     "height": 3024,
-     "licence": "CC BY 4.0",
-     "author": "Misaochan",
-     "date": "18 May 2017 (according to Exif data)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Cafe_central_in_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Apfelstrudel.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Caf%C3%A9_Central_Apfelstrudel.jpg",
-     "width": 2592,
-     "height": 1944,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 12:26:07",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Apfelstrudel.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Apfelstrudel 2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Caf%C3%A9_Central_Apfelstrudel_2.jpg",
-     "width": 3456,
-     "height": 5184,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 12:30:21",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Apfelstrudel_2.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Cakes.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Caf%C3%A9_Central_Cakes.jpg",
-     "width": 3200,
-     "height": 2400,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/markusunger/",
-     "date": "2015-01-03 18:47:38",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Cakes.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Chocolate Cake.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Caf%C3%A9_Central_Chocolate_Cake.jpg",
-     "width": 5184,
-     "height": 3456,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 20:26:14",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Chocolate_Cake.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Interior1.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Caf%C3%A9_Central_Interior1.jpg",
-     "width": 3786,
-     "height": 5667,
-     "licence": "CC BY 2.0",
-     "author": "rboed*",
-     "date": "2019-06-19 20:55:46",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Interior1.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Kaiserschmarrn.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Caf%C3%A9_Central_Kaiserschmarrn.jpg",
-     "width": 3456,
-     "height": 5184,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 12:37:49",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Kaiserschmarrn.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Kaiserschmarrn2b.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Caf%C3%A9_Central_Kaiserschmarrn2b.jpg",
-     "width": 3071,
-     "height": 2428,
-     "licence": "CC BY 2.0",
-     "author": "Café Central Kaiserschmarrn.jpg: https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 12:37:49",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Kaiserschmarrn2b.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central Meal.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Caf%C3%A9_Central_Meal.jpg",
-     "width": 3456,
-     "height": 5184,
-     "licence": "CC BY 2.0",
-     "author": "https://www.flickr.com/photos/hinnosaar/",
-     "date": "2015-03-22 19:32:14",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Meal.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central interior, Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Caf%C3%A9_Central_interior%2C_Vienna.jpg",
-     "width": 1920,
-     "height": 2560,
-     "licence": "Public domain",
-     "author": "Gryffindor",
-     "date": "2006-03-23",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_interior,_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central interior2, Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Caf%C3%A9_Central_interior2%2C_Vienna.jpg",
-     "width": 1920,
-     "height": 2560,
-     "licence": "Public domain",
-     "author": "No machine-readable author provided. Gryffindor assumed (based on copyright claims).",
-     "date": "23 March 2006 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_interior2,_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Café Central interior3, Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Caf%C3%A9_Central_interior3%2C_Vienna.jpg",
-     "width": 1920,
-     "height": 2560,
-     "licence": "Public domain",
-     "author": "No machine-readable author provided. Gryffindor assumed (based on copyright claims).",
-     "date": "23 March 2006 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_interior3,_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Cakes at cafe central Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cakes_at_cafe_central_Vienna.jpg",
-     "width": 4032,
-     "height": 3024,
-     "licence": "CC BY 4.0",
-     "author": "Misaochan",
-     "date": "18 May 2017 (according to Exif data)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Cakes_at_cafe_central_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Kuchentheke Café Central - panoramio.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Kuchentheke_Caf%C3%A9_Central_-_panoramio.jpg",
-     "width": 5312,
-     "height": 2354,
-     "licence": "CC BY 3.0",
-     "author": "fotogoocom",
-     "date": "13 January 2016 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Kuchentheke_Caf%C3%A9_Central_-_panoramio.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Kuchentheke Café Central - panoramio (1).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Kuchentheke_Caf%C3%A9_Central_-_panoramio_%281%29.jpg",
-     "width": 5100,
-     "height": 2790,
-     "licence": "CC BY 3.0",
-     "author": "fotogoocom",
-     "date": "13 January 2016 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Kuchentheke_Caf%C3%A9_Central_-_panoramio_(1).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Part vault café central Vienna.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Part_vault_caf%C3%A9_central_Vienna.jpg",
-     "width": 3225,
-     "height": 2005,
-     "licence": "CC0",
-     "author": "Jebulon",
-     "date": "2012-02-21",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Part_vault_caf%C3%A9_central_Vienna.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Vault Café Central Vienna Wien.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Vault_Caf%C3%A9_Central_Vienna_Wien.jpg",
-     "width": 3007,
-     "height": 2028,
-     "licence": "CC0",
-     "author": "Jebulon",
-     "date": "2012-02-21",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Vault_Caf%C3%A9_Central_Vienna_Wien.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "WIEN Café Central - panoramio (1).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/WIEN_Caf%C3%A9_Central_-_panoramio_%281%29.jpg",
-     "width": 5312,
-     "height": 2988,
-     "licence": "CC BY 3.0",
-     "author": "fotogoocom",
-     "date": "Taken on 16 October 2015",
-     "source_page": "https://commons.wikimedia.org/wiki/File:WIEN_Caf%C3%A9_Central_-_panoramio_(1).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "WIEN Café Central - panoramio (3).jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/WIEN_Caf%C3%A9_Central_-_panoramio_%283%29.jpg",
-     "width": 3579,
-     "height": 2684,
-     "licence": "CC BY 3.0",
-     "author": "fotogoocom",
-     "date": "13 January 2016 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:WIEN_Caf%C3%A9_Central_-_panoramio_(3).jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Wien, Ferstel-Passage -- 2018 -- 3091.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Wien%2C_Ferstel-Passage_--_2018_--_3091.jpg",
-     "width": 6720,
-     "height": 4480,
-     "licence": "CC BY-SA 4.0",
-     "author": "Dietmar Rabich",
-     "date": "Taken on 14 June 2018, 10:57",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Wien,_Ferstel-Passage_--_2018_--_3091.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Wien Cafe Central 2004.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Wien_Cafe_Central_2004.jpg",
-     "width": 1959,
-     "height": 1488,
-     "licence": "CC BY 3.0",
-     "author": "Photo: Andreas Praefcke",
-     "date": "2004-10",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Wien_Cafe_Central_2004.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 23
+   "candidates": [],
+   "count": 0
   },
   {
    "place": "Les Bains Douches",
@@ -2007,64 +224,43 @@
    "place": "Tooting Bec Lido",
    "city": "London",
    "era": "1906",
-   "candidates": [
-    {
-     "title": "Tooting Bec Lido 20080724.JPG",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Tooting_Bec_Lido_20080724.JPG",
-     "width": 3264,
-     "height": 1780,
-     "licence": "CC BY-SA 3.0",
-     "author": "Nick Cooper (talk)",
-     "date": "2008-07-24",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido_20080724.JPG",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Tooting Bec Lido entrance.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tooting_Bec_Lido_entrance.jpg",
-     "width": 2816,
-     "height": 2120,
-     "licence": "Public domain",
-     "author": "PGibbons at English Wikipedia",
-     "date": "5 January 2007 (original upload date)",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido_entrance.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Tooting Bec Lido, entrance.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tooting_Bec_Lido%2C_entrance.jpg",
-     "width": 6016,
-     "height": 4000,
-     "licence": "CC BY-SA 4.0",
-     "author": "Rwendland",
-     "date": "2019-06-03 12:15:52",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido,_entrance.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Tooting Bec Lido, north standang.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tooting_Bec_Lido%2C_north_standang.jpg",
-     "width": 6016,
-     "height": 3384,
-     "licence": "CC BY-SA 4.0",
-     "author": "Rwendland",
-     "date": "2019-06-03 12:15:19",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido,_north_standang.jpg",
-     "provider": "Wikimedia Commons"
-    },
-    {
-     "title": "Tooting Bec Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Tooting_Bec_Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
-     "width": 4000,
-     "height": 3000,
-     "licence": "CC BY-SA 2.0",
-     "author": "Des Blenkinsopp",
-     "date": "2015-03-31 13:21:46",
-     "source_page": "https://commons.wikimedia.org/wiki/File:Tooting_Bec_Lido-geograph-4422148-by-Des-Blenkinsopp.jpg",
-     "provider": "Wikimedia Commons"
-    }
-   ],
-   "count": 5
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Biltmore Hotel",
+   "city": "Miami",
+   "era": "1926",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Deep Eddy Pool",
+   "city": "Austin",
+   "era": "1915",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hotel San José",
+   "city": "Austin",
+   "era": "1936",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Millennium Biltmore Hotel",
+   "city": "Los Angeles",
+   "era": "1923",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Keens Steakhouse",
+   "city": "New York",
+   "era": "1885",
+   "candidates": [],
+   "count": 0
   }
  ]
 }
