@@ -82,3 +82,20 @@ automatically in the build; an edit note about a crooked slide usually means dro
 Every source gets a running yield: candidates found, candidates that built, candidates approved.
 Sources that keep producing rejects are checked less often. Sources that keep producing approvals are
 mined deeper into their archive.
+
+## Learned from edits
+Every Edits note and every kill reason is feedback on the system, not only on one post. The daily edits job
+turns each note into a general rule and adds it here, dated, with the post it came from. The weekly review
+and the edits job read this section every run and obey it as strictly as the rest of the lens. Rules that a
+machine can check are also built into the code (named below) so they hold without anyone remembering them.
+Lewie can strike a rule by saying so; nothing here is removed otherwise.
+
+- 2026-10-21 (Nota Tavern 0005, Cassette 0010): no two slides of the same view. A photo that repeats
+  another from a closer or further position, or a slight reframe, is a replicate: keep the stronger one. Each
+  slide must show something the others do not (a different room, angle, detail or time of day). When picking
+  photos, prefer sets that move through the place. Built in: build_posts.py same-view check (ORB match,
+  100+ homography inliers = replicate, the later photo is dropped).
+- 2026-10-21 (all Commons archive posts killed): archive photographs come only from professional collections
+  made with proper cameras (Library of Congress: Gottscho-Schleisner, Carol M. Highsmith, HABS). Never
+  Wikimedia Commons, open Flickr or any user-upload site, whatever the licence. Built in: archive_search.py
+  searches only those collections.

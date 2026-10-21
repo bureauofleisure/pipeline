@@ -115,6 +115,36 @@ def is_duplicate(h, seen, max_bits=12):
     return any(int((h != s).sum()) <= max_bits for s in seen)
 
 
+# Same view, closer or further (Lewie, 2026-10-21: "the fourth photo is the first again from a closer angle").
+# ORB features matched between two photos, then a RANSAC homography: a re-framing of the same viewpoint maps
+# cleanly (hundreds of inliers); a genuinely different shot of the same room does not. Calibrated on the built
+# posts: different shots topped out at 79 inliers, replicates scored 114 to 478.
+SAME_VIEW_INLIERS = 100
+_ORB = cv2.ORB_create(3000)
+_BF = cv2.BFMatcher(cv2.NORM_HAMMING)
+
+
+def view_features(img):
+    g = np.asarray(img.convert("L"))
+    s = 1000 / max(g.shape)
+    g = cv2.resize(g, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
+    return _ORB.detectAndCompute(g, None)
+
+
+def same_view_inliers(fa, fb):
+    (ka, da), (kb, db) = fa, fb
+    if da is None or db is None or len(ka) < 50 or len(kb) < 50:
+        return 0
+    pairs = [x for x in _BF.knnMatch(da, db, k=2) if len(x) == 2]
+    good = [m for m, n in pairs if m.distance < 0.75 * n.distance]
+    if len(good) < 15:
+        return 0
+    A = np.float32([ka[m.queryIdx].pt for m in good])
+    B = np.float32([kb[m.trainIdx].pt for m in good])
+    _, mask = cv2.findHomography(A, B, cv2.RANSAC, 5.0)
+    return int(mask.sum()) if mask is not None else 0
+
+
 BED_WORDS = re.compile(r"bed(room)?s?\b|guest-?rooms?|suites?\b|sleep|king-?room|queen-?room|bunk|pillow", re.I)
 
 
@@ -214,7 +244,7 @@ def build_post(p, out_root):
         result["notes"] = ["copy: " + x for x in problems]
         return finish(result, out_dir, done)
 
-    graded, seen, originals = [], [], []
+    graded, seen, originals, views = [], [], [], []
     focal = tuple(p.get("focal", (0.5, 0.5)))
     drop = {int(n) for n in p.get("drop_photos", [])}          # 1-based, set by an edit
     manual_rotate = {int(k): float(v) for k, v in (p.get("rotate") or {}).items()}
@@ -250,6 +280,12 @@ def build_post(p, out_root):
             result["notes"].append(f"photo {i + 1} is a near-duplicate, dropped")
             continue
         seen.append(hs)
+        vf = view_features(raw)
+        twin = next((n for n, f in views if same_view_inliers(vf, f) >= SAME_VIEW_INLIERS), None)
+        if twin:
+            result["notes"].append(f"photo {i + 1} repeats photo {twin} from a closer or further angle, dropped")
+            continue
+        views.append((i + 1, vf))
         ok, why = quality(raw, focal)
         if not ok:
             result["notes"].append(f"photo {i + 1} rejected: {why}")
