@@ -197,6 +197,8 @@ def build_post(p, out_root):
     if os.path.exists(done):
         prev = json.load(open(done))
         if prev.get("entry_hash") == h:
+            if prev.get("status") == "BUILT" and archive.configured() and not str(prev.get("archive", "")).startswith(tuple("0123456789")):
+                return backfill_archive(p, prev, done)   # slides untouched; originals stored now the bucket exists
             return prev           # unchanged since last build
     result = {"index": idx, "place": p["place"], "status": "BUILT", "notes": [],
               "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d"),
@@ -320,6 +322,32 @@ def build_post(p, out_root):
     result["caption_card"] = "\n".join(p["card"])
     result["alt_text"] = alt_text(p)
     return finish(result, out_dir, done)
+
+
+def backfill_archive(p, prev, done):
+    """A post built before the archive existed (or when it failed): fetch the source photos that made its slides
+    and store them untouched. Never rebuilds or changes the slides, so an approved post cannot be disturbed."""
+    used = set(prev.get("slide_sources") or [])
+    originals = []
+    for i, src in enumerate(p["photos"]):
+        if used and i + 1 not in used:
+            continue
+        try:
+            raw, raw_bytes, raw_type = fetch(src)
+        except Exception:  # noqa: BLE001  a vanished source is noted in the status, not fatal
+            continue
+        originals.append({"n": i + 1, "url": src, "bytes": raw_bytes, "content_type": raw_type,
+                          "width": raw.size[0], "height": raw.size[1], "used_as_slide": True})
+    if not originals:
+        prev["archive"] = "backfill failed: no source photo reachable"
+    else:
+        status = archive.store(p["index"], {"place": p["place"], "neighborhood": p.get("neighborhood", ""), "city": p.get("city", ""),
+                                            "designer": p.get("designer", ""), "credit": p.get("credit", ""),
+                                            "source_url": p.get("source_url", ""), "licence": p.get("licence", "")}, originals)
+        missing = len(used) - len(originals) if used else 0
+        prev["archive"] = status + (f" (backfill; {missing} source photos no longer reachable)" if missing > 0 else " (backfill)")
+    json.dump(prev, open(done, "w"), indent=2)
+    return prev
 
 
 def finish(result, out_dir, done):
