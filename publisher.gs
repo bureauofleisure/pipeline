@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.10 (Meta app live; MODE gates public posting, default DRYRUN)
+ * Bureau of Leisure Publisher v0.11 (MODE: DRYRUN default, QUIET, LIVE)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -21,7 +21,10 @@
  *   DRYRUN (default, also when MODE is missing): at each 9am slot the due post is built on Instagram's side
  *                 with its tags, checked, and NOT published. Row becomes DRY RUN with a note. One a day,
  *                 so the whole daily rhythm, token refresh and alerts run for real with zero exposure.
- *   LIVE          publishes. On the first LIVE run every DRY RUN row goes back to APPROVED with a fresh slot.
+ *   QUIET         publishes for real on the account, but with no user tags, no collaborator invites and every
+ *                 @handle stripped from the caption (credits stay as plain names). Nobody is notified.
+ *   LIVE          publishes with tags and @credits.
+ *   On the first QUIET or LIVE run every DRY RUN row goes back to APPROVED with a fresh 9am slot.
  *
  * v0.9 safety rails:
  *   PAUSE         add a tab named PAUSE to the sheet and nothing publishes; delete it to resume.
@@ -131,7 +134,7 @@ function weeklySummary_(values, col, now) {
   const body = [`Went live (${live.length}):`, ...(live.length ? live : ['none']), '',
                 `Failed (${failed.length}):`, ...(failed.length ? failed : ['none']), '',
                 `Dry runs (${dry.length}):`, ...(dry.length ? dry : ['none']), '',
-                `Approved and queued: ${queued}`, live_() ? 'MODE: LIVE' : 'MODE: DRYRUN (nothing posts publicly)', paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
+                `Approved and queued: ${queued}`, 'MODE: ' + mode_() + (quiet_() ? ' (real posts, no tags or @handles)' : live_() ? '' : ' (nothing posts publicly)'), paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
   notify_(`Week: ${live.length} live, ${failed.length} failed, ${queued} queued`, body);
 }
 
@@ -141,7 +144,15 @@ function cellByName_(row, col, name) { return name in col ? String(row[col[name]
 function paused_() { return !!SpreadsheetApp.getActive().getSheetByName('PAUSE'); }
 
 /** Public posting only when MODE is exactly LIVE. Anything else, including unset, is a dry run. */
-function live_() { return PropertiesService.getScriptProperties().getProperty('MODE') === 'LIVE'; }
+function mode_() { const m = PropertiesService.getScriptProperties().getProperty('MODE'); return m === 'LIVE' || m === 'QUIET' ? m : 'DRYRUN'; }
+function live_() { return mode_() !== 'DRYRUN'; }      // true when real publishing happens (QUIET or LIVE)
+function quiet_() { return mode_() === 'QUIET'; }
+
+/** QUIET captions: drop every @handle, keep the names, drop lines left empty. */
+function quietCaption_(c) {
+  return c.split('\n').map(l => l.replace(/(^|\s)@[\w.]+/g, '$1').replace(/\s+$/, ''))
+          .filter(l => l && l !== 'Via').join('\n');
+}
 
 /**
  * First-run check, and again whenever the token changes. Confirms the token belongs to IG_USER_ID, then builds
@@ -181,7 +192,7 @@ function verifyConnection_() {
     props.setProperty('IG_VERIFIED_FOR', stamp);
     props.setProperty('IG_VERIFIED_AT', String(Date.now()));
     log_('verify', `@${me.username} ok; ${dry}`);
-    notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\n` + (live_() ? 'MODE is LIVE: publishing is on. ' : 'MODE is DRYRUN: nothing will post publicly. At each slot the due post is built and checked, not published. ') +
+    notify_('Instagram connection verified', `Account: @${me.username}\nDry run: ${dry}\n\n` + (live_() ? 'MODE is ' + mode_() + ': publishing is on' + (quiet_() ? ' with no tags or @handles. ' : '. ') : 'MODE is DRYRUN: nothing will post publicly. At each slot the due post is built and checked, not published. ') +
       'Approved posts are handled at ' + (props.getProperty('POST_HOUR') || 9) + ':00 New York time, one a day. Any approved post whose date has already passed is moved to the next free morning slot.');
     return true;
   } catch (e) {
@@ -247,7 +258,7 @@ function publishDue() {
         setCell_(sheet, r, col['Status'], 'APPROVED'); setCell_(sheet, r, col['Publish at'], '');
       }
       props.setProperty('WENT_LIVE_AT', String(Date.now()));
-      log_('mode', 'LIVE: dry-run rows returned to APPROVED');
+      log_('mode', mode_() + ': dry-run rows returned to APPROVED');
       return;                                    // dailyCheck assigns their slots; first post at the next 9am
     }
     if (!live_() && Date.now() - Number(props.getProperty('LAST_DRYRUN_AT') || 0) < 20 * 3600 * 1000) return;
@@ -306,7 +317,7 @@ function publishDue() {
           permalink = publishCarousel_(row, col, false);
         } catch (first) {
           // The most common avoidable failure is a bad tag handle. Retry once without tags.
-          if (!tagsFor_(row, col).length) throw first;
+          if (!tagsFor_(row, col).length || quiet_()) throw first;
           permalink = publishCarousel_(row, col, true);
           note = 'Posted WITHOUT TAGS (tag error: ' + String(first).slice(0, 200) + ') ';
           notify_('Posted without tags: ' + row[col['Index No.']], note);
@@ -357,6 +368,7 @@ function publishCarousel_(row, col, skipTags, dryRun) {
   const alts = lines_(row[col['Alt text']]);
   if (slides.length < 2 || slides.length > 10) throw new Error(`Need 2 to 10 slides, found ${slides.length}`);
 
+  if (quiet_() && !dryRun) skipTags = true;     // QUIET: nobody tagged, nobody invited
   const tags = skipTags ? [] : tagsFor_(row, col)
     .map((username, i) => ({ username, x: 0.2 + 0.2 * i, y: 0.88 }));
 
@@ -374,7 +386,7 @@ function publishCarousel_(row, col, skipTags, dryRun) {
   const carouselParams = {
     media_type: 'CAROUSEL',
     children: children.join(','),
-    caption: buildCaption_(row, col),
+    caption: (quiet_() && !dryRun) ? quietCaption_(buildCaption_(row, col)) : buildCaption_(row, col),
     access_token: token,
   };
   if (collabs.length && !skipTags) carouselParams.collaborators = JSON.stringify(collabs);
