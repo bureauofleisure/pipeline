@@ -90,7 +90,7 @@ and the edits job read this section every run and obey it as strictly as the res
 machine can check are also built into the code (named below) so they hold without anyone remembering them.
 Lewie can strike a rule by saying so; nothing here is removed otherwise.
 
-- 2026-10-21 (Nota Tavern 0005, Cassette 0010): no two slides of the same view. A photo that repeats
+- 2026-10-21 (Nota Tavern 0005, Cassette 0010, Hommali 0003): no two slides of the same view. A photo that repeats
   another from a closer or further position, or a slight reframe, is a replicate: keep the stronger one. Each
   slide must show something the others do not (a different room, angle, detail or time of day). When picking
   photos, prefer sets that move through the place. Built in: build_posts.py same-view check (ORB match,
@@ -99,3 +99,10 @@ Lewie can strike a rule by saying so; nothing here is removed otherwise.
   made with proper cameras (Library of Congress: Gottscho-Schleisner, Carol M. Highsmith, HABS). Never
   Wikimedia Commons, open Flickr or any user-upload site, whatever the licence. Built in: archive_search.py
   searches only those collections.
+- 2026-10-21 (Minnibar 0011): every slide shows the place as somewhere to be: a room, a bar, seats, a table in
+  its setting. Never a slide that is only a wall, a light fixture, a texture or an empty corner. Details earn a
+  slide only when the room is still readable around them.
+- 2026-10-21 (TWA Hotel 0014): a great venue with weak photos is not a post. If the available photos are
+  snapshots, or mostly floor, carpet, concrete or empty space, the place waits on the watch list until
+  professional, composed photographs are found (studio, photographer, venue press kit or a professional
+  archive). Never fill a strong place with whatever photos exist.
