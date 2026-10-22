@@ -1,5 +1,5 @@
 {
- "searched": "2026-10-21T21:10:15Z",
+ "searched": "2026-10-22T15:43:16Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,56 +7,92 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 104,
-  "results": 35,
-  "items_opened": 14,
-  "offtopic": 1,
-  "rights": 1,
-  "size": 13,
+  "searches": 12,
+  "results": 265,
+  "items_opened": 9,
+  "offtopic": 0,
+  "rights": 8,
+  "size": 1,
   "type": 0,
   "errors": [
-   "search Russian and Turkish Baths East Village / gottscho-schleisner : TimeoutError The read operation timed out",
-   "item http://www.loc.gov/item/2018727437/: TimeoutError",
-   "item http://www.loc.gov/item/2018739010/: TimeoutError",
-   "search Venetian Pool Coral Gables / historic american bu: TimeoutError The read operation timed out",
-   "search Hotel Okura Tokyo lobby 1962 / gottscho-schleisner : TimeoutError The read operation timed out",
-   "search Biltmore Hotel Coral Gables pool / gottscho-schleisner : TimeoutError The read operation timed out",
-   "search Hotel San Jose Austin South Congress / carol m. highsmith a: TimeoutError The read operation timed out",
-   "search Millennium Biltmore Hotel Los Angeles lobby / gottscho-schleisner : TimeoutError The read operation timed out",
-   "search Biltmore Hotel Los Angeles Rendezvous Court / historic american bu: TimeoutError The read operation timed out"
+   "item http://www.loc.gov/item/mt0360/: HTTPError",
+   "item http://www.loc.gov/item/mt0361/: HTTPError",
+   "item http://www.loc.gov/item/ny2406/: HTTPError",
+   "item http://www.loc.gov/item/nd0016/: HTTPError",
+   "item http://www.loc.gov/item/mt0356/: HTTPError",
+   "item http://www.loc.gov/item/mt0352/: HTTPError",
+   "item http://www.loc.gov/item/mt0357/: HTTPError",
+   "item http://www.loc.gov/item/mt0354/: HTTPError",
+   "search TWA Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search TWA Flight Center interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Hotel Chelsea: HTTPError HTTP Error 429: Too Many Requests",
+   "search Hotel Chelsea lobby: HTTPError HTTP Error 429: Too Many Requests",
+   "search Fontainebleau Miami Beach: HTTPError HTTP Error 429: Too Many Requests",
+   "search Fontainebleau Miami Beach Lapidus lobby: HTTPError HTTP Error 429: Too Many Requests",
+   "search Eden Roc: HTTPError HTTP Error 429: Too Many Requests",
+   "search Eden Roc Miami Beach Lapidus: HTTPError HTTP Error 429: Too Many Requests",
+   "search The Raleigh: HTTPError HTTP Error 429: Too Many Requests",
+   "search Raleigh Hotel Miami Beach pool: HTTPError HTTP Error 429: Too Many Requests",
+   "search Venetian Pool: HTTPError HTTP Error 429: Too Many Requests",
+   "search Venetian Pool Coral Gables: HTTPError HTTP Error 429: Too Many Requests",
+   "search Driskill Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Driskill Hotel lobby Austin: HTTPError HTTP Error 429: Too Many Requests",
+   "search Barton Springs Pool: HTTPError HTTP Error 429: Too Many Requests",
+   "search Barton Springs Pool Austin: HTTPError HTTP Error 429: Too Many Requests",
+   "search Musso & Frank Grill: HTTPError HTTP Error 429: Too Many Requests",
+   "search Musso and Frank Grill interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search The Beverly Hills Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Beverly Hills Hotel Polo Lounge: HTTPError HTTP Error 429: Too Many Requests",
+   "search Chateau Marmont: HTTPError HTTP Error 429: Too Many Requests",
+   "search Chateau Marmont interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Sunnylands: HTTPError HTTP Error 429: Too Many Requests",
+   "search Sunnylands Annenberg interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Hotel Okura: HTTPError HTTP Error 429: Too Many Requests",
+   "search Hotel Okura Tokyo lobby 1962: HTTPError HTTP Error 429: Too Many Requests",
+   "search Hotel Il Pellicano: HTTPError HTTP Error 429: Too Many Requests",
+   "search Il Pellicano Porto Ercole: HTTPError HTTP Error 429: Too Many Requests",
+   "search Gellért Baths: HTTPError HTTP Error 429: Too Many Requests",
+   "search Gellért Baths interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Café Central: HTTPError HTTP Error 429: Too Many Requests",
+   "search Café Central Vienna interior: HTTPError HTTP Error 429: Too Many Requests"
   ],
   "rights_seen": {
-   "No known restrictions on images made by the U.S. Government; images     copied f": 1
+   "No known restrictions on images made by the U.S. Government; images     copied f": 8
   },
   "sample_files": {
-   "item": "http://www.loc.gov/item/2018727417/",
+   "item": "http://www.loc.gov/item/2018750506/",
    "files": [
     {
-     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23488u.tif",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a00000/5a00000/5a00064u.tif",
      "mimetype": "image/tiff",
      "width": 0,
      "height": 0
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488_150px.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064_150px.jpg",
      "mimetype": "image/jpeg",
      "width": 150,
-     "height": 118
+     "height": 124
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488t.gif",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064t.gif",
      "mimetype": "image/gif",
      "width": 150,
-     "height": 118
+     "height": 124
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a23000/5a23400/5a23488r.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064r.jpg",
      "mimetype": "image/jpeg",
-     "width": 535,
-     "height": 420
+     "width": 640,
+     "height": 530
     }
    ]
-  }
+  },
+  "other_collections": 190,
+  "iiif_misses": [
+   "service:pnp:gsc:5a00000:5a00000:5a00064u: HTTPError",
+   "/service:pnp:gsc:5a00000:5a00000:5a00064: HTTPError"
+  ]
  },
  "targets": [
   {
