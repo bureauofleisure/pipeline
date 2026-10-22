@@ -193,7 +193,7 @@ def candidates_for(t):
             STATS["errors"].append(f"item {rid}: {type(e).__name__}"); continue
         meta = item.get("item") or {}
         rights = as_text(meta.get("rights_advisory") or item.get("rights_advisory") or meta.get("rights"))
-        if RESTRICTED.search(rights) or not FREE.search(rights):
+        if not FREE.search(rights) or (RESTRICTED.search(rights) and not re.search(r"no known restrictions", rights, re.I)):
             STATS["rights"] += 1
             key = rights[:80] or "(none)"
             STATS["rights_seen"][key] = STATS["rights_seen"].get(key, 0) + 1
