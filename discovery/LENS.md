@@ -51,7 +51,7 @@ Anything that fails is benched with "possible AI or render" so the pattern can b
 ## Copy
 - The card: 7 lines, all caps, facts only, ends on IN A WORD from the bank. No word reused within 20 posts.
 - REMINDS US OF: one specific, nameable reference, six words max.
-- BRING: taken word for word from build/bring_bank.txt (APPROVED, or RESERVED/CONDITIONAL when the condition holds). Never written fresh. No line repeats within 20 posts.
+- BRING: taken word for word from build/bring_bank.txt (APPROVED, or RESERVED/CONDITIONAL when the condition holds). Never written fresh. No line repeats within 20 posts. It prints on the index card slide and in the caption, on its own line just above IN A WORD (the build adds it; the card in the pick stays 7 lines). A line not in the bank is left off and noted.
 - One place per post. Never a listicle.
 
 ## Source mix: the feed is nobody's copy

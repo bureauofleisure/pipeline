@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.12 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.13 (MODE: DRYRUN default, QUIET, LIVE)
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -570,8 +570,7 @@ function importBatch() {
     Object.keys(fields).forEach(h => { if (h in col) row[col[h]] = fields[h]; });
     row[col['Status']] = 'DRAFT';
     row[col['Index No.']] = idx;   // text, see the column format above
-    if ('Notes' in col) row[col['Notes']] = (m.bring ? 'BRING idea: ' + m.bring + '\n' : '') +
-                                            (m.reminds ? 'Reminds: ' + m.reminds + '\n' : '') +
+    if ('Notes' in col) row[col['Notes']] = (m.reminds ? 'Reminds: ' + m.reminds + '\n' : '') +
                                             (m.source_url ? 'Source: ' + m.source_url : '');
     sheet.appendRow(row);
     sheet.getRange(sheet.getLastRow(), col['Index No.'] + 1).setNumberFormat('@').setValue(idx);

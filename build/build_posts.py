@@ -53,6 +53,21 @@ MAX_BLOCKINESS = 1.35      # JPEG 8-pixel block edges relative to neighbouring p
 BASE_URL = os.environ.get("PAGES_BASE_URL", "https://bureauofleisure.github.io/pipeline")
 UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"
 WORD_BANK = {w.strip().upper() for w in open(os.path.join(ROOT, "build", "word_bank.txt")) if w.strip()}
+# BRING lines: the closed bank (APPROVED, RESERVED, CONDITIONAL). Text before any "|" condition note.
+BRING_BANK = {l.split("|")[0].strip().upper() for l in open(os.path.join(ROOT, "build", "bring_bank.txt"))
+              if l.strip().upper().startswith("BRING ")}
+
+
+def card_with_bring(p, notes):
+    """The card as it posts: the BRING line, when the pick has one from the bank, sits just above IN A WORD."""
+    card = list(p.get("card") or [])
+    bring = (p.get("bring") or "").strip().upper()
+    if not bring:
+        return card
+    if bring not in BRING_BANK:
+        notes.append(f"BRING line not in build/bring_bank.txt, left off: {bring}")
+        return card
+    return card[:-1] + [bring] + card[-1:]
 
 
 # ---------------------------------------------------------------- copy
@@ -338,7 +353,8 @@ def build_post(p, out_root):
 
     photos = [g["img"] for g in graded]
     place_line = f"{p['place']}. {p['neighborhood']}."
-    slides = carousel.build(photos, idx, place_line, p["word"], p.get("reminds", ""), p["card"], p.get("credit", ""))
+    card = card_with_bring(p, result["notes"])
+    slides = carousel.build(photos, idx, place_line, p["word"], p.get("reminds", ""), card, p.get("credit", ""))
     os.makedirs(out_dir, exist_ok=True)
     urls = []
     for n, s in enumerate(slides, 1):
@@ -355,7 +371,7 @@ def build_post(p, out_root):
     result["cover_source_photo"] = graded[0]["i"] + 1
     # which source photo (1-based, as listed in the batch) sits behind each photo slide, so a review can name a cover
     result["slide_sources"] = [g["i"] + 1 for g in graded]
-    result["caption_card"] = "\n".join(p["card"])
+    result["caption_card"] = "\n".join(card)
     result["alt_text"] = alt_text(p)
     return finish(result, out_dir, done)
 
