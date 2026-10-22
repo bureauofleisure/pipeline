@@ -24,7 +24,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "BureauOfLeisureBot/1.1 (https://bureauofleisure.co; lewie@flow.agency)"
 MIN_WIDE, MIN_TALL = 1800, 1350
-PER_SEARCH = 25          # results read per collection search
+PER_SEARCH = 60          # results read per collection search
 ITEMS_PER_TARGET = 16    # item pages opened per target (each is one request)
 COLLECTIONS = [
     ("gottscho-schleisner collection", "Gottscho-Schleisner Collection, Library of Congress"),
@@ -39,6 +39,7 @@ STOP = {"hotel", "interior", "lobby", "beach", "pool", "miami", "york", "angeles
 STATS = {"searches": 0, "results": 0, "items_opened": 0, "offtopic": 0, "rights": 0, "size": 0, "type": 0,
          "errors": [], "rights_seen": {}, "sample_files": None}
 _last = [0.0]
+DEADLINE = time.time() + 32 * 60   # stop searching in time to save what was found
 
 
 def get(url):
@@ -50,7 +51,7 @@ def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=40) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503, 504) and attempt < 2:
@@ -67,13 +68,23 @@ def words_for(t):
     return sorted({w for w in re.findall(r"[a-z]{4,}", src.lower()) if w not in STOP})
 
 
-def search(query, partof):
-    params = {"q": query, "fa": "partof:" + partof, "fo": "json", "c": PER_SEARCH, "at": "results"}
+def search(query):
+    """One search across all LoC photos; the collection is checked on each result (three faceted searches per
+    query was too slow for loc.gov and timed the job out)."""
+    params = {"q": query, "fo": "json", "c": PER_SEARCH, "at": "results"}
     data = get("https://www.loc.gov/photos/?" + urllib.parse.urlencode(params))
     STATS["searches"] += 1
     res = data.get("results") or []
     STATS["results"] += len(res)
     return res
+
+
+def collection_of(r):
+    parts = " ".join(as_text(x) for x in (r.get("partof") or [])).lower()
+    for key, label in COLLECTIONS:
+        if key.split("/")[0] in parts:
+            return label
+    return None
 
 
 def flat_files(item_json):
@@ -150,24 +161,30 @@ def candidates_for(t):
     words = words_for(t)
     hits, seen = [], set()
     queries = [t["place"]] + [q for q in (t.get("queries") or []) if q.lower() != t["place"].lower()]
-    for q in queries:
-        for partof, label in COLLECTIONS:
-            try:
-                for r in search(q, partof):
-                    rid = r.get("id") or r.get("url")
-                    if not rid or rid in seen:
-                        continue
-                    seen.add(rid)
-                    hay = (as_text(r.get("title")) + " " + as_text(r.get("description")) + " " + as_text(r.get("subject"))).lower()
-                    if words and not any(w in hay for w in words):
-                        STATS["offtopic"] += 1; continue
-                    if SKIP_TITLE.search(as_text(r.get("title"))):
-                        STATS["type"] += 1; continue
-                    hits.append((r, label))
-            except Exception as e:  # noqa: BLE001
-                STATS["errors"].append(f"search {q} / {partof[:20]}: {type(e).__name__} {str(e)[:100]}")
+    for q in queries[:2]:
+        if time.time() > DEADLINE:
+            STATS["out_of_time"] = True; break
+        try:
+            for r in search(q):
+                rid = r.get("id") or r.get("url")
+                if not rid or rid in seen:
+                    continue
+                seen.add(rid)
+                label = collection_of(r)
+                if not label:
+                    STATS["other_collections"] = STATS.get("other_collections", 0) + 1; continue
+                hay = (as_text(r.get("title")) + " " + as_text(r.get("description")) + " " + as_text(r.get("subject"))).lower()
+                if words and not any(w in hay for w in words):
+                    STATS["offtopic"] += 1; continue
+                if SKIP_TITLE.search(as_text(r.get("title"))):
+                    STATS["type"] += 1; continue
+                hits.append((r, label))
+        except Exception as e:  # noqa: BLE001
+            STATS["errors"].append(f"search {q}: {type(e).__name__} {str(e)[:100]}")
     out = []
     for r, label in hits[:ITEMS_PER_TARGET]:
+        if time.time() > DEADLINE:
+            STATS["out_of_time"] = True; break
         rid = r.get("id") or r.get("url")
         try:
             item = get(rid.rstrip("/") + "/?fo=json")
