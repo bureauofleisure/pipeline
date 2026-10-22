@@ -1,0 +1,62 @@
+{
+  "index": "0009",
+  "place": "Peridot",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 HOLD: too saturated",
+    "photo 4 HOLD: too saturated",
+    "photo 5 rejected: too small (1063x1329 after crop, need 1080x1350)",
+    "photo 6 rejected: too small (1063x1329 after crop, need 1080x1350)",
+    "photo 7 HOLD: too saturated",
+    "photo 9 HOLD: too saturated",
+    "photo 10 HOLD: too saturated",
+    "photo 11 repeats photo 5 from a closer or further angle, dropped",
+    "photo 12 HOLD: too saturated",
+    "photo 14 HOLD: too saturated",
+    "photo 15 wide-angle lean -7.4 deg left as shot",
+    "photo 15 HOLD: too saturated",
+    "photo 18 repeats photo 6 from a closer or further angle, dropped",
+    "photo 19 HOLD: too saturated",
+    "photo 21 rejected: compression artifacts (blockiness 1.49)",
+    "photo 22 HOLD: too saturated",
+    "photo 16 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "476826b84eda",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "The Henderson",
+    "city": "Hong Kong",
+    "category": "Bar",
+    "word": "GILDED",
+    "reminds": "a Kubrick set in lime green",
+    "credit": "Virgile Simon Bertrand",
+    "designer": "Studio Paolo Ferrari",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/04/15/peridot-bar-hong-kong-studio-paolo-ferrari/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0009/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0009/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0009/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0009/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0009/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0009/06.jpg"
+  ],
+  "archive": "7 originals (5.3 MB), 3 new",
+  "cover_source_photo": 20,
+  "slide_sources": [
+    20,
+    1,
+    8,
+    13,
+    17
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0009\nPERIDOT. THE HENDERSON, HONG KONG.\n38TH FLOOR OF A ZAHA HADID TOWER.\nTWENTY THOUSAND TINY LIGHTS.\nLIME GREEN, FLOOR TO CEILING.\nTIMELESS FUTURISM, SAYS THE STUDIO.\nIN A WORD: GILDED.",
+  "alt_text": "Peridot, The Henderson, Hong Kong. A cocoon-like lime green bar with thousands of tiny lights across curved walls."
+}

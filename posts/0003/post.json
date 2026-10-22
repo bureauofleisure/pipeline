@@ -1,0 +1,56 @@
+{
+  "index": "0003",
+  "place": "Hommali",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 straightened -1.7 deg",
+    "photo 1 wide-angle lean +3.5 deg left as shot",
+    "photo 4 wide-angle lean -6.6 deg left as shot",
+    "photo 5 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 7 dropped by edit",
+    "photo 8 repeats photo 5 from a closer or further angle, dropped",
+    "photo 9 wide-angle lean -7.5 deg left as shot",
+    "photo 10 straightened +2.2 deg",
+    "photo 12 repeats photo 6 from a closer or further angle, dropped"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "9090245c589e",
+  "built": "2026-10-22",
+  "edited_at": "2026-10-22T11:49:40Z",
+  "meta": {
+    "neighborhood": "West Village",
+    "city": "New York",
+    "category": "Restaurant",
+    "word": "SUNLIT",
+    "reminds": "a Bangkok family house",
+    "credit": "",
+    "designer": "Surrane Design",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/09/04/surrane-design-hommali-west-village-new-york/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0003/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/06.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0003/07.jpg"
+  ],
+  "archive": "10 originals (8.4 MB), 0 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    3,
+    1,
+    13,
+    6,
+    11
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0003\nHOMMALI. WEST VILLAGE, NEW YORK.\nA THAI HOUSE, REBUILT INDOORS.\nTERRACOTTA FLOOR. A CENTRAL COURTYARD.\nFLUTED SAND TILE BAR. LEATHER AND VELVET.\nRICE PLANT LIGHT AT THE DOOR.\nIN A WORD: SUNLIT.",
+  "alt_text": "Hommali, West Village, New York. A Thai restaurant with a terracotta floor, fluted tile bar and a courtyard-like dining room."
+}
