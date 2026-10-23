@@ -106,3 +106,8 @@ Lewie can strike a rule by saying so; nothing here is removed otherwise.
   snapshots, or mostly floor, carpet, concrete or empty space, the place waits on the watch list until
   professional, composed photographs are found (studio, photographer, venue press kit or a professional
   archive). Never fill a strong place with whatever photos exist.
+- 2026-10-23 (TWA Hotel 0014, second pass): no photo goes into a pick unseen. Whoever picks photos opens every
+  one and judges it as a slide before listing it; a file title, an author name or a collection name is not a
+  look. If the photos cannot be fetched and viewed in the run, the place waits for a run that can see them.
+  (The 0014 set was chosen by Commons title and never viewed, which is how eleven frames of floor, carpet and
+  concrete reached the review page.)
