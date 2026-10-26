@@ -1,124 +1,409 @@
 {
  "sets": [
   {
-   "id": "twa-gsc",
+   "id": "necchi",
    "photos": [
     {
      "n": 1,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28545/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/12ed5ea9-1c46-4248-9744-2b484b7b1262/Harpers-Bazaar-Villa-Necchi-Interior-0672.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 463333,
+     "format": null
     },
     {
      "n": 2,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28546/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/388265fe-bb2a-4285-9151-134722f2a1f4/Harpers-Bazaar-Villa-Necchi-Interior-0668.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 514246,
+     "format": null
     },
     {
      "n": 3,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28547/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/3b19a41b-82af-46f9-9867-2a24c4ffd9cd/Harpers-Bazaar-Villa-Necchi-Interior-0039.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 450931,
+     "format": null
     },
     {
      "n": 4,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28548/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/67593fab-d8d4-4e72-bb9c-5a6d26fae87f/Harpers-Bazaar-Villa-Necchi-Interior-1203.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 534892,
+     "format": null
     },
     {
      "n": 5,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28549/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 6,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28550/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 7,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28551/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 8,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28552/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 9,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28553/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 10,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28554/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 11,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28555/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 12,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28556/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 13,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28557/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 14,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28558/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 15,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28559/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 16,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28560/full/pct:50/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 17,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28548/full/full/0/default.jpg",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "n": 18,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28548u.tif",
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/84e268d3-82f2-47c2-a130-5ff532a0555e/Harpers-Bazaar-Villa-Necchi-Interior-1142.jpg",
      "ok": true,
-     "width": 5411,
-     "height": 4299,
-     "bytes": 23287548,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 952446,
      "format": null
     }
    ],
    "sheets": [
-    "twa-gsc-1.jpg",
-    "twa-gsc-2.jpg",
-    "twa-gsc-3.jpg"
+    "necchi-1.jpg"
+   ]
+  },
+  {
+   "id": "peacock",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Design_04.jpg",
+     "ok": true,
+     "width": 2176,
+     "height": 1248,
+     "bytes": 885205,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Design_10.jpg",
+     "ok": true,
+     "width": 1800,
+     "height": 1036,
+     "bytes": 602889,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Hero-scaled.jpg",
+     "ok": true,
+     "width": 2560,
+     "height": 1440,
+     "bytes": 586657,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "peacock-1.jpg"
+   ]
+  },
+  {
+   "id": "pan",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027433936-8SZMTNJLPCK5Y4G1QOFK/2+_MG_1075.jpg?format=2500w",
+     "ok": true,
+     "width": 1428,
+     "height": 2000,
+     "bytes": 224837,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027434406-9DXUWMEUV0Y1JSYQX3I8/3+IMG_1212.jpg?format=2500w",
+     "ok": true,
+     "width": 1429,
+     "height": 2000,
+     "bytes": 569372,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027554740-0OC5N4F29HEZBE2F4OVF/Untitled-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2362,
+     "height": 1653,
+     "bytes": 498349,
+     "format": null
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027870798-E70LE4RAX4RGJ2L6PC8K/6+FullSizeRender.jpg?format=2500w",
+     "ok": true,
+     "width": 1242,
+     "height": 1739,
+     "bytes": 302007,
+     "format": null
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1776952172420-MGHR9AWIKIFYC7HFZ74U/dab+5x7.jpg?format=2500w",
+     "ok": true,
+     "width": 1083,
+     "height": 1516,
+     "bytes": 183209,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "pan-1.jpg"
+   ]
+  },
+  {
+   "id": "josephine",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_5.11.26_-34.jpg",
+     "ok": true,
+     "width": 3259,
+     "height": 2174,
+     "bytes": 2201529,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_6.9.26_3.jpg",
+     "ok": true,
+     "width": 4000,
+     "height": 2668,
+     "bytes": 3403284,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_6.9.26_4.jpg",
+     "ok": true,
+     "width": 4000,
+     "height": 2668,
+     "bytes": 3787234,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "josephine-1.jpg"
+   ]
+  },
+  {
+   "id": "lovethy",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_hero1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1330,
+     "bytes": 394539,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://hospitalitydesign.com/wp-content/uploads/2026/05/Interior-2Alexander-Tatsuto-Zeren.png",
+     "ok": true,
+     "width": 1000,
+     "height": 667,
+     "bytes": 1059571,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://hospitalitydesign.com/wp-content/uploads/2026/05/Interiors-credit-Aichan-Mama-copy.jpg",
+     "ok": true,
+     "width": 1000,
+     "height": 550,
+     "bytes": 118988,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "lovethy-1.jpg"
+   ]
+  },
+  {
+   "id": "kojima",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/0a435480-6bc1-4c69-861e-d98abbfddb72/26-02-Agobay-Kojima-Shoten-1542.jpg?format=2500w",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 378795,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/27c0d134-20b8-4e7f-9229-8d4f10321d07/26-02-Agobay-Kojima-Shoten-1462.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 470397,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/2f882fe5-3abe-45e5-8a77-715dcb5c37c6/26-02-Agobay-Kojima-Shoten-1478.jpg?format=2500w",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 166936,
+     "format": null
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/5ad39c5a-538f-451e-acc3-6b17486251a5/26-02-Agobay-Kojima-Shoten-1640.jpg?format=2500w",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 313170,
+     "format": null
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/76fd3e26-0a37-4e3c-84b3-9ebf29ee7f14/26-02-Agobay-Kojima-Shoten-1720.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 368193,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "kojima-1.jpg"
+   ]
+  },
+  {
+   "id": "twa",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28545u.tif",
+     "ok": true,
+     "width": 337,
+     "height": 420,
+     "bytes": 142134,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28546u.tif",
+     "ok": true,
+     "width": 338,
+     "height": 420,
+     "bytes": 142554,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28547u.tif",
+     "ok": true,
+     "width": 336,
+     "height": 420,
+     "bytes": 141714,
+     "format": null
+    },
+    {
+     "n": 4,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28549u.tif",
+     "ok": true,
+     "width": 5411,
+     "height": 4300,
+     "bytes": 23293108,
+     "format": null
+    },
+    {
+     "n": 5,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28550u.tif",
+     "ok": true,
+     "width": 5712,
+     "height": 4440,
+     "bytes": 25386012,
+     "format": null
+    },
+    {
+     "n": 6,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28551u.tif",
+     "ok": false,
+     "error": "IncompleteRead: IncompleteRead(5357568 bytes read, 19288236 more expected)"
+    },
+    {
+     "n": 7,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28552u.tif",
+     "ok": true,
+     "width": 5412,
+     "height": 4299,
+     "bytes": 23291036,
+     "format": null
+    },
+    {
+     "n": 8,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28553u.tif",
+     "ok": true,
+     "width": 5412,
+     "height": 4300,
+     "bytes": 23296464,
+     "format": null
+    },
+    {
+     "n": 9,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28554u.tif",
+     "ok": true,
+     "width": 5676,
+     "height": 4344,
+     "bytes": 24682708,
+     "format": null
+    },
+    {
+     "n": 10,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28555u.tif",
+     "ok": true,
+     "width": 5556,
+     "height": 4452,
+     "bytes": 24761404,
+     "format": null
+    },
+    {
+     "n": 11,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28556u.tif",
+     "ok": true,
+     "width": 4488,
+     "height": 5544,
+     "bytes": 24906720,
+     "format": null
+    },
+    {
+     "n": 12,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28557u.tif",
+     "ok": true,
+     "width": 4300,
+     "height": 5412,
+     "bytes": 23296252,
+     "format": null
+    },
+    {
+     "n": 13,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28558u.tif",
+     "ok": true,
+     "width": 531,
+     "height": 420,
+     "bytes": 223694,
+     "format": null
+    },
+    {
+     "n": 14,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28559u.tif",
+     "ok": true,
+     "width": 534,
+     "height": 420,
+     "bytes": 224954,
+     "format": null
+    },
+    {
+     "n": 15,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28560u.tif",
+     "ok": true,
+     "width": 532,
+     "height": 420,
+     "bytes": 224114,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "twa-1.jpg",
+    "twa-2.jpg",
+    "twa-3.jpg"
    ]
   }
  ]
