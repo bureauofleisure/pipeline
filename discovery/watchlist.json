@@ -11,16 +11,9 @@
    "added": "2026-10-18",
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.48) ; photo 2 rejected: compression artifacts (blockiness 1.54) ; photo 3 held: tilt -5.1 deg is over the limit ; photo 6 is a near-duplicate, dropped ; photo 7 HOLD: tilt ; photo 9 rejected: compression artifacts (blockiness 1.64) ; only 3 photo",
    "status": "READY",
-   "last_check": "2026-10-19",
-   "ready_photos": 6,
-   "candidate_photos": [
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg",
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_22.jpg",
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg",
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_40.jpg",
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5-1.jpg",
-    "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5.jpg"
-   ]
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0008",
@@ -33,14 +26,9 @@
    "added": "2026-10-18",
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.51) ; photo 2 HOLD: tilt ; photo 3 rejected: compression artifacts (blockiness 1.56) ; photo 4 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 5 rejected: compression artifacts (blockiness 1.60) ; photo 6 rejected: compression ",
    "status": "READY",
-   "last_check": "2026-10-19",
-   "ready_photos": 4,
-   "candidate_photos": [
-    "https://static.dezeen.com/uploads/2026/04/upstairs-at-hausu-peckham-london-listening-bars-interiors_dezeen_2364_col_0.jpg",
-    "https://static.dezeen.com/uploads/2026/04/upstairs-at-hausu-peckham-london-listening-bars-interiors_dezeen_2364_col_2.jpg",
-    "https://static.dezeen.com/uploads/2026/04/upstairs-at-hausu-peckham-london-listening-bars-interiors_dezeen_2364_col_7.jpg",
-    "https://static.dezeen.com/uploads/2026/04/upstairs-at-hausu-peckham-london-listening-bars-interiors_dezeen_hero-1.jpg"
-   ]
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0012",
@@ -53,7 +41,7 @@
    "added": "2026-10-18",
    "reason": "photo 2 could not be fetched (HTTPError) ; photo 3 could not be fetched (HTTPError) ; photo 4 could not be fetched (HTTPError) ; photo 5 could not be fetched (HTTPError) ; photo 6 could not be fetched (HTTPError) ; photo 7 rejected: too small (922x1153 after crop, need 1080x1350) ; photo 8 rejected:",
    "status": "WATCHING",
-   "last_check": "2026-10-19",
+   "last_check": "2026-10-26",
    "ready_photos": 0,
    "candidate_photos": []
   },
@@ -68,8 +56,9 @@
    "added": "2026-10-19",
    "reason": "photo 2 HOLD: tilt ; photo 3 HOLD: tilt ; photo 4 HOLD: tilt ; photo 5 held: tilt -4.8 deg is over the limit ; photo 6 HOLD: tilt ; only 1 photos passed, need 4",
    "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0015",
@@ -82,8 +71,9 @@
    "added": "2026-10-19",
    "reason": "photo 1 HOLD: tilt ; photo 3 HOLD: tilt ; photo 5 HOLD: brightness, tilt ; photo 6 HOLD: tilt ; photo 7 HOLD: tilt ; photo 8 HOLD: tilt ; only 2 photos passed, need 4",
    "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0016",
@@ -96,8 +86,9 @@
    "added": "2026-10-19",
    "reason": "photo 2 held: tilt 4.0 deg is over the limit ; photo 4 HOLD: tilt ; only 3 photos passed, need 4",
    "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0017",
@@ -110,8 +101,9 @@
    "added": "2026-10-19",
    "reason": "photo 1 HOLD: tilt ; photo 2 held: tilt 8.4 deg is over the limit ; photo 4 HOLD: tilt ; photo 5 HOLD: tilt ; only 2 photos passed, need 4",
    "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "last_check": "2026-10-26",
+   "ready_photos": 0,
+   "candidate_photos": []
   },
   {
    "index": "0019",
@@ -123,9 +115,18 @@
    "pages": [],
    "added": "2026-10-19",
    "reason": "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350) ; photo 4 rejected: too small (1066x1333 after crop, need 1080x1350) ; only 2 photos passed, need 4",
-   "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "status": "READY",
+   "last_check": "2026-10-26",
+   "ready_photos": 7,
+   "candidate_photos": [
+    "http://static1.squarespace.com/static/65735eea6b402b3eeb7152f1/t/657ba500afbdae58611b901b/1702601984319/2020_HS_FAVICON.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/1702059791147-RA5H535C34LOB7YEQVPK/1.png?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/4e37ce72-d284-4f18-980a-e329efb83371/Sisters_013.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6dc5812d-3dd2-4d81-9195-53659c26dd31/Sisters_002.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c9131150-4835-42cc-a38f-435aac9c3394/Sisters_011.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/ef630097-779a-4bc5-9682-1f79f46c40f1/1.jpg?format=2500w"
+   ]
   },
   {
    "index": "0010",
@@ -138,8 +139,12 @@
    "added": "2026-10-19",
    "reason": "photo 1 HOLD: tilt ; photo 3 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 7 straightened +1.1 deg ; photo 7 keystone corrected -2.5 deg ; photo 9 is a near-duplicate, dropped ; photo 10 straightened +0.4 deg ; photo 2 dropped: did not match the set ; photo 8 dropped: did not ma",
    "status": "WATCHING",
-   "last_check": null,
-   "ready_photos": 0
+   "last_check": "2026-10-26",
+   "ready_photos": 2,
+   "candidate_photos": [
+    "https://static-2026.dezeen.com/uploads/2026/10/Gundry-Ducker-French-Dining-Culture-Cassette-Featured_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/Gundry-Ducker-French-dining-culture-Cassette_dezeen_2364_col_3.jpg"
+   ]
   }
  ]
 }

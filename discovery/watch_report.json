@@ -1,23 +1,59 @@
 {
- "checked": "2026-10-19T13:13:08Z",
+ "checked": "2026-10-26T13:39:56Z",
  "items": [
   {
    "index": "0007",
    "place": "Focacha",
    "status": "READY",
-   "ready_photos": 6
+   "ready_photos": 0
   },
   {
    "index": "0008",
    "place": "Upstairs at Hausu",
    "status": "READY",
-   "ready_photos": 4
+   "ready_photos": 0
   },
   {
    "index": "0012",
    "place": "Bar Susanne",
    "status": "WATCHING",
    "ready_photos": 0
+  },
+  {
+   "index": "0013",
+   "place": "The Campbell",
+   "status": "WATCHING",
+   "ready_photos": 0
+  },
+  {
+   "index": "0015",
+   "place": "Venetian Pool",
+   "status": "WATCHING",
+   "ready_photos": 0
+  },
+  {
+   "index": "0016",
+   "place": "Fontainebleau",
+   "status": "WATCHING",
+   "ready_photos": 0
+  },
+  {
+   "index": "0017",
+   "place": "The Polo Lounge",
+   "status": "WATCHING",
+   "ready_photos": 0
+  },
+  {
+   "index": "0019",
+   "place": "Sisters",
+   "status": "READY",
+   "ready_photos": 7
+  },
+  {
+   "index": "0010",
+   "place": "Cassette",
+   "status": "WATCHING",
+   "ready_photos": 2
   }
  ]
 }
