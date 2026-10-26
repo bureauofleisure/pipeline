@@ -1,38 +1,124 @@
 {
  "sets": [
   {
-   "id": "smoke-sisters",
+   "id": "twa-gsc",
    "photos": [
     {
      "n": 1,
-     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
-     "ok": true,
-     "width": 1333,
-     "height": 2000,
-     "bytes": 470714,
-     "format": null
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28545/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
      "n": 2,
-     "url": "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg",
-     "ok": true,
-     "width": 2364,
-     "height": 3152,
-     "bytes": 986733,
-     "format": null
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28546/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
      "n": 3,
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064r.jpg",
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28547/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 4,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28548/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 5,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28549/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 6,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28550/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 7,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28551/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 8,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28552/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 9,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28553/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 10,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28554/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 11,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28555/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 12,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28556/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 13,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28557/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 14,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28558/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 15,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28559/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 16,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28560/full/pct:50/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 17,
+     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:gsc:5a28000:5a28500:5a28548/full/full/0/default.jpg",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "n": 18,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28548u.tif",
      "ok": true,
-     "width": 640,
-     "height": 530,
-     "bytes": 41660,
+     "width": 5411,
+     "height": 4299,
+     "bytes": 23287548,
      "format": null
     }
    ],
    "sheets": [
-    "smoke-sisters-1.jpg"
+    "twa-gsc-1.jpg",
+    "twa-gsc-2.jpg",
+    "twa-gsc-3.jpg"
    ]
   }
  ]
