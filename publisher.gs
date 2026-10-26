@@ -1,6 +1,7 @@
 /**
- * Bureau of Leisure Publisher v0.14 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.15 (MODE: DRYRUN default, QUIET, LIVE)
  *
+ * v0.15: review page gains Failed and Dry run tabs, so FAILED rows can be re-approved in one click.
  * v0.14 (2026-10-26, after Meta put the developer account through a human check and blocked API access):
  *   Meta brake    any block, restriction, bad-token or rate-limit error from Meta stops every API call at once,
  *                 emails "Meta blocked: action needed" once, and leaves the row where it was (nothing is burned).
@@ -843,7 +844,7 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
- <? ['DRAFT','EDITS','APPROVED','KILLED','POSTED','ALL'].forEach(function(k){ ?><a href="<?= base ?>?show=<?= k ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?></a><? }); ?>
+ <? ['DRAFT','EDITS','APPROVED','FAILED','DRY RUN','KILLED','POSTED','ALL'].forEach(function(k){ ?><a href="<?= base ?>?show=<?= encodeURIComponent(k) ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?></a><? }); ?>
  <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
 <? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
 <? posts.forEach(function(p){ ?>
