@@ -143,12 +143,42 @@ def best_image(files):
             return f["url"].split("#")[0], w, h
     tifs = [f for f in files if "tiff" in (f.get("mimetype") or "") or re.search(r"\.tiff?$", f["url"], re.I)]
     for f in tifs[:2]:
-        got = iiif_resolve(f["url"])
+        got = iiif_resolve(f["url"]) or tif_header_size(f["url"])
         if got and got[1] >= MIN_WIDE and got[2] >= MIN_TALL:
             return got
         if got:
             STATS["small_masters"] = STATS.get("small_masters", 0) + 1
     return None
+
+
+def tiff_dims(b):
+    """Width and height from the first IFD of a TIFF (tags 256 and 257), no imaging library needed."""
+    import struct
+    end = {b"II": "<", b"MM": ">"}[b[:2]]
+    off = struct.unpack(end + "I", b[4:8])[0]
+    n = struct.unpack(end + "H", b[off:off + 2])[0]
+    dims = {}
+    for i in range(n):
+        e = b[off + 2 + 12 * i: off + 14 + 12 * i]
+        tag, typ = struct.unpack(end + "HH", e[:4])
+        if tag in (256, 257):
+            dims[tag] = struct.unpack(end + "H", e[8:10])[0] if typ == 3 else struct.unpack(end + "I", e[8:12])[0]
+    return dims[256], dims[257]
+
+
+def tif_header_size(tif_url):
+    """IIIF answers 404 for these ids (checked 2026-10-26), but the master TIFF itself downloads and the build
+    opens it (Gottscho TWA Lisbon Lounge, 5411x4299). Read only the first 256 KB to learn its size."""
+    try:
+        req = urllib.request.Request(tif_url, headers={"User-Agent": UA, "Range": "bytes=0-262143"})
+        with urllib.request.urlopen(req, timeout=40) as r:
+            head = r.read(262144)
+        w, h = tiff_dims(head)
+        STATS["tif_header_ok"] = STATS.get("tif_header_ok", 0) + 1
+        return tif_url, int(w), int(h)
+    except Exception as e:  # noqa: BLE001
+        STATS.setdefault("tif_header_misses", []).append(f"{tif_url[-40:]}: {type(e).__name__}")
+        return None
 
 
 def as_text(v):
