@@ -415,6 +415,8 @@ def main():
     # the public link page and the profile seal live at the site root, next to the posts
     site = os.path.join(os.path.dirname(os.path.abspath(__file__)), "site")
     shutil.copy(os.path.join(site, "index.html"), os.path.join(out_root, "index.html"))
+    # privacy policy URL is set in the Meta app (App settings > Basic); keep it at this path
+    shutil.copy(os.path.join(site, "privacy.html"), os.path.join(out_root, "privacy.html"))
     shutil.copy(os.path.join(ROOT, "brand", "avatar.jpg"), os.path.join(out_root, "avatar.jpg"))
     posts = []
     for path in sorted(glob.glob(os.path.join(ROOT, "batches", "*.json"))):
