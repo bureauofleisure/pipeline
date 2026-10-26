@@ -1,0 +1,30 @@
+name: Preview photos
+
+# Contact sheets for the weekly review. The review commits discovery/preview_request.json to the
+# `previews` branch and dispatches this on that branch; the sheets land in previews/ on the same branch.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pillow
+      - run: python discovery/preview.py
+      - name: Save the sheets
+        run: |
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add -A previews
+          git diff --cached --quiet && exit 0
+          git commit -m "Previews $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push origin HEAD:${GITHUB_REF_NAME}
