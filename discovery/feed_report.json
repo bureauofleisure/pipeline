@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-19T11:50:33Z",
+  "checked": "2026-10-26T13:34:42Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -7,37 +7,37 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 21
+      "items": 6
     },
     {
       "name": "Dezeen hotels",
       "tier": 2,
       "category": "design_press",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": "200 lenient",
-      "items": 20
+      "items": 19
     },
     {
       "name": "Dezeen bars",
       "tier": 2,
       "category": "design_press",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": "200 lenient",
-      "items": 18
+      "items": 16
     },
     {
       "name": "Dezeen restaurants",
       "tier": 2,
       "category": "design_press",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": "200 lenient",
-      "items": 20
+      "items": 17
     },
     {
       "name": "Yellowtrace",
       "tier": 2,
       "category": "design_press",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": "200 ok",
       "items": 10
     },
@@ -63,7 +63,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 14
+      "items": 16
     },
     {
       "name": "Architectural Digest",
@@ -151,7 +151,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 35
+      "items": 33
     },
     {
       "name": "Roman and Williams",
@@ -501,7 +501,7 @@
       "name": "AHEAD Awards",
       "tier": 2,
       "category": "awards",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -511,7 +511,7 @@
       "category": "awards",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 15
+      "items": 13
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -653,7 +653,7 @@
       "name": "Historic Hotels of America",
       "tier": 2,
       "category": "historic",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -1043,6 +1043,78 @@
     },
     {
       "name": "Stack Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Parts and Labor Design",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Josh Greenspan",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "USM",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Busta Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Fabio Fantolino",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Isern Serra",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Eva Gold",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Gundry & Ducker",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ivy Studio",
       "tier": 1,
       "category": "studio",
       "site": 200,
