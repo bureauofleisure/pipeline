@@ -1,0 +1,39 @@
+{
+ "sets": [
+  {
+   "id": "smoke-sisters",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 470714,
+     "format": null
+    },
+    {
+     "n": 2,
+     "url": "https://static.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 986733,
+     "format": null
+    },
+    {
+     "n": 3,
+     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064r.jpg",
+     "ok": true,
+     "width": 640,
+     "height": 530,
+     "bytes": 41660,
+     "format": null
+    }
+   ],
+   "sheets": [
+    "smoke-sisters-1.jpg"
+   ]
+  }
+ ]
+}
