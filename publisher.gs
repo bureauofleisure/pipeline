@@ -1,6 +1,7 @@
 /**
- * Bureau of Leisure Publisher v0.15 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.16 (MODE: DRYRUN default, QUIET, LIVE)
  *
+ * v0.16: one row of tabs, each with its count (the separate unlinked counts line is gone).
  * v0.15: review page gains Failed and Dry run tabs, so FAILED rows can be re-approved in one click.
  * v0.14 (2026-10-26, after Meta put the developer account through a human check and blocked API access):
  *   Meta brake    any block, restriction, bad-token or rate-limit error from Meta stops every API call at once,
@@ -824,7 +825,7 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  header{position:sticky;top:0;background:#F1E9DC;border-bottom:2px solid #2A2420;padding:14px 20px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;z-index:2}
  header h1{font-size:16px;letter-spacing:.12em;margin:0;text-transform:uppercase}
  header a{color:#2A2420;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
- header .counts{font-size:13px;margin-left:auto}
+ header a .n{font-size:11px;opacity:.7}
  .post{border-bottom:1px solid #2A2420;padding:22px 20px;display:grid;grid-template-columns:1fr 360px;gap:22px}
  .post.done{opacity:.35}
  .strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
@@ -844,8 +845,8 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
- <? ['DRAFT','EDITS','APPROVED','FAILED','DRY RUN','KILLED','POSTED','ALL'].forEach(function(k){ ?><a href="<?= base ?>?show=<?= encodeURIComponent(k) ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?></a><? }); ?>
- <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
+ <? ['DRAFT','EDITS','APPROVED','FAILED','DRY RUN','KILLED','POSTED','ALL'].forEach(function(k){ var n = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); ?><a href="<?= base ?>?show=<?= encodeURIComponent(k) ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?> <span class="n" data-k="<?= k ?>"><?= n ?></span></a><? }); ?>
+ </header>
 <? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
 <? posts.forEach(function(p){ ?>
 <section class="post" id="p<?= p.row ?>">
@@ -886,7 +887,8 @@ function go(row, status, index, note){
   google.script.run.withSuccessHandler(function(counts){
     document.getElementById('s'+row).textContent = status; sec.classList.add('done');
     const box=document.getElementById('e'+row); if (box) box.hidden=true;
-    document.getElementById('counts').textContent = Object.keys(counts).map(k => k+' '+counts[k]).join(' · ');
+    document.querySelectorAll('header .n').forEach(function(el){ var k = el.getAttribute('data-k');
+      el.textContent = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); });
   }).withFailureHandler(function(e){ err.textContent = 'Not saved: ' + e.message; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = false); })
   .setStatus(row, status, {index: String(index), note: note || ''}, note || '');
 }
