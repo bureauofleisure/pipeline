@@ -34,7 +34,7 @@
   },
   "adam firman": {
    "name": "Adam Firman",
-   "seen": 22,
+   "seen": 16,
    "resolved": true,
    "url": "https://adamfirman.com/",
    "platform": "wordpress",
@@ -162,7 +162,7 @@
   },
   "jack lovel": {
    "name": "Jack Lovel",
-   "seen": 12,
+   "seen": 11,
    "resolved": true,
    "url": "https://www.jacklovel.com/",
    "platform": "squarespace",
@@ -266,7 +266,7 @@
   },
   "alex fradkin": {
    "name": "Alex Fradkin",
-   "seen": 3,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.alexfradkin.com/",
    "platform": "unknown",
@@ -322,7 +322,7 @@
   },
   "alixe lay": {
    "name": "Alixe Lay",
-   "seen": 9,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.alixelay.com/",
    "platform": "squarespace",
@@ -338,7 +338,7 @@
   },
   "bre furlong": {
    "name": "Bre Furlong",
-   "seen": 6,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.breannefurlong.com/",
    "platform": "squarespace",
@@ -402,7 +402,7 @@
   },
   "bruzkus greenberg": {
    "name": "Bruzkus Greenberg",
-   "seen": 13,
+   "seen": 9,
    "resolved": true,
    "url": "https://www.bruzkusgreenberg.com/en",
    "platform": "unknown",
@@ -466,7 +466,7 @@
   },
   "lauren arzbaecher": {
    "name": "Lauren Arzbaecher",
-   "seen": 5,
+   "seen": 7,
    "resolved": true,
    "url": "https://laurenarzbaecher.com/",
    "platform": "squarespace",
@@ -498,7 +498,7 @@
   },
   "oliver haslegrave": {
    "name": "Oliver Haslegrave",
-   "seen": 2,
+   "seen": 1,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -506,7 +506,7 @@
   },
   "tom mcgovern": {
    "name": "Tom McGovern",
-   "seen": 2,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.tommcgovernphoto.com/",
    "platform": "squarespace",
@@ -514,7 +514,7 @@
   },
   "mark cocksedge": {
    "name": "Mark Cocksedge",
-   "seen": 2,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.markcocksedge.co.uk/",
    "platform": "unknown",
@@ -530,7 +530,7 @@
   },
   "dean hearne": {
    "name": "Dean Hearne",
-   "seen": 1,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.deanhearne.com/",
    "platform": "squarespace",
@@ -538,7 +538,7 @@
   },
   "raquel diniz": {
    "name": "Raquel Diniz",
-   "seen": 1,
+   "seen": 6,
    "resolved": true,
    "url": "https://www.raqueldiniz.com/",
    "platform": "wordpress",
@@ -570,7 +570,7 @@
   },
   "michael sinclair": {
    "name": "Michael Sinclair",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.michaelsinclair.com/",
    "platform": "unknown",
@@ -602,7 +602,7 @@
   },
   "luke hayes": {
    "name": "Luke Hayes",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.lukehayes.com/",
    "platform": "format",
@@ -674,10 +674,18 @@
   },
   "suellen parker": {
    "name": "Suellen Parker",
-   "seen": 1,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.suellenparker.com/",
    "platform": "squarespace",
+   "checked": "2026-10-26"
+  },
+  "andrew meredith": {
+   "name": "Andrew Meredith",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://andrewmeredith.co.uk/",
+   "platform": "unknown",
    "checked": "2026-10-26"
   }
  },
@@ -692,7 +700,7 @@
   },
   "joyce wang studio": {
    "name": "Joyce Wang Studio",
-   "seen": 19,
+   "seen": 16,
    "resolved": true,
    "url": "https://joycewangstudio.com/",
    "platform": "wordpress",
@@ -732,7 +740,7 @@
   },
   "invisible studio": {
    "name": "Invisible Studio",
-   "seen": 10,
+   "seen": 11,
    "resolved": true,
    "url": "https://www.invisiblestudio.com/",
    "platform": "unknown",
@@ -764,7 +772,7 @@
   },
   "studio vero": {
    "name": "Studio Vero",
-   "seen": 6,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.studiovero.ca/",
    "platform": "squarespace",
@@ -988,7 +996,7 @@
   },
   "mad architects": {
    "name": "MAD Architects",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://madarchitects.com/",
    "platform": "wordpress",
@@ -1028,6 +1036,22 @@
   },
   "renowned architect ma yansong": {
    "name": "renowned architect Ma Yansong",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-26"
+  },
+  "common studio joyce wang": {
+   "name": "Common Studio Joyce Wang",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-10-26"
+  },
+  "common studio together": {
+   "name": "Common Studio Together",
    "seen": 1,
    "resolved": false,
    "url": null,

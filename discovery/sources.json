@@ -1797,6 +1797,18 @@
    "auto": true,
    "platform": "unknown",
    "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-26."
+  },
+  {
+   "name": "Andrew Meredith",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://andrewmeredith.co.uk/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-26."
   }
  ]
 }
