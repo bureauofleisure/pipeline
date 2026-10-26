@@ -1,5 +1,5 @@
 {
- "searched": "2026-10-26T14:09:08Z",
+ "searched": "2026-10-26T14:46:25Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,43 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 12,
-  "results": 256,
-  "items_opened": 8,
-  "offtopic": 0,
+  "searches": 6,
+  "results": 278,
+  "items_opened": 27,
+  "offtopic": 1,
   "rights": 0,
-  "size": 8,
-  "type": 0,
+  "size": 25,
+  "type": 1,
   "errors": [
-   "item http://www.loc.gov/item/mt0317/: HTTPError",
-   "item http://www.loc.gov/item/mt0360/: HTTPError",
-   "item http://www.loc.gov/item/mt0361/: HTTPError",
-   "item http://www.loc.gov/item/ny2406/: HTTPError",
-   "item http://www.loc.gov/item/nd0016/: HTTPError",
-   "item http://www.loc.gov/item/mt0356/: HTTPError",
-   "item http://www.loc.gov/item/mt0352/: HTTPError",
-   "item http://www.loc.gov/item/mt0357/: HTTPError",
-   "item http://www.loc.gov/item/mt0354/: HTTPError",
+   "item http://www.loc.gov/item/2018732212/: HTTPError",
+   "item http://www.loc.gov/item/2018732210/: HTTPError",
+   "item http://www.loc.gov/item/2018732045/: HTTPError",
+   "item http://www.loc.gov/item/2018732654/: HTTPError",
+   "item http://www.loc.gov/item/2018732652/: HTTPError",
+   "search Toffenetti Restaurant: HTTPError HTTP Error 429: Too Many Requests",
+   "search Toffenetti restaurant Times Square: HTTPError HTTP Error 429: Too Many Requests",
+   "search Grand Central Oyster Bar: HTTPError HTTP Error 429: Too Many Requests",
+   "search Grand Central Oyster Bar interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Driskill Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Driskill Hotel lobby Austin: HTTPError HTTP Error 429: Too Many Requests",
+   "search Biltmore Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Biltmore Hotel Coral Gables lobby: HTTPError HTTP Error 429: Too Many Requests",
+   "search Clifton's Cafeteria: HTTPError HTTP Error 429: Too Many Requests",
+   "search Clifton's Cafeteria Los Angeles: HTTPError HTTP Error 429: Too Many Requests",
+   "search Millennium Biltmore Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Millennium Biltmore Hotel Los Angeles lobby: HTTPError HTTP Error 429: Too Many Requests",
+   "search Menger Hotel: HTTPError HTTP Error 429: Too Many Requests",
+   "search Menger Hotel San Antonio: HTTPError HTTP Error 429: Too Many Requests",
+   "search Bemelmans Bar: HTTPError HTTP Error 429: Too Many Requests",
+   "search Bemelmans Bar Carlyle: HTTPError HTTP Error 429: Too Many Requests",
+   "search Venetian Pool: HTTPError HTTP Error 429: Too Many Requests",
+   "search Venetian Pool Coral Gables: HTTPError HTTP Error 429: Too Many Requests",
+   "search Caffe Reggio: HTTPError HTTP Error 429: Too Many Requests",
+   "search Caffe Reggio interior: HTTPError HTTP Error 429: Too Many Requests",
+   "search Russian and Turkish Baths: HTTPError HTTP Error 429: Too Many Requests",
+   "search Russian and Turkish Baths East Village: HTTPError HTTP Error 429: Too Many Requests",
+   "search The Campbell: HTTPError HTTP Error 429: Too Many Requests",
+   "search Campbell Apartment Grand Central: HTTPError HTTP Error 429: Too Many Requests",
    "search TWA Hotel: HTTPError HTTP Error 429: Too Many Requests",
    "search Union News restaurants TWA Idlewild: HTTPError HTTP Error 429: Too Many Requests",
    "search Hotel Chelsea: HTTPError HTTP Error 429: Too Many Requests",
@@ -34,88 +54,64 @@
    "search Eden Roc Miami Beach Lapidus: HTTPError HTTP Error 429: Too Many Requests",
    "search The Raleigh: HTTPError HTTP Error 429: Too Many Requests",
    "search Raleigh Hotel Miami Beach pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Venetian Pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Venetian Pool Coral Gables: HTTPError HTTP Error 429: Too Many Requests",
-   "search Driskill Hotel: HTTPError HTTP Error 429: Too Many Requests",
-   "search Driskill Hotel lobby Austin: HTTPError HTTP Error 429: Too Many Requests",
-   "search Barton Springs Pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Barton Springs Pool Austin: HTTPError HTTP Error 429: Too Many Requests",
-   "search Musso & Frank Grill: HTTPError HTTP Error 429: Too Many Requests",
-   "search Musso and Frank Grill interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search The Beverly Hills Hotel: HTTPError HTTP Error 429: Too Many Requests",
-   "search Beverly Hills Hotel Polo Lounge: HTTPError HTTP Error 429: Too Many Requests",
-   "search Chateau Marmont: HTTPError HTTP Error 429: Too Many Requests",
-   "search Chateau Marmont interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Sunnylands: HTTPError HTTP Error 429: Too Many Requests",
-   "search Sunnylands Annenberg interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Okura: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Okura Tokyo lobby 1962: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Il Pellicano: HTTPError HTTP Error 429: Too Many Requests",
-   "search Il Pellicano Porto Ercole: HTTPError HTTP Error 429: Too Many Requests",
-   "search Gellért Baths: HTTPError HTTP Error 429: Too Many Requests",
-   "search Gellért Baths interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Café Central: HTTPError HTTP Error 429: Too Many Requests"
+   "search Barton Springs Pool: HTTPError HTTP Error 429: Too Many Requests"
   ],
   "rights_seen": {},
   "sample_files": {
-   "item": "http://www.loc.gov/item/ca1271/",
+   "item": "http://www.loc.gov/item/ny1745/",
    "files": [
     {
-     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ca/ca1200/ca1271/photos/018140pu.tif",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ny/ny1700/ny1745/photos/350949pu.tif",
      "mimetype": "image/tiff",
      "width": 0,
      "height": 0
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018140p_150px.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350949p_150px.jpg",
      "mimetype": "image/jpg",
      "width": 150,
      "height": 119
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018140pr.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350949pr.jpg",
      "mimetype": "image/jpeg",
      "width": 640,
-     "height": 506
+     "height": 510
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018140pv.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350949pv.jpg",
      "mimetype": "image/jpeg",
      "width": 1024,
-     "height": 810
+     "height": 815
     },
     {
-     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ca/ca1200/ca1271/photos/018141pu.tif",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ny/ny1700/ny1745/photos/350950pu.tif",
      "mimetype": "image/tiff",
      "width": 0,
      "height": 0
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018141p_150px.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350950p_150px.jpg",
      "mimetype": "image/jpg",
      "width": 150,
-     "height": 118
+     "height": 119
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018141pr.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350950pr.jpg",
      "mimetype": "image/jpeg",
      "width": 640,
-     "height": 505
+     "height": 509
     },
     {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ca/ca1200/ca1271/photos/018141pv.jpg",
+     "url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/ny/ny1700/ny1745/photos/350950pv.jpg",
      "mimetype": "image/jpeg",
      "width": 1024,
-     "height": 808
+     "height": 814
     }
    ]
   },
-  "other_collections": 184,
+  "other_collections": 106,
   "iiif_misses": [
-   "abshaer:ca:ca1200:ca1271:photos:018140pu: HTTPError",
-   "habshaer:ca:ca1200:ca1271:photos:018140p: HTTPError",
-   "abshaer:ca:ca1200:ca1271:photos:018141pu: HTTPError",
-   "habshaer:ca:ca1200:ca1271:photos:018141p: HTTPError",
    "abshaer:ny:ny1700:ny1745:photos:350949pu: HTTPError",
    "habshaer:ny:ny1700:ny1745:photos:350949p: HTTPError",
    "abshaer:ny:ny1700:ny1745:photos:350950pu: HTTPError",
@@ -126,25 +122,155 @@
    "habshaer:ny:ny1700:ny1746:photos:350955p: HTTPError",
    "abshaer:ny:ny1700:ny1748:photos:350984pu: HTTPError",
    "habshaer:ny:ny1700:ny1748:photos:350984p: HTTPError",
-   "abshaer:ny:ny1700:ny1748:photos:350985pu: HTTPError",
-   "habshaer:ny:ny1700:ny1748:photos:350985p: HTTPError",
    "abshaer:ny:ny1700:ny1747:photos:350977pu: HTTPError",
    "habshaer:ny:ny1700:ny1747:photos:350977p: HTTPError",
    "abshaer:ny:ny1700:ny1747:photos:350978pu: HTTPError",
    "habshaer:ny:ny1700:ny1747:photos:350978p: HTTPError",
    "abshaer:ny:ny1700:ny1749:photos:350990pu: HTTPError",
    "habshaer:ny:ny1700:ny1749:photos:350990p: HTTPError",
-   "abshaer:ny:ny1700:ny1749:photos:350991pu: HTTPError",
-   "habshaer:ny:ny1700:ny1749:photos:350991p: HTTPError",
    "service:pnp:gsc:5a00000:5a00000:5a00064u: HTTPError",
    "/service:pnp:gsc:5a00000:5a00000:5a00064: HTTPError",
    "abshaer:mt:mt0300:mt0359:photos:345450pu: HTTPError",
    "habshaer:mt:mt0300:mt0359:photos:345450p: HTTPError",
    "abshaer:mt:mt0300:mt0359:photos:345451pu: HTTPError",
-   "habshaer:mt:mt0300:mt0359:photos:345451p: HTTPError"
-  ]
+   "habshaer:mt:mt0300:mt0359:photos:345451p: HTTPError",
+   "abshaer:mt:mt0300:mt0317:photos:345101pu: HTTPError",
+   "habshaer:mt:mt0300:mt0317:photos:345101p: HTTPError",
+   "abshaer:mt:mt0300:mt0317:photos:345102pu: HTTPError",
+   "habshaer:mt:mt0300:mt0317:photos:345102p: HTTPError",
+   "abshaer:mt:mt0300:mt0360:photos:345457pu: HTTPError",
+   "habshaer:mt:mt0300:mt0360:photos:345457p: HTTPError",
+   "abshaer:mt:mt0300:mt0361:photos:345458pu: HTTPError",
+   "habshaer:mt:mt0300:mt0361:photos:345458p: HTTPError",
+   "abshaer:nd:nd0000:nd0016:photos:102991pu: HTTPError",
+   "habshaer:nd:nd0000:nd0016:photos:102991p: HTTPError",
+   "abshaer:nd:nd0000:nd0016:photos:102992pu: HTTPError",
+   "habshaer:nd:nd0000:nd0016:photos:102992p: HTTPError",
+   "abshaer:mt:mt0300:mt0356:photos:345440pu: HTTPError",
+   "habshaer:mt:mt0300:mt0356:photos:345440p: HTTPError",
+   "abshaer:mt:mt0300:mt0356:photos:345441pu: HTTPError",
+   "habshaer:mt:mt0300:mt0356:photos:345441p: HTTPError",
+   "abshaer:mt:mt0300:mt0352:photos:345425pu: HTTPError",
+   "habshaer:mt:mt0300:mt0352:photos:345425p: HTTPError",
+   "abshaer:mt:mt0300:mt0352:photos:345426pu: HTTPError",
+   "habshaer:mt:mt0300:mt0352:photos:345426p: HTTPError",
+   "abshaer:mt:mt0300:mt0357:photos:345443pu: HTTPError",
+   "habshaer:mt:mt0300:mt0357:photos:345443p: HTTPError",
+   "abshaer:mt:mt0300:mt0357:photos:345444pu: HTTPError",
+   "habshaer:mt:mt0300:mt0357:photos:345444p: HTTPError",
+   "abshaer:mt:mt0300:mt0354:photos:345433pu: HTTPError",
+   "habshaer:mt:mt0300:mt0354:photos:345433p: HTTPError",
+   "abshaer:mt:mt0300:mt0354:photos:345434pu: HTTPError",
+   "habshaer:mt:mt0300:mt0354:photos:345434p: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27787u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27787: HTTPError",
+   "service:pnp:gsc:5a28000:5a28400:5a28423u: HTTPError",
+   "/service:pnp:gsc:5a28000:5a28400:5a28423: HTTPError",
+   "service:pnp:gsc:5a29000:5a29700:5a29715u: HTTPError",
+   "/service:pnp:gsc:5a29000:5a29700:5a29715: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27716u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27716: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27776u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27776: HTTPError",
+   "service:pnp:gsc:5a28000:5a28000:5a28016u: HTTPError",
+   "/service:pnp:gsc:5a28000:5a28000:5a28016: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27780u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27780: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27781u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27781: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27785u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27785: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27777u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27777: HTTPError",
+   "service:pnp:gsc:5a27000:5a27700:5a27778u: HTTPError",
+   "/service:pnp:gsc:5a27000:5a27700:5a27778: HTTPError"
+  ],
+  "tif_header_misses": [
+   "aer/ny/ny1700/ny1745/photos/350949pu.tif: error",
+   "aer/ny/ny1700/ny1745/photos/350950pu.tif: error",
+   "aer/ny/ny1700/ny1746/photos/350954pu.tif: error",
+   "aer/ny/ny1700/ny1746/photos/350955pu.tif: error",
+   "aer/ny/ny1700/ny1747/photos/350977pu.tif: error",
+   "aer/ny/ny1700/ny1747/photos/350978pu.tif: error",
+   "aer/mt/mt0300/mt0359/photos/345450pu.tif: error",
+   "aer/mt/mt0300/mt0359/photos/345451pu.tif: error",
+   "aer/mt/mt0300/mt0317/photos/345101pu.tif: error",
+   "aer/mt/mt0300/mt0317/photos/345102pu.tif: error",
+   "aer/mt/mt0300/mt0360/photos/345457pu.tif: error",
+   "aer/mt/mt0300/mt0361/photos/345458pu.tif: error",
+   "aer/nd/nd0000/nd0016/photos/102991pu.tif: error",
+   "aer/nd/nd0000/nd0016/photos/102992pu.tif: error",
+   "aer/mt/mt0300/mt0356/photos/345440pu.tif: error",
+   "aer/mt/mt0300/mt0356/photos/345441pu.tif: error",
+   "aer/mt/mt0300/mt0352/photos/345425pu.tif: error",
+   "aer/mt/mt0300/mt0352/photos/345426pu.tif: error",
+   "aer/mt/mt0300/mt0357/photos/345443pu.tif: error",
+   "aer/mt/mt0300/mt0357/photos/345444pu.tif: error",
+   "aer/mt/mt0300/mt0354/photos/345433pu.tif: error",
+   "aer/mt/mt0300/mt0354/photos/345434pu.tif: error",
+   "ter/pnp/gsc/5a27000/5a27700/5a27787u.tif: TimeoutError"
+  ],
+  "tif_header_ok": 13,
+  "small_masters": 11,
+  "out_of_time": true
  },
  "targets": [
+  {
+   "place": "Rainbow Room",
+   "city": "New York",
+   "era": "1934",
+   "candidates": [
+    {
+     "title": "Rainbow Bridge Toll Plaza, Secondary Canopy, Rainbow Plaza, Niagara Falls, Niagara County, NY",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ny/ny1700/ny1748/photos/350984pu.tif",
+     "width": 5000,
+     "height": 4009,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "Historic American Buildings Survey, creator Cannon, Thiele, Betz and Cannon Roede, Alison, historian Lovi, Christopher, photographer Hardy Holzman Pfeiffer Architects, contractor Niagara Falls Bridge Commission, sponsor U.S. General Services Administration (GSA), sponsor",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ny1748/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Rainbow Bridge Toll Plaza, United States Customs Service Building, Rainbow Plaza, Niagara Falls, Niagara County, NY",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ny/ny1700/ny1749/photos/350990pu.tif",
+     "width": 5000,
+     "height": 4027,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "Historic American Buildings Survey, creator Roede, Alison, historian Lovi, Christopher, photographer Hardy Holzman Pfeiffer Architects, contractor Niagara Falls Bridge Commission, sponsor U.S. General Services Administration, sponsor",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ny1749/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 2
+  },
+  {
+   "place": "Longchamps",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner photographed the Longchamps chain's Winold Reiss interiors; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Schrafft's",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner holds many Schrafft's interiors; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Toffenetti Restaurant",
+   "city": "New York",
+   "era": "1940",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner, Times Square.",
+   "candidates": [],
+   "count": 0
+  },
   {
    "place": "Grand Central Oyster Bar",
    "city": "New York",
@@ -153,9 +279,53 @@
    "count": 0
   },
   {
+   "place": "Driskill Hotel",
+   "city": "Austin",
+   "era": "1886",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Biltmore Hotel",
+   "city": "Miami",
+   "era": "1926",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Clifton's Cafeteria",
+   "city": "Los Angeles",
+   "era": "1935",
+   "notes": "Added 2026-10-26: Carol M. Highsmith, Broadway, downtown Los Angeles.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Millennium Biltmore Hotel",
+   "city": "Los Angeles",
+   "era": "1923",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Menger Hotel",
+   "city": "San Antonio",
+   "era": "1859",
+   "notes": "Added 2026-10-26: Carol M. Highsmith, Texas.",
+   "candidates": [],
+   "count": 0
+  },
+  {
    "place": "Bemelmans Bar",
    "city": "New York",
    "era": "1947",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Venetian Pool",
+   "city": "Miami",
+   "era": "1924",
    "candidates": [],
    "count": 0
   },
@@ -181,17 +351,10 @@
    "count": 0
   },
   {
-   "place": "Rainbow Room",
-   "city": "New York",
-   "era": "1934",
-   "candidates": [],
-   "count": 0
-  },
-  {
    "place": "TWA Hotel",
    "city": "New York",
    "era": "1962",
-   "notes": "Edits 2026-10-23: Lewie wants professional photos to replace the Commons set on 0014. Leads on loc.gov: Gottscho-Schleisner series 'Union News restaurants, TWA, Idlewild' (1962; Lisbon Lounge I, II, III, Lisbon Lounge bar, London Club II; items 2018732786, 2018732788, 2018732789, 2018732794). HABS NY-6371 lists 79 Peter Brandt photographs but they are not digitized. Balthazar Korab collection has interiors (2018673438, 2020714541) but is not an approved collection and rights are not evaluated.",
+   "notes": "Edits 2026-10-23: Lewie wants professional photos to replace the Commons set on 0014. Leads on loc.gov: Gottscho-Schleisner series 'Union News restaurants, TWA, Idlewild' (1962; Lisbon Lounge I, II, III, Lisbon Lounge bar, London Club II; items 2018732786, 2018732788, 2018732789, 2018732794). HABS NY-6371 lists 79 Peter Brandt photographs but they are not digitized. Balthazar Korab collection has interiors (2018673438, 2020714541) but is not an approved collection and rights are not evaluated. 2026-10-26: the IIIF ids 404, but the master TIFF downloads: 5a28548u.tif (item 2018732786, Lisbon Lounge I) is 5411x4299 and was viewed: a composed professional view of the lounge under the shell roof. Sibling negatives are likely 5a28545 to 5a28560.",
    "candidates": [],
    "count": 0
   },
@@ -220,20 +383,6 @@
    "place": "The Raleigh",
    "city": "Miami",
    "era": "1940",
-   "candidates": [],
-   "count": 0
-  },
-  {
-   "place": "Venetian Pool",
-   "city": "Miami",
-   "era": "1924",
-   "candidates": [],
-   "count": 0
-  },
-  {
-   "place": "Driskill Hotel",
-   "city": "Austin",
-   "era": "1886",
    "candidates": [],
    "count": 0
   },
@@ -315,13 +464,6 @@
    "count": 0
   },
   {
-   "place": "Biltmore Hotel",
-   "city": "Miami",
-   "era": "1926",
-   "candidates": [],
-   "count": 0
-  },
-  {
    "place": "Deep Eddy Pool",
    "city": "Austin",
    "era": "1915",
@@ -332,13 +474,6 @@
    "place": "Hotel San José",
    "city": "Austin",
    "era": "1936",
-   "candidates": [],
-   "count": 0
-  },
-  {
-   "place": "Millennium Biltmore Hotel",
-   "city": "Los Angeles",
-   "era": "1923",
    "candidates": [],
    "count": 0
   },
