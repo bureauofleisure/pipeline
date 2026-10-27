@@ -111,3 +111,8 @@ Lewie can strike a rule by saying so; nothing here is removed otherwise.
   look. If the photos cannot be fetched and viewed in the run, the place waits for a run that can see them.
   (The 0014 set was chosen by Commons title and never viewed, which is how eleven frames of floor, carpet and
   concrete reached the review page.)
+- 2026-10-27 (Peridot 0009, Cassette 0010): a post carries only the slides of its latest build, and the review
+  page and the publisher see exactly those slides. When a rebuild shortens a post (a replicate dropped, a photo
+  held), the slide files it no longer uses must go and the sheet's slide links must be refreshed even on rows
+  already approved; otherwise the previous card stays on as an extra last slide and the card shows twice. Not yet
+  built in.
