@@ -1,0 +1,34 @@
+{
+  "index": "0008",
+  "place": "Upstairs at Hausu",
+  "status": "BENCHED",
+  "notes": [
+    "photo 1 straightened -1.4 deg",
+    "photo 1 HOLD: too saturated",
+    "photo 2 straightened -1.1 deg",
+    "photo 3 rejected: compression artifacts (blockiness 1.56)",
+    "photo 4 straightened -0.5 deg",
+    "photo 4 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "only 1 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "12fafe39141b",
+  "built": "2026-10-30",
+  "edited_at": "",
+  "photos_sig": "41ef1fcab78c",
+  "meta": {
+    "neighborhood": "Peckham",
+    "city": "London",
+    "category": "Bar",
+    "word": "VELVET",
+    "reminds": "the Red Room, Twin Peaks",
+    "credit": "Adam Firman",
+    "designer": "Eva Gold",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/05/11/upstairs-at-hausu-london-listening-bar-interiors/",
+    "bring": ""
+  }
+}

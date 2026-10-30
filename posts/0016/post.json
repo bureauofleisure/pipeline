@@ -1,0 +1,51 @@
+{
+  "index": "0016",
+  "place": "Fontainebleau",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 rejected: compression artifacts (blockiness 1.38)",
+    "photo 2 HOLD: too cool",
+    "photo 3 rejected: compression artifacts (blockiness 1.54)",
+    "photo 4 straightened -0.5 deg",
+    "photo 6 rejected: compression artifacts (blockiness 1.62)",
+    "photo 8 HOLD: too cool",
+    "photo 9 HOLD: brightness",
+    "photo 10 keystone corrected +2.3 deg"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "97a4f6e4cb4a",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Miami Beach",
+    "city": "Miami",
+    "category": "Hotel",
+    "word": "GLAMOROUS",
+    "reminds": "Goldfinger's opening shot",
+    "credit": "Visitor7, CC BY-SA 3.0, via Wikimedia Commons",
+    "designer": "Morris Lapidus",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0016/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0016/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0016/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0016/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0016/05.jpg"
+  ],
+  "archive": "4 originals (7.4 MB), 0 new",
+  "cover_source_photo": 7,
+  "slide_sources": [
+    7,
+    4,
+    5,
+    10
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0016\nFONTAINEBLEAU. MIAMI BEACH, MIAMI.\nMORRIS LAPIDUS, 1954. BOW TIES IN THE DESIGN.\nBUILT ON THE OLD HARVEY FIRESTONE ESTATE.\nTHE STAIRCASE TO NOWHERE, PRESERVED.\nGOLDFINGER'S OPENING SHOT. SINATRA'S 1960 SPECIAL.\nIN A WORD: GLAMOROUS.",
+  "alt_text": "Fontainebleau, Miami Beach, Miami. The lobby of a 1954 Miami Beach resort hotel with a floating staircase, marble floors and columns."
+}

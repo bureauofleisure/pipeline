@@ -1,0 +1,31 @@
+{
+  "index": "0007",
+  "place": "Focacha",
+  "status": "BENCHED",
+  "notes": [
+    "photo 1 rejected: compression artifacts (blockiness 1.48)",
+    "photo 2 rejected: compression artifacts (blockiness 1.54)",
+    "photo 6 is a near-duplicate, dropped",
+    "only 3 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "e67e1e76dd0e",
+  "built": "2026-10-30",
+  "edited_at": "",
+  "photos_sig": "a9f7dbba8794",
+  "meta": {
+    "neighborhood": "Tuset Street",
+    "city": "Barcelona",
+    "category": "Bar",
+    "word": "MOODY",
+    "reminds": "Verner Panton's Visiona",
+    "credit": "",
+    "designer": "Isern Serra",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/06/28/barcelona-cocktail-bar-isern-serra-space-age-interiors/",
+    "bring": ""
+  }
+}
