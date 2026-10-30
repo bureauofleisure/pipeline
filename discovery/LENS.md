@@ -78,6 +78,14 @@ note, translates it into pick fields (drop_photos, rotate, cover, word, card lin
 rebuilds, and the post returns to DRAFT marked "Edited" for a second look. Small tilts and keystone are corrected
 automatically in the build; an edit note about a crooked slide usually means drop that photo or rotate it by hand.
 
+## Photo order (from 2026-10-30)
+Lewie reorders photos by dragging them on the review page. Every reorder is saved to
+`batches/orders/photo_order.json`: `orders` is what the build applies (source photo numbers, cover first),
+`history` records each change with the order it replaced. Treat history as taste: before naming a `cover` or
+an order for a new pick, read it and look at which photo Lewie moved to the front and what he pushed back.
+Pick the cover he would. Never edit or remove his saved orders; the build ignores one on its own if the
+photo list it was made against changes.
+
 ## Source yield
 Every source gets a running yield: candidates found, candidates that built, candidates approved.
 Sources that keep producing rejects are checked less often. Sources that keep producing approvals are

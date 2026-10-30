@@ -229,6 +229,22 @@ def alt_text(p):
     return f"{p['place']}, {p['neighborhood']}, {p['city']}. {p.get('alt_hint', 'Interior view.')}"[:1000]
 
 
+def photos_sig(p):
+    """Fingerprint of the photo list. A saved photo order only applies to the photo list it was made against."""
+    return hashlib.sha1(json.dumps(p.get("photos", [])).encode()).hexdigest()[:12]
+
+
+ORDERS_PATH = os.path.join(ROOT, "batches", "orders", "photo_order.json")
+
+
+def load_orders():
+    """Photo orders saved from the review page (drag and drop): {index: {order: [source photo numbers], sig, at}}."""
+    try:
+        return json.load(open(ORDERS_PATH)).get("orders", {})
+    except Exception:  # noqa: BLE001  no file yet, or unreadable: build as usual
+        return {}
+
+
 def entry_hash(p):
     return hashlib.sha1((json.dumps(p, sort_keys=True) + GRADE_VERSION + carousel.LAYOUT_VERSION).encode()).hexdigest()[:12]
 
@@ -249,6 +265,7 @@ def build_post(p, out_root):
               "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d"),
               # everything the sheet needs, passed straight through from the batch file
               "edited_at": p.get("edited_at", ""),      # set by the edits job when it applies a request
+              "photos_sig": photos_sig(p),               # the review page sends this back with a reorder
               "meta": {k: p.get(k, "") for k in ("neighborhood", "city", "category", "word", "reminds", "credit",
                                                   "designer", "designer_handle", "venue_handle",
                                                   "photographer_handle", "source_handle", "source_url", "bring")}}
@@ -333,6 +350,21 @@ def build_post(p, out_root):
             graded = chosen + [g for g in graded if g["i"] != cover - 1]
         else:
             result["notes"].append(f"named cover (photo {cover}) did not pass; best scoring photo used")
+    # a photo order dragged into place on the review page beats both the score and the named cover
+    rec = p.get("photo_order")
+    if rec:
+        result["order_at"] = rec.get("at", "")       # the sheet compares this stamp to know the reorder has landed
+        if rec.get("sig") and rec["sig"] != result["photos_sig"]:
+            result["notes"].append("photo order from review ignored: the photo list changed since it was set")
+        else:
+            order = [int(n) for n in rec.get("order", [])]
+            pos = {n: k for k, n in enumerate(order)}
+            graded.sort(key=lambda g: (0, pos[g["i"] + 1]) if g["i"] + 1 in pos else (1, -g["score"]))
+            passed = {g["i"] + 1 for g in graded}
+            absent = [n for n in order if n not in passed]
+            result["notes"].append("photo order set in review: " + ", ".join(map(str, order)))
+            if absent:
+                result["notes"].append("ordered photos that did not pass this time: " + ", ".join(map(str, absent)))
     graded = graded[:MAX_PHOTOS]
 
     # the set must hang together in tone: drop the odd one out (never the cover) until it does
@@ -356,11 +388,16 @@ def build_post(p, out_root):
     card = card_with_bring(p, result["notes"])
     slides = carousel.build(photos, idx, place_line, p["word"], p.get("reminds", ""), card, p.get("credit", ""))
     os.makedirs(out_dir, exist_ok=True)
+    # a post carries only the slides of its latest build: clear the old ones first (a shorter rebuild once left
+    # the previous card behind as a stale last slide)
+    for old in glob.glob(os.path.join(out_dir, "[0-9][0-9].jpg")):
+        os.remove(old)
     urls = []
     for n, s in enumerate(slides, 1):
         name = f"{n:02d}.jpg"
         export(s, os.path.join(out_dir, name))
-        urls.append(f"{BASE_URL}/posts/{idx}/{name}")
+        # ?v= changes with every rebuild, so browsers and the review page never show a cached old slide
+        urls.append(f"{BASE_URL}/posts/{idx}/{name}?v={h}")
     result["slides"] = urls
     used = {g["i"] + 1 for g in graded}
     for o in originals:
@@ -419,6 +456,7 @@ def main():
     shutil.copy(os.path.join(site, "privacy.html"), os.path.join(out_root, "privacy.html"))
     shutil.copy(os.path.join(ROOT, "brand", "avatar.jpg"), os.path.join(out_root, "avatar.jpg"))
     posts = []
+    orders = load_orders()
     for path in sorted(glob.glob(os.path.join(ROOT, "batches", "*.json"))):
         try:
             batch = json.load(open(path))["posts"]
@@ -426,6 +464,8 @@ def main():
             print(f"SKIPPED {os.path.basename(path)}: cannot read ({e})")
             continue
         for p in batch:
+            if str(p.get("index", "")) in orders:
+                p = dict(p, photo_order=orders[str(p["index"])])   # part of the entry hash, so a reorder rebuilds
             try:
                 posts.append(build_post(p, out_root))
             except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
