@@ -334,7 +334,7 @@ def build_post(p, out_root):
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
             result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
-        if p.get("archive"):
+        if p.get("archive") and "loc.gov" in src:   # Library of Congress negative scans only; never other photos
             raw, trimmed = trim_scan_border(raw)
             if trimmed:
                 result["notes"].append(f"photo {i + 1} film edge trimmed ({raw.width}x{raw.height})")

@@ -6,7 +6,7 @@ name: Archive search
 
 on:
   schedule:
-    - cron: "37 * * * *"
+    - cron: "37 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,6 +32,16 @@ jobs:
         run: |
           git config user.name "Bureau of Leisure"
           git config user.email "lewie@flow.agency"
+          # commit only when the finds changed, not just the timestamp and stats
+          python - <<'PY' || exit 0
+          import json, subprocess, sys
+          new = json.load(open("discovery/archive_candidates.json"))
+          try:
+              old = json.loads(subprocess.check_output(["git", "show", "HEAD:discovery/archive_candidates.json"]))
+          except Exception:
+              sys.exit(0)
+          sys.exit(0 if new.get("targets") != old.get("targets") or new.get("next_target") != old.get("next_target") else 1)
+          PY
           git add discovery/archive_candidates.json
           git diff --cached --quiet && exit 0
           git commit -m "Archive search $(date -u +%Y-%m-%dT%H:%MZ)"
