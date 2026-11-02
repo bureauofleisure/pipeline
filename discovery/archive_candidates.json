@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-02T21:07:44Z",
+ "searched": "2026-11-02T21:09:18Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,41 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 60,
+  "searches": 3,
+  "results": 93,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 16,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Rainbow Room; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Toffenetti Restaurant; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 40,
+  "other_collections": 33,
+  "tif_header_misses": [
+   "ter/pnp/gsc/5a28000/5a28400/5a28471u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27600/5a27673u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27600/5a27674u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27600/5a27671u.tif: HTTPError",
+   "ter/pnp/gsc/5a05000/5a05900/5a05932u.tif: HTTPError",
+   "ter/pnp/gsc/5a05000/5a05900/5a05938u.tif: HTTPError",
+   "ter/pnp/gsc/5a15000/5a15200/5a15202u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27700/5a27787u.tif: HTTPError",
+   "ter/pnp/gsc/5a28000/5a28400/5a28423u.tif: HTTPError",
+   "ter/pnp/gsc/5a29000/5a29700/5a29715u.tif: HTTPError",
+   "ter/pnp/gsc/5a08000/5a08900/5a08979u.tif: HTTPError",
+   "ter/pnp/gsc/5a08000/5a08900/5a08980u.tif: HTTPError",
+   "ter/pnp/gsc/5a08000/5a08900/5a08981u.tif: HTTPError",
+   "ter/pnp/gsc/5a28000/5a28000/5a28016u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27700/5a27776u.tif: HTTPError",
+   "ter/pnp/gsc/5a27000/5a27700/5a27780u.tif: HTTPError"
+  ],
   "rate_limited": true,
-  "targets_tried": 1
+  "targets_tried": 4
  },
- "next_target": 0,
+ "next_target": 3,
  "targets": [
   {
    "place": "Rainbow Room",
