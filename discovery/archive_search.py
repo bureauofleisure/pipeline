@@ -227,33 +227,43 @@ def candidates_for(t):
         if time.time() > DEADLINE:
             STATS["out_of_time"] = True; break
         rid = r.get("id") or r.get("url")
-        try:
-            item = get(rid.rstrip("/") + "/?fo=json")
-            STATS["items_opened"] += 1
-        except RateLimited:
-            raise
-        except Exception as e:  # noqa: BLE001
-            STATS["errors"].append(f"item {rid}: {type(e).__name__}"); continue
-        meta = item.get("item") or {}
-        rights = as_text(meta.get("rights_advisory") or item.get("rights_advisory") or meta.get("rights"))
-        if not FREE.search(rights) or (RESTRICTED.search(rights) and not re.search(r"no known restrictions", rights, re.I)):
+        # 2026-11-02: www.loc.gov item pages answer 429 to GitHub's shared runners even hours after the last
+        # request, while search and tile.loc.gov work. The search result already carries what is needed:
+        # the collection (partof), the rights line when given, and image_url, whose service JPEG path maps
+        # onto the master TIFF. So no item page is opened; the TIFF header on tile.loc.gov gives the size.
+        rights = as_text(r.get("rights_advisory") or r.get("rights"))
+        if rights and (RESTRICTED.search(rights) and not re.search(r"no known restrictions", rights, re.I)):
             STATS["rights"] += 1
-            key = rights[:80] or "(none)"
-            STATS["rights_seen"][key] = STATS["rights_seen"].get(key, 0) + 1
+            STATS["rights_seen"][rights[:80]] = STATS["rights_seen"].get(rights[:80], 0) + 1
             continue
-        files = flat_files(item)
-        if STATS["sample_files"] is None and files:
-            STATS["sample_files"] = {"item": rid, "files": [{k: f.get(k) for k in ("url", "mimetype", "width", "height")} for f in files[:8]]}
-        pick = best_image(files)
-        if not pick:
+        # all three collections are released for publication by the Library (Gottscho-Schleisner and HABS:
+        # no known restrictions; Highsmith: public domain); a result-level restriction above still excludes
+        tif = master_from_result(r)
+        if not tif:
+            STATS["type"] += 1; continue
+        got = tif_header_size(tif)
+        if not got or got[1] < MIN_WIDE or got[2] < MIN_TALL:
             STATS["size"] += 1; continue
-        url, w, h = pick
-        author = as_text(meta.get("contributor_names") or meta.get("creator") or r.get("contributor")).strip()
-        out.append({"title": as_text(meta.get("title") or r.get("title"))[:200], "url": url, "width": w, "height": h,
+        url, w, h = got
+        STATS["items_opened"] += 1
+        author = as_text(r.get("contributor") or r.get("contributor_names")).strip()
+        out.append({"title": as_text(r.get("title"))[:200], "url": url, "width": w, "height": h,
                     "licence": "No known restrictions (Library of Congress)", "author": author or label.split(",")[0],
-                    "collection": label, "date": as_text(meta.get("date") or r.get("date"))[:40],
+                    "collection": label, "date": as_text(r.get("date"))[:40],
                     "source_page": rid, "provider": "Library of Congress"})
     return out
+
+
+def master_from_result(r):
+    """.../storage-services/service/pnp/gsc/5a28000/5a28500/5a28550v.jpg -> .../master/pnp/gsc/.../5a28550u.tif"""
+    urls = r.get("image_url") or []
+    if isinstance(urls, str):
+        urls = [urls]
+    for u in urls:
+        m = re.search(r"(https://tile\.loc\.gov/storage-services/)service/(pnp/[a-z]+/[\w/]+?/)(\w+?)[a-z]?(?:_\d+px)?\.(?:jpg|gif|tif)", u)
+        if m:
+            return f"{m.group(1)}master/{m.group(2)}{m.group(3)}u.tif"
+    return None
 
 
 def main():
