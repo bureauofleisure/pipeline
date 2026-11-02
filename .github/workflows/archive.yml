@@ -1,0 +1,38 @@
+name: Archive search
+
+# loc.gov answers 429 to GitHub's shared runners after one or two searches, so the archive search runs
+# every three hours on a handful of targets and resumes from discovery/archive_candidates.json's next_target.
+# Earlier finds are kept when a run is blocked. The Monday harvest still runs it once as well.
+
+on:
+  schedule:
+    - cron: "37 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-search
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python discovery/archive_search.py
+        env:
+          ARCHIVE_TARGETS_PER_RUN: "6"
+      - name: Save
+        run: |
+          git config user.name "Bureau of Leisure"
+          git config user.email "lewie@flow.agency"
+          git add discovery/archive_candidates.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Archive search $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done

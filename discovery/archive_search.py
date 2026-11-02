@@ -276,27 +276,43 @@ def main():
                 previous[t["place"]] = t
     except Exception:  # noqa: BLE001
         pass
+    # Resume where the last run stopped: loc.gov lets a GitHub runner make only a few searches before a 429,
+    # so the daily job works through the list a few targets at a time instead of all of them on Monday.
+    try:
+        cursor = int(json.load(open(os.path.join(HERE, "archive_candidates.json"))).get("next_target", 0)) % max(len(targets), 1)
+    except Exception:  # noqa: BLE001
+        cursor = 0
+    order = list(range(cursor, len(targets))) + list(range(0, cursor))
+    budget = int(os.environ.get("ARCHIVE_TARGETS_PER_RUN", "6"))
+    next_target = cursor
+    tried = 0
     blocked = False
-    for t in targets:
+    for pos in order:
+        t = targets[pos]
         found = []
-        if not blocked:
+        if not blocked and tried < budget:
+            tried += 1
+            next_target = (pos + 1) % len(targets)
             try:
                 found = candidates_for(t)
             except RateLimited:
                 blocked = True
+                next_target = pos   # retry this one first next time
                 STATS["errors"].append(f"rate limited by loc.gov at {t['place']}; stopped searching, kept earlier finds")
         if not found and t["place"] in previous:
-            results.append(previous[t["place"]]); continue  # keep last good result rather than wiping it
+            results.append((pos, previous[t["place"]])); continue  # keep last good result rather than wiping it
         uniq, seen = [], set()
         for f in found:
             if f["url"] not in seen:
                 seen.add(f["url"]); uniq.append(f)
-        results.append({**{k: t[k] for k in ("place", "city", "era", "notes") if k in t}, "candidates": uniq[:25], "count": len(uniq)})
+        results.append((pos, {**{k: t[k] for k in ("place", "city", "era", "notes") if k in t}, "candidates": uniq[:25], "count": len(uniq)}))
         print(f"{t['place']}: {len(uniq)} candidates")
+    results = [r for _, r in sorted(results, key=lambda x: x[0])]
+    STATS["targets_tried"] = tried
     STATS["rights_seen"] = dict(sorted(STATS["rights_seen"].items(), key=lambda kv: -kv[1])[:20])
     STATS["errors"] = STATS["errors"][:40]
     json.dump({"searched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "provider": "Library of Congress",
-               "collections": [c[1] for c in COLLECTIONS], "stats": STATS, "targets": results},
+               "collections": [c[1] for c in COLLECTIONS], "stats": STATS, "next_target": next_target, "targets": results},
               open(os.path.join(HERE, "archive_candidates.json"), "w"), indent=1, ensure_ascii=False)
     print(json.dumps({k: v for k, v in STATS.items() if k != "sample_files"}, indent=1)[:1500])
 
