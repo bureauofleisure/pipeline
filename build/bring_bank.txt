@@ -23,6 +23,8 @@ BRING SOMEONE WHO STILL SENDS POSTCARDS.
 BRING WHOEVER ORDERS FOR THE TABLE.
 BRING THE ONE WHO PHOTOGRAPHS THE BATHROOM.
 BRING SOMEONE WHO ASKS WHO DID THE INTERIORS.
+BRING SOMEONE YOU'VE BEEN MEANING TO CATCH UP WITH.
+BRING WHOEVER KEEPS SAYING "WE SHOULD GET DINNER."
 #
 # RESERVED
 BRING YOUR MOTHER.          | max once a month; 50s/60s-looking places only; never with SULTRY or SMOKY
@@ -38,3 +40,8 @@ BRING SOMEONE WHO GREW UP IN CHICAGO.            | taverns, Chicago references
 BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL. | pools, lidos, beach clubs
 BRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT. | baths, saunas
 BRING WHOEVER'S "ONE DRINK" IS NEVER ONE.      | bars and cocktail rooms only
+#
+# DATING: conditional, romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING SOMEONE YOU'RE DATING.                     | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING A THIRD DATE.                              | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING THE ONE YOU STILL TAKE ON DATES.           | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
