@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-26T13:34:42Z",
+  "checked": "2026-11-02T12:06:29Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -7,7 +7,7 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 6
+      "items": 8
     },
     {
       "name": "Dezeen hotels",
@@ -15,7 +15,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 19
+      "items": 15
     },
     {
       "name": "Dezeen bars",
@@ -31,7 +31,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 17
+      "items": 15
     },
     {
       "name": "Yellowtrace",
@@ -501,7 +501,7 @@
       "name": "AHEAD Awards",
       "tier": 2,
       "category": "awards",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -511,7 +511,7 @@
       "category": "awards",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 13
+      "items": 12
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -1117,6 +1117,142 @@
       "name": "Ivy Studio",
       "tier": 1,
       "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Tom McGovern",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Mark Cocksedge",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Hiroyuki Hirai",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dean Hearne",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Raquel Diniz",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Adrianna Giakoumis",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Michael Sinclair",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Pablo Enriquez",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Luke Hayes",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Matt Russell",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Stan Lee",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Suellen Parker",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "David Chipperfield Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Astet Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "MAD Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "MOVS STUDIO",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Andrew Meredith",
+      "tier": 1,
+      "category": "photographer",
       "site": 200,
       "feed": null,
       "items": 0
