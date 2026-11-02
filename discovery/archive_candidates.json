@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-02T21:11:36Z",
+ "searched": "2026-11-02T22:18:12Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,22 +8,21 @@
  ],
  "stats": {
   "searches": 2,
-  "results": 14,
+  "results": 0,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Driskill Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Clifton's Cafeteria; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 14,
   "rate_limited": true,
   "targets_tried": 3
  },
- "next_target": 5,
+ "next_target": 7,
  "targets": [
   {
    "place": "Rainbow Room",
