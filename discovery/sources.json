@@ -1809,6 +1809,138 @@
    "auto": true,
    "platform": "unknown",
    "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-26."
+  },
+  {
+   "name": "Francisco Ascensão",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.franciscoascensao.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Andrew Pogue",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.andrewpogue.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Matt Kisiday",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.mattkisiday.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "MMK Creative",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.mmkcreative.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Matthew Millman",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.matthewmillman.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Dan Padgett",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.danpadgettphoto.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Oscar Oliver Studio",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.oscaroliverstudio.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Ground Architects",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://groundarchitects.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "cargo",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "CLB Architects",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://clbarchitects.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Conran and Partners",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://conranandpartners.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
+  },
+  {
+   "name": "Ater Architects",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.aterarchitects.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-02."
   }
  ]
 }
