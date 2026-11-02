@@ -47,6 +47,17 @@ def _ext(content_type, url):
     return "jpg"
 
 
+def _to_jpeg95(data):
+    import io
+    from PIL import Image
+    im = Image.open(io.BytesIO(data))
+    if im.mode not in ("RGB", "L"):
+        im = im.convert("RGB")
+    out = io.BytesIO()
+    im.save(out, "JPEG", quality=95, subsampling=0, optimize=True)
+    return out.getvalue()
+
+
 def store(index, meta, photos):
     """photos: list of dicts {n, url, bytes, content_type, width, height, used_as_slide}.
     Returns a short status string for the manifest. Never raises: an archive failure must not stop a post."""
@@ -63,6 +74,16 @@ def store(index, meta, photos):
         uploaded = 0
         for ph in photos:
             ext = _ext(ph.get("content_type", ""), ph["url"])
+            converted = None
+            if ext == "tif" and "loc.gov" in ph["url"]:
+                # Lewie, 2026-11-02: Library of Congress masters (20 to 90 MB TIFFs) are kept as full-resolution
+                # JPEG quality 95, about a tenth of the size. The untouched master stays at its loc.gov address,
+                # recorded as the source. Any TIFF stored before the decision is replaced.
+                ph = dict(ph, bytes=_to_jpeg95(ph["bytes"]), content_type="image/jpeg")
+                old_key = f"originals/{index}/{index}-{ph['n']:02d}.tif"
+                if old_key in existing:
+                    s3.delete_object(Bucket=bucket, Key=old_key)
+                ext, converted = "jpg", "Library of Congress TIFF master, stored as full-resolution JPEG q95"
             key = f"originals/{index}/{index}-{ph['n']:02d}.{ext}"
             sha = hashlib.sha1(ph["bytes"]).hexdigest()
             if key not in existing:
@@ -71,7 +92,8 @@ def store(index, meta, photos):
                               Metadata={"source": ph["url"][:1000], "sha1": sha, "index": index})
                 uploaded += 1
             side["photos"].append({"file": key.rsplit("/", 1)[-1], "source": ph["url"], "width": ph["width"], "height": ph["height"],
-                                   "bytes": len(ph["bytes"]), "sha1": sha, "used_as_slide": ph.get("used_as_slide", False)})
+                                   "bytes": len(ph["bytes"]), "sha1": sha, "used_as_slide": ph.get("used_as_slide", False),
+                                   **({"stored_as": converted} if converted else {})})
         s3.put_object(Bucket=bucket, Key=f"originals/{index}/{index}.json", Body=json.dumps(side, indent=1, ensure_ascii=False).encode(),
                       ContentType="application/json")
         # append to the running index
@@ -83,7 +105,7 @@ def store(index, meta, photos):
             cur = ""
         if f'"index": "{index}"' not in cur:
             s3.put_object(Bucket=bucket, Key="originals/index.jsonl", Body=(cur + line + "\n").encode(), ContentType="application/x-ndjson")
-        mb = sum(len(p["bytes"]) for p in photos) / 1e6
+        mb = sum(p["bytes"] for p in side["photos"]) / 1e6
         return f"{len(photos)} originals ({mb:.1f} MB), {uploaded} new"
     except Exception as e:  # noqa: BLE001
         return f"archive failed: {type(e).__name__}: {str(e)[:120]}"

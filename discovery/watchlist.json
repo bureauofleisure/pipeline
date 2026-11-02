@@ -167,7 +167,7 @@
    "pages": [],
    "added": "2026-11-02",
    "reason": "photo 1 film edge trimmed (5377x4218) ; photo 2 film edge trimmed (5099x3850) ; photo 3 could not be fetched (HTTPError) ; photo 4 could not be fetched (HTTPError) ; photo 5 could not be fetched (HTTPError) ; photo 6 could not be fetched (HTTPError) ; only 2 photos passed, need 4",
-   "status": "WATCHING",
+   "status": "DONE",
    "last_check": null,
    "ready_photos": 0
   }

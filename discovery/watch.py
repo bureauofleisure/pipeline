@@ -49,6 +49,10 @@ def add(manifest_path):
     m = json.load(open(manifest_path))
     d = load()
     have = {it["index"] for it in d["items"]}
+    built = {p["index"] for p in m.get("posts", []) if p.get("status") == "BUILT"}
+    for it in d["items"]:
+        if it["index"] in built and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DONE"   # benched once, built since: nothing left to wait for
     added = 0
     for p in m.get("posts", []):
         if p.get("status") != "BENCHED" or p["index"] in have:

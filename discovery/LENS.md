@@ -60,6 +60,8 @@ Enforced by make_batch.py; a batch that breaks these does not build.
   Press is where we hear about a place; the studio, photographer, venue or archive page is where the photos and
   the source_url come from. Record the article as `discovered_via`.
 - One post per studio and one per photographer in any batch.
+  2026-11-02 (Lewie): an archive collection credit (for example Gottscho-Schleisner, Library of Congress) may appear
+  in up to two posts per batch. Built in: make_batch.py.
 - At least 40% of a batch is archive or published more than a year ago ("new" means new to most, not new this week).
 - US floor 60%, target 80%. New York first, then Austin, Miami, Los Angeles.
 - We take at most two of the fifteen or so hospitality interiors the press runs each week, chosen on era and

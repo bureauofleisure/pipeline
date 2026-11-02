@@ -68,9 +68,12 @@ def source_mix_problems(posts, batch_name):
     for k, c in seen_studio.items():
         if c > 1:
             out.append(f"source mix: studio '{k}' appears {c} times; one per batch.")
+    # Lewie, 2026-11-02: an archive collection credit (e.g. Gottscho-Schleisner) may appear twice per batch
+    archive_credits = {(p.get("credit") or "").strip().lower() for p in posts if p.get("archive")}
     for k, c in seen_photog.items():
-        if c > 1:
-            out.append(f"source mix: photographer '{k}' appears {c} times; one per batch.")
+        cap = 2 if k in archive_credits else 1
+        if c > cap:
+            out.append(f"source mix: photographer '{k}' appears {c} times; {cap} per batch.")
     not_news = sum(1 for p in posts if p.get("archive") or p.get("category", "").lower() == "archive"
                    or str(p.get("era", "")).strip() or p.get("published_year") and int(p["published_year"]) <= 2025)
     if not_news / n < MIN_NOT_NEWS_SHARE - 1e-9:
