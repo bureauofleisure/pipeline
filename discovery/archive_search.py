@@ -188,6 +188,9 @@ def tif_header_size(tif_url):
         w, h = tiff_dims(head)
         STATS["tif_header_ok"] = STATS.get("tif_header_ok", 0) + 1
         return tif_url, int(w), int(h)
+    except urllib.error.HTTPError as e:
+        STATS.setdefault("tif_header_misses", []).append(f"{tif_url[-40:]}: HTTP {e.code}")
+        return None
     except Exception as e:  # noqa: BLE001
         STATS.setdefault("tif_header_misses", []).append(f"{tif_url[-40:]}: {type(e).__name__}")
         return None
