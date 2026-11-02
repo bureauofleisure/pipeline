@@ -42,9 +42,15 @@ _last = [0.0]
 DEADLINE = time.time() + 32 * 60   # stop searching in time to save what was found
 
 
-def get(url):
-    # loc.gov asks for gentle clients: about 2 requests a second keeps well under its limits
-    wait = 0.6 - (time.time() - _last[0])
+class RateLimited(Exception):
+    """loc.gov answered 429. Its limits (search: 20 a minute; items: 200 a minute) block the client for about an
+    hour once exceeded, so retrying only extends the block. Stop, save what was found, try again next run."""
+
+
+def get(url, search=False):
+    # 2026-11-02: searches were paced at 0.6 s (about 100 a minute) and tripped the hour-long block every run.
+    gap = 3.5 if search else 0.6
+    wait = gap - (time.time() - _last[0])
     if wait > 0:
         time.sleep(wait)
     _last[0] = time.time()
@@ -54,7 +60,10 @@ def get(url):
             with urllib.request.urlopen(req, timeout=40) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 502, 503, 504) and attempt < 2:
+            if e.code == 429:
+                STATS["rate_limited"] = True
+                raise RateLimited(url) from e
+            if e.code in (500, 502, 503, 504) and attempt < 2:
                 time.sleep(10 * (attempt + 1)); continue
             raise
         except (TimeoutError, urllib.error.URLError, ConnectionError):
@@ -72,7 +81,7 @@ def search(query):
     """One search across all LoC photos; the collection is checked on each result (three faceted searches per
     query was too slow for loc.gov and timed the job out)."""
     params = {"q": query, "fo": "json", "c": PER_SEARCH, "at": "results"}
-    data = get("https://www.loc.gov/photos/?" + urllib.parse.urlencode(params))
+    data = get("https://www.loc.gov/photos/?" + urllib.parse.urlencode(params), search=True)
     STATS["searches"] += 1
     res = data.get("results") or []
     STATS["results"] += len(res)
@@ -209,6 +218,8 @@ def candidates_for(t):
                 if SKIP_TITLE.search(as_text(r.get("title"))):
                     STATS["type"] += 1; continue
                 hits.append((r, label))
+        except RateLimited:
+            raise
         except Exception as e:  # noqa: BLE001
             STATS["errors"].append(f"search {q}: {type(e).__name__} {str(e)[:100]}")
     out = []
@@ -219,6 +230,8 @@ def candidates_for(t):
         try:
             item = get(rid.rstrip("/") + "/?fo=json")
             STATS["items_opened"] += 1
+        except RateLimited:
+            raise
         except Exception as e:  # noqa: BLE001
             STATS["errors"].append(f"item {rid}: {type(e).__name__}"); continue
         meta = item.get("item") or {}
@@ -246,8 +259,24 @@ def candidates_for(t):
 def main():
     targets = json.load(open(os.path.join(HERE, "archive_targets.json")))["targets"]
     results = []
+    previous = {}
+    try:
+        for t in json.load(open(os.path.join(HERE, "archive_candidates.json")))["targets"]:
+            if t.get("count"):
+                previous[t["place"]] = t
+    except Exception:  # noqa: BLE001
+        pass
+    blocked = False
     for t in targets:
-        found = candidates_for(t)
+        found = []
+        if not blocked:
+            try:
+                found = candidates_for(t)
+            except RateLimited:
+                blocked = True
+                STATS["errors"].append(f"rate limited by loc.gov at {t['place']}; stopped searching, kept earlier finds")
+        if not found and t["place"] in previous:
+            results.append(previous[t["place"]]); continue  # keep last good result rather than wiping it
         uniq, seen = [], set()
         for f in found:
             if f["url"] not in seen:
