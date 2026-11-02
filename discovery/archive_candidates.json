@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-02T21:03:49Z",
+ "searched": "2026-11-02T21:05:54Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,19 +7,36 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 60,
+  "searches": 2,
+  "results": 61,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
-  "type": 0,
+  "size": 15,
+  "type": 1,
   "errors": [
-   "rate limited by loc.gov at Rainbow Room; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Longchamps; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
   "other_collections": 40,
+  "tif_header_misses": [
+   "haer/ny/ny1700/ny1745/photos/350949u.tif: HTTPError",
+   "haer/ny/ny1700/ny1746/photos/350954u.tif: HTTPError",
+   "haer/ny/ny1700/ny1748/photos/350984u.tif: HTTPError",
+   "haer/ny/ny1700/ny1747/photos/350977u.tif: HTTPError",
+   "haer/ny/ny1700/ny1749/photos/350990u.tif: HTTPError",
+   "ter/pnp/gsc/5a00000/5a00000/5a00064u.tif: HTTPError",
+   "haer/mt/mt0300/mt0359/photos/345450u.tif: HTTPError",
+   "haer/mt/mt0300/mt0317/photos/345101u.tif: HTTPError",
+   "haer/mt/mt0300/mt0360/photos/345457u.tif: HTTPError",
+   "haer/mt/mt0300/mt0361/photos/345458u.tif: HTTPError",
+   "haer/nd/nd0000/nd0016/photos/102991u.tif: HTTPError",
+   "haer/mt/mt0300/mt0356/photos/345440u.tif: HTTPError",
+   "haer/mt/mt0300/mt0352/photos/345425u.tif: HTTPError",
+   "haer/mt/mt0300/mt0357/photos/345443u.tif: HTTPError",
+   "haer/mt/mt0300/mt0354/photos/345433u.tif: HTTPError"
+  ],
   "rate_limited": true
  },
  "targets": [
