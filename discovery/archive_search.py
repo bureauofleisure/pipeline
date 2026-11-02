@@ -42,6 +42,9 @@ _last = [0.0]
 DEADLINE = time.time() + 32 * 60   # stop searching in time to save what was found
 
 
+BLOCKED = [False]   # set when loc.gov answers 429; main stops after keeping what this target found
+
+
 class RateLimited(Exception):
     """loc.gov answered 429. Its limits (search: 20 a minute; items: 200 a minute) block the client for about an
     hour once exceeded, so retrying only extends the block. Stop, save what was found, try again next run."""
@@ -199,8 +202,10 @@ def as_text(v):
 def candidates_for(t):
     words = words_for(t)
     hits, seen = [], set()
-    queries = [t["place"]] + [q for q in (t.get("queries") or []) if q.lower() != t["place"].lower()]
-    for q in queries[:2]:
+    # one query per target: a runner gets about one loc.gov search before a 429, so spend it on the most
+    # specific wording (the target's own query when it has one)
+    queries = (t.get("queries") or [])[:1] or [t["place"]]
+    for q in queries:
         if time.time() > DEADLINE:
             STATS["out_of_time"] = True; break
         try:
@@ -219,7 +224,8 @@ def candidates_for(t):
                     STATS["type"] += 1; continue
                 hits.append((r, label))
         except RateLimited:
-            raise
+            BLOCKED[0] = True
+            break
         except Exception as e:  # noqa: BLE001
             STATS["errors"].append(f"search {q}: {type(e).__name__} {str(e)[:100]}")
     out = []
@@ -296,8 +302,10 @@ def main():
             try:
                 found = candidates_for(t)
             except RateLimited:
+                BLOCKED[0] = True
+            if BLOCKED[0]:
                 blocked = True
-                next_target = pos   # retry this one first next time
+                next_target = pos if not found else (pos + 1) % len(targets)   # retry an empty one first next time
                 STATS["errors"].append(f"rate limited by loc.gov at {t['place']}; stopped searching, kept earlier finds")
         if not found and t["place"] in previous:
             results.append((pos, previous[t["place"]])); continue  # keep last good result rather than wiping it
