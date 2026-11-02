@@ -1,77 +1,141 @@
 {
  "sets": [
   {
-   "id": "necchi",
+   "id": "sisters",
    "urls": [
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/12ed5ea9-1c46-4248-9744-2b484b7b1262/Harpers-Bazaar-Villa-Necchi-Interior-0672.jpg",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/388265fe-bb2a-4285-9151-134722f2a1f4/Harpers-Bazaar-Villa-Necchi-Interior-0668.jpg",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/3b19a41b-82af-46f9-9867-2a24c4ffd9cd/Harpers-Bazaar-Villa-Necchi-Interior-0039.jpg",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/67593fab-d8d4-4e72-bb9c-5a6d26fae87f/Harpers-Bazaar-Villa-Necchi-Interior-1203.jpg",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/84e268d3-82f2-47c2-a130-5ff532a0555e/Harpers-Bazaar-Villa-Necchi-Interior-1142.jpg"
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/4e37ce72-d284-4f18-980a-e329efb83371/Sisters_013.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6dc5812d-3dd2-4d81-9195-53659c26dd31/Sisters_002.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c9131150-4835-42cc-a38f-435aac9c3394/Sisters_011.JPG?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/ef630097-779a-4bc5-9682-1f79f46c40f1/1.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/1702059791147-RA5H535C34LOB7YEQVPK/1.png?format=2500w"
    ]
   },
   {
-   "id": "peacock",
+   "id": "milliongoods",
    "urls": [
-    "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Design_04.jpg",
-    "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Design_10.jpg",
-    "https://joycewangstudio.com/wp-content/uploads/2025/07/PP_Hero-scaled.jpg"
-   ]
-  },
-  {
-   "id": "pan",
-   "urls": [
-    "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027433936-8SZMTNJLPCK5Y4G1QOFK/2+_MG_1075.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027434406-9DXUWMEUV0Y1JSYQX3I8/3+IMG_1212.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027554740-0OC5N4F29HEZBE2F4OVF/Untitled-2.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1699027870798-E70LE4RAX4RGJ2L6PC8K/6+FullSizeRender.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/5c45ec1c4611a0ea422f915f/1776952172420-MGHR9AWIKIFYC7HFZ74U/dab+5x7.jpg?format=2500w"
-   ]
-  },
-  {
-   "id": "josephine",
-   "urls": [
-    "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_5.11.26_-34.jpg",
-    "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_6.9.26_3.jpg",
-    "https://blog.resy.com/wp-content/uploads/2026/10/Josephine_6.9.26_4.jpg"
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_hero.jpg"
    ]
   },
   {
    "id": "lovethy",
    "urls": [
-    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_hero1.jpg",
-    "https://hospitalitydesign.com/wp-content/uploads/2026/05/Interior-2Alexander-Tatsuto-Zeren.png",
-    "https://hospitalitydesign.com/wp-content/uploads/2026/05/Interiors-credit-Aichan-Mama-copy.jpg"
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_hero1.jpg"
    ]
   },
   {
-   "id": "kojima",
+   "id": "skywalker",
    "urls": [
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/0a435480-6bc1-4c69-861e-d98abbfddb72/26-02-Agobay-Kojima-Shoten-1542.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/27c0d134-20b8-4e7f-9229-8d4f10321d07/26-02-Agobay-Kojima-Shoten-1462.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/2f882fe5-3abe-45e5-8a77-715dcb5c37c6/26-02-Agobay-Kojima-Shoten-1478.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/5ad39c5a-538f-451e-acc3-6b17486251a5/26-02-Agobay-Kojima-Shoten-1640.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/56537ba0e4b0e8c95b5eded8/76fd3e26-0a37-4e3c-84b3-9ebf29ee7f14/26-02-Agobay-Kojima-Shoten-1720.jpg?format=2500w"
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_hero1.jpg"
    ]
   },
   {
-   "id": "twa",
+   "id": "mimi",
    "urls": [
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28545u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28546u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28547u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28549u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28550u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28551u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28552u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28553u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28554u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28555u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28556u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28557u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28558u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28559u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28560u.tif"
+    "https://design-milk.com/images/2026/10/Pirajean-Lees-x-Mimi-Kakushi-Delano-Miami-Mimi-Kakushi-00587Robert-Reiger-e1792856834637.jpg",
+    "https://design-milk.com/images/2026/10/Pirajean-Lees-x-Mimi-Kakushi-Delano-Miami-Robert-Reiger-00578.jpg",
+    "https://design-milk.com/images/2026/10/Pirajean-Lees-x-Mimi-Kakushi-Delano-Miami-Robert-Reiger-00633.jpg"
+   ]
+  },
+  {
+   "id": "aman",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003435150-HUPNV9ND1WAF4042R77N/Aman-NewYork-JoeThomas-1.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003435292-WISVDRK41A5I9UL0H6UC/Aman-NewYork-JoeThomas-2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003438372-ZF79MM6FZ2KRLOORRVX3/Aman-NewYork-JoeThomas-3.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003438958-KWLSPD475W7F4MQZ33PH/Aman-NewYork-JoeThomas-4.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003441514-W7PSKT3T590T0H1U12KI/Aman-NewYork-JoeThomas-5.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003442262-3IUGKS4K9F4B15VB4VPP/Aman-NewYork-JoeThomas-6.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003448799-A8C9I7DREJXPB96C9T80/Aman-NewYork-JoeThomas-8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003457292-W3WTYJJ00LMZUK8T8RU8/Aman-NewYork-JoeThomas-11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003458778-NF22BI4L3X5EMSARJB8N/Aman-NewYork-JoeThomas-12.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003515829-HORHBSZSAC2GSP4Q6IAP/Aman-NewYork-JoeThomas-13.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1665003826755-YCQM3HNCQZD5XKB450QI/Aman-NewYork-JoeThomas-9.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "lapadrona",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208574056-SI3YEZNK9P8JA2KGRXFD/LaPadrona-Avroko-JoeThomas-2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208574303-HP06PI6LN00YZW848SSU/LaPadrona-Avroko-JoeThomas-1.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208575422-79JE4NFIJNEJGFWTJSXG/LaPadrona-Avroko-JoeThomas-3.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208575762-S1ZIV2TFUZSVKEC9N4M5/LaPadrona-Avroko-JoeThomas-4.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208576663-DGZWIE3TSY4FRD0ALAFY/LaPadrona-Avroko-JoeThomas-5.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208577399-K3QPL85EAWWAYIIXKOBT/LaPadrona-Avroko-JoeThomas-7.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208578120-AKPEUWVQBKMKGUXB8D6H/LaPadrona-Avroko-JoeThomas-8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208579229-Y59PHL63069ZHG0Y73YF/LaPadrona-Avroko-JoeThomas-9.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208579694-79MIXGQBIXIPJN85R1VZ/LaPadrona-Avroko-JoeThomas-10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208581359-ECFHV3PB9XQYF5ZDE948/LaPadrona-Avroko-JoeThomas-12.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208581741-C83G2DRAPMFF5RJ9GGEU/LaPadrona-Avroko-JoeThomas-11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208582521-5SKNNCINPN4ZHR1QPBBN/LaPadrona-Avroko-JoeThomas-14.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208583383-9PY2YK0B9UVONW87QKGG/LaPadrona-Avroko-JoeThomas-17.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208583887-RBXJHL8UN8B5O98FBJ1O/LaPadrona-Avroko-JoeThomas-18.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208584909-X5DQZPP3JWBZMRC7U3ST/LaPadrona-Avroko-JoeThomas-20.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208585265-O3JEP6HTUO94VZSMJQN1/LaPadrona-Avroko-JoeThomas-21.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208586270-A7T6FKDJDMJJ48IH3LLD/LaPadrona-Avroko-JoeThomas-23.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208587544-SZPZT9P27THFRGRJ0NRW/LaPadrona-Avroko-JoeThomas-25.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1732208588057-AONEGD7IJRSSHNCDWWK1/LaPadrona-Avroko-JoeThomas-26.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "libreria",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_hero1.jpg"
+   ]
+  },
+  {
+   "id": "oyster",
+   "urls": [
+    "https://design-milk.com/images/2026/10/17.-Oyster-Estate-Fireplace-2-by-Matt-Kisiday.jpg",
+    "https://design-milk.com/images/2026/10/4.-Oyster-Estate-Lobby-by-Matt-Kisiday-1-e1793371735927.jpeg"
    ]
   }
  ]
