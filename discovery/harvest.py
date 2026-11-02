@@ -89,6 +89,12 @@ def page_text(page):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body))).strip()
 
 
+def full_text(page):
+    """Whole-page text, for photo credits only: Dezeen prints 'Photography by' in the header, outside <article>."""
+    t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", t)))
+
+
 def images_from(page, base):
     """The article's own photos, largest variant of each.
     1. Only the article body (inside <article>, or <main>, else the whole page).
@@ -211,7 +217,7 @@ def harvest_links(links, label="shortlist"):
                 if p["url"] not in seen:
                     seen.add(p["url"]); uniq.append(p)
             rec["photos"] = expand_dezeen(uniq) if "dezeen.com" in link else uniq
-            rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:8]
+            rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:8]
             rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
             # internal links, so a review can walk from a studio's index page to its project pages
             rec["links"] = sorted({urljoin(link, html.unescape(m.group(1)))
@@ -282,7 +288,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                     fu = fullsize(ph["url"], s.get("platform", ""))
                     uniq[fu] = max(uniq.get(fu, 0), ph["width_hint"])
                 rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
-                rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:5]
+                rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                 rec["designers"] = [s["name"]] if s["category"] == "studio" else []
                 rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:3000])})
                 rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
@@ -326,7 +332,7 @@ def main():
                     rec["photos"] = images_from(page, it["link"])
                     if "dezeen.com" in it["link"]:
                         rec["photos"] = expand_dezeen(rec["photos"])
-                    rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:5]
+                    rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                     rec["designers"] = sorted({m.group(1).strip() for m in DESIGN.finditer(text)})[:5]
                     rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
                 except Exception as e:  # noqa: BLE001
