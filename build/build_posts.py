@@ -457,6 +457,9 @@ def main():
     shutil.copy(os.path.join(ROOT, "brand", "avatar.jpg"), os.path.join(out_root, "avatar.jpg"))
     posts = []
     orders = load_orders()
+    # An index can appear in more than one batch (a benched post carried into the next week). Build it once,
+    # from the latest batch: building both made duplicate manifest rows and rebuilt the same folder twice a run.
+    entries = {}
     for path in sorted(glob.glob(os.path.join(ROOT, "batches", "*.json"))):
         try:
             batch = json.load(open(path))["posts"]
@@ -464,16 +467,19 @@ def main():
             print(f"SKIPPED {os.path.basename(path)}: cannot read ({e})")
             continue
         for p in batch:
-            if str(p.get("index", "")) in orders:
-                p = dict(p, photo_order=orders[str(p["index"])])   # part of the entry hash, so a reorder rebuilds
-            try:
-                posts.append(build_post(p, out_root))
-            except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
-                idx = p.get("index", "?")
-                r = {"index": idx, "place": p.get("place", "?"), "status": "ERROR",
-                     "notes": [f"{type(e).__name__}: {e}"], "entry_hash": entry_hash(p)}
-                posts.append(finish(r, os.path.join(out_root, "posts", str(idx)),
-                                    os.path.join(out_root, "posts", str(idx), "post.json")))
+            entries.pop(str(p.get("index", "")), None)
+            entries[str(p.get("index", ""))] = p
+    for p in entries.values():
+        if str(p.get("index", "")) in orders:
+            p = dict(p, photo_order=orders[str(p["index"])])   # part of the entry hash, so a reorder rebuilds
+        try:
+            posts.append(build_post(p, out_root))
+        except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
+            idx = p.get("index", "?")
+            r = {"index": idx, "place": p.get("place", "?"), "status": "ERROR",
+                 "notes": [f"{type(e).__name__}: {e}"], "entry_hash": entry_hash(p)}
+            posts.append(finish(r, os.path.join(out_root, "posts", str(idx)),
+                                os.path.join(out_root, "posts", str(idx), "post.json")))
     json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "posts": posts},
               open(os.path.join(out_root, "manifest.json"), "w"), indent=2)
     for r in posts:

@@ -70,7 +70,7 @@
    "pages": [],
    "added": "2026-10-19",
    "reason": "photo 1 HOLD: tilt ; photo 3 HOLD: tilt ; photo 5 HOLD: brightness, tilt ; photo 6 HOLD: tilt ; photo 7 HOLD: tilt ; photo 8 HOLD: tilt ; only 2 photos passed, need 4",
-   "status": "WATCHING",
+   "status": "DROPPED",
    "last_check": "2026-11-02",
    "ready_photos": 0,
    "candidate_photos": []
@@ -85,7 +85,7 @@
    "pages": [],
    "added": "2026-10-19",
    "reason": "photo 2 held: tilt 4.0 deg is over the limit ; photo 4 HOLD: tilt ; only 3 photos passed, need 4",
-   "status": "WATCHING",
+   "status": "DROPPED",
    "last_check": "2026-11-02",
    "ready_photos": 0,
    "candidate_photos": []
@@ -100,7 +100,7 @@
    "pages": [],
    "added": "2026-10-19",
    "reason": "photo 1 HOLD: tilt ; photo 2 held: tilt 8.4 deg is over the limit ; photo 4 HOLD: tilt ; photo 5 HOLD: tilt ; only 2 photos passed, need 4",
-   "status": "WATCHING",
+   "status": "DROPPED",
    "last_check": "2026-11-02",
    "ready_photos": 0,
    "candidate_photos": []

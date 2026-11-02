@@ -72,18 +72,30 @@ def _stem(url):
     return name
 
 
+def article_html(page):
+    """The article body (inside <article>, or <main>), else the whole page. Navigation, newsletter boxes and
+    'read next' rails sit outside it; reading them is how every Wallpaper item got a 'coming soon' warning
+    and every Dezeen item the designer 'Aedas opens'."""
+    for tag in ("article", "main"):
+        m = re.search(rf"<{tag}[\s>].*?</{tag}>", page, re.S | re.I)
+        if m and len(m.group(0)) > 2000:
+            return m.group(0)
+    return page
+
+
+def page_text(page):
+    body = article_html(page)
+    body = re.sub(r"<(script|style|nav|aside|footer|header|form)\b.*?</\1>", " ", body, flags=re.S | re.I)
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body))).strip()
+
+
 def images_from(page, base):
     """The article's own photos, largest variant of each.
     1. Only the article body (inside <article>, or <main>, else the whole page).
     2. Picks up src, data-src, data-lazy-src, srcset, data-srcset and direct <a href> to an image.
     3. Keeps the largest cluster of filenames sharing a stem (a gallery), plus the og:image's cluster,
        so related-article thumbnails are left behind."""
-    body = page
-    for tag in ("article", "main"):
-        m = re.search(rf"<{tag}[\s>].*?</{tag}>", page, re.S | re.I)
-        if m and len(m.group(0)) > 2000:
-            body = m.group(0)
-            break
+    body = article_html(page)
     og = None
     m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page)
     if m:
@@ -154,22 +166,32 @@ def _exists(url):
 
 
 def expand_dezeen(photos):
-    """Dezeen lazy-loads its galleries. Given the photos the page exposed, probe the rest of the sequence."""
+    """Dezeen lazy-loads its galleries; the page exposes only the hero and one or two frames. Probe the
+    numbered 2364 sequence. Hosts are static-<year>.dezeen.com since 2026 (the old pattern matched only
+    static.dezeen.com, so nothing was ever expanded), and the slug is taken from hero/sq/col names alike."""
     stems = {}
     for p in photos:
-        m = re.match(r"(https://static\.dezeen\.com/uploads/\d{4}/\d{2}/.+?_dezeen_2364_col_)\d+\.jpg$", p["url"])
+        m = re.match(r"(https://static[-\w]*\.dezeen\.com/uploads/\d{4}/\d{2}/.+?)_dezeen(?:_\d{3,4})?_(?:col_\d+|hero\w*|sq\w*)\.jpg$", p["url"])
         if m:
-            stems[m.group(1)] = True
+            stems[m.group(1) + "_dezeen_2364_col_"] = True
     known = {p["url"] for p in photos}
     extra = []
     for stem in stems:
-        for n in range(0, 24):
+        misses = 0
+        for n in range(0, 30):
             u = f"{stem}{n}.jpg"
-            if u not in known and _exists(u):
-                extra.append({"url": u, "width_hint": 2364})
-                known.add(u)
+            if u in known:
+                misses = 0; continue
+            if _exists(u):
+                extra.append({"url": u, "width_hint": 2364}); known.add(u); misses = 0
+            else:
+                misses += 1
+                if misses >= 3:
+                    break
             time.sleep(0.15)
-    return photos + extra
+    # gallery frames first, the hero (usually a crop of one of them) last
+    gallery = [p for p in photos + extra if "_col_" in p["url"]]
+    return sorted(gallery, key=lambda p: int(re.search(r"_col_(\d+)", p["url"]).group(1))) + [p for p in photos if "_col_" not in p["url"]]
 
 
 def harvest_links(links, label="shortlist"):
@@ -179,12 +201,10 @@ def harvest_links(links, label="shortlist"):
         rec = {"link": link}
         try:
             page = get(link)
-            text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
-            text = html.unescape(re.sub(r"<[^>]+>", " ", text))
-            text = re.sub(r"\s+", " ", text)
+            text = page_text(page)
             t = re.search(r"<title>(.*?)</title>", page, re.S)
             rec["title"] = html.unescape(t.group(1).strip()) if t else ""
-            rec["text"] = text[:6000]
+            rec["text"] = text[:8000]
             photos = images_from(page, link)
             seen, uniq = set(), []
             for p in photos:
@@ -192,13 +212,14 @@ def harvest_links(links, label="shortlist"):
                     seen.add(p["url"]); uniq.append(p)
             rec["photos"] = expand_dezeen(uniq) if "dezeen.com" in link else uniq
             rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:8]
-            rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:2500])})
+            rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
             # internal links, so a review can walk from a studio's index page to its project pages
             rec["links"] = sorted({urljoin(link, html.unescape(m.group(1)))
                                    for m in re.finditer(r'href=["\']([^"\'#?]+)', page)
                                    if not m.group(1).startswith(("mailto:", "tel:", "javascript:"))})[:300]
         except Exception as e:  # noqa: BLE001
             rec["page_error"] = type(e).__name__
+        rec.setdefault("photos", [])
         out.append(rec)
         time.sleep(0.4)
     os.makedirs(os.path.join(HERE, "harvest"), exist_ok=True)
@@ -254,9 +275,8 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 page = get(u)
                 t = re.search(r"<title>(.*?)</title>", page, re.S)
                 rec["title"] = html.unescape(t.group(1).strip()) if t else u
-                text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
-                text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text)))
-                rec["text"] = text[:3000]
+                text = page_text(page)
+                rec["text"] = text[:4000]
                 photos, uniq = images_from(page, u), {}
                 for ph in photos:
                     fu = fullsize(ph["url"], s.get("platform", ""))
@@ -264,7 +284,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
                 rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:5]
                 rec["designers"] = [s["name"]] if s["category"] == "studio" else []
-                rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:1500])})
+                rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:3000])})
                 rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
             except Exception as e:  # noqa: BLE001
                 rec["page_error"] = type(e).__name__
@@ -301,14 +321,14 @@ def main():
                 pages += 1
                 try:
                     page = get(it["link"])
-                    text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S)
-                    text = html.unescape(re.sub(r"<[^>]+>", " ", text))
-                    text = re.sub(r"\s+", " ", text)
-                    rec["text"] = text[:3000]
+                    text = page_text(page)
+                    rec["text"] = text[:6000]
                     rec["photos"] = images_from(page, it["link"])
+                    if "dezeen.com" in it["link"]:
+                        rec["photos"] = expand_dezeen(rec["photos"])
                     rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(text)})[:5]
                     rec["designers"] = sorted({m.group(1).strip() for m in DESIGN.finditer(text)})[:5]
-                    rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:1500])})
+                    rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
                 except Exception as e:  # noqa: BLE001
                     rec["page_error"] = type(e).__name__
                 time.sleep(0.4)

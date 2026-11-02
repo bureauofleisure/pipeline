@@ -96,7 +96,16 @@ def check():
     d = load()
     sources = json.load(open(os.path.join(HERE, "sources.json")))["sources"]
     report = []
+    try:   # the sheet's verdicts: a KILLED post is not waited for; one already live or approved is done
+        sheet = json.load(open(os.path.join(HERE, "statuses.json")))["rows"]
+    except Exception:  # noqa: BLE001
+        sheet = {}
     for it in d["items"]:
+        verdict = (sheet.get(it["index"]) or {}).get("status", "")
+        if verdict == "KILLED" and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DROPPED"; it["reason"] = (it.get("reason", "") + " ; killed on the sheet")[-300:]
+        elif verdict in ("APPROVED", "SCHEDULED", "POSTED", "LIVE") and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DONE"
         if it["status"] in ("DONE", "DROPPED"):
             continue
         words = place_words(it)

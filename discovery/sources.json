@@ -1532,7 +1532,9 @@
    "archive": true,
    "auto": true,
    "platform": "wordpress",
-   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19."
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-19.",
+   "disabled": true,
+   "note": "Disabled 2026-11-02: grow_sources matched a Russian web agency (usmstudio.ru), not USM the furniture maker."
   },
   {
    "name": "Busta Studio",
