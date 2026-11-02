@@ -24,6 +24,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.request
 
 import cv2
@@ -102,20 +103,38 @@ def validate_card(p):
 
 
 # ---------------------------------------------------------------- photos
+_LOC_LAST = [0.0]
+
+
 def fetch(src):
-    """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive."""
+    """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive.
+    Library of Congress masters are 20 to 90 MB TIFFs on tile.loc.gov, which answers 429 when they are pulled
+    back to back (2026-11-02: TWA lost 4 of 6 photos). Those get a long timeout, 4 s between downloads,
+    Retry-After honoured, and up to five tries; the HTTP status is kept in the error for the notes."""
     if src.startswith("http"):
+        loc = "loc.gov" in src
         req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "image/*"})
         last = None
-        for attempt in range(3):
+        for attempt in range(5 if loc else 3):
+            if loc:
+                wait = 4.0 - (time.time() - _LOC_LAST[0])
+                if wait > 0:
+                    time.sleep(wait)
+                _LOC_LAST[0] = time.time()
             try:
-                with urllib.request.urlopen(req, timeout=30) as r:
+                with urllib.request.urlopen(req, timeout=180 if loc else 30) as r:
                     data = r.read()
                     ctype = r.headers.get("Content-Type", "").split(";")[0].strip()
                     return Image.open(io.BytesIO(data)).convert("RGB"), data, ctype
+            except urllib.error.HTTPError as e:
+                last = RuntimeError(f"HTTP {e.code}")
+                if e.code in (404, 410):
+                    break
+                ra = e.headers.get("Retry-After") if e.headers else None
+                time.sleep(min(int(ra), 120) if ra and ra.isdigit() else (30 * (attempt + 1) if loc else 2 * (attempt + 1)))
             except Exception as e:  # noqa: BLE001
                 last = e
-                time.sleep(2 * (attempt + 1))
+                time.sleep(10 * (attempt + 1) if loc else 2 * (attempt + 1))
         raise last
     data = open(os.path.join(ROOT, src), "rb").read()
     return Image.open(io.BytesIO(data)).convert("RGB"), data, ""
@@ -310,7 +329,7 @@ def build_post(p, out_root):
         try:
             raw, raw_bytes, raw_type = fetch(src)
         except Exception as e:  # noqa: BLE001  unreachable, blocked, not an image
-            result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__})")
+            result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__}: {str(e)[:40]})")
             continue
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
