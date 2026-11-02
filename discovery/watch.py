@@ -123,6 +123,9 @@ def check():
                 for ph in hv.images_from(body, u):
                     fu = hv.fullsize(ph["url"], "")
                     w = ph["width_hint"] or (2500 if "format=2500w" in fu else 0)
+                    stem = fu.split("?")[0].rsplit("/", 1)[-1].lower()
+                    if re.search(r"(favicon|logo|icon|sprite|avatar)", stem):
+                        continue  # site furniture, not photographs of the place
                     if w >= MIN_WIDE:
                         found[fu] = w
                 time.sleep(0.3)
@@ -131,6 +134,8 @@ def check():
         it["candidate_photos"] = sorted(found)[:20]
         if len(found) >= 4:
             it["status"] = "READY"
+        elif it["status"] == "READY":
+            it["status"] = "WATCHING"   # READY is re-earned every check; it was sticky before 2026-11-02
         report.append({"index": it["index"], "place": it["place"], "status": it["status"], "ready_photos": len(found)})
     save(d)
     json.dump({"checked": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "items": report},

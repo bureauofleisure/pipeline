@@ -4,13 +4,13 @@
   {
    "index": "0007",
    "place": "Focacha",
-   "status": "READY",
+   "status": "WATCHING",
    "ready_photos": 0
   },
   {
    "index": "0008",
    "place": "Upstairs at Hausu",
-   "status": "READY",
+   "status": "WATCHING",
    "ready_photos": 0
   },
   {
@@ -47,7 +47,7 @@
    "index": "0019",
    "place": "Sisters",
    "status": "READY",
-   "ready_photos": 7
+   "ready_photos": 6
   },
   {
    "index": "0010",
