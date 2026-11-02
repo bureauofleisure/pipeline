@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-02T14:08:13Z",
+ "searched": "2026-11-02T15:51:37Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,15 +7,14 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 2,
-  "results": 60,
+  "searches": 3,
+  "results": 61,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "search Rainbow Room Rockefeller Center interior: HTTPError HTTP Error 429: Too Many Requests",
    "item http://www.loc.gov/item/ny1745/: HTTPError",
    "item http://www.loc.gov/item/ny1746/: HTTPError",
    "item http://www.loc.gov/item/ny1748/: HTTPError",
@@ -54,7 +53,8 @@
    "search Bemelmans Bar Carlyle: HTTPError HTTP Error 429: Too Many Requests",
    "search Venetian Pool: HTTPError HTTP Error 429: Too Many Requests",
    "search Venetian Pool Coral Gables: HTTPError HTTP Error 429: Too Many Requests",
-   "search Caffe Reggio interior: HTTPError HTTP Error 429: Too Many Requests"
+   "search Caffe Reggio: HTTPError HTTP Error 429: Too Many Requests",
+   "search Russian and Turkish Baths: HTTPError HTTP Error 429: Too Many Requests"
   ],
   "rights_seen": {},
   "sample_files": null,
@@ -303,6 +303,46 @@
    "place": "Keens Steakhouse",
    "city": "New York",
    "era": "1885",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Horn & Hardart Automat",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner photographed Horn & Hardart Automats in Manhattan; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Waldorf-Astoria",
+   "city": "New York",
+   "era": "1931",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner, Park Avenue interiors, 1930s and 1940s. Public rooms only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Childs Restaurant",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Madonna Inn",
+   "city": "San Luis Obispo",
+   "era": "1958",
+   "notes": "Added 2026-11-02: Carol M. Highsmith, California. Dining room, bar and bakery, never the themed rooms.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Ahwahnee Hotel",
+   "city": "Yosemite",
+   "era": "1927",
+   "notes": "Added 2026-11-02: Carol M. Highsmith and HABS, Yosemite National Park. Dining room and great lounge.",
    "candidates": [],
    "count": 0
   }
