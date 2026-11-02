@@ -114,17 +114,15 @@
    "source_url": "https://homestudios.nyc/sisters",
    "pages": [],
    "added": "2026-10-19",
-   "reason": "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350) ; photo 4 rejected: too small (1066x1333 after crop, need 1080x1350) ; only 2 photos passed, need 4",
-   "status": "READY",
+   "reason": "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350) ; photo 4 rejected: too small (1066x1333 after crop, need 1080x1350) ; only 2 photos passed, need 4 ; 2026-11-02 review: the Home Studios page has only these 4 Sisters frames; the two landscape ones are 2000x1333 and fail the 4:5 gate, so 2 usable.",
+   "status": "WATCHING",
    "last_check": "2026-11-02",
-   "ready_photos": 6,
+   "ready_photos": 4,
    "candidate_photos": [
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/1702059791147-RA5H535C34LOB7YEQVPK/1.png?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/4e37ce72-d284-4f18-980a-e329efb83371/Sisters_013.JPG?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6dc5812d-3dd2-4d81-9195-53659c26dd31/Sisters_002.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c9131150-4835-42cc-a38f-435aac9c3394/Sisters_011.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/ef630097-779a-4bc5-9682-1f79f46c40f1/1.jpg?format=2500w"
+    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c9131150-4835-42cc-a38f-435aac9c3394/Sisters_011.JPG?format=2500w"
    ]
   },
   {
