@@ -142,6 +142,34 @@
     "https://static-2026.dezeen.com/uploads/2026/10/Gundry-Ducker-French-Dining-Culture-Cassette-Featured_dezeen_2364_col_0.jpg",
     "https://static-2026.dezeen.com/uploads/2026/10/Gundry-Ducker-French-dining-culture-Cassette_dezeen_2364_col_3.jpg"
    ]
+  },
+  {
+   "index": "0021",
+   "place": "Love Thy Neighbor",
+   "city": "New York",
+   "designer": "Wild Form Design Studio",
+   "credit": "Aichan Mama",
+   "source_url": "https://www.dezeen.com/2026/06/27/wild-form-design-studio-love-thy-neighbor-west-village-nyc/",
+   "pages": [],
+   "added": "2026-11-02",
+   "reason": "photo 1 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 2 rejected: compression artifacts (blockiness 1.58) ; photo 3 rejected: compression artifacts (blockiness 1.38) ; photo 4 rejected: compression artifacts (blockiness 1.42) ; photo 5 rejected: compression artifacts (blockiness",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0023",
+   "place": "TWA Flight Center",
+   "city": "New York",
+   "designer": "Eero Saarinen",
+   "credit": "Gottscho-Schleisner Collection, Library of Congress",
+   "source_url": "https://www.loc.gov/item/2018732786/",
+   "pages": [],
+   "added": "2026-11-02",
+   "reason": "photo 1 film edge trimmed (5377x4218) ; photo 2 film edge trimmed (5099x3850) ; photo 3 could not be fetched (HTTPError) ; photo 4 could not be fetched (HTTPError) ; photo 5 could not be fetched (HTTPError) ; photo 6 could not be fetched (HTTPError) ; only 2 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
   }
  ]
 }
