@@ -34,7 +34,8 @@ MIN_NOT_NEWS_SHARE = 0.40   # at least this share is archive, or published more 
 MIN_US_SHARE = 0.60         # the brief says 80%; the hard floor is 60% so a thin US week still builds
 US_CITIES = ("new york", "brooklyn", "austin", "miami", "los angeles", "chicago", "san francisco", "palm springs",
              "new orleans", "nashville", "philadelphia", "boston", "detroit", "portland", "seattle", "savannah", "charleston",
-             "houston", "dallas", "denver", "washington", "las vegas", "santa fe", "marfa", "hudson", "montauk", "catskills")
+             "houston", "dallas", "denver", "washington", "las vegas", "santa fe", "marfa", "hudson", "montauk", "catskills",
+             "narragansett", "newport", "rhode island", "idlewild")
 
 
 def source_mix_problems(posts, batch_name):

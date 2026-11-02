@@ -250,6 +250,26 @@ def entry_hash(p):
 
 
 # ---------------------------------------------------------------- build
+def trim_scan_border(img, max_frac=0.10):
+    """Archive scans (Library of Congress negatives) carry the film edge: black rebate bands, notches and
+    sometimes a pale sleeve margin. Trim each side while its edge band is near-uniform black or near-white,
+    then inset 2.5% more. Only used for archive posts, so a dark bar interior is never cropped."""
+    import numpy as np
+    g = np.asarray(img.convert("L"), dtype=np.float32)
+    h, w = g.shape
+    def band(a):   # mostly film black (curved corners and notches allowed), or a blank pale margin
+        return (a < 50).mean() > 0.5 or ((a > 238).mean() > 0.9)
+    top, bot, left, right = 0, h, 0, w
+    while top < h * max_frac and band(g[top, left:right]): top += 1
+    while h - bot < h * max_frac and band(g[bot - 1, left:right]): bot -= 1
+    while left < w * max_frac and band(g[top:bot, left]): left += 1
+    while w - right < w * max_frac and band(g[top:bot, right - 1]): right -= 1
+    if (top, bot, left, right) == (0, h, 0, w):
+        return img, False
+    dx, dy = int(w * 0.025), int(h * 0.025)
+    return img.crop((left + dx, top + dy, right - dx, bot - dy)), True
+
+
 def build_post(p, out_root):
     idx = p["index"]
     out_dir = os.path.join(out_root, "posts", idx)
@@ -295,6 +315,10 @@ def build_post(p, out_root):
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
             result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
+        if p.get("archive"):
+            raw, trimmed = trim_scan_border(raw)
+            if trimmed:
+                result["notes"].append(f"photo {i + 1} film edge trimmed ({raw.width}x{raw.height})")
         # straighten first (true rotation only), so a rotated wide-angle shot shows its lean clearly
         from atlas_grade import measure_lean, _rotate_fill
         rot0, _ = measure_lean(raw)

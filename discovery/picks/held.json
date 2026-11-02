@@ -1,0 +1,106 @@
+{
+ "about": "Picks viewed and validated on 2026-11-02 but held out of 2026-W45 by the source-mix rules. Indexes 0024 to 0026 are reserved for them; the next weekly review uses them first (one Gottscho-Schleisner post per batch unless Lewie exempts archive collections). Skywalker Grill (Dezeen, Tom McGovern, Rockwell Group) was also viewed and is a good later pick; it gets an index when used.",
+ "posts": [
+  {
+   "index": "0024",
+   "place": "Fontainebleau",
+   "neighborhood": "Miami Beach",
+   "city": "Miami",
+   "category": "Hotel",
+   "designer": "Morris Lapidus",
+   "credit": "Gottscho-Schleisner Collection, Library of Congress",
+   "licence": "No known restrictions (Library of Congress)",
+   "archive": true,
+   "era": "1955",
+   "word": "SUAVE",
+   "reminds": "Goldfinger's opening shot",
+   "card": [
+    "BUREAU OF LEISURE NO. 0024",
+    "FONTAINEBLEAU. MIAMI BEACH, MIAMI.",
+    "MORRIS LAPIDUS, 1954. BOW TIES IN THE DESIGN.",
+    "BUILT ON THE OLD HARVEY FIRESTONE ESTATE.",
+    "THE STAIRCASE TO NOWHERE, PRESERVED.",
+    "PHOTOGRAPHED BY GOTTSCHO-SCHLEISNER, 1955.",
+    "IN A WORD: SUAVE."
+   ],
+   "alt_hint": "A 1955 hotel lobby with fluted columns, round banquettes, ringed ceiling lights and a floor patterned with black bow ties.",
+   "source_url": "https://www.loc.gov/item/2018727401/",
+   "discovered_via": "https://en.wikipedia.org/wiki/Fontainebleau_Miami_Beach",
+   "cover": 1,
+   "photos": [
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a30000/5a30200/5a30276u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23500/5a23508u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23500/5a23512u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23477u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23478u.tif"
+   ]
+  },
+  {
+   "index": "0025",
+   "place": "The Dunes Club",
+   "neighborhood": "Narragansett",
+   "city": "Rhode Island",
+   "category": "Club",
+   "designer": "Thomas Pym Cope",
+   "credit": "Gottscho-Schleisner Collection, Library of Congress",
+   "licence": "No known restrictions (Library of Congress)",
+   "archive": true,
+   "era": "1939",
+   "word": "BREEZY",
+   "reminds": "a Slim Aarons Newport afternoon",
+   "card": [
+    "BUREAU OF LEISURE NO. 0025",
+    "THE DUNES CLUB. NARRAGANSETT, RHODE ISLAND.",
+    "THE FIRST CLUBHOUSE WASHED AWAY IN 1938.",
+    "REBUILT IN 1939 BY THOMAS PYM COPE.",
+    "COLONIAL REVIVAL, ON NARRAGANSETT BAY.",
+    "ON THE NATIONAL REGISTER SINCE 2015.",
+    "IN A WORD: BREEZY."
+   ],
+   "alt_hint": "A 1939 beach club room under open timber trusses, with sofas and lamps facing a curved wall of windows onto the sea.",
+   "source_url": "https://www.loc.gov/item/2018736219/",
+   "discovered_via": "https://en.wikipedia.org/wiki/The_Dunes_Club",
+   "bring": "BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.",
+   "cover": 1,
+   "photos": [
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03786u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03785u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03776u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03775u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03782u.tif"
+   ]
+  },
+  {
+   "index": "0026",
+   "place": "Million Goods",
+   "neighborhood": "Fort Greene",
+   "city": "Brooklyn",
+   "category": "Bar",
+   "designer": "Gjergji Shkurti",
+   "credit": "Joe Thomas",
+   "word": "DAPPER",
+   "reminds": "a Tokyo jazz kissa",
+   "card": [
+    "BUREAU OF LEISURE NO. 0026",
+    "MILLION GOODS. FORT GREENE, BROOKLYN.",
+    "A LANDMARKED BUILDING ON DEKALB AVENUE.",
+    "A GLOSSY RED SPIRAL STAIRCASE.",
+    "A BRECCIA PERNICE STONE WINE BAR.",
+    "HI-FI DOWNSTAIRS. MENSWEAR UPSTAIRS.",
+    "IN A WORD: DAPPER."
+   ],
+   "alt_hint": "A wood-panelled listening bar with a long red-brown stone counter, steel stools and a big speaker set into the shelving.",
+   "source_url": "https://www.joethomasphoto.com/million-goods/",
+   "discovered_via": "https://www.dezeen.com/2026/09/25/gjergji-shkurti-million-goods-ft-green/",
+   "photos": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w"
+   ]
+  }
+ ]
+}

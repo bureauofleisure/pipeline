@@ -28,7 +28,7 @@ PER_SEARCH = 60          # results read per collection search
 ITEMS_PER_TARGET = 16    # item pages opened per target (each is one request)
 COLLECTIONS = [
     ("gottscho-schleisner collection", "Gottscho-Schleisner Collection, Library of Congress"),
-    ("carol m. highsmith archive", "Carol M. Highsmith Archive, Library of Congress"),
+    ("highsmith (carol m.) archive", "Carol M. Highsmith Archive, Library of Congress"),
     ("historic american buildings survey/historic american engineering record/historic american landscapes survey",
      "Historic American Buildings Survey, Library of Congress"),
 ]
