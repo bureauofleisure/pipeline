@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-02T12:06:29Z",
+  "checked": "2026-11-03T00:50:38Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -63,7 +63,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 16
+      "items": 15
     },
     {
       "name": "Architectural Digest",
@@ -1066,14 +1066,6 @@
       "items": 0
     },
     {
-      "name": "USM",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Busta Studio",
       "tier": 1,
       "category": "studio",
@@ -1253,6 +1245,94 @@
       "name": "Andrew Meredith",
       "tier": 1,
       "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Francisco Ascens\u00e3o",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Andrew Pogue",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Matt Kisiday",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "MMK Creative",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Matthew Millman",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dan Padgett",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Oscar Oliver Studio",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ground Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "CLB Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Conran and Partners",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ater Architects",
+      "tier": 1,
+      "category": "studio",
       "site": 200,
       "feed": null,
       "items": 0
