@@ -1,5 +1,5 @@
 {
- "searched": "2026-10-22T15:43:16Z",
+ "searched": "2026-11-02T23:15:46Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,94 +7,54 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 12,
-  "results": 265,
-  "items_opened": 9,
+  "searches": 1,
+  "results": 0,
+  "items_opened": 0,
   "offtopic": 0,
-  "rights": 8,
-  "size": 1,
+  "rights": 0,
+  "size": 0,
   "type": 0,
   "errors": [
-   "item http://www.loc.gov/item/mt0360/: HTTPError",
-   "item http://www.loc.gov/item/mt0361/: HTTPError",
-   "item http://www.loc.gov/item/ny2406/: HTTPError",
-   "item http://www.loc.gov/item/nd0016/: HTTPError",
-   "item http://www.loc.gov/item/mt0356/: HTTPError",
-   "item http://www.loc.gov/item/mt0352/: HTTPError",
-   "item http://www.loc.gov/item/mt0357/: HTTPError",
-   "item http://www.loc.gov/item/mt0354/: HTTPError",
-   "search TWA Hotel: HTTPError HTTP Error 429: Too Many Requests",
-   "search TWA Flight Center interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Chelsea: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Chelsea lobby: HTTPError HTTP Error 429: Too Many Requests",
-   "search Fontainebleau Miami Beach: HTTPError HTTP Error 429: Too Many Requests",
-   "search Fontainebleau Miami Beach Lapidus lobby: HTTPError HTTP Error 429: Too Many Requests",
-   "search Eden Roc: HTTPError HTTP Error 429: Too Many Requests",
-   "search Eden Roc Miami Beach Lapidus: HTTPError HTTP Error 429: Too Many Requests",
-   "search The Raleigh: HTTPError HTTP Error 429: Too Many Requests",
-   "search Raleigh Hotel Miami Beach pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Venetian Pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Venetian Pool Coral Gables: HTTPError HTTP Error 429: Too Many Requests",
-   "search Driskill Hotel: HTTPError HTTP Error 429: Too Many Requests",
-   "search Driskill Hotel lobby Austin: HTTPError HTTP Error 429: Too Many Requests",
-   "search Barton Springs Pool: HTTPError HTTP Error 429: Too Many Requests",
-   "search Barton Springs Pool Austin: HTTPError HTTP Error 429: Too Many Requests",
-   "search Musso & Frank Grill: HTTPError HTTP Error 429: Too Many Requests",
-   "search Musso and Frank Grill interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search The Beverly Hills Hotel: HTTPError HTTP Error 429: Too Many Requests",
-   "search Beverly Hills Hotel Polo Lounge: HTTPError HTTP Error 429: Too Many Requests",
-   "search Chateau Marmont: HTTPError HTTP Error 429: Too Many Requests",
-   "search Chateau Marmont interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Sunnylands: HTTPError HTTP Error 429: Too Many Requests",
-   "search Sunnylands Annenberg interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Okura: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Okura Tokyo lobby 1962: HTTPError HTTP Error 429: Too Many Requests",
-   "search Hotel Il Pellicano: HTTPError HTTP Error 429: Too Many Requests",
-   "search Il Pellicano Porto Ercole: HTTPError HTTP Error 429: Too Many Requests",
-   "search Gellért Baths: HTTPError HTTP Error 429: Too Many Requests",
-   "search Gellért Baths interior: HTTPError HTTP Error 429: Too Many Requests",
-   "search Café Central: HTTPError HTTP Error 429: Too Many Requests",
-   "search Café Central Vienna interior: HTTPError HTTP Error 429: Too Many Requests"
+   "rate limited by loc.gov at Millennium Biltmore Hotel; stopped searching, kept earlier finds"
   ],
-  "rights_seen": {
-   "No known restrictions on images made by the U.S. Government; images     copied f": 8
-  },
-  "sample_files": {
-   "item": "http://www.loc.gov/item/2018750506/",
-   "files": [
-    {
-     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a00000/5a00000/5a00064u.tif",
-     "mimetype": "image/tiff",
-     "width": 0,
-     "height": 0
-    },
-    {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064_150px.jpg",
-     "mimetype": "image/jpeg",
-     "width": 150,
-     "height": 124
-    },
-    {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064t.gif",
-     "mimetype": "image/gif",
-     "width": 150,
-     "height": 124
-    },
-    {
-     "url": "https://tile.loc.gov/storage-services/service/pnp/gsc/5a00000/5a00000/5a00064r.jpg",
-     "mimetype": "image/jpeg",
-     "width": 640,
-     "height": 530
-    }
-   ]
-  },
-  "other_collections": 190,
-  "iiif_misses": [
-   "service:pnp:gsc:5a00000:5a00000:5a00064u: HTTPError",
-   "/service:pnp:gsc:5a00000:5a00000:5a00064: HTTPError"
-  ]
+  "rights_seen": {},
+  "sample_files": null,
+  "rate_limited": true,
+  "targets_tried": 2
  },
+ "next_target": 8,
  "targets": [
+  {
+   "place": "Rainbow Room",
+   "city": "New York",
+   "era": "1934",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Longchamps",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner photographed the Longchamps chain's Winold Reiss interiors; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Schrafft's",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner holds many Schrafft's interiors; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Toffenetti Restaurant",
+   "city": "New York",
+   "era": "1940",
+   "notes": "Added 2026-10-26: Gottscho-Schleisner, Times Square.",
+   "candidates": [],
+   "count": 0
+  },
   {
    "place": "Grand Central Oyster Bar",
    "city": "New York",
@@ -103,9 +63,53 @@
    "count": 0
   },
   {
+   "place": "Driskill Hotel",
+   "city": "Austin",
+   "era": "1886",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Biltmore Hotel",
+   "city": "Miami",
+   "era": "1926",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Clifton's Cafeteria",
+   "city": "Los Angeles",
+   "era": "1935",
+   "notes": "Added 2026-10-26: Carol M. Highsmith, Broadway, downtown Los Angeles.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Millennium Biltmore Hotel",
+   "city": "Los Angeles",
+   "era": "1923",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Menger Hotel",
+   "city": "San Antonio",
+   "era": "1859",
+   "notes": "Added 2026-10-26: Carol M. Highsmith, Texas.",
+   "candidates": [],
+   "count": 0
+  },
+  {
    "place": "Bemelmans Bar",
    "city": "New York",
    "era": "1947",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Venetian Pool",
+   "city": "Miami",
+   "era": "1924",
    "candidates": [],
    "count": 0
   },
@@ -131,16 +135,10 @@
    "count": 0
   },
   {
-   "place": "Rainbow Room",
-   "city": "New York",
-   "era": "1934",
-   "candidates": [],
-   "count": 0
-  },
-  {
    "place": "TWA Hotel",
    "city": "New York",
    "era": "1962",
+   "notes": "Edits 2026-10-23: Lewie wants professional photos to replace the Commons set on 0014. Leads on loc.gov: Gottscho-Schleisner series 'Union News restaurants, TWA, Idlewild' (1962; Lisbon Lounge I, II, III, Lisbon Lounge bar, London Club II; items 2018732786, 2018732788, 2018732789, 2018732794). HABS NY-6371 lists 79 Peter Brandt photographs but they are not digitized. Balthazar Korab collection has interiors (2018673438, 2020714541) but is not an approved collection and rights are not evaluated. 2026-10-26: the IIIF ids 404, but the master TIFF downloads: 5a28548u.tif (item 2018732786, Lisbon Lounge I) is 5411x4299 and was viewed: a composed professional view of the lounge under the shell roof. Sibling negatives are likely 5a28545 to 5a28560.",
    "candidates": [],
    "count": 0
   },
@@ -169,20 +167,6 @@
    "place": "The Raleigh",
    "city": "Miami",
    "era": "1940",
-   "candidates": [],
-   "count": 0
-  },
-  {
-   "place": "Venetian Pool",
-   "city": "Miami",
-   "era": "1924",
-   "candidates": [],
-   "count": 0
-  },
-  {
-   "place": "Driskill Hotel",
-   "city": "Austin",
-   "era": "1886",
    "candidates": [],
    "count": 0
   },
@@ -264,13 +248,6 @@
    "count": 0
   },
   {
-   "place": "Biltmore Hotel",
-   "city": "Miami",
-   "era": "1926",
-   "candidates": [],
-   "count": 0
-  },
-  {
    "place": "Deep Eddy Pool",
    "city": "Austin",
    "era": "1915",
@@ -285,16 +262,49 @@
    "count": 0
   },
   {
-   "place": "Millennium Biltmore Hotel",
-   "city": "Los Angeles",
-   "era": "1923",
+   "place": "Keens Steakhouse",
+   "city": "New York",
+   "era": "1885",
    "candidates": [],
    "count": 0
   },
   {
-   "place": "Keens Steakhouse",
+   "place": "Horn & Hardart Automat",
    "city": "New York",
-   "era": "1885",
+   "era": "1930s",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner photographed Horn & Hardart Automats in Manhattan; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Waldorf-Astoria",
+   "city": "New York",
+   "era": "1931",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner, Park Avenue interiors, 1930s and 1940s. Public rooms only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Childs Restaurant",
+   "city": "New York",
+   "era": "1930s",
+   "notes": "Added 2026-11-02: Gottscho-Schleisner; pick a single location only.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Madonna Inn",
+   "city": "San Luis Obispo",
+   "era": "1958",
+   "notes": "Added 2026-11-02: Carol M. Highsmith, California. Dining room, bar and bakery, never the themed rooms.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Ahwahnee Hotel",
+   "city": "Yosemite",
+   "era": "1927",
+   "notes": "Added 2026-11-02: Carol M. Highsmith and HABS, Yosemite National Park. Dining room and great lounge.",
    "candidates": [],
    "count": 0
   }

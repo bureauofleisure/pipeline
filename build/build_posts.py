@@ -24,6 +24,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.request
 
 import cv2
@@ -102,20 +103,38 @@ def validate_card(p):
 
 
 # ---------------------------------------------------------------- photos
+_LOC_LAST = [0.0]
+
+
 def fetch(src):
-    """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive."""
+    """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive.
+    Library of Congress masters are 20 to 90 MB TIFFs on tile.loc.gov, which answers 429 when they are pulled
+    back to back (2026-11-02: TWA lost 4 of 6 photos). Those get a long timeout, 4 s between downloads,
+    Retry-After honoured, and up to five tries; the HTTP status is kept in the error for the notes."""
     if src.startswith("http"):
+        loc = "loc.gov" in src
         req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "image/*"})
         last = None
-        for attempt in range(3):
+        for attempt in range(5 if loc else 3):
+            if loc:
+                wait = 4.0 - (time.time() - _LOC_LAST[0])
+                if wait > 0:
+                    time.sleep(wait)
+                _LOC_LAST[0] = time.time()
             try:
-                with urllib.request.urlopen(req, timeout=30) as r:
+                with urllib.request.urlopen(req, timeout=180 if loc else 30) as r:
                     data = r.read()
                     ctype = r.headers.get("Content-Type", "").split(";")[0].strip()
                     return Image.open(io.BytesIO(data)).convert("RGB"), data, ctype
+            except urllib.error.HTTPError as e:
+                last = RuntimeError(f"HTTP {e.code}")
+                if e.code in (404, 410):
+                    break
+                ra = e.headers.get("Retry-After") if e.headers else None
+                time.sleep(min(int(ra), 120) if ra and ra.isdigit() else (30 * (attempt + 1) if loc else 2 * (attempt + 1)))
             except Exception as e:  # noqa: BLE001
                 last = e
-                time.sleep(2 * (attempt + 1))
+                time.sleep(10 * (attempt + 1) if loc else 2 * (attempt + 1))
         raise last
     data = open(os.path.join(ROOT, src), "rb").read()
     return Image.open(io.BytesIO(data)).convert("RGB"), data, ""
@@ -229,11 +248,47 @@ def alt_text(p):
     return f"{p['place']}, {p['neighborhood']}, {p['city']}. {p.get('alt_hint', 'Interior view.')}"[:1000]
 
 
+def photos_sig(p):
+    """Fingerprint of the photo list. A saved photo order only applies to the photo list it was made against."""
+    return hashlib.sha1(json.dumps(p.get("photos", [])).encode()).hexdigest()[:12]
+
+
+ORDERS_PATH = os.path.join(ROOT, "batches", "orders", "photo_order.json")
+
+
+def load_orders():
+    """Photo orders saved from the review page (drag and drop): {index: {order: [source photo numbers], sig, at}}."""
+    try:
+        return json.load(open(ORDERS_PATH)).get("orders", {})
+    except Exception:  # noqa: BLE001  no file yet, or unreadable: build as usual
+        return {}
+
+
 def entry_hash(p):
     return hashlib.sha1((json.dumps(p, sort_keys=True) + GRADE_VERSION + carousel.LAYOUT_VERSION).encode()).hexdigest()[:12]
 
 
 # ---------------------------------------------------------------- build
+def trim_scan_border(img, max_frac=0.10):
+    """Archive scans (Library of Congress negatives) carry the film edge: black rebate bands, notches and
+    sometimes a pale sleeve margin. Trim each side while its edge band is near-uniform black or near-white,
+    then inset 2.5% more. Only used for archive posts, so a dark bar interior is never cropped."""
+    import numpy as np
+    g = np.asarray(img.convert("L"), dtype=np.float32)
+    h, w = g.shape
+    def band(a):   # mostly film black (curved corners and notches allowed), or a blank pale margin
+        return (a < 50).mean() > 0.5 or ((a > 238).mean() > 0.9)
+    top, bot, left, right = 0, h, 0, w
+    while top < h * max_frac and band(g[top, left:right]): top += 1
+    while h - bot < h * max_frac and band(g[bot - 1, left:right]): bot -= 1
+    while left < w * max_frac and band(g[top:bot, left]): left += 1
+    while w - right < w * max_frac and band(g[top:bot, right - 1]): right -= 1
+    if (top, bot, left, right) == (0, h, 0, w):
+        return img, False
+    dx, dy = int(w * 0.025), int(h * 0.025)
+    return img.crop((left + dx, top + dy, right - dx, bot - dy)), True
+
+
 def build_post(p, out_root):
     idx = p["index"]
     out_dir = os.path.join(out_root, "posts", idx)
@@ -249,6 +304,7 @@ def build_post(p, out_root):
               "grade": GRADE_VERSION, "entry_hash": h, "built": time.strftime("%Y-%m-%d"),
               # everything the sheet needs, passed straight through from the batch file
               "edited_at": p.get("edited_at", ""),      # set by the edits job when it applies a request
+              "photos_sig": photos_sig(p),               # the review page sends this back with a reorder
               "meta": {k: p.get(k, "") for k in ("neighborhood", "city", "category", "word", "reminds", "credit",
                                                   "designer", "designer_handle", "venue_handle",
                                                   "photographer_handle", "source_handle", "source_url", "bring")}}
@@ -273,11 +329,15 @@ def build_post(p, out_root):
         try:
             raw, raw_bytes, raw_type = fetch(src)
         except Exception as e:  # noqa: BLE001  unreachable, blocked, not an image
-            result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__})")
+            result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__}: {str(e)[:40]})")
             continue
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
             result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
+        if p.get("archive") and "loc.gov" in src:   # Library of Congress negative scans only; never other photos
+            raw, trimmed = trim_scan_border(raw)
+            if trimmed:
+                result["notes"].append(f"photo {i + 1} film edge trimmed ({raw.width}x{raw.height})")
         # straighten first (true rotation only), so a rotated wide-angle shot shows its lean clearly
         from atlas_grade import measure_lean, _rotate_fill
         rot0, _ = measure_lean(raw)
@@ -333,6 +393,21 @@ def build_post(p, out_root):
             graded = chosen + [g for g in graded if g["i"] != cover - 1]
         else:
             result["notes"].append(f"named cover (photo {cover}) did not pass; best scoring photo used")
+    # a photo order dragged into place on the review page beats both the score and the named cover
+    rec = p.get("photo_order")
+    if rec:
+        result["order_at"] = rec.get("at", "")       # the sheet compares this stamp to know the reorder has landed
+        if rec.get("sig") and rec["sig"] != result["photos_sig"]:
+            result["notes"].append("photo order from review ignored: the photo list changed since it was set")
+        else:
+            order = [int(n) for n in rec.get("order", [])]
+            pos = {n: k for k, n in enumerate(order)}
+            graded.sort(key=lambda g: (0, pos[g["i"] + 1]) if g["i"] + 1 in pos else (1, -g["score"]))
+            passed = {g["i"] + 1 for g in graded}
+            absent = [n for n in order if n not in passed]
+            result["notes"].append("photo order set in review: " + ", ".join(map(str, order)))
+            if absent:
+                result["notes"].append("ordered photos that did not pass this time: " + ", ".join(map(str, absent)))
     graded = graded[:MAX_PHOTOS]
 
     # the set must hang together in tone: drop the odd one out (never the cover) until it does
@@ -356,11 +431,16 @@ def build_post(p, out_root):
     card = card_with_bring(p, result["notes"])
     slides = carousel.build(photos, idx, place_line, p["word"], p.get("reminds", ""), card, p.get("credit", ""))
     os.makedirs(out_dir, exist_ok=True)
+    # a post carries only the slides of its latest build: clear the old ones first (a shorter rebuild once left
+    # the previous card behind as a stale last slide)
+    for old in glob.glob(os.path.join(out_dir, "[0-9][0-9].jpg")):
+        os.remove(old)
     urls = []
     for n, s in enumerate(slides, 1):
         name = f"{n:02d}.jpg"
         export(s, os.path.join(out_dir, name))
-        urls.append(f"{BASE_URL}/posts/{idx}/{name}")
+        # ?v= changes with every rebuild, so browsers and the review page never show a cached old slide
+        urls.append(f"{BASE_URL}/posts/{idx}/{name}?v={h}")
     result["slides"] = urls
     used = {g["i"] + 1 for g in graded}
     for o in originals:
@@ -415,8 +495,14 @@ def main():
     # the public link page and the profile seal live at the site root, next to the posts
     site = os.path.join(os.path.dirname(os.path.abspath(__file__)), "site")
     shutil.copy(os.path.join(site, "index.html"), os.path.join(out_root, "index.html"))
+    # privacy policy URL is set in the Meta app (App settings > Basic); keep it at this path
+    shutil.copy(os.path.join(site, "privacy.html"), os.path.join(out_root, "privacy.html"))
     shutil.copy(os.path.join(ROOT, "brand", "avatar.jpg"), os.path.join(out_root, "avatar.jpg"))
     posts = []
+    orders = load_orders()
+    # An index can appear in more than one batch (a benched post carried into the next week). Build it once,
+    # from the latest batch: building both made duplicate manifest rows and rebuilt the same folder twice a run.
+    entries = {}
     for path in sorted(glob.glob(os.path.join(ROOT, "batches", "*.json"))):
         try:
             batch = json.load(open(path))["posts"]
@@ -424,14 +510,19 @@ def main():
             print(f"SKIPPED {os.path.basename(path)}: cannot read ({e})")
             continue
         for p in batch:
-            try:
-                posts.append(build_post(p, out_root))
-            except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
-                idx = p.get("index", "?")
-                r = {"index": idx, "place": p.get("place", "?"), "status": "ERROR",
-                     "notes": [f"{type(e).__name__}: {e}"], "entry_hash": entry_hash(p)}
-                posts.append(finish(r, os.path.join(out_root, "posts", str(idx)),
-                                    os.path.join(out_root, "posts", str(idx), "post.json")))
+            entries.pop(str(p.get("index", "")), None)
+            entries[str(p.get("index", ""))] = p
+    for p in entries.values():
+        if str(p.get("index", "")) in orders:
+            p = dict(p, photo_order=orders[str(p["index"])])   # part of the entry hash, so a reorder rebuilds
+        try:
+            posts.append(build_post(p, out_root))
+        except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
+            idx = p.get("index", "?")
+            r = {"index": idx, "place": p.get("place", "?"), "status": "ERROR",
+                 "notes": [f"{type(e).__name__}: {e}"], "entry_hash": entry_hash(p)}
+            posts.append(finish(r, os.path.join(out_root, "posts", str(idx)),
+                                os.path.join(out_root, "posts", str(idx), "post.json")))
     json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "posts": posts},
               open(os.path.join(out_root, "manifest.json"), "w"), indent=2)
     for r in posts:

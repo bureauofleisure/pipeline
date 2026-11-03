@@ -49,6 +49,10 @@ def add(manifest_path):
     m = json.load(open(manifest_path))
     d = load()
     have = {it["index"] for it in d["items"]}
+    built = {p["index"] for p in m.get("posts", []) if p.get("status") == "BUILT"}
+    for it in d["items"]:
+        if it["index"] in built and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DONE"   # benched once, built since: nothing left to wait for
     added = 0
     for p in m.get("posts", []):
         if p.get("status") != "BENCHED" or p["index"] in have:
@@ -96,7 +100,16 @@ def check():
     d = load()
     sources = json.load(open(os.path.join(HERE, "sources.json")))["sources"]
     report = []
+    try:   # the sheet's verdicts: a KILLED post is not waited for; one already live or approved is done
+        sheet = json.load(open(os.path.join(HERE, "statuses.json")))["rows"]
+    except Exception:  # noqa: BLE001
+        sheet = {}
     for it in d["items"]:
+        verdict = (sheet.get(it["index"]) or {}).get("status", "")
+        if verdict == "KILLED" and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DROPPED"; it["reason"] = (it.get("reason", "") + " ; killed on the sheet")[-300:]
+        elif verdict in ("APPROVED", "SCHEDULED", "POSTED", "LIVE") and it["status"] not in ("DONE", "DROPPED"):
+            it["status"] = "DONE"
         if it["status"] in ("DONE", "DROPPED"):
             continue
         words = place_words(it)
@@ -123,6 +136,9 @@ def check():
                 for ph in hv.images_from(body, u):
                     fu = hv.fullsize(ph["url"], "")
                     w = ph["width_hint"] or (2500 if "format=2500w" in fu else 0)
+                    stem = fu.split("?")[0].rsplit("/", 1)[-1].lower()
+                    if re.search(r"(favicon|logo|icon|sprite|avatar)", stem):
+                        continue  # site furniture, not photographs of the place
                     if w >= MIN_WIDE:
                         found[fu] = w
                 time.sleep(0.3)
@@ -131,6 +147,8 @@ def check():
         it["candidate_photos"] = sorted(found)[:20]
         if len(found) >= 4:
             it["status"] = "READY"
+        elif it["status"] == "READY":
+            it["status"] = "WATCHING"   # READY is re-earned every check; it was sticky before 2026-11-02
         report.append({"index": it["index"], "place": it["place"], "status": it["status"], "ready_photos": len(found)})
     save(d)
     json.dump({"checked": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "items": report},

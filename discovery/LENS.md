@@ -60,6 +60,8 @@ Enforced by make_batch.py; a batch that breaks these does not build.
   Press is where we hear about a place; the studio, photographer, venue or archive page is where the photos and
   the source_url come from. Record the article as `discovered_via`.
 - One post per studio and one per photographer in any batch.
+  2026-11-02 (Lewie): an archive collection credit (for example Gottscho-Schleisner, Library of Congress) may appear
+  in up to two posts per batch. Built in: make_batch.py.
 - At least 40% of a batch is archive or published more than a year ago ("new" means new to most, not new this week).
 - US floor 60%, target 80%. New York first, then Austin, Miami, Los Angeles.
 - We take at most two of the fifteen or so hospitality interiors the press runs each week, chosen on era and
@@ -77,6 +79,14 @@ A reviewer can send a post back with a note instead of killing it (Status EDITS)
 note, translates it into pick fields (drop_photos, rotate, cover, word, card lines, photos list), sets edited_at,
 rebuilds, and the post returns to DRAFT marked "Edited" for a second look. Small tilts and keystone are corrected
 automatically in the build; an edit note about a crooked slide usually means drop that photo or rotate it by hand.
+
+## Photo order (from 2026-10-30)
+Lewie reorders photos by dragging them on the review page. Every reorder is saved to
+`batches/orders/photo_order.json`: `orders` is what the build applies (source photo numbers, cover first),
+`history` records each change with the order it replaced. Treat history as taste: before naming a `cover` or
+an order for a new pick, read it and look at which photo Lewie moved to the front and what he pushed back.
+Pick the cover he would. Never edit or remove his saved orders; the build ignores one on its own if the
+photo list it was made against changes.
 
 ## Source yield
 Every source gets a running yield: candidates found, candidates that built, candidates approved.
@@ -111,3 +121,9 @@ Lewie can strike a rule by saying so; nothing here is removed otherwise.
   look. If the photos cannot be fetched and viewed in the run, the place waits for a run that can see them.
   (The 0014 set was chosen by Commons title and never viewed, which is how eleven frames of floor, carpet and
   concrete reached the review page.)
+- 2026-10-27 (Peridot 0009, Cassette 0010): a post carries only the slides of its latest build, and the review
+  page and the publisher see exactly those slides. When a rebuild shortens a post (a replicate dropped, a photo
+  held), the slide files it no longer uses must go and the sheet's slide links must be refreshed even on rows
+  already approved; otherwise the previous card stays on as an extra last slide and the card shows twice. Not yet
+  built in.
+- 2026-11-02 (TWA Flight Center 0023): an archive post shows rooms that still exist and can be visited as photographed. If the place was gutted, rebuilt or redesigned since the photographs (TWA's 1962 Lisbon Lounge and London Club are gone; the terminal is now the TWA Hotel), the archive photos describe a place that is closed and the post does not make the cut. Before picking an archive set, confirm from a source that the rooms shown survive today, room by room.

@@ -12,24 +12,26 @@ BRING YOUR SISTER. SHE HAS OPINIONS ABOUT CHAIRS.
 BRING THE FRIEND WHO SENDS YOU PLACES LIKE THIS.
 BRING WHOEVER YOU HAVEN'T SEEN SINCE THE WEDDING.
 BRING SOMEONE WHO DESERVES A LONG LUNCH.
-BRING SOMEONE WHO THINKS THEY KNOW ABOUT WINE.
+BRING SOMEONE WHO SPEAKS WINE.
 BRING SOMEONE WHO LOVES GOSSIP.
-BRING SOMEONE YOU LAUGH WITH.
 BRING THE FRIENDS WHO TURN BRUNCH INTO AN AFTERNOON.
-BRING YOUR GO-TO DINNER GROUP.
-BRING SOMEONE WHO LOVES A THREE-HOUR DINNER.
 BRING THE FRIEND WHO LAUGHS FUNNY.
 BRING SOMEONE WHO ALWAYS ORDERS DESSERT.
 BRING SOMEONE WHO TELLS A LONG STORY WELL.
 BRING WHOEVER TAUGHT YOU TO DRINK MARTINIS.
 BRING SOMEONE WHO STILL SENDS POSTCARDS.
+BRING WHOEVER ORDERS FOR THE TABLE.
+BRING THE ONE WHO PHOTOGRAPHS THE BATHROOM.
+BRING SOMEONE WHO ASKS WHO DID THE INTERIORS.
+BRING SOMEONE YOU'VE BEEN MEANING TO CATCH UP WITH.
+BRING WHOEVER KEEPS SAYING "WE SHOULD GET DINNER."
 #
 # RESERVED
 BRING YOUR MOTHER.          | max once a month; 50s/60s-looking places only; never with SULTRY or SMOKY
 #
 # CONDITIONAL: only when the post's cuisine or reference matches the condition
 BRING SOMEONE WHO HAS BEEN TO THAILAND.          | Thai
-BRING SOMEONE WHO HAS BEEN TO ITALY AND WON'T STOP TALKING ABOUT IT.   | Italian
+BRING SOMEONE WHO HAS BEEN TO ITALY.             | Italian
 BRING SOMEONE WHO HAS BEEN TO GREECE.            | Greek
 BRING SOMEONE WHO HAS BEEN TO JAPAN. TWICE.      | Japanese, listening bars, kissaten
 BRING SOMEONE WHO HAS BEEN TO MEXICO CITY.       | Mexican, or the place is in Mexico
@@ -37,3 +39,9 @@ BRING SOMEONE WHO HAS BEEN TO PARIS ALONE.       | French bistros, brasseries
 BRING SOMEONE WHO GREW UP IN CHICAGO.            | taverns, Chicago references
 BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL. | pools, lidos, beach clubs
 BRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT. | baths, saunas
+BRING WHOEVER'S "ONE DRINK" IS NEVER ONE.      | bars and cocktail rooms only
+#
+# DATING: conditional, romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING SOMEONE YOU'RE DATING.                     | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING A THIRD DATE.                              | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed
+BRING THE ONE YOU STILL TAKE ON DATES.           | romantic places only (candlelit, intimate, low-lit); max one dating line a week across the feed

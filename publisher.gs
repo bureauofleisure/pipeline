@@ -1,5 +1,21 @@
 /**
- * Bureau of Leisure Publisher v0.13 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.17 (MODE: DRYRUN default, QUIET, LIVE)
+ *
+ * v0.17: drag to reorder photos on the review page. The new order (cover first) is saved to
+ *        batches/orders/photo_order.json in GitHub, which rebuilds that one post in about 10 minutes (labels
+ *        re-render in their new places). The row keeps its status but never publishes while a reorder is still
+ *        building. Open rows (not POSTED, PUBLISHING or KILLED) now always carry the latest build's slides, so a
+ *        rebuild can no longer leave an approved row pointing at stale slides.
+ * v0.16: one row of tabs, each with its count (the separate unlinked counts line is gone).
+ * v0.15: review page gains Failed and Dry run tabs, so FAILED rows can be re-approved in one click.
+ * v0.14 (2026-10-26, after Meta put the developer account through a human check and blocked API access):
+ *   Meta brake    any block, restriction, bad-token or rate-limit error from Meta stops every API call at once,
+ *                 emails "Meta blocked: action needed" once, and leaves the row where it was (nothing is burned).
+ *                 The 7am dailyCheck makes ONE read-only call a day to see if access is back; when it is, the
+ *                 brake releases itself and emails "Meta access restored". Rate limits back off 24 hours quietly.
+ *   Dry runs      build images and caption only, never tags or collaborators.
+ *   Tag ramp      first 21 days of LIVE (TAG_RAMP_DAYS): venue handle only, no collaborators. Then full tags.
+ *   Clock         FIRST_GOOD_DRYRUN_AT and GOOD_DRYRUNS record real successful dry runs for the 3-week review.
  *
  * Google Apps Script bound to the Bureau of Leisure Index sheet.
  * Runs hourly. Publishes the next APPROVED row whose "Publish at" time has passed,
@@ -80,6 +96,7 @@ function notify_(subject, body) {
  *  3. Alerts if nothing has posted in 26 hours while approved posts are waiting.
  */
 function dailyCheck() {
+  probeBrake_();                                 // one quiet call a day while Meta has us blocked
   const props = PropertiesService.getScriptProperties();
   const hour = Number(props.getProperty('POST_HOUR') || 9);
   const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
@@ -106,7 +123,7 @@ function dailyCheck() {
     if (d > now) queued++;
   }
   if (queued < 7) notify_(`Only ${queued} approved posts queued`, 'Approve next week in the Bureau of Leisure Index sheet, Posts tab.');
-  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_() && live_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
+  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_() && !brake_() && live_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
 
   // token health: refreshed weekly; warn if two weekly refreshes in a row have failed
   const refreshed = Number(props.getProperty('TOKEN_REFRESHED_AT') || props.getProperty('TOKEN_SET_AT') || 0);
@@ -134,7 +151,10 @@ function weeklySummary_(values, col, now) {
   const body = [`Went live (${live.length}):`, ...(live.length ? live : ['none']), '',
                 `Failed (${failed.length}):`, ...(failed.length ? failed : ['none']), '',
                 `Dry runs (${dry.length}):`, ...(dry.length ? dry : ['none']), '',
-                `Approved and queued: ${queued}`, 'MODE: ' + mode_() + (quiet_() ? ' (real posts, no tags or @handles)' : live_() ? '' : ' (nothing posts publicly)'), paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : ''].join('\n');
+                `Approved and queued: ${queued}`, 'MODE: ' + mode_() + (quiet_() ? ' (real posts, no tags or @handles)' : live_() ? '' : ' (nothing posts publicly)'), paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : '',
+                (() => { const b = brake_(); return b ? '\nMETA BRAKE ON (' + b.kind + ' since ' + new Date(b.at).toISOString().slice(0, 10) + '): ' + b.msg.slice(0, 200) : ''; })(),
+                (() => { const p = PropertiesService.getScriptProperties(); const f = Number(p.getProperty('FIRST_GOOD_DRYRUN_AT') || 0);
+                         return live_() ? '' : '\nGood dry runs: ' + (p.getProperty('GOOD_DRYRUNS') || 0) + (f ? ', first on ' + new Date(f).toISOString().slice(0, 10) : ', none yet'); })()].join('\n');
   notify_(`Week: ${live.length} live, ${failed.length} failed, ${queued} queued`, body);
 }
 
@@ -162,11 +182,13 @@ function quietCaption_(c) {
 function verifyConnection_() {
   const props = PropertiesService.getScriptProperties();
   const token = props.getProperty('IG_TOKEN') || '';
-  const stamp = Utilities.base64Encode(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, token)).slice(0, 12);
+  const stamp = tokenStamp_();
   if (props.getProperty('IG_VERIFIED_FOR') === stamp) return true;
+  const b = brake_();
+  if (b && b.kind === 'BLOCK' && props.getProperty('BRAKE_TOKEN') === stamp) return false;  // same token, still blocked
+  if (b && b.kind === 'BLOCK') props.deleteProperty('META_BRAKE');   // a new token was pasted in: try it once
   const tries = Number(props.getProperty('IG_VERIFY_TRIES_' + stamp) || 0);
   if (tries >= 3) return false;                      // already emailed three failures for this token; wait for a new one
-  props.setProperty('IG_VERIFY_TRIES_' + stamp, String(tries + 1));
 
   const host = props.getProperty('GRAPH_HOST') || 'graph.instagram.com';
   const base = `https://${host}/${API_VERSION}`;
@@ -185,8 +207,8 @@ function verifyConnection_() {
       if (st !== 'APPROVED' && st !== 'DRAFT') continue;
       const slides = lines_(values[r][col['Slide links']]);
       if (slides.length < 2 || !slides.every(urlLive_)) continue;
-      const carousel = publishCarousel_(values[r], col, false, true);
-      dry = `built carousel ${carousel} for ${values[r][col['Index No.']]} (${slides.length} slides, tags included) and did NOT publish it`;
+      const carousel = publishCarousel_(values[r], col, true, true);
+      dry = `built carousel ${carousel} for ${values[r][col['Index No.']]} (${slides.length} slides, no tags) and did NOT publish it`;
       break;
     }
     props.setProperty('IG_VERIFIED_FOR', stamp);
@@ -197,6 +219,9 @@ function verifyConnection_() {
     return true;
   } catch (e) {
     log_('verify', 'FAILED: ' + String(e).slice(0, 400));
+    if (e.metaKind === 'BLOCK') return false;                                                 // the brake already emailed
+    if (e.metaKind === 'RATE') return false;                                                  // not this token's fault
+    props.setProperty('IG_VERIFY_TRIES_' + stamp, String(tries + 1));
     notify_('Instagram connection check failed', String(e).slice(0, 1000) + '\n\nNothing will publish until this passes. ' +
       'It retries hourly, three times per token.');
     return false;
@@ -218,6 +243,7 @@ function refreshToken() {
   const props = PropertiesService.getScriptProperties();
   const host = props.getProperty('GRAPH_HOST') || 'graph.instagram.com';
   if (host !== 'graph.instagram.com') return;     // Facebook Login page tokens are refreshed differently
+  if (brake_()) return;                            // no calls while Meta has us blocked; dailyCheck probes instead
   const ss = SpreadsheetApp.getActive();
   const log = ss.getSheetByName('Log') || ss.insertSheet('Log');
   try {
@@ -227,6 +253,7 @@ function refreshToken() {
     log.appendRow([new Date(), 'TOKEN REFRESHED', `expires in ${Math.round(body.expires_in / 86400)} days`]);
   } catch (e) {
     log.appendRow([new Date(), 'TOKEN REFRESH FAILED', String(e).slice(0, 500)]);
+    if (e.metaKind) return;                        // the brake already emailed
     // a token under 24 hours old cannot be refreshed yet; that is expected, not a fault
     if (!/24 hours|too soon|not.*eligible/i.test(String(e))) {
       notify_('Instagram token refresh failed', String(e).slice(0, 800) +
@@ -243,6 +270,7 @@ function publishDue() {
   try {
     if (paused_()) return;                       // a PAUSE tab stops everything
     if (!verifyConnection_()) return;            // token and account proven before anything goes public
+    if (brake_()) return;                        // Meta blocked or rate-limited us: no calls until it clears
     const verifiedAt = Number(PropertiesService.getScriptProperties().getProperty('IG_VERIFIED_AT') || 0);
     if (Date.now() - verifiedAt < 50 * 60000) return;   // the verifying run never publishes
     const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
@@ -261,6 +289,7 @@ function publishDue() {
       log_('mode', mode_() + ': dry-run rows returned to APPROVED');
       return;                                    // dailyCheck assigns their slots; first post at the next 9am
     }
+    if (mode_() === 'LIVE' && !props.getProperty('LIVE_SINCE')) props.setProperty('LIVE_SINCE', String(Date.now()));  // starts the tag ramp
     if (!live_() && Date.now() - Number(props.getProperty('LAST_DRYRUN_AT') || 0) < 20 * 3600 * 1000) return;
 
     // never more than one post in any 20-hour window, even when catching up after an outage
@@ -284,6 +313,12 @@ function publishDue() {
         continue;
       }
 
+      // a photo order was dragged on the review page and its rebuild has not landed: never post the old order
+      if (pendingOrder_(row, col)) {
+        setCell_(sheet, r, col['Notes'], 'Waiting for the new photo order to build ' + new Date().toISOString());
+        continue;
+      }
+
       // every slide must be live on the public host before Instagram is asked to fetch it
       const missing = lines_(row[col['Slide links']]).filter(u => !urlLive_(u));
       if (missing.length) {
@@ -295,11 +330,17 @@ function publishDue() {
 
       if (!live_()) {
         try {
-          const c = publishCarousel_(row, col, false, true);
+          const c = publishCarousel_(row, col, true, true);      // dry runs never carry tags or collaborators
           setCell_(sheet, r, col['Status'], 'DRY RUN');
-          setCell_(sheet, r, col['Notes'], `DRY RUN passed ${new Date().toISOString()}: built ${c} with tags [${tagsFor_(row, col).join(', ')}], not published`);
+          setCell_(sheet, r, col['Notes'], `DRY RUN passed ${new Date().toISOString()}: built ${c} (images and caption, no tags), not published`);
           log_('dryrun', `${row[col['Index No.']]} ok`);
+          if (!props.getProperty('FIRST_GOOD_DRYRUN_AT')) props.setProperty('FIRST_GOOD_DRYRUN_AT', String(Date.now()));
+          props.setProperty('GOOD_DRYRUNS', String(Number(props.getProperty('GOOD_DRYRUNS') || 0) + 1));
         } catch (e) {
+          if (e.metaKind) {                                     // Meta blocked us: keep the row queued, try again after
+            setCell_(sheet, r, col['Notes'], `Held: Meta ${e.metaKind === 'RATE' ? 'rate limit' : 'block'} ${new Date().toISOString()}. Stays APPROVED.`);
+            break;
+          }
           setCell_(sheet, r, col['Status'], 'DRY RUN');
           setCell_(sheet, r, col['Notes'], 'DRY RUN FAILED (would have failed live): ' + String(e).slice(0, 400));
           notify_('Dry run failed: ' + row[col['Index No.']], String(e).slice(0, 1000));
@@ -317,7 +358,7 @@ function publishDue() {
           permalink = publishCarousel_(row, col, false);
         } catch (first) {
           // The most common avoidable failure is a bad tag handle. Retry once without tags.
-          if (!tagsFor_(row, col).length || quiet_()) throw first;
+          if (first.metaKind || !tagsFor_(row, col).length || quiet_()) throw first;
           permalink = publishCarousel_(row, col, true);
           note = 'Posted WITHOUT TAGS (tag error: ' + String(first).slice(0, 200) + ') ';
           notify_('Posted without tags: ' + row[col['Index No.']], note);
@@ -326,6 +367,11 @@ function publishDue() {
         setCell_(sheet, r, col['Live link'], permalink);
         setCell_(sheet, r, col['Notes'], note + new Date().toISOString());
       } catch (e) {
+        if (e.metaKind) {                                // Meta blocked us before anything went public: back in the queue
+          setCell_(sheet, r, col['Status'], 'APPROVED');
+          setCell_(sheet, r, col['Notes'], `Held: Meta ${e.metaKind === 'RATE' ? 'rate limit' : 'block'} ${new Date().toISOString()}. Not posted.`);
+          break;
+        }
         setCell_(sheet, r, col['Status'], 'FAILED');     // never retried silently
         setCell_(sheet, r, col['Notes'], String(e).slice(0, 500));
         notify_('FAILED: ' + row[col['Index No.']], String(e).slice(0, 1000) + '\n\nFix the row and set Status back to APPROVED.');
@@ -348,8 +394,20 @@ function quotaFull_() {
   } catch (e) { return false; }
 }
 
+/** LIVE tag ramp: venue-only tags and no collaborators for TAG_RAMP_DAYS (default 21) after the first LIVE run. */
+function inTagRamp_() {
+  const props = PropertiesService.getScriptProperties();
+  if (mode_() !== 'LIVE') return false;
+  const since = Number(props.getProperty('LIVE_SINCE') || Date.now());
+  return Date.now() - since < Number(props.getProperty('TAG_RAMP_DAYS') || 21) * 86400000;
+}
+
 /** Handles to tag on slide 1: the User tags column if filled, else photographer, designer/studio and venue. */
 function tagsFor_(row, col) {
+  if (inTagRamp_()) {                            // first weeks of LIVE: the venue only
+    const v = cellByName_(row, col, 'Venue handle').replace(/^@/, '').toLowerCase();
+    return v ? [v] : [];
+  }
   const manual = cellByName_(row, col, 'User tags');
   const raw = manual ? manual.split(',') :
     ['Photographer handle', 'Designer handle', 'Venue handle'].map(h => cellByName_(row, col, h));
@@ -369,6 +427,7 @@ function publishCarousel_(row, col, skipTags, dryRun) {
   if (slides.length < 2 || slides.length > 10) throw new Error(`Need 2 to 10 slides, found ${slides.length}`);
 
   if (quiet_() && !dryRun) skipTags = true;     // QUIET: nobody tagged, nobody invited
+  if (dryRun) skipTags = true;                  // dry runs: images and caption only
   const tags = skipTags ? [] : tagsFor_(row, col)
     .map((username, i) => ({ username, x: 0.2 + 0.2 * i, y: 0.88 }));
 
@@ -389,15 +448,16 @@ function publishCarousel_(row, col, skipTags, dryRun) {
     caption: (quiet_() && !dryRun) ? quietCaption_(buildCaption_(row, col)) : buildCaption_(row, col),
     access_token: token,
   };
-  if (collabs.length && !skipTags) carouselParams.collaborators = JSON.stringify(collabs);
+  if (collabs.length && !skipTags && !inTagRamp_()) carouselParams.collaborators = JSON.stringify(collabs);
   const carousel = post_(`${base}/${igId}/media`, carouselParams).id;
   waitFinished_(base, carousel, token);
   if (dryRun) return carousel;
 
   // 3. publish, then fetch the live link
   const mediaId = post_(`${base}/${igId}/media_publish`, { creation_id: carousel, access_token: token }).id;
-  const info = get_(`${base}/${mediaId}?fields=permalink&access_token=${encodeURIComponent(token)}`);
-  return info.permalink || mediaId;
+  // after this point the post is live: never throw, or a retry could post it twice
+  try { return get_(`${base}/${mediaId}?fields=permalink&access_token=${encodeURIComponent(token)}`).permalink || mediaId; }
+  catch (e) { return String(mediaId); }
 }
 
 /** Caption = Caption column if filled, else card text + a credits block built from the optional columns. */
@@ -451,16 +511,87 @@ function urlLive_(url) {
 
 function post_(url, payload) {
   const res = UrlFetchApp.fetch(url, { method: 'post', payload, muteHttpExceptions: true });
-  const body = JSON.parse(res.getContentText());
-  if (res.getResponseCode() >= 300 || body.error) throw new Error(JSON.stringify(body.error || body));
-  return body;
+  return checked_(url, res);
 }
 
 function get_(url) {
   const res = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
-  const body = JSON.parse(res.getContentText());
-  if (res.getResponseCode() >= 300 || body.error) throw new Error(JSON.stringify(body.error || body));
-  return body;
+  return checked_(url, res);
+}
+
+/** Parses a Graph response. Any account, app or rate problem from Meta pulls the brake before throwing. */
+function checked_(url, res) {
+  let body;
+  try { body = JSON.parse(res.getContentText()); } catch (e) { body = { error: { message: 'Non-JSON reply, HTTP ' + res.getResponseCode() } }; }
+  if (res.getResponseCode() < 300 && !body.error) return body;
+  const err = body.error || body;
+  const e = new Error(JSON.stringify(err));
+  e.metaKind = /graph\.(instagram|facebook)\.com/.test(url) ? metaKind_(err) : '';
+  if (e.metaKind) setBrake_(e.metaKind, err);
+  throw e;
+}
+
+/**
+ * Meta brake. BLOCK: the app, the account or the token has been blocked or restricted (human check, policy,
+ * expired session). RATE: too many calls. Anything else (a bad tag handle, a bad image) is a normal post error.
+ */
+function metaKind_(err) {
+  const code = Number(err && err.code), msg = String((err && (err.message || err.error_user_msg)) || '');
+  if ([4, 17, 32, 613].indexOf(code) >= 0 || /rate limit|too many calls|request limit reached/i.test(msg)) return 'RATE';
+  if (code === 190 || code === 368) return 'BLOCK';
+  if (/api access blocked|checkpoint|restricted|disabled|temporarily blocked|session has been invalidated|access token/i.test(msg)) return 'BLOCK';
+  return '';
+}
+
+/** Short fingerprint of the current token, so a freshly pasted token is recognised. */
+function tokenStamp_() {
+  const token = PropertiesService.getScriptProperties().getProperty('IG_TOKEN') || '';
+  return Utilities.base64Encode(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, token)).slice(0, 12);
+}
+
+function setBrake_(kind, err) {
+  const props = PropertiesService.getScriptProperties();
+  const had = brake_();
+  if (kind === 'BLOCK') props.setProperty('BRAKE_TOKEN', tokenStamp_());
+  props.setProperty('META_BRAKE', JSON.stringify({ kind, at: Date.now(), msg: String(JSON.stringify(err)).slice(0, 400) }));
+  if (had && had.kind === kind) return;                     // one email per incident
+  log_('meta', kind + ' brake on: ' + String(JSON.stringify(err)).slice(0, 400));
+  if (kind === 'BLOCK') {
+    notify_('Meta blocked: action needed',
+      'Meta refused the publisher: ' + String(JSON.stringify(err)).slice(0, 600) + '\n\n' +
+      'Every Instagram call has stopped, so we are not hammering a blocked account. Nothing was lost: rows stay where they were.\n\n' +
+      'What to do, by hand, in your normal browser:\n' +
+      '1. Log in to facebook.com and developers.facebook.com and clear any security check or alert.\n' +
+      '2. In the Instagram app (@bureauofleisure.co), check Settings > Account Status.\n' +
+      '3. If the message mentions the access token, generate a new one in Flow Publisher > Use cases > API setup with Instagram login, and paste it into Script Property IG_TOKEN.\n\n' +
+      'Each morning at 7am the publisher makes one quiet check. When access is back it releases itself and emails you.');
+  }
+}
+
+/** The current brake, or null. A RATE brake lifts by itself after 24 hours. */
+function brake_() {
+  const props = PropertiesService.getScriptProperties();
+  let b = null;
+  try { b = JSON.parse(props.getProperty('META_BRAKE') || 'null'); } catch (e) { b = null; }
+  if (b && b.kind === 'RATE' && Date.now() - b.at > 24 * 3600000) { props.deleteProperty('META_BRAKE'); log_('meta', 'rate brake lifted after 24 hours'); return null; }
+  return b;
+}
+
+/** Daily, from dailyCheck: one read-only call to see if a BLOCK has cleared. A new token also releases it. */
+function probeBrake_() {
+  const b = brake_();
+  if (!b || b.kind !== 'BLOCK') return;
+  const props = PropertiesService.getScriptProperties();
+  const base = `https://${props.getProperty('GRAPH_HOST') || 'graph.instagram.com'}/${API_VERSION}`;
+  try {
+    const res = UrlFetchApp.fetch(`${base}/me?fields=user_id,username&access_token=${encodeURIComponent(props.getProperty('IG_TOKEN') || '')}`, { muteHttpExceptions: true });
+    const body = JSON.parse(res.getContentText());
+    if (res.getResponseCode() >= 300 || body.error) { log_('meta', 'still blocked: ' + String(JSON.stringify(body.error || body)).slice(0, 300)); return; }
+    props.deleteProperty('META_BRAKE');
+    log_('meta', 'block cleared for @' + body.username);
+    notify_('Meta access restored', 'The daily check reached @' + body.username + ' again. Publishing resumes at the next ' +
+      (props.getProperty('POST_HOUR') || 9) + ':00 slot. Rows held during the block keep their place; any that missed a slot get the next free morning.');
+  } catch (e) { log_('meta', 'probe error: ' + String(e).slice(0, 300)); }
 }
 
 function indexHeaders_(header) {
@@ -479,6 +610,108 @@ function setCell_(sheet, r, c, value) {
   sheet.getRange(r + 1, c + 1).setValue(value);
 }
 
+
+/* ------------------------------------------------------------------ photo order (v0.17) */
+const ORDER_FILE = 'batches/orders/photo_order.json';
+const CLOSED_ = ['POSTED', 'PUBLISHING', 'KILLED'];
+
+/** Adds a header to the Posts tab if it is missing. Returns its 0-based column. */
+function ensureCol_(sheet, col, name) {
+  if (name in col) return col[name];
+  const c = sheet.getLastColumn();
+  sheet.getRange(1, c + 1).setValue(name);
+  col[name] = c;
+  return c;
+}
+
+/** "3,1,4,2 @2026-10-30T16:01:02Z" -> {order: [3,1,4,2], at: '2026-10-30T16:01:02Z'} */
+function parseOrder_(v) {
+  const m = String(v || '').trim().match(/^([\d,\s]*)(?:@\s*(\S+))?$/);
+  if (!m) return { order: [], at: '' };
+  return { order: m[1].split(',').map(x => x.trim()).filter(Boolean).map(Number), at: m[2] || '' };
+}
+
+function builtCell_(p) { return (p.slide_sources || []).join(',') + (p.order_at ? ' @' + p.order_at : ''); }
+
+/** A reorder was saved and the build that honours it has not reached the sheet yet. */
+function pendingOrder_(row, col) {
+  const req = parseOrder_(cell_(row, col, 'Photo order'));
+  return !!req.at && parseOrder_(cell_(row, col, 'Built order')).at !== req.at;
+}
+
+/** The build manifest as {index: post}, or null when it cannot be read. */
+function manifestPosts_() {
+  const url = PropertiesService.getScriptProperties().getProperty('MANIFEST_URL') || 'https://bureauofleisure.github.io/pipeline/manifest.json';
+  try {
+    const res = UrlFetchApp.fetch(url + '?t=' + Date.now(), { muteHttpExceptions: true });
+    if (res.getResponseCode() !== 200) return null;
+    const out = {};
+    (JSON.parse(res.getContentText()).posts || []).forEach(p => out[String(p.index).trim()] = p);
+    return out;
+  } catch (e) { return null; }
+}
+
+/** Puts a build's slides on an open row whatever its status: links, alt text, cover and built order. */
+function applyBuilt_(sheet, r, col, p) {
+  ensureCol_(sheet, col, 'Built order');
+  const set = (h, v) => { if (h in col) sheet.getRange(r + 1, col[h] + 1).setValue(v); };
+  set('Slide links', (p.slides || []).join('\n'));
+  set('Alt text', Array.isArray(p.alt_text) ? p.alt_text.join('\n') : String(p.alt_text || ''));
+  set('Cover slide', p.cover_source_photo || '');
+  set('Built order', builtCell_(p));
+}
+
+/** Reads and rewrites one JSON file in the repo through the GitHub contents API. Retries once on a clash. */
+function ghUpdateJson_(path, message, mutate) {
+  const token = PropertiesService.getScriptProperties().getProperty('GH_TOKEN');
+  if (!token) throw new Error('GH_TOKEN is not set in Script Properties, so the order cannot be saved');
+  const api = 'https://api.github.com/repos/bureauofleisure/pipeline/contents/' + path;
+  const headers = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let data = {}, sha = null;
+    const cur = UrlFetchApp.fetch(api + '?ref=main', { headers, muteHttpExceptions: true });
+    if (cur.getResponseCode() === 200) {
+      const j = JSON.parse(cur.getContentText());
+      sha = j.sha;
+      try { data = JSON.parse(Utilities.newBlob(Utilities.base64Decode(j.content.replace(/\n/g, ''))).getDataAsString()); } catch (e) { data = {}; }
+    } else if (cur.getResponseCode() !== 404) {
+      throw new Error('GitHub read failed: HTTP ' + cur.getResponseCode());
+    }
+    mutate(data);
+    const payload = { message, branch: 'main', content: Utilities.base64Encode(JSON.stringify(data, null, 1), Utilities.Charset.UTF_8) };
+    if (sha) payload.sha = sha;
+    const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
+    if (res.getResponseCode() < 300) return;
+    if (res.getResponseCode() !== 409 && res.getResponseCode() !== 422) throw new Error('GitHub write failed: HTTP ' + res.getResponseCode() + ' ' + res.getContentText().slice(0, 200));
+  }
+  throw new Error('GitHub write clashed twice; try the drag again');
+}
+
+/** From the review page: save a new photo order (source photo numbers, cover first) and trigger that post's rebuild. */
+function saveOrder_(rowNumber, index, order, sig) {
+  order = (order || []).map(Number);
+  if (order.length < 1 || order.length > 9 || order.some(n => !(n >= 1)) || new Set(order).size !== order.length) throw new Error('Bad order');
+  const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
+  const values = sheet.getDataRange().getValues();
+  const col = indexHeaders_(values[0]);
+  const row = values[rowNumber - 1];
+  const idx = String(row[col['Index No.']] || '');
+  if (idx !== String(index)) throw new Error('Row moved; reload the page');
+  const st = String(row[col['Status']] || '').trim();
+  if (CLOSED_.indexOf(st) >= 0) throw new Error('This post is ' + st + '; its slides can no longer change');
+  const from = parseOrder_(cell_(row, col, 'Built order')).order;
+  const at = new Date().toISOString().slice(0, 19) + 'Z';
+  ghUpdateJson_(ORDER_FILE, 'Photo order for ' + idx + ' from the review page', data => {
+    data.orders = data.orders || {};
+    data.history = data.history || [];
+    data.orders[idx] = { order, sig: sig || '', at };
+    data.history.push({ index: idx, place: cell_(row, col, 'Place'), from, order, at });   // cover choices teach the cover picker
+    if (data.history.length > 1000) data.history = data.history.slice(-1000);
+  });
+  sheet.getRange(rowNumber, ensureCol_(sheet, col, 'Photo order') + 1).setValue(order.join(',') + ' @' + at);
+  log_('review', idx + ' photo order ' + (from.length ? from.join(',') + ' -> ' : '') + order.join(','));
+  return { at };
+}
 
 /**
  * importBatch, every 6 hours (v0.5):
@@ -521,6 +754,8 @@ function importBatch() {
     rowOf[idx] = r;
   }
 
+  ensureCol_(sheet, col, 'Built order');
+  ensureCol_(sheet, col, 'Photo order');
   const cands = ss.getSheetByName('Candidates') || ss.insertSheet('Candidates');
   const seen = new Set(cands.getDataRange().getValues().map(r => String(r[0]).trim()));
 
@@ -543,12 +778,22 @@ function importBatch() {
       'Source handle': m.source_handle || '', 'Cover slide': p.cover_source_photo || '',
       'Slide links': (p.slides || []).join('\n'),
       'Alt text': Array.isArray(p.alt_text) ? p.alt_text.join('\n') : String(p.alt_text || ''),
+      'Built order': builtCell_(p),
     };
     fields['Caption'] = captionFrom_(fields);   // visible and editable before approval; what posts is what is in the cell
     if (idx in rowOf) {
       const r = rowOf[idx];
       const st = String(values[r][col['Status']]).trim();
-      if (st !== 'DRAFT' && st !== 'EDITS') return;   // a decision was made: leave it
+      if (st !== 'DRAFT' && st !== 'EDITS') {
+        // a decision was made: leave it, except that an open row always carries its latest build's slides
+        if (CLOSED_.indexOf(st) < 0 && (cell_(values[r], col, 'Slide links') !== fields['Slide links'] ||
+                                        cell_(values[r], col, 'Built order') !== fields['Built order'])) {
+          applyBuilt_(sheet, r, col, p);
+          log_('importBatch', idx + ' (' + st + ') slides refreshed from its latest build');
+          refreshed++;
+        }
+        return;
+      }
       // still open: everything the build knows is refreshed, so a rebuild or a corrected card lands here
       Object.keys(fields).forEach(h => { if (h in col && h !== 'Caption') sheet.getRange(r + 1, col[h] + 1).setValue(fields[h]); });
       if (st === 'DRAFT' || !cell_(values[r], col, 'Caption')) sheet.getRange(r + 1, col['Caption'] + 1).setValue(fields['Caption']);
@@ -566,7 +811,7 @@ function importBatch() {
       refreshed++;
       return;
     }
-    const row = new Array(values[0].length).fill('');
+    const row = new Array(Math.max(values[0].length, sheet.getLastColumn())).fill('');
     Object.keys(fields).forEach(h => { if (h in col) row[col[h]] = fields[h]; });
     row[col['Status']] = 'DRAFT';
     row[col['Index No.']] = idx;   // text, see the column format above
@@ -651,16 +896,31 @@ function doGet(e) {
   const values = sheet.getDataRange().getValues();
   const col = indexHeaders_(values[0]);
   const posts = [];
+  const man = manifestPosts_() || {};
   for (let r = 1; r < values.length; r++) {
     const row = values[r];
     const status = String(row[col['Status']] || '').trim();
     if (show !== 'ALL' && status !== show) continue;
+    let slides = lines_(row[col['Slide links']]);
+    let idx = String(row[col['Index No.']] || '').trim();
+    if (/^\d+$/.test(idx)) idx = idx.padStart(4, '0');
+    const mp = man[idx];
+    const open = CLOSED_.indexOf(status) < 0;
+    if (open && mp && mp.status === 'BUILT' && (mp.slides || []).join('\n') !== slides.join('\n')) {
+      applyBuilt_(sheet, r, col, mp);        // a rebuild (often a reorder) has landed: show it now
+      slides = mp.slides.slice();
+    }
+    const sources = (open && mp && mp.status === 'BUILT' && (mp.slide_sources || []).length + 1 === slides.length &&
+                     (mp.slides || []).join('\n') === slides.join('\n')) ? mp.slide_sources : [];
+    const req = parseOrder_(cell_(row, col, 'Photo order'));
     posts.push({
+      sources, sig: (mp && mp.photos_sig) || '',
+      pending: !!req.at && !(mp && mp.order_at === req.at) ? req.at : '',
       row: r + 1, index: String(row[col['Index No.']] || ''), status,
       place: cell_(row, col, 'Place'), neighborhood: cell_(row, col, 'Neighborhood'), city: cell_(row, col, 'City'),
       designer: cell_(row, col, 'Designer'), photographer: cell_(row, col, 'Photographer'),
       card: cell_(row, col, 'Card text'), caption: buildCaption_(row, col), notes: cell_(row, col, 'Notes'),
-      slides: lines_(row[col['Slide links']]),
+      slides,
     });
   }
   const t = HtmlService.createTemplate(REVIEW_HTML);
@@ -679,6 +939,7 @@ function statusCounts_(values, col) {
 function setStatus(rowNumber, status, index, note) {
   // The page sends {index, note} as the third argument so a Loader with only three arguments
   // in its stub (the original paste) still carries the note through.
+  if (status === 'ORDER') return saveOrder_(rowNumber, index.index, index.order, index.sig);   // drag to reorder
   if (index && typeof index === 'object') { note = note || index.note; index = index.index; }
   if (['APPROVED', 'KILLED', 'DRAFT', 'EDITS'].indexOf(status) < 0) throw new Error('Bad status');
   const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
@@ -705,11 +966,16 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  header{position:sticky;top:0;background:#F1E9DC;border-bottom:2px solid #2A2420;padding:14px 20px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;z-index:2}
  header h1{font-size:16px;letter-spacing:.12em;margin:0;text-transform:uppercase}
  header a{color:#2A2420;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
- header .counts{font-size:13px;margin-left:auto}
+ header a .n{font-size:11px;opacity:.7}
  .post{border-bottom:1px solid #2A2420;padding:22px 20px;display:grid;grid-template-columns:1fr 360px;gap:22px}
  .post.done{opacity:.35}
  .strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
- .strip img{height:440px;flex:none;border:1px solid #2A2420;background:#fff}
+ .strip img{height:440px;flex:none;border:1px solid #2A2420;background:#fff;display:block;-webkit-user-drag:none;user-select:none}
+ .strip figure{margin:0;flex:none;position:relative}
+ .strip figure.photo{cursor:grab}
+ .strip figure .pos{position:absolute;top:8px;left:8px;background:#2A2420;color:#F1E9DC;font:bold 11px "Courier Prime",monospace;letter-spacing:.1em;padding:3px 7px;pointer-events:none}
+ .strip .sortable-ghost{opacity:.3} .strip .sortable-chosen img{outline:3px solid #2A2420}
+ .orderbar{font-size:12px;margin:2px 0 0;min-height:16px} .orderbar.pending{color:#6E2A22;font-weight:bold}
  .meta h2{margin:0 0 4px;font-size:18px;text-transform:uppercase;letter-spacing:.06em}
  .meta .sub{font-size:13px;margin-bottom:12px}
  .meta pre{white-space:pre-wrap;font:13px/1.55 "Courier Prime",monospace;background:#fff8;border:1px solid #2A2420;padding:12px;margin:0 0 12px;max-height:260px;overflow:auto}
@@ -723,14 +989,18 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  .editbox textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Courier Prime",monospace;border:2px solid #2A2420;background:#fff8;padding:10px;margin-bottom:10px;resize:vertical}
  .err{font-size:12px;color:#6E2A22;margin-top:10px;white-space:pre-wrap}
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
+</style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script><style>
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
- <? ['DRAFT','EDITS','APPROVED','KILLED','POSTED','ALL'].forEach(function(k){ ?><a href="<?= base ?>?show=<?= k ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?></a><? }); ?>
- <span class="counts" id="counts"><?!= Object.keys(counts).map(k => k + ' ' + counts[k]).join(' · ') ?></span></header>
+ <? ['DRAFT','EDITS','APPROVED','FAILED','DRY RUN','KILLED','POSTED','ALL'].forEach(function(k){ var n = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); ?><a href="<?= base ?>?show=<?= encodeURIComponent(k) ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?> <span class="n" data-k="<?= k ?>"><?= n ?></span></a><? }); ?>
+ </header>
 <? if (!posts.length) { ?><div class="empty">Nothing with status <?= show ?>.</div><? } ?>
 <? posts.forEach(function(p){ ?>
 <section class="post" id="p<?= p.row ?>">
- <div class="strip"><? p.slides.forEach(function(u){ ?><img loading="lazy" src="<?= u ?>"><? }); ?></div>
+ <div>
+ <div class="strip" id="g<?= p.row ?>" data-row="<?= p.row ?>" data-index="<?= p.index ?>" data-sig="<?= p.sig ?>" data-orig="<?= p.sources.join(',') ?>"><? p.slides.forEach(function(u, i){ var isPhoto = p.sources.length && i < p.sources.length; ?><figure class="<?= isPhoto ? 'photo' : 'fixed' ?>" data-n="<?= isPhoto ? p.sources[i] : '' ?>"><img loading="lazy" src="<?= u ?>" draggable="false"><? if (p.sources.length) { ?><span class="pos"><?= isPhoto ? (i === 0 ? 'COVER' : String(i + 1)) : 'CARD' ?></span><? } ?></figure><? }); ?></div>
+ <div class="orderbar<?= p.pending ? ' pending' : '' ?>" id="o<?= p.row ?>"><?= p.pending ? 'New photo order saved, rebuilding. Reload in a few minutes. It will not publish until the new slides land.' : (p.sources.length ? 'Drag photos to reorder. First is the cover, second carries REMINDS US OF, the card stays last.' : '') ?></div>
+ </div>
  <div class="meta">
   <h2>No. <?= p.index ?> · <?= p.place ?></h2>
   <div class="sub"><?= [p.neighborhood, p.city].filter(Boolean).join(', ') ?><? if (p.designer) { ?> · Design: <?= p.designer ?><? } ?><? if (p.photographer) { ?> · Photo: <?= p.photographer ?><? } ?> · <span id="s<?= p.row ?>"><?= p.status ?></span></div>
@@ -751,6 +1021,32 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
 </section>
 <? }); ?>
 <script>
+// drag to reorder (v0.17): photos move, the card is fixed last; the new order saves 1.5s after the last drop
+document.querySelectorAll('.strip[data-orig]').forEach(function(strip){
+  if (!strip.dataset.orig || typeof Sortable === 'undefined') return;
+  var timer = null;
+  Sortable.create(strip, {
+    draggable: '.photo', animation: 150, delay: 180, delayOnTouchOnly: true, touchStartThreshold: 6, forceFallback: true, fallbackTolerance: 4, scroll: true, bubbleScroll: true,
+    onMove: function(evt){ return !(evt.related.classList.contains('fixed') && evt.willInsertAfter); },
+    onEnd: function(){ label(strip); clearTimeout(timer); timer = setTimeout(function(){ saveOrder(strip); }, 1500); }
+  });
+});
+function currentOrder(strip){ return Array.prototype.map.call(strip.querySelectorAll('figure.photo'), function(f){ return Number(f.dataset.n); }); }
+function label(strip){
+  strip.querySelectorAll('figure.photo').forEach(function(f, i){ f.querySelector('.pos').textContent = i === 0 ? 'COVER' : String(i + 1); });
+}
+function saveOrder(strip){
+  var row = Number(strip.dataset.row), order = currentOrder(strip), bar = document.getElementById('o' + row);
+  if (order.join(',') === strip.dataset.saved || (!strip.dataset.saved && order.join(',') === strip.dataset.orig)) { return; }
+  bar.className = 'orderbar'; bar.textContent = 'Saving order...';
+  google.script.run.withSuccessHandler(function(){
+    strip.dataset.saved = order.join(',');
+    bar.className = 'orderbar pending';
+    bar.textContent = 'Order saved (' + order.join(', ') + '). Rebuilding with the labels in their new places: reload in about 10 minutes. It will not publish until the new slides land.';
+  }).withFailureHandler(function(e){
+    bar.className = 'orderbar pending'; bar.textContent = 'Order NOT saved: ' + e.message;
+  }).setStatus(row, 'ORDER', {index: String(strip.dataset.index), order: order, sig: strip.dataset.sig}, '');
+}
 function openEdits(row){ const b=document.getElementById('e'+row); b.hidden=false; document.getElementById('t'+row).focus(); }
 function closeEdits(row){ document.getElementById('e'+row).hidden=true; }
 function sendEdits(row, index){
@@ -767,7 +1063,8 @@ function go(row, status, index, note){
   google.script.run.withSuccessHandler(function(counts){
     document.getElementById('s'+row).textContent = status; sec.classList.add('done');
     const box=document.getElementById('e'+row); if (box) box.hidden=true;
-    document.getElementById('counts').textContent = Object.keys(counts).map(k => k+' '+counts[k]).join(' · ');
+    document.querySelectorAll('header .n').forEach(function(el){ var k = el.getAttribute('data-k');
+      el.textContent = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); });
   }).withFailureHandler(function(e){ err.textContent = 'Not saved: ' + e.message; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = false); })
   .setStatus(row, status, {index: String(index), note: note || ''}, note || '');
 }

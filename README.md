@@ -35,6 +35,8 @@ Every photograph that passes the gate is stored untouched, at source resolution,
 (`build/archive.py`; Cloudflare R2 recommended). Layout: `originals/<index>/<index>-<nn>.<ext>` plus a sidecar
 `<index>.json` (place, source, credit, licence, per-photo size, sha1, used as slide or not) and a running
 `originals/index.jsonl`. The 4:5 slides are derivatives; books, PDFs and prints are made from the originals.
+Exception (Lewie, 2026-11-02): Library of Congress master TIFFs (20 to 90 MB) are stored as full-resolution JPEG at
+quality 95; the untouched master stays at its loc.gov address, recorded as the photo's source.
 Secrets: ARCHIVE_ENDPOINT, ARCHIVE_BUCKET, ARCHIVE_KEY_ID, ARCHIVE_SECRET. Without them the build records
 `archive: not configured` on each post. The sheet writes `discovery/statuses.json` back (publisher `syncStatuses`,
 needs Script Property GH_TOKEN); the monthly janitor removes originals of posts KILLED more than 60 days ago.
