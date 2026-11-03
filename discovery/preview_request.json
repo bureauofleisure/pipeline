@@ -1,1 +1,12 @@
-{"sets": []}
+{
+ "sets": [
+  {
+   "id": "gatetest",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_5.jpg",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif"
+   ]
+  }
+ ]
+}
