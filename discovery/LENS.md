@@ -126,3 +126,4 @@ Lewie can strike a rule by saying so; nothing here is removed otherwise.
   held), the slide files it no longer uses must go and the sheet's slide links must be refreshed even on rows
   already approved; otherwise the previous card stays on as an extra last slide and the card shows twice. Not yet
   built in.
+- 2026-11-02 (TWA Flight Center 0023): an archive post shows rooms that still exist and can be visited as photographed. If the place was gutted, rebuilt or redesigned since the photographs (TWA's 1962 Lisbon Lounge and London Club are gone; the terminal is now the TWA Hotel), the archive photos describe a place that is closed and the post does not make the cut. Before picking an archive set, confirm from a source that the rooms shown survive today, room by room.
