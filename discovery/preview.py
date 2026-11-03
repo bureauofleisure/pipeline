@@ -37,10 +37,19 @@ def gate():
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/*,*/*;q=0.8", "Referer": url.split("/", 3)[0] + "//" + url.split("/", 3)[2] + "/"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
-
+    """Large Library of Congress TIFFs (20 to 90 MB) need a long timeout and a retry; everything else is quick."""
+    import time
+    loc = "loc.gov" in url
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/*,*/*;q=0.8"})
+    last = None
+    for attempt in range(4 if loc else 2):
+        try:
+            with urllib.request.urlopen(req, timeout=180 if loc else 60) as r:
+                return r.read()
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(15 * (attempt + 1) if loc else 3)
+    raise last
 
 def main():
     req_path = os.path.join(HERE, "preview_request.json")
