@@ -1,40 +1,6 @@
 {
- "about": "Picks viewed and validated on 2026-11-02, held out of 2026-W45. Indexes 0024 to 0026 are reserved for them. Lewie, 2026-11-02: release Fontainebleau (0024) in the 2026-W46 batch and The Dunes Club (0025) in 2026-W47, one per Monday, each alongside that week's own picks (archive collections may now supply two posts per batch, so a second Gottscho pick that week is allowed). Million Goods (0026) goes in the first batch without another Joe Thomas post. Skywalker Grill (Dezeen, Tom McGovern, Rockwell Group) was also viewed and is a good later pick; it gets an index when used. Remove an entry from this file when it is batched.",
+ "about": "Picks viewed and validated on 2026-11-02, held out of 2026-W45. Reserved indexes: 0025 The Dunes Club, 0026 Million Goods (0024 is retired: Fontainebleau was dropped under the 2026-11-02 rule that archive rooms must still exist; its 2008 renovation gutted it). Lewie, 2026-11-02: release The Dunes Club in the 2026-W46 batch. Million Goods goes in the first batch without another Joe Thomas post. Skywalker Grill (Dezeen, Tom McGovern, Rockwell Group) was also viewed and is a good later pick; it gets an index when used. Remove an entry from this file when it is batched. Next free index: 0027.",
  "posts": [
-  {
-   "index": "0024",
-   "place": "Fontainebleau",
-   "neighborhood": "Miami Beach",
-   "city": "Miami",
-   "category": "Hotel",
-   "designer": "Morris Lapidus",
-   "credit": "Gottscho-Schleisner Collection, Library of Congress",
-   "licence": "No known restrictions (Library of Congress)",
-   "archive": true,
-   "era": "1955",
-   "word": "SUAVE",
-   "reminds": "Goldfinger's opening shot",
-   "card": [
-    "BUREAU OF LEISURE NO. 0024",
-    "FONTAINEBLEAU. MIAMI BEACH, MIAMI.",
-    "MORRIS LAPIDUS, 1954. BOW TIES IN THE DESIGN.",
-    "BUILT ON THE OLD HARVEY FIRESTONE ESTATE.",
-    "THE STAIRCASE TO NOWHERE, PRESERVED.",
-    "PHOTOGRAPHED BY GOTTSCHO-SCHLEISNER, 1955.",
-    "IN A WORD: SUAVE."
-   ],
-   "alt_hint": "A 1955 hotel lobby with fluted columns, round banquettes, ringed ceiling lights and a floor patterned with black bow ties.",
-   "source_url": "https://www.loc.gov/item/2018727401/",
-   "discovered_via": "https://en.wikipedia.org/wiki/Fontainebleau_Miami_Beach",
-   "cover": 1,
-   "photos": [
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a30000/5a30200/5a30276u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23500/5a23508u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23500/5a23512u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23477u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a23000/5a23400/5a23478u.tif"
-   ]
-  },
   {
    "index": "0025",
    "place": "The Dunes Club",
@@ -67,9 +33,9 @@
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03786u.tif",
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03785u.tif",
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03776u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03775u.tif",
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03782u.tif"
-   ]
+   ],
+   "survival_check": "2026-11-02: rooms checked against the 2015 National Register nomination (https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/narragansett/narr_boston-neck-road-137_dunes-club.pdf): club room, loggia and dining room intact (dining room has its original chairs and serving tables); barroom inside the intact core; ocean portico frame removed because the portico has since been glazed."
   },
   {
    "index": "0026",
