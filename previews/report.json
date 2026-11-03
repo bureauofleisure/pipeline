@@ -1,183 +1,37 @@
 {
  "sets": [
   {
-   "id": "mgjt",
+   "id": "gatetest",
    "photos": [
     {
      "n": 1,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629277951-98QQM2PTK0NTC4XJJ26F/MillionGoods-FortGreene-JoeThomas-2.jpg?format=2500w",
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_5.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1458633,
-     "format": null
+     "width": 2364,
+     "height": 1576,
+     "bytes": 429556,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.42)"
     },
     {
      "n": 2,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629278228-85THL7O8U334PRM9JSLN/MillionGoods-FortGreene-JoeThomas-1.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 1243970,
-     "format": null
-    },
-    {
-     "n": 3,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281574-FM5WT1AG3SWTBQ2ULO8Y/MillionGoods-FortGreene-JoeThomas-3.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1709259,
-     "format": null
-    },
-    {
-     "n": 4,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281616-US4PBYOV3J7A2HZC9QEX/MillionGoods-FortGreene-JoeThomas-4.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 961566,
-     "format": null
-    },
-    {
-     "n": 5,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285722-098W95JDKL18E1HDDO57/MillionGoods-FortGreene-JoeThomas-5.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1158248,
-     "format": null
-    },
-    {
-     "n": 6,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285752-ENDUX482KXQAGJCXSW4O/MillionGoods-FortGreene-JoeThomas-6.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 440932,
-     "format": null
-    },
-    {
-     "n": 7,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629288749-2E2RDAB84ICE5J6WLEGA/MillionGoods-FortGreene-JoeThomas-7.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3334,
-     "bytes": 1203761,
-     "format": null
-    },
-    {
-     "n": 8,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 757716,
-     "format": null
-    },
-    {
-     "n": 9,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 653355,
-     "format": null
-    },
-    {
-     "n": 10,
      "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
      "ok": true,
      "width": 2500,
      "height": 1667,
      "bytes": 699211,
-     "format": null
+     "format": null,
+     "gate": "PASS"
     },
     {
-     "n": 11,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 926372,
-     "format": null
-    },
-    {
-     "n": 12,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629297203-W9Q17YHN73YXJOPM4AY0/MillionGoods-FortGreene-JoeThomas-12.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 796973,
-     "format": null
-    },
-    {
-     "n": 13,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299348-EGRI1S2CXTTJ9LQEIDZL/MillionGoods-FortGreene-JoeThomas-13.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 781057,
-     "format": null
-    },
-    {
-     "n": 14,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 825773,
-     "format": null
-    },
-    {
-     "n": 15,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3750,
-     "bytes": 1533490,
-     "format": null
-    },
-    {
-     "n": 16,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302781-1K6TC5KIIFDIXNYKJ4DZ/MillionGoods-FortGreene-JoeThomas-16.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1357053,
-     "format": null
+     "n": 3,
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
+     "ok": false,
+     "error": "IncompleteRead: IncompleteRead(20480 bytes read, 13004448 more expected)"
     }
    ],
    "sheets": [
-    "mgjt-1.jpg",
-    "mgjt-2.jpg",
-    "mgjt-3.jpg"
-   ]
-  },
-  {
-   "id": "mimi2",
-   "photos": [
-    {
-     "n": 1,
-     "url": "https://design-milk.com/images/2026/10/Pirajean-Lees-x-Mimi-Kakushi-Delano-Miami-Mimi-Kakushi-00573Robert-Reiger.jpg",
-     "ok": true,
-     "width": 2500,
-     "height": 1875,
-     "bytes": 672724,
-     "format": null
-    },
-    {
-     "n": 2,
-     "url": "https://design-milk.com/images/2026/10/Pirajean-Lees-x-Mimi-Kakushi-Delano-Miami-Mimi-Kakushi-02_Robert-Reiger.jpg",
-     "ok": true,
-     "width": 2500,
-     "height": 1875,
-     "bytes": 560291,
-     "format": null
-    }
-   ],
-   "sheets": [
-    "mimi2-1.jpg"
+    "gatetest-1.jpg"
    ]
   }
  ]
