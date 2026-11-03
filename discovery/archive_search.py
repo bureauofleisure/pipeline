@@ -165,15 +165,22 @@ def best_image(files):
     return None
 
 
-def tiff_dims(b):
-    """Width and height from the first IFD of a TIFF (tags 256 and 257), no imaging library needed."""
+def tiff_dims(b, fetch=None):
+    """Width and height from the first IFD of a TIFF (tags 256 and 257), no imaging library needed.
+    Some masters (HABS colour scans) keep the IFD at the end of the file; fetch(offset) then reads it there."""
     import struct
     end = {b"II": "<", b"MM": ">"}[b[:2]]
     off = struct.unpack(end + "I", b[4:8])[0]
-    n = struct.unpack(end + "H", b[off:off + 2])[0]
+    base = 0
+    if off + 2 > len(b) and fetch:
+        b, base = fetch(off), off
+    n = struct.unpack(end + "H", b[off - base:off - base + 2])[0]
+    if off - base + 2 + 12 * n > len(b) and fetch:
+        b, base = fetch(off), off
     dims = {}
     for i in range(n):
-        e = b[off + 2 + 12 * i: off + 14 + 12 * i]
+        p = off - base + 2 + 12 * i
+        e = b[p:p + 12]
         tag, typ = struct.unpack(end + "HH", e[:4])
         if tag in (256, 257):
             dims[tag] = struct.unpack(end + "H", e[8:10])[0] if typ == 3 else struct.unpack(end + "I", e[8:12])[0]
@@ -184,10 +191,12 @@ def tif_header_size(tif_url):
     """IIIF answers 404 for these ids (checked 2026-10-26), but the master TIFF itself downloads and the build
     opens it (Gottscho TWA Lisbon Lounge, 5411x4299). Read only the first 256 KB to learn its size."""
     try:
-        req = urllib.request.Request(tif_url, headers={"User-Agent": UA, "Range": "bytes=0-262143"})
-        with urllib.request.urlopen(req, timeout=40) as r:
-            head = r.read(262144)
-        w, h = tiff_dims(head)
+        def ranged(start, length):
+            req = urllib.request.Request(tif_url, headers={"User-Agent": UA, "Range": f"bytes={start}-{start + length - 1}"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                return r.read(length)
+        head = ranged(0, 262144)
+        w, h = tiff_dims(head, fetch=lambda off: ranged(off, 65536))
         STATS["tif_header_ok"] = STATS.get("tif_header_ok", 0) + 1
         return tif_url, int(w), int(h)
     except urllib.error.HTTPError as e:
@@ -266,14 +275,30 @@ def candidates_for(t):
 
 
 def master_from_result(r):
-    """.../storage-services/service/pnp/gsc/5a28000/5a28500/5a28550v.jpg -> .../master/pnp/gsc/.../5a28550u.tif"""
+    """The master TIFF for a search result, from its image_url list.
+    Gottscho: .../service/pnp/gsc/5a28000/5a28500/5a28550v.jpg (or 5a28550_150px.jpg) -> .../master/.../5a28550u.tif
+    HABS keeps a photo-type letter in the name: 572451cv.jpg and 572451c_150px.jpg -> 572451cu.tif
+    Highsmith results carry only IIIF links: .../iiif/service:pnp:highsm:16200:16222/full/... -> .../master/pnp/highsm/16200/16222u.tif
+    2026-11-03: the old pattern dropped the HABS letter (every HABS master answered 404) and did not read IIIF links
+    (every Highsmith result was discarded), so only low-res Gottscho scans ever reached the size check."""
     urls = r.get("image_url") or []
     if isinstance(urls, str):
         urls = [urls]
+    root = "https://tile.loc.gov/storage-services/master/"
     for u in urls:
-        m = re.search(r"(https://tile\.loc\.gov/storage-services/)service/(pnp/[a-z]+/[\w/]+?/)(\w+?)[a-z]?(?:_\d+px)?\.(?:jpg|gif|tif)", u)
+        u = u.split("#")[0]
+        # size variants: <name>v.jpg (1024), <name>r.jpg (about 500), <name>t.gif (thumb): strip the one letter
+        m = re.search(r"tile\.loc\.gov/storage-services/service/(pnp/[a-z]+/[\w/]+/)(\w+?)[vrt]\.(?:jpg|gif)$", u)
         if m:
-            return f"{m.group(1)}master/{m.group(2)}{m.group(3)}u.tif"
+            return f"{root}{m.group(1)}{m.group(2)}u.tif"
+    for u in urls:
+        u = u.split("#")[0]
+        m = re.search(r"tile\.loc\.gov/storage-services/service/(pnp/[a-z]+/[\w/]+/)(\w+?)_\d+px\.(?:jpg|gif)$", u)
+        if m:
+            return f"{root}{m.group(1)}{m.group(2)}u.tif"
+        m = re.search(r"tile\.loc\.gov/image-services/iiif/service:(pnp:[a-z]+(?::[\w]+)+)/", u)
+        if m:
+            return root + m.group(1).replace(":", "/") + "u.tif"
     return None
 
 
@@ -293,6 +318,8 @@ def main():
         cursor = int(json.load(open(os.path.join(HERE, "archive_candidates.json"))).get("next_target", 0)) % max(len(targets), 1)
     except Exception:  # noqa: BLE001
         cursor = 0
+    if os.environ.get("ARCHIVE_START", "").strip().isdigit():   # manual run: start at this target number
+        cursor = int(os.environ["ARCHIVE_START"]) % max(len(targets), 1)
     order = list(range(cursor, len(targets))) + list(range(0, cursor))
     budget = int(os.environ.get("ARCHIVE_TARGETS_PER_RUN", "6"))
     next_target = cursor

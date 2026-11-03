@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: "37 */6 * * *"
   workflow_dispatch:
+    inputs:
+      start:
+        description: "Start at this target number (0-based) instead of the saved cursor"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -28,6 +33,7 @@ jobs:
       - run: python discovery/archive_search.py
         env:
           ARCHIVE_TARGETS_PER_RUN: "6"
+          ARCHIVE_START: ${{ inputs.start }}
       - name: Save
         run: |
           git config user.name "Bureau of Leisure"
