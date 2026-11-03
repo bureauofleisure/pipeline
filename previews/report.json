@@ -26,8 +26,12 @@
     {
      "n": 3,
      "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
-     "ok": false,
-     "error": "IncompleteRead: IncompleteRead(20480 bytes read, 13004448 more expected)"
+     "ok": true,
+     "width": 4220,
+     "height": 3081,
+     "bytes": 13024928,
+     "format": null,
+     "gate": "PASS"
     }
    ],
    "sheets": [
