@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: python discovery/probe.py
@@ -22,5 +22,4 @@ jobs:
           git add discovery/probe_report.json
           git diff --cached --quiet && exit 0
           git commit -m "Probe report $(date -u +%Y-%m-%d)"
-          git pull --rebase -q origin main
-          git push
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done

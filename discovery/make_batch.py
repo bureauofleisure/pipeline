@@ -88,10 +88,17 @@ def main(batch_name):
     picks = json.load(open(os.path.join(HERE, "picks", batch_name + ".json")))
     harvest = json.load(open(os.path.join(HERE, "harvest", "shortlist.json")))
     posts, problems = [], []
+    out_path = os.path.join(ROOT, "batches", batch_name + ".json")
+    try:   # photos already in this batch file survive a regeneration when the shortlist no longer lists the page
+        prior = {str(q["index"]): q.get("photos", []) for q in json.load(open(out_path))["posts"]}
+    except Exception:  # noqa: BLE001
+        prior = {}
     for p in picks["posts"]:
         photos, credits = photos_for(p["source_url"], harvest)
         if p.get("photos"):          # the review may hand-pick or reorder
             photos = p["photos"]
+        elif not photos and prior.get(str(p["index"])):
+            photos = prior[str(p["index"])]   # 2026-11-02: W42 lost 0007 and 0008's photos this way
         if len(photos) < 4:
             problems.append(f"{p['index']} {p['place']}: only {len(photos)} photos found")
         post = {k: p[k] for k in ("index", "place", "neighborhood", "city", "word", "reminds", "card", "credit",
@@ -107,7 +114,7 @@ def main(batch_name):
             problems.append(f"{p['index']}: " + "; ".join(bad))
         posts.append(post)
     problems += source_mix_problems(posts, batch_name)
-    out = os.path.join(ROOT, "batches", batch_name + ".json")
+    out = out_path
     json.dump({"batch": batch_name, "posts": posts}, open(out, "w"), indent=1, ensure_ascii=False)
     print(f"{len(posts)} posts -> {out}")
     for pr in problems:

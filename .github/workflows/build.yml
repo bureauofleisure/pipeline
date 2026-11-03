@@ -18,8 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install
@@ -51,7 +51,7 @@ jobs:
           git config user.name "Bureau of Leisure"
           git config user.email "lewie@flow.agency"
           git add discovery/watchlist.json
-          git diff --cached --quiet || (git commit -q -m "Watch list updated after build" && git pull --rebase -q origin main && git push -q origin HEAD:main)
+          git diff --cached --quiet || (git commit -q -m "Watch list updated after build" && (for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done))
 
       - name: Publish to gh-pages
         env:

@@ -16,10 +16,24 @@ from PIL import Image, ImageDraw, ImageOps
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"   # honest bot UA, same as harvest and build (2026-11-02)
 THUMB = 640          # long side of each thumbnail
 COLS, ROWS = 3, 2    # photos per sheet
 PAD = 24
+
+
+def gate():
+    """The build's own photo gate (size after the 4:5 crop, sharpness, JPEG blockiness), so a contact sheet says
+    PASS or FAIL before anything is picked. 2026-11-02: Love Thy Neighbor was picked from sharp-looking Dezeen
+    frames that all failed the blockiness check at build time."""
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "build"))
+        sys.path.insert(0, os.path.join(ROOT, "grade"))
+        from build_posts import quality  # noqa: E402
+        return quality
+    except Exception as ex:  # noqa: BLE001
+        print("gate unavailable:", ex)
+        return None
 
 
 def fetch(url):
@@ -36,6 +50,7 @@ def main():
         os.remove(os.path.join(out_dir, f))
     request = json.load(open(req_path))
     report = {"sets": []}
+    check = gate()
     for s in request.get("sets", []):
         sid = s["id"]
         entries, thumbs = [], []
@@ -47,9 +62,17 @@ def main():
                 im.load()
                 im = ImageOps.exif_transpose(im)
                 e.update({"ok": True, "width": im.width, "height": im.height, "bytes": len(data), "format": im.format})
+                verdict = ""
+                if check:
+                    try:
+                        passed, why = check(im.convert("RGB"), (0.5, 0.5))
+                        e["gate"] = "PASS" if passed else "FAIL: " + why
+                        verdict = "  PASS" if passed else "  FAIL " + why.split(" (")[0]
+                    except Exception as ex:  # noqa: BLE001
+                        e["gate"] = f"gate error: {type(ex).__name__}"
                 t = im.convert("RGB")
                 t.thumbnail((THUMB, THUMB))
-                thumbs.append((i, t, f"{im.width}x{im.height}"))
+                thumbs.append((i, t, f"{im.width}x{im.height}{verdict}"))
             except Exception as ex:  # noqa: BLE001
                 e.update({"ok": False, "error": f"{type(ex).__name__}: {str(ex)[:120]}"})
                 t = Image.new("RGB", (THUMB // 2, THUMB // 2), (60, 60, 60))

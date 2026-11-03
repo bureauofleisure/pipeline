@@ -77,7 +77,9 @@ def get(url, search=False):
 
 def words_for(t):
     src = " ".join([t["place"]] + (t.get("queries") or []))
-    return sorted({w for w in re.findall(r"[a-z]{4,}", src.lower()) if w not in STOP})
+    words = {w for w in re.findall(r"[a-z]{4,}", src.lower()) if w not in STOP}
+    words |= {w.lower() for w in re.findall(r"\b[A-Z]{3}\b", src)}   # acronyms such as TWA were never matched
+    return sorted(words)
 
 
 def search(query):

@@ -18,7 +18,7 @@ import unicodedata
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"   # honest bot UA, same as harvest and build (2026-11-02)
 MAX_NEW_PER_RUN = int(os.environ.get("GROW_MAX", "40"))
 
 # words that mean a "credit" is not a person or studio
