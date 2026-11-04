@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-04T07:50:57Z",
+ "searched": "2026-11-04T13:43:47Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,34 +8,22 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 11,
+  "results": 6,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 11,
+  "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel Chelsea; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Fontainebleau Miami Beach; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_misses": [
-   "ter/pnp/gsc/5a28000/5a28500/5a28551u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28549u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28550u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28548u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29700/5a29756u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28552u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28553u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28554u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28555u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28556u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28557u.tif: HTTP 429"
-  ],
+  "other_collections": 6,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 16,
+ "next_target": 17,
  "targets": [
   {
    "place": "Rainbow Room",
