@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-05T07:50:55Z",
+ "searched": "2026-11-05T13:48:53Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,26 +8,22 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 3,
+  "results": 1,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 3,
+  "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Barton Springs Pool; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Musso & Frank Grill; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_misses": [
-   "ter/pnp/gsc/5a06000/5a06500/5a06572u.tif: HTTP 429",
-   "ter/pnp/gsc/5a06000/5a06500/5a06573u.tif: HTTP 429",
-   "ter/pnp/gsc/5a06000/5a06500/5a06571u.tif: HTTP 429"
-  ],
+  "other_collections": 1,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 20,
+ "next_target": 21,
  "targets": [
   {
    "place": "Rainbow Room",
