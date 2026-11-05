@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-04T19:32:37Z",
+ "searched": "2026-11-05T01:45:57Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,28 +8,21 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 5,
+  "results": 1,
   "items_opened": 0,
-  "offtopic": 0,
+  "offtopic": 1,
   "rights": 0,
-  "size": 5,
+  "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Eden Roc; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at The Raleigh; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_ok": 1,
-  "tif_header_misses": [
-   "ter/pnp/gsc/5a23000/5a23400/5a23471u.tif: HTTP 429",
-   "ter/pnp/gsc/5a23000/5a23500/5a23506u.tif: HTTP 429",
-   "ter/pnp/gsc/5a30000/5a30200/5a30276u.tif: HTTP 429",
-   "ter/pnp/gsc/5a23000/5a23400/5a23473u.tif: HTTP 429"
-  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 18,
+ "next_target": 19,
  "targets": [
   {
    "place": "Rainbow Room",
