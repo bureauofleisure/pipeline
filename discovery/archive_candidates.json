@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-05T13:48:53Z",
+ "searched": "2026-11-05T19:29:25Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,22 +8,21 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 1,
+  "results": 0,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Musso & Frank Grill; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at The Beverly Hills Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 1,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 21,
+ "next_target": 22,
  "targets": [
   {
    "place": "Rainbow Room",
