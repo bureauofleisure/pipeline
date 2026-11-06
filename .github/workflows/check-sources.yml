@@ -22,8 +22,8 @@ jobs:
       - run: python discovery/check_feeds.py
       - name: Save the report
         run: |
-          git config user.name "Bureau of Leisure"
-          git config user.email "lewie@flow.agency"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add discovery/feed_report.json
           git diff --cached --quiet && exit 0
           git commit -m "Source check $(date -u +%Y-%m-%d)"

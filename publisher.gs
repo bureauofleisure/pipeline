@@ -678,7 +678,7 @@ function ghUpdateJson_(path, message, mutate) {
       throw new Error('GitHub read failed: HTTP ' + cur.getResponseCode());
     }
     mutate(data);
-    const payload = { message, branch: 'main', content: Utilities.base64Encode(JSON.stringify(data, null, 1), Utilities.Charset.UTF_8) };
+    const payload = { message, branch: 'main', committer: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, author: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, content: Utilities.base64Encode(JSON.stringify(data, null, 1), Utilities.Charset.UTF_8) };
     if (sha) payload.sha = sha;
     const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
     if (res.getResponseCode() < 300) return;
@@ -874,7 +874,7 @@ function syncStatuses() {
       if (JSON.stringify(JSON.parse(existing).rows) === JSON.stringify(rows)) return;   // nothing changed
     } catch (e) { /* rewrite */ }
   }
-  const payload = { message: 'Statuses from the sheet', content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
+  const payload = { message: 'Statuses from the sheet', committer: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, author: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
   if (sha) payload.sha = sha;
   const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
   if (res.getResponseCode() >= 300) {

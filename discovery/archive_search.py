@@ -22,7 +22,7 @@ import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-UA = "BureauOfLeisureBot/1.1 (https://bureauofleisure.co; lewie@flow.agency)"
+UA = "BureauOfLeisureBot/1.1 (+https://bureauofleisure.github.io/pipeline/)"
 MIN_WIDE, MIN_TALL = 1800, 1350
 PER_SEARCH = 60          # results read per collection search
 ITEMS_PER_TARGET = 16    # item pages opened per target (each is one request)

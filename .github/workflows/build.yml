@@ -48,8 +48,8 @@ jobs:
       - name: Put photo-starved posts on the watch list
         run: |
           python discovery/watch.py add docs/manifest.json
-          git config user.name "Bureau of Leisure"
-          git config user.email "lewie@flow.agency"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add discovery/watchlist.json
           git diff --cached --quiet || (git commit -q -m "Watch list updated after build" && (for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done))
 
@@ -60,8 +60,8 @@ jobs:
           cd docs
           rm -rf .git
           git init -q -b gh-pages
-          git config user.name "Bureau of Leisure"
-          git config user.email "lewie@flow.agency"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "Publish slides $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

@@ -36,8 +36,8 @@ jobs:
           ARCHIVE_START: ${{ inputs.start }}
       - name: Save
         run: |
-          git config user.name "Bureau of Leisure"
-          git config user.email "lewie@flow.agency"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # commit only when the finds changed, not just the timestamp and stats
           python - <<'PY' || exit 0
           import json, subprocess, sys
