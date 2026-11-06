@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-03T00:50:38Z",
+  "checked": "2026-11-06T22:27:20Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -7,7 +7,7 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 8
+      "items": 6
     },
     {
       "name": "Dezeen hotels",
@@ -15,7 +15,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 15
+      "items": 7
     },
     {
       "name": "Dezeen bars",
@@ -32,14 +32,6 @@
       "site": 200,
       "feed": "200 lenient",
       "items": 15
-    },
-    {
-      "name": "Yellowtrace",
-      "tier": 2,
-      "category": "design_press",
-      "site": "error: HTTPError",
-      "feed": "200 ok",
-      "items": 10
     },
     {
       "name": "Sight Unseen",
@@ -63,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 15
+      "items": 17
     },
     {
       "name": "Architectural Digest",
@@ -151,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 33
+      "items": 31
     },
     {
       "name": "Roman and Williams",
@@ -429,7 +421,7 @@
       "name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
       "tier": 1,
       "category": "press_room",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -511,7 +503,7 @@
       "category": "awards",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 12
+      "items": 13
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -631,7 +623,7 @@
       "category": "city_press",
       "site": 200,
       "feed": "200 ok",
-      "items": 30
+      "items": 29
     },
     {
       "name": "Culture of Bathing",
