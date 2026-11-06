@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-06T01:46:23Z",
+ "searched": "2026-11-06T07:48:39Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,22 +8,21 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 1,
+  "results": 0,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Chateau Marmont; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Sunnylands; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 1,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 23,
+ "next_target": 24,
  "targets": [
   {
    "place": "Rainbow Room",
