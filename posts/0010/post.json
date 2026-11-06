@@ -1,0 +1,54 @@
+{
+  "index": "0010",
+  "place": "Cassette",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 repeats photo 1 from a closer or further angle, dropped",
+    "photo 7 straightened +1.1 deg",
+    "photo 7 keystone corrected -2.5 deg",
+    "photo 8 repeats photo 2 from a closer or further angle, dropped",
+    "photo 9 is a near-duplicate, dropped",
+    "photo 10 straightened +0.4 deg",
+    "photo 11 repeats photo 10 from a closer or further angle, dropped",
+    "photo 13 repeats photo 1 from a closer or further angle, dropped",
+    "photo 6 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "65ed1cb6481a",
+  "built": "2026-10-27",
+  "edited_at": "2026-10-27T11:50:36Z",
+  "meta": {
+    "neighborhood": "Covent Garden",
+    "city": "London",
+    "category": "Restaurant",
+    "word": "CRISP",
+    "reminds": "a Paris bistro at lunch",
+    "credit": "Ed Reeve",
+    "designer": "Gundry & Ducker",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/12/gundry-ducker-french-dining-culture-london-cassette/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0010/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0010/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0010/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0010/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0010/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0010/06.jpg"
+  ],
+  "archive": "9 originals (7.9 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    12,
+    2,
+    4,
+    5
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0010\nCASSETTE. COVENT GARDEN, LONDON.\nA GOTHIC WORKSHOP, GRADE II LISTED.\nDOUBLE HEIGHT. GLASS FACADE.\nFIFTY-TWO SEATS OVER TWO FLOORS.\nA NEIGHBOURHOOD BISTRO IN THE CENTRE OF TOWN.\nIN A WORD: CRISP.",
+  "alt_text": "Cassette, Covent Garden, London. A Parisian-style bistro inside a nineteenth-century gothic workshop with a tall glass front."
+}

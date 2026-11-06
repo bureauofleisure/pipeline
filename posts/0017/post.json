@@ -1,0 +1,46 @@
+{
+  "index": "0017",
+  "place": "The Polo Lounge",
+  "status": "BUILT",
+  "notes": [
+    "photo 6 repeats photo 4 from a closer or further angle, dropped"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "2f2ca5ccb43f",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Beverly Hills",
+    "city": "Los Angeles",
+    "category": "Restaurant",
+    "word": "SWANKY",
+    "reminds": "a Slim Aarons afternoon",
+    "credit": "Alan Light, CC BY 2.0, via Wikimedia Commons",
+    "designer": "",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Polo_Lounge,_inside_(3715406002).jpg",
+    "bring": "BRING SOMEONE WHO LOVES GOSSIP."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0017/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0017/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0017/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0017/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0017/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0017/06.jpg"
+  ],
+  "archive": "5 originals (4.6 MB), 0 new",
+  "cover_source_photo": 5,
+  "slide_sources": [
+    5,
+    4,
+    3,
+    1,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0017\nTHE POLO LOUNGE. BEVERLY HILLS, LOS ANGELES.\nNAMED FOR THE POLO PLAYERS WHO TOASTED HERE.\nPEACHY PINK WALLS. DARK GREEN BOOTHS.\nA PLUG-IN PHONE AT EVERY BOOTH.\nSOFTENED IN 1974 WITH TABLE LAMPS AND FLOWERS.\nBRING SOMEONE WHO LOVES GOSSIP.\nIN A WORD: SWANKY.",
+  "alt_text": "The Polo Lounge, Beverly Hills, Los Angeles. The pink and green dining room and garden patio of the Polo Lounge at the Beverly Hills Hotel."
+}

@@ -1,0 +1,46 @@
+{
+  "index": "0002",
+  "place": "Oberon",
+  "status": "BUILT",
+  "notes": [
+    "photo 2 HOLD: tilt",
+    "photo 3 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 4 rejected: too small (945x1182 after crop, need 1080x1350)",
+    "photo 5 rejected: too small (945x1182 after crop, need 1080x1350)",
+    "photo 6 rejected: too small (945x1182 after crop, need 1080x1350)",
+    "photo 10 rejected: too small (945x1182 after crop, need 1080x1350)",
+    "photo 11 is a near-duplicate, dropped",
+    "photo 13 HOLD: tilt",
+    "photo 15 HOLD: tilt",
+    "photo 12 dropped: did not match the set",
+    "photo 14 dropped: did not match the set"
+  ],
+  "grade": "v1.0",
+  "entry_hash": "c9c5903f083b",
+  "built": "2026-10-17",
+  "meta": {
+    "neighborhood": "Bowery",
+    "city": "New York",
+    "category": "Restaurant",
+    "word": "HUSHED",
+    "reminds": "a jewel box in a lobby",
+    "credit": "Alex Fradkin",
+    "designer": "OMA New York",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/07/18/oma-oberon-restaurant-new-museum-new-york-city/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0002/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0002/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0002/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0002/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0002/05.jpg"
+  ],
+  "cover_source_photo": 1,
+  "caption_card": "BUREAU OF LEISURE NO. 0002\nOBERON. NEW MUSEUM, BOWERY, NEW YORK.\nA METAL BOX IN THE LOBBY, 2026.\nBLACK CORK BOOTHS AND CEILING.\nFROSTED GLASS BAND. HIDDEN IN PLAIN SIGHT.\nOMA NEW YORK. ALL DAY.\nIN A WORD: HUSHED.",
+  "alt_text": "Oberon, Bowery, New York. A compact restaurant lined in black expanded cork, with booths and a frosted glass band."
+}

@@ -1,0 +1,29 @@
+{
+  "index": "0019",
+  "place": "Sisters",
+  "status": "BENCHED",
+  "notes": [
+    "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350)",
+    "photo 4 rejected: too small (1066x1333 after crop, need 1080x1350)",
+    "only 2 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "b679f8e19e96",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Clinton Hill",
+    "city": "Brooklyn",
+    "category": "Restaurant",
+    "word": "SUNDAY",
+    "reminds": "a Copenhagen cafe with a stage",
+    "credit": "Oliver Haslegrave and Paul Quitoriano",
+    "designer": "Home Studios",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://homestudios.nyc/sisters",
+    "bring": ""
+  }
+}

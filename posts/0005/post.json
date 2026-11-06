@@ -1,0 +1,58 @@
+{
+  "index": "0005",
+  "place": "Nota Tavern",
+  "status": "BUILT",
+  "notes": [
+    "photo 5 repeats photo 4 from a closer or further angle, dropped",
+    "photo 6 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 7 repeats photo 4 from a closer or further angle, dropped",
+    "photo 9 wide-angle lean +6.6 deg left as shot",
+    "photo 11 rejected: compression artifacts (blockiness 1.48)",
+    "photo 16 wide-angle lean +11.6 deg left as shot",
+    "photo 18 rejected: compression artifacts (blockiness 1.35)",
+    "photo 19 repeats photo 8 from a closer or further angle, dropped",
+    "photo 21 repeats photo 6 from a closer or further angle, dropped",
+    "photo 23 rejected: compression artifacts (blockiness 1.36)",
+    "photo 25 repeats photo 3 from a closer or further angle, dropped"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "44c7dff6b3f3",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Escand\u00f3n",
+    "city": "Mexico City",
+    "category": "Restaurant",
+    "word": "CLUBBY",
+    "reminds": "a Chicago neighborhood tavern",
+    "credit": "Fabi\u00e1n Martinez",
+    "designer": "Formant Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/09/nota-taverna-mexico-city-formant-studio/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0005/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/06.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0005/07.jpg"
+  ],
+  "archive": "16 originals (13.4 MB), 13 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    3,
+    4,
+    14,
+    16,
+    10
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0005\nNOTA TAVERN. ESCAND\u00d3N, MEXICO CITY.\nHALF OF AN OLD HACIENDA HOUSE.\nTWO FLOORS. ITALIAN-AMERICAN.\nCUSTOM FURNITURE BY FORMANT STUDIO.\nANTIQUES BY GALER\u00cdA C\u00d3RDOBA.\nIN A WORD: CLUBBY.",
+  "alt_text": "Nota Tavern, Escand\u00f3n, Mexico City. A two-storey tavern in a former house, with wood banquettes, mirrors and antiques."
+}

@@ -1,0 +1,53 @@
+{
+  "index": "0023",
+  "place": "TWA Flight Center",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 film edge trimmed (5377x4218)",
+    "photo 2 film edge trimmed (5099x3850)",
+    "photo 3 wide-angle lean -6.0 deg left as shot",
+    "photo 4 film edge trimmed (5108x4198)",
+    "photo 5 film edge trimmed (4262x4761)"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "705297923d8e",
+  "built": "2026-11-02",
+  "edited_at": "2026-11-03T00:30:00Z",
+  "photos_sig": "173de22bfa20",
+  "meta": {
+    "neighborhood": "Idlewild",
+    "city": "New York",
+    "category": "Bar",
+    "word": "SWELL",
+    "reminds": "Catch Me If You Can",
+    "credit": "Gottscho-Schleisner Collection, Library of Congress",
+    "designer": "Eero Saarinen",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.loc.gov/item/2018732786/",
+    "bring": "BRING WHOEVER TAUGHT YOU TO DRINK MARTINIS."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0023/01.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/02.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/03.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/04.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/05.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/06.jpg?v=705297923d8e",
+    "https://bureauofleisure.github.io/pipeline/posts/0023/07.jpg?v=705297923d8e"
+  ],
+  "archive": "6 originals (40.7 MB), 6 new",
+  "cover_source_photo": 3,
+  "slide_sources": [
+    3,
+    6,
+    4,
+    2,
+    5,
+    1
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0023\nTWA FLIGHT CENTER. IDLEWILD, NEW YORK.\nEERO SAARINEN'S TERMINAL, OPENED 1962.\nTHE RESTAURANTS WERE RUN BY UNION NEWS.\nTHE LISBON LOUNGE. THE LONDON CLUB.\nPHOTOGRAPHED BY GOTTSCHO-SCHLEISNER, 1962.\nBRING WHOEVER TAUGHT YOU TO DRINK MARTINIS.\nIN A WORD: SWELL.",
+  "alt_text": "TWA Flight Center, Idlewild, New York. A 1962 airport lounge under a curved concrete shell, with white swivel chairs, round tables and a long curved bar."
+}

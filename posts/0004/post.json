@@ -1,0 +1,50 @@
+{
+  "index": "0004",
+  "place": "Kimpton Ashbel",
+  "status": "BUILT",
+  "notes": [
+    "photo 4 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 6 HOLD: brightness",
+    "photo 11 repeats photo 4 from a closer or further angle, dropped"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "60975303bdce",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Park Avenue",
+    "city": "New York",
+    "category": "Hotel",
+    "word": "PLUSH",
+    "reminds": "a Park Avenue apartment",
+    "credit": "Courtesy of Kimpton Ashbel",
+    "designer": "Busta Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/08/14/busta-studio-kimpton-ashbel-hotel/",
+    "bring": "BRING YOUR MOTHER."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0004/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/06.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0004/07.jpg"
+  ],
+  "archive": "8 originals (3.4 MB), 3 new",
+  "cover_source_photo": 10,
+  "slide_sources": [
+    10,
+    9,
+    8,
+    2,
+    1,
+    5
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0004\nKIMPTON ASHBEL. PARK AVENUE, NEW YORK.\nA 1928 BEAUX-ARTS BUILDING.\nVELVET, LINEN, LEATHER, BOUCLE.\nJEWEL TONES ON A NEUTRAL GROUND.\nLOUVRES AT STREET LEVEL FOR PRIVACY.\nBRING YOUR MOTHER.\nIN A WORD: PLUSH.",
+  "alt_text": "Kimpton Ashbel, Park Avenue, New York. Hotel interiors in a 1928 Park Avenue building, with velvet seating, art and warm lamplight."
+}
