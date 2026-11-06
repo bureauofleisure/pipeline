@@ -5,6 +5,9 @@ on:
     - cron: "41 13 1 * *"   # first of the month, 9:41am New York
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   janitor:
     runs-on: ubuntu-latest
