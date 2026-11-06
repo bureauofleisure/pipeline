@@ -57,7 +57,8 @@
    "url": "https://www.yellowtrace.com.au/",
    "feed": "https://www.yellowtrace.com.au/feed/",
    "archive": true,
-   "notes": "Strong on hospitality and nostalgic interiors. Feed verified 2026-10-16 but malformed; parser must be lenient."
+   "notes": "Strong on hospitality and nostalgic interiors. Feed verified 2026-10-16 but malformed; parser must be lenient. Disabled 2026-11-06 (Lewie): article pages refuse BureauOfLeisureBot since late Oct, so no photos reach the review.",
+   "disabled": true
   },
   {
    "name": "Hospitality Design",
