@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-06T19:28:42Z",
+ "searched": "2026-11-07T01:36:00Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -15,14 +15,14 @@
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel Il Pellicano; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Gellért Baths; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 26,
+ "next_target": 27,
  "targets": [
   {
    "place": "Rainbow Room",
