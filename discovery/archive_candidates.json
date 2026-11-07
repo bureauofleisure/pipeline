@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-07T07:37:14Z",
+ "searched": "2026-11-07T13:28:11Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,21 +8,25 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 0,
+  "results": 8,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Café Central; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Les Bains Douches; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 7,
+  "tif_header_misses": [
+   "/master/pnp/pplot/13700/13725/01297u.tif: HTTP 429"
+  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 28,
+ "next_target": 29,
  "targets": [
   {
    "place": "Rainbow Room",
