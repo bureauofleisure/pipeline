@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-08T07:37:42Z",
+ "searched": "2026-11-08T13:27:17Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,25 +8,22 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 4,
+  "results": 3,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 1,
+  "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel San José; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Keens Steakhouse; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
   "other_collections": 3,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/28300/28336u.tif: HTTP 429"
-  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 32,
+ "next_target": 33,
  "targets": [
   {
    "place": "Rainbow Room",
