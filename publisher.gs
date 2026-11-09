@@ -1,5 +1,5 @@
 /**
- * Bureau of Leisure Publisher v0.17 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.18 (MODE: DRYRUN default, QUIET, LIVE)
  *
  * v0.17: drag to reorder photos on the review page. The new order (cover first) is saved to
  *        batches/orders/photo_order.json in GitHub, which rebuilds that one post in about 10 minutes (labels
@@ -678,7 +678,7 @@ function ghUpdateJson_(path, message, mutate) {
       throw new Error('GitHub read failed: HTTP ' + cur.getResponseCode());
     }
     mutate(data);
-    const payload = { message, branch: 'main', content: Utilities.base64Encode(JSON.stringify(data, null, 1), Utilities.Charset.UTF_8) };
+    const payload = { message, branch: 'main', committer: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, author: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, content: Utilities.base64Encode(JSON.stringify(data, null, 1), Utilities.Charset.UTF_8) };
     if (sha) payload.sha = sha;
     const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
     if (res.getResponseCode() < 300) return;
@@ -874,7 +874,7 @@ function syncStatuses() {
       if (JSON.stringify(JSON.parse(existing).rows) === JSON.stringify(rows)) return;   // nothing changed
     } catch (e) { /* rewrite */ }
   }
-  const payload = { message: 'Statuses from the sheet', content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
+  const payload = { message: 'Statuses from the sheet', committer: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, author: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
   if (sha) payload.sha = sha;
   const res = UrlFetchApp.fetch(api, { method: 'put', headers, contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
   if (res.getResponseCode() >= 300) {
@@ -989,7 +989,7 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  .editbox textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Courier Prime",monospace;border:2px solid #2A2420;background:#fff8;padding:10px;margin-bottom:10px;resize:vertical}
  .err{font-size:12px;color:#6E2A22;margin-top:10px;white-space:pre-wrap}
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
-</style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script><style>
+</style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" integrity="sha384-BSxuMLxX+FCbTdYec3TbXlnMGEEM2QXTFdtDaveen71o+jswm2J36+xFqp8k4VHM" crossorigin="anonymous"></script><style>
 </style></head><body>
 <header><h1>Bureau of Leisure: review</h1>
  <? ['DRAFT','EDITS','APPROVED','FAILED','DRY RUN','KILLED','POSTED','ALL'].forEach(function(k){ var n = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); ?><a href="<?= base ?>?show=<?= encodeURIComponent(k) ?>" target="_top" style="<?= k===show ? 'font-weight:bold;text-decoration:none' : '' ?>"><?= k.charAt(0)+k.slice(1).toLowerCase() ?> <span class="n" data-k="<?= k ?>"><?= n ?></span></a><? }); ?>

@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-02T23:15:46Z",
+ "searched": "2026-11-09T14:31:53Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,21 +8,25 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 0,
+  "results": 4,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Millennium Biltmore Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Ahwahnee Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 3,
+  "tif_header_misses": [
+   "vices/master/pnp/highsm/24200/24282u.tif: HTTP 429"
+  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 8,
+ "next_target": 38,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -96,8 +100,33 @@
    "city": "San Antonio",
    "era": "1859",
    "notes": "Added 2026-10-26: Carol M. Highsmith, Texas.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Menger Hotel, Alamo Plaza, San Antonio, Bexar County, TX",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tx/tx0100/tx0164/color/572451cu.tif",
+     "width": 4979,
+     "height": 3618,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "lansberry, homer h. harding, warren g. smalling, walter, jr roosevelt, theodore stewart, arthur w. menger, w. a. historic american buildings survey cary, brian pershing, john j. \"black jack\" taft, william howard",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/tx0164/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Jacob Wohlfarth Store & Residence, 823 West Laurel, San Antonio, Bexar County, TX",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/tx/tx0600/tx0683/photos/366267pu.tif",
+     "width": 4024,
+     "height": 5000,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "historic american buildings survey",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/tx0683/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Bemelmans Bar",

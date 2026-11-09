@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-02T13:36:06Z",
+ "checked": "2026-11-09T14:31:49Z",
  "items": [
   {
    "index": "0007",
@@ -28,14 +28,14 @@
   {
    "index": "0019",
    "place": "Sisters",
-   "status": "WATCHING",
+   "status": "READY",
    "ready_photos": 4
   },
   {
-   "index": "0010",
-   "place": "Cassette",
+   "index": "0021",
+   "place": "Love Thy Neighbor",
    "status": "WATCHING",
-   "ready_photos": 2
+   "ready_photos": 1
   }
  ]
 }

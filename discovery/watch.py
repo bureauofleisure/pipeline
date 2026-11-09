@@ -28,6 +28,20 @@ PHOTO_REASON = re.compile(r"too small|only \d+ photos? passed|could not be fetch
 MIN_WIDE = 1800
 
 
+def _gate():
+    """The build's own photo gate (size after the 4:5 crop, sharpness, compression). READY used to count image
+    URLs by width hint alone, so Focacha, Hausu and Sisters showed READY with photos that could never build."""
+    try:
+        root = os.path.dirname(HERE)
+        sys.path.insert(0, os.path.join(root, "build"))
+        sys.path.insert(0, os.path.join(root, "grade"))
+        from build_posts import quality, fetch  # noqa: E402
+        return quality, fetch
+    except Exception as e:  # noqa: BLE001
+        print("watch: gate unavailable, counting by width only:", e)
+        return None, None
+
+
 def load():
     return json.load(open(WATCH)) if os.path.exists(WATCH) else {"items": []}
 
@@ -144,7 +158,22 @@ def check():
                 time.sleep(0.3)
         it["last_check"] = time.strftime("%Y-%m-%d")
         it["ready_photos"] = len(found)
-        it["candidate_photos"] = sorted(found)[:20]
+        cands = sorted(found)[:20]
+        quality, fetch = _gate()
+        if quality and cands:
+            passed, why = [], {}
+            for u in cands[:12]:
+                try:
+                    img, _, _ = fetch(u)
+                    ok, reason = quality(img, (0.5, 0.5))
+                except Exception as e:  # noqa: BLE001
+                    ok, reason = False, f"fetch {type(e).__name__}"
+                (passed.append(u) if ok else why.__setitem__(u, reason))
+            it["gate_failures"] = {k[-60:]: v for k, v in list(why.items())[:8]}
+            cands = passed
+            found = {u: found[u] for u in passed}
+            it["ready_photos"] = len(found)
+        it["candidate_photos"] = cands
         if len(found) >= 4:
             it["status"] = "READY"
         elif it["status"] == "READY":
