@@ -1,11 +1,11 @@
 {
-  "checked": "2026-11-06T22:27:20Z",
+  "checked": "2026-11-09T12:10:48Z",
   "sources": [
     {
       "name": "Dezeen interiors",
       "tier": 2,
       "category": "design_press",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": "200 lenient",
       "items": 6
     },
@@ -13,7 +13,7 @@
       "name": "Dezeen hotels",
       "tier": 2,
       "category": "design_press",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": "200 lenient",
       "items": 7
     },
@@ -21,7 +21,7 @@
       "name": "Dezeen bars",
       "tier": 2,
       "category": "design_press",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": "200 lenient",
       "items": 16
     },
@@ -29,7 +29,7 @@
       "name": "Dezeen restaurants",
       "tier": 2,
       "category": "design_press",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": "200 lenient",
       "items": 15
     },
@@ -55,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 17
+      "items": 14
     },
     {
       "name": "Architectural Digest",
@@ -143,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 31
+      "items": 30
     },
     {
       "name": "Roman and Williams",
@@ -293,7 +293,7 @@
       "name": "Hollie Bowden",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -389,7 +389,7 @@
       "name": "Ace Hotel press",
       "tier": 1,
       "category": "press_room",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -421,7 +421,7 @@
       "name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
       "tier": 1,
       "category": "press_room",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -501,7 +501,7 @@
       "name": "Dezeen Awards hospitality",
       "tier": 2,
       "category": "awards",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": "200 lenient",
       "items": 13
     },
