@@ -1,0 +1,143 @@
+{
+ "batch": "2026-W46",
+ "reviewed": "2026-11-09",
+ "notes": "Batch 2026-W46 (2026-11-09 harvest: 206 items: 154 feed, 50 portfolio, 2 portfolio sources that returned nothing; the scheduled harvest lost its commit to a push conflict with the archive search and was re-run by the review). Four posts, every photo viewed. Held picks released: 0025 The Dunes Club, 0026 Million Goods. New: 0027 Skywalker Grill (Dezeen, Tom McGovern, all frames PASS), 0028 The Greenbrier (Carol M. Highsmith Archive, 2015). Viewed and held for a batch with room under the Dezeen cap: Bistrot Franky (Montreal), Echo (Rotterdam); see held.json. Dropped: Sisters (watch list READY was false: two of its four candidates are other Home Studios projects), Bibo Ergo Sum (three distinct views), Fouquet's New York (guest rooms), Post Company pages (1920x1280, under the crop gate), Workstead, GRT, Alex Lesage project pages (no photos reach the harvester), Hotel del Coronado HABS set (exteriors, two interiors).",
+ "posts": [
+  {
+   "index": "0025",
+   "place": "The Dunes Club",
+   "neighborhood": "Narragansett",
+   "city": "Rhode Island",
+   "category": "Club",
+   "designer": "Thomas Pym Cope",
+   "credit": "Gottscho-Schleisner Collection, Library of Congress",
+   "licence": "No known restrictions (Library of Congress)",
+   "archive": true,
+   "era": "1939",
+   "word": "BREEZY",
+   "reminds": "a Slim Aarons Newport afternoon",
+   "card": [
+    "BUREAU OF LEISURE NO. 0025",
+    "THE DUNES CLUB. NARRAGANSETT, RHODE ISLAND.",
+    "THE FIRST CLUBHOUSE WASHED AWAY IN 1938.",
+    "REBUILT IN 1939 BY THOMAS PYM COPE.",
+    "COLONIAL REVIVAL, ON NARRAGANSETT BAY.",
+    "ON THE NATIONAL REGISTER SINCE 2015.",
+    "IN A WORD: BREEZY."
+   ],
+   "alt_hint": "A 1939 beach club room under open timber trusses, with sofas and lamps facing a curved wall of windows onto the sea.",
+   "source_url": "https://www.loc.gov/item/2018736219/",
+   "discovered_via": "https://en.wikipedia.org/wiki/The_Dunes_Club",
+   "bring": "BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.",
+   "cover": 1,
+   "photos": [
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03786u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03785u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03776u.tif",
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03782u.tif"
+   ],
+   "survival_check": "2026-11-02: rooms checked against the 2015 National Register nomination (https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/narragansett/narr_boston-neck-road-137_dunes-club.pdf): club room, loggia and dining room intact (dining room has its original chairs and serving tables); barroom inside the intact core; ocean portico frame removed because the portico has since been glazed."
+  },
+  {
+   "index": "0026",
+   "place": "Million Goods",
+   "neighborhood": "Fort Greene",
+   "city": "Brooklyn",
+   "category": "Bar",
+   "designer": "Gjergji Shkurti",
+   "credit": "Joe Thomas",
+   "word": "DAPPER",
+   "reminds": "a Tokyo jazz kissa",
+   "card": [
+    "BUREAU OF LEISURE NO. 0026",
+    "MILLION GOODS. FORT GREENE, BROOKLYN.",
+    "A LANDMARKED BUILDING ON DEKALB AVENUE.",
+    "A GLOSSY RED SPIRAL STAIRCASE.",
+    "A BRECCIA PERNICE STONE WINE BAR.",
+    "HI-FI DOWNSTAIRS. MENSWEAR UPSTAIRS.",
+    "IN A WORD: DAPPER."
+   ],
+   "alt_hint": "A wood-panelled listening bar with a long red-brown stone counter, steel stools and a big speaker set into the shelving.",
+   "source_url": "https://www.joethomasphoto.com/million-goods/",
+   "discovered_via": "https://www.dezeen.com/2026/09/25/gjergji-shkurti-million-goods-ft-green/",
+   "photos": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w"
+   ]
+  },
+  {
+   "index": "0027",
+   "place": "Skywalker Grill",
+   "neighborhood": "Exposition Park",
+   "city": "Los Angeles",
+   "category": "Restaurant",
+   "designer": "Rockwell Group",
+   "credit": "Tom McGovern",
+   "word": "HONEYED",
+   "reminds": "a John Lautner living room",
+   "card": [
+    "BUREAU OF LEISURE NO. 0027",
+    "SKYWALKER GRILL. EXPOSITION PARK, LOS ANGELES.",
+    "ON TOP OF THE LUCAS MUSEUM. OPENED SEPTEMBER 2026.",
+    "CHERRY WOOD ON THE WALLS AND THE CEILING.",
+    "NO TWO PANELS ALIKE. A BAR CLAD IN SILVER GILT.",
+    "A TERRACE LOOKING OUT OVER DOWNTOWN.",
+    "IN A WORD: HONEYED."
+   ],
+   "alt_hint": "A curving restaurant wrapped in cherry wood, with pale leaf-patterned chairs around a sculptural bar under a glowing oval ceiling.",
+   "source_url": "https://www.dezeen.com/2026/09/26/skywalker-grill-lucas-museum-narrative-art-los-angeles-rockwell-group/",
+   "discovered_via": "https://www.dezeen.com/2026/09/26/skywalker-grill-lucas-museum-narrative-art-los-angeles-rockwell-group/",
+   "cover": 1,
+   "photos": [
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_10.jpg"
+   ],
+   "facts_from": "Card facts: lucasmuseum.org/press/skywalker-grill-announcement (opening 22 September 2026, cherry wood walls and ceiling, terrace) and the Wallpaper review (no two panels alike, bar clad in silver gilt, views over downtown). The Dezeen article text did not come through the harvest."
+  },
+  {
+   "index": "0028",
+   "place": "The Greenbrier",
+   "neighborhood": "White Sulphur Springs",
+   "city": "West Virginia",
+   "category": "Hotel",
+   "designer": "Dorothy Draper",
+   "credit": "Carol M. Highsmith Archive, Library of Congress",
+   "licence": "No known restrictions (Library of Congress)",
+   "archive": true,
+   "era": "2015",
+   "word": "POSH",
+   "reminds": "The Grand Budapest Hotel",
+   "card": [
+    "BUREAU OF LEISURE NO. 0028",
+    "THE GREENBRIER. WHITE SULPHUR SPRINGS, WEST VIRGINIA.",
+    "WELCOMING GUESTS SINCE 1778.",
+    "DOROTHY DRAPER REDECORATED IT AFTER THE WAR.",
+    "HER FIRM HAS STYLED IT FOR OVER 75 YEARS.",
+    "PHOTOGRAPHED BY CAROL M. HIGHSMITH, 2015.",
+    "IN A WORD: POSH."
+   ],
+   "alt_hint": "A grand hotel sitting room with mint green walls, a gilded eagle over a white fireplace and floral sofas around a low white table.",
+   "source_url": "https://www.loc.gov/item/2015634492/",
+   "discovered_via": "https://www.loc.gov/collections/carol-m-highsmith/",
+   "cover": 1,
+   "photos": [
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34476/full/pct:50/0/default.jpg",
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34477/full/pct:50/0/default.jpg",
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34470/full/pct:50/0/default.jpg",
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34475/full/pct:50/0/default.jpg",
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34478/full/pct:50/0/default.jpg"
+   ],
+   "survival_check": "2026-11-09: greenbrier.com is taking bookings (Thanksgiving and Christmas 2026 offers), describes the indoor pool as open year-round and says Dorothy Draper & Company has styled the resort for over 75 years; Galerie (2020, updated October 2026) quotes Carleton Varney that the lobby sofas have never changed. Frames: lobby sitting room (item 2015634492), hallway (2015634493), indoor pool (2015634486), circular gathering room (2015634491), entrance front (2015634494). The room-by-room evidence is the resort's own account, not a register nomination; photographed in 2015 under the current owner and decorator.",
+   "photo_note": "Highsmith masters are 150 MB TIFFs; the half-size IIIF JPEGs (4344x2896) are listed instead and pass the build gate. Masters: tile.loc.gov/storage-services/master/pnp/highsm/34400/<n>u.tif."
+  }
+ ]
+}

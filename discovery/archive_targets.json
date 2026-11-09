@@ -337,6 +337,52 @@
     "Ahwahnee Hotel Yosemite interior"
    ],
    "notes": "Added 2026-11-02: Carol M. Highsmith and HABS, Yosemite National Park. Dining room and great lounge."
+  },
+  {
+   "place": "Hotel del Coronado",
+   "city": "Coronado",
+   "era": "1888",
+   "queries": [
+    "Hotel del Coronado"
+   ],
+   "notes": "Added 2026-11-09: HABS CA-1958 (loc.gov item ca0567) has 36 photographs, mostly exteriors; two Crown Room interiors (015020p, 015021p). Viewed 2026-11-09 and not picked: too few interiors. Worth a look if Highsmith or Gottscho interiors turn up."
+  },
+  {
+   "place": "Bathhouse Row",
+   "city": "Hot Springs",
+   "era": "1915",
+   "queries": [
+    "Fordyce Bathhouse",
+    "Quapaw Bathhouse"
+   ],
+   "notes": "Added 2026-11-09: HABS holds Fordyce Bathhouse (ar0035, 38 photographs) and Quapaw Bathhouse (ar0036, 21). Baths. Check which rooms can be visited as photographed (Fordyce is the park visitor centre; Quapaw reopened as a working bathhouse)."
+  },
+  {
+   "place": "Essex House",
+   "city": "New York",
+   "era": "1931",
+   "queries": [
+    "Essex House Central Park South"
+   ],
+   "notes": "Added 2026-11-09: Gottscho-Schleisner high-res frames exist (lobby 1957, Bombay bar and Colonnades 1963). Public rooms only, and only rooms that survive in today's hotel."
+  },
+  {
+   "place": "Brown Palace Hotel",
+   "city": "Denver",
+   "era": "1892",
+   "queries": [
+    "Brown Palace"
+   ],
+   "notes": "Added 2026-11-09: Carol M. Highsmith, 2016, the atrium lobby (items 2017885319, 2017885320). Two frames found so far; needs four."
+  },
+  {
+   "place": "Hotel Congress",
+   "city": "Tucson",
+   "era": "1919",
+   "queries": [
+    "Hotel Congress Tucson"
+   ],
+   "notes": "Added 2026-11-09: Carol M. Highsmith, 2018, lobby (items 2018663112, 2018663113). Two frames found so far; needs four."
   }
  ]
 }

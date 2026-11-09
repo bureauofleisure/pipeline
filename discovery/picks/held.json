@@ -1,72 +1,38 @@
 {
- "about": "Picks viewed and validated on 2026-11-02, held out of 2026-W45. Reserved indexes: 0025 The Dunes Club, 0026 Million Goods (0024 is retired: Fontainebleau was dropped under the 2026-11-02 rule that archive rooms must still exist; its 2008 renovation gutted it). Lewie, 2026-11-02: release The Dunes Club in the 2026-W46 batch. Million Goods goes in the first batch without another Joe Thomas post. Skywalker Grill (Dezeen, Tom McGovern, Rockwell Group) was also viewed and is a good later pick; it gets an index when used. Remove an entry from this file when it is batched. Next free index: 0027.",
- "posts": [
+ "about": "Picks viewed and validated but not yet batched. 2026-11-09: 0025 The Dunes Club and 0026 Million Goods went into batch 2026-W46 and were removed from this file. 0027 Skywalker Grill and 0028 The Greenbrier were used in W46. 0024 is retired. Next free index: 0029. Entries under candidates have no index yet; they get one when used. Remove an entry from this file when it is batched.",
+ "posts": [],
+ "candidates": [
   {
-   "index": "0025",
-   "place": "The Dunes Club",
-   "neighborhood": "Narragansett",
-   "city": "Rhode Island",
-   "category": "Club",
-   "designer": "Thomas Pym Cope",
-   "credit": "Gottscho-Schleisner Collection, Library of Congress",
-   "licence": "No known restrictions (Library of Congress)",
-   "archive": true,
-   "era": "1939",
-   "word": "BREEZY",
-   "reminds": "a Slim Aarons Newport afternoon",
-   "card": [
-    "BUREAU OF LEISURE NO. 0025",
-    "THE DUNES CLUB. NARRAGANSETT, RHODE ISLAND.",
-    "THE FIRST CLUBHOUSE WASHED AWAY IN 1938.",
-    "REBUILT IN 1939 BY THOMAS PYM COPE.",
-    "COLONIAL REVIVAL, ON NARRAGANSETT BAY.",
-    "ON THE NATIONAL REGISTER SINCE 2015.",
-    "IN A WORD: BREEZY."
-   ],
-   "alt_hint": "A 1939 beach club room under open timber trusses, with sofas and lamps facing a curved wall of windows onto the sea.",
-   "source_url": "https://www.loc.gov/item/2018736219/",
-   "discovered_via": "https://en.wikipedia.org/wiki/The_Dunes_Club",
-   "bring": "BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.",
-   "cover": 1,
+   "place": "Bistrot Franky",
+   "city": "Montreal",
+   "category": "Restaurant",
+   "designer": "Atelier Zébulon Perron",
+   "credit": "Alex Lesage",
+   "source_url": "https://www.dezeen.com/2026/10/30/atelier-zebulon-perron-bistrot-franky-montreal/",
    "photos": [
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03786u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03785u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03776u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03782u.tif"
+    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_10.jpg"
    ],
-   "survival_check": "2026-11-02: rooms checked against the 2015 National Register nomination (https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/narragansett/narr_boston-neck-road-137_dunes-club.pdf): club room, loggia and dining room intact (dining room has its original chairs and serving tables); barroom inside the intact core; ocean portico frame removed because the portico has since been glazed."
+   "notes": "Viewed 2026-11-09 on the preview sheets; these five frames pass the gate and each shows a different part of the room (wide room with bar, bar stools, banquettes, corner booth, dining room with painting). Skip col_0 (signage), col_4 (wall only), col_6 (fixture), col_9 (corner), col_8 (FAIL soft), col_11 (FAIL compression). Held because a second Dezeen post needs a batch of eight (25% cap). Abroad. The Dezeen article text did not come through the harvest, so the card still needs facts from a source; Alex Lesage's own project page for it is not up yet (alexlesage.com/all-projects/...)."
   },
   {
-   "index": "0026",
-   "place": "Million Goods",
-   "neighborhood": "Fort Greene",
-   "city": "Brooklyn",
+   "place": "Echo",
+   "city": "Rotterdam",
    "category": "Bar",
-   "designer": "Gjergji Shkurti",
-   "credit": "Joe Thomas",
-   "word": "DAPPER",
-   "reminds": "a Tokyo jazz kissa",
-   "card": [
-    "BUREAU OF LEISURE NO. 0026",
-    "MILLION GOODS. FORT GREENE, BROOKLYN.",
-    "A LANDMARKED BUILDING ON DEKALB AVENUE.",
-    "A GLOSSY RED SPIRAL STAIRCASE.",
-    "A BRECCIA PERNICE STONE WINE BAR.",
-    "HI-FI DOWNSTAIRS. MENSWEAR UPSTAIRS.",
-    "IN A WORD: DAPPER."
-   ],
-   "alt_hint": "A wood-panelled listening bar with a long red-brown stone counter, steel stools and a big speaker set into the shelving.",
-   "source_url": "https://www.joethomasphoto.com/million-goods/",
-   "discovered_via": "https://www.dezeen.com/2026/09/25/gjergji-shkurti-million-goods-ft-green/",
+   "designer": "",
+   "credit": "Sophia van den Hoek",
+   "source_url": "https://www.dezeen.com/2026/10/30/echo-rotterdam-listening-bar/",
    "photos": [
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w"
-   ]
+    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_6.jpg"
+   ],
+   "notes": "Viewed 2026-11-09; these five frames pass the gate (bar front, DJ booth, sofa under the orange light, speaker corner, window seats). col_1 and col_8 FAIL soft, col_2 and col_9 FAIL compression, col_7 is shelves only. A listening bar in the Groot Handelsgebouw. Held for the same Dezeen cap reason. Abroad. Designer and card facts still to be taken from a source text."
   }
  ]
 }
