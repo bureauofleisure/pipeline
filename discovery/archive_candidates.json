@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-09T14:31:53Z",
+ "searched": "2026-11-09T19:30:33Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,25 +8,21 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 4,
+  "results": 1,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 1,
-  "type": 0,
+  "size": 0,
+  "type": 1,
   "errors": [
-   "rate limited by loc.gov at Ahwahnee Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Hotel del Coronado; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 3,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/24200/24282u.tif: HTTP 429"
-  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 38,
+ "next_target": 39,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -334,6 +330,46 @@
    "city": "Yosemite",
    "era": "1927",
    "notes": "Added 2026-11-02: Carol M. Highsmith and HABS, Yosemite National Park. Dining room and great lounge.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hotel del Coronado",
+   "city": "Coronado",
+   "era": "1888",
+   "notes": "Added 2026-11-09: HABS CA-1958 (loc.gov item ca0567) has 36 photographs, mostly exteriors; two Crown Room interiors (015020p, 015021p). Viewed 2026-11-09 and not picked: too few interiors. Worth a look if Highsmith or Gottscho interiors turn up.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Bathhouse Row",
+   "city": "Hot Springs",
+   "era": "1915",
+   "notes": "Added 2026-11-09: HABS holds Fordyce Bathhouse (ar0035, 38 photographs) and Quapaw Bathhouse (ar0036, 21). Baths. Check which rooms can be visited as photographed (Fordyce is the park visitor centre; Quapaw reopened as a working bathhouse).",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Essex House",
+   "city": "New York",
+   "era": "1931",
+   "notes": "Added 2026-11-09: Gottscho-Schleisner high-res frames exist (lobby 1957, Bombay bar and Colonnades 1963). Public rooms only, and only rooms that survive in today's hotel.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Brown Palace Hotel",
+   "city": "Denver",
+   "era": "1892",
+   "notes": "Added 2026-11-09: Carol M. Highsmith, 2016, the atrium lobby (items 2017885319, 2017885320). Two frames found so far; needs four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hotel Congress",
+   "city": "Tucson",
+   "era": "1919",
+   "notes": "Added 2026-11-09: Carol M. Highsmith, 2018, lobby (items 2018663112, 2018663113). Two frames found so far; needs four.",
    "candidates": [],
    "count": 0
   }
