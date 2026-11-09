@@ -10,7 +10,7 @@
    "city": "Rhode Island",
    "category": "Club",
    "designer": "Thomas Pym Cope",
-   "credit": "Gottscho-Schleisner Collection, Library of Congress",
+   "credit": "Gottscho-Schleisner, Library of Congress",
    "licence": "No known restrictions (Library of Congress)",
    "archive": true,
    "era": "1939",
@@ -37,7 +37,8 @@
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03776u.tif",
     "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03782u.tif"
    ],
-   "survival_check": "2026-11-02: rooms checked against the 2015 National Register nomination (https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/narragansett/narr_boston-neck-road-137_dunes-club.pdf): club room, loggia and dining room intact (dining room has its original chairs and serving tables); barroom inside the intact core; ocean portico frame removed because the portico has since been glazed."
+   "survival_check": "2026-11-02: rooms checked against the 2015 National Register nomination (https://preservation.ri.gov/pdfs_zips_downloads/national_pdfs/narragansett/narr_boston-neck-road-137_dunes-club.pdf): club room, loggia and dining room intact (dining room has its original chairs and serving tables); barroom inside the intact core; ocean portico frame removed because the portico has since been glazed.",
+   "credit_note": "2026-11-09: shortened from 'Gottscho-Schleisner Collection, Library of Congress'. The full line is too long for the cover header and prints over the index number (see 0023's cover). Restore it when the layout fits long credits."
   },
   {
    "index": "0026",
@@ -110,7 +111,7 @@
    "city": "West Virginia",
    "category": "Hotel",
    "designer": "Dorothy Draper",
-   "credit": "Carol M. Highsmith Archive, Library of Congress",
+   "credit": "Carol M. Highsmith, Library of Congress",
    "licence": "No known restrictions (Library of Congress)",
    "archive": true,
    "era": "2015",
@@ -118,7 +119,7 @@
    "reminds": "The Grand Budapest Hotel",
    "card": [
     "BUREAU OF LEISURE NO. 0028",
-    "THE GREENBRIER. WHITE SULPHUR SPRINGS, WEST VIRGINIA.",
+    "THE GREENBRIER. WHITE SULPHUR SPRINGS, WV.",
     "WELCOMING GUESTS SINCE 1778.",
     "DOROTHY DRAPER REDECORATED IT AFTER THE WAR.",
     "HER FIRM HAS STYLED IT FOR OVER 75 YEARS.",
@@ -137,7 +138,8 @@
     "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34478/full/pct:50/0/default.jpg"
    ],
    "survival_check": "2026-11-09: greenbrier.com is taking bookings (Thanksgiving and Christmas 2026 offers), describes the indoor pool as open year-round and says Dorothy Draper & Company has styled the resort for over 75 years; Galerie (2020, updated October 2026) quotes Carleton Varney that the lobby sofas have never changed. Frames: lobby sitting room (item 2015634492), hallway (2015634493), indoor pool (2015634486), circular gathering room (2015634491), entrance front (2015634494). The room-by-room evidence is the resort's own account, not a register nomination; photographed in 2015 under the current owner and decorator.",
-   "photo_note": "Highsmith masters are 150 MB TIFFs; the half-size IIIF JPEGs (4344x2896) are listed instead and pass the build gate. Masters: tile.loc.gov/storage-services/master/pnp/highsm/34400/<n>u.tif."
+   "photo_note": "Highsmith masters are 150 MB TIFFs; the half-size IIIF JPEGs (4344x2896) are listed instead and pass the build gate. Masters: tile.loc.gov/storage-services/master/pnp/highsm/34400/<n>u.tif.",
+   "credit_note": "2026-11-09: shortened from 'Carol M. Highsmith Archive, Library of Congress' for the same reason as 0025."
   }
  ]
 }
