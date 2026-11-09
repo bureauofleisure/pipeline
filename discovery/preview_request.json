@@ -1,88 +1,10 @@
 {
  "sets": [
   {
-   "id": "skywalker",
+   "id": "loctest",
    "urls": [
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_0.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_1.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_2.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_3.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_4.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_5.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_6.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_7.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_8.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_9.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_10.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_11.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_hero1.jpg"
-   ]
-  },
-  {
-   "id": "franky",
-   "urls": [
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_0.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_1.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_2.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_3.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_4.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_5.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_6.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_7.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_8.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_9.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_10.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_11.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_hero.jpg"
-   ]
-  },
-  {
-   "id": "echo",
-   "urls": [
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_0.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_1.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_2.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_3.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_4.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_5.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_6.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_7.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_8.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_9.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_hero_0.jpg"
-   ]
-  },
-  {
-   "id": "sisters",
-   "urls": [
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/1702059791147-RA5H535C34LOB7YEQVPK/1.png?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/2f252f7b-fde6-46ee-9d69-9f54038cbee5/Sisters_021.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/4e37ce72-d284-4f18-980a-e329efb83371/Sisters_013.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/ef630097-779a-4bc5-9682-1f79f46c40f1/1.jpg?format=2500w"
-   ]
-  },
-  {
-   "id": "bibo",
-   "urls": [
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/5a34b369-edef-4e96-8c13-9d2946bf4a87/BIBO_07.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6b4119a8-cfbd-439e-90e2-fb9b417eec0b/BIBO_02.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/8034c107-642c-4b57-b675-5e48779ed76d/BIBO_06.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/876a34a5-c8dc-4030-bb2e-5374e7d6c274/BIBO_04.JPG?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c7c6c41c-dba7-4b3f-bc44-059084fba355/BIBO_09.JPG?format=2500w"
-   ]
-  },
-  {
-   "id": "fouquet",
-   "urls": [
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994612056-BT3RMI6X8FCR22CJHDCB/Fouquet-NewYork-JoeThomas-2.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994612548-1KJARUBHSDM58YWD4UWX/Fouquet-NewYork-JoeThomas-1.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994617733-M35H5EK3B08XALIHHC11/Fouquet-NewYork-JoeThomas-4.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994617973-HBHVW9P3J66SKG5NQNJ6/Fouquet-NewYork-JoeThomas-3.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994625874-0KME284CWFXSKDUPYXF3/Fouquet-NewYork-JoeThomas-6.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994631167-KASUQEDY9WCAVESKPER2/Fouquet-NewYork-JoeThomas-7.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994632804-9CSXTN9GTIN84YTFL0MV/Fouquet-NewYork-JoeThomas-8.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664994635656-7T1IDCDR74XZU64T1VG2/Fouquet-NewYork-JoeThomas-9.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1664999835120-6J9D5FY99I0C70U92IP1/Fouquet-NewYork-JoeThomas-11.jpg?format=2500w"
+    "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
+    "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34476/full/pct:50/0/default.jpg"
    ]
   }
  ]
