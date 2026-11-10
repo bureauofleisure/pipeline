@@ -221,7 +221,8 @@
    "region": "global",
    "url": "https://chzon.com/",
    "feed": null,
-   "archive": true
+   "archive": true,
+   "index": "https://chzon.com/hotels"
   },
   {
    "name": "Dimorestudio",
@@ -314,7 +315,8 @@
    "region": "global",
    "url": "https://mbds.com/",
    "feed": null,
-   "archive": true
+   "archive": true,
+   "index": "https://mbds.com/work"
   },
   {
    "name": "Post Company",
@@ -332,7 +334,8 @@
    "region": "us",
    "url": "https://www.robertmckinley.com/",
    "feed": null,
-   "archive": true
+   "archive": true,
+   "index": "https://www.robertmckinley.com/hospitality"
   },
   {
    "name": "Sella Concept",
@@ -1185,7 +1188,8 @@
    "archive": true,
    "auto": true,
    "platform": "wix",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18."
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18.",
+   "index": "https://www.ollietomlinson.com/projects"
   },
   {
    "name": "Mike Schwartz",
@@ -1305,7 +1309,8 @@
    "archive": true,
    "auto": true,
    "platform": "squarespace",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18."
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18.",
+   "index": "https://www.elevineberge.com/work"
   },
   {
    "name": "Barbara Karant",
@@ -2039,7 +2044,8 @@
    "archive": true,
    "auto": true,
    "platform": "wordpress",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-09."
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-09. Disabled 2026-11-10: a restaurant, added by the roster as a photographer.",
+   "disabled": true
   },
   {
    "name": "Alexander Stein",
