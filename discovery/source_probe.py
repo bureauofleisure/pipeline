@@ -174,7 +174,39 @@ def probe(c):
     return out
 
 
+def existing():
+    """Probe the portfolio sources already on the list that have never produced a harvest item."""
+    import glob
+    bare = lambda u: re.sub(r"^https?://(www\.)?", "", u).split("/")[0].lower()   # noqa: E731
+    produced = set()
+    for f in glob.glob(os.path.join(HERE, "harvest", "2026-*.json")):
+        for i in json.load(open(f))["items"]:
+            if i.get("category") in ("photographer", "studio") and len(i.get("photos", [])) >= 3:
+                produced.add(bare(i["link"]))
+    cutoff = os.environ.get("PROBE_BEFORE", "2026-11-10")
+    srcs = [s for s in json.load(open(os.path.join(HERE, "sources.json")))["sources"]
+            if s.get("category") in ("photographer", "studio") and not s.get("disabled") and not s.get("feed")
+            and s.get("added", "") < cutoff and bare(s["url"]) not in produced]
+    results = []
+    for s in srcs:
+        t0 = time.time()
+        try:
+            r = probe({"name": s["name"], "url": s["url"], "lens": 0, "us": 0, "mix": 0, "_alt": True})
+        except Exception as e:  # noqa: BLE001
+            r = {"name": s["name"], "url": s["url"], "error": f"probe {type(e).__name__}: {str(e)[:80]}"}
+        r["seconds"] = round(time.time() - t0)
+        results.append(r)
+        print(f"{'OK ' if r.get('suitable') else '-- '} {s['name']}: {r.get('error') or ''} links={r.get('links', '')} good={r.get('good_pages', '')} "
+              f"pass={r.get('photos_passing', '')}/{r.get('photos_measured', '')}", flush=True)
+    json.dump({"probed": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "never_produced": len(srcs),
+               "now_yield": sum(1 for r in results if r.get("suitable")), "results": results},
+              open(os.path.join(HERE, "source_probe_existing.json"), "w"), indent=1, ensure_ascii=False)
+    print(f"{sum(1 for r in results if r.get('suitable'))} of {len(srcs)} never-productive sources now yield")
+
+
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "existing":
+        return existing()
     doc = json.load(open(os.path.join(HERE, "source_candidates.json")))
     have = {re.sub(r"^https?://(www\.)?", "", s["url"]).split("/")[0].lower()
             for s in json.load(open(os.path.join(HERE, "sources.json")))["sources"] if s.get("url")}

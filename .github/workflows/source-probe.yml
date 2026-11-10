@@ -4,6 +4,11 @@ name: Probe candidate sources
 # Writes discovery/source_probe_report.json. Adds nothing to sources.json.
 on:
   workflow_dispatch:
+    inputs:
+      existing:
+        description: "Probe the existing portfolio sources that have never produced an item, instead of the candidates"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -18,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pillow
-      - run: python -u discovery/source_probe.py
+      - run: python -u discovery/source_probe.py ${{ inputs.existing && 'existing' || '' }}
       - run: |
-          git add discovery/source_probe_report.json
+          git add discovery/source_probe_report.json discovery/source_probe_existing.json 2>/dev/null || git add discovery/source_probe_report.json
           bash .github/save.sh "Source probe $(date -u +%Y-%m-%dT%H:%MZ)"

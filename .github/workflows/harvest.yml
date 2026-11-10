@@ -13,6 +13,10 @@ on:
         description: "Run only the archive search"
         type: boolean
         default: false
+      portfolio_pages:
+        description: "New project pages to take from each portfolio site (default 6; raise for a catch-up run)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -26,7 +30,7 @@ concurrency:
 jobs:
   harvest:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 110
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -37,6 +41,7 @@ jobs:
         if: ${{ !inputs.archive_only }}
         env:
           HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
+          HARVEST_PORTFOLIO_PAGES: ${{ inputs.portfolio_pages }}
       - name: Archive search only
         if: ${{ inputs.archive_only }}
         run: python discovery/archive_search.py

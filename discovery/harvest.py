@@ -382,7 +382,7 @@ def project_links(home, base, seen=()):
     return links
 
 
-def portfolio_harvest(sources, seen_path, per_source=6):
+def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST_PORTFOLIO_PAGES") or 10)):
     """Walk photographer and studio sites: homepage -> project pages -> full-size images.
     Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds.
     A source may name an `index` (the page that lists its projects, when the homepage does not) and a

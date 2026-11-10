@@ -1,0 +1,321 @@
+{
+ "decided": "2026-11-10",
+ "rule": "Top 30 suitable candidates by score; bottom 5 killed; 25 added to sources.json.",
+ "added": [
+  {
+   "rank": 1,
+   "name": "Festen Architecture",
+   "score": 82.0
+  },
+  {
+   "rank": 2,
+   "name": "Alex Staniloff",
+   "score": 81.0
+  },
+  {
+   "rank": 3,
+   "name": "Champalimaud Design",
+   "score": 77.0
+  },
+  {
+   "rank": 4,
+   "name": "Liz Clayman",
+   "score": 76.0
+  },
+  {
+   "rank": 5,
+   "name": "Reunion Goods & Services",
+   "score": 76.0
+  },
+  {
+   "rank": 6,
+   "name": "Stokes Architecture + Design",
+   "score": 76.0
+  },
+  {
+   "rank": 7,
+   "name": "Melissa Hom",
+   "score": 76.0
+  },
+  {
+   "rank": 8,
+   "name": "Michael Wiltbank",
+   "score": 76.0
+  },
+  {
+   "rank": 9,
+   "name": "Studio UNLTD",
+   "score": 75.9
+  },
+  {
+   "rank": 10,
+   "name": "Laure Joliet",
+   "score": 75.0
+  },
+  {
+   "rank": 11,
+   "name": "Julie Soefer",
+   "score": 75.0
+  },
+  {
+   "rank": 12,
+   "name": "Tihany Design",
+   "score": 73.6
+  },
+  {
+   "rank": 13,
+   "name": "Daniel Krieger",
+   "score": 72.8
+  },
+  {
+   "rank": 14,
+   "name": "BHDM Design",
+   "score": 72.5
+  },
+  {
+   "rank": 15,
+   "name": "Electric Bowery",
+   "score": 71.3
+  },
+  {
+   "rank": 16,
+   "name": "Christopher Sturman",
+   "score": 69.0
+  },
+  {
+   "rank": 17,
+   "name": "Noe DeWitt",
+   "score": 68.5
+  },
+  {
+   "rank": 18,
+   "name": "The Ingalls",
+   "score": 68.0
+  },
+  {
+   "rank": 19,
+   "name": "Andrew Thomas Lee",
+   "score": 68.0
+  },
+  {
+   "rank": 20,
+   "name": "Ménard Dworkind",
+   "score": 68.0
+  },
+  {
+   "rank": 21,
+   "name": "Aimee Mazzenga",
+   "score": 68.0
+  },
+  {
+   "rank": 22,
+   "name": "Leonid Furmansky",
+   "score": 68.0
+  },
+  {
+   "rank": 23,
+   "name": "Jenna Peffley",
+   "score": 67.8
+  },
+  {
+   "rank": 24,
+   "name": "Chase Daniel",
+   "score": 67.0
+  },
+  {
+   "rank": 25,
+   "name": "Clayton Korte",
+   "score": 67.0
+  }
+ ],
+ "killed": [
+  {
+   "rank": 26,
+   "name": "Brittany Ambridge",
+   "score": 66.0
+  },
+  {
+   "rank": 27,
+   "name": "Andrea Calo",
+   "score": 66.0
+  },
+  {
+   "rank": 28,
+   "name": "Signe Birck",
+   "score": 65.0
+  },
+  {
+   "rank": 29,
+   "name": "Heidi's Bridge",
+   "score": 64.5
+  },
+  {
+   "rank": 30,
+   "name": "Atelier Zébulon Perron",
+   "score": 63.0
+  }
+ ],
+ "reserve_suitable_not_added": [
+  {
+   "rank": 31,
+   "name": "Bess Friday",
+   "score": 62.8
+  },
+  {
+   "rank": 32,
+   "name": "Jakob Layman",
+   "score": 62.0
+  },
+  {
+   "rank": 33,
+   "name": "Method Co",
+   "score": 61.3
+  },
+  {
+   "rank": 34,
+   "name": "Design, Bitches",
+   "score": 59.0
+  },
+  {
+   "rank": 35,
+   "name": "Michael Kleinberg",
+   "score": 59.0
+  },
+  {
+   "rank": 36,
+   "name": "Openhouse",
+   "score": 58.1
+  },
+  {
+   "rank": 37,
+   "name": "Frank Frances",
+   "score": 58.0
+  },
+  {
+   "rank": 38,
+   "name": "Laura Gonzalez",
+   "score": 58.0
+  },
+  {
+   "rank": 39,
+   "name": "Tessa Neustadt",
+   "score": 57.8
+  },
+  {
+   "rank": 40,
+   "name": "Nicemakers",
+   "score": 57.0
+  },
+  {
+   "rank": 41,
+   "name": "Ignant",
+   "score": 56.7
+  },
+  {
+   "rank": 42,
+   "name": "Kris Tamburello",
+   "score": 52.0
+  },
+  {
+   "rank": 43,
+   "name": "Garrett Rowland",
+   "score": 50.0
+  },
+  {
+   "rank": 44,
+   "name": "Galerie",
+   "score": 45.3
+  },
+  {
+   "rank": 45,
+   "name": "Atlas Obscura",
+   "score": 42.1
+  },
+  {
+   "rank": 46,
+   "name": "Lázaro Rosa-Violán",
+   "score": 42.0
+  }
+ ],
+ "not_suitable": [
+  "A-nrd",
+  "AN Interior",
+  "Anson Smart",
+  "Anthony Tahlier",
+  "Avenue Interior Design",
+  "Azure",
+  "Bells + Whistles",
+  "Benoit Linero",
+  "Blackberry Farm Design",
+  "Brian W. Ferry",
+  "Bryan O'Sullivan Studio",
+  "Carpenter + Mason",
+  "Casey Dunn",
+  "Cedric Angeles",
+  "Chris Mottalini",
+  "Commune Design",
+  "Crème",
+  "Douglas Friedman",
+  "Dylan + Jeni",
+  "Emily Andrews",
+  "Eric Medsker",
+  "Eric Piasecki",
+  "Erin Kunkel",
+  "Est Living",
+  "Felix Forest",
+  "Francis Amiand",
+  "Gachot Studios",
+  "Gentl and Hyers",
+  "Greg Powers",
+  "Helen Cathcart",
+  "Hotels Above Par",
+  "Hugo Toro",
+  "Humbert & Poyet",
+  "Jake Eastham",
+  "James McDonald",
+  "Jason Varney",
+  "Jody Horton",
+  "Jonathan Hokklo",
+  "Jérôme Galland",
+  "Kate LeSueur",
+  "Ken Fulk",
+  "Kyle Knodell",
+  "Lambert McGuire Design",
+  "Lesley Unruh",
+  "Max Burkhalter",
+  "Messy Nessy Chic",
+  "Metropolis",
+  "Meyer Davis",
+  "Michael Hsu Office of Architecture",
+  "Michael Pisarri",
+  "Nick Simonite",
+  "Nickey Kehoe",
+  "Nicole LaMotte",
+  "Noah Fecks",
+  "Oleg March",
+  "Oskar Proctor",
+  "Paul Costello",
+  "Pernille Loof",
+  "Peter Frank Edwards",
+  "Pierce & Ward",
+  "Preen Inc",
+  "Punch",
+  "Remodelista",
+  "Romain Laprade",
+  "Russell Sage Studio",
+  "Sam Frost",
+  "Scott Suchman",
+  "Sean Davidson",
+  "Stonehill Taylor",
+  "Studio Shamshiri",
+  "Surface",
+  "Teddy Wolff",
+  "Tim Lenz",
+  "Ward + Gray",
+  "William Abranowicz",
+  "Wonho Frank Lee",
+  "Wynn Myers",
+  "Yatzer",
+  "Ye Rin Mok"
+ ]
+}
