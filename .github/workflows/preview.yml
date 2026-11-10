@@ -22,9 +22,5 @@ jobs:
       - run: python discovery/preview.py
       - name: Save the sheets
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A previews
-          git diff --cached --quiet && exit 0
-          git commit -m "Previews $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          bash .github/save.sh "Previews $(date -u +%Y-%m-%dT%H:%MZ)" "${GITHUB_REF_NAME}"

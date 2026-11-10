@@ -5,9 +5,15 @@ on:
     branches: [main]
     paths: ["batches/**", "build/**", "grade/**"]
   workflow_dispatch:
+    inputs:
+      attempt:
+        description: "Follow-up run number (set by the build itself when it runs out of time)"
+        required: false
+        default: "1"
 
 permissions:
   contents: write
+  actions: write      # lets a build that ran out of time start its own follow-up run
 
 concurrency:
   group: build-posts
@@ -35,8 +41,9 @@ jobs:
           fi
 
       - name: Build slides
-        run: python build/build_posts.py
+        run: python -u build/build_posts.py
         env:
+          PYTHONUNBUFFERED: "1"
           ARCHIVE_ENDPOINT: ${{ secrets.ARCHIVE_ENDPOINT }}
           ARCHIVE_BUCKET: ${{ secrets.ARCHIVE_BUCKET }}
           ARCHIVE_KEY_ID: ${{ secrets.ARCHIVE_KEY_ID }}
@@ -48,10 +55,8 @@ jobs:
       - name: Put photo-starved posts on the watch list
         run: |
           python discovery/watch.py add docs/manifest.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add discovery/watchlist.json
-          git diff --cached --quiet || (git commit -q -m "Watch list updated after build" && (for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done))
+          bash .github/save.sh "Watch list updated after build" || echo "::warning::watch list not saved; the slides still publish"
 
       - name: Publish to gh-pages
         env:
@@ -65,3 +70,19 @@ jobs:
           git add -A
           git commit -q -m "Publish slides $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+      # The build stops starting downloads after 18 minutes and publishes what it has. Whatever it did not
+      # reach is listed in .build_pending; run again for those, three runs at most, then go red.
+      - name: Run again for posts left unbuilt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATTEMPT: ${{ inputs.attempt || '1' }}
+        run: |
+          LEFT=$(cat .build_pending 2>/dev/null || true)
+          [ -z "$LEFT" ] && exit 0
+          if [ "$ATTEMPT" -lt 3 ]; then
+            echo "Posts left unbuilt: $LEFT. Starting run $((ATTEMPT + 1))."
+            gh workflow run build.yml --ref main -f attempt=$((ATTEMPT + 1))
+          else
+            echo "::error::Posts still unbuilt after three runs: $LEFT"
+            exit 1
+          fi

@@ -35,7 +35,9 @@ def _gate():
         root = os.path.dirname(HERE)
         sys.path.insert(0, os.path.join(root, "build"))
         sys.path.insert(0, os.path.join(root, "grade"))
+        import build_posts  # noqa: E402
         from build_posts import quality, fetch  # noqa: E402
+        build_posts.BUILD_BUDGET_S = 10 ** 9   # the build's time budget is for the build; each file is still time-limited
         return quality, fetch
     except Exception as e:  # noqa: BLE001
         print("watch: gate unavailable, counting by width only:", e)

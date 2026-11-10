@@ -104,36 +104,73 @@ def validate_card(p):
 
 # ---------------------------------------------------------------- photos
 _LOC_LAST = [0.0]
+_START = time.time()
+# 2026-11-09: three of five builds hung, two to the 30 minute limit, printing nothing, so nothing published.
+# A socket timeout only bounds each read, not the whole file, so a trickling download could run for ever.
+# Now: every line of progress is printed as it happens, each file has a hard time limit of its own, and the
+# whole build stops starting new downloads after BUILD_BUDGET_S. Posts it did not reach stay as they were
+# (or are listed under "pending" in the manifest) and the workflow runs the build again for them.
+BUILD_BUDGET_S = int(os.environ.get("BUILD_BUDGET_S", "1080"))     # 18 minutes of a 30 minute job
+FILE_LIMIT_S = {"loc": 240, "web": 60}
+
+
+def say(msg):
+    print(f"[{int(time.time() - _START):4d}s] {msg}", flush=True)
+
+
+class BudgetSpent(Exception):
+    """The build has used its time. Not a fault of the post: it is built on the next run."""
+
+
+def _download(req, limit_s, sock_timeout):
+    """Read a whole file with a limit on the total time, not just on each read."""
+    t0 = time.time()
+    with urllib.request.urlopen(req, timeout=sock_timeout) as r:
+        ctype = r.headers.get("Content-Type", "").split(";")[0].strip()
+        chunks = []
+        while True:
+            if time.time() - t0 > limit_s:
+                raise TimeoutError(f"download passed {limit_s}s after {sum(map(len, chunks)) // 1000000} MB")
+            chunk = r.read1(1 << 18)      # read1 returns what has arrived; read(n) would wait to fill n bytes
+            if not chunk:
+                break
+            chunks.append(chunk)
+        return b"".join(chunks), ctype
 
 
 def fetch(src):
     """Returns (image, original bytes, content type). The bytes are kept untouched for the originals archive.
     Library of Congress masters are 20 to 90 MB TIFFs on tile.loc.gov, which answers 429 when they are pulled
-    back to back (2026-11-02: TWA lost 4 of 6 photos). Those get a long timeout, 4 s between downloads,
+    back to back (2026-11-02: TWA lost 4 of 6 photos). Those get a long limit, 4 s between downloads,
     Retry-After honoured, and up to five tries; the HTTP status is kept in the error for the notes."""
     if src.startswith("http"):
         loc = "loc.gov" in src
         req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "image/*"})
         last = None
         for attempt in range(5 if loc else 3):
+            if time.time() - _START > BUILD_BUDGET_S:
+                raise BudgetSpent(f"build budget of {BUILD_BUDGET_S}s spent")
             if loc:
                 wait = 4.0 - (time.time() - _LOC_LAST[0])
                 if wait > 0:
                     time.sleep(wait)
                 _LOC_LAST[0] = time.time()
+            t0 = time.time()
             try:
-                with urllib.request.urlopen(req, timeout=180 if loc else 30) as r:
-                    data = r.read()
-                    ctype = r.headers.get("Content-Type", "").split(";")[0].strip()
-                    return Image.open(io.BytesIO(data)).convert("RGB"), data, ctype
+                data, ctype = _download(req, FILE_LIMIT_S["loc" if loc else "web"], 60 if loc else 30)
+                img = Image.open(io.BytesIO(data)).convert("RGB")
+                say(f"    got {src.rsplit('/', 1)[-1][:60]} {len(data) / 1e6:.1f} MB in {time.time() - t0:.0f}s")
+                return img, data, ctype
             except urllib.error.HTTPError as e:
                 last = RuntimeError(f"HTTP {e.code}")
+                say(f"    try {attempt + 1}: HTTP {e.code} {src.rsplit('/', 1)[-1][:60]}")
                 if e.code in (404, 410):
                     break
                 ra = e.headers.get("Retry-After") if e.headers else None
                 time.sleep(min(int(ra), 120) if ra and ra.isdigit() else (30 * (attempt + 1) if loc else 2 * (attempt + 1)))
             except Exception as e:  # noqa: BLE001
                 last = e
+                say(f"    try {attempt + 1}: {type(e).__name__} {str(e)[:60]} {src.rsplit('/', 1)[-1][:60]}")
                 time.sleep(10 * (attempt + 1) if loc else 2 * (attempt + 1))
         raise last
     data = open(os.path.join(ROOT, src), "rb").read()
@@ -315,6 +352,7 @@ def build_post(p, out_root):
         result["notes"] = ["copy: " + x for x in problems]
         return finish(result, out_dir, done)
 
+    say(f"{idx} {p['place']}: building, {len(p.get('photos', []))} source photos")
     graded, seen, originals, views = [], [], [], []
     focal = tuple(p.get("focal", (0.5, 0.5)))
     drop = {int(n) for n in p.get("drop_photos", [])}          # 1-based, set by an edit
@@ -328,6 +366,8 @@ def build_post(p, out_root):
             continue
         try:
             raw, raw_bytes, raw_type = fetch(src)
+        except BudgetSpent:
+            raise                       # out of time is not this photo's fault: the post is built next run
         except Exception as e:  # noqa: BLE001  unreachable, blocked, not an image
             result["notes"].append(f"photo {i + 1} could not be fetched ({type(e).__name__}: {str(e)[:40]})")
             continue
@@ -445,6 +485,7 @@ def build_post(p, out_root):
     used = {g["i"] + 1 for g in graded}
     for o in originals:
         o["used_as_slide"] = o["n"] in used
+    say(f"{idx}: {len(urls)} slides written; storing {len(originals)} originals")
     result["archive"] = archive.store(idx, {"place": p["place"], "neighborhood": p.get("neighborhood", ""), "city": p.get("city", ""),
                                             "designer": p.get("designer", ""), "credit": p.get("credit", ""),
                                             "source_url": p.get("source_url", ""), "licence": p.get("licence", "")}, originals)
@@ -466,6 +507,8 @@ def backfill_archive(p, prev, done):
             continue
         try:
             raw, raw_bytes, raw_type = fetch(src)
+        except BudgetSpent:
+            return prev                 # slides are fine as they are; the originals are stored on a later run
         except Exception:  # noqa: BLE001  a vanished source is noted in the status, not fatal
             continue
         originals.append({"n": i + 1, "url": src, "bytes": raw_bytes, "content_type": raw_type,
@@ -512,21 +555,35 @@ def main():
         for p in batch:
             entries.pop(str(p.get("index", "")), None)
             entries[str(p.get("index", ""))] = p
+    pending = []
     for p in entries.values():
         if str(p.get("index", "")) in orders:
             p = dict(p, photo_order=orders[str(p["index"])])   # part of the entry hash, so a reorder rebuilds
         try:
             posts.append(build_post(p, out_root))
+        except BudgetSpent as e:
+            # Out of time, not a bad post. Nothing is written for it, so its hash is not marked as built:
+            # the last good build (if any) stays in the manifest and the next run builds it.
+            idx = str(p.get("index", "?"))
+            pending.append(idx)
+            say(f"{idx}: not built this run ({e})")
+            done = os.path.join(out_root, "posts", idx, "post.json")
+            if os.path.exists(done):
+                posts.append(json.load(open(done)))
         except Exception as e:  # noqa: BLE001  one bad post must not stop the rest
             idx = p.get("index", "?")
             r = {"index": idx, "place": p.get("place", "?"), "status": "ERROR",
                  "notes": [f"{type(e).__name__}: {e}"], "entry_hash": entry_hash(p)}
             posts.append(finish(r, os.path.join(out_root, "posts", str(idx)),
                                 os.path.join(out_root, "posts", str(idx), "post.json")))
-    json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "posts": posts},
+    json.dump({"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "pending": pending,
+               "seconds": int(time.time() - _START), "posts": posts},
               open(os.path.join(out_root, "manifest.json"), "w"), indent=2)
     for r in posts:
-        print(r["index"], r["status"], len(r.get("slides", [])), "slides", "; ".join(r["notes"]))
+        print(r["index"], r["status"], len(r.get("slides", [])), "slides", "; ".join(r["notes"]), flush=True)
+    # the workflow reads this to run the build again for what was left
+    open(os.path.join(ROOT, ".build_pending"), "w").write(",".join(pending))
+    say(f"done: {len(posts)} posts in the manifest, {len(pending)} left for the next run" + (f" ({', '.join(pending)})" if pending else ""))
 
 
 if __name__ == "__main__":

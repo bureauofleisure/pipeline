@@ -72,21 +72,67 @@ def _stem(url):
     return name
 
 
+def _balanced(page, tag):
+    """Every outermost <tag>...</tag> block, matched by depth. A lazy regex stops at the first closing tag, and
+    Dezeen nests a 'Read next' teaser <article> inside the article's own header: from 2026-11-02 that cut every
+    Dezeen article down to its byline (median 121 characters), so cards had no facts to draw on."""
+    out, depth, start = [], 0, 0
+    for m in re.finditer(rf"<(/?){tag}\b[^>]*>", page, re.I):
+        if not m.group(1):
+            if depth == 0:
+                start = m.start()
+            depth += 1
+        elif depth:
+            depth -= 1
+            if depth == 0:
+                out.append(page[start:m.end()])
+    return out
+
+
+def _strip_nested(block, tag):
+    """The block without the <tag> blocks nested inside it (teasers and 'read next' cards)."""
+    m = re.match(rf"<{tag}\b[^>]*>", block, re.I)
+    if not m:
+        return block
+    inner = block[m.end():]
+    for nested in _balanced(inner, tag):
+        inner = inner.replace(nested, " ")
+    return block[:m.end()] + inner
+
+
 def article_html(page):
-    """The article body (inside <article>, or <main>), else the whole page. Navigation, newsletter boxes and
+    """The article body (the largest <article>, or <main>), else the whole page. Navigation, newsletter boxes and
     'read next' rails sit outside it; reading them is how every Wallpaper item got a 'coming soon' warning
     and every Dezeen item the designer 'Aedas opens'."""
     for tag in ("article", "main"):
-        m = re.search(rf"<{tag}[\s>].*?</{tag}>", page, re.S | re.I)
-        if m and len(m.group(0)) > 2000:
-            return m.group(0)
+        blocks = [b for b in _balanced(page, tag) if len(b) > 2000]
+        if blocks:
+            return max(blocks, key=len)
     return page
 
 
-def page_text(page):
-    body = article_html(page)
+def _text_of(body):
     body = re.sub(r"<(script|style|nav|aside|footer|header|form)\b.*?</\1>", " ", body, flags=re.S | re.I)
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body))).strip()
+
+
+MIN_ARTICLE_TEXT = 600   # under this the block found was a header or a teaser, not the article
+
+
+def page_text(page):
+    """The article's words. Tries the article block with nested teasers removed, then <main>, then the whole
+    page, and keeps the first that reads like an article. A thin result is better widened than trusted."""
+    best = ""
+    for tag in ("article", "main"):
+        blocks = [b for b in _balanced(page, tag) if len(b) > 2000]
+        if not blocks:
+            continue
+        text = _text_of(_strip_nested(max(blocks, key=len), tag))
+        if len(text) >= MIN_ARTICLE_TEXT:
+            return text
+        best = max(best, text, key=len)
+    whole = _text_of(page)
+    return whole if len(whole) > len(best) else best
 
 
 def full_text(page):
@@ -196,8 +242,12 @@ def expand_dezeen(photos):
                     break
             time.sleep(0.15)
     # gallery frames first, the hero (usually a crop of one of them) last
-    gallery = [p for p in photos + extra if "_col_" in p["url"]]
-    return sorted(gallery, key=lambda p: int(re.search(r"_col_(\d+)", p["url"]).group(1))) + [p for p in photos if "_col_" not in p["url"]]
+    # 2026-11-09: seven articles failed with AttributeError here, on a "_col_" name with no number after it
+    def col(p):
+        m = re.search(r"_col_(\d+)", p["url"])
+        return int(m.group(1)) if m else None
+    gallery = [p for p in photos + extra if col(p) is not None]
+    return sorted(gallery, key=col) + [p for p in photos if col(p) is None]
 
 
 def harvest_links(links, label="shortlist"):
@@ -224,7 +274,7 @@ def harvest_links(links, label="shortlist"):
                                    for m in re.finditer(r'href=["\']([^"\'#?]+)', page)
                                    if not m.group(1).startswith(("mailto:", "tel:", "javascript:"))})[:300]
         except Exception as e:  # noqa: BLE001
-            rec["page_error"] = type(e).__name__
+            rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
         rec.setdefault("photos", [])
         out.append(rec)
         time.sleep(0.4)
@@ -293,7 +343,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:3000])})
                 rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
             except Exception as e:  # noqa: BLE001
-                rec["page_error"] = type(e).__name__
+                rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
             seen.add(u)
             if rec.get("photos") and len(rec["photos"]) >= 3:
                 out.append(rec)       # pages without a gallery are not projects
@@ -336,7 +386,7 @@ def main():
                     rec["designers"] = sorted({m.group(1).strip() for m in DESIGN.finditer(text)})[:5]
                     rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
                 except Exception as e:  # noqa: BLE001
-                    rec["page_error"] = type(e).__name__
+                    rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
                 time.sleep(0.4)
             out.append(rec)
     out += portfolio_harvest(src, os.path.join(HERE, "seen_pages.json"))
@@ -346,6 +396,9 @@ def main():
               open(path, "w"), indent=1)
     n = sum(1 for r in out if "title" in r)
     print(f"{n} items kept, {pages} pages fetched, {sum(1 for r in out if 'error' in r)} feed errors")
+    # what this run produced, for the daily heartbeat; the workflow goes red on problems after the save
+    import health
+    health.write("harvest", *health.harvest_health(out, src))
     sys.exit(0)
 
 

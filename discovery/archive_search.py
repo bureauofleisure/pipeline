@@ -355,6 +355,27 @@ def main():
                "collections": [c[1] for c in COLLECTIONS], "stats": STATS, "next_target": next_target, "targets": results},
               open(os.path.join(HERE, "archive_candidates.json"), "w"), indent=1, ensure_ascii=False)
     print(json.dumps({k: v for k, v in STATS.items() if k != "sample_files"}, indent=1)[:1500])
+    # for the daily heartbeat: did loc.gov let this run search, and does the list hold any finds at all?
+    import health
+    with_finds = sum(1 for r in results if r.get("count"))
+    last_search = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()) if STATS.get("searches") else ""
+    if not last_search:
+        try:
+            last_search = json.load(open(os.path.join(HERE, "health", "archive.json")))["stats"].get("last_search_at", "")
+        except Exception:  # noqa: BLE001
+            pass
+    problems = []
+    if results and not with_finds:
+        problems.append(f"none of the {len(results)} archive targets has a single candidate; on 2026-11-02 that meant the "
+                        "master-file lookup was broken, not that the archives were empty")
+    if last_search:
+        import calendar
+        idle = (time.time() - calendar.timegm(time.strptime(last_search, "%Y-%m-%dT%H:%M:%SZ"))) / 3600
+        if idle > 48:
+            problems.append(f"no search has got through to loc.gov for {int(idle)} hours (rate limited on every run)")
+    health.write("archive", {"targets": len(results), "targets_with_finds": with_finds,
+                             "candidates": sum(r.get("count", 0) for r in results), "searches_this_run": STATS.get("searches", 0),
+                             "blocked_this_run": bool(blocked), "next_target": next_target, "last_search_at": last_search}, problems)
 
 
 if __name__ == "__main__":

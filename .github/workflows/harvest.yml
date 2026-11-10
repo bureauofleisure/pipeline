@@ -17,6 +17,12 @@ on:
 permissions:
   contents: write
 
+# The Monday harvest and the 6-hourly archive search both write discovery/archive_candidates.json.
+# One group, so they queue instead of racing (2026-11-09: the harvest lost its commit to that race).
+concurrency:
+  group: archive-search
+  cancel-in-progress: false
+
 jobs:
   harvest:
     runs-on: ubuntu-latest
@@ -27,7 +33,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pillow numpy opencv-python-headless
-      - run: python discovery/harvest.py
+      - run: python -u discovery/harvest.py
         if: ${{ !inputs.archive_only }}
         env:
           HARVEST_SHORTLIST: ${{ inputs.shortlist && '1' || '' }}
@@ -42,9 +48,10 @@ jobs:
           python discovery/archive_search.py
       - name: Save the harvest
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add discovery
-          git diff --cached --quiet && exit 0
-          git commit -m "Harvest $(date -u +%Y-%m-%d)"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done
+          bash .github/save.sh "Harvest $(date -u +%Y-%m-%d)"
+      # Runs after the save, so a thin harvest is still kept. A red run here means the harvest ran but its
+      # output is not good enough to pick from (see discovery/health/harvest.json).
+      - name: Check the harvest is worth reading
+        if: ${{ !inputs.shortlist && !inputs.archive_only }}
+        run: python discovery/health.py check harvest
