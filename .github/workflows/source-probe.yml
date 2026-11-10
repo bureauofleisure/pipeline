@@ -1,0 +1,24 @@
+name: Probe candidate sources
+
+# Scores discovery/source_candidates.json on what the harvest would actually get from each one.
+# Writes discovery/source_probe_report.json. Adds nothing to sources.json.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install pillow
+      - run: python -u discovery/source_probe.py
+      - run: |
+          git add discovery/source_probe_report.json
+          bash .github/save.sh "Source probe $(date -u +%Y-%m-%dT%H:%MZ)"

@@ -1,0 +1,743 @@
+{
+ "_about": "Candidate sources, 2026-11-10. Scored by discovery/source_probe.py against the rubric below. The three judgment scores on each candidate (lens, us, mix) were set and committed before the probe ran; the other four are measured by the probe, fetching exactly what the weekly harvest would fetch.",
+ "rubric": {
+  "harvestable": "0-20 measured. Of the pages the harvest would take (first 5 project pages, or 3 articles for a feed), the share that return 4 or more photos.",
+  "photo_size": "0-20 measured. Share of sampled photos that pass the build gate (1080 x 1350 after the 4:5 crop).",
+  "hospitality": "0-15 measured. Share of those pages (or feed items) about a hotel, bar, restaurant, club, bath or cafe.",
+  "volume": "0-10 measured. Project links (30 or more = 10) or feed items (10 or more = 10) available.",
+  "lens": "0-15 judgment. Fit with the lens: era feel, rooms to be in, classics supply.",
+  "us": "0-10 judgment. US 10, mixed 5 to 8, abroad 3.",
+  "mix": "0-10 judgment. What it adds to the source mix: classics supply 10, venue or restoration side 8, photographer or studio originals 7, press with its own shoots 5, press echo 3.",
+  "rule": "Unreachable, wrong site, or nothing harvestable = not suitable, dropped before ranking. The top 30 suitable candidates are ranked; the bottom 5 are killed; 25 are added."
+ },
+ "candidates": [
+  {
+   "name": "Nick Simonite",
+   "url": "https://www.nicksimonite.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 13,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin. Shoots the Bunkhouse hotels and Texas bars and restaurants."
+  },
+  {
+   "name": "Casey Dunn",
+   "url": "https://www.caseydunn.net/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin architecture and hospitality."
+  },
+  {
+   "name": "Chase Daniel",
+   "url": "https://www.chasedaniel.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin hotels, restaurants and bars."
+  },
+  {
+   "name": "Wynn Myers",
+   "url": "https://www.wynnmyers.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin hospitality and travel."
+  },
+  {
+   "name": "Laure Joliet",
+   "url": "https://www.laurejoliet.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles interiors and hotels with an older feel."
+  },
+  {
+   "name": "The Ingalls",
+   "url": "https://www.ingallsphoto.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles hotels and restaurants, long back catalogue."
+  },
+  {
+   "name": "Kris Tamburello",
+   "url": "https://www.kristamburello.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Miami hotels and restaurants."
+  },
+  {
+   "name": "Douglas Friedman",
+   "url": "https://www.douglasfriedman.net/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Grand American interiors and hotels."
+  },
+  {
+   "name": "William Abranowicz",
+   "url": "https://www.williamabranowicz.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Classic interiors and travel, decades of work."
+  },
+  {
+   "name": "Pernille Loof",
+   "url": "https://www.pernilleloof.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and hospitality."
+  },
+  {
+   "name": "Eric Piasecki",
+   "url": "https://www.ericpiasecki.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and hotels."
+  },
+  {
+   "name": "Noe DeWitt",
+   "url": "https://www.noedewitt.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Hotels, clubs and resorts."
+  },
+  {
+   "name": "Brittany Ambridge",
+   "url": "https://www.brittanyambridge.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "US interiors and hotels."
+  },
+  {
+   "name": "Emily Andrews",
+   "url": "https://www.emilyandrews.net/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "New York restaurants, bars and hotels."
+  },
+  {
+   "name": "Sean Davidson",
+   "url": "https://www.sean-davidson.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and restaurants."
+  },
+  {
+   "name": "Liz Clayman",
+   "url": "https://www.lizclayman.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "New York restaurant rooms."
+  },
+  {
+   "name": "Teddy Wolff",
+   "url": "https://www.teddywolff.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "New York restaurants and bars."
+  },
+  {
+   "name": "Garrett Rowland",
+   "url": "https://www.garrettrowland.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 8,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors, some hospitality."
+  },
+  {
+   "name": "Brian W. Ferry",
+   "url": "https://www.brianwferry.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Quiet interiors, inns and restaurants."
+  },
+  {
+   "name": "Max Burkhalter",
+   "url": "https://www.maxburkhalter.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Texas and New York interiors and hotels."
+  },
+  {
+   "name": "Christopher Sturman",
+   "url": "https://www.christophersturman.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Hotels and interiors, US and abroad."
+  },
+  {
+   "name": "Tim Lenz",
+   "url": "https://www.timlenzphoto.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and hospitality."
+  },
+  {
+   "name": "Julie Soefer",
+   "url": "https://www.juliesoefer.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Texas restaurants and hotels."
+  },
+  {
+   "name": "Peter Frank Edwards",
+   "url": "https://www.pfephoto.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Southern inns, taverns and restaurants."
+  },
+  {
+   "name": "Andrew Thomas Lee",
+   "url": "https://www.andrewthomaslee.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Atlanta and Southern restaurants."
+  },
+  {
+   "name": "Cedric Angeles",
+   "url": "https://www.cedricangeles.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "New Orleans, travel and old hotels."
+  },
+  {
+   "name": "Paul Costello",
+   "url": "https://www.paulcostello.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "New Orleans interiors and hospitality."
+  },
+  {
+   "name": "Sam Frost",
+   "url": "https://www.samfrostphoto.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles interiors and restaurants."
+  },
+  {
+   "name": "Ye Rin Mok",
+   "url": "https://www.yerinmok.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles interiors."
+  },
+  {
+   "name": "Frank Frances",
+   "url": "https://www.frankfrances.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and hotels."
+  },
+  {
+   "name": "Gentl and Hyers",
+   "url": "https://www.gentlandhyers.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Travel, hotels and restaurants, long back catalogue."
+  },
+  {
+   "name": "Jonathan Hokklo",
+   "url": "https://www.jonathanhokklo.com/",
+   "category": "photographer",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 7,
+   "why": "New York interiors and hospitality."
+  },
+  {
+   "name": "Ken Fulk",
+   "url": "https://www.kenfulk.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 14,
+   "us": 10,
+   "mix": 7,
+   "why": "Theatrical clubs, restaurants and hotels that feel like another decade."
+  },
+  {
+   "name": "Commune Design",
+   "url": "https://www.communedesign.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 13,
+   "us": 10,
+   "mix": 7,
+   "why": "Ace hotels and California restaurants."
+  },
+  {
+   "name": "Studio Shamshiri",
+   "url": "https://www.studioshamshiri.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles hotels and restaurants."
+  },
+  {
+   "name": "Meyer Davis",
+   "url": "https://www.meyerdavis.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "US hotels, restaurants and clubs."
+  },
+  {
+   "name": "Gachot Studios",
+   "url": "https://www.gachotstudios.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Shinola Hotel and New York hospitality."
+  },
+  {
+   "name": "Reunion Goods & Services",
+   "url": "https://www.reuniongoodsandservices.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 13,
+   "us": 10,
+   "mix": 7,
+   "why": "New York restaurants and hotels with a period feel."
+  },
+  {
+   "name": "Method Co",
+   "url": "https://www.method-co.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 8,
+   "why": "Hotels and restaurants in restored buildings (Philadelphia, Detroit, Charleston)."
+  },
+  {
+   "name": "Stokes Architecture + Design",
+   "url": "https://www.stokesarch.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Philadelphia and New York restaurants."
+  },
+  {
+   "name": "Michael Hsu Office of Architecture",
+   "url": "https://hsuoffice.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin restaurants and hotels."
+  },
+  {
+   "name": "Clayton Korte",
+   "url": "https://claytonkorte.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 7,
+   "why": "Austin and San Antonio hospitality."
+  },
+  {
+   "name": "Lambert McGuire Design",
+   "url": "https://www.lambertmcguire.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 12,
+   "us": 10,
+   "mix": 7,
+   "why": "Bunkhouse hotels and Texas hospitality."
+  },
+  {
+   "name": "Bells + Whistles",
+   "url": "https://www.bellsandwhistles.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles restaurants and bars."
+  },
+  {
+   "name": "Studio UNLTD",
+   "url": "https://www.studiounltd.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles restaurants."
+  },
+  {
+   "name": "Electric Bowery",
+   "url": "https://www.electricbowery.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "California hotels and restaurants."
+  },
+  {
+   "name": "Champalimaud Design",
+   "url": "https://www.champalimaud.design/",
+   "category": "studio",
+   "region": "us",
+   "lens": 13,
+   "us": 6,
+   "mix": 10,
+   "why": "Restores grand classic hotels (The Carlyle, Raffles, Hotel Bel-Air). Classics supply."
+  },
+  {
+   "name": "Tihany Design",
+   "url": "https://www.tihanydesign.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 12,
+   "us": 6,
+   "mix": 10,
+   "why": "Classic hotel bars and dining rooms (Bemelmans restoration, The Breakers). Classics supply."
+  },
+  {
+   "name": "Ward + Gray",
+   "url": "https://www.wardandgray.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 7,
+   "why": "US boutique hotels."
+  },
+  {
+   "name": "Design, Bitches",
+   "url": "https://www.designbitches.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "Los Angeles restaurants and cafes."
+  },
+  {
+   "name": "Crème",
+   "url": "https://www.cremedesign.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 10,
+   "us": 10,
+   "mix": 7,
+   "why": "New York restaurants and bars."
+  },
+  {
+   "name": "Stonehill Taylor",
+   "url": "https://www.stonehilltaylor.com/",
+   "category": "studio",
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 8,
+   "why": "New York hotels in historic buildings."
+  },
+  {
+   "name": "Ménard Dworkind",
+   "url": "https://www.menarddworkind.com/",
+   "category": "studio",
+   "region": "global",
+   "lens": 14,
+   "us": 3,
+   "mix": 7,
+   "why": "Montreal restaurants and bars built to feel decades old."
+  },
+  {
+   "name": "Atelier Zébulon Perron",
+   "url": "https://www.zebulonperron.com/",
+   "category": "studio",
+   "region": "global",
+   "lens": 12,
+   "us": 3,
+   "mix": 7,
+   "why": "Montreal restaurants and bars."
+  },
+  {
+   "name": "A-nrd",
+   "url": "https://www.a-nrd.com/",
+   "category": "studio",
+   "region": "global",
+   "lens": 11,
+   "us": 3,
+   "mix": 7,
+   "why": "London restaurants and bars."
+  },
+  {
+   "name": "Nicemakers",
+   "url": "https://www.nicemakers.com/",
+   "category": "studio",
+   "region": "global",
+   "lens": 11,
+   "us": 3,
+   "mix": 7,
+   "why": "Amsterdam hotels and restaurants."
+  },
+  {
+   "name": "AN Interior",
+   "url": "https://aninteriormag.com/",
+   "feed": "https://aninteriormag.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 9,
+   "us": 10,
+   "mix": 5,
+   "why": "US interiors press from The Architect's Newspaper; shoots commissioned."
+  },
+  {
+   "name": "Remodelista",
+   "url": "https://www.remodelista.com/",
+   "feed": "https://www.remodelista.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 9,
+   "us": 8,
+   "mix": 5,
+   "why": "Restaurant and hotel visits with photographer credits."
+  },
+  {
+   "name": "Metropolis",
+   "url": "https://metropolismag.com/",
+   "feed": "https://metropolismag.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 7,
+   "us": 10,
+   "mix": 3,
+   "why": "US design press."
+  },
+  {
+   "name": "Surface",
+   "url": "https://www.surfacemag.com/",
+   "feed": "https://www.surfacemag.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 9,
+   "us": 8,
+   "mix": 3,
+   "why": "US design and travel press."
+  },
+  {
+   "name": "Galerie",
+   "url": "https://galeriemagazine.com/",
+   "feed": "https://galeriemagazine.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 9,
+   "us": 8,
+   "mix": 5,
+   "why": "Hotels, restaurants and grand interiors."
+  },
+  {
+   "name": "Hotels Above Par",
+   "url": "https://www.hotelsabovepar.com/",
+   "feed": "https://www.hotelsabovepar.com/?format=rss",
+   "category": "design_press",
+   "tier": 2,
+   "region": "us",
+   "lens": 11,
+   "us": 8,
+   "mix": 5,
+   "why": "Boutique hotel features."
+  },
+  {
+   "name": "Yatzer",
+   "url": "https://www.yatzer.com/",
+   "feed": "https://www.yatzer.com/rss.xml",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "lens": 9,
+   "us": 3,
+   "mix": 3,
+   "why": "Design press with large photos and credits."
+  },
+  {
+   "name": "Ignant",
+   "url": "https://www.ignant.com/",
+   "feed": "https://www.ignant.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "lens": 8,
+   "us": 3,
+   "mix": 3,
+   "why": "Design and travel press."
+  },
+  {
+   "name": "Openhouse",
+   "url": "https://openhouse-magazine.com/",
+   "feed": "https://openhouse-magazine.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "lens": 11,
+   "us": 3,
+   "mix": 5,
+   "why": "Places with a lived-in, older feel."
+  },
+  {
+   "name": "Est Living",
+   "url": "https://estliving.com/",
+   "feed": "https://estliving.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "lens": 8,
+   "us": 3,
+   "mix": 3,
+   "why": "Australian design press with hospitality coverage."
+  },
+  {
+   "name": "Azure",
+   "url": "https://www.azuremagazine.com/",
+   "feed": "https://www.azuremagazine.com/feed/",
+   "category": "design_press",
+   "tier": 2,
+   "region": "global",
+   "lens": 7,
+   "us": 5,
+   "mix": 3,
+   "why": "Canadian design press."
+  },
+  {
+   "name": "Messy Nessy Chic",
+   "url": "https://www.messynessychic.com/",
+   "feed": "https://www.messynessychic.com/feed/",
+   "category": "city_press",
+   "tier": 3,
+   "region": "global",
+   "lens": 13,
+   "us": 5,
+   "mix": 10,
+   "why": "Old cafes, bars and hotels still trading. Leads for the classics half."
+  },
+  {
+   "name": "Punch",
+   "url": "https://punchdrink.com/",
+   "feed": "https://punchdrink.com/feed/",
+   "category": "city_press",
+   "tier": 3,
+   "region": "us",
+   "lens": 11,
+   "us": 10,
+   "mix": 8,
+   "why": "American bars, including the old ones. Leads for the classics half."
+  },
+  {
+   "name": "Atlas Obscura",
+   "url": "https://www.atlasobscura.com/",
+   "feed": "https://www.atlasobscura.com/feeds/latest",
+   "category": "city_press",
+   "tier": 3,
+   "region": "global",
+   "lens": 10,
+   "us": 6,
+   "mix": 8,
+   "why": "Unusual old places. Leads for the classics half."
+  }
+ ]
+}

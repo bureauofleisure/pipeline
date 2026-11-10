@@ -18,7 +18,7 @@ from urllib.parse import urljoin
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"
 PER_SOURCE = int(os.environ.get("HARVEST_PER_SOURCE", "12"))
-MAX_PAGES = int(os.environ.get("HARVEST_MAX_PAGES", "220"))
+MAX_PAGES = int(os.environ.get("HARVEST_MAX_PAGES", "340"))   # 2026-11-10: raised with the new feeds, so late feeds still get their pages
 
 KEEP = re.compile(r"\b(hotel|hotels|inn|resort|lodge|guesthouse|bar|bars|cocktail|pub|tavern|restaurant|"
                   r"bistro|brasserie|trattoria|osteria|diner|cafe|café|coffee|bakery|club|members|lounge|"
@@ -301,33 +301,48 @@ def fullsize(url, platform):
     return url
 
 
+SKIP_PATH = re.compile(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\\.well-known|sitemap)", re.I)
+
+
+def project_links(home, base, seen=()):
+    """Links on a portfolio page that could be project pages: same site, at most three levels deep, not
+    housekeeping, not seen before. Used by the weekly harvest and by source_probe.py, so a source is judged
+    on exactly what the harvest would fetch from it."""
+    links = []
+    root = base.rstrip("/")
+    for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
+        u = urljoin(base, html.unescape(m.group(1)))
+        if not u.startswith(root):
+            continue
+        path = u[len(root):].strip("/")
+        if not path or path.count("/") > 2:
+            continue
+        if SKIP_PATH.search(path) or re.search(r"\.(?:css|js|png|jpe?g|svg|ico|pdf|xml|json|woff2?)$", path, re.I):
+            continue
+        if u not in seen and u not in links:
+            links.append(u)
+    return links
+
+
 def portfolio_harvest(sources, seen_path, per_source=6):
     """Walk photographer and studio sites: homepage -> project pages -> full-size images.
-    Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds."""
+    Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds.
+    A source may name an `index` (the page that lists its projects, when the homepage does not) and a
+    `per_run` (pages to take each week; new sources get more so their back catalogue arrives in weeks)."""
     seen = set(json.load(open(seen_path))) if os.path.exists(seen_path) else set()
     out, fetched = [], 0
     for s in sources:
         if s.get("feed") or s.get("disabled") or not s.get("url") or s.get("category") not in ("photographer", "studio"):
             continue
         try:
-            home = get(s["url"])
+            home = get(s.get("index") or s["url"])
         except Exception as e:  # noqa: BLE001
             out.append({"source": s["name"], "error": f"home {type(e).__name__}"})
             continue
         base = s["url"]
-        links = []
-        for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
-            u = urljoin(base, html.unescape(m.group(1)))
-            if not u.startswith(base.rstrip("/")):
-                continue
-            path = u[len(base.rstrip("/")):].strip("/")
-            if not path or path.count("/") > 2:
-                continue
-            if re.search(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\.well-known|sitemap)", path, re.I):
-                continue
-            if u not in seen and u not in links:
-                links.append(u)
-        for u in links[:per_source]:
+        links = project_links(home, base, seen)
+        per_source_now = int(s.get("per_run") or per_source)
+        for u in links[:per_source_now]:
             fetched += 1
             rec = {"source": s["name"], "tier": s.get("tier", 1), "category": s["category"], "link": u, "title": "", "date": "", "summary": ""}
             try:
