@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-09T12:10:48Z",
+  "checked": "2026-11-10T01:58:41Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -55,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 14
+      "items": 15
     },
     {
       "name": "Architectural Digest",
@@ -143,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 30
+      "items": 27
     },
     {
       "name": "Roman and Williams",
@@ -197,7 +197,7 @@
       "name": "Islyn Studio",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -421,7 +421,7 @@
       "name": "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
       "tier": 1,
       "category": "press_room",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -503,7 +503,7 @@
       "category": "awards",
       "site": 200,
       "feed": "200 lenient",
-      "items": 13
+      "items": 14
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -623,7 +623,7 @@
       "category": "city_press",
       "site": 200,
       "feed": "200 ok",
-      "items": 29
+      "items": 30
     },
     {
       "name": "Culture of Bathing",
@@ -1323,6 +1323,134 @@
     },
     {
       "name": "Ater Architects",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Andrew Giammarco",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Elizabeth Carababas",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Joss McKinley",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Neil Godwin",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Michael Clifford",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jason O'Rear",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Kerrisa Treanor",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ai Fiori",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Alexander Stein",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Heather Willensky",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Don Riddle",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Evan Sung",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "AvroKO",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Pirajean Lees",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Gjergji Shkurti",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Studio Ruei",
       "tier": 1,
       "category": "studio",
       "site": 200,
