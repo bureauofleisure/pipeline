@@ -183,6 +183,17 @@ def images_from(page, base, gallery=False):
     2. Picks up src, data-src, data-lazy-src, srcset, data-srcset and direct <a href> to an image.
     3. Keeps the largest cluster of filenames sharing a stem (a gallery), plus the og:image's cluster,
        so related-article thumbnails are left behind."""
+    if gallery == "strict":
+        gallery = True
+    elif gallery:
+        # Try the strict reading first (thumbnails that link elsewhere removed). Some sites wrap every
+        # gallery photo in a link, which leaves nothing; for those fall back to the article rule, which is
+        # what this function did before 2026-11-10. Whichever finds a real gallery (4 or more) wins.
+        strict = images_from(page, base, gallery="strict")
+        if len(strict) >= 4:
+            return strict
+        loose = images_from(page, base)
+        return loose if len(loose) > len(strict) else strict
     body = article_html(page)
     if gallery:
         # a photo wrapped in a link to another page is a doorway to a different project, not this one
