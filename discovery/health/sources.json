@@ -1,18 +1,16 @@
 {
  "job": "sources",
- "at": "2026-11-10T01:58:41Z",
+ "at": "2026-11-10T19:21:07Z",
  "ok": true,
  "stats": {
-  "checked": 182,
+  "checked": 210,
   "unreachable": [
    "Dezeen hotels",
    "Dezeen bars",
    "Dezeen restaurants",
-   "Islyn Studio",
    "Hollie Bowden",
    "Ace Hotel press",
-   "Ennismore press (Hoxton, Gleneagles, Mondrian, SLS)",
-   "Historic Hotels of America",
+   "Design Hotels",
    "MOVS STUDIO"
   ],
   "feeds_with_no_items": [
