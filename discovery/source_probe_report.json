@@ -1,5 +1,5 @@
 {
- "probed": "2026-11-10T18:34:00Z",
+ "probed": "2026-11-10T18:56:44Z",
  "rubric": {
   "harvestable": "0-20 measured. Of the pages the harvest would take (first 5 project pages, or 3 articles for a feed), the share that return 4 or more photos.",
   "photo_size": "0-20 measured. Share of sampled photos that pass the build gate (1080 x 1350 after the 4:5 crop).",
@@ -11,25 +11,46 @@
   "rule": "Unreachable, wrong site, or nothing harvestable = not suitable, dropped before ranking. The top 30 suitable candidates are ranked; the bottom 5 are killed; 25 are added."
  },
  "ranked": [
-  "Liz Clayman",
-  "Julie Soefer",
+  "Festen Architecture",
+  "Alex Staniloff",
+  "Champalimaud Design",
+  "Reunion Goods & Services",
   "Stokes Architecture + Design",
+  "Melissa Hom",
+  "Michael Wiltbank",
   "Laure Joliet",
-  "Noe DeWitt",
+  "Julie Soefer",
+  "Tihany Design",
   "Studio UNLTD",
-  "The Ingalls",
-  "Ménard Dworkind",
-  "Chase Daniel",
-  "Brittany Ambridge",
+  "Daniel Krieger",
+  "Liz Clayman",
+  "Electric Bowery",
+  "Christopher Sturman",
   "Andrew Thomas Lee",
+  "Aimee Mazzenga",
+  "Leonid Furmansky",
+  "Jenna Peffley",
+  "Brittany Ambridge",
+  "Signe Birck",
   "Clayton Korte",
-  "Frank Frances",
-  "Atelier Zébulon Perron",
+  "Heidi's Bridge",
+  "The Ingalls",
+  "Design, Bitches",
+  "Jakob Layman",
+  "Andrea Calo",
+  "Method Co",
+  "Bess Friday",
+  "Michael Kleinberg",
   "Openhouse",
+  "Frank Frances",
+  "Nicemakers",
   "Ignant",
   "Punch",
+  "Noe DeWitt",
+  "Tessa Neustadt",
   "Kris Tamburello",
   "Garrett Rowland",
+  "Lázaro Rosa-Violán",
   "Atlas Obscura"
  ],
  "results": [
@@ -89,7 +110,7 @@
    },
    "score": 46.0,
    "suitable": false,
-   "seconds": 11
+   "seconds": 10
   },
   {
    "name": "Casey Dunn",
@@ -98,25 +119,83 @@
    "final": "https://caseydunn.net/",
    "platform": "wordpress",
    "entry": "https://www.caseydunn.net/",
-   "links": 0,
-   "pages": [],
-   "hospitality_share": 0,
-   "volume_score": 0,
-   "good_pages": 0,
-   "photos_measured": 0,
+   "links": 75,
+   "pages": [
+    {
+     "url": "https://caseydunn.net/comments/feed/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://caseydunn.net/architecture/",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       1024,
+       733
+      ],
+      [
+       1248,
+       900
+      ]
+     ]
+    },
+    {
+     "url": "https://caseydunn.net/editorial/",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       768,
+       960
+      ],
+      [
+       704,
+       900
+      ]
+     ]
+    },
+    {
+     "url": "https://caseydunn.net/profile/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://caseydunn.net/project/the-bunkhouse/",
+     "photos": 28,
+     "hospitality": false,
+     "sizes": [
+      [
+       701,
+       900
+      ],
+      [
+       709,
+       900
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 10,
+   "good_pages": 3,
+   "photos_measured": 6,
    "photos_passing": 0,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 0,
-    "hospitality": 0,
-    "volume": 0,
+    "harvestable": 12.0,
+    "photo_size": 0.0,
+    "hospitality": 3.0,
+    "volume": 10,
     "lens": 9,
     "us": 10,
     "mix": 7
    },
-   "score": 26.0,
+   "score": 51.0,
    "suitable": false,
-   "seconds": 7
+   "seconds": 13
   },
   {
    "name": "Chase Daniel",
@@ -129,97 +208,52 @@
    "pages": [
     {
      "url": "https://www.chasedaniel.com/art",
-     "photos": 7,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.chasedaniel.com/photography",
-     "photos": 12,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.chasedaniel.com/sculpture",
-     "photos": 5,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.chasedaniel.com/drawing",
-     "photos": 2,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.chasedaniel.com/new-genre",
-     "photos": 11,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       2500
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 0.0,
    "volume_score": 4,
-   "good_pages": 4,
-   "photos_measured": 10,
-   "photos_passing": 10,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
    "scores": {
-    "harvestable": 16.0,
-    "photo_size": 20.0,
+    "harvestable": 0.0,
+    "photo_size": 0,
     "hospitality": 0.0,
     "volume": 4,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 67.0,
-   "suitable": true,
-   "seconds": 17
+   "score": 31.0,
+   "suitable": false,
+   "seconds": 3
   },
   {
    "name": "Wynn Myers",
@@ -259,7 +293,7 @@
    "pages": [
     {
      "url": "https://www.laurejoliet.com/interiors",
-     "photos": 6,
+     "photos": 30,
      "hospitality": true,
      "sizes": [
       [
@@ -268,43 +302,43 @@
       ],
       [
        2500,
-       3333
+       1875
       ]
      ]
     },
     {
      "url": "https://www.laurejoliet.com/hotels",
-     "photos": 13,
+     "photos": 30,
      "hospitality": true,
      "sizes": [
       [
-       750,
-       1000
+       2500,
+       3750
       ],
       [
-       750,
-       1000
+       1200,
+       1587
       ]
      ]
     },
     {
      "url": "https://www.laurejoliet.com/people",
-     "photos": 5,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
-       2500,
-       1667
+       667,
+       1000
       ],
       [
-       2500,
-       1667
+       1500,
+       2000
       ]
      ]
     },
     {
      "url": "https://www.laurejoliet.com/studiovisits",
-     "photos": 8,
+     "photos": 13,
      "hospitality": false,
      "sizes": [
       [
@@ -319,7 +353,7 @@
     },
     {
      "url": "https://www.laurejoliet.com/jonas-wood",
-     "photos": 8,
+     "photos": 13,
      "hospitality": false,
      "sizes": [
       [
@@ -337,19 +371,19 @@
    "volume_score": 4,
    "good_pages": 5,
    "photos_measured": 10,
-   "photos_passing": 7,
+   "photos_passing": 8,
    "scores": {
     "harvestable": 20.0,
-    "photo_size": 14.0,
+    "photo_size": 16.0,
     "hospitality": 6.0,
     "volume": 4,
     "lens": 12,
     "us": 10,
     "mix": 7
    },
-   "score": 73.0,
+   "score": 75.0,
    "suitable": true,
-   "seconds": 14
+   "seconds": 11
   },
   {
    "name": "The Ingalls",
@@ -362,18 +396,9 @@
    "pages": [
     {
      "url": "https://www.ingallsphoto.com/work",
-     "photos": 6,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       1932,
-       1932
-      ],
-      [
-       1666,
-       1666
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.ingallsphoto.com/motion",
@@ -391,14 +416,14 @@
        2500
       ],
       [
-       1932,
+       2000,
        2500
       ]
      ]
     },
     {
      "url": "https://www.ingallsphoto.com/travel",
-     "photos": 5,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
@@ -413,7 +438,7 @@
     },
     {
      "url": "https://www.ingallsphoto.com/food",
-     "photos": 8,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
@@ -429,11 +454,11 @@
    ],
    "hospitality_share": 0.0,
    "volume_score": 3,
-   "good_pages": 4,
-   "photos_measured": 8,
-   "photos_passing": 8,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 6,
    "scores": {
-    "harvestable": 16.0,
+    "harvestable": 12.0,
     "photo_size": 20.0,
     "hospitality": 0.0,
     "volume": 3,
@@ -441,9 +466,9 @@
     "us": 10,
     "mix": 7
    },
-   "score": 68.0,
+   "score": 64.0,
    "suitable": true,
-   "seconds": 21
+   "seconds": 10
   },
   {
    "name": "Kris Tamburello",
@@ -456,7 +481,7 @@
    "pages": [
     {
      "url": "https://www.kristamburello.com/instagram",
-     "photos": 19,
+     "photos": 18,
      "hospitality": false,
      "sizes": [
       [
@@ -495,7 +520,7 @@
    "final": "https://www.douglasfriedman.net/",
    "platform": "unknown",
    "entry": "https://www.douglasfriedman.net/",
-   "links": 10,
+   "links": 11,
    "pages": [
     {
      "url": "https://www.douglasfriedman.net/PORTRAITS/MEN/1/",
@@ -544,7 +569,7 @@
     }
    ],
    "hospitality_share": 0.2,
-   "volume_score": 3,
+   "volume_score": 4,
    "good_pages": 0,
    "photos_measured": 3,
    "photos_passing": 0,
@@ -552,14 +577,14 @@
     "harvestable": 0.0,
     "photo_size": 0.0,
     "hospitality": 3.0,
-    "volume": 3,
+    "volume": 4,
     "lens": 12,
     "us": 10,
     "mix": 7
    },
-   "score": 35.0,
+   "score": 36.0,
    "suitable": false,
-   "seconds": 9
+   "seconds": 7
   },
   {
    "name": "William Abranowicz",
@@ -661,13 +686,9 @@
     },
     {
      "url": "https://www.ericpiasecki.com/Portfolios/Gardens/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      [
-       1710,
-       1140
-      ],
       [
        1710,
        1140
@@ -696,7 +717,7 @@
    "hospitality_share": 0.0,
    "volume_score": 7,
    "good_pages": 0,
-   "photos_measured": 2,
+   "photos_measured": 1,
    "photos_passing": 0,
    "scores": {
     "harvestable": 0.0,
@@ -709,7 +730,7 @@
    },
    "score": 34.0,
    "suitable": false,
-   "seconds": 6
+   "seconds": 5
   },
   {
    "name": "Noe DeWitt",
@@ -722,44 +743,21 @@
    "pages": [
     {
      "url": "https://www.noedewitt.com/photography",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1500,
-       300
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.noedewitt.com/interiors",
-     "photos": 20,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       3115
-      ],
-      [
-       2500,
-       3154
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.noedewitt.com/lifestyle",
-     "photos": 20,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2400,
-       1613
-      ],
-      [
-       1559,
-       2087
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.noedewitt.com/motion",
@@ -767,12 +765,12 @@
      "hospitality": false,
      "sizes": [
       [
-       2100,
-       1500
+       1600,
+       1067
       ],
       [
-       1871,
-       1050
+       1600,
+       1067
       ]
      ]
     },
@@ -790,21 +788,21 @@
    ],
    "hospitality_share": 0.4,
    "volume_score": 10,
-   "good_pages": 3,
-   "photos_measured": 8,
-   "photos_passing": 6,
+   "good_pages": 1,
+   "photos_measured": 3,
+   "photos_passing": 1,
    "scores": {
-    "harvestable": 12.0,
-    "photo_size": 15.0,
+    "harvestable": 4.0,
+    "photo_size": 6.7,
     "hospitality": 6.0,
     "volume": 10,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 71.0,
+   "score": 54.7,
    "suitable": true,
-   "seconds": 13
+   "seconds": 8
   },
   {
    "name": "Brittany Ambridge",
@@ -817,85 +815,58 @@
    "pages": [
     {
      "url": "https://www.brittanyambridge.com/interiors",
-     "photos": 2,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       3750
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.brittanyambridge.com/portraits",
-     "photos": 5,
+     "photos": 12,
      "hospitality": false,
      "sizes": [
       [
        2500,
-       3750
+       1667
       ],
       [
        2500,
-       3333
+       1667
       ]
      ]
     },
     {
      "url": "https://www.brittanyambridge.com/entertain",
-     "photos": 6,
+     "photos": 12,
      "hospitality": false,
      "sizes": [
       [
        2500,
-       1667
+       3750
       ],
       [
        2500,
-       3750
+       1667
       ]
      ]
     },
     {
      "url": "https://www.brittanyambridge.com/branded",
-     "photos": 2,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       1667
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.brittanyambridge.com/projects",
-     "photos": 2,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       2500
-      ],
-      [
-       2500,
-       3750
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 0.4,
    "volume_score": 5,
    "good_pages": 2,
-   "photos_measured": 10,
-   "photos_passing": 10,
+   "photos_measured": 4,
+   "photos_passing": 4,
    "scores": {
     "harvestable": 8.0,
     "photo_size": 20.0,
@@ -907,14 +878,41 @@
    },
    "score": 66.0,
    "suitable": true,
-   "seconds": 14
+   "seconds": 10
   },
   {
    "name": "Emily Andrews",
-   "url": "https://www.emilyandrews.net/",
-   "reachable": false,
-   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "seconds": 0
+   "url": "https://www.emilyandrewsphoto.com/",
+   "reachable": true,
+   "final": "https://www.emilyandrewsphoto.com/",
+   "platform": "readymag",
+   "entry": "https://www.emilyandrewsphoto.com/",
+   "links": 1,
+   "pages": [
+    {
+     "url": "https://www.emilyandrewsphoto.com/2",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0.0,
+    "volume": 0,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 28.0,
+   "suitable": false,
+   "seconds": 24
   },
   {
    "name": "Sean Davidson",
@@ -927,14 +925,9 @@
    "pages": [
     {
      "url": "https://www.sean-davidson.com/more.html",
-     "photos": 1,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       172,
-       470
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.sean-davidson.com/portfolio.html",
@@ -959,11 +952,11 @@
    "hospitality_share": 0.0,
    "volume_score": 1,
    "good_pages": 0,
-   "photos_measured": 1,
+   "photos_measured": 0,
    "photos_passing": 0,
    "scores": {
     "harvestable": 0.0,
-    "photo_size": 0.0,
+    "photo_size": 0,
     "hospitality": 0.0,
     "volume": 1,
     "lens": 11,
@@ -985,22 +978,22 @@
    "pages": [
     {
      "url": "https://www.lizclayman.com/people",
-     "photos": 10,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
-       1468,
-       2200
+       1333,
+       2000
       ],
       [
-       2078,
-       1387
+       2200,
+       1469
       ]
      ]
     },
     {
      "url": "https://www.lizclayman.com/food",
-     "photos": 21,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
@@ -1008,14 +1001,14 @@
        2200
       ],
       [
-       1335,
-       2000
+       1469,
+       2200
       ]
      ]
     },
     {
      "url": "https://www.lizclayman.com/drink",
-     "photos": 21,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
@@ -1023,19 +1016,19 @@
        2200
       ],
       [
-       1469,
-       2200
+       2200,
+       1469
       ]
      ]
     },
     {
      "url": "https://www.lizclayman.com/interiors",
-     "photos": 15,
+     "photos": 30,
      "hospitality": true,
      "sizes": [
       [
-       2200,
-       1469
+       2500,
+       1667
       ],
       [
        1333,
@@ -1045,27 +1038,18 @@
     },
     {
      "url": "https://www.lizclayman.com/projects-1",
-     "photos": 6,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2200,
-       1467
-      ],
-      [
-       1469,
-       2200
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 0.4,
    "volume_score": 2,
-   "good_pages": 5,
-   "photos_measured": 10,
-   "photos_passing": 10,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 8,
    "scores": {
-    "harvestable": 20.0,
+    "harvestable": 16.0,
     "photo_size": 20.0,
     "hospitality": 6.0,
     "volume": 2,
@@ -1073,16 +1057,16 @@
     "us": 10,
     "mix": 7
    },
-   "score": 76.0,
+   "score": 72.0,
    "suitable": true,
-   "seconds": 14
+   "seconds": 12
   },
   {
    "name": "Teddy Wolff",
-   "url": "https://www.teddywolff.com/",
+   "url": "https://teddywolff.com/",
    "reachable": false,
    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
-   "seconds": 0
+   "seconds": 1
   },
   {
    "name": "Garrett Rowland",
@@ -1113,31 +1097,31 @@
     },
     {
      "url": "https://www.garrettrowland.com/current",
-     "photos": 5,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
-       300,
-       450
+       1200,
+       960
       ],
       [
-       300,
-       450
+       400,
+       267
       ]
      ]
     },
     {
      "url": "https://www.garrettrowland.com/residential",
-     "photos": 5,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
-       4498,
+       2001,
        3000
       ],
       [
-       4498,
-       3000
+       1733,
+       2600
       ]
      ]
     }
@@ -1158,7 +1142,7 @@
    },
    "score": 50.0,
    "suitable": true,
-   "seconds": 14
+   "seconds": 9
   },
   {
    "name": "Brian W. Ferry",
@@ -1167,8 +1151,20 @@
    "final": "https://brianwferry.com/",
    "platform": "cargo",
    "entry": "https://www.brianwferry.com/",
-   "links": 1,
+   "links": 3,
    "pages": [
+    {
+     "url": "https://brianwferry.com/rss",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://brianwferry.com/stylesheet",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
     {
      "url": "https://www.brianwferry.com/{{project_url}}",
      "photos": 0,
@@ -1178,7 +1174,7 @@
     }
    ],
    "hospitality_share": 0.0,
-   "volume_score": 0,
+   "volume_score": 1,
    "good_pages": 0,
    "photos_measured": 0,
    "photos_passing": 0,
@@ -1186,18 +1182,18 @@
     "harvestable": 0.0,
     "photo_size": 0,
     "hospitality": 0.0,
-    "volume": 0,
+    "volume": 1,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 28.0,
+   "score": 29.0,
    "suitable": false,
    "seconds": 11
   },
   {
    "name": "Max Burkhalter",
-   "url": "https://www.maxburkhalter.com/",
+   "url": "https://maxburkhalter.com/",
    "reachable": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
    "seconds": 0
@@ -1213,18 +1209,13 @@
    "pages": [
     {
      "url": "https://www.christophersturman.com/projects",
-     "photos": 1,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       1875,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.christophersturman.com/overview",
-     "photos": 3,
+     "photos": 12,
      "hospitality": false,
      "sizes": [
       [
@@ -1232,66 +1223,65 @@
        3000
       ],
       [
-       2250,
-       1498
+       2213,
+       3000
       ]
      ]
     },
     {
      "url": "https://www.christophersturman.com/recent-work",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1844,
-       2500
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.christophersturman.com/archive",
-     "photos": 3,
+     "photos": 12,
      "hospitality": false,
      "sizes": [
       [
-       2500,
-       1667
+       2250,
+       1500
       ],
       [
-       2500,
-       1784
+       2250,
+       1500
       ]
      ]
     },
     {
      "url": "https://www.christophersturman.com/film",
-     "photos": 1,
+     "photos": 12,
      "hospitality": true,
      "sizes": [
       [
-       1422,
-       800
+       2500,
+       1406
+      ],
+      [
+       2500,
+       1398
       ]
      ]
     }
    ],
    "hospitality_share": 0.4,
    "volume_score": 4,
-   "good_pages": 0,
-   "photos_measured": 7,
+   "good_pages": 3,
+   "photos_measured": 6,
    "photos_passing": 6,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 17.1,
+    "harvestable": 12.0,
+    "photo_size": 20.0,
     "hospitality": 6.0,
     "volume": 4,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 54.1,
-   "suitable": false,
-   "seconds": 14
+   "score": 69.0,
+   "suitable": true,
+   "seconds": 10
   },
   {
    "name": "Tim Lenz",
@@ -1331,14 +1321,9 @@
    "pages": [
     {
      "url": "https://www.juliesoefer.com/hotels/",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2560,
-       1707
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.juliesoefer.com/comments/feed/",
@@ -1353,11 +1338,11 @@
      "sizes": [
       [
        2560,
-       1707
+       1747
       ],
       [
-       2560,
-       1605
+       1457,
+       2000
       ]
      ]
     },
@@ -1367,11 +1352,11 @@
      "hospitality": false,
      "sizes": [
       [
-       2560,
-       1862
+       1401,
+       2000
       ],
       [
-       2797,
+       1604,
        2000
       ]
      ]
@@ -1382,11 +1367,11 @@
      "hospitality": false,
      "sizes": [
       [
-       2560,
-       1933
+       1622,
+       2000
       ],
       [
-       1333,
+       1492,
        2000
       ]
      ]
@@ -1395,8 +1380,8 @@
    "hospitality_share": 0.4,
    "volume_score": 10,
    "good_pages": 3,
-   "photos_measured": 7,
-   "photos_passing": 7,
+   "photos_measured": 6,
+   "photos_passing": 6,
    "scores": {
     "harvestable": 12.0,
     "photo_size": 20.0,
@@ -1408,7 +1393,7 @@
    },
    "score": 75.0,
    "suitable": true,
-   "seconds": 22
+   "seconds": 32
   },
   {
    "name": "Peter Frank Edwards",
@@ -1424,10 +1409,7 @@
      "photos": 30,
      "hospitality": true,
      "sizes": [
-      [
-       500,
-       700
-      ],
+      null,
       null
      ]
     },
@@ -1436,14 +1418,8 @@
      "photos": 30,
      "hospitality": true,
      "sizes": [
-      [
-       525,
-       700
-      ],
-      [
-       525,
-       700
-      ]
+      null,
+      null
      ]
     },
     {
@@ -1451,11 +1427,11 @@
      "photos": 30,
      "hospitality": true,
      "sizes": [
+      null,
       [
-       467,
+       1050,
        700
-      ],
-      null
+      ]
      ]
     },
     {
@@ -1463,10 +1439,7 @@
      "photos": 30,
      "hospitality": true,
      "sizes": [
-      [
-       525,
-       700
-      ],
+      null,
       null
      ]
     },
@@ -1475,10 +1448,7 @@
      "photos": 30,
      "hospitality": true,
      "sizes": [
-      [
-       525,
-       700
-      ],
+      null,
       null
      ]
     }
@@ -1486,7 +1456,7 @@
    "hospitality_share": 1.0,
    "volume_score": 6,
    "good_pages": 5,
-   "photos_measured": 6,
+   "photos_measured": 1,
    "photos_passing": 0,
    "scores": {
     "harvestable": 20.0,
@@ -1499,7 +1469,7 @@
    },
    "score": 70.0,
    "suitable": false,
-   "seconds": 20
+   "seconds": 13
   },
   {
    "name": "Andrew Thomas Lee",
@@ -1512,31 +1482,31 @@
    "pages": [
     {
      "url": "https://www.andrewthomaslee.com/projects",
-     "photos": 23,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
        1500,
-       2249
+       1875
       ],
       [
        1500,
-       1001
+       2249
       ]
      ]
     },
     {
      "url": "https://www.andrewthomaslee.com/barbecue",
-     "photos": 23,
+     "photos": 30,
      "hospitality": false,
      "sizes": [
       [
        1500,
-       2249
+       1875
       ],
       [
        1500,
-       1001
+       2249
       ]
      ]
     },
@@ -1547,11 +1517,11 @@
      "sizes": [
       [
        1800,
-       2520
+       1201
       ],
       [
        1800,
-       2520
+       2699
       ]
      ]
     },
@@ -1562,7 +1532,7 @@
      "sizes": [
       [
        1500,
-       1001
+       2249
       ],
       [
        1500,
@@ -1576,12 +1546,12 @@
      "hospitality": false,
      "sizes": [
       [
-       1500,
-       2249
+       1800,
+       2520
       ],
       [
        1500,
-       1500
+       1001
       ]
      ]
     }
@@ -1590,19 +1560,19 @@
    "volume_score": 7,
    "good_pages": 5,
    "photos_measured": 10,
-   "photos_passing": 6,
+   "photos_passing": 7,
    "scores": {
     "harvestable": 20.0,
-    "photo_size": 12.0,
+    "photo_size": 14.0,
     "hospitality": 0.0,
     "volume": 7,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 66.0,
+   "score": 68.0,
    "suitable": true,
-   "seconds": 17
+   "seconds": 16
   },
   {
    "name": "Cedric Angeles",
@@ -1661,18 +1631,18 @@
    },
    "score": 39.0,
    "suitable": false,
-   "seconds": 6
+   "seconds": 7
   },
   {
    "name": "Paul Costello",
-   "url": "https://www.paulcostello.com/",
+   "url": "https://paulcostello.com/",
    "reachable": false,
    "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resoluti",
-   "seconds": 2
+   "seconds": 3
   },
   {
    "name": "Sam Frost",
-   "url": "https://www.samfrostphoto.com/",
+   "url": "https://samfrostphoto.com/",
    "reachable": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
    "seconds": 0
@@ -1733,7 +1703,7 @@
    },
    "score": 41.0,
    "suitable": false,
-   "seconds": 12
+   "seconds": 3
   },
   {
    "name": "Frank Frances",
@@ -1750,8 +1720,8 @@
      "hospitality": false,
      "sizes": [
       [
-       1000,
-       1250
+       1500,
+       1200
       ],
       [
        1200,
@@ -1765,18 +1735,18 @@
      "hospitality": false,
      "sizes": [
       [
-       1187,
+       1159,
        1500
       ],
       [
-       1100,
+       1159,
        1500
       ]
      ]
     },
     {
      "url": "https://www.frankfrances.com/b-o-o-k",
-     "photos": 9,
+     "photos": 22,
      "hospitality": false,
      "sizes": [
       [
@@ -1799,19 +1769,19 @@
        1500
       ],
       [
-       1125,
-       1500
+       938,
+       1250
       ]
      ]
     },
     {
      "url": "https://www.frankfrances.com/e-x",
-     "photos": 8,
+     "photos": 11,
      "hospitality": false,
      "sizes": [
       [
-       1500,
-       1071
+       1071,
+       1500
       ],
       [
        1500,
@@ -1824,19 +1794,19 @@
    "volume_score": 3,
    "good_pages": 5,
    "photos_measured": 10,
-   "photos_passing": 5,
+   "photos_passing": 4,
    "scores": {
     "harvestable": 20.0,
-    "photo_size": 10.0,
+    "photo_size": 8.0,
     "hospitality": 0.0,
     "volume": 3,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 60.0,
+   "score": 58.0,
    "suitable": true,
-   "seconds": 13
+   "seconds": 12
   },
   {
    "name": "Gentl and Hyers",
@@ -1849,10 +1819,9 @@
    "pages": [
     {
      "url": "https://www.gentlandhyers.com/TRAVEL/NEPAL/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      null,
       [
        855,
        1140
@@ -1861,10 +1830,9 @@
     },
     {
      "url": "https://www.gentlandhyers.com/TRAVEL/VENICE/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      null,
       [
        1709,
        1140
@@ -1873,10 +1841,9 @@
     },
     {
      "url": "https://www.gentlandhyers.com/TRAVEL/ROME/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      null,
       [
        2100,
        2714
@@ -1885,10 +1852,9 @@
     },
     {
      "url": "https://www.gentlandhyers.com/TRAVEL/GASCONY/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      null,
       [
        912,
        1140
@@ -1897,10 +1863,9 @@
     },
     {
      "url": "https://www.gentlandhyers.com/TRAVEL/LUMMI-ISLAND-WA/1/",
-     "photos": 2,
+     "photos": 1,
      "hospitality": false,
      "sizes": [
-      null,
       [
        1710,
        1140
@@ -1915,20 +1880,20 @@
    "photos_passing": 1,
    "scores": {
     "harvestable": 0.0,
-    "photo_size": 2.0,
+    "photo_size": 4.0,
     "hospitality": 0.0,
     "volume": 10,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 40.0,
+   "score": 42.0,
    "suitable": false,
-   "seconds": 12
+   "seconds": 8
   },
   {
    "name": "Jonathan Hokklo",
-   "url": "https://www.jonathanhokklo.com/",
+   "url": "https://jonathanhokklo.com/",
    "reachable": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
    "seconds": 0
@@ -1989,7 +1954,7 @@
    },
    "score": 47.0,
    "suitable": false,
-   "seconds": 5
+   "seconds": 3
   },
   {
    "name": "Commune Design",
@@ -2002,88 +1967,129 @@
    "pages": [
     {
      "url": "https://www.communedesign.com/portfolio",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1200,
-       800
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.communedesign.com/portfolio/residential",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1200,
-       800
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.communedesign.com/portfolio/hospitality",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1200,
-       800
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.communedesign.com/portfolio/commercial",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1200,
-       800
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.communedesign.com/portfolio/graphics",
-     "photos": 4,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       900,
-       600
-      ],
-      [
-       900,
-       600
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 1.0,
    "volume_score": 7,
-   "good_pages": 1,
-   "photos_measured": 6,
+   "good_pages": 0,
+   "photos_measured": 0,
    "photos_passing": 0,
    "scores": {
-    "harvestable": 4.0,
-    "photo_size": 0.0,
+    "harvestable": 0.0,
+    "photo_size": 0,
     "hospitality": 15.0,
     "volume": 7,
     "lens": 13,
     "us": 10,
     "mix": 7
    },
-   "score": 56.0,
+   "score": 52.0,
    "suitable": false,
-   "seconds": 8
+   "seconds": 6
   },
   {
    "name": "Studio Shamshiri",
-   "url": "https://www.studioshamshiri.com/",
-   "reachable": false,
-   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
-   "seconds": 0
+   "url": "https://studioshamshiri.com/",
+   "reachable": true,
+   "final": "https://studioshamshiri.com/",
+   "platform": "wordpress",
+   "entry": "https://studioshamshiri.com/",
+   "links": 23,
+   "pages": [
+    {
+     "url": "https://studioshamshiri.com/projects/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://studioshamshiri.com/archivedpages/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://studioshamshiri.com/studio/",
+     "photos": 2,
+     "hospitality": true,
+     "sizes": [
+      [
+       2560,
+       1704
+      ],
+      [
+       2400,
+       3523
+      ]
+     ]
+    },
+    {
+     "url": "https://studioshamshiri.com/philosophy/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2560,
+       1707
+      ]
+     ]
+    },
+    {
+     "url": "https://studioshamshiri.com/publications/shamshiri-interiors/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       3000,
+       1866
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 8,
+   "good_pages": 0,
+   "photos_measured": 4,
+   "photos_passing": 4,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 20.0,
+    "hospitality": 9.0,
+    "volume": 8,
+    "lens": 12,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 66.0,
+   "suitable": false,
+   "seconds": 9
   },
   {
    "name": "Meyer Davis",
@@ -2153,51 +2159,27 @@
    "pages": [
     {
      "url": "https://www.gachotstudios.com/hospitality",
-     "photos": 2,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       1668
-      ],
-      [
-       1800,
-       1200
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.gachotstudios.com/select-projects",
-     "photos": 1,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       1681
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.gachotstudios.com/residential",
-     "photos": 1,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       1681
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.gachotstudios.com/commercial",
-     "photos": 1,
+     "photos": 0,
      "hospitality": false,
-     "sizes": [
-      [
-       2500,
-       3125
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.gachotstudios.com/fixtures-fittings",
@@ -2210,34 +2192,196 @@
    "hospitality_share": 0.2,
    "volume_score": 8,
    "good_pages": 0,
-   "photos_measured": 5,
-   "photos_passing": 4,
+   "photos_measured": 0,
+   "photos_passing": 0,
    "scores": {
     "harvestable": 0.0,
-    "photo_size": 16.0,
+    "photo_size": 0,
     "hospitality": 3.0,
     "volume": 8,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 55.0,
+   "score": 39.0,
    "suitable": false,
-   "seconds": 9
+   "seconds": 7
   },
   {
    "name": "Reunion Goods & Services",
-   "url": "https://www.reuniongoodsandservices.com/",
-   "reachable": false,
-   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "seconds": 0
+   "url": "https://reunion.gs/",
+   "reachable": true,
+   "final": "https://www.reunion.gs/",
+   "platform": "squarespace",
+   "entry": "https://reunion.gs/",
+   "links": 8,
+   "pages": [
+    {
+     "url": "https://reunion.gs/main/spaces",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       1680,
+       1050
+      ],
+      [
+       2500,
+       1676
+      ]
+     ]
+    },
+    {
+     "url": "https://reunion.gs/main/details",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ],
+      [
+       2500,
+       1406
+      ]
+     ]
+    },
+    {
+     "url": "https://reunion.gs/main/brands",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1406
+      ],
+      [
+       2500,
+       1406
+      ]
+     ]
+    },
+    {
+     "url": "https://reunion.gs/main/goods",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       1600,
+       1201
+      ],
+      [
+       640,
+       640
+      ]
+     ]
+    },
+    {
+     "url": "https://reunion.gs/work/clermont",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ],
+      [
+       2500,
+       1667
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 3,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 7,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 14.0,
+    "hospitality": 9.0,
+    "volume": 3,
+    "lens": 13,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 76.0,
+   "suitable": true,
+   "seconds": 21
   },
   {
    "name": "Method Co",
-   "url": "https://www.method-co.com/",
-   "reachable": false,
-   "error": "URLError: <urlopen error timed out>",
-   "seconds": 16
+   "url": "https://methodco.com/",
+   "reachable": true,
+   "final": "https://www.methodco.com/",
+   "platform": "unknown",
+   "entry": "https://methodco.com/",
+   "links": 3,
+   "pages": [
+    {
+     "url": "https://www.methodco.com/projects",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1800,
+       1200
+      ],
+      [
+       1280,
+       960
+      ]
+     ]
+    },
+    {
+     "url": "https://www.methodco.com/roost",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1328,
+       855
+      ],
+      [
+       712,
+       808
+      ]
+     ]
+    },
+    {
+     "url": "https://www.methodco.com/branding-design",
+     "photos": 16,
+     "hospitality": true,
+     "sizes": [
+      [
+       1080,
+       997
+      ],
+      [
+       2300,
+       1643
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 1,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 3.3,
+    "hospitality": 15.0,
+    "volume": 1,
+    "lens": 12,
+    "us": 10,
+    "mix": 8
+   },
+   "score": 61.3,
+   "suitable": true,
+   "seconds": 12
   },
   {
    "name": "Stokes Architecture + Design",
@@ -2250,22 +2394,22 @@
    "pages": [
     {
      "url": "https://www.stokesarch.com/stay",
-     "photos": 15,
+     "photos": 29,
      "hospitality": true,
      "sizes": [
       [
-       2500,
-       1406
+       2400,
+       3000
       ],
       [
        2500,
-       1406
+       1668
       ]
      ]
     },
     {
      "url": "https://www.stokesarch.com/play",
-     "photos": 11,
+     "photos": 26,
      "hospitality": true,
      "sizes": [
       [
@@ -2273,34 +2417,34 @@
        1281
       ],
       [
-       1920,
-       1280
-      ]
-     ]
-    },
-    {
-     "url": "https://www.stokesarch.com/eat",
-     "photos": 15,
-     "hospitality": true,
-     "sizes": [
-      [
-       1440,
-       2560
-      ],
-      [
        2500,
        1406
       ]
      ]
     },
     {
+     "url": "https://www.stokesarch.com/eat",
+     "photos": 29,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1734
+      ],
+      [
+       2400,
+       3000
+      ]
+     ]
+    },
+    {
      "url": "https://www.stokesarch.com/meet",
-     "photos": 9,
+     "photos": 29,
      "hospitality": false,
      "sizes": [
       [
-       1920,
-       1080
+       2500,
+       1459
       ],
       [
        1920,
@@ -2310,16 +2454,16 @@
     },
     {
      "url": "https://www.stokesarch.com/sip",
-     "photos": 9,
+     "photos": 29,
      "hospitality": true,
      "sizes": [
       [
        2500,
-       1406
+       1668
       ],
       [
-       2500,
-       1406
+       1920,
+       1080
       ]
      ]
     }
@@ -2328,19 +2472,19 @@
    "volume_score": 2,
    "good_pages": 5,
    "photos_measured": 10,
-   "photos_passing": 6,
+   "photos_passing": 7,
    "scores": {
     "harvestable": 20.0,
-    "photo_size": 12.0,
+    "photo_size": 14.0,
     "hospitality": 12.0,
     "volume": 2,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 74.0,
+   "score": 76.0,
    "suitable": true,
-   "seconds": 14
+   "seconds": 12
   },
   {
    "name": "Michael Hsu Office of Architecture",
@@ -2353,14 +2497,9 @@
    "pages": [
     {
      "url": "https://hsuoffice.com/catalogue/",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       1900,
-       1200
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://hsuoffice.com/studio/",
@@ -2390,11 +2529,11 @@
    "hospitality_share": 1.0,
    "volume_score": 10,
    "good_pages": 0,
-   "photos_measured": 1,
+   "photos_measured": 0,
    "photos_passing": 0,
    "scores": {
     "harvestable": 0.0,
-    "photo_size": 0.0,
+    "photo_size": 0,
     "hospitality": 15.0,
     "volume": 10,
     "lens": 9,
@@ -2403,7 +2542,7 @@
    },
    "score": 51.0,
    "suitable": false,
-   "seconds": 9
+   "seconds": 8
   },
   {
    "name": "Clayton Korte",
@@ -2416,18 +2555,9 @@
    "pages": [
     {
      "url": "https://claytonkorte.com/work/",
-     "photos": 3,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2069,
-       1440
-      ],
-      [
-       1953,
-       1440
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://claytonkorte.com/connect/",
@@ -2435,8 +2565,8 @@
      "hospitality": true,
      "sizes": [
       [
-       1200,
-       630
+       1290,
+       800
       ],
       [
        1600,
@@ -2446,67 +2576,67 @@
     },
     {
      "url": "https://claytonkorte.com/project/5138/",
-     "photos": 10,
+     "photos": 11,
      "hospitality": false,
      "sizes": [
       [
-       1200,
-       1600
+       1600,
+       1001
       ],
       [
-       1200,
-       630
+       1600,
+       1143
       ]
      ]
     },
     {
      "url": "https://claytonkorte.com/project/the-historic-pearl-by-jordan-mackay/",
-     "photos": 7,
+     "photos": 18,
      "hospitality": false,
      "sizes": [
       [
        3600,
-       5391
+       2100
       ],
       [
-       1200,
-       630
+       1806,
+       1440
       ]
      ]
     },
     {
      "url": "https://claytonkorte.com/project/vineyard-residence-california/",
-     "photos": 2,
+     "photos": 12,
      "hospitality": true,
      "sizes": [
       [
-       1500,
-       1049
+       2300,
+       1440
       ],
       [
-       1200,
-       630
+       1964,
+       1310
       ]
      ]
     }
    ],
    "hospitality_share": 0.6,
    "volume_score": 10,
-   "good_pages": 2,
-   "photos_measured": 10,
-   "photos_passing": 4,
+   "good_pages": 3,
+   "photos_measured": 8,
+   "photos_passing": 3,
    "scores": {
-    "harvestable": 8.0,
-    "photo_size": 8.0,
+    "harvestable": 12.0,
+    "photo_size": 7.5,
     "hospitality": 9.0,
     "volume": 10,
     "lens": 9,
     "us": 10,
     "mix": 7
    },
-   "score": 61.0,
+   "score": 64.5,
    "suitable": true,
-   "seconds": 10
+   "seconds": 8
   },
   {
    "name": "Lambert McGuire Design",
@@ -2519,44 +2649,34 @@
    "pages": [
     {
      "url": "https://www.lambertmcguire.com/hotels-clubs",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2000,
-       1427
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.lambertmcguire.com/restaurants",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       696,
-       800
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 1.0,
    "volume_score": 1,
    "good_pages": 0,
-   "photos_measured": 2,
-   "photos_passing": 1,
+   "photos_measured": 0,
+   "photos_passing": 0,
    "scores": {
     "harvestable": 0.0,
-    "photo_size": 10.0,
+    "photo_size": 0,
     "hospitality": 15.0,
     "volume": 1,
     "lens": 12,
     "us": 10,
     "mix": 7
    },
-   "score": 55.0,
+   "score": 45.0,
    "suitable": false,
-   "seconds": 7
+   "seconds": 5
   },
   {
    "name": "Bells + Whistles",
@@ -2576,18 +2696,13 @@
    "pages": [
     {
      "url": "https://www.studiounltd.com/work",
-     "photos": 1,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       1407
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.studiounltd.com/services",
-     "photos": 4,
+     "photos": 6,
      "hospitality": true,
      "sizes": [
       [
@@ -2595,29 +2710,29 @@
        1190
       ],
       [
-       1300,
+       1304,
        1190
       ]
      ]
     },
     {
      "url": "https://www.studiounltd.com/work/hondacenter",
-     "photos": 2,
+     "photos": 4,
      "hospitality": true,
      "sizes": [
       [
        2500,
-       1407
+       1406
       ],
       [
        2500,
-       1407
+       1406
       ]
      ]
     },
     {
      "url": "https://www.studiounltd.com/work/nakazawa",
-     "photos": 6,
+     "photos": 9,
      "hospitality": true,
      "sizes": [
       [
@@ -2625,44 +2740,44 @@
        1281
       ],
       [
-       1281,
-       1920
+       2500,
+       1875
       ]
      ]
     },
     {
      "url": "https://www.studiounltd.com/work/picala",
-     "photos": 2,
+     "photos": 7,
      "hospitality": true,
      "sizes": [
       [
-       1336,
-       2000
+       2000,
+       1332
       ],
       [
        2000,
-       1326
+       1327
       ]
      ]
     }
    ],
    "hospitality_share": 1.0,
    "volume_score": 9,
-   "good_pages": 2,
-   "photos_measured": 9,
-   "photos_passing": 5,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 3,
    "scores": {
-    "harvestable": 8.0,
-    "photo_size": 11.1,
+    "harvestable": 16.0,
+    "photo_size": 7.5,
     "hospitality": 15.0,
     "volume": 9,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 70.1,
+   "score": 74.5,
    "suitable": true,
-   "seconds": 15
+   "seconds": 12
   },
   {
    "name": "Electric Bowery",
@@ -2670,48 +2785,85 @@
    "reachable": true,
    "final": "https://electricbowery.com/",
    "platform": "wordpress",
-   "entry": "https://www.electricbowery.com/",
-   "links": 3,
+   "entry": "https://www.electricbowery.com/portfolio",
+   "links": 27,
    "pages": [
+    {
+     "url": "https://electricbowery.com/portfolio/",
+     "photos": 20,
+     "hospitality": true,
+     "sizes": [
+      [
+       2000,
+       1500
+      ],
+      [
+       2000,
+       1333
+      ]
+     ]
+    },
+    {
+     "url": "https://electricbowery.com/comments/feed/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://electricbowery.com/discovers/",
+     "photos": 20,
+     "hospitality": false,
+     "sizes": [
+      [
+       2000,
+       1500
+      ],
+      [
+       2000,
+       1333
+      ]
+     ]
+    },
+    {
+     "url": "https://electricbowery.com/studio/",
+     "photos": 20,
+     "hospitality": true,
+     "sizes": [
+      [
+       1333,
+       2000
+      ],
+      [
+       1198,
+       1800
+      ]
+     ]
+    },
     {
      "url": "https://www.electricbowery.com/portfolio.html",
      "photos": 0,
      "hospitality": false,
      "sizes": [],
      "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "url": "https://www.electricbowery.com/discover.html",
-     "photos": 0,
-     "hospitality": false,
-     "sizes": [],
-     "error": "HTTPError: HTTP Error 404: Not Found"
-    },
-    {
-     "url": "https://www.electricbowery.com/studio.html",
-     "photos": 0,
-     "hospitality": false,
-     "sizes": [],
-     "error": "HTTPError: HTTP Error 404: Not Found"
     }
    ],
-   "hospitality_share": 0.0,
-   "volume_score": 1,
-   "good_pages": 0,
-   "photos_measured": 0,
-   "photos_passing": 0,
+   "hospitality_share": 0.6,
+   "volume_score": 9,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 4,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 0,
-    "hospitality": 0.0,
-    "volume": 1,
+    "harvestable": 12.0,
+    "photo_size": 13.3,
+    "hospitality": 9.0,
+    "volume": 9,
     "lens": 11,
     "us": 10,
     "mix": 7
    },
-   "score": 29.0,
-   "suitable": false,
-   "seconds": 51
+   "score": 71.3,
+   "suitable": true,
+   "seconds": 31
   },
   {
    "name": "Champalimaud Design",
@@ -2724,20 +2876,28 @@
    "pages": [
     {
      "url": "https://www.champalimaud.design/featured-projects",
-     "photos": 1,
+     "photos": 12,
      "hospitality": true,
      "sizes": [
       [
        2500,
-       1687
+       1667
+      ],
+      [
+       2400,
+       1800
       ]
      ]
     },
     {
      "url": "https://www.champalimaud.design/collection",
-     "photos": 1,
+     "photos": 8,
      "hospitality": false,
      "sizes": [
+      [
+       2500,
+       800
+      ],
       [
        2500,
        800
@@ -2746,67 +2906,67 @@
     },
     {
      "url": "https://www.champalimaud.design/resorts-hotels/the-bellagio",
-     "photos": 2,
+     "photos": 9,
      "hospitality": true,
      "sizes": [
       [
        2500,
-       1668
+       3748
       ],
       [
        2500,
-       1668
+       1667
       ]
      ]
     },
     {
      "url": "https://www.champalimaud.design/private-homes/77-peak-road-hong-kong",
-     "photos": 2,
+     "photos": 12,
      "hospitality": true,
      "sizes": [
       [
-       2400,
-       1800
+       960,
+       1440
       ],
       [
-       2400,
-       1800
+       1081,
+       1440
       ]
      ]
     },
     {
      "url": "https://www.champalimaud.design/resorts-hotels/raffles-hotel-singapore",
-     "photos": 2,
+     "photos": 12,
      "hospitality": true,
      "sizes": [
       [
-       2500,
-       1222
+       2000,
+       2800
       ],
       [
        2500,
-       2922
+       1553
       ]
      ]
     }
    ],
    "hospitality_share": 0.8,
    "volume_score": 4,
-   "good_pages": 0,
-   "photos_measured": 8,
-   "photos_passing": 6,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 7,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 15.0,
+    "harvestable": 20.0,
+    "photo_size": 14.0,
     "hospitality": 12.0,
     "volume": 4,
     "lens": 13,
     "us": 6,
     "mix": 10
    },
-   "score": 60.0,
-   "suitable": false,
-   "seconds": 13
+   "score": 79.0,
+   "suitable": true,
+   "seconds": 12
   },
   {
    "name": "Tihany Design",
@@ -2814,26 +2974,84 @@
    "reachable": true,
    "final": "https://tihanydesign.com/",
    "platform": "wordpress",
-   "entry": "https://www.tihanydesign.com/",
-   "links": 0,
-   "pages": [],
-   "hospitality_share": 0,
-   "volume_score": 0,
-   "good_pages": 0,
-   "photos_measured": 0,
-   "photos_passing": 0,
+   "entry": "https://www.tihanydesign.com/projects",
+   "links": 33,
+   "pages": [
+    {
+     "url": "https://tihanydesign.com/projects",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://tihanydesign.com/legacy",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://tihanydesign.com/projects/the-springs",
+     "photos": 17,
+     "hospitality": true,
+     "sizes": [
+      [
+       1045,
+       567
+      ],
+      [
+       2253,
+       1413
+      ]
+     ]
+    },
+    {
+     "url": "https://tihanydesign.com/projects/the-penrose-room",
+     "photos": 14,
+     "hospitality": true,
+     "sizes": [
+      [
+       1045,
+       567
+      ],
+      [
+       2253,
+       1413
+      ]
+     ]
+    },
+    {
+     "url": "https://tihanydesign.com/projects/sauska-tokaj-winery",
+     "photos": 11,
+     "hospitality": true,
+     "sizes": [
+      [
+       1045,
+       567
+      ],
+      [
+       2253,
+       1413
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 10,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 3,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 0,
-    "hospitality": 0,
-    "volume": 0,
+    "harvestable": 12.0,
+    "photo_size": 10.0,
+    "hospitality": 15.0,
+    "volume": 10,
     "lens": 12,
     "us": 6,
     "mix": 10
    },
-   "score": 28.0,
-   "suitable": false,
-   "seconds": 13
+   "score": 75.0,
+   "suitable": true,
+   "seconds": 21
   },
   {
    "name": "Ward + Gray",
@@ -2880,28 +3098,24 @@
    "pages": [
     {
      "url": "https://www.designbitches.com/residential",
-     "photos": 2,
+     "photos": 4,
      "hospitality": false,
      "sizes": [
       [
        2500,
-       1875
+       2501
       ],
       [
-       2184,
-       2175
+       2500,
+       1875
       ]
      ]
     },
     {
      "url": "https://www.designbitches.com/COMMERCIAL",
-     "photos": 2,
+     "photos": 1,
      "hospitality": true,
      "sizes": [
-      [
-       1500,
-       1000
-      ],
       [
        1067,
        1600
@@ -2910,13 +3124,9 @@
     },
     {
      "url": "https://www.designbitches.com/hospitality-retail",
-     "photos": 2,
+     "photos": 1,
      "hospitality": true,
      "sizes": [
-      [
-       1500,
-       1000
-      ],
       [
        1067,
        1600
@@ -2948,35 +3158,95 @@
    ],
    "hospitality_share": 0.6,
    "volume_score": 9,
-   "good_pages": 0,
-   "photos_measured": 8,
+   "good_pages": 1,
+   "photos_measured": 6,
    "photos_passing": 4,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 10.0,
+    "harvestable": 4.0,
+    "photo_size": 13.3,
     "hospitality": 9.0,
     "volume": 9,
     "lens": 10,
     "us": 10,
     "mix": 7
    },
-   "score": 55.0,
-   "suitable": false,
-   "seconds": 11
+   "score": 62.3,
+   "suitable": true,
+   "seconds": 9
   },
   {
    "name": "Crème",
-   "url": "https://www.cremedesign.com/",
+   "url": "https://cremedesign.com/",
    "reachable": false,
    "error": "RemoteDisconnected: Remote end closed connection without response",
-   "seconds": 0
+   "seconds": 1
   },
   {
    "name": "Stonehill Taylor",
-   "url": "https://www.stonehilltaylor.com/",
-   "reachable": false,
-   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
-   "seconds": 1
+   "url": "https://stonehilltaylor.com/",
+   "reachable": true,
+   "final": "https://stonehilltaylor.com/",
+   "platform": "wordpress",
+   "entry": "https://stonehilltaylor.com/portfolio",
+   "links": 70,
+   "pages": [
+    {
+     "url": "https://stonehilltaylor.com/comments/feed/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://stonehilltaylor.com/portfolios-grid-new/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://stonehilltaylor.com/project-category/architecture/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://stonehilltaylor.com/project-category/interior-design/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://stonehilltaylor.com/our-process",
+     "photos": 3,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ],
+      [
+       1297,
+       2013
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.8,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 2,
+   "photos_passing": 2,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 20.0,
+    "hospitality": 12.0,
+    "volume": 10,
+    "lens": 9,
+    "us": 10,
+    "mix": 8
+   },
+   "score": 69.0,
+   "suitable": false,
+   "seconds": 18
   },
   {
    "name": "Ménard Dworkind",
@@ -2989,52 +3259,34 @@
    "pages": [
     {
      "url": "https://www.menarddworkind.com/en/projects",
-     "photos": 30,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2200,
-       1467
-      ],
-      [
-       2200,
-       1468
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.menarddworkind.com/fr/projets",
-     "photos": 30,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2200,
-       1467
-      ],
-      [
-       1467,
-       2200
-      ]
-     ]
+     "sizes": []
     }
    ],
    "hospitality_share": 1.0,
    "volume_score": 1,
-   "good_pages": 2,
-   "photos_measured": 4,
-   "photos_passing": 4,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
    "scores": {
-    "harvestable": 8.0,
-    "photo_size": 20.0,
+    "harvestable": 0.0,
+    "photo_size": 0,
     "hospitality": 15.0,
     "volume": 1,
     "lens": 14,
     "us": 3,
     "mix": 7
    },
-   "score": 68.0,
-   "suitable": true,
-   "seconds": 10
+   "score": 40.0,
+   "suitable": false,
+   "seconds": 8
   },
   {
    "name": "Atelier Zébulon Perron",
@@ -3043,20 +3295,35 @@
    "final": "https://zebulonperron.com/",
    "platform": "squarespace",
    "entry": "https://www.zebulonperron.com/",
-   "links": 43,
+   "links": 44,
    "pages": [
     {
-     "url": "https://www.zebulonperron.com/fr/projets",
-     "photos": 2,
+     "url": "https://zebulonperron.com/en/projects",
+     "photos": 3,
      "hospitality": true,
      "sizes": [
       [
-       2500,
-       1666
+       1500,
+       1125
       ],
+      [
+       2500,
+       1875
+      ]
+     ]
+    },
+    {
+     "url": "https://www.zebulonperron.com/fr/projets",
+     "photos": 3,
+     "hospitality": true,
+     "sizes": [
       [
        1500,
        1125
+      ],
+      [
+       2500,
+       1875
       ]
      ]
     },
@@ -3066,64 +3333,49 @@
      "hospitality": true,
      "sizes": [
       [
-       504,
-       504
+       2500,
+       1963
       ],
       [
        2500,
-       1963
+       3159
       ]
      ]
     },
     {
      "url": "https://www.zebulonperron.com/fr/archives",
-     "photos": 19,
+     "photos": 0,
      "hospitality": true,
-     "sizes": [
-      [
-       2500,
-       1668
-      ],
-      [
-       2500,
-       1637
-      ]
-     ]
+     "sizes": []
     },
     {
      "url": "https://www.zebulonperron.com/fr/emploi",
      "photos": 0,
      "hospitality": false,
      "sizes": []
-    },
-    {
-     "url": "https://www.zebulonperron.com/fr/contact",
-     "photos": 0,
-     "hospitality": false,
-     "sizes": []
     }
    ],
-   "hospitality_share": 0.6,
+   "hospitality_share": 0.8,
    "volume_score": 10,
-   "good_pages": 1,
+   "good_pages": 0,
    "photos_measured": 6,
    "photos_passing": 4,
    "scores": {
-    "harvestable": 4.0,
+    "harvestable": 0.0,
     "photo_size": 13.3,
-    "hospitality": 9.0,
+    "hospitality": 12.0,
     "volume": 10,
     "lens": 12,
     "us": 3,
     "mix": 7
    },
-   "score": 58.3,
-   "suitable": true,
-   "seconds": 15
+   "score": 57.3,
+   "suitable": false,
+   "seconds": 13
   },
   {
    "name": "A-nrd",
-   "url": "https://www.a-nrd.com/",
+   "url": "https://a-nrd.com/",
    "reachable": false,
    "error": "HTTPError: HTTP Error 403: Forbidden",
    "seconds": 0
@@ -3139,77 +3391,97 @@
    "pages": [
     {
      "url": "https://www.nicemakers.com/residential-projects",
-     "photos": 1,
+     "photos": 13,
      "hospitality": false,
      "sizes": [
       [
-       1293,
-       1330
+       426,
+       640
+      ],
+      [
+       480,
+       597
       ]
      ]
     },
     {
      "url": "https://www.nicemakers.com/hospitality-projects",
-     "photos": 1,
+     "photos": 25,
      "hospitality": true,
      "sizes": [
       [
-       1293,
-       1330
+       426,
+       640
+      ],
+      [
+       426,
+       640
       ]
      ]
     },
     {
      "url": "https://www.nicemakers.com/in-progress",
-     "photos": 1,
+     "photos": 13,
      "hospitality": true,
      "sizes": [
       [
-       1293,
-       1330
+       479,
+       640
+      ],
+      [
+       457,
+       640
       ]
      ]
     },
     {
      "url": "https://www.nicemakers.com/hospitality-projects/co-living-the-eades",
-     "photos": 1,
+     "photos": 17,
      "hospitality": true,
      "sizes": [
       [
-       1293,
-       1330
+       960,
+       1440
+      ],
+      [
+       959,
+       1440
       ]
      ]
     },
     {
      "url": "https://www.nicemakers.com/hospitality-projects/offices-staal-kade",
-     "photos": 1,
+     "photos": 11,
      "hospitality": true,
      "sizes": [
       [
-       1293,
-       1330
+       1920,
+       1383
+      ],
+      [
+       960,
+       1440
       ]
      ]
     }
    ],
    "hospitality_share": 0.8,
    "volume_score": 2,
-   "good_pages": 0,
-   "photos_measured": 5,
-   "photos_passing": 0,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 1,
    "scores": {
-    "harvestable": 0.0,
-    "photo_size": 0.0,
+    "harvestable": 20.0,
+    "photo_size": 2.0,
     "hospitality": 12.0,
     "volume": 2,
     "lens": 11,
     "us": 3,
     "mix": 7
    },
-   "score": 35.0,
-   "suitable": false,
-   "seconds": 6
+   "score": 57.0,
+   "suitable": true,
+   "seconds": 10
   },
   {
    "name": "AN Interior",
@@ -3345,7 +3617,7 @@
    },
    "score": 40.3,
    "suitable": false,
-   "seconds": 3
+   "seconds": 2
   },
   {
    "name": "Hotels Above Par",
@@ -3411,7 +3683,7 @@
    },
    "score": 32.5,
    "suitable": false,
-   "seconds": 6
+   "seconds": 4
   },
   {
    "name": "Ignant",
@@ -3483,7 +3755,7 @@
    },
    "score": 56.7,
    "suitable": true,
-   "seconds": 7
+   "seconds": 6
   },
   {
    "name": "Openhouse",
@@ -3551,7 +3823,7 @@
    },
    "score": 58.1,
    "suitable": true,
-   "seconds": 13
+   "seconds": 12
   },
   {
    "name": "Est Living",
@@ -3623,7 +3895,7 @@
    },
    "score": 36.6,
    "suitable": false,
-   "seconds": 4
+   "seconds": 3
   },
   {
    "name": "Punch",
@@ -3686,7 +3958,7 @@
    },
    "score": 54.8,
    "suitable": true,
-   "seconds": 4
+   "seconds": 2
   },
   {
    "name": "Atlas Obscura",
@@ -3758,7 +4030,3247 @@
    },
    "score": 42.1,
    "suitable": true,
+   "seconds": 5
+  },
+  {
+   "name": "Eric Medsker",
+   "url": "https://ericmedsker.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "seconds": 1
+  },
+  {
+   "name": "Daniel Krieger",
+   "url": "https://www.danielkrieger.com/",
+   "reachable": true,
+   "final": "https://www.danielkrieger.com/",
+   "platform": "squarespace",
+   "entry": "https://www.danielkrieger.com/",
+   "links": 7,
+   "pages": [
+    {
+     "url": "https://www.danielkrieger.com/nycrestaurantprints",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1664
+      ],
+      [
+       2500,
+       1398
+      ]
+     ]
+    },
+    {
+     "url": "https://www.danielkrieger.com/social",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1882,
+       1462
+      ]
+     ]
+    },
+    {
+     "url": "https://www.danielkrieger.com/nycfoodphotography/project-one-h346n-8bm93",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2000,
+       1333
+      ],
+      [
+       2500,
+       1667
+      ]
+     ]
+    },
+    {
+     "url": "https://www.danielkrieger.com/nycfoodphotography/project-two-whgpe-a7gbg",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1664
+      ],
+      [
+       2500,
+       1664
+      ]
+     ]
+    },
+    {
+     "url": "https://www.danielkrieger.com/nycfoodphotography/project-three-ph2n3-dmhfw",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1664
+      ],
+      [
+       2500,
+       1664
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 2,
+   "good_pages": 4,
+   "photos_measured": 9,
+   "photos_passing": 8,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 17.8,
+    "hospitality": 9.0,
+    "volume": 2,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 72.8,
+   "suitable": true,
+   "seconds": 12
+  },
+  {
+   "name": "Noah Fecks",
+   "url": "https://www.noahfecks.com/",
+   "reachable": true,
+   "final": "https://www.noahfecks.com/",
+   "platform": "unknown",
+   "entry": "https://www.noahfecks.com/",
+   "links": 14,
+   "pages": [
+    {
+     "url": "https://www.noahfecks.com/Clients/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       720,
+       720
+      ]
+     ]
+    },
+    {
+     "url": "https://www.noahfecks.com/Select-Titles/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1281,
+       1700
+      ]
+     ]
+    },
+    {
+     "url": "https://www.noahfecks.com/recent-work/vinya-wines/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.noahfecks.com/recent-work/l.v.m.h./1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.noahfecks.com/recent-work/great-jones/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 5,
+   "good_pages": 0,
+   "photos_measured": 2,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 10.0,
+    "hospitality": 0.0,
+    "volume": 5,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 43.0,
+   "suitable": false,
+   "seconds": 8
+  },
+  {
+   "name": "Michael Kleinberg",
+   "url": "https://www.michaelkleinberg.com/",
+   "reachable": true,
+   "final": "https://www.michaelkleinberg.com/",
+   "platform": "wix",
+   "entry": "https://www.michaelkleinberg.com/",
+   "links": 5,
+   "pages": [
+    {
+     "url": "https://www.michaelkleinberg.com/interior",
+     "photos": 25,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       2500
+      ],
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelkleinberg.com/exterior",
+     "photos": 25,
+     "hospitality": false,
+     "sizes": [
+      [
+       480,
+       269
+      ],
+      [
+       480,
+       270
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelkleinberg.com/lifestyle",
+     "photos": 25,
+     "hospitality": false,
+     "sizes": [
+      [
+       408,
+       272
+      ],
+      [
+       407,
+       272
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelkleinberg.com/motion",
+     "photos": 8,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelkleinberg.com/personal",
+     "photos": 21,
+     "hospitality": false,
+     "sizes": [
+      [
+       408,
+       272
+      ],
+      [
+       408,
+       272
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 2,
+   "good_pages": 5,
+   "photos_measured": 9,
+   "photos_passing": 3,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 6.0,
+    "hospitality": 3.0,
+    "volume": 2,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 59.0,
+   "suitable": true,
+   "seconds": 12
+  },
+  {
+   "name": "Melissa Hom",
+   "url": "https://www.melissahom.com/",
+   "reachable": true,
+   "final": "https://www.melissahom.com/",
+   "platform": "squarespace",
+   "entry": "https://www.melissahom.com/",
+   "links": 11,
+   "pages": [
+    {
+     "url": "https://www.melissahom.com/work/the-modern-tiffin",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3787
+      ],
+      [
+       2500,
+       3750
+      ]
+     ]
+    },
+    {
+     "url": "https://www.melissahom.com/work/kodawari",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3774
+      ],
+      [
+       2500,
+       3771
+      ]
+     ]
+    },
+    {
+     "url": "https://www.melissahom.com/work/harneysonstea",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3585
+      ],
+      [
+       2500,
+       3799
+      ]
+     ]
+    },
+    {
+     "url": "https://www.melissahom.com/work/live-kindly-collective",
+     "photos": 9,
+     "hospitality": true,
+     "sizes": [
+      [
+       1000,
+       667
+      ],
+      [
+       2000,
+       1443
+      ]
+     ]
+    },
+    {
+     "url": "https://www.melissahom.com/work/el-condor",
+     "photos": 23,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       3750
+      ],
+      [
+       2500,
+       3800
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.4,
+   "volume_score": 4,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 9,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 18.0,
+    "hospitality": 6.0,
+    "volume": 4,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 76.0,
+   "suitable": true,
+   "seconds": 14
+  },
+  {
+   "name": "Oleg March",
+   "url": "https://olegmarch.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "seconds": 0
+  },
+  {
+   "name": "Alex Staniloff",
+   "url": "https://www.alexstaniloff.com/",
+   "reachable": true,
+   "final": "https://www.alexstaniloff.com/",
+   "platform": "squarespace",
+   "entry": "https://www.alexstaniloff.com/",
+   "links": 24,
+   "pages": [
+    {
+     "url": "https://www.alexstaniloff.com/work/printemps",
+     "photos": 11,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       3748
+      ],
+      [
+       2500,
+       3748
+      ]
+     ]
+    },
+    {
+     "url": "https://www.alexstaniloff.com/work/cafechelsea",
+     "photos": 11,
+     "hospitality": true,
+     "sizes": [
+      [
+       1067,
+       1600
+      ],
+      [
+       2399,
+       1600
+      ]
+     ]
+    },
+    {
+     "url": "https://www.alexstaniloff.com/work/carnitasramirez",
+     "photos": 8,
+     "hospitality": true,
+     "sizes": [
+      [
+       1067,
+       1600
+      ],
+      [
+       2399,
+       1600
+      ]
+     ]
+    },
+    {
+     "url": "https://www.alexstaniloff.com/work/lebernadin",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2400,
+       1600
+      ],
+      [
+       2500,
+       1668
+      ]
+     ]
+    },
+    {
+     "url": "https://www.alexstaniloff.com/work/donangie",
+     "photos": 10,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3748
+      ],
+      [
+       2500,
+       1667
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 8,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 8,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 16.0,
+    "hospitality": 9.0,
+    "volume": 8,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 81.0,
+   "suitable": true,
+   "seconds": 16
+  },
+  {
+   "name": "Signe Birck",
+   "url": "https://www.signebirck.com/",
+   "reachable": true,
+   "final": "https://www.signebirck.com/",
+   "platform": "squarespace",
+   "entry": "https://www.signebirck.com/",
+   "links": 15,
+   "pages": [
+    {
+     "url": "https://www.signebirck.com/my-cookbook",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       1417,
+       1772
+      ],
+      [
+       850,
+       1063
+      ]
+     ]
+    },
+    {
+     "url": "https://www.signebirck.com/portfolios",
+     "photos": 4,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3417
+      ],
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.signebirck.com/food",
+     "photos": 4,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3417
+      ],
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.signebirck.com/interiors",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       850,
+       1063
+      ],
+      [
+       850,
+       1063
+      ]
+     ]
+    },
+    {
+     "url": "https://www.signebirck.com/beverages",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       750,
+       1001
+      ],
+      [
+       850,
+       1190
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 5,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 5,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 10.0,
+    "hospitality": 3.0,
+    "volume": 5,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 65.0,
+   "suitable": true,
+   "seconds": 14
+  },
+  {
+   "name": "Nicole LaMotte",
+   "url": "https://www.nicolelamotte.com/",
+   "reachable": true,
+   "final": "https://www.nicolelamotte.com/",
+   "platform": "unknown",
+   "entry": "https://www.nicolelamotte.com/",
+   "links": 9,
+   "pages": [
+    {
+     "url": "https://www.nicolelamotte.com/PORTFOLIO/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.nicolelamotte.com/TRAVEL/TWO/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.nicolelamotte.com/STILL-LIFE/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.nicolelamotte.com/TRAVEL/ONE/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.nicolelamotte.com/INTERIORS/ONE/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 3,
+   "good_pages": 0,
+   "photos_measured": 5,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0.0,
+    "hospitality": 15.0,
+    "volume": 3,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 45.0,
+   "suitable": false,
+   "seconds": 8
+  },
+  {
+   "name": "Kyle Knodell",
+   "url": "https://kyleknodell.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "seconds": 0
+  },
+  {
+   "name": "Michael Wiltbank",
+   "url": "https://www.michaelwiltbank.com/",
+   "reachable": true,
+   "final": "https://www.michaelwiltbank.com/",
+   "platform": "squarespace",
+   "entry": "https://www.michaelwiltbank.com/interiors",
+   "links": 32,
+   "pages": [
+    {
+     "url": "https://www.michaelwiltbank.com/interiors",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.michaelwiltbank.com/portraits",
+     "photos": 13,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3750
+      ],
+      [
+       1500,
+       2160
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelwiltbank.com/travel",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       1500,
+       1522
+      ],
+      [
+       2500,
+       3333
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelwiltbank.com/still-life",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3750
+      ],
+      [
+       2500,
+       3750
+      ]
+     ]
+    },
+    {
+     "url": "https://www.michaelwiltbank.com/love-list",
+     "photos": 11,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1660
+      ],
+      [
+       2500,
+       3792
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 10,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 8,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 20.0,
+    "hospitality": 3.0,
+    "volume": 10,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 76.0,
+   "suitable": true,
+   "seconds": 17
+  },
+  {
+   "name": "Chris Mottalini",
+   "url": "https://www.mottalini.com/",
+   "reachable": true,
+   "final": "https://mottalini.com/",
+   "platform": "cargo",
+   "entry": "https://www.mottalini.com/",
+   "links": 24,
+   "pages": [
+    {
+     "url": "https://mottalini.com/rss",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://mottalini.com/stylesheet",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.mottalini.com/{{project_url}}",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.mottalini.com/Menu",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.mottalini.com/Home",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.4,
+   "volume_score": 8,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 6.0,
+    "volume": 8,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 42.0,
+   "suitable": false,
+   "seconds": 14
+  },
+  {
+   "name": "Lesley Unruh",
+   "url": "https://lesleyunruh.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "seconds": 0
+  },
+  {
+   "name": "Heidi's Bridge",
+   "url": "https://www.heidisbridge.com/",
+   "reachable": true,
+   "final": "https://www.heidisbridge.com/",
+   "platform": "squarespace",
+   "entry": "https://www.heidisbridge.com/",
+   "links": 6,
+   "pages": [
+    {
+     "url": "https://www.heidisbridge.com/motion",
+     "photos": 8,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1407
+      ],
+      [
+       2500,
+       1415
+      ]
+     ]
+    },
+    {
+     "url": "https://www.heidisbridge.com/video",
+     "photos": 8,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1407
+      ],
+      [
+       2500,
+       1415
+      ]
+     ]
+    },
+    {
+     "url": "https://www.heidisbridge.com/stop-motion",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.heidisbridge.com/food",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3333
+      ],
+      [
+       2000,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.heidisbridge.com/beverage",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       2501
+      ],
+      [
+       1500,
+       999
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 2,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 7,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 17.5,
+    "hospitality": 0.0,
+    "volume": 2,
+    "lens": 12,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 64.5,
+   "suitable": true,
+   "seconds": 12
+  },
+  {
+   "name": "Jason Varney",
+   "url": "https://www.jasonvarney.com/",
+   "reachable": true,
+   "final": "https://www.jasonvarney.com/",
+   "platform": "unknown",
+   "entry": "https://www.jasonvarney.com/",
+   "links": 52,
+   "pages": [
+    {
+     "url": "https://www.jasonvarney.com/WORK/Booze-&-Vinyl/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       2727,
+       2200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jasonvarney.com/WORK/Restaurants/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1571,
+       2200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jasonvarney.com/WORK/Wyeth/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1465,
+       2200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jasonvarney.com/WORK/Smirnoff-Global/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       3297,
+       2200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jasonvarney.com/WORK/East-Coast-Wine/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1465,
+       2200
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 5,
+   "photos_passing": 5,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 20.0,
+    "hospitality": 3.0,
+    "volume": 10,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 60.0,
+   "suitable": false,
+   "seconds": 10
+  },
+  {
+   "name": "Scott Suchman",
+   "url": "https://scottsuchman.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "seconds": 0
+  },
+  {
+   "name": "Greg Powers",
+   "url": "https://www.gregpowersphotography.com/",
+   "reachable": true,
+   "final": "https://gregpowers.us/",
+   "platform": "unknown",
+   "entry": "https://www.gregpowersphotography.com/",
+   "links": 47,
+   "pages": [
+    {
+     "url": "https://www.gregpowersphotography.com/BIO-&-CONTACT/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.gregpowersphotography.com/Just-A-Quick-Look/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.gregpowersphotography.com/MARRIOTT-HOTELS/Luxury-Brands/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.gregpowersphotography.com/MARRIOTT-HOTELS/Extended-Stays/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.gregpowersphotography.com/MARRIOTT-HOTELS/Shop-JW-Marriott/1/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0.0,
+    "volume": 10,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 37.0,
+   "suitable": false,
+   "seconds": 5
+  },
+  {
+   "name": "Anthony Tahlier",
+   "url": "https://anthonytahlier.com/",
+   "reachable": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response",
+   "seconds": 1
+  },
+  {
+   "name": "Aimee Mazzenga",
+   "url": "https://www.aimeemazzenga.com/",
+   "reachable": true,
+   "final": "https://aimeemazzenga.com/",
+   "platform": "squarespace",
+   "entry": "https://www.aimeemazzenga.com/interiors",
+   "links": 9,
+   "pages": [
+    {
+     "url": "https://aimeemazzenga.com/interiors",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ]
+     ]
+    },
+    {
+     "url": "https://www.aimeemazzenga.com/interiors",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ]
+     ]
+    },
+    {
+     "url": "https://www.aimeemazzenga.com/southern-living-show-house",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2048,
+       3072
+      ],
+      [
+       2048,
+       3071
+      ]
+     ]
+    },
+    {
+     "url": "https://www.aimeemazzenga.com/washington-avenue",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       3750
+      ],
+      [
+       2352,
+       1562
+      ]
+     ]
+    },
+    {
+     "url": "https://www.aimeemazzenga.com/walton-place",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2437,
+       3655
+      ],
+      [
+       2500,
+       1667
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.4,
+   "volume_score": 3,
+   "good_pages": 3,
+   "photos_measured": 8,
+   "photos_passing": 8,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 20.0,
+    "hospitality": 6.0,
+    "volume": 3,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 68.0,
+   "suitable": true,
+   "seconds": 17
+  },
+  {
+   "name": "Wonho Frank Lee",
+   "url": "https://www.wonhophoto.com/",
+   "reachable": true,
+   "final": "https://www.wonhophoto.com/",
+   "platform": "unknown",
+   "entry": "https://www.wonhophoto.com/",
+   "links": 5,
+   "pages": [
+    {
+     "url": "https://www.wonhophoto.com/food",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       300,
+       450
+      ],
+      [
+       300,
+       450
+      ]
+     ]
+    },
+    {
+     "url": "https://www.wonhophoto.com/drinks",
+     "photos": 14,
+     "hospitality": false,
+     "sizes": [
+      [
+       300,
+       450
+      ],
+      [
+       450,
+       300
+      ]
+     ]
+    },
+    {
+     "url": "https://www.wonhophoto.com/people",
+     "photos": 11,
+     "hospitality": false,
+     "sizes": [
+      [
+       300,
+       450
+      ],
+      [
+       450,
+       300
+      ]
+     ]
+    },
+    {
+     "url": "https://www.wonhophoto.com/living-spaces",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       450,
+       300
+      ],
+      [
+       450,
+       300
+      ]
+     ]
+    },
+    {
+     "url": "https://www.wonhophoto.com/commercial-spaces",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       450,
+       300
+      ],
+      [
+       450,
+       300
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 2,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 0.0,
+    "hospitality": 0.0,
+    "volume": 2,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 50.0,
+   "suitable": false,
+   "seconds": 8
+  },
+  {
+   "name": "Jakob Layman",
+   "url": "https://www.jakoblayman.com/",
+   "reachable": true,
+   "final": "https://www.jakoblayman.com/",
+   "platform": "squarespace",
+   "entry": "https://www.jakoblayman.com/",
+   "links": 6,
+   "pages": [
+    {
+     "url": "https://www.jakoblayman.com/food-photographer-los-angeles",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1668
+      ],
+      [
+       2000,
+       3000
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jakoblayman.com/drinks-photographer-los-angeles",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2001,
+       3000
+      ],
+      [
+       2000,
+       3000
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jakoblayman.com/interior-photographer-los-angeles",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1668
+      ],
+      [
+       2500,
+       1668
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jakoblayman.com/food-photographer",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.jakoblayman.com/cocktail-photographer",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 2,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 6,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 20.0,
+    "hospitality": 0.0,
+    "volume": 2,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 62.0,
+   "suitable": true,
+   "seconds": 11
+  },
+  {
+   "name": "Dylan + Jeni",
+   "url": "https://www.dylanandjeni.com/",
+   "reachable": true,
+   "final": "https://www.dylanandjeni.com/",
+   "platform": "format",
+   "entry": "https://www.dylanandjeni.com/",
+   "links": 1,
+   "pages": [
+    {
+     "url": "https://www.dylanandjeni.com/thankyou",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 15.0,
+    "volume": 0,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 43.0,
+   "suitable": false,
+   "seconds": 5
+  },
+  {
+   "name": "Jenna Peffley",
+   "url": "https://www.jennapeffley.com/",
+   "reachable": true,
+   "final": "https://www.jennapeffley.com/",
+   "platform": "squarespace",
+   "entry": "https://www.jennapeffley.com/",
+   "links": 4,
+   "pages": [
+    {
+     "url": "https://www.jennapeffley.com/ontheroad",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1667
+      ],
+      [
+       2500,
+       1666
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jennapeffley.com/on-the-road-again",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       2099,
+       2939
+      ],
+      [
+       2147,
+       3005
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jennapeffley.com/interior-design",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1329,
+       1714
+      ],
+      [
+       2061,
+       2885
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jennapeffley.com/food",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       1090,
+       1453
+      ],
+      [
+       1244,
+       1658
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.25,
+   "volume_score": 1,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 8,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 20.0,
+    "hospitality": 3.8,
+    "volume": 1,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 67.8,
+   "suitable": true,
+   "seconds": 14
+  },
+  {
+   "name": "Tessa Neustadt",
+   "url": "https://www.tessaneustadt.com/",
+   "reachable": true,
+   "final": "https://www.tessaneustadt.com/",
+   "platform": "wix",
+   "entry": "https://www.tessaneustadt.com/",
+   "links": 4,
+   "pages": [
+    {
+     "url": "https://www.tessaneustadt.com/interiors",
+     "photos": 25,
+     "hospitality": true,
+     "sizes": [
+      [
+       479,
+       585
+      ],
+      [
+       480,
+       613
+      ]
+     ]
+    },
+    {
+     "url": "https://www.tessaneustadt.com/comercial",
+     "photos": 10,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       2500
+      ],
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.tessaneustadt.com/tear-sheets",
+     "photos": 25,
+     "hospitality": false,
+     "sizes": [
+      [
+       479,
+       380
+      ],
+      [
+       480,
+       642
+      ]
+     ]
+    },
+    {
+     "url": "https://www.tessaneustadt.com/styling",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       2500
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.25,
+   "volume_score": 1,
+   "good_pages": 3,
+   "photos_measured": 7,
+   "photos_passing": 3,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 8.6,
+    "hospitality": 3.8,
+    "volume": 1,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 52.4,
+   "suitable": true,
+   "seconds": 14
+  },
+  {
+   "name": "Bess Friday",
+   "url": "https://www.bessfriday.com/",
+   "reachable": true,
+   "final": "https://www.bessfriday.com/",
+   "platform": "squarespace",
+   "entry": "https://www.bessfriday.com/",
+   "links": 4,
+   "pages": [
+    {
+     "url": "https://www.bessfriday.com/interiors",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1667
+      ],
+      [
+       1500,
+       2249
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bessfriday.com/lifestyle",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       1000,
+       1500
+      ],
+      [
+       1500,
+       2250
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bessfriday.com/fineart",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bessfriday.com/covers",
+     "photos": 5,
+     "hospitality": false,
+     "sizes": [
+      [
+       1179,
+       1412
+      ],
+      [
+       1179,
+       1413
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.25,
+   "volume_score": 1,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 5,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 16.7,
+    "hospitality": 3.8,
+    "volume": 1,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 60.5,
+   "suitable": true,
+   "seconds": 10
+  },
+  {
+   "name": "Erin Kunkel",
+   "url": "https://www.erinkunkel.com/",
+   "reachable": true,
+   "final": "https://www.erinkunkel.com/",
+   "platform": "unknown",
+   "entry": "https://www.erinkunkel.com/",
+   "links": 18,
+   "pages": [
+    {
+     "url": "http://erinkunkel.com/pdf",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.erinkunkel.com/motion/1/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.erinkunkel.com/SF-Home-+-Studio/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.erinkunkel.com/Bonny-Doon-Cabin/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       855,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.erinkunkel.com/GALLERIES/FEAST/1/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2999,
+       2000
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.8,
+   "volume_score": 6,
+   "good_pages": 0,
+   "photos_measured": 3,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 6.7,
+    "hospitality": 12.0,
+    "volume": 6,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 51.7,
+   "suitable": false,
+   "seconds": 7
+  },
+  {
+   "name": "Jody Horton",
+   "url": "https://www.jodyhorton.com/",
+   "reachable": true,
+   "final": "https://www.jodyhorton.com/",
+   "platform": "unknown",
+   "entry": "https://www.jodyhorton.com/",
+   "links": 34,
+   "pages": [
+    {
+     "url": "https://www.jodyhorton.com/jodyhorton.photofolio.io/pdfbuilder/thumbs/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": [],
+     "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+     "url": "https://www.jodyhorton.com/Tearsheets/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1845,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jodyhorton.com/Portfolios/Lifestyle/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1667
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jodyhorton.com/STORIES/Mezcal/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1067,
+       1600
+      ]
+     ]
+    },
+    {
+     "url": "https://www.jodyhorton.com/STORIES/Island-Rum/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1067,
+       1600
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 4,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 5.0,
+    "hospitality": 0.0,
+    "volume": 10,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 43.0,
+   "suitable": false,
+   "seconds": 9
+  },
+  {
+   "name": "Kate LeSueur",
+   "url": "https://www.katelesueur.com/",
+   "reachable": true,
+   "final": "https://www.katelesueur.com/",
+   "platform": "squarespace",
+   "entry": "https://www.katelesueur.com/",
+   "links": 0,
+   "pages": [],
+   "hospitality_share": 0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0,
+    "volume": 0,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 28.0,
+   "suitable": false,
+   "seconds": 5
+  },
+  {
+   "name": "Andrea Calo",
+   "url": "https://www.andreacalo.com/",
+   "reachable": true,
+   "final": "https://www.andreacalo.com/",
+   "platform": "squarespace",
+   "entry": "https://www.andreacalo.com/",
+   "links": 3,
+   "pages": [
+    {
+     "url": "https://www.andreacalo.com/select-projects",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.andreacalo.com/workplace",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.andreacalo.com/in-print",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2287,
+       3000
+      ],
+      [
+       2252,
+       3000
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6666666666666666,
+   "volume_score": 1,
+   "good_pages": 1,
+   "photos_measured": 2,
+   "photos_passing": 2,
+   "scores": {
+    "harvestable": 4.0,
+    "photo_size": 20.0,
+    "hospitality": 10.0,
+    "volume": 1,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 62.0,
+   "suitable": true,
+   "seconds": 7
+  },
+  {
+   "name": "Leonid Furmansky",
+   "url": "https://www.leonidfurmansky.com/",
+   "reachable": true,
+   "final": "https://leonidfurmansky.com/",
+   "platform": "squarespace",
+   "entry": "https://www.leonidfurmansky.com/",
+   "links": 96,
+   "pages": [
+    {
+     "url": "https://www.leonidfurmansky.com/architecture-1",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.leonidfurmansky.com/architecture",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "http://leonidfurmansky.com/oil-towers",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2400,
+       3000
+      ],
+      [
+       2400,
+       3000
+      ]
+     ]
+    },
+    {
+     "url": "http://leonidfurmansky.com/new-york-scrim",
+     "photos": 9,
+     "hospitality": false,
+     "sizes": [
+      [
+       2400,
+       3000
+      ],
+      [
+       2400,
+       3000
+      ]
+     ]
+    },
+    {
+     "url": "http://leonidfurmansky.com/oma-the-post-houston",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       2000
+      ],
+      [
+       2500,
+       2000
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 10,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 6,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 20.0,
+    "hospitality": 0.0,
+    "volume": 10,
+    "lens": 9,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 68.0,
+   "suitable": true,
+   "seconds": 14
+  },
+  {
+   "name": "Michael Pisarri",
+   "url": "https://pisarri.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "seconds": 0
+  },
+  {
+   "name": "Preen Inc",
+   "url": "https://www.preeninc.com/",
+   "reachable": true,
+   "final": "https://www.preeninc.com/",
+   "platform": "wix",
+   "entry": "https://www.preeninc.com/",
+   "links": 4,
+   "pages": [
+    {
+     "url": "https://www.preeninc.com/intent",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.preeninc.com/copy-of-services-1",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.preeninc.com/awards",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.preeninc.com/copy-of-about-2",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 1,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 15.0,
+    "volume": 1,
+    "lens": 12,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 45.0,
+   "suitable": false,
+   "seconds": 4
+  },
+  {
+   "name": "Pierce & Ward",
+   "url": "https://www.pierceandward.com/",
+   "reachable": true,
+   "final": "https://pierceandward.com/",
+   "platform": "unknown",
+   "entry": "https://www.pierceandward.com/",
+   "links": 2,
+   "pages": [
+    {
+     "url": "https://www.pierceandward.com/.well-known/ucp",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.pierceandward.com/policies/shipping-policy",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      [
+       720,
+       540
+      ],
+      [
+       1144,
+       1050
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 1,
+   "good_pages": 1,
+   "photos_measured": 2,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 4.0,
+    "photo_size": 0.0,
+    "hospitality": 0.0,
+    "volume": 1,
+    "lens": 12,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 34.0,
+   "suitable": false,
    "seconds": 6
+  },
+  {
+   "name": "Nickey Kehoe",
+   "url": "https://www.nickeykehoe.com/",
+   "reachable": true,
+   "final": "https://nickeykehoe.com/",
+   "platform": "unknown",
+   "entry": "https://www.nickeykehoe.com/",
+   "links": 1,
+   "pages": [
+    {
+     "url": "https://www.nickeykehoe.com/.well-known/ucp",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0.0,
+    "volume": 0,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 28.0,
+   "suitable": false,
+   "seconds": 4
+  },
+  {
+   "name": "BHDM Design",
+   "url": "https://www.bhdmdesign.com/",
+   "reachable": true,
+   "final": "https://www.mazzarinico.com/",
+   "platform": "squarespace",
+   "entry": "https://www.bhdmdesign.com/hospitality",
+   "links": 34,
+   "pages": [
+    {
+     "url": "https://www.bhdmdesign.com/work",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bhdmdesign.com/hospitality",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bhdmdesign.com/residential",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bhdmdesign.com/d-s-s",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bhdmdesign.com/commercial",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2082,
+       1666
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.8,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 1,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 20.0,
+    "hospitality": 12.0,
+    "volume": 10,
+    "lens": 9,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 68.0,
+   "suitable": false,
+   "seconds": 13
+  },
+  {
+   "name": "Avenue Interior Design",
+   "url": "https://www.avenueid.com/",
+   "reachable": true,
+   "final": "https://avenueid.com/",
+   "platform": "wordpress",
+   "entry": "https://www.avenueid.com/work",
+   "links": 18,
+   "pages": [
+    {
+     "url": "https://avenueid.com/work/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://avenueid.com/interior-design/veranda/",
+     "photos": 4,
+     "hospitality": true,
+     "sizes": [
+      [
+       1200,
+       1200
+      ],
+      [
+       1200,
+       800
+      ]
+     ]
+    },
+    {
+     "url": "https://avenueid.com/interior-design/green-valley-ranch-hotel-suites/",
+     "photos": 19,
+     "hospitality": true,
+     "sizes": [
+      [
+       1200,
+       800
+      ],
+      [
+       1200,
+       800
+      ]
+     ]
+    },
+    {
+     "url": "https://avenueid.com/interior-design/four-seasons-la-ola/",
+     "photos": 10,
+     "hospitality": true,
+     "sizes": [
+      [
+       800,
+       1200
+      ],
+      [
+       800,
+       1200
+      ]
+     ]
+    },
+    {
+     "url": "https://avenueid.com/interior-design/oakdale-residence/",
+     "photos": 13,
+     "hospitality": true,
+     "sizes": [
+      [
+       800,
+       1200
+      ],
+      [
+       1200,
+       800
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 6,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 0.0,
+    "hospitality": 15.0,
+    "volume": 6,
+    "lens": 9,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 63.0,
+   "suitable": false,
+   "seconds": 30
+  },
+  {
+   "name": "Blackberry Farm Design",
+   "url": "https://www.blackberryfarmdesign.com/",
+   "reachable": true,
+   "final": "https://www.blackberryfarmdesign.com/",
+   "platform": "unknown",
+   "entry": "https://www.blackberryfarmdesign.com/",
+   "links": 6,
+   "pages": [
+    {
+     "url": "https://www.blackberryfarmdesign.com/portfolio",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.blackberryfarmdesign.com/team",
+     "photos": 9,
+     "hospitality": true,
+     "sizes": [
+      [
+       800,
+       900
+      ],
+      [
+       800,
+       900
+      ]
+     ]
+    },
+    {
+     "url": "https://www.blackberryfarmdesign.com/story",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.blackberryfarmdesign.com/inquiries",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.blackberryfarmdesign.com/pdffiles/privacy-policy",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 2,
+   "good_pages": 1,
+   "photos_measured": 2,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 4.0,
+    "photo_size": 0.0,
+    "hospitality": 9.0,
+    "volume": 2,
+    "lens": 12,
+    "us": 10,
+    "mix": 8
+   },
+   "score": 45.0,
+   "suitable": false,
+   "seconds": 10
+  },
+  {
+   "name": "Carpenter + Mason",
+   "url": "https://carpentermason.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "seconds": 0
+  },
+  {
+   "name": "Bryan O'Sullivan Studio",
+   "url": "https://www.bos-studio.com/",
+   "reachable": true,
+   "final": "https://www.bryanosullivan.com/",
+   "platform": "unknown",
+   "entry": "https://www.bos-studio.com/",
+   "links": 3,
+   "pages": [
+    {
+     "url": "https://www.bos-studio.com/site.webmanifest",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1000,
+       660
+      ],
+      [
+       1024,
+       677
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bos-studio.com/@/page/ganDGGVkdcCOXpMW",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1000,
+       660
+      ],
+      [
+       1024,
+       677
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bos-studio.com/@/page/hO1xEKUeOV5104vk",
+     "photos": 30,
+     "hospitality": true,
+     "sizes": [
+      [
+       1000,
+       660
+      ],
+      [
+       1024,
+       677
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 1,
+   "good_pages": 3,
+   "photos_measured": 6,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 0.0,
+    "hospitality": 15.0,
+    "volume": 1,
+    "lens": 13,
+    "us": 3,
+    "mix": 9
+   },
+   "score": 53.0,
+   "suitable": false,
+   "seconds": 31
+  },
+  {
+   "name": "Russell Sage Studio",
+   "url": "https://russellsagestudio.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "seconds": 0
+  },
+  {
+   "name": "Laura Gonzalez",
+   "url": "https://www.lauragonzalez.fr/",
+   "reachable": true,
+   "final": "https://www.lauragonzalez.fr/",
+   "platform": "wordpress",
+   "entry": "https://www.lauragonzalez.fr/",
+   "links": 97,
+   "pages": [
+    {
+     "url": "https://www.lauragonzalez.fr/comments/feed/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lauragonzalez.fr/en/",
+     "photos": 4,
+     "hospitality": true,
+     "sizes": [
+      [
+       768,
+       50
+      ],
+      [
+       1339,
+       87
+      ]
+     ]
+    },
+    {
+     "url": "https://www.lauragonzalez.fr/projets/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lauragonzalez.fr/project_cat/hotels/",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lauragonzalez.fr/projets/mandarin-oriental-mallorca/",
+     "photos": 4,
+     "hospitality": true,
+     "sizes": [
+      [
+       1920,
+       1080
+      ],
+      [
+       1920,
+       1080
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.6,
+   "volume_score": 10,
+   "good_pages": 2,
+   "photos_measured": 4,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 8.0,
+    "photo_size": 0.0,
+    "hospitality": 9.0,
+    "volume": 10,
+    "lens": 14,
+    "us": 3,
+    "mix": 9
+   },
+   "score": 53.0,
+   "suitable": false,
+   "seconds": 33
+  },
+  {
+   "name": "Festen Architecture",
+   "url": "https://www.festenarchitecture.com/",
+   "reachable": true,
+   "final": "https://www.festenarchitecture.com/",
+   "platform": "unknown",
+   "entry": "https://www.festenarchitecture.com/",
+   "links": 12,
+   "pages": [
+    {
+     "url": "https://www.festenarchitecture.com/projects/chateau-voltaire",
+     "photos": 14,
+     "hospitality": true,
+     "sizes": [
+      [
+       2010,
+       2680
+      ],
+      [
+       2500,
+       1875
+      ]
+     ]
+    },
+    {
+     "url": "https://www.festenarchitecture.com/projects/hotel-du-couvent",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1875
+      ],
+      [
+       2010,
+       2680
+      ]
+     ]
+    },
+    {
+     "url": "https://www.festenarchitecture.com/projects/hotel-balzac",
+     "photos": 12,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       1875
+      ],
+      [
+       2010,
+       2680
+      ]
+     ]
+    },
+    {
+     "url": "https://www.festenarchitecture.com/projects/langosteria-porto-cervo",
+     "photos": 8,
+     "hospitality": true,
+     "sizes": [
+      [
+       1421,
+       2108
+      ],
+      [
+       1532,
+       2273
+      ]
+     ]
+    },
+    {
+     "url": "https://www.festenarchitecture.com/projects/splendido-mare",
+     "photos": 7,
+     "hospitality": true,
+     "sizes": [
+      [
+       2010,
+       2680
+      ],
+      [
+       2010,
+       2680
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 4,
+   "good_pages": 5,
+   "photos_measured": 10,
+   "photos_passing": 10,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 20.0,
+    "hospitality": 15.0,
+    "volume": 4,
+    "lens": 13,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 82.0,
+   "suitable": true,
+   "seconds": 18
+  },
+  {
+   "name": "Humbert & Poyet",
+   "url": "https://www.humbertpoyet.com/",
+   "reachable": true,
+   "final": "https://www.humbertpoyet.com/",
+   "platform": "unknown",
+   "entry": "https://www.humbertpoyet.com/",
+   "links": 6,
+   "pages": [
+    {
+     "url": "https://www.humbertpoyet.com/projets",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.humbertpoyet.com/home/hotel",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.humbertpoyet.com/home/restaurant",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.humbertpoyet.com/home/residential",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.humbertpoyet.com/home/retail",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 2,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 15.0,
+    "volume": 2,
+    "lens": 12,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 39.0,
+   "suitable": false,
+   "seconds": 19
+  },
+  {
+   "name": "Hugo Toro",
+   "url": "https://www.hugotoro.com/",
+   "reachable": true,
+   "final": "https://hugotoro.com/",
+   "platform": "wordpress",
+   "entry": "https://www.hugotoro.com/projects",
+   "links": 27,
+   "pages": [
+    {
+     "url": "https://www.hugotoro.com/site.webmanifest",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://hugotoro.com/projects/",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       1728,
+       1856
+      ]
+     ]
+    },
+    {
+     "url": "https://hugotoro.com/seok/",
+     "photos": 2,
+     "hospitality": true,
+     "sizes": [
+      [
+       1728,
+       1856
+      ],
+      [
+       1869,
+       2336
+      ]
+     ]
+    },
+    {
+     "url": "https://hugotoro.com/gigi-miami-delano/",
+     "photos": 3,
+     "hospitality": true,
+     "sizes": [
+      [
+       3516,
+       2345
+      ],
+      [
+       1875,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://hugotoro.com/spa-at-la-minerva/",
+     "photos": 3,
+     "hospitality": true,
+     "sizes": [
+      [
+       2560,
+       2093
+      ],
+      [
+       1734,
+       2561
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.8,
+   "volume_score": 9,
+   "good_pages": 0,
+   "photos_measured": 7,
+   "photos_passing": 7,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 20.0,
+    "hospitality": 12.0,
+    "volume": 9,
+    "lens": 13,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 64.0,
+   "suitable": false,
+   "seconds": 25
+  },
+  {
+   "name": "Lázaro Rosa-Violán",
+   "url": "https://www.lazarorosaviolan.com/",
+   "reachable": true,
+   "final": "https://www.lazarorosaviolan.com/",
+   "platform": "squarespace",
+   "entry": "https://www.lazarorosaviolan.com/",
+   "links": 5,
+   "pages": [
+    {
+     "url": "https://www.lazarorosaviolan.com/sobre-nosotros",
+     "photos": 17,
+     "hospitality": false,
+     "sizes": [
+      [
+       1500,
+       2250
+      ],
+      [
+       1000,
+       1333
+      ]
+     ]
+    },
+    {
+     "url": "https://www.lazarorosaviolan.com/proyectos-destacados",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lazarorosaviolan.com/politica-de-privacidad",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lazarorosaviolan.com/terminos-y-condiciones-de-uso-web",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.lazarorosaviolan.com/politica-de-cookies",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 2,
+   "good_pages": 1,
+   "photos_measured": 2,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 4.0,
+    "photo_size": 10.0,
+    "hospitality": 3.0,
+    "volume": 2,
+    "lens": 13,
+    "us": 3,
+    "mix": 8
+   },
+   "score": 43.0,
+   "suitable": true,
+   "seconds": 9
+  },
+  {
+   "name": "Benoit Linero",
+   "url": "https://benoitlinero.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error timed out>",
+   "seconds": 30
+  },
+  {
+   "name": "Romain Laprade",
+   "url": "https://www.romainlaprade.com/",
+   "reachable": true,
+   "final": "https://www.romainlaprade.com/",
+   "platform": "cargo",
+   "entry": "https://www.romainlaprade.com/",
+   "links": 107,
+   "pages": [
+    {
+     "url": "https://romainlaprade.com/rss",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.romainlaprade.com/stylesheet",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.romainlaprade.com/BOOKS",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.romainlaprade.com/EXHIBITIONS",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    },
+    {
+     "url": "https://www.romainlaprade.com/ART-PRINTS",
+     "photos": 0,
+     "hospitality": false,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0.0,
+    "volume": 10,
+    "lens": 13,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 33.0,
+   "suitable": false,
+   "seconds": 13
+  },
+  {
+   "name": "Francis Amiand",
+   "url": "https://francisamiand.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "seconds": 1
+  },
+  {
+   "name": "Jérôme Galland",
+   "url": "https://jeromegalland.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert",
+   "seconds": 1
+  },
+  {
+   "name": "Helen Cathcart",
+   "url": "https://www.helencathcart.com/",
+   "reachable": true,
+   "final": "https://helencathcart.com/",
+   "platform": "wordpress",
+   "entry": "https://www.helencathcart.com/",
+   "links": 43,
+   "pages": [
+    {
+     "url": "https://helencathcart.com/work-category/travel/",
+     "photos": 8,
+     "hospitality": true,
+     "sizes": [
+      [
+       5,
+       5
+      ],
+      [
+       1000,
+       1500
+      ]
+     ]
+    },
+    {
+     "url": "https://helencathcart.com/work-category/food/",
+     "photos": 3,
+     "hospitality": true,
+     "sizes": [
+      [
+       5,
+       5
+      ],
+      [
+       667,
+       1000
+      ]
+     ]
+    },
+    {
+     "url": "https://helencathcart.com/work-category/interiors/",
+     "photos": 2,
+     "hospitality": true,
+     "sizes": [
+      [
+       967,
+       1500
+      ],
+      [
+       5,
+       5
+      ]
+     ]
+    },
+    {
+     "url": "https://helencathcart.com/work-category/lifestyle/",
+     "photos": 8,
+     "hospitality": true,
+     "sizes": [
+      [
+       5,
+       5
+      ],
+      [
+       1000,
+       1500
+      ]
+     ]
+    },
+    {
+     "url": "https://helencathcart.com/work-category/portraits/",
+     "photos": 26,
+     "hospitality": true,
+     "sizes": [
+      [
+       5,
+       5
+      ],
+      [
+       600,
+       900
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 10,
+   "good_pages": 3,
+   "photos_measured": 10,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 0.0,
+    "hospitality": 15.0,
+    "volume": 10,
+    "lens": 11,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 58.0,
+   "suitable": false,
+   "seconds": 29
+  },
+  {
+   "name": "James McDonald",
+   "url": "https://www.jamesmcdonaldphotography.co.uk/",
+   "reachable": true,
+   "final": "https://www.jamesmcdonaldphotography.co.uk/",
+   "platform": "squarespace",
+   "entry": "https://www.jamesmcdonaldphotography.co.uk/",
+   "links": 0,
+   "pages": [],
+   "hospitality_share": 0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0,
+    "volume": 0,
+    "lens": 12,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 22.0,
+   "suitable": false,
+   "seconds": 4
+  },
+  {
+   "name": "Jake Eastham",
+   "url": "https://jakeeastham.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "seconds": 0
+  },
+  {
+   "name": "Oskar Proctor",
+   "url": "https://www.oskarproctor.com/",
+   "reachable": true,
+   "final": "https://www.oskarproctor.com/",
+   "platform": "unknown",
+   "entry": "https://www.oskarproctor.com/",
+   "links": 0,
+   "pages": [],
+   "hospitality_share": 0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0,
+    "volume": 0,
+    "lens": 11,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 21.0,
+   "suitable": false,
+   "seconds": 9
+  },
+  {
+   "name": "Felix Forest",
+   "url": "https://www.felixforest.com/",
+   "reachable": true,
+   "final": "https://www.felixforest.com/",
+   "platform": "format",
+   "entry": "https://www.felixforest.com/",
+   "links": 45,
+   "pages": [
+    {
+     "url": "https://www.felixforest.com/6721349-17-01-04",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       1200,
+       800
+      ]
+     ]
+    },
+    {
+     "url": "https://www.felixforest.com/vals-of-clouds",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       1200,
+       800
+      ]
+     ]
+    },
+    {
+     "url": "https://www.felixforest.com/150713",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       1800,
+       1200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.felixforest.com/6697615-14-07-28",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       1800,
+       1200
+      ]
+     ]
+    },
+    {
+     "url": "https://www.felixforest.com/mist",
+     "photos": 30,
+     "hospitality": false,
+     "sizes": [
+      null,
+      [
+       1800,
+       1200
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 10,
+   "good_pages": 5,
+   "photos_measured": 5,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 20.0,
+    "photo_size": 0.0,
+    "hospitality": 0.0,
+    "volume": 10,
+    "lens": 10,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 50.0,
+   "suitable": false,
+   "seconds": 18
+  },
+  {
+   "name": "Anson Smart",
+   "url": "https://www.ansonsmart.com/",
+   "reachable": true,
+   "final": "https://www.ansonsmart.com/",
+   "platform": "unknown",
+   "entry": "https://www.ansonsmart.com/",
+   "links": 274,
+   "pages": [
+    {
+     "url": "https://www.ansonsmart.com/OVERVIEW/Berts/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       855,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.ansonsmart.com/BIO/1/",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.ansonsmart.com/OVERVIEW/Arent-&-Pyke-Tree-House/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1520,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.ansonsmart.com/LIFESTYLE-&-PEOPLE/Berts/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       855,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://www.ansonsmart.com/INTERIOR/KPDO-Spring-St/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1395,
+       1860
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 10,
+   "good_pages": 0,
+   "photos_measured": 4,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 5.0,
+    "hospitality": 3.0,
+    "volume": 10,
+    "lens": 10,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 38.0,
+   "suitable": false,
+   "seconds": 9
   }
  ]
 }
