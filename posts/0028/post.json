@@ -1,0 +1,46 @@
+{
+  "index": "0028",
+  "place": "The Greenbrier",
+  "status": "BUILT",
+  "notes": [
+    "photo 5 film edge trimmed (4030x1812)",
+    "photo 5 HOLD: too cool"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "144c7ce1794c",
+  "built": "2026-11-09",
+  "edited_at": "",
+  "photos_sig": "89a9e61b245e",
+  "meta": {
+    "neighborhood": "White Sulphur Springs",
+    "city": "West Virginia",
+    "category": "Hotel",
+    "word": "POSH",
+    "reminds": "The Grand Budapest Hotel",
+    "credit": "Carol M. Highsmith, Library of Congress",
+    "designer": "Dorothy Draper",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.loc.gov/item/2015634492/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0028/01.jpg?v=144c7ce1794c",
+    "https://bureauofleisure.github.io/pipeline/posts/0028/02.jpg?v=144c7ce1794c",
+    "https://bureauofleisure.github.io/pipeline/posts/0028/03.jpg?v=144c7ce1794c",
+    "https://bureauofleisure.github.io/pipeline/posts/0028/04.jpg?v=144c7ce1794c",
+    "https://bureauofleisure.github.io/pipeline/posts/0028/05.jpg?v=144c7ce1794c"
+  ],
+  "archive": "4 originals (7.4 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    4,
+    3,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0028\nTHE GREENBRIER. WHITE SULPHUR SPRINGS, WV.\nWELCOMING GUESTS SINCE 1778.\nDOROTHY DRAPER REDECORATED IT AFTER THE WAR.\nHER FIRM HAS STYLED IT FOR OVER 75 YEARS.\nPHOTOGRAPHED BY CAROL M. HIGHSMITH, 2015.\nIN A WORD: POSH.",
+  "alt_text": "The Greenbrier, White Sulphur Springs, West Virginia. A grand hotel sitting room with mint green walls, a gilded eagle over a white fireplace and floral sofas around a low white table."
+}

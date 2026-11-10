@@ -1,0 +1,52 @@
+{
+  "index": "0025",
+  "place": "The Dunes Club",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 film edge trimmed (3944x2819)",
+    "photo 2 film edge trimmed (3941x2829)",
+    "photo 3 film edge trimmed (3937x2826)",
+    "photo 4 film edge trimmed (3957x2810)",
+    "photo 4 straightened -0.5 deg",
+    "photo 5 film edge trimmed (3952x2837)"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "b077aeb2089d",
+  "built": "2026-11-09",
+  "edited_at": "",
+  "photos_sig": "af722649616d",
+  "meta": {
+    "neighborhood": "Narragansett",
+    "city": "Rhode Island",
+    "category": "Club",
+    "word": "BREEZY",
+    "reminds": "a Slim Aarons Newport afternoon",
+    "credit": "Gottscho-Schleisner, Library of Congress",
+    "designer": "Thomas Pym Cope",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.loc.gov/item/2018736219/",
+    "bring": "BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0025/01.jpg?v=b077aeb2089d",
+    "https://bureauofleisure.github.io/pipeline/posts/0025/02.jpg?v=b077aeb2089d",
+    "https://bureauofleisure.github.io/pipeline/posts/0025/03.jpg?v=b077aeb2089d",
+    "https://bureauofleisure.github.io/pipeline/posts/0025/04.jpg?v=b077aeb2089d",
+    "https://bureauofleisure.github.io/pipeline/posts/0025/05.jpg?v=b077aeb2089d",
+    "https://bureauofleisure.github.io/pipeline/posts/0025/06.jpg?v=b077aeb2089d"
+  ],
+  "archive": "5 originals (18.3 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    2,
+    4,
+    3,
+    5
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0025\nTHE DUNES CLUB. NARRAGANSETT, RHODE ISLAND.\nTHE FIRST CLUBHOUSE WASHED AWAY IN 1938.\nREBUILT IN 1939 BY THOMAS PYM COPE.\nCOLONIAL REVIVAL, ON NARRAGANSETT BAY.\nON THE NATIONAL REGISTER SINCE 2015.\nBRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.\nIN A WORD: BREEZY.",
+  "alt_text": "The Dunes Club, Narragansett, Rhode Island. A 1939 beach club room under open timber trusses, with sofas and lamps facing a curved wall of windows onto the sea."
+}

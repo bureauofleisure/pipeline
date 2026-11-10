@@ -1,0 +1,57 @@
+{
+  "index": "0011",
+  "place": "Minnibar",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 rejected: compression artifacts (blockiness 1.35)",
+    "photo 7 rejected: too small (1063x1329 after crop, need 1080x1350)",
+    "photo 8 repeats photo 7 from a closer or further angle, dropped",
+    "photo 9 rejected: compression artifacts (blockiness 1.44)",
+    "photo 10 rejected: compression artifacts (blockiness 1.44)",
+    "photo 11 rejected: compression artifacts (blockiness 1.45)",
+    "photo 16 rejected: compression artifacts (blockiness 1.37)",
+    "photo 17 repeats photo 7 from a closer or further angle, dropped",
+    "photo 18 rejected: compression artifacts (blockiness 1.51)",
+    "photo 19 dropped by edit"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "fa74379f7578",
+  "built": "2026-10-22",
+  "edited_at": "2026-10-22T11:49:40Z",
+  "meta": {
+    "neighborhood": "Downtown",
+    "city": "Montreal",
+    "category": "Restaurant",
+    "word": "UNHURRIED",
+    "reminds": "a Kyoto kissaten",
+    "credit": "Alex Lesage",
+    "designer": "Ivy Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/08/01/minnibar-restaurant-montreal-ivy-studio/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0011/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/06.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0011/07.jpg"
+  ],
+  "archive": "9 originals (7.6 MB), 0 new",
+  "cover_source_photo": 6,
+  "slide_sources": [
+    6,
+    15,
+    5,
+    4,
+    14,
+    13
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0011\nMINNIBAR. DOWNTOWN, MONTREAL.\nTWENTY-FOOT CEILINGS. A CORNER ROOM.\nTHE STRUCTURE LEFT BARE.\nPALE STONE COUNTER, OMAKASE LEDGE.\nIVY STUDIO'S FIRST CHAIRS.\nIN A WORD: UNHURRIED.",
+  "alt_text": "Minnibar, Downtown, Montreal. A light-filled Italian restaurant with exposed structure, a pale stone counter and simple chairs."
+}

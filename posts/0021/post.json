@@ -1,0 +1,33 @@
+{
+  "index": "0021",
+  "place": "Love Thy Neighbor",
+  "status": "BENCHED",
+  "notes": [
+    "photo 1 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 2 rejected: compression artifacts (blockiness 1.58)",
+    "photo 3 rejected: compression artifacts (blockiness 1.38)",
+    "photo 4 rejected: compression artifacts (blockiness 1.42)",
+    "photo 5 rejected: compression artifacts (blockiness 1.42)",
+    "only 0 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "b43a691a4f8e",
+  "built": "2026-11-02",
+  "edited_at": "",
+  "photos_sig": "5b9d28e13fb3",
+  "meta": {
+    "neighborhood": "West Village",
+    "city": "New York",
+    "category": "Bar",
+    "word": "CANDLELIT",
+    "reminds": "a cave hotel in Cappadocia",
+    "credit": "Aichan Mama",
+    "designer": "Wild Form Design Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/06/27/wild-form-design-studio-love-thy-neighbor-west-village-nyc/",
+    "bring": ""
+  }
+}

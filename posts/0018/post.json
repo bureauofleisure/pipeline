@@ -1,0 +1,50 @@
+{
+  "index": "0018",
+  "place": "The Beekman",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 straightened -0.7 deg",
+    "photo 10 rejected: compression artifacts (blockiness 1.42)",
+    "photo 13 wide-angle lean +5.9 deg left as shot",
+    "photo 14 wide-angle lean +8.2 deg left as shot",
+    "photo 7 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "0f72c6c89ed9",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Financial District",
+    "city": "New York",
+    "category": "Hotel",
+    "word": "BURNISHED",
+    "reminds": "the Bradbury Building, Los Angeles",
+    "credit": "Joe Thomas",
+    "designer": "Martin Brudnizki",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.joethomasphoto.com/beekmanhotel/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0018/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0018/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0018/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0018/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0018/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0018/06.jpg"
+  ],
+  "archive": "19 originals (12.7 MB), 14 new",
+  "cover_source_photo": 20,
+  "slide_sources": [
+    20,
+    17,
+    9,
+    5,
+    4
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0018\nTHE BEEKMAN. FINANCIAL DISTRICT, NEW YORK.\nTEMPLE COURT, 1883. SILLIMAN AND FARNSWORTH.\nA NINE-STOREY ATRIUM UNDER A PYRAMID SKYLIGHT.\nCAST-IRON BRACKETS SHAPED LIKE DRAGONS.\nEMPTY FROM 2001. A HOTEL SINCE 2016.\nIN A WORD: BURNISHED.",
+  "alt_text": "The Beekman, Financial District, New York. A nine-storey Victorian atrium with cast-iron balconies rising to a pyramidal skylight, furnished as a hotel lounge."
+}

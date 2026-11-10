@@ -1,0 +1,50 @@
+{
+  "index": "0026",
+  "place": "Million Goods",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 straightened -1.8 deg",
+    "photo 2 straightened +2.1 deg",
+    "photo 3 rejected: compression artifacts (blockiness 1.44)",
+    "photo 5 straightened -1.7 deg",
+    "photo 5 keystone corrected -1.2 deg",
+    "photo 6 HOLD: too saturated"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "d4a163f01925",
+  "built": "2026-11-09",
+  "edited_at": "",
+  "photos_sig": "4e7dec529294",
+  "meta": {
+    "neighborhood": "Fort Greene",
+    "city": "Brooklyn",
+    "category": "Bar",
+    "word": "DAPPER",
+    "reminds": "a Tokyo jazz kissa",
+    "credit": "Joe Thomas",
+    "designer": "Gjergji Shkurti",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.joethomasphoto.com/million-goods/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0026/01.jpg?v=d4a163f01925",
+    "https://bureauofleisure.github.io/pipeline/posts/0026/02.jpg?v=d4a163f01925",
+    "https://bureauofleisure.github.io/pipeline/posts/0026/03.jpg?v=d4a163f01925",
+    "https://bureauofleisure.github.io/pipeline/posts/0026/04.jpg?v=d4a163f01925",
+    "https://bureauofleisure.github.io/pipeline/posts/0026/05.jpg?v=d4a163f01925"
+  ],
+  "archive": "4 originals (2.9 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    5,
+    4,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0026\nMILLION GOODS. FORT GREENE, BROOKLYN.\nA LANDMARKED BUILDING ON DEKALB AVENUE.\nA GLOSSY RED SPIRAL STAIRCASE.\nA BRECCIA PERNICE STONE WINE BAR.\nHI-FI DOWNSTAIRS. MENSWEAR UPSTAIRS.\nIN A WORD: DAPPER.",
+  "alt_text": "Million Goods, Fort Greene, Brooklyn. A wood-panelled listening bar with a long red-brown stone counter, steel stools and a big speaker set into the shelving."
+}
