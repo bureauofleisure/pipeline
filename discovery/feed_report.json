@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-10T19:21:07Z",
+  "checked": "2026-11-10T19:30:27Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -1053,7 +1053,7 @@
       "name": "Josh Greenspan",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -1379,14 +1379,6 @@
     },
     {
       "name": "Kerrisa Treanor",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Ai Fiori",
       "tier": 1,
       "category": "photographer",
       "site": 200,

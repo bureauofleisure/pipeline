@@ -1,9 +1,9 @@
 {
  "job": "sources",
- "at": "2026-11-10T19:21:07Z",
+ "at": "2026-11-10T19:30:27Z",
  "ok": true,
  "stats": {
-  "checked": 210,
+  "checked": 209,
   "unreachable": [
    "Dezeen hotels",
    "Dezeen bars",
@@ -11,6 +11,7 @@
    "Hollie Bowden",
    "Ace Hotel press",
    "Design Hotels",
+   "Josh Greenspan",
    "MOVS STUDIO"
   ],
   "feeds_with_no_items": [
