@@ -35,7 +35,7 @@ MIN_US_SHARE = 0.60         # the brief says 80%; the hard floor is 60% so a thi
 US_CITIES = ("new york", "brooklyn", "austin", "miami", "los angeles", "chicago", "san francisco", "palm springs",
              "new orleans", "nashville", "philadelphia", "boston", "detroit", "portland", "seattle", "savannah", "charleston",
              "houston", "dallas", "denver", "washington", "las vegas", "santa fe", "marfa", "hudson", "montauk", "catskills",
-             "narragansett", "newport", "rhode island", "idlewild")
+             "narragansett", "newport", "rhode island", "idlewild", "west virginia", "white sulphur springs")
 
 
 def source_mix_problems(posts, batch_name):
@@ -78,7 +78,9 @@ def source_mix_problems(posts, batch_name):
                    or str(p.get("era", "")).strip() or p.get("published_year") and int(p["published_year"]) <= 2025)
     if not_news / n < MIN_NOT_NEWS_SHARE - 1e-9:
         out.append(f"source mix: only {not_news} of {n} posts are archive or older than a year; need {int(MIN_NOT_NEWS_SHARE * 100)}%. Add archive picks.")
-    us = sum(1 for p in posts if any(c in (p.get("city", "") + " " + p.get("neighborhood", "")).lower() for c in US_CITIES))
+    # `"country": "US"` on a pick settles it; the city list is the fallback (2026-11-09: The Greenbrier, West Virginia, was not counted)
+    us = sum(1 for p in posts if str(p.get("country", "")).upper() in ("US", "USA")
+             or any(c in (p.get("city", "") + " " + p.get("neighborhood", "")).lower() for c in US_CITIES))
     if us / n < MIN_US_SHARE - 1e-9:
         out.append(f"source mix: only {us} of {n} posts are US; the floor is {int(MIN_US_SHARE * 100)}% (target 80%).")
     return out
@@ -104,7 +106,7 @@ def main(batch_name):
         post = {k: p[k] for k in ("index", "place", "neighborhood", "city", "word", "reminds", "card", "credit",
                                   "alt_hint", "source_url") if k in p}
         for k in ("category", "designer", "designer_handle", "venue_handle", "photographer_handle",
-                  "source_handle", "bring", "cover", "focal", "discovered_via", "archive", "era", "published_year", "licence",
+                  "source_handle", "bring", "cover", "focal", "discovered_via", "archive", "era", "published_year", "licence", "country",
                   "drop_photos", "rotate", "edited_at"):
             if k in p:
                 post[k] = p[k]

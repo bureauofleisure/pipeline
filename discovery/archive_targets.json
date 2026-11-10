@@ -1,5 +1,5 @@
 {
- "_about": "Places worth an archive post. The weekly archive search looks each one up on Wikimedia Commons (and Flickr when a key is set) and keeps only licensed, full-size photographs. Add a place by name; add 'queries' when the name alone is ambiguous.",
+ "_about": "The classics list: places open about 25 years or more, still trading, worth a post (LENS.md, 'The classics half'). For each, look for current professional photographs first (venue press page, photographer or studio portfolio, design press) and the archives second. discovery/archive_search.py looks each one up in professional Library of Congress collections only (Gottscho-Schleisner, Carol M. Highsmith, HABS). Add a place by name; add 'queries' when the name alone is ambiguous, and keep queries short: 'Biltmore Hotel Los Angeles' finds ten results where 'Millennium Biltmore Hotel Los Angeles lobby' finds none.",
  "targets": [
   {
    "place": "Rainbow Room",

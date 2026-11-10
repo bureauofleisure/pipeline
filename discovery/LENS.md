@@ -5,8 +5,30 @@ What the weekly discovery job applies to every candidate before anything reaches
 ## What we feature
 Beautifully designed places: architecture, interiors and design across hospitality first (hotels, bars,
 restaurants, cafes, clubs, baths, pools), then homes, gardens and beyond. Leaning new but nostalgic.
-"New" means new to most people, so a place published in 2016 counts. Roughly half the feed comes from
-the archive. 80% US (New York, then Austin, Miami, Los Angeles), 20% abroad.
+"New" means new to most people, so a place published in 2016 counts. Roughly half the feed is classics
+(see "The classics half"). 80% US (New York, then Austin, Miami, Los Angeles), 20% abroad.
+
+## The classics half (Lewie, 2026-11-09)
+The older half of the feed is defined by the age of the place, not the age of the photograph.
+- A classic is a place that has been open about 25 years or more and is open today, with the rooms it is
+  known for intact. The Polo Lounge, Musso and Frank, Bemelmans, the Greenbrier, a 1950s diner still trading.
+- Its photographs can come from any professional source that passes the gate, in this order of preference:
+  1. current photographs: the venue's own press or gallery page, the portfolio of the photographer who shot
+     it, the studio that restored it, or design press coverage of it;
+  2. a professional archive (Library of Congress: Gottscho-Schleisner, Highsmith, HABS).
+  The Library of Congress is one source for the classics half, not the source. In three weeks of searching it
+  gave two usable places (The Dunes Club, The Greenbrier); most of its hospitality sets are one to three
+  frames or show rooms that are gone.
+- Current photographs of a place still trading show rooms that exist, so the survival rule is met by the
+  photographs themselves. Photographs more than ten years old, from any source, still need the room by room
+  check (rule of 2026-11-02 below).
+- Pick fields: `era` is the year or decade the place opened and the card states it; that is what counts a
+  post toward the classics share. `archive: true` is only for photographs from an archive collection (it
+  turns on the film-edge trim and the two-per-collection allowance). A classic shot by a living photographer
+  carries `era` and a normal `credit`, and the one-per-photographer rule applies as usual.
+- `discovery/archive_targets.json` is the classics list. For each place look for current photographs first
+  and the archives second. Add 3 to 5 places a week, chosen because good current photographs exist.
+- Everything else holds: no outreach, public originals only, every photo viewed, no weak post to fill a share.
 
 ## Score, out of 25. Under 17 is dropped before anyone sees it.
 - Design quality /5: would a demanding interiors editor run it?
@@ -62,10 +84,34 @@ Enforced by make_batch.py; a batch that breaks these does not build.
 - One post per studio and one per photographer in any batch.
   2026-11-02 (Lewie): an archive collection credit (for example Gottscho-Schleisner, Library of Congress) may appear
   in up to two posts per batch. Built in: make_batch.py.
-- At least 40% of a batch is archive or published more than a year ago ("new" means new to most, not new this week).
+- At least 40% of a batch is a classic (`era` set), an archive post, or published more than a year ago ("new" means new to most, not new this week).
 - US floor 60%, target 80%. New York first, then Austin, Miami, Los Angeles.
 - We take at most two of the fifteen or so hospitality interiors the press runs each week, chosen on era and
   shareability, which are not their criteria. Same raw material, different eye, different photos, different words.
+
+## The bank and the batch (Lewie, 2026-11-09)
+- Nothing posts publicly until 30 posts are banked (approved, or held from a dry run). The publisher enforces
+  it (LAUNCH_BANK) and the morning heartbeat email reports the count.
+- Launch cadence is four posts a week (Sunday, Monday, Wednesday, Friday), rising to daily and then three a
+  day only when the bank keeps pace. One post a day needs seven approvals a week; about a third of built posts
+  are killed, so that is ten or more built.
+- Until the bank holds 30, a weekly batch aims for 10 to 12 built posts. A batch of four does not move the
+  bank. If the week cannot produce ten that meet the lens, say so in the report with the reason (too few
+  candidates, photos failing the gate, source mix) so the bottleneck is known; never pad.
+
+## Kill reasons (from 2026-11-09)
+Every kill on the review page carries one reason, stored in `discovery/statuses.json` as `kill_reason`
+("CODE @time: optional note"):
+- PHOTOS: the photographs are not good enough. The place may return with better ones (watch list).
+- PLACE: the place is not special enough. Do not bring it back; raise the bar on design quality.
+- ERA: no nostalgia, wrong feel. Score era feel harder on similar places.
+- KNOWN: too well known. Score new-to-most harder; skip the obvious name in a city.
+- GONE: closed, or changed since the photographs.
+- OTHER: read the note.
+The weekly review reads every kill reason before scoring, counts them over the last eight weeks, and says in
+its report which reason leads and what it changed in response. A reason that repeats three times is a
+pattern: the edits job writes it up as a rule under "Learned from edits". Kills made before 2026-11-09 carry
+no reason; read their notes instead.
 
 ## Straight lines
 Wide-angle photographs are welcome. The grade separates true rotation (the camera was tilted sideways) from

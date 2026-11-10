@@ -50,7 +50,25 @@ Budget: roughly 300 MB a week at 8 posts, 15 GB a year, about $0.25 a month on R
 - `build/` the build, carousel layout, word bank, BRING bank, the public link page (`site/`).
 - `grade/` Grade v1.0, locked.
 - `brand/` the profile seal (`avatar.py`).
-- `publisher.gs` the Apps Script bound to the Google Sheet (v0.5).
+- `publisher.gs` the Apps Script bound to the Google Sheet (loaded hourly from main by `apps_script/Loader.gs`).
+- `.github/save.sh` how every workflow commits: rebase, replay its own files over main on a conflict, exit 1 if the push never lands.
+- `discovery/health.py` and `discovery/health/<job>.json` what each job produced on its last run, with any problems in plain words.
+
+## Knowing it works (2026-11-09)
+A green run is not proof of output. Three things make a failure visible:
+- Each job writes a health record; the harvest run goes red after saving when its output is too thin to use
+  (few items, feeds unreadable, article text or galleries not coming through for a source).
+- The build prints each download as it happens, limits every file's total time, stops starting downloads after
+  18 minutes, publishes what it has and runs itself again for the rest (`pending` in the manifest; red after three runs).
+- The publisher emails a heartbeat every morning at 7 New York: expected against actual for every job, the
+  launch bank or queue, and drafts waiting for review. No email by 8 means the publisher itself has stopped.
+
+## Launch and cadence (2026-11-09)
+- Script Property `LAUNCH_BANK` (default 30): QUIET or LIVE does not start until that many posts are approved
+  or held from a dry run. 0 launches regardless.
+- Script Property `POST_DAYS` (default `0,1,3,5`: Sunday, Monday, Wednesday, Friday): the days that carry a
+  post once publishing is on. `ALL` is daily. Dry runs are always daily.
+- Script Property `HEARTBEAT` = `PROBLEMS` sends the morning email only when something needs a look.
 
 ## Settings that must be true
 - GitHub Pages: source branch `gh-pages`, folder `/ (root)`.
