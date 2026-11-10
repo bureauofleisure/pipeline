@@ -66,7 +66,7 @@ def probe_pages(links, platform, portfolio, deadline):
             text = H.page_text(page)
             t = re.search(r"<title>(.*?)</title>", page, re.S)
             title = t.group(1) if t else ""
-            photos = H.images_from(page, u)
+            photos = H.images_from(page, u, gallery=portfolio)
             if portfolio:
                 uniq = []
                 for ph in photos:
@@ -124,6 +124,11 @@ def probe(c):
                     fin, body = r.geturl(), r.read(1_500_000).decode("utf-8", "replace")
             except Exception as e:  # noqa: BLE001
                 if not path:
+                    # the same site often answers only with, or only without, www
+                    alt = re.sub(r"^(https?://)www\.", r"\1", c["url"]) if "://www." in c["url"] else c["url"].replace("://", "://www.", 1)
+                    if not c.get("_alt"):
+                        c = dict(c, url=alt, _alt=True)
+                        return probe(c)
                     out["error"] = f"{type(e).__name__}: {str(e)[:60]}"
                     return out
                 continue

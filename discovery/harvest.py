@@ -141,13 +141,24 @@ def full_text(page):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", t)))
 
 
-def images_from(page, base):
+def images_from(page, base, gallery=False):
     """The article's own photos, largest variant of each.
+    gallery=True is for portfolio project pages (2026-11-10). Their photos rarely share a filename stem, so
+    the cluster rule in step 3 kept one or two photos of a twenty-photo project and the page was thrown away
+    as "not a project": 131 portfolio sources, 13 producing. For those pages every photo in the body is
+    kept, except thumbnails that link to another page of the site (other projects) and anything known to
+    be small.
     1. Only the article body (inside <article>, or <main>, else the whole page).
     2. Picks up src, data-src, data-lazy-src, srcset, data-srcset and direct <a href> to an image.
     3. Keeps the largest cluster of filenames sharing a stem (a gallery), plus the og:image's cluster,
        so related-article thumbnails are left behind."""
     body = article_html(page)
+    if gallery:
+        # a photo wrapped in a link to another page is a doorway to a different project, not this one
+        body = re.sub(r'<a\b[^>]*href=["\'](?![^"\']+\.(?:jpe?g|png|webp)\b)[^"\'#][^"\']*["\'][^>]*>(?:(?!</a>).)*?<img\b(?:(?!</a>).)*?</a>',
+                      " ", body, flags=re.S | re.I)
+        # a thumbnail that links to its own full-size file: keep the link, drop the thumbnail
+        body = re.sub(r'(<a\b[^>]*href=["\'][^"\']+\.(?:jpe?g|png|webp)["\'][^>]*>)(?:(?!</a>).)*?</a>', r"\1</a>", body, flags=re.S | re.I)
     og = None
     m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page)
     if m:
@@ -183,6 +194,8 @@ def images_from(page, base):
 
     if not found:
         return []
+    if gallery:
+        return [{"url": u, "width_hint": w} for u, w in found.items() if not 0 < w < 600][:60]
     clusters = {}
     for u in found:
         clusters.setdefault(_stem(u), []).append(u)
@@ -309,12 +322,13 @@ def project_links(home, base, seen=()):
     housekeeping, not seen before. Used by the weekly harvest and by source_probe.py, so a source is judged
     on exactly what the harvest would fetch from it."""
     links = []
-    root = base.rstrip("/")
+    bare = lambda x: re.sub(r"^https?://(www\.)?", "", x)   # noqa: E731  same site with or without www or https
+    root = bare(base.rstrip("/"))
     for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
         u = urljoin(base, html.unescape(m.group(1)))
-        if not u.startswith(root):
+        if not bare(u).startswith(root):
             continue
-        path = u[len(root):].strip("/")
+        path = bare(u)[len(root):].strip("/")
         if not path or path.count("/") > 2:
             continue
         if SKIP_PATH.search(path) or re.search(r"\.(?:css|js|png|jpe?g|svg|ico|pdf|xml|json|woff2?)$", path, re.I):
@@ -351,7 +365,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 rec["title"] = html.unescape(t.group(1).strip()) if t else u
                 text = page_text(page)
                 rec["text"] = text[:4000]
-                photos, uniq = images_from(page, u), {}
+                photos, uniq = images_from(page, u, gallery=True), {}
                 for ph in photos:
                     fu = fullsize(ph["url"], s.get("platform", ""))
                     uniq[fu] = max(uniq.get(fu, 0), ph["width_hint"])
