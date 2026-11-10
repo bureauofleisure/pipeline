@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T01:40:22Z",
+ "searched": "2026-11-10T01:55:30Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,28 +8,35 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 31,
+  "results": 12,
   "items_opened": 0,
-  "offtopic": 5,
+  "offtopic": 0,
   "rights": 0,
-  "size": 4,
+  "size": 12,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Bathhouse Row; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Essex House; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 22,
   "tif_header_misses": [
-   "vices/master/pnp/highsm/12700/12739u.tif: HTTP 429",
-   "aer/ca/ca0500/ca0567/photos/015007pu.tif: HTTP 429",
-   "bshaer/ca/ca4300/ca4353/sheet/00001u.tif: HTTP 429",
-   "bshaer/ca/ca4300/ca4352/sheet/00001u.tif: HTTP 429"
+   "vices/master/pnp/highsm/13000/13097u.tif: HTTP 429",
+   "haer/ar/ar0000/ar0035/color/570630cu.tif: HTTP 429",
+   "vices/master/pnp/highsm/16500/16591u.tif: HTTP 429",
+   "vices/master/pnp/highsm/64900/64942u.tif: HTTP 429",
+   "vices/master/pnp/highsm/64900/64943u.tif: HTTP 429",
+   "vices/master/pnp/highsm/13400/13463u.tif: HTTP 429",
+   "vices/master/pnp/highsm/13400/13464u.tif: HTTP 429",
+   "vices/master/pnp/highsm/13400/13422u.tif: HTTP 429",
+   "aer/ar/ar0000/ar0056/photos/010102pu.tif: HTTP 429",
+   "haer/ar/ar0000/ar0036/color/570748cu.tif: HTTP 429",
+   "haer/ar/ar0000/ar0034/color/570886cu.tif: HTTP 429",
+   "haer/ar/ar0000/ar0031/color/571934cu.tif: HTTP 429"
   ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 40,
+ "next_target": 41,
  "targets": [
   {
    "place": "Rainbow Room",
