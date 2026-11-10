@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T02:15:51Z",
+ "searched": "2026-11-10T07:46:45Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,22 +7,41 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 0,
-  "results": 0,
+  "searches": 1,
+  "results": 23,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 16,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Essex House; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Brown Palace Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 7,
+  "tif_header_misses": [
+   "ter/pnp/gsc/5a25000/5a25500/5a25515u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25516u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29300/5a29359u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29900/5a29905u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25513u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25517u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25511u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25512u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25518u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29812u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29810u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29811u.tif: HTTP 429",
+   "ter/pnp/gsc/5a25000/5a25500/5a25514u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29867u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29868u.tif: HTTP 429",
+   "ter/pnp/gsc/5a29000/5a29800/5a29866u.tif: HTTP 429"
+  ],
   "rate_limited": true,
-  "targets_tried": 1
+  "targets_tried": 2
  },
- "next_target": 41,
+ "next_target": 42,
  "targets": [
   {
    "place": "Rainbow Room",
