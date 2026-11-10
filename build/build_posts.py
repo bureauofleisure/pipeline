@@ -374,7 +374,9 @@ def build_post(p, out_root):
         if i + 1 in manual_rotate and manual_rotate[i + 1]:
             raw = raw.rotate(-manual_rotate[i + 1], resample=Image.BICUBIC, expand=False)
             result["notes"].append(f"photo {i + 1} rotated {manual_rotate[i + 1]:+.1f} deg by edit")
-        if p.get("archive") and "loc.gov" in src:   # Library of Congress negative scans only; never other photos
+        # Library of Congress negative scans only; never other photos. Carol M. Highsmith's photographs are
+        # born digital (no film edge): on 0028 a pale sky band read as a sleeve margin and photo 5 lost 5%.
+        if p.get("archive") and "loc.gov" in src and "highsm" not in src:
             raw, trimmed = trim_scan_border(raw)
             if trimmed:
                 result["notes"].append(f"photo {i + 1} film edge trimmed ({raw.width}x{raw.height})")

@@ -72,6 +72,37 @@ def _stem(url):
     return name
 
 
+_FORMAT_ID = re.compile(r"/([0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12})/\d+/\d+/[^/?]+\.(?:jpe?g|png|webp)", re.I)
+
+
+def _photo_key(url):
+    """One key per photograph, whatever size or crop of it the page links.
+    2026-11-10: Format portfolio sites (Luke Hayes, Evan Sung) list every srcset size of each photo as a
+    signed URL plus cropped creatorcdn thumbnails, so one project arrived as 11 entries of 2 photos and
+    Evan Sung's 4 pages as 120 entries with 82 repeats. Eater (Vox WordPress) links one image three times
+    with different crop= query strings."""
+    m = _FORMAT_ID.search(url)
+    if m:
+        return "format:" + m.group(1).lower()
+    if "wp-content" in url:
+        return url.split("?")[0]
+    return url
+
+
+def _dedupe(found):
+    """{url: width} -> {url: width} with one entry per _photo_key: the widest rendition, and an uncropped
+    one over a crop of the same width. Order of first appearance is kept."""
+    best = {}
+    for u, w in found.items():
+        k = _photo_key(u)
+        cropped = bool(re.search(r"[?&]crop=(?!0%2C0%2C100%2C100)", u)) or "format.creatorcdn.com" in u
+        rank = (w, not cropped)
+        if k not in best or rank > best[k][1]:
+            best[k] = (u, rank)
+    keep = {u for u, _ in best.values()}
+    return {u: w for u, w in found.items() if u in keep}
+
+
 def _balanced(page, tag):
     """Every outermost <tag>...</tag> block, matched by depth. A lazy regex stops at the first closing tag, and
     Dezeen nests a 'Read next' teaser <article> inside the article's own header: from 2026-11-02 that cut every
@@ -195,6 +226,7 @@ def images_from(page, base, gallery=False):
     if not found:
         return []
     if gallery:
+        found = _dedupe(found)
         return [{"url": u, "width_hint": w} for u, w in found.items() if not 0 < w < 600][:60]
     clusters = {}
     for u in found:
@@ -221,6 +253,7 @@ def images_from(page, base, gallery=False):
         # one entry per photo: several sizes of one image rewrite to the same address, and counting each
         # filled the 40-photo cap with repeats (2026-11-10: a Dezeen gallery arrived as 40 entries, 18 photos)
         out[u2] = max(out.get(u2, 0), w)
+    out = _dedupe(out)
     return [{"url": u, "width_hint": w} for u, w in out.items()][:40]
 
 
@@ -369,6 +402,7 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 for ph in photos:
                     fu = fullsize(ph["url"], s.get("platform", ""))
                     uniq[fu] = max(uniq.get(fu, 0), ph["width_hint"])
+                uniq = _dedupe(uniq)
                 rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
                 rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                 rec["designers"] = [s["name"]] if s["category"] == "studio" else []
