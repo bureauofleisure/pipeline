@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T13:42:37Z",
+ "searched": "2026-11-10T18:57:36Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,30 +8,40 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 60,
-  "items_opened": 1,
-  "offtopic": 1,
+  "results": 24,
+  "items_opened": 0,
+  "offtopic": 0,
   "rights": 0,
-  "size": 5,
+  "size": 16,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel Congress; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Rainbow Room; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 53,
+  "other_collections": 5,
   "tif_header_misses": [
-   "vices/master/pnp/highsm/48600/48690u.tif: HTTP 429",
-   "vices/master/pnp/highsm/37400/37483u.tif: HTTP 429",
-   "vices/master/pnp/highsm/18700/18761u.tif: HTTP 429",
-   "vices/master/pnp/highsm/18700/18760u.tif: HTTP 429",
-   "vices/master/pnp/highsm/38000/38068u.tif: HTTP 429"
+   "vices/master/pnp/highsm/49300/49396u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49300/49395u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49300/49394u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49400/49489u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49300/49338u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53978u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53979u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53981u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53977u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53980u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53982u.tif: HTTP 429",
+   "vices/master/pnp/highsm/53900/53976u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49300/49381u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49500/49524u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49400/49425u.tif: HTTP 429",
+   "vices/master/pnp/highsm/49400/49407u.tif: HTTP 429"
   ],
-  "tif_header_ok": 1,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 43,
+ "next_target": 0,
  "targets": [
   {
    "place": "Rainbow Room",

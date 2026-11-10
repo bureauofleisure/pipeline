@@ -1,17 +1,17 @@
 {
- "checked": "2026-11-10T02:14:42Z",
+ "checked": "2026-11-10T18:56:57Z",
  "items": [
   {
    "index": "0007",
    "place": "Focacha",
-   "status": "WATCHING",
-   "ready_photos": 1
+   "status": "READY",
+   "ready_photos": 7
   },
   {
    "index": "0008",
    "place": "Upstairs at Hausu",
    "status": "WATCHING",
-   "ready_photos": 0
+   "ready_photos": 1
   },
   {
    "index": "0012",
@@ -34,8 +34,8 @@
   {
    "index": "0021",
    "place": "Love Thy Neighbor",
-   "status": "WATCHING",
-   "ready_photos": 2
+   "status": "READY",
+   "ready_photos": 4
   }
  ]
 }

@@ -10,19 +10,24 @@
    "pages": [],
    "added": "2026-10-18",
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.48) ; photo 2 rejected: compression artifacts (blockiness 1.54) ; photo 3 held: tilt -5.1 deg is over the limit ; photo 6 is a near-duplicate, dropped ; photo 7 HOLD: tilt ; photo 9 rejected: compression artifacts (blockiness 1.64) ; only 3 photo",
-   "status": "WATCHING",
+   "status": "READY",
    "last_check": "2026-11-10",
-   "ready_photos": 1,
+   "ready_photos": 7,
    "candidate_photos": [
-    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg"
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_39.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_40.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_6-1.jpg"
    ],
    "gate_failures": {
     "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_10.jpg": "compression artifacts (blockiness 1.64)",
-    "celona-speakeasy-bar-interiors_dezeen_2364_col_16-scaled.jpg": "too soft (sharpness 51, need 60)",
     "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg": "compression artifacts (blockiness 1.48)",
-    "celona-speakeasy-bar-interiors_dezeen_2364_col_22-scaled.jpg": "compression artifacts (blockiness 1.82)",
     "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_22.jpg": "compression artifacts (blockiness 1.54)",
-    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_34.jpg": "too soft (sharpness 55, need 60)"
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_34.jpg": "too soft (sharpness 55, need 60)",
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_42.jpg": "compression artifacts (blockiness 1.40)"
    }
   },
   {
@@ -37,8 +42,16 @@
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.51) ; photo 2 HOLD: tilt ; photo 3 rejected: compression artifacts (blockiness 1.56) ; photo 4 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 5 rejected: compression artifacts (blockiness 1.60) ; photo 6 rejected: compression ",
    "status": "WATCHING",
    "last_check": "2026-11-10",
-   "ready_photos": 0,
-   "candidate_photos": []
+   "ready_photos": 1,
+   "candidate_photos": [
+    "https://static-2026.dezeen.com/uploads/2026/04/upstairs-at-hausu-peckham-london-listening-bars-interiors_dezeen_2364_col_2.jpg"
+   ],
+   "gate_failures": {
+    "eckham-london-listening-bars-interiors_dezeen_2364_col_0.jpg": "compression artifacts (blockiness 1.51)",
+    "eckham-london-listening-bars-interiors_dezeen_2364_col_3.jpg": "compression artifacts (blockiness 1.35)",
+    "eckham-london-listening-bars-interiors_dezeen_2364_col_4.jpg": "compression artifacts (blockiness 1.68)",
+    "eckham-london-listening-bars-interiors_dezeen_2364_col_7.jpg": "compression artifacts (blockiness 1.56)"
+   }
   },
   {
    "index": "0012",
@@ -167,20 +180,21 @@
    "pages": [],
    "added": "2026-11-02",
    "reason": "photo 1 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 2 rejected: compression artifacts (blockiness 1.58) ; photo 3 rejected: compression artifacts (blockiness 1.38) ; photo 4 rejected: compression artifacts (blockiness 1.42) ; photo 5 rejected: compression artifacts (blockiness",
-   "status": "WATCHING",
+   "status": "READY",
    "last_check": "2026-11-10",
-   "ready_photos": 2,
+   "ready_photos": 4,
    "gate_failures": {
-    "ighbor_wild-form-design-studio_dezeen_2364_col_10-scaled.jpg": "compression artifacts (blockiness 1.84)",
     "-thy-neighbor_wild-form-design-studio_dezeen_2364_col_10.jpg": "compression artifacts (blockiness 1.36)",
-    "ighbor_wild-form-design-studio_dezeen_2364_col_12-scaled.jpg": "compression artifacts (blockiness 1.88)",
     "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_3.jpg": "compression artifacts (blockiness 1.50)",
     "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_5.jpg": "compression artifacts (blockiness 1.42)",
-    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_6.jpg": "compression artifacts (blockiness 1.58)"
+    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_6.jpg": "compression artifacts (blockiness 1.58)",
+    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_7.jpg": "compression artifacts (blockiness 1.42)"
    },
    "candidate_photos": [
     "https://images.squarespace-cdn.com/content/v1/6a1853f18b044d20b8b65b5b/afdd29d0-51fe-42bf-afcf-02432e11ea1b/IMG_1033.JPEG?format=2500w",
-    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_12.jpg"
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_9.jpg"
    ]
   },
   {

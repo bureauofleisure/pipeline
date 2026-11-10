@@ -314,7 +314,7 @@
   },
   "rodolphe parente": {
    "name": "Rodolphe Parente",
-   "seen": 2,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.rodolpheparente.com/",
    "platform": "unknown",
@@ -434,7 +434,7 @@
   },
   "aaron richter": {
    "name": "Aaron Richter",
-   "seen": 20,
+   "seen": 18,
    "resolved": true,
    "url": "https://aaronrichter.com/",
    "platform": "cargo",
@@ -514,7 +514,7 @@
   },
   "mark cocksedge": {
    "name": "Mark Cocksedge",
-   "seen": 10,
+   "seen": 11,
    "resolved": true,
    "url": "https://www.markcocksedge.co.uk/",
    "platform": "unknown",
@@ -602,7 +602,7 @@
   },
   "luke hayes": {
    "name": "Luke Hayes",
-   "seen": 23,
+   "seen": 17,
    "resolved": true,
    "url": "https://www.lukehayes.com/",
    "platform": "format",
@@ -650,7 +650,7 @@
   },
   "stan lee": {
    "name": "Stan Lee",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.stanleephoto.com/",
    "platform": "wordpress",
@@ -714,7 +714,7 @@
   },
   "francisco ascensao": {
    "name": "Francisco Ascensão",
-   "seen": 5,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.franciscoascensao.com/",
    "platform": "unknown",
@@ -746,7 +746,7 @@
   },
   "andrew pogue": {
    "name": "Andrew Pogue",
-   "seen": 9,
+   "seen": 8,
    "resolved": true,
    "url": "https://www.andrewpogue.com/",
    "platform": "squarespace",
@@ -762,7 +762,7 @@
   },
   "mmk creative": {
    "name": "MMK Creative",
-   "seen": 2,
+   "seen": 1,
    "resolved": true,
    "url": "https://www.mmkcreative.com/",
    "platform": "unknown",
@@ -810,7 +810,7 @@
   },
   "dan padgett": {
    "name": "Dan Padgett",
-   "seen": 4,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.danpadgettphoto.com/",
    "platform": "squarespace",
@@ -834,7 +834,7 @@
   },
   "andrew giammarco": {
    "name": "Andrew Giammarco",
-   "seen": 8,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.andrewgiammarco.com/",
    "platform": "squarespace",
@@ -882,7 +882,7 @@
   },
   "joss mckinley": {
    "name": "Joss McKinley",
-   "seen": 3,
+   "seen": 1,
    "resolved": true,
    "url": "https://jossmckinley.com/",
    "platform": "wordpress",
@@ -890,7 +890,7 @@
   },
   "neil godwin": {
    "name": "Neil Godwin",
-   "seen": 6,
+   "seen": 1,
    "resolved": true,
    "url": "https://www.neilgodwin.com/",
    "platform": "wix",
@@ -898,7 +898,7 @@
   },
   "michael clifford": {
    "name": "Michael Clifford",
-   "seen": 4,
+   "seen": 8,
    "resolved": true,
    "url": "https://michaelcliffordphoto.com/",
    "platform": "squarespace",
@@ -914,7 +914,7 @@
   },
   "jason orear": {
    "name": "Jason O'Rear",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://jasonorear.com/",
    "platform": "unknown",
@@ -930,7 +930,7 @@
   },
   "kerrisa treanor": {
    "name": "Kerrisa Treanor",
-   "seen": 4,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.kerrisatreanor.com/",
    "platform": "squarespace",
@@ -946,7 +946,7 @@
   },
   "ai fiori": {
    "name": "Ai Fiori",
-   "seen": 6,
+   "seen": 2,
    "resolved": true,
    "url": "https://aifiori.com/",
    "platform": "wordpress",
@@ -954,7 +954,7 @@
   },
   "alexander stein": {
    "name": "Alexander Stein",
-   "seen": 5,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.alexanderstein.com/",
    "platform": "wordpress",
@@ -986,7 +986,7 @@
   },
   "birch thomas": {
    "name": "Birch Thomas",
-   "seen": 2,
+   "seen": 1,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -994,7 +994,7 @@
   },
   "don riddle": {
    "name": "Don Riddle",
-   "seen": 4,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.donriddle.com/",
    "platform": "unknown",
@@ -1002,7 +1002,7 @@
   },
   "evan sung": {
    "name": "Evan Sung",
-   "seen": 5,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.evansung.com/",
    "platform": "format",
@@ -1018,7 +1018,7 @@
   },
   "joe clark": {
    "name": "Joe Clark",
-   "seen": 1,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.joeclarkphotography.com/",
    "platform": "unknown",
@@ -1140,7 +1140,7 @@
   },
   "parts and labor design": {
    "name": "Parts and Labor Design",
-   "seen": 3,
+   "seen": 6,
    "resolved": true,
    "url": "https://partsandlabordesign.com/",
    "platform": "wordpress",
@@ -1444,7 +1444,7 @@
   },
   "clb architects": {
    "name": "CLB Architects",
-   "seen": 1,
+   "seen": 5,
    "resolved": true,
    "url": "https://clbarchitects.com/",
    "platform": "unknown",
@@ -1524,7 +1524,7 @@
   },
   "studio ruei": {
    "name": "Studio Ruei",
-   "seen": 3,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.studioruei.com/",
    "platform": "squarespace",
@@ -1544,6 +1544,22 @@
    "resolved": true,
    "url": "https://dorothydraper.com/",
    "platform": "wordpress",
+   "checked": "2026-11-10"
+  },
+  "oshinowo studio": {
+   "name": "Oshinówò Studio",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-10"
+  },
+  "archer humphryes architects": {
+   "name": "Archer Humphryes Architects",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
    "checked": "2026-11-10"
   }
  }
