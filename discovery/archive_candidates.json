@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T18:57:36Z",
+ "searched": "2026-11-10T19:30:17Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,41 +7,23 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 24,
+  "searches": 2,
+  "results": 33,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 16,
+  "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Rainbow Room; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Schrafft's; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 5,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/49300/49396u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49300/49395u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49300/49394u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49400/49489u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49300/49338u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53978u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53979u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53981u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53977u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53980u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53982u.tif: HTTP 429",
-   "vices/master/pnp/highsm/53900/53976u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49300/49381u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49500/49524u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49400/49425u.tif: HTTP 429",
-   "vices/master/pnp/highsm/49400/49407u.tif: HTTP 429"
-  ],
+  "other_collections": 33,
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 3
  },
- "next_target": 0,
+ "next_target": 2,
  "targets": [
   {
    "place": "Rainbow Room",
