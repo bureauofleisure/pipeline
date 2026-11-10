@@ -196,16 +196,19 @@ def images_from(page, base):
     if not keep:
         keep = set(found)
     # Dezeen serves a 2364-wide version of every gallery image; prefer it
-    out = []
+    out = {}
     for u in sorted(keep):
         if "dezeen.com" in u:
             u2 = re.sub(r"_dezeen_(\d{3,4})_", "_dezeen_2364_", u)
-            u2 = re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u2)
-            out.append({"url": u2, "width_hint": 2364 if "_2364_" in u2 else found.get(u, 0)})
+            u2 = re.sub(r"-(?:\d{3,4}x\d{3,4}|scaled)(\.\w+)$", r"\1", u2)
+            w = 2364 if "_2364_" in u2 else found.get(u, 0)
         else:
-            out.append({"url": re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u) if "wp-content" in u else u,
-                        "width_hint": found.get(u, 0)})
-    return out[:40]
+            u2 = re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u) if "wp-content" in u else u
+            w = found.get(u, 0)
+        # one entry per photo: several sizes of one image rewrite to the same address, and counting each
+        # filled the 40-photo cap with repeats (2026-11-10: a Dezeen gallery arrived as 40 entries, 18 photos)
+        out[u2] = max(out.get(u2, 0), w)
+    return [{"url": u, "width_hint": w} for u, w in out.items()][:40]
 
 
 def _exists(url):
