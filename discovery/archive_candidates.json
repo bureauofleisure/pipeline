@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-09T19:30:33Z",
+ "searched": "2026-11-10T01:40:22Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,21 +8,28 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 1,
+  "results": 31,
   "items_opened": 0,
-  "offtopic": 0,
+  "offtopic": 5,
   "rights": 0,
-  "size": 0,
-  "type": 1,
+  "size": 4,
+  "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel del Coronado; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Bathhouse Row; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 22,
+  "tif_header_misses": [
+   "vices/master/pnp/highsm/12700/12739u.tif: HTTP 429",
+   "aer/ca/ca0500/ca0567/photos/015007pu.tif: HTTP 429",
+   "bshaer/ca/ca4300/ca4353/sheet/00001u.tif: HTTP 429",
+   "bshaer/ca/ca4300/ca4352/sheet/00001u.tif: HTTP 429"
+  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 39,
+ "next_target": 40,
  "targets": [
   {
    "place": "Rainbow Room",
