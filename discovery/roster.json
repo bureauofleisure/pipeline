@@ -26,7 +26,7 @@
   },
   "luca argenton": {
    "name": "Luca Argenton",
-   "seen": 11,
+   "seen": 12,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -50,7 +50,7 @@
   },
   "alex lesage": {
    "name": "Alex Lesage",
-   "seen": 9,
+   "seen": 10,
    "resolved": true,
    "url": "https://www.alexlesage.com/",
    "platform": "squarespace",
@@ -58,7 +58,7 @@
   },
   "axel aurejac": {
    "name": "Axel Aurejac",
-   "seen": 38,
+   "seen": 45,
    "resolved": true,
    "url": "https://www.axelaurejac.com/",
    "platform": "webflow",
@@ -66,7 +66,7 @@
   },
   "read mckendree": {
    "name": "Read McKendree",
-   "seen": 15,
+   "seen": 16,
    "resolved": true,
    "url": "https://www.readmckendree.com/",
    "platform": "squarespace",
@@ -74,7 +74,7 @@
   },
   "joe thomas": {
    "name": "Joe Thomas",
-   "seen": 40,
+   "seen": 48,
    "resolved": true,
    "url": "https://www.joethomasphoto.com/",
    "platform": "squarespace",
@@ -178,7 +178,7 @@
   },
   "ema peter": {
    "name": "Ema Peter",
-   "seen": 9,
+   "seen": 15,
    "resolved": true,
    "url": "https://www.emapeter.com/",
    "platform": "squarespace",
@@ -202,7 +202,7 @@
   },
   "guowei liu": {
    "name": "Guowei Liu",
-   "seen": 5,
+   "seen": 6,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -210,7 +210,7 @@
   },
   "ruth ward": {
    "name": "Ruth Ward",
-   "seen": 6,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.ruthward.com/",
    "platform": "squarespace",
@@ -218,7 +218,7 @@
   },
   "ollie tomlinson": {
    "name": "Ollie Tomlinson",
-   "seen": 5,
+   "seen": 6,
    "resolved": true,
    "url": "https://www.ollietomlinson.com/",
    "platform": "wix",
@@ -226,7 +226,7 @@
   },
   "mike schwartz": {
    "name": "Mike Schwartz",
-   "seen": 9,
+   "seen": 10,
    "resolved": true,
    "url": "https://www.mikeschwartzphoto.com/",
    "platform": "squarespace",
@@ -242,7 +242,7 @@
   },
   "aichan mama": {
    "name": "Aichan Mama",
-   "seen": 7,
+   "seen": 8,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -330,7 +330,7 @@
   },
   "sofia kulianu": {
    "name": "Sofia Kulianu",
-   "seen": 5,
+   "seen": 6,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -402,7 +402,7 @@
   },
   "bruzkus greenberg": {
    "name": "Bruzkus Greenberg",
-   "seen": 11,
+   "seen": 12,
    "resolved": true,
    "url": "https://www.bruzkusgreenberg.com/en",
    "platform": "unknown",
@@ -434,7 +434,7 @@
   },
   "aaron richter": {
    "name": "Aaron Richter",
-   "seen": 16,
+   "seen": 20,
    "resolved": true,
    "url": "https://aaronrichter.com/",
    "platform": "cargo",
@@ -498,7 +498,7 @@
   },
   "oliver haslegrave": {
    "name": "Oliver Haslegrave",
-   "seen": 2,
+   "seen": 1,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -506,7 +506,7 @@
   },
   "tom mcgovern": {
    "name": "Tom McGovern",
-   "seen": 4,
+   "seen": 8,
    "resolved": true,
    "url": "https://www.tommcgovernphoto.com/",
    "platform": "squarespace",
@@ -514,7 +514,7 @@
   },
   "mark cocksedge": {
    "name": "Mark Cocksedge",
-   "seen": 9,
+   "seen": 10,
    "resolved": true,
    "url": "https://www.markcocksedge.co.uk/",
    "platform": "unknown",
@@ -522,7 +522,7 @@
   },
   "hiroyuki hirai": {
    "name": "Hiroyuki Hirai",
-   "seen": 3,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.hiroyukihirai.com/",
    "platform": "unknown",
@@ -538,7 +538,7 @@
   },
   "raquel diniz": {
    "name": "Raquel Diniz",
-   "seen": 8,
+   "seen": 9,
    "resolved": true,
    "url": "https://www.raqueldiniz.com/",
    "platform": "wordpress",
@@ -554,7 +554,7 @@
   },
   "alice mesguich": {
    "name": "Alice Mesguich",
-   "seen": 3,
+   "seen": 4,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -562,7 +562,7 @@
   },
   "clement gerard": {
    "name": "Clément Gérard",
-   "seen": 3,
+   "seen": 4,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -570,7 +570,7 @@
   },
   "michael sinclair": {
    "name": "Michael Sinclair",
-   "seen": 4,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.michaelsinclair.com/",
    "platform": "unknown",
@@ -594,7 +594,7 @@
   },
   "olivia chenery tickets": {
    "name": "Olivia Chenery Tickets",
-   "seen": 3,
+   "seen": 4,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -602,7 +602,7 @@
   },
   "luke hayes": {
    "name": "Luke Hayes",
-   "seen": 16,
+   "seen": 23,
    "resolved": true,
    "url": "https://www.lukehayes.com/",
    "platform": "format",
@@ -626,7 +626,7 @@
   },
   "ben hon": {
    "name": "Ben Hon",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -690,7 +690,7 @@
   },
   "armin tehran": {
    "name": "Armin Tehran",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -714,7 +714,7 @@
   },
   "francisco ascensao": {
    "name": "Francisco Ascensão",
-   "seen": 4,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.franciscoascensao.com/",
    "platform": "unknown",
@@ -746,7 +746,7 @@
   },
   "andrew pogue": {
    "name": "Andrew Pogue",
-   "seen": 6,
+   "seen": 9,
    "resolved": true,
    "url": "https://www.andrewpogue.com/",
    "platform": "squarespace",
@@ -754,7 +754,7 @@
   },
   "matt kisiday": {
    "name": "Matt Kisiday",
-   "seen": 2,
+   "seen": 1,
    "resolved": true,
    "url": "https://www.mattkisiday.com/",
    "platform": "squarespace",
@@ -762,7 +762,7 @@
   },
   "mmk creative": {
    "name": "MMK Creative",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.mmkcreative.com/",
    "platform": "unknown",
@@ -778,7 +778,7 @@
   },
   "robert reiger": {
    "name": "Robert Reiger",
-   "seen": 4,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -786,7 +786,7 @@
   },
   "robert reiger together": {
    "name": "Robert Reiger Together",
-   "seen": 2,
+   "seen": 1,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -802,7 +802,7 @@
   },
   "yevhenii avramenko": {
    "name": "Yevhenii Avramenko",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -834,7 +834,7 @@
   },
   "andrew giammarco": {
    "name": "Andrew Giammarco",
-   "seen": 2,
+   "seen": 8,
    "resolved": true,
    "url": "https://www.andrewgiammarco.com/",
    "platform": "squarespace",
@@ -842,7 +842,7 @@
   },
   "elizabeth carababas": {
    "name": "Elizabeth Carababas",
-   "seen": 1,
+   "seen": 4,
    "resolved": true,
    "url": "https://elizabethcarababas.com/",
    "platform": "cargo",
@@ -850,7 +850,7 @@
   },
   "marco galloway considering": {
    "name": "Marco Galloway Considering",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -858,7 +858,7 @@
   },
   "tori sikkema": {
    "name": "Tori Sikkema",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -866,7 +866,7 @@
   },
   "louise dahlwolfe": {
    "name": "Louise Dahl-Wolfe",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -874,7 +874,7 @@
   },
   "stephen michael": {
    "name": "Stephen Michael",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -882,7 +882,7 @@
   },
   "joss mckinley": {
    "name": "Joss McKinley",
-   "seen": 1,
+   "seen": 3,
    "resolved": true,
    "url": "https://jossmckinley.com/",
    "platform": "wordpress",
@@ -890,7 +890,7 @@
   },
   "neil godwin": {
    "name": "Neil Godwin",
-   "seen": 1,
+   "seen": 6,
    "resolved": true,
    "url": "https://www.neilgodwin.com/",
    "platform": "wix",
@@ -898,7 +898,7 @@
   },
   "michael clifford": {
    "name": "Michael Clifford",
-   "seen": 1,
+   "seen": 4,
    "resolved": true,
    "url": "https://michaelcliffordphoto.com/",
    "platform": "squarespace",
@@ -906,7 +906,7 @@
   },
   "matte is": {
    "name": "matte is",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -922,7 +922,7 @@
   },
   "jenny antill": {
    "name": "Jenny Antill",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -930,7 +930,7 @@
   },
   "kerrisa treanor": {
    "name": "Kerrisa Treanor",
-   "seen": 1,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.kerrisatreanor.com/",
    "platform": "squarespace",
@@ -946,7 +946,7 @@
   },
   "ai fiori": {
    "name": "Ai Fiori",
-   "seen": 1,
+   "seen": 6,
    "resolved": true,
    "url": "https://aifiori.com/",
    "platform": "wordpress",
@@ -954,7 +954,7 @@
   },
   "alexander stein": {
    "name": "Alexander Stein",
-   "seen": 1,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.alexanderstein.com/",
    "platform": "wordpress",
@@ -962,7 +962,7 @@
   },
   "bar chimera v": {
    "name": "Bar Chimera V",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -970,7 +970,7 @@
   },
   "eric medsker": {
    "name": "Eric Medsker",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -978,7 +978,7 @@
   },
   "heather willensky": {
    "name": "Heather Willensky",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://www.heatherwillensky.com/",
    "platform": "squarespace",
@@ -986,7 +986,7 @@
   },
   "birch thomas": {
    "name": "Birch Thomas",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -994,7 +994,7 @@
   },
   "don riddle": {
    "name": "Don Riddle",
-   "seen": 1,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.donriddle.com/",
    "platform": "unknown",
@@ -1002,17 +1002,33 @@
   },
   "evan sung": {
    "name": "Evan Sung",
-   "seen": 1,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.evansung.com/",
    "platform": "format",
    "checked": "2026-11-09"
+  },
+  "jonathan leijonhufvud": {
+   "name": "Jonathan Leijonhufvud",
+   "seen": 2,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-10"
+  },
+  "joe clark": {
+   "name": "Joe Clark",
+   "seen": 1,
+   "resolved": true,
+   "url": "https://www.joeclarkphotography.com/",
+   "platform": "unknown",
+   "checked": "2026-11-10"
   }
  },
  "studios": {
   "common studio": {
    "name": "Common Studio",
-   "seen": 11,
+   "seen": 12,
    "resolved": true,
    "url": "https://commonstudio.co/",
    "platform": "squarespace",
@@ -1020,7 +1036,7 @@
   },
   "joyce wang studio": {
    "name": "Joyce Wang Studio",
-   "seen": 17,
+   "seen": 18,
    "resolved": true,
    "url": "https://joycewangstudio.com/",
    "platform": "wordpress",
@@ -1060,7 +1076,7 @@
   },
   "invisible studio": {
    "name": "Invisible Studio",
-   "seen": 12,
+   "seen": 13,
    "resolved": true,
    "url": "https://www.invisiblestudio.com/",
    "platform": "unknown",
@@ -1084,7 +1100,7 @@
   },
   "courtney applebaum design": {
    "name": "Courtney Applebaum Design",
-   "seen": 10,
+   "seen": 11,
    "resolved": true,
    "url": "https://www.courtneyapplebaumdesign.com/",
    "platform": "squarespace",
@@ -1140,7 +1156,7 @@
   },
   "anna carin design": {
    "name": "Anna Carin Design",
-   "seen": 4,
+   "seen": 5,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1148,7 +1164,7 @@
   },
   "eternal architectural design": {
    "name": "Eternal Architectural Design",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1300,7 +1316,7 @@
   },
   "astet studio": {
    "name": "Astet Studio",
-   "seen": 2,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.astetstudio.com/",
    "platform": "unknown",
@@ -1308,7 +1324,7 @@
   },
   "global studio hok": {
    "name": "global studio HOK",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1316,7 +1332,7 @@
   },
   "mad architects": {
    "name": "MAD Architects",
-   "seen": 3,
+   "seen": 4,
    "resolved": true,
    "url": "https://madarchitects.com/",
    "platform": "wordpress",
@@ -1340,7 +1356,7 @@
   },
   "hingston studio": {
    "name": "Hingston Studio",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1388,7 +1404,7 @@
   },
   "parisian studio henry": {
    "name": "Parisian Studio Henry",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1396,7 +1412,7 @@
   },
   "spagnulo  partners": {
    "name": "Spagnulo & Partners",
-   "seen": 2,
+   "seen": 3,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1452,7 +1468,7 @@
   },
   "ater architects": {
    "name": "Ater Architects",
-   "seen": 2,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.aterarchitects.com/",
    "platform": "squarespace",
@@ -1500,7 +1516,7 @@
   },
   "studio elen letort": {
    "name": "Studio Elen Letort",
-   "seen": 1,
+   "seen": 2,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1508,11 +1524,27 @@
   },
   "studio ruei": {
    "name": "Studio Ruei",
-   "seen": 1,
+   "seen": 3,
    "resolved": true,
    "url": "https://www.studioruei.com/",
    "platform": "squarespace",
    "checked": "2026-11-09"
+  },
+  "rockwell group": {
+   "name": "Rockwell Group",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://www.rockwellgroup.com/",
+   "platform": "unknown",
+   "checked": "2026-11-10"
+  },
+  "dorothy draper": {
+   "name": "Dorothy Draper",
+   "seen": 2,
+   "resolved": true,
+   "url": "https://dorothydraper.com/",
+   "platform": "wordpress",
+   "checked": "2026-11-10"
   }
  }
 }

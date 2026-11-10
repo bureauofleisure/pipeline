@@ -1,11 +1,11 @@
 {
- "checked": "2026-11-09T14:31:49Z",
+ "checked": "2026-11-10T02:14:42Z",
  "items": [
   {
    "index": "0007",
    "place": "Focacha",
    "status": "WATCHING",
-   "ready_photos": 0
+   "ready_photos": 1
   },
   {
    "index": "0008",
@@ -35,7 +35,7 @@
    "index": "0021",
    "place": "Love Thy Neighbor",
    "status": "WATCHING",
-   "ready_photos": 1
+   "ready_photos": 2
   }
  ]
 }

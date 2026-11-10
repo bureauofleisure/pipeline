@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T01:55:30Z",
+ "searched": "2026-11-10T02:15:51Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,34 +7,20 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 12,
+  "searches": 0,
+  "results": 0,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 12,
+  "size": 0,
   "type": 0,
   "errors": [
    "rate limited by loc.gov at Essex House; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/13000/13097u.tif: HTTP 429",
-   "haer/ar/ar0000/ar0035/color/570630cu.tif: HTTP 429",
-   "vices/master/pnp/highsm/16500/16591u.tif: HTTP 429",
-   "vices/master/pnp/highsm/64900/64942u.tif: HTTP 429",
-   "vices/master/pnp/highsm/64900/64943u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13463u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13464u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13422u.tif: HTTP 429",
-   "aer/ar/ar0000/ar0056/photos/010102pu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0036/color/570748cu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0034/color/570886cu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0031/color/571934cu.tif: HTTP 429"
-  ],
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 1
  },
  "next_target": 41,
  "targets": [

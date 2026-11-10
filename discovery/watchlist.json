@@ -11,9 +11,19 @@
    "added": "2026-10-18",
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.48) ; photo 2 rejected: compression artifacts (blockiness 1.54) ; photo 3 held: tilt -5.1 deg is over the limit ; photo 6 is a near-duplicate, dropped ; photo 7 HOLD: tilt ; photo 9 rejected: compression artifacts (blockiness 1.64) ; only 3 photo",
    "status": "WATCHING",
-   "last_check": "2026-11-09",
-   "ready_photos": 0,
-   "candidate_photos": []
+   "last_check": "2026-11-10",
+   "ready_photos": 1,
+   "candidate_photos": [
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg"
+   ],
+   "gate_failures": {
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_10.jpg": "compression artifacts (blockiness 1.64)",
+    "celona-speakeasy-bar-interiors_dezeen_2364_col_16-scaled.jpg": "too soft (sharpness 51, need 60)",
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg": "compression artifacts (blockiness 1.48)",
+    "celona-speakeasy-bar-interiors_dezeen_2364_col_22-scaled.jpg": "compression artifacts (blockiness 1.82)",
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_22.jpg": "compression artifacts (blockiness 1.54)",
+    "rra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_34.jpg": "too soft (sharpness 55, need 60)"
+   }
   },
   {
    "index": "0008",
@@ -26,7 +36,7 @@
    "added": "2026-10-18",
    "reason": "photo 1 rejected: compression artifacts (blockiness 1.51) ; photo 2 HOLD: tilt ; photo 3 rejected: compression artifacts (blockiness 1.56) ; photo 4 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 5 rejected: compression artifacts (blockiness 1.60) ; photo 6 rejected: compression ",
    "status": "WATCHING",
-   "last_check": "2026-11-09",
+   "last_check": "2026-11-10",
    "ready_photos": 0,
    "candidate_photos": []
   },
@@ -41,7 +51,7 @@
    "added": "2026-10-18",
    "reason": "photo 2 could not be fetched (HTTPError) ; photo 3 could not be fetched (HTTPError) ; photo 4 could not be fetched (HTTPError) ; photo 5 could not be fetched (HTTPError) ; photo 6 could not be fetched (HTTPError) ; photo 7 rejected: too small (922x1153 after crop, need 1080x1350) ; photo 8 rejected:",
    "status": "WATCHING",
-   "last_check": "2026-11-09",
+   "last_check": "2026-11-10",
    "ready_photos": 0,
    "candidate_photos": []
   },
@@ -56,7 +66,7 @@
    "added": "2026-10-19",
    "reason": "photo 2 HOLD: tilt ; photo 3 HOLD: tilt ; photo 4 HOLD: tilt ; photo 5 held: tilt -4.8 deg is over the limit ; photo 6 HOLD: tilt ; only 1 photos passed, need 4",
    "status": "WATCHING",
-   "last_check": "2026-11-09",
+   "last_check": "2026-11-10",
    "ready_photos": 0,
    "candidate_photos": []
   },
@@ -116,7 +126,7 @@
    "added": "2026-10-19",
    "reason": "photo 3 rejected: too small (1066x1333 after crop, need 1080x1350) ; photo 4 rejected: too small (1066x1333 after crop, need 1080x1350) ; only 2 photos passed, need 4 ; 2026-11-02 review: the Home Studios page has only these 4 Sisters frames; the two landscape ones are 2000x1333 and fail the 4:5 gate, so 2 usable.",
    "status": "READY",
-   "last_check": "2026-11-09",
+   "last_check": "2026-11-10",
    "ready_photos": 4,
    "candidate_photos": [
     "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/1702059791147-RA5H535C34LOB7YEQVPK/1.png?format=2500w",
@@ -158,11 +168,19 @@
    "added": "2026-11-02",
    "reason": "photo 1 rejected: too small (1064x1330 after crop, need 1080x1350) ; photo 2 rejected: compression artifacts (blockiness 1.58) ; photo 3 rejected: compression artifacts (blockiness 1.38) ; photo 4 rejected: compression artifacts (blockiness 1.42) ; photo 5 rejected: compression artifacts (blockiness",
    "status": "WATCHING",
-   "last_check": "2026-11-09",
-   "ready_photos": 1,
-   "gate_failures": {},
+   "last_check": "2026-11-10",
+   "ready_photos": 2,
+   "gate_failures": {
+    "ighbor_wild-form-design-studio_dezeen_2364_col_10-scaled.jpg": "compression artifacts (blockiness 1.84)",
+    "-thy-neighbor_wild-form-design-studio_dezeen_2364_col_10.jpg": "compression artifacts (blockiness 1.36)",
+    "ighbor_wild-form-design-studio_dezeen_2364_col_12-scaled.jpg": "compression artifacts (blockiness 1.88)",
+    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_3.jpg": "compression artifacts (blockiness 1.50)",
+    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_5.jpg": "compression artifacts (blockiness 1.42)",
+    "e-thy-neighbor_wild-form-design-studio_dezeen_2364_col_6.jpg": "compression artifacts (blockiness 1.58)"
+   },
    "candidate_photos": [
-    "https://images.squarespace-cdn.com/content/v1/6a1853f18b044d20b8b65b5b/afdd29d0-51fe-42bf-afcf-02432e11ea1b/IMG_1033.JPEG?format=2500w"
+    "https://images.squarespace-cdn.com/content/v1/6a1853f18b044d20b8b65b5b/afdd29d0-51fe-42bf-afcf-02432e11ea1b/IMG_1033.JPEG?format=2500w",
+    "https://static-2026.dezeen.com/uploads/2026/06/love-thy-neighbor_wild-form-design-studio_dezeen_2364_col_12.jpg"
    ]
   },
   {

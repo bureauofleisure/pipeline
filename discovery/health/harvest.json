@@ -1,0 +1,116 @@
+{
+ "job": "harvest",
+ "at": "2026-11-10T02:13:39Z",
+ "ok": true,
+ "stats": {
+  "items": 225,
+  "pages_fetched": 225,
+  "page_errors": 2,
+  "feeds": 23,
+  "feed_errors": [],
+  "with_4_photos": 158,
+  "sources": {
+   "ArchDaily": {
+    "pages": 1,
+    "median_text": 1434,
+    "median_photos": 6
+   },
+   "Architectural Digest": {
+    "pages": 6,
+    "median_text": 6000,
+    "median_photos": 2
+   },
+   "Conde Nast Traveler": {
+    "pages": 7,
+    "median_text": 6000,
+    "median_photos": 1
+   },
+   "Design Milk": {
+    "pages": 1,
+    "median_text": 6000,
+    "median_photos": 40
+   },
+   "Designboom architecture": {
+    "pages": 2,
+    "median_text": 6000,
+    "median_photos": 1
+   },
+   "Dezeen Awards hospitality": {
+    "pages": 10,
+    "median_text": 3565,
+    "median_photos": 31
+   },
+   "Dezeen bars": {
+    "pages": 12,
+    "median_text": 3537,
+    "median_photos": 48
+   },
+   "Dezeen hotels": {
+    "pages": 12,
+    "median_text": 3582,
+    "median_photos": 43
+   },
+   "Dezeen interiors": {
+    "pages": 12,
+    "median_text": 3212,
+    "median_photos": 47
+   },
+   "Dezeen restaurants": {
+    "pages": 12,
+    "median_text": 3555,
+    "median_photos": 47
+   },
+   "Eater Austin": {
+    "pages": 7,
+    "median_text": 6000,
+    "median_photos": 4
+   },
+   "Eater Los Angeles": {
+    "pages": 6,
+    "median_text": 5392,
+    "median_photos": 2
+   },
+   "Eater Miami": {
+    "pages": 6,
+    "median_text": 6000,
+    "median_photos": 3
+   },
+   "Eater New York": {
+    "pages": 10,
+    "median_text": 5457,
+    "median_photos": 3
+   },
+   "Elle Decor": {
+    "pages": 3,
+    "median_text": 4577,
+    "median_photos": 2
+   },
+   "Hotel Designs": {
+    "pages": 12,
+    "median_text": 6000,
+    "median_photos": 1
+   },
+   "Resy": {
+    "pages": 6,
+    "median_text": 3392,
+    "median_photos": 12
+   },
+   "Sight Unseen": {
+    "pages": 5,
+    "median_text": 6000,
+    "median_photos": 11
+   },
+   "Sleeper": {
+    "pages": 12,
+    "median_text": 3068,
+    "median_photos": 1
+   },
+   "Wallpaper": {
+    "pages": 7,
+    "median_text": 6000,
+    "median_photos": 15
+   }
+  }
+ },
+ "problems": []
+}

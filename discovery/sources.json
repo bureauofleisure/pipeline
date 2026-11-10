@@ -2136,6 +2136,42 @@
    "auto": true,
    "platform": "squarespace",
    "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-09."
+  },
+  {
+   "name": "Joe Clark",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.joeclarkphotography.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-10."
+  },
+  {
+   "name": "Rockwell Group",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.rockwellgroup.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-11-10."
+  },
+  {
+   "name": "Dorothy Draper",
+   "category": "studio",
+   "tier": 1,
+   "region": "global",
+   "url": "https://dorothydraper.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-11-10."
   }
  ]
 }
