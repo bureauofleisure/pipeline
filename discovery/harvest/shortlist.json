@@ -1,5 +1,5 @@
 {
- "harvested": "2026-11-10T01:54:47Z",
+ "harvested": "2026-11-10T02:17:38Z",
  "items": [
   {
    "link": "http://www.nicolefranzen.com/hospitality",
@@ -749,6 +749,14 @@
     {
      "url": "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_2364_col_11.jpg",
      "width_hint": 2364
+    },
+    {
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_hero1.jpg",
+     "width_hint": 1704
+    },
+    {
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/skywalker-grill_lucas-museum_rockwell-group_dezeen_sq1.jpg",
+     "width_hint": 0
     }
    ],
    "credits": [
@@ -854,15 +862,7 @@
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_0-scaled.jpg",
-     "width_hint": 2364
-    },
-    {
      "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_1.jpg",
-     "width_hint": 2364
-    },
-    {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_1-scaled.jpg",
      "width_hint": 2364
     },
     {
@@ -871,10 +871,6 @@
     },
     {
      "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_3.jpg",
-     "width_hint": 2364
-    },
-    {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_3-scaled.jpg",
      "width_hint": 2364
     },
     {
@@ -906,15 +902,15 @@
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_10-scaled.jpg",
-     "width_hint": 2364
-    },
-    {
      "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_11.jpg",
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_11-scaled.jpg",
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_hero.jpg",
+     "width_hint": 2364
+    },
+    {
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_sq.jpg",
      "width_hint": 2364
     }
    ],
@@ -1029,15 +1025,7 @@
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_2-scaled.jpg",
-     "width_hint": 2364
-    },
-    {
      "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_3.jpg",
-     "width_hint": 2364
-    },
-    {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_3-scaled.jpg",
      "width_hint": 2364
     },
     {
@@ -1061,15 +1049,7 @@
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_8-scaled.jpg",
-     "width_hint": 2364
-    },
-    {
      "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_9.jpg",
-     "width_hint": 2364
-    },
-    {
-     "url": "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_9-scaled.jpg",
      "width_hint": 2364
     },
     {
@@ -1290,15 +1270,7 @@
      "width_hint": 2364
     },
     {
-     "url": "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_3-scaled.jpg",
-     "width_hint": 2364
-    },
-    {
      "url": "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_4.jpg",
-     "width_hint": 2364
-    },
-    {
-     "url": "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_4-scaled.jpg",
      "width_hint": 2364
     },
     {
@@ -1335,6 +1307,10 @@
     },
     {
      "url": "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_col_13.jpg",
+     "width_hint": 2364
+    },
+    {
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/gjergji-shkurti-million-goods-ft-green-brooklyn-listening-bar_dezeen_2364_hero.jpg",
      "width_hint": 2364
     }
    ],
