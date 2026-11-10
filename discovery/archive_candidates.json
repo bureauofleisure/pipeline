@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T07:46:45Z",
+ "searched": "2026-11-10T13:42:37Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,40 +8,30 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 23,
-  "items_opened": 0,
-  "offtopic": 0,
+  "results": 60,
+  "items_opened": 1,
+  "offtopic": 1,
   "rights": 0,
-  "size": 16,
+  "size": 5,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Brown Palace Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Hotel Congress; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 7,
+  "other_collections": 53,
   "tif_header_misses": [
-   "ter/pnp/gsc/5a25000/5a25500/5a25515u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25516u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29300/5a29359u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29900/5a29905u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25513u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25517u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25511u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25512u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25518u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29812u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29810u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29811u.tif: HTTP 429",
-   "ter/pnp/gsc/5a25000/5a25500/5a25514u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29867u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29868u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29800/5a29866u.tif: HTTP 429"
+   "vices/master/pnp/highsm/48600/48690u.tif: HTTP 429",
+   "vices/master/pnp/highsm/37400/37483u.tif: HTTP 429",
+   "vices/master/pnp/highsm/18700/18761u.tif: HTTP 429",
+   "vices/master/pnp/highsm/18700/18760u.tif: HTTP 429",
+   "vices/master/pnp/highsm/38000/38068u.tif: HTTP 429"
   ],
+  "tif_header_ok": 1,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 42,
+ "next_target": 43,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -381,8 +371,21 @@
    "city": "Denver",
    "era": "1892",
    "notes": "Added 2026-11-09: Carol M. Highsmith, 2016, the atrium lobby (items 2017885319, 2017885320). Two frames found so far; needs four.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Lobby of the historic Brown Palace Hotel in Denver. The hotel, one of the first to employ an \"atrium style\" with entire floors exposed to the lobby, was built in 1892 of sandstone and red granite",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/48600/48689u.tif",
+     "width": 10304,
+     "height": 7439,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2016-01-01",
+     "source_page": "http://www.loc.gov/item/2017885319/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Hotel Congress",
