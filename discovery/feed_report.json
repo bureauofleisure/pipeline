@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-11T01:09:29Z",
+  "checked": "2026-11-11T01:33:46Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -1226,14 +1226,6 @@
       "items": 0
     },
     {
-      "name": "MOVS STUDIO",
-      "tier": 1,
-      "category": "studio",
-      "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Andrew Meredith",
       "tier": 1,
       "category": "photographer",
@@ -1610,14 +1602,6 @@
       "items": 0
     },
     {
-      "name": "The Ingalls",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Andrew Thomas Lee",
       "tier": 1,
       "category": "photographer",
@@ -1778,14 +1762,6 @@
       "items": 0
     },
     {
-      "name": "Garrett Rowland",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Galerie",
       "tier": 2,
       "category": "design_press",
@@ -1821,6 +1797,30 @@
       "name": "Bells + Whistles",
       "tier": 1,
       "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Austin Leis",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Henrik Lundell",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Paul Bowyer",
+      "tier": 1,
+      "category": "photographer",
       "site": 200,
       "feed": null,
       "items": 0
