@@ -1008,7 +1008,8 @@
    "archive": true,
    "auto": true,
    "platform": "webflow",
-   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18."
+   "notes": "Added automatically from 2 credit(s) in the harvest, 2026-10-18. 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Read McKendree",
@@ -1176,7 +1177,8 @@
    "archive": true,
    "auto": true,
    "platform": "squarespace",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18."
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-18. 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Ollie Tomlinson",
@@ -1804,7 +1806,8 @@
    "archive": true,
    "auto": true,
    "platform": "unknown",
-   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-26."
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-10-26. Disabled 2026-11-11: site asks for a login (HTTP 401) on every run since 2026-11-02.",
+   "disabled": true
   },
   {
    "name": "Andrew Meredith",
@@ -2282,7 +2285,8 @@
    "per_run": 12,
    "index": "https://www.michaelwiltbank.com/interiors",
    "added": "2026-11-10",
-   "notes": "New York interiors and hotels. Source probe 2026-11-10: rank 8 of 30, score 76.0 (pages with a gallery 4 of 5, photos passing the gate 10 of 10)."
+   "notes": "New York interiors and hotels. Source probe 2026-11-10: rank 8 of 30, score 76.0 (pages with a gallery 4 of 5, photos passing the gate 10 of 10). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Studio UNLTD",
@@ -2418,7 +2422,8 @@
    "platform": "squarespace",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "Los Angeles hotels and restaurants, long back catalogue. Source probe 2026-11-10: rank 18 of 30, score 68.0 (pages with a gallery 4 of 5, photos passing the gate 8 of 8)."
+   "notes": "Los Angeles hotels and restaurants, long back catalogue. Source probe 2026-11-10: rank 18 of 30, score 68.0 (pages with a gallery 4 of 5, photos passing the gate 8 of 8). Disabled 2026-11-11: portfolio is organised by category (food, travel, spaces), not by project, so no page shows a single place.",
+   "disabled": true
   },
   {
    "name": "Andrew Thomas Lee",
@@ -2431,7 +2436,8 @@
    "platform": "squarespace",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "Atlanta and Southern restaurants. Source probe 2026-11-10: rank 19 of 30, score 68.0 (pages with a gallery 5 of 5, photos passing the gate 7 of 10)."
+   "notes": "Atlanta and Southern restaurants. Source probe 2026-11-10: rank 19 of 30, score 68.0 (pages with a gallery 5 of 5, photos passing the gate 7 of 10). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Ménard Dworkind",
@@ -2471,7 +2477,8 @@
    "platform": "squarespace",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "Texas architecture and hospitality. Source probe 2026-11-10: rank 22 of 30, score 68.0 (pages with a gallery 3 of 5, photos passing the gate 6 of 6)."
+   "notes": "Texas architecture and hospitality. Source probe 2026-11-10: rank 22 of 30, score 68.0 (pages with a gallery 3 of 5, photos passing the gate 6 of 6). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Jenna Peffley",
@@ -2497,7 +2504,8 @@
    "platform": "wix",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "Austin hotels, restaurants and bars. Source probe 2026-11-10: rank 24 of 30, score 67.0 (pages with a gallery 4 of 5, photos passing the gate 10 of 10)."
+   "notes": "Austin hotels, restaurants and bars. Source probe 2026-11-10: rank 24 of 30, score 67.0 (pages with a gallery 4 of 5, photos passing the gate 10 of 10). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Clayton Korte",
@@ -2614,7 +2622,8 @@
    "platform": "squarespace",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "New York interiors and hotels. Added from reserve on Lewie's word 2026-11-10. Probe score 58.0 (pages with a gallery 5, photos passing the gate 4 of 10)."
+   "notes": "New York interiors and hotels. Added from reserve on Lewie's word 2026-11-10. Probe score 58.0 (pages with a gallery 5, photos passing the gate 4 of 10). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Laura Gonzalez",
@@ -2690,7 +2699,8 @@
    "platform": "unknown",
    "per_run": 12,
    "added": "2026-11-10",
-   "notes": "New York interiors, some hospitality. Added from reserve on Lewie's word 2026-11-10. Probe score 50.0 (pages with a gallery 2, photos passing the gate 2 of 4)."
+   "notes": "New York interiors, some hospitality. Added from reserve on Lewie's word 2026-11-10. Probe score 50.0 (pages with a gallery 2, photos passing the gate 2 of 4). Disabled 2026-11-11: portfolio is organised by category (residential, commercial one to three, sports), not by project, so no page shows a single place.",
+   "disabled": true
   },
   {
    "name": "Galerie",
@@ -2739,7 +2749,8 @@
    "per_run": 12,
    "index": "https://www.hokklo.com/work",
    "added": "2026-11-10",
-   "notes": "New York interiors and hospitality. Added from reserve on Lewie's word 2026-11-10. Probe score 66.5 (pages with a gallery 3, photos passing the gate 7 of 8)."
+   "notes": "New York interiors and hospitality. Added from reserve on Lewie's word 2026-11-10. Probe score 66.5 (pages with a gallery 3, photos passing the gate 7 of 8). 2026-11-11: hospitality_only, first harvest gave 0 hospitality projects out of 6 to 12.",
+   "hospitality_only": true
   },
   {
    "name": "Bells + Whistles",

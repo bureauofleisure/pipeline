@@ -361,11 +361,36 @@ def fullsize(url, platform):
 SKIP_PATH = re.compile(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\\.well-known|sitemap)", re.I)
 
 
+# A section of a portfolio: a page that lists several projects (Hotels, Hospitality, Portraits, Selected Works,
+# Our Team). 2026-11-11: a quarter of portfolio items were these, each mixing photos of several places. They are
+# not projects: the harvest reads the project links on them instead of keeping them as items.
+SECTION = re.compile(r"^(hotels?|restaurants?|bars?|cafes?|clubs?|hospitality|residential|residences?|interiors?|our-interiors|"
+                     r"global-interiors|commercial|retail|airport|other|projects?|projects-page|portfolio|work|works|selected|"
+                     r"selected-works|team|our-team|people|studio|portraits?|still-life|travel|editorial|love-list|covers?|"
+                     r"gallery|photography|awards|talks|index|en|fr|de|es|it|home|accueil|design|archive|news|clients)(-[0-9ivx]+)*$", re.I)
+
+
+def _bare(u):
+    return re.sub(r"^https?://(www\.)?", "", u).rstrip("/").lower()
+
+
+def is_section(url, source=None):
+    """True for a page that lists projects rather than showing one."""
+    path = _bare(url).split("/", 1)[1] if "/" in _bare(url) else ""
+    last = path.rsplit("/", 1)[-1]
+    if not path or SECTION.match(last):
+        return True
+    if source and _bare(url) in (_bare(source.get("url", "")), _bare(source.get("index") or "")):
+        return True
+    return False
+
+
 def project_links(home, base, seen=()):
     """Links on a portfolio page that could be project pages: same site, at most three levels deep, not
     housekeeping, not seen before. Used by the weekly harvest and by source_probe.py, so a source is judged
     on exactly what the harvest would fetch from it."""
     links = []
+    seen_bare = {_bare(x) for x in seen}
     bare = lambda x: re.sub(r"^https?://(www\.)?", "", x)   # noqa: E731  same site with or without www or https
     root = bare(base.rstrip("/"))
     for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
@@ -377,8 +402,11 @@ def project_links(home, base, seen=()):
             continue
         if SKIP_PATH.search(path) or re.search(r"\.(?:css|js|png|jpe?g|svg|ico|pdf|xml|json|woff2?)$", path, re.I):
             continue
-        if u not in seen and u not in links:
-            links.append(u)
+        # one address per page: the same project reached with and without www is one page
+        u = base.rstrip("/").split("://")[0] + "://" + base.split("://", 1)[1].split("/")[0] + "/" + path
+        if _bare(u) in seen_bare or any(_bare(u) == _bare(x) for x in links):
+            continue
+        links.append(u)
     return links
 
 
@@ -400,7 +428,23 @@ def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST
         base = s["url"]
         links = project_links(home, base, seen)
         per_source_now = int(s.get("per_run") or per_source)
-        for u in links[:per_source_now]:
+        # sections (Hotels, Hospitality, Selected Works) are read for their project links, never kept as items;
+        # they are not marked seen, because new projects appear on them
+        sections_read, taken, i = 0, 0, 0
+        while i < len(links) and taken < per_source_now:
+            u = links[i]
+            i += 1
+            if is_section(u, s):
+                if sections_read < 4:
+                    sections_read += 1
+                    try:
+                        more = project_links(get(u), base, seen)
+                        links.extend(x for x in more if _bare(x) not in {_bare(y) for y in links})
+                    except Exception:  # noqa: BLE001
+                        pass
+                    time.sleep(0.4)
+                continue
+            taken += 1
             fetched += 1
             rec = {"source": s["name"], "tier": s.get("tier", 1), "category": s["category"], "link": u, "title": "", "date": "", "summary": ""}
             try:
@@ -422,7 +466,9 @@ def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST
             except Exception as e:  # noqa: BLE001
                 rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
             seen.add(u)
-            if rec.get("photos") and len(rec["photos"]) >= 3:
+            if s.get("hospitality_only") and not rec.get("hospitality"):
+                pass                  # a source that mostly shoots other things: only its hotels, bars and restaurants are kept
+            elif rec.get("photos") and len(rec["photos"]) >= 3:
                 out.append(rec)       # pages without a gallery are not projects
             time.sleep(0.4)
     json.dump(sorted(seen), open(seen_path, "w"))
