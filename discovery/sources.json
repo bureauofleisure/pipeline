@@ -2753,6 +2753,42 @@
    "per_run": 12,
    "added": "2026-11-10",
    "notes": "Los Angeles restaurants and bars. Added from reserve on Lewie's word 2026-11-10. Probe score 63.7 (pages with a gallery 1, photos passing the gate 1 of 3)."
+  },
+  {
+   "name": "Austin Leis",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.austinleis.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-11."
+  },
+  {
+   "name": "Henrik Lundell",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://henriklundell.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "cargo",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-11."
+  },
+  {
+   "name": "Paul Bowyer",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.paulbowyer.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wordpress",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-11."
   }
  ]
 }

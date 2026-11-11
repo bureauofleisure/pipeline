@@ -1,14 +1,14 @@
 {
  "job": "harvest",
- "at": "2026-11-10T18:55:18Z",
+ "at": "2026-11-11T01:25:32Z",
  "ok": true,
  "stats": {
-  "items": 230,
-  "pages_fetched": 230,
+  "items": 793,
+  "pages_fetched": 793,
   "page_errors": 0,
-  "feeds": 23,
+  "feeds": 27,
   "feed_errors": [],
-  "with_4_photos": 149,
+  "with_4_photos": 693,
   "sources": {
    "ArchDaily": {
     "pages": 5,
@@ -17,6 +17,11 @@
    },
    "Architectural Digest": {
     "pages": 6,
+    "median_text": 6000,
+    "median_photos": 2
+   },
+   "Atlas Obscura": {
+    "pages": 3,
     "median_text": 6000,
     "median_photos": 2
    },
@@ -76,8 +81,8 @@
     "median_photos": 1
    },
    "Eater New York": {
-    "pages": 9,
-    "median_text": 6000,
+    "pages": 8,
+    "median_text": 5457,
     "median_photos": 1
    },
    "Elle Decor": {
@@ -85,10 +90,25 @@
     "median_text": 4577,
     "median_photos": 2
    },
+   "Galerie": {
+    "pages": 2,
+    "median_text": 6000,
+    "median_photos": 16
+   },
    "Hotel Designs": {
     "pages": 12,
     "median_text": 6000,
     "median_photos": 1
+   },
+   "Ignant": {
+    "pages": 3,
+    "median_text": 6000,
+    "median_photos": 16
+   },
+   "Openhouse": {
+    "pages": 5,
+    "median_text": 6000,
+    "median_photos": 5
    },
    "Resy": {
     "pages": 5,
@@ -106,7 +126,7 @@
     "median_photos": 1
    },
    "Wallpaper": {
-    "pages": 7,
+    "pages": 6,
     "median_text": 6000,
     "median_photos": 20
    }
