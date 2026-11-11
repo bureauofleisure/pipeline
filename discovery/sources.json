@@ -2512,6 +2512,20 @@
    "index": "https://claytonkorte.com/work",
    "added": "2026-11-10",
    "notes": "Austin and San Antonio hospitality. Source probe 2026-11-10: rank 25 of 30, score 67.0 (pages with a gallery 3 of 5, photos passing the gate 5 of 10)."
+  },
+  {
+   "name": "Carpenter + Mason",
+   "category": "studio",
+   "tier": 1,
+   "region": "us",
+   "url": "https://www.sarahcarpenterstudio.com/",
+   "feed": null,
+   "archive": true,
+   "platform": "webflow",
+   "per_run": 12,
+   "index": "https://www.sarahcarpenterstudio.com/projects",
+   "added": "2026-11-10",
+   "notes": "New York bars and restaurants. Now Sarah Carpenter & Studio. Round 3 probe 2026-11-10: score 67.5, address corrected (carpentermason.com did not resolve); pages with a gallery 4 of 5, photos passing the gate 1 of 8."
   }
  ]
 }

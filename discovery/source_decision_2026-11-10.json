@@ -317,5 +317,64 @@
   "Wynn Myers",
   "Yatzer",
   "Ye Rin Mok"
- ]
+ ],
+ "round3": {
+  "rule": "Add if suitable and score >= 67.0 (lowest of the 25 added).",
+  "added": [
+   {
+    "name": "Carpenter + Mason",
+    "score": 67.5,
+    "url": "https://www.sarahcarpenterstudio.com/"
+   }
+  ],
+  "reserve": [
+   {
+    "name": "Jonathan Hokklo",
+    "score": 66.5,
+    "url": "https://www.hokklo.com/"
+   },
+   {
+    "name": "Bells + Whistles",
+    "score": 63.7,
+    "url": "https://www.bw.design/"
+   }
+  ],
+  "right_address_but_refused": [
+   "Anthony Tahlier",
+   "Benoit Linero",
+   "Crème",
+   "Eric Medsker",
+   "Est Living",
+   "Francis Amiand",
+   "Jake Eastham",
+   "Jérôme Galland",
+   "Kyle Knodell",
+   "Lesley Unruh",
+   "Michael Pisarri",
+   "Oleg March",
+   "Teddy Wolff"
+  ],
+  "no_address_found": [
+   "James McDonald",
+   "Max Burkhalter",
+   "Paul Costello",
+   "Russell Sage Studio",
+   "Sam Frost",
+   "Sean Davidson",
+   "Tim Lenz"
+  ],
+  "reachable_nothing_usable": [
+   "Scott Suchman",
+   "Kate LeSueur",
+   "Oskar Proctor"
+  ],
+  "feeds_dead": [
+   "Metropolis",
+   "Hotels Above Par"
+  ],
+  "blocked_not_retried": [
+   "A-nrd",
+   "AN Interior"
+  ]
+ }
 }
