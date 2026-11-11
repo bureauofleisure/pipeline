@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-11T01:07:09Z",
+  "checked": "2026-11-11T01:09:29Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -1675,6 +1675,150 @@
     },
     {
       "name": "Carpenter + Mason",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bess Friday",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jakob Layman",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Method Co",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Design, Bitches",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Michael Kleinberg",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Openhouse",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 100
+    },
+    {
+      "name": "Frank Frances",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Laura Gonzalez",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Tessa Neustadt",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Nicemakers",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ignant",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 15
+    },
+    {
+      "name": "Kris Tamburello",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Garrett Rowland",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Galerie",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Atlas Obscura",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 27
+    },
+    {
+      "name": "L\u00e1zaro Rosa-Viol\u00e1n",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jonathan Hokklo",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bells + Whistles",
       "tier": 1,
       "category": "studio",
       "site": 200,
