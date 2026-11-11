@@ -1,0 +1,987 @@
+{
+ "probed": "2026-11-11T01:01:16Z",
+ "rubric": {
+  "harvestable": "0-20 measured. Of the pages the harvest would take (first 5 project pages, or 3 articles for a feed), the share that return 4 or more photos.",
+  "photo_size": "0-20 measured. Share of sampled photos that pass the build gate (1080 x 1350 after the 4:5 crop).",
+  "hospitality": "0-15 measured. Share of those pages (or feed items) about a hotel, bar, restaurant, club, bath or cafe.",
+  "volume": "0-10 measured. Project links (30 or more = 10) or feed items (10 or more = 10) available.",
+  "lens": "0-15 judgment. Fit with the lens: era feel, rooms to be in, classics supply.",
+  "us": "0-10 judgment. US 10, mixed 5 to 8, abroad 3.",
+  "mix": "0-10 judgment. What it adds to the source mix: classics supply 10, venue or restoration side 8, photographer or studio originals 7, press with its own shoots 5, press echo 3.",
+  "rule": "Unreachable, wrong site, or nothing harvestable = not suitable, dropped before ranking. The top 30 suitable candidates are ranked; the bottom 5 are killed; 25 are added."
+ },
+ "ranked": [
+  "Carpenter + Mason",
+  "Jonathan Hokklo",
+  "Bells + Whistles"
+ ],
+ "results": [
+  {
+   "name": "Sean Davidson",
+   "url": "https://seandavidsonphoto.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.sean-davidson.com/",
+     "error": "",
+     "links": 4
+    },
+    {
+     "url": "https://www.seandavidson.com/",
+     "error": "",
+     "links": 3
+    },
+    {
+     "url": "https://www.seandavidsonphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 20
+  },
+  {
+   "name": "Teddy Wolff",
+   "url": "https://www.teddywolff.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "tried": [
+    {
+     "url": "https://www.teddywolff.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    },
+    {
+     "url": "https://www.teddywolffphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://teddywolff.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Max Burkhalter",
+   "url": "https://burkhalterphoto.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.maxburkhalter.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.maxburkhalterphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.maxburkhalterphotography.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.burkhalterphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 0
+  },
+  {
+   "name": "Tim Lenz",
+   "url": "https://timlenzphotography.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.timlenzphoto.com/",
+     "error": "",
+     "links": 0
+    },
+    {
+     "url": "https://www.timlenz.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    },
+    {
+     "url": "https://www.timlenzphotography.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 7
+  },
+  {
+   "name": "Paul Costello",
+   "url": "https://paulcostellophotography.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.paulcostello.com/",
+     "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resoluti",
+     "links": null
+    },
+    {
+     "url": "https://www.paulcostello.com/",
+     "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resoluti",
+     "links": null
+    },
+    {
+     "url": "https://www.paulcostellophotography.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 3
+  },
+  {
+   "name": "Sam Frost",
+   "url": "https://www.samfrost.photo/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.samfrostphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.samfrost.com/",
+     "error": "not their site (name not on the page, or a parked domain)",
+     "links": null
+    },
+    {
+     "url": "https://www.samfrostphotography.com/",
+     "error": "",
+     "links": 0
+    },
+    {
+     "url": "https://samfrost.photo/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 19
+  },
+  {
+   "name": "Jonathan Hokklo",
+   "url": "https://www.hokklo.com/",
+   "reachable": true,
+   "final": "https://www.hokklo.com/",
+   "platform": "squarespace",
+   "entry": "https://www.hokklo.com/work",
+   "links": 24,
+   "pages": [
+    {
+     "url": "https://www.hokklo.com/work",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1668
+      ]
+     ]
+    },
+    {
+     "url": "https://www.hokklo.com/work2",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2000,
+       1334
+      ]
+     ]
+    },
+    {
+     "url": "https://www.hokklo.com/work/project-one-ephnc-az9pb-6aeya-9jhw4-hlp6h-jkaeb",
+     "photos": 10,
+     "hospitality": false,
+     "sizes": [
+      [
+       1875,
+       2500
+      ],
+      [
+       1667,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.hokklo.com/work/project-one-ephnc-az9pb-6aeya-9jhw4",
+     "photos": 12,
+     "hospitality": false,
+     "sizes": [
+      [
+       2500,
+       1875
+      ],
+      [
+       1875,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.hokklo.com/work/project-one-ephnc-az9pb-6aeya-9jhw4-hlp6h-jkaeb-6zg7m-zd4nj",
+     "photos": 11,
+     "hospitality": false,
+     "sizes": [
+      [
+       1875,
+       2500
+      ],
+      [
+       1667,
+       2223
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.2,
+   "volume_score": 8,
+   "good_pages": 3,
+   "photos_measured": 8,
+   "photos_passing": 7,
+   "scores": {
+    "harvestable": 12.0,
+    "photo_size": 17.5,
+    "hospitality": 3.0,
+    "volume": 8,
+    "lens": 9,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 66.5,
+   "suitable": true,
+   "tried": [
+    {
+     "url": "https://www.jonathanhokklo.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.hokklo.com/",
+     "error": "",
+     "links": 24
+    }
+   ],
+   "seconds": 12
+  },
+  {
+   "name": "Bells + Whistles",
+   "url": "https://www.bw.design/",
+   "reachable": true,
+   "final": "https://www.bw.design/",
+   "platform": "wix",
+   "entry": "https://www.bw.design/",
+   "links": 41,
+   "pages": [
+    {
+     "url": "https://www.bw.design/who-we-are",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bw.design/team",
+     "photos": 4,
+     "hospitality": true,
+     "sizes": [
+      [
+       250,
+       250
+      ],
+      [
+       250,
+       250
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bw.design/services",
+     "photos": 1,
+     "hospitality": true,
+     "sizes": [
+      [
+       2500,
+       2500
+      ]
+     ]
+    },
+    {
+     "url": "https://www.bw.design/clients",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.bw.design/awards-press",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 10,
+   "good_pages": 1,
+   "photos_measured": 3,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 4.0,
+    "photo_size": 6.7,
+    "hospitality": 15.0,
+    "volume": 10,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 63.7,
+   "suitable": true,
+   "tried": [
+    {
+     "url": "https://www.bellsandwhistles.com/",
+     "error": "not their site (name not on the page, or a parked domain)",
+     "links": null
+    },
+    {
+     "url": "https://www.bw.design/",
+     "error": "",
+     "links": 41
+    }
+   ],
+   "seconds": 7
+  },
+  {
+   "name": "Crème",
+   "url": "https://cremedesign.com/",
+   "reachable": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response",
+   "tried": [
+    {
+     "url": "https://www.cremedesign.com/",
+     "error": "RemoteDisconnected: Remote end closed connection without response",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Metropolis",
+   "url": "https://metropolismag.com/rss",
+   "reachable": false,
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "tried": [
+    {
+     "url": "https://metropolismag.com/",
+     "error": "",
+     "links": null
+    },
+    {
+     "url": "https://metropolismag.com/feed/",
+     "error": "",
+     "links": null
+    },
+    {
+     "url": "https://metropolismag.com/rss",
+     "error": "HTTPError: HTTP Error 404: Not Found",
+     "links": null
+    }
+   ],
+   "seconds": 7
+  },
+  {
+   "name": "Hotels Above Par",
+   "url": "https://www.hotelsabovepar.com/rss",
+   "reachable": false,
+   "tried": [
+    {
+     "url": "https://www.hotelsabovepar.com/",
+     "error": "",
+     "links": null
+    },
+    {
+     "url": "https://hotelsabovepar.com/feed/",
+     "error": "",
+     "links": null
+    },
+    {
+     "url": "https://www.hotelsabovepar.com/rss",
+     "error": "",
+     "links": null
+    }
+   ],
+   "seconds": 6
+  },
+  {
+   "name": "Est Living",
+   "url": "https://estliving.com/",
+   "reachable": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response",
+   "tried": [
+    {
+     "url": "https://estliving.com/",
+     "error": "RemoteDisconnected: Remote end closed connection without response",
+     "links": null
+    }
+   ],
+   "seconds": 3
+  },
+  {
+   "name": "Eric Medsker",
+   "url": "https://ericmedsker.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "tried": [
+    {
+     "url": "https://www.ericmedsker.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Oleg March",
+   "url": "https://olegmarch.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "tried": [
+    {
+     "url": "https://www.olegmarch.com/",
+     "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+     "links": null
+    }
+   ],
+   "seconds": 0
+  },
+  {
+   "name": "Kyle Knodell",
+   "url": "https://knodell.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "tried": [
+    {
+     "url": "https://www.kyleknodell.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.kyleknodellphoto.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://kyleknodell.co/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.knodell.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Lesley Unruh",
+   "url": "https://lesleyunruh.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "tried": [
+    {
+     "url": "https://www.lesleyunruh.com/",
+     "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+     "links": null
+    }
+   ],
+   "seconds": 0
+  },
+  {
+   "name": "Scott Suchman",
+   "url": "https://suchmanphoto.com/",
+   "reachable": true,
+   "final": "https://suchmanphoto.com/",
+   "platform": "unknown",
+   "entry": "https://suchmanphoto.com/",
+   "links": 23,
+   "pages": [
+    {
+     "url": "https://suchmanphoto.com/Projects/Ivy-City-Smoke-House/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       760,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://suchmanphoto.com/Projects/Books-By-The-Foot/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1710,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://suchmanphoto.com/Projects/Nature-Under-Glass/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       761,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://suchmanphoto.com/Projects/Navajo-Rodeo/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1707,
+       1140
+      ]
+     ]
+    },
+    {
+     "url": "https://suchmanphoto.com/Projects/Navy-Chair/1/",
+     "photos": 1,
+     "hospitality": false,
+     "sizes": [
+      [
+       1770,
+       1180
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 0.0,
+   "volume_score": 8,
+   "good_pages": 0,
+   "photos_measured": 5,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0.0,
+    "hospitality": 0.0,
+    "volume": 8,
+    "lens": 10,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 35.0,
+   "suitable": false,
+   "tried": [
+    {
+     "url": "https://www.scottsuchman.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.suchmanphoto.com/",
+     "error": "",
+     "links": 23
+    },
+    {
+     "url": "https://suchmanphoto.com/",
+     "error": "",
+     "links": 23
+    }
+   ],
+   "seconds": 13
+  },
+  {
+   "name": "Anthony Tahlier",
+   "url": "https://anthonytahlier.com/",
+   "reachable": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response",
+   "tried": [
+    {
+     "url": "https://www.anthonytahlier.com/",
+     "error": "RemoteDisconnected: Remote end closed connection without response",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Kate LeSueur",
+   "url": "https://www.katelesueur.com/",
+   "reachable": true,
+   "final": "https://www.katelesueur.com/",
+   "platform": "squarespace",
+   "entry": "https://www.katelesueur.com/",
+   "links": 0,
+   "pages": [],
+   "hospitality_share": 0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0,
+    "volume": 0,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 28.0,
+   "suitable": false,
+   "tried": [
+    {
+     "url": "https://www.katelesueur.com/",
+     "error": "",
+     "links": 0
+    },
+    {
+     "url": "https://www.katelesueurphotography.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.katelesueur.com/",
+     "error": "",
+     "links": 0
+    }
+   ],
+   "seconds": 10
+  },
+  {
+   "name": "Michael Pisarri",
+   "url": "https://pisarri.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+   "tried": [
+    {
+     "url": "https://www.pisarri.com/",
+     "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur",
+     "links": null
+    }
+   ],
+   "seconds": 0
+  },
+  {
+   "name": "Carpenter + Mason",
+   "url": "https://www.sarahcarpenterstudio.com/",
+   "reachable": true,
+   "final": "https://www.sarahcarpenterstudio.com/",
+   "platform": "webflow",
+   "entry": "https://www.sarahcarpenterstudio.com/projects",
+   "links": 18,
+   "pages": [
+    {
+     "url": "https://www.sarahcarpenterstudio.com/projects",
+     "photos": 0,
+     "hospitality": true,
+     "sizes": []
+    },
+    {
+     "url": "https://www.sarahcarpenterstudio.com/projects/watchhouse",
+     "photos": 28,
+     "hospitality": true,
+     "sizes": [
+      [
+       827,
+       1176
+      ],
+      [
+       1440,
+       1620
+      ]
+     ]
+    },
+    {
+     "url": "https://www.sarahcarpenterstudio.com/projects/talea",
+     "photos": 26,
+     "hospitality": true,
+     "sizes": [
+      [
+       827,
+       1176
+      ],
+      [
+       827,
+       1176
+      ]
+     ]
+    },
+    {
+     "url": "https://www.sarahcarpenterstudio.com/projects/sereneco",
+     "photos": 24,
+     "hospitality": true,
+     "sizes": [
+      [
+       1080,
+       1215
+      ],
+      [
+       747,
+       1062
+      ]
+     ]
+    },
+    {
+     "url": "https://www.sarahcarpenterstudio.com/projects/postcard-bakery",
+     "photos": 25,
+     "hospitality": true,
+     "sizes": [
+      [
+       1080,
+       1215
+      ],
+      [
+       747,
+       1062
+      ]
+     ]
+    }
+   ],
+   "hospitality_share": 1.0,
+   "volume_score": 6,
+   "good_pages": 4,
+   "photos_measured": 8,
+   "photos_passing": 1,
+   "scores": {
+    "harvestable": 16.0,
+    "photo_size": 2.5,
+    "hospitality": 15.0,
+    "volume": 6,
+    "lens": 11,
+    "us": 10,
+    "mix": 7
+   },
+   "score": 67.5,
+   "suitable": true,
+   "tried": [
+    {
+     "url": "https://www.carpentermason.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.carpenterandmason.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    },
+    {
+     "url": "https://www.sarahcarpenterstudio.com/",
+     "error": "",
+     "links": 18
+    }
+   ],
+   "seconds": 11
+  },
+  {
+   "name": "Russell Sage Studio",
+   "url": "https://russell-sage.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.russellsagestudio.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.russellsagestudio.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://russellsage.studio/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.russellsagestudio.co.uk/",
+     "error": "",
+     "links": 28
+    },
+    {
+     "url": "https://www.russell-sage.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 24
+  },
+  {
+   "name": "Benoit Linero",
+   "url": "https://www.benoitlinero.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error timed out>",
+   "tried": [
+    {
+     "url": "https://www.benoitlinero.com/",
+     "error": "URLError: <urlopen error timed out>",
+     "links": null
+    },
+    {
+     "url": "https://www.benoitlinero.fr/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://benoitlinero.com/",
+     "error": "URLError: <urlopen error timed out>",
+     "links": null
+    }
+   ],
+   "seconds": 61
+  },
+  {
+   "name": "Francis Amiand",
+   "url": "https://www.francisamiand.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+   "tried": [
+    {
+     "url": "https://www.francisamiand.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    },
+    {
+     "url": "https://www.francisamiand.fr/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://francisamiand.com/",
+     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate ",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Jérôme Galland",
+   "url": "https://www.jeromegalland.com/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert",
+   "tried": [
+    {
+     "url": "https://www.jeromegalland.com/",
+     "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert",
+     "links": null
+    },
+    {
+     "url": "https://www.jeromegalland.fr/",
+     "error": "",
+     "links": 10
+    },
+    {
+     "url": "https://jeromegalland.com/",
+     "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert",
+     "links": null
+    }
+   ],
+   "seconds": 27
+  },
+  {
+   "name": "James McDonald",
+   "url": "https://www.jamesmcdonald.photography/",
+   "reachable": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "tried": [
+    {
+     "url": "https://www.jamesmcdonaldphotography.co.uk/",
+     "error": "",
+     "links": 0
+    },
+    {
+     "url": "https://www.jamesmcdonaldphotography.com/",
+     "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resoluti",
+     "links": null
+    },
+    {
+     "url": "https://jamesmcdonald.photography/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    }
+   ],
+   "seconds": 25
+  },
+  {
+   "name": "Jake Eastham",
+   "url": "https://jakeeastham.co.uk/",
+   "reachable": false,
+   "error": "HTTPError: HTTP Error 503: Service Unavailable",
+   "tried": [
+    {
+     "url": "https://www.jakeeastham.com/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.jakeeastham.co.uk/",
+     "error": "HTTPError: HTTP Error 503: Service Unavailable",
+     "links": null
+    }
+   ],
+   "seconds": 1
+  },
+  {
+   "name": "Oskar Proctor",
+   "url": "https://www.oskarproctor.com/",
+   "reachable": true,
+   "final": "https://www.oskarproctor.com/",
+   "platform": "unknown",
+   "entry": "https://www.oskarproctor.com/",
+   "links": 0,
+   "pages": [],
+   "hospitality_share": 0,
+   "volume_score": 0,
+   "good_pages": 0,
+   "photos_measured": 0,
+   "photos_passing": 0,
+   "scores": {
+    "harvestable": 0.0,
+    "photo_size": 0,
+    "hospitality": 0,
+    "volume": 0,
+    "lens": 11,
+    "us": 3,
+    "mix": 7
+   },
+   "score": 21.0,
+   "suitable": false,
+   "tried": [
+    {
+     "url": "https://www.oskarproctor.com/",
+     "error": "",
+     "links": 0
+    },
+    {
+     "url": "https://www.oskarproctor.co.uk/",
+     "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+     "links": null
+    },
+    {
+     "url": "https://www.oskarproctor.com/",
+     "error": "",
+     "links": 0
+    }
+   ],
+   "seconds": 17
+  }
+ ]
+}
