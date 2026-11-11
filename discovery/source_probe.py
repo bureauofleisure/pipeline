@@ -211,25 +211,38 @@ def main():
     have = {re.sub(r"^https?://(www\.)?", "", s["url"]).split("/")[0].lower()
             for s in json.load(open(os.path.join(HERE, "sources.json")))["sources"] if s.get("url")}
     results = []
+    only = os.environ.get("PROBE_ROUND")
     for c in doc["candidates"]:
+        if only and str(c.get("round", "")) != only:
+            continue
         host = re.sub(r"^https?://(www\.)?", "", c["url"]).split("/")[0].lower()
         if host in have:
             results.append({"name": c["name"], "url": c["url"], "reachable": False, "error": "already a source"})
             continue
         t0 = time.time()
-        try:
-            r = probe(c)
-        except Exception as e:  # noqa: BLE001
-            r = {"name": c["name"], "url": c["url"], "reachable": False, "error": f"probe {type(e).__name__}: {str(e)[:80]}"}
+        tried = []
+        for addr in [c["url"]] + list(c.get("alts", [])):
+            cc = dict(c, url=addr)
+            if c.get("feed"):
+                cc["feed"] = addr if addr != c["url"] else c["feed"]
+            try:
+                r = probe(cc)
+            except Exception as e:  # noqa: BLE001
+                r = {"name": c["name"], "url": addr, "reachable": False, "error": f"probe {type(e).__name__}: {str(e)[:80]}"}
+            tried.append({"url": addr, "error": r.get("error", ""), "links": r.get("links", r.get("kept"))})
+            if r.get("suitable"):
+                break
+        r["tried"] = tried
         r["seconds"] = round(time.time() - t0)
         results.append(r)
         print(f"{r.get('score', 0):5} {'OK ' if r.get('suitable') else '-- '} {c['name']}: "
               f"{r.get('error') or ''} links={r.get('links', r.get('kept', ''))} good={r.get('good_pages', '')} "
               f"pass={r.get('photos_passing', '')}/{r.get('photos_measured', '')} {r['seconds']}s", flush=True)
     ranked = sorted([r for r in results if r.get("suitable")], key=lambda r: -r["score"])
+    out = "source_probe_round%s.json" % only if only else "source_probe_report.json"
     json.dump({"probed": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "rubric": doc["rubric"],
                "ranked": [r["name"] for r in ranked], "results": results},
-              open(os.path.join(HERE, "source_probe_report.json"), "w"), indent=1, ensure_ascii=False)
+              open(os.path.join(HERE, out), "w"), indent=1, ensure_ascii=False)
     print(f"{len(ranked)} suitable of {len(results)}")
 
 

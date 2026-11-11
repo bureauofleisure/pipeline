@@ -9,6 +9,10 @@ on:
         description: "Probe the existing portfolio sources that have never produced an item, instead of the candidates"
         type: boolean
         default: false
+      round:
+        description: "Probe only the candidates of this round (e.g. 3)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -24,6 +28,8 @@ jobs:
           python-version: "3.11"
       - run: pip install pillow
       - run: python -u discovery/source_probe.py ${{ inputs.existing && 'existing' || '' }}
+        env:
+          PROBE_ROUND: ${{ inputs.round }}
       - run: |
-          git add discovery/source_probe_report.json discovery/source_probe_existing.json 2>/dev/null || git add discovery/source_probe_report.json
+          git add discovery/source_probe_*.json
           bash .github/save.sh "Source probe $(date -u +%Y-%m-%dT%H:%MZ)"
