@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-11T13:46:31Z",
+ "searched": "2026-11-11T19:35:30Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,7 +7,7 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
+  "searches": 0,
   "results": 0,
   "items_opened": 0,
   "offtopic": 0,
@@ -20,7 +20,7 @@
   "rights_seen": {},
   "sample_files": null,
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 1
  },
  "next_target": 6,
  "targets": [
