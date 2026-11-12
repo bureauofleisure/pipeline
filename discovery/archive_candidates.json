@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-12T01:52:00Z",
+ "searched": "2026-11-12T07:51:41Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,7 +7,7 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 2,
+  "searches": 1,
   "results": 0,
   "items_opened": 0,
   "offtopic": 0,
@@ -15,14 +15,14 @@
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Millennium Biltmore Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Menger Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
   "rate_limited": true,
-  "targets_tried": 3
+  "targets_tried": 2
  },
- "next_target": 8,
+ "next_target": 9,
  "targets": [
   {
    "place": "Rainbow Room",
