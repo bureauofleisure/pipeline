@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-12T13:48:44Z",
+ "searched": "2026-11-12T19:30:38Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,27 +7,26 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 4,
+  "searches": 3,
+  "results": 8,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 2,
+  "size": 1,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Bemelmans Bar; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Russian and Turkish Baths; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 2,
+  "other_collections": 7,
   "tif_header_misses": [
-   "haer/tx/tx0100/tx0164/color/572451cu.tif: HTTP 429",
-   "aer/tx/tx0600/tx0683/photos/366267pu.tif: HTTP 429"
+   "bshaer/fl/fl0900/fl0981/sheet/00001u.tif: HTTP 404"
   ],
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 4
  },
- "next_target": 10,
+ "next_target": 13,
  "targets": [
   {
    "place": "Rainbow Room",
