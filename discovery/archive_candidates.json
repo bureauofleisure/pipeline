@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-12T07:51:41Z",
+ "searched": "2026-11-12T13:48:44Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,21 +8,26 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 0,
+  "results": 4,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 2,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Menger Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Bemelmans Bar; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 2,
+  "tif_header_misses": [
+   "haer/tx/tx0100/tx0164/color/572451cu.tif: HTTP 429",
+   "aer/tx/tx0600/tx0683/photos/366267pu.tif: HTTP 429"
+  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 9,
+ "next_target": 10,
  "targets": [
   {
    "place": "Rainbow Room",
