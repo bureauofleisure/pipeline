@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-13T13:45:58Z",
+ "searched": "2026-11-13T19:30:16Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,35 +7,30 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
+  "searches": 2,
   "results": 11,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 11,
+  "size": 5,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Hotel Chelsea; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Eden Roc; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 6,
   "tif_header_misses": [
-   "ter/pnp/gsc/5a28000/5a28500/5a28551u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28549u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28550u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28548u.tif: HTTP 429",
-   "ter/pnp/gsc/5a29000/5a29700/5a29756u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28552u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28553u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28554u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28555u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28556u.tif: HTTP 429",
-   "ter/pnp/gsc/5a28000/5a28500/5a28557u.tif: HTTP 429"
+   "ter/pnp/gsc/5a23000/5a23400/5a23488u.tif: HTTP 429",
+   "ter/pnp/gsc/5a23000/5a23500/5a23506u.tif: HTTP 429",
+   "ter/pnp/gsc/5a30000/5a30200/5a30276u.tif: HTTP 429",
+   "ter/pnp/gsc/5a23000/5a23400/5a23473u.tif: HTTP 429"
   ],
+  "tif_header_ok": 1,
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 3
  },
- "next_target": 16,
+ "next_target": 18,
  "targets": [
   {
    "place": "Rainbow Room",

@@ -1,15 +1,15 @@
 {
  "job": "archive",
- "at": "2026-11-13T13:45:58Z",
+ "at": "2026-11-13T19:30:16Z",
  "ok": true,
  "stats": {
   "targets": 44,
   "targets_with_finds": 2,
   "candidates": 3,
-  "searches_this_run": 1,
+  "searches_this_run": 2,
   "blocked_this_run": true,
-  "next_target": 16,
-  "last_search_at": "2026-11-13T13:45:58Z"
+  "next_target": 18,
+  "last_search_at": "2026-11-13T19:30:16Z"
  },
  "problems": []
 }
