@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-13T01:45:26Z",
+ "searched": "2026-11-13T07:51:52Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,22 +8,22 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 10,
+  "results": 13,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at The Campbell; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at TWA Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 10,
+  "other_collections": 13,
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 14,
+ "next_target": 15,
  "targets": [
   {
    "place": "Rainbow Room",
