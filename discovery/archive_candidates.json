@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-14T01:41:36Z",
+ "searched": "2026-11-14T07:41:42Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,22 +7,21 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 1,
-  "items_opened": 0,
-  "offtopic": 1,
+  "searches": 6,
+  "results": 5,
+  "items_opened": 2,
+  "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
-  "errors": [
-   "rate limited by loc.gov at The Raleigh; stopped searching, kept earlier finds"
-  ],
+  "errors": [],
   "rights_seen": {},
   "sample_files": null,
-  "rate_limited": true,
-  "targets_tried": 2
+  "tif_header_ok": 3,
+  "other_collections": 2,
+  "targets_tried": 6
  },
- "next_target": 19,
+ "next_target": 25,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -192,8 +191,33 @@
    "place": "The Raleigh",
    "city": "Miami",
    "era": "1940",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Raleigh Hotel, Collins Ave., Miami Beach, Florida. Pool from center",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a06000/5a06500/5a06573u.tif",
+     "width": 7931,
+     "height": 5751,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "dixon, lawrence murray gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1941-01-01",
+     "source_page": "http://www.loc.gov/item/2018739011/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Raleigh Hotel, Collins Ave., Miami Beach, Florida. Pool, to ocean from balcony",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a06000/5a06500/5a06571u.tif",
+     "width": 7959,
+     "height": 5745,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "dixon, lawrence murray gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1941-01-01",
+     "source_page": "http://www.loc.gov/item/2018739009/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Barton Springs Pool",
