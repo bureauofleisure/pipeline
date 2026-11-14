@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-14T07:41:42Z",
+ "searched": "2026-11-14T13:28:38Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,21 +7,22 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 6,
-  "results": 5,
-  "items_opened": 2,
+  "searches": 1,
+  "results": 0,
+  "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 1,
+  "size": 0,
   "type": 0,
-  "errors": [],
+  "errors": [
+   "rate limited by loc.gov at Hotel Il Pellicano; stopped searching, kept earlier finds"
+  ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_ok": 3,
-  "other_collections": 2,
-  "targets_tried": 6
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 25,
+ "next_target": 26,
  "targets": [
   {
    "place": "Rainbow Room",
