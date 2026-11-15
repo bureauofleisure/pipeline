@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-15T13:29:46Z",
+ "searched": "2026-11-15T19:22:30Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,26 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
+  "searches": 2,
   "results": 4,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Tooting Bec Lido; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Hotel San José; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 4,
+  "other_collections": 3,
+  "tif_header_misses": [
+   "vices/master/pnp/highsm/28300/28336u.tif: HTTP 429"
+  ],
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 3
  },
- "next_target": 30,
+ "next_target": 32,
  "targets": [
   {
    "place": "Rainbow Room",
