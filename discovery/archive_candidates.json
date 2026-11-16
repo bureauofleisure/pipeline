@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-16T15:42:43Z",
+ "searched": "2026-11-16T16:20:11Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,26 +7,22 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 2,
-  "results": 24,
+  "searches": 1,
+  "results": 1,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 1,
-  "type": 0,
+  "size": 0,
+  "type": 1,
   "errors": [
-   "rate limited by loc.gov at Ahwahnee Hotel; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Hotel del Coronado; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 23,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/24200/24282u.tif: HTTP 429"
-  ],
   "rate_limited": true,
-  "targets_tried": 3
+  "targets_tried": 2
  },
- "next_target": 38,
+ "next_target": 39,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -412,6 +408,46 @@
    "city": "Tucson",
    "era": "1919",
    "notes": "Added 2026-11-09: Carol M. Highsmith, 2018, lobby (items 2018663112, 2018663113). Two frames found so far; needs four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Arizona Inn",
+   "city": "Tucson",
+   "era": "1930",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, seven high-res frames (highsm 53976 to 53982: library, patio, courtyards, walkway, cactus gardens, lamp). Masters are 227 MB TIFFs; IIIF derivatives 404 for this run. Picked in 2026-W47 if the masters pass the build.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hermosa Inn",
+   "city": "Paradise Valley",
+   "era": "1930s",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, eleven frames (highsm 53529 to 53539: patio, walkway, fountain, entrance, dining room, western artifacts corner, cactus gardens). Lon Megargee's adobe home turned inn; still open. Check the dining room frame and the patio for a set of four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "El Tovar Hotel",
+   "city": "Grand Canyon",
+   "era": "1905",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, lobby (items 2018702401, 2018702384), entrance, trophy heads. Needs the dining room and lounge frames to reach four rooms.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Gadsden Hotel",
+   "city": "Douglas, Arizona",
+   "era": "1929",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018: the white Italian marble staircase (2018703041), front desk (2018703183), exterior. Lobby with Tiffany-style glass; still open. Two interiors so far; needs four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Marcus Whitman Hotel",
+   "city": "Walla Walla",
+   "era": "1927",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, grand lobby (2018699165, 2018699166) and lobby mural (2018699201). Still welcoming guests per the item titles. Three frames; needs a fourth room.",
    "candidates": [],
    "count": 0
   }
