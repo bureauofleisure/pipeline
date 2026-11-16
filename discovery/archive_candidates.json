@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-16T14:35:05Z",
+ "searched": "2026-11-16T15:42:43Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,26 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 3,
-  "results": 1,
+  "searches": 2,
+  "results": 24,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Childs Restaurant; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Ahwahnee Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 1,
+  "other_collections": 23,
+  "tif_header_misses": [
+   "vices/master/pnp/highsm/24200/24282u.tif: HTTP 429"
+  ],
   "rate_limited": true,
-  "targets_tried": 4
+  "targets_tried": 3
  },
- "next_target": 36,
+ "next_target": 38,
  "targets": [
   {
    "place": "Rainbow Room",

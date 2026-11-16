@@ -74,7 +74,7 @@
   },
   "joe thomas": {
    "name": "Joe Thomas",
-   "seen": 67,
+   "seen": 66,
    "resolved": true,
    "url": "https://www.joethomasphoto.com/",
    "platform": "squarespace",
@@ -146,7 +146,7 @@
   },
   "brian w": {
    "name": "Brian W",
-   "seen": 6,
+   "seen": 4,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -162,7 +162,7 @@
   },
   "jack lovel": {
    "name": "Jack Lovel",
-   "seen": 31,
+   "seen": 22,
    "resolved": true,
    "url": "https://www.jacklovel.com/",
    "platform": "squarespace",
@@ -178,7 +178,7 @@
   },
   "ema peter": {
    "name": "Ema Peter",
-   "seen": 28,
+   "seen": 20,
    "resolved": true,
    "url": "https://www.emapeter.com/",
    "platform": "squarespace",
@@ -186,7 +186,7 @@
   },
   "danielle siobhan": {
    "name": "Daniëlle Siobhán",
-   "seen": 25,
+   "seen": 19,
    "resolved": true,
    "url": "https://daniellesiobhan.com/",
    "platform": "squarespace",
@@ -250,7 +250,7 @@
   },
   "milo hutchings": {
    "name": "Milo Hutchings",
-   "seen": 30,
+   "seen": 25,
    "resolved": true,
    "url": "https://www.milohutchings.com/",
    "platform": "squarespace",
@@ -338,7 +338,7 @@
   },
   "bre furlong": {
    "name": "Bre Furlong",
-   "seen": 22,
+   "seen": 17,
    "resolved": true,
    "url": "https://www.breannefurlong.com/",
    "platform": "squarespace",
@@ -434,7 +434,7 @@
   },
   "aaron richter": {
    "name": "Aaron Richter",
-   "seen": 29,
+   "seen": 27,
    "resolved": true,
    "url": "https://aaronrichter.com/",
    "platform": "cargo",
@@ -506,7 +506,7 @@
   },
   "tom mcgovern": {
    "name": "Tom McGovern",
-   "seen": 10,
+   "seen": 9,
    "resolved": true,
    "url": "https://www.tommcgovernphoto.com/",
    "platform": "squarespace",
@@ -650,7 +650,7 @@
   },
   "stan lee": {
    "name": "Stan Lee",
-   "seen": 7,
+   "seen": 4,
    "resolved": true,
    "url": "https://www.stanleephoto.com/",
    "platform": "wordpress",
@@ -898,7 +898,7 @@
   },
   "michael clifford": {
    "name": "Michael Clifford",
-   "seen": 24,
+   "seen": 15,
    "resolved": true,
    "url": "https://michaelcliffordphoto.com/",
    "platform": "squarespace",
@@ -1018,7 +1018,7 @@
   },
   "joe clark": {
    "name": "Joe Clark",
-   "seen": 8,
+   "seen": 7,
    "resolved": true,
    "url": "https://www.joeclarkphotography.com/",
    "platform": "unknown",
@@ -1034,7 +1034,7 @@
   },
   "austin leis": {
    "name": "Austin Leis",
-   "seen": 4,
+   "seen": 1,
    "resolved": true,
    "url": "https://www.austinleis.com/",
    "platform": "squarespace",
@@ -1050,7 +1050,7 @@
   },
   "henrik lundell": {
    "name": "Henrik Lundell",
-   "seen": 2,
+   "seen": 1,
    "resolved": true,
    "url": "https://henriklundell.com/",
    "platform": "cargo",
@@ -1082,7 +1082,7 @@
   },
   "yoshihiro makino d": {
    "name": "Yoshihiro Makino D",
-   "seen": 1,
+   "seen": 4,
    "resolved": false,
    "url": null,
    "platform": null,
@@ -1090,7 +1090,7 @@
   },
   "edi cliff": {
    "name": "Edi Cliff",
-   "seen": 1,
+   "seen": 2,
    "resolved": true,
    "url": "https://edicliff.com/",
    "platform": "squarespace",
@@ -1122,7 +1122,7 @@
   },
   "amaury laparra": {
    "name": "Amaury Laparra",
-   "seen": 1,
+   "seen": 5,
    "resolved": true,
    "url": "https://www.amaurylaparra.com/",
    "platform": "format",
@@ -1138,7 +1138,7 @@
   },
   "jiri lizler": {
    "name": "Jiri Lizler",
-   "seen": 1,
+   "seen": 9,
    "resolved": true,
    "url": "https://www.jirilizler.com/",
    "platform": "squarespace",
@@ -1206,6 +1206,46 @@
    "resolved": true,
    "url": "https://douglasfriedman.com/",
    "platform": "unknown",
+   "checked": "2026-11-16"
+  },
+  "allison richter d": {
+   "name": "Allison Richter D",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-16"
+  },
+  "christy baugh": {
+   "name": "Christy Baugh",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-16"
+  },
+  "christy duggan": {
+   "name": "Christy Duggan",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-16"
+  },
+  "laure joliet d": {
+   "name": "Laure Joliet D",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
+   "checked": "2026-11-16"
+  },
+  "tim hirschman": {
+   "name": "Tim Hirschman",
+   "seen": 1,
+   "resolved": false,
+   "url": null,
+   "platform": null,
    "checked": "2026-11-16"
   }
  },
@@ -1292,7 +1332,7 @@
   },
   "studio vero": {
    "name": "Studio Vero",
-   "seen": 9,
+   "seen": 8,
    "resolved": true,
    "url": "https://www.studiovero.ca/",
    "platform": "squarespace",
@@ -1324,7 +1364,7 @@
   },
   "parts and labor design": {
    "name": "Parts and Labor Design",
-   "seen": 21,
+   "seen": 19,
    "resolved": true,
    "url": "https://partsandlabordesign.com/",
    "platform": "wordpress",

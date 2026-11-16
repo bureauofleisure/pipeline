@@ -1,14 +1,14 @@
 {
  "job": "harvest",
- "at": "2026-11-16T14:32:05Z",
+ "at": "2026-11-16T15:40:37Z",
  "ok": true,
  "stats": {
-  "items": 447,
-  "pages_fetched": 447,
-  "page_errors": 0,
+  "items": 339,
+  "pages_fetched": 339,
+  "page_errors": 1,
   "feeds": 27,
   "feed_errors": [],
-  "with_4_photos": 340,
+  "with_4_photos": 239,
   "sources": {
    "ArchDaily": {
     "pages": 5,
@@ -87,7 +87,7 @@
    },
    "Elle Decor": {
     "pages": 4,
-    "median_text": 5275,
+    "median_text": 5281,
     "median_photos": 2
    },
    "Galerie": {
@@ -96,7 +96,7 @@
     "median_photos": 40
    },
    "Hotel Designs": {
-    "pages": 12,
+    "pages": 11,
     "median_text": 6000,
     "median_photos": 1
    },
