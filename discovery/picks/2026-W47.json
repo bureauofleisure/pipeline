@@ -18,7 +18,7 @@
    "card": [
     "BUREAU OF LEISURE NO. 0029",
     "THE PENROSE ROOM. THE BROADMOOR, COLORADO SPRINGS.",
-    "OPENED IN 1961 ON THE NINTH FLOOR OF THE SOUTH TOWER.",
+    "OPENED IN 1961 ATOP THE NEW SOUTH TOWER.",
     "THE RESORT WAS FOUNDED IN 1918 BY SPENCER PENROSE.",
     "REIMAGINED BY TIHANY DESIGN. REOPENED IN 2025.",
     "A LOUNGE LIKE A WESTERN SALOON. THREE DINING ROOMS.",
@@ -52,7 +52,7 @@
    "card": [
     "BUREAU OF LEISURE NO. 0030",
     "THE FIFTH AVENUE HOTEL. NOMAD, NEW YORK.",
-    "A LANDMARKED MCKIM, MEAD & WHITE MANSION ON 28TH STREET.",
+    "A LANDMARKED MCKIM, MEAD & WHITE MANSION.",
     "153 ROOMS. INTERIORS BY MARTIN BRUDNIZKI.",
     "CAFE CARMELLINI BY CHEF ANDREW CARMELLINI.",
     "OPENED IN 2023 BY FLANEUR HOSPITALITY.",
@@ -89,7 +89,7 @@
     "BUREAU OF LEISURE NO. 0031",
     "THEODORA. FORT GREENE, BROOKLYN.",
     "FROM CHEF TOMER BLECHMAN OF MISS ADA.",
-    "AGED PLASTER, ZELLIGE TILE, CEPPO DI GRE SHELVES.",
+    "AGED PLASTER, ZELLIGE TILE, CEPPO DI GRÈ SHELVES.",
     "SEVENTY-SIX SEATS IN THE DINING ROOM.",
     "INTERIOR ARCHITECTURE BY HOME STUDIOS, 2023.",
     "IN A WORD: TERRAZZO."
@@ -159,9 +159,9 @@
    "card": [
     "BUREAU OF LEISURE NO. 0033",
     "BAR MORUNO. SILVER LAKE, LOS ANGELES.",
-    "ON SUNSET BOULEVARD, BEHIND OVERSIZED RED DOUBLE DOORS.",
-    "BOOTHS OF SLATTED WALNUT, UPHOLSTERED IN PAPRIKA.",
-    "A BACK BAR IN OLIVE GREEN. A BANQUETTE IN TURMERIC GOLD.",
+    "RED DOUBLE DOORS ONTO SUNSET BOULEVARD.",
+    "BOOTHS OF SLATTED WALNUT IN PAPRIKA.",
+    "OLIVE GREEN BACK BAR. TURMERIC GOLD BANQUETTE.",
     "1,700 SQUARE FEET. STUDIO UNLTD, 2022.",
     "IN A WORD: LOUCHE."
    ],
@@ -194,10 +194,10 @@
    "card": [
     "BUREAU OF LEISURE NO. 0034",
     "HOTEL SAINT AUGUSTINE. MONTROSE, HOUSTON.",
-    "BUNKHOUSE'S FIRST HOUSTON HOTEL. SEVENTY-ONE ROOMS.",
+    "BUNKHOUSE'S FIRST HOUSTON HOTEL. 71 ROOMS.",
     "FIVE SMALL BUILDINGS BY LAKE FLATO.",
-    "INTERIORS BY POST COMPANY. A DEEP BLUE LOBBY AND BAR.",
-    "A BURLED WALNUT RECEPTION DESK. A ROUND HEATED POOL.",
+    "INTERIORS BY POST COMPANY. DEEP BLUE LOBBY AND BAR.",
+    "A BURLED WALNUT DESK. A ROUND HEATED POOL.",
     "IN A WORD: GROOVY."
    ],
    "alt_hint": "A dark-blue hotel lounge with a red curved sofa, chrome-framed chairs, burl wood walls, sheer linen curtains and a long dining table under gilt mirrors.",
@@ -207,13 +207,11 @@
    "photos": [
     "https://www.juliesoefer.com/wp-content/uploads/2025/04/2430_241210_StAugustine.jpg",
     "https://www.juliesoefer.com/wp-content/uploads/2025/04/1490_241209_StAugustine.jpg",
-    "https://www.juliesoefer.com/wp-content/uploads/2025/04/2618_241211_StAugustine.jpg",
-    "https://www.juliesoefer.com/wp-content/uploads/2025/04/2775_241211_StAugustine.jpg",
     "https://www.juliesoefer.com/wp-content/uploads/2025/04/2496_241210_StAugustine-1.jpg",
-    "https://www.juliesoefer.com/wp-content/uploads/2025/04/1920_240321c_StAugustine2.jpg"
+    "https://www.juliesoefer.com/wp-content/uploads/2025/04/2618_241211_StAugustine.jpg"
    ],
    "facts_from": "Hospitality Design 2025-03-13 (Montrose, 71 rooms across five small buildings, Lake Flato, Post Company with Bunkhouse, deep blue lobby and bar, burled walnut reception desk, circular heated pool); Hospitality Net (Bunkhouse's first Houston concept). Frames: bar, lounge, chrome chairs, red shelving wall, courtyard; bedrooms left out.",
-   "photo_note": "2026-11-16 second pass: first build benched the set (the courtyard and the red shelving wall sat outside the tone spread). Now: lounge and restaurant wide (cover), bar, front door, green bathroom with corridor, chrome-chair lounge, green tiled bathroom; the build may drop one or two of the last three."
+   "photo_note": "2026-11-16 second pass: first build benched the set (the courtyard and the red shelving wall sat outside the tone spread). Now: lounge and restaurant wide (cover), bar, front door, green bathroom with corridor, chrome-chair lounge, green tiled bathroom; the build may drop one or two of the last three. Third pass: the second build kept the lounge, the front door and two bathrooms, which is not a set to be in; now exactly four frames (lounge, bar, chrome-chair lounge, front door). If their tone does not match, it benches rather than builds a weak post."
   },
   {
    "index": "0035",
@@ -232,7 +230,7 @@
     "TROPICAL BRUTALISM MEETS JAPANESE DECO.",
     "A GLOWING BAR BUILT FROM GLASS BLOCKS.",
     "TEAK SHUTTERS, CONCRETE, SEA GREEN MARBLE MOSAICS.",
-    "A HOST STAND LIKE A JAPANESE THATCHED ROOF. ISLYN, 2025.",
+    "A HOST STAND LIKE A THATCHED ROOF. ISLYN, 2025.",
     "IN A WORD: LACQUERED."
    ],
    "alt_hint": "A dim Japanese restaurant with a sushi counter of blue tile, walnut booths, fringed lanterns and palms behind louvred teak shutters.",
@@ -265,7 +263,7 @@
     "HOTEL REGINA. AVENUE DE L'IMPERATRICE, BIARRITZ.",
     "BUILT AS A HOTEL IN 1906 BY HENRY MARTINET.",
     "A FIFTEEN-METRE-HIGH BELLE EPOQUE ATRIUM.",
-    "EILEEN GRAY BAR STOOLS. ART DECO TILES BY WINCKELMANS.",
+    "EILEEN GRAY STOOLS. ART DECO TILES BY WINCKELMANS.",
     "REDONE BY DOROTHEE MEILICHZON FOR EXPERIMENTAL, 2023.",
     "IN A WORD: STARCHED."
    ],
@@ -294,7 +292,7 @@
    "card": [
     "BUREAU OF LEISURE NO. 0038",
     "HOTEL DU COUVENT. OLD TOWN, NICE.",
-    "A CONVENT BUILT IN 1604 BY THE ORDER OF SAINT CLARE.",
+    "BUILT IN 1604 FOR THE ORDER OF SAINT CLARE.",
     "A DECADE OF RESTORATION LED BY VALERY GREGO.",
     "EIGHTY-EIGHT ROOMS. INTERIORS BY FESTEN.",
     "ROMAN-STYLE BATHS. GARDENS OF 300 PLANT SPECIES.",
@@ -326,8 +324,8 @@
    "card": [
     "BUREAU OF LEISURE NO. 0039",
     "BISTROT À FRANKY. MILE END, MONTREAL.",
-    "CHEF FRANCIS BLAIS. DESIGN BY ATELIER ZÉBULON PERRON.",
-    "A ZINC BAR TOP UNDER A MILLED ALUMINIUM WINE CELLAR.",
+    "CHEF FRANCIS BLAIS. ATELIER ZÉBULON PERRON.",
+    "A ZINC BAR UNDER A MILLED ALUMINIUM WINE CELLAR.",
     "PYREX TUBE CHANDELIERS BY LAMBERT & FILS.",
     "ART ON THE WALLS CURATED BY XAVIER DOLAN.",
     "IN A WORD: SUAVE."
