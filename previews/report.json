@@ -1,31 +1,3073 @@
 {
  "sets": [
   {
-   "id": "loctest",
+   "id": "breakers",
    "photos": [
     {
      "n": 1,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a03000/5a03700/5a03780u.tif",
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Breakers_Lobby_Wide-copia.jpg",
      "ok": true,
-     "width": 4220,
-     "height": 3081,
-     "bytes": 13024928,
+     "width": 2253,
+     "height": 1267,
+     "bytes": 723761,
+     "format": null,
+     "gate": "FAIL: too small (1013x1267 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/The-Breakers-WPB-2019-117.jpg",
+     "ok": true,
+     "width": 1045,
+     "height": 567,
+     "bytes": 207286,
+     "format": null,
+     "gate": "FAIL: too small (453x567 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/pagina-145.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 593533,
      "format": null,
      "gate": "PASS"
     },
     {
-     "n": 2,
-     "url": "https://tile.loc.gov/image-services/iiif/service:pnp:highsm:34400:34476/full/pct:50/0/default.jpg",
+     "n": 4,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/HMF-The-Breakers-Palm-Beach-43.jpg",
      "ok": true,
-     "width": 4311,
-     "height": 2761,
-     "bytes": 1649660,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 659633,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/pagina-148.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 381884,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Flagler-Steakhouse-Palm-Beach-13.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 474781,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Flagler-Steakhouse-Palm-Beach-46.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 472223,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/pagina-151.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 414353,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/The-Breakers-WPB-2017-125_edit.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 683437,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/The-Breakers-WPB-2017-Seafood-Bar-161.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 635811,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/pagina-154.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 632710,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Henrys-Palm-Beach_011.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 553148,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/pagina-156.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 499593,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/The-Breakers-WPB-2019-164-copia.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 490662,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://tihanydesign.com/wp-content/uploads/2024/10/Flagler-Club-Room_Project-1.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 2117427,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://tihanydesign.com/wp-content/uploads/2024/10/Flagler-Club-Room_Project-2.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 2567006,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://tihanydesign.com/wp-content/uploads/2024/10/Flagler-Club-Room_Project-4.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 1984422,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://tihanydesign.com/wp-content/uploads/2024/10/Flagler-Club-Room_Project-3.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 2681105,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 19,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/The-Breakers-WPB-2019-99.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 552227,
      "format": null,
      "gate": "PASS"
     }
    ],
    "sheets": [
-    "loctest-1.jpg"
+    "breakers-1.jpg",
+    "breakers-2.jpg",
+    "breakers-3.jpg",
+    "breakers-4.jpg"
+   ]
+  },
+  {
+   "id": "penrose",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Opening-Large.jpg",
+     "ok": true,
+     "width": 2575,
+     "height": 1448,
+     "bytes": 1717617,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose-Intro.jpg",
+     "ok": true,
+     "width": 1045,
+     "height": 567,
+     "bytes": 447905,
+     "format": null,
+     "gate": "FAIL: too small (453x567 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-1.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 1988561,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-2.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 721012,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-3.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 639622,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-4.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 809778,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-5.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 814598,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-6.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 717209,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-7.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 719927,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-8.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 715399,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-9.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 637064,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-10.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 562402,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-11.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 640390,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://tihanydesign.com/wp-content/uploads/2026/02/The-Penrose_Project-12.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 695403,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "penrose-1.jpg",
+    "penrose-2.jpg",
+    "penrose-3.jpg"
+   ]
+  },
+  {
+   "id": "daniel",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Daniels-NYC-2023-47.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1267,
+     "bytes": 342090,
+     "format": null,
+     "gate": "FAIL: too small (1013x1267 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Daniels-NYC-2023-21.jpg",
+     "ok": true,
+     "width": 1045,
+     "height": 567,
+     "bytes": 173328,
+     "format": null,
+     "gate": "FAIL: too small (453x567 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/01_daniel.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 473844,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Daniels-NYC-2023-12.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 492556,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://tihanydesign.com/wp-content/uploads/2023/11/Daniels-NYC-2023-61.jpg",
+     "ok": true,
+     "width": 2253,
+     "height": 1413,
+     "bytes": 497940,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "daniel-1.jpg"
+   ]
+  },
+  {
+   "id": "kinsley",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854640272-NR7E8OZMP6LDZYNQ4L9P/Hotel_Kinsley_Reception_012.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1666,
+     "bytes": 677433,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572534966394-YPKFDNNAIN8RMHIRY7R8/Hotel_Kinsley_Hall_006.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 1190601,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572534950601-JNN9FKZ7ZQ8CG3IXDOD5/Hotel_Kinsley_Hall_001.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 910671,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854727363-3MCZ72VWLMFMAOX2129D/Hotel_Kinsley_Room_204_006.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 660356,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854739741-KYW4BKERHRRNBK6QMPDG/Hotel_Kinsley_Room_204_018.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 726079,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854742726-Z3X8JHUZSMIUMZS8OYH4/Hotel_Kinsley_Room_204_022.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 828617,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535416856-CU7DD94YOR1JKPUFBCVY/Hotel_Kinsley_Room_204_047.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 1209118,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535438184-32MIEFOZEPLCQ4QMU6NJ/Hotel_Kinsley_Room_204_033.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 830348,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.50)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854750281-OG97FN13BU2IJUGX8YW4/Hotel_Kinsley_Room_204_050.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 427841,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535470961-F8PDM7YZFXCBKEX6N90S/Hotel_Kinsley_Room_204_063.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 762208,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.38)"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535493621-PKQ2EFPSDZELBCGFLX6A/Hotel_Kinsley_Room_204_071.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 718881,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854688296-6G6D9SL3OZCM3K8XKF8A/Hotel_Kinsley_Room_201_008.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 587259,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854713328-NQ6PIIELNXG13YGILFTW/Hotel_Kinsley_Room_201_035.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3499,
+     "bytes": 1196250,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535048124-Z8F8Y79ATR78QKKLC81N/Hotel_Kinsley_Room_202_036.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 851771,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.38)"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535127138-GRZZ2J4CQILEGMHSID5J/Hotel_Kinsley_Room_203_002.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 475419,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535218139-5HQLIJJC629IO1L6QROE/Hotel_Kinsley_Room_203_010.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 748432,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1572535254714-IZ7LTK8N9LT5DS4BWUPR/Hotel_Kinsley_Room_203_028.jpg?format=2500w",
+     "ok": true,
+     "width": 2143,
+     "height": 3000,
+     "bytes": 908121,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.37)"
+    },
+    {
+     "n": 18,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1566854752863-2P9CUAXP3964448HLLVH/Hotel_Kinsley_Room_301_002.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 556798,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "kinsley-1.jpg",
+    "kinsley-2.jpg",
+    "kinsley-3.jpg"
+   ]
+  },
+  {
+   "id": "theodora",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/50e9e864-4be0-449e-bbec-76c190a23701/Theodora-HomeStudios-BWF-20231212-235-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 2200,
+     "height": 1650,
+     "bytes": 466829,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/a1cc2321-d8f0-4cec-bb1f-4cbdc6bf2f69/Theodora-HomeStudios-BWF-20231212-083-Edit-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 566971,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/14f540f6-db34-49fd-a96c-efc45f24290b/Theodora-HomeStudios-BWF-20231212-054-Edit-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 148288,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/786b2907-13d9-48ac-aa5c-684f62ca81fb/Theodora-HomeStudios-BWF-20231212-042-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1760,
+     "height": 2200,
+     "bytes": 353344,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.37)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/87caea31-42bd-4d43-8f54-ac417a6f9b38/Theodora-HomeStudios-BWF-20231212-133-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1760,
+     "height": 2200,
+     "bytes": 488052,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6aff582d-8fff-4e41-8261-484b81856ed1/Theodora-HomeStudios-BWF-20231212-206-Edit-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 579370,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/257f97f9-2bdb-492c-9c4c-aa529f97f57f/Theodora-HomeStudios-BWF-20231212-199-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 569300,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/c6d287b7-0dc8-463b-82b7-86268c42edf2/Theodora-HomeStudios-BWF-20231212-105-HDR-Edit-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 582225,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/59c0e960-8d58-4a70-894d-7f6e6da66324/Theodora-HomeStudios-BWF-20231212-068-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 431163,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/bab1016e-f784-412c-83e2-882fa0e25593/Theodora-HomeStudios-BWF-20231212-018-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 193686,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/de05b254-0ac0-4035-ac3f-c7da2c7bcedd/Theodora-HomeStudios-BWF-20231212-123-Edit-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 1650,
+     "height": 2200,
+     "bytes": 570438,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/66455db9-f64c-40df-a995-444d26c18526/Theodora-HomeStudios-BWF-20231212-156-ret-WEB.jpg?format=2500w",
+     "ok": true,
+     "width": 2200,
+     "height": 1650,
+     "bytes": 298270,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "theodora-1.jpg",
+    "theodora-2.jpg"
+   ]
+  },
+  {
+   "id": "elsa",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/239f6944-0d7a-45ee-9f38-b2631dfe62c2/1.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1532,
+     "bytes": 777751,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/a5e501d1-d7d8-49f7-a804-bf42a35e154c/2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1666,
+     "bytes": 738649,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/ec2d36ea-7843-45f3-b12a-fd77758a37d5/3.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1702,
+     "bytes": 591324,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/f46c2a1d-b610-47c9-ad40-1a476d750f76/4.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1130553,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.47)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/6802597d-9c76-4e55-ae85-e874a911d0b3/6.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3483,
+     "bytes": 957302,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.48)"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/57afca77-975b-4028-b0c6-0db77163d1c4/_T3B4635.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1671,
+     "bytes": 527019,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/35227355-93c2-4081-b1e3-3897a3f5c342/5.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1666,
+     "bytes": 370784,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/53e3c4f7-e4be-4dd4-859d-e3e791dd0e47/7.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3692,
+     "bytes": 329724,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 34, need 60)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/0578a12d-7d82-4e6d-9757-5e1cef472b10/_T3B4597.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 984071,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.52)"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/31fef4de-d97f-4c3a-9512-b5b71ebddbb3/8.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1730,
+     "bytes": 501113,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/65735eea6b402b3eeb7152f1/84dcda25-d25d-4e95-9d92-eb8f17446afd/_T3B4601.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 518872,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "elsa-1.jpg",
+    "elsa-2.jpg"
+   ]
+  },
+  {
+   "id": "hoexters",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/b7402825-9d5b-485f-92f0-c17912c8f837/hoexters_alexstaniloff-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 554894,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/4e7ee827-f2f6-4279-8931-484f12b63345/hoexters_alexstaniloff-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 669454,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/abaffaae-2037-4af7-9aef-c510438f7d0d/hoexters_alexstaniloff-9.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 217238,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/471339ae-ca1d-4f73-ac64-2e0a34910276/hoexters_alexstaniloff-1.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 516747,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/011e6b6b-698f-42c2-95ab-cf5ae347f4ad/hoexters_alexstaniloff-4.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 329615,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/9a5c19b4-cad8-4f87-8873-d148d14bff2b/hoexters_alexstaniloff-3.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 668499,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/ba0be60d-8ff0-447a-9597-9cd2906aa906/hoexters_alexstaniloff-5.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 614903,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/3c9ede54-662d-4c6d-a1ed-07d8bda7bfce/hoexters_alexstaniloff-7.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 207080,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/26c69e67-8812-4962-8ccf-100185ce6935/hoexters_alexstaniloff-8.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 180579,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "hoexters-1.jpg",
+    "hoexters-2.jpg"
+   ]
+  },
+  {
+   "id": "santi",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/74ece560-f468-43ec-b3bf-fb8e1a85705a/santi_alexstaniloff-4.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 131174,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/848ada9f-ffd2-4e98-915c-4376eaf7faf2/santi_alexstaniloff-3.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 620763,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/49a0f08b-a4ac-4731-83f8-ef87caef8d95/santi_alexstaniloff-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 373273,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/11cf4e7e-d2e7-4aec-bb84-5bda0f0a6187/santi_alexstaniloff-8.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 392873,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/6323809a-23d0-430c-bcb5-2b1e5fadeacd/santi_alexstaniloff-1.jpg?format=2500w",
+     "ok": true,
+     "width": 2398,
+     "height": 1600,
+     "bytes": 626342,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/2dede54a-abb5-42d1-8dbc-9441170fb9ac/santi_alexstaniloff-10.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 124171,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/c6e4936d-950c-4d57-b5bd-81a26f6e0cef/santi_alexstaniloff-7.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 614808,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/004b7f0a-bf9a-4d88-84ac-917a2879398e/santi_alexstaniloff-2.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 440629,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/9eb53914-4cbc-4dfd-8e8a-09504b50ddc3/santi_alexstaniloff-5.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 158221,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/6a98d713-1c81-4765-9d41-696958089cb9/santi_alexstaniloff-9.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 170306,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "santi-1.jpg",
+    "santi-2.jpg"
+   ]
+  },
+  {
+   "id": "craneclub",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/64ca3a3d-763f-4cc8-91a3-215257243aa2/craneclub_alexstaniloff-3.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 413780,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/3e2e5a72-8c6d-41af-974b-98886124682b/craneclub_alexstaniloff-8.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 718465,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/99cdd7bb-9a7a-4b01-830a-da2558f89f86/craneclub_alexstaniloff-4.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 337839,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/fcea3cdb-b63f-4cef-b654-3e9376632d1d/craneclub_alexstaniloff-9.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 269864,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/07bde4bb-c307-4d3d-97ec-10c31f862552/craneclub_alexstaniloff-7.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 238288,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/51230882-5efa-45bf-a3f1-27d7ffd54ff3/craneclub_alexstaniloff-1.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 333230,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/ce924bf5-5a74-4fe8-be4f-4213a4ec0043/craneclub_alexstaniloff-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 487935,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/5333f38d-2cc9-45ad-b81c-559fce785338/craneclub_alexstaniloff-5.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 635990,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/8e11a5fc-7a21-4662-916d-4f35bf9f3909/craneclub_alexstaniloff-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 684270,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "craneclub-1.jpg",
+    "craneclub-2.jpg"
+   ]
+  },
+  {
+   "id": "chambers",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/d9c41137-aa2b-456b-bb5b-c8cd4c4caffe/chambers_alexstaniloff-5.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 263998,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/6fb5778e-46c0-4ca5-becb-4cb87f5fb1cc/chambers_alexstaniloff-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 734379,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/f0ff060a-c811-4837-8ff9-70bcde890f5a/chambers_alexstaniloff-1.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 605675,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/a1fad17e-58e1-49b3-b099-99789dfb9b93/chambers_alexstaniloff-4.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 561986,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/15455c28-9e2b-45a5-8c37-76d59fc8513f/chambers_alexstaniloff-3.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 459867,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/6a4b61ff-4ad0-471a-9bff-7f998b06cae3/chambers_alexstaniloff-8.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 456923,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/dc547181-6c9c-47e5-bc00-6faa6e589a54/chambers_alexstaniloff-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 520452,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/3a45fbfc-8446-49bf-b165-f1e8828bc185/chambers_alexstaniloff-7.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 176372,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/be104144-3972-48c2-bd69-7c86367a3670/chambers_alexstaniloff-9.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 437079,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/eb0cd564-b50a-4a19-aaac-f64878b5f096/chambers_alexstaniloff-10.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 460120,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/995868fd-c22b-4ab2-9621-81e8af59e5aa/chambers_alexstaniloff-11.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 436690,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "chambers-1.jpg",
+    "chambers-2.jpg"
+   ]
+  },
+  {
+   "id": "lambsclub",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/3a9d009a-fb63-4e67-9548-f5c81501de60/thelambsclub_alexstaniloff-5.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 230074,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/0e80247c-2b18-4032-b39a-807436869527/thelambsclub_alexstaniloff-4.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 179919,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/330b593f-f3cd-4014-bcd3-ec78809730b2/thelambsclub_alexstaniloff-1.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 665171,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/8df2c375-c8be-42e4-827e-4b19e45996c4/thelambsclub_alexstaniloff-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 714562,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/8cdad0c6-dd56-4c16-8720-deb0f97e5209/thelambsclub_alexstaniloff-9.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 331952,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/f284e8ca-a140-4caa-af46-8ffc8c485dbb/thelambsclub_alexstaniloff-3.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 212968,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/4376b807-d6d3-4be8-8488-14c29b34dc3f/thelambsclub_alexstaniloff-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 413074,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/051da2ea-2255-4401-9639-1d1aa9ff94c1/thelambsclub_alexstaniloff-14.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 256721,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/cc87e34e-90c1-4ff4-a530-f2181d586cd4/thelambsclub_alexstaniloff-11.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 377903,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/10677795-9c86-4213-856d-eade9667ce46/thelambsclub_alexstaniloff-7.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 400791,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/3e54ac41-4a0d-4215-8755-de5bcd8e26b3/thelambsclub_alexstaniloff-8.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 231360,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/554003b0e4b0d65fe59d5a78/b543e39e-d7c8-4fa1-a198-a363c9920ee8/thelambsclub_alexstaniloff-10.jpg?format=2500w",
+     "ok": true,
+     "width": 2399,
+     "height": 1600,
+     "bytes": 566488,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "lambsclub-1.jpg",
+    "lambsclub-2.jpg"
+   ]
+  },
+  {
+   "id": "bavel",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/ae4cd47c-25c1-499d-b2a0-e43727dd27e6/bavel-hero.png?format=2500w",
+     "ok": true,
+     "width": 2307,
+     "height": 1538,
+     "bytes": 5820694,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/625a8c42-c1ad-42ad-848f-c730ffd6633b/bavel-03.jpeg?format=2500w",
+     "ok": true,
+     "width": 1920,
+     "height": 1280,
+     "bytes": 826532,
+     "format": null,
+     "gate": "FAIL: too small (1024x1280 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/5c3edda7-77dc-4a3b-8c91-db0a0419d235/bavel-001.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1164421,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/d1d2fa9a-7fae-411d-8e43-6e31fdceef91/bavel-002.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1156140,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/1239dd81-d52a-417c-b807-a7a353af7621/bavel-05.jpeg?format=2500w",
+     "ok": true,
+     "width": 1280,
+     "height": 1920,
+     "bytes": 697583,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/27d8788d-f998-4981-8996-0cec081c0f40/bavel-new-02.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 803413,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/bbf0d56e-24a4-4ba2-bb7b-f1cfbea66e42/bavel-new-01.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 549871,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "bavel-1.jpg",
+    "bavel-2.jpg"
+   ]
+  },
+  {
+   "id": "moruno",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/0a7557bd-17dc-491a-b961-a96d13888336/maruno-01.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 975808,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/7abad92f-ebfe-439d-8e50-d3b0df47d178/bar-moruno-studio-unlimited-tanveer-badal-photography-12.jpg?format=2500w",
+     "ok": true,
+     "width": 1920,
+     "height": 1281,
+     "bytes": 500662,
+     "format": null,
+     "gate": "FAIL: too small (1024x1281 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/8b90f28f-a1bd-4dd4-8408-c6c9fa52b4e6/maruno-04.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3748,
+     "bytes": 2204434,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/aa6e77a5-b279-48d0-a545-c23125408bb5/bar-moruno-studio-unlimited-tanveer-badal-photography-8.jpg?format=2500w",
+     "ok": true,
+     "width": 1281,
+     "height": 1920,
+     "bytes": 572149,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/7a4f5d06-4970-48dd-a881-5c775c218086/bar-moruno-studio-unlimited-tanveer-badal-photography-16.jpg?format=2500w",
+     "ok": true,
+     "width": 1281,
+     "height": 1920,
+     "bytes": 620909,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/d7abbf99-8f46-46f3-85d5-3907cc2f9aaf/maruno-05.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3748,
+     "bytes": 1788353,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "moruno-1.jpg"
+   ]
+  },
+  {
+   "id": "helms",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/e55601d3-8624-4c31-89ae-641ae13b83fc/01_0034.jpg?format=2500w",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 409581,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/867ba543-f1a6-4bf6-81f1-5f3c2f5a3e99/01_0034.jpg?format=2500w",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 409581,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/5210bfa9-3872-402d-8560-ce813b20f35c/02_0059.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 327445,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/f9a527a9-338c-4d60-ac52-b99b5c4b769b/05_168.jpg?format=2500w",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 387958,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/18fe82e5-f0f5-4fbb-b7d4-aa721da1fb6e/10_300.jpg?format=2500w",
+     "ok": true,
+     "width": 1047,
+     "height": 1600,
+     "bytes": 375802,
+     "format": null,
+     "gate": "FAIL: too small (1047x1308 after crop, need 1080x1350)"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/fcb4771f-76ae-48f7-8261-3acf0d4506cf/03_0045.jpg?format=2500w",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 350075,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/d6e0a035-c98d-4082-8078-ff434bbc4aaf/09_270.jpg?format=2500w",
+     "ok": true,
+     "width": 1067,
+     "height": 1600,
+     "bytes": 338098,
+     "format": null,
+     "gate": "FAIL: too small (1067x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/669706a5f1a64d69d49bc441/8c2cc08e-6333-4f08-b92d-16d1a7db39cb/06_213.jpg?format=2500w",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 395492,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "helms-1.jpg",
+    "helms-2.jpg"
+   ]
+  },
+  {
+   "id": "public",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1628802228409-IFH9WURMZQ947TKWC5BT/Joe-Thomas-Photo-public-New-York-72.jpg?format=2500w",
+     "ok": true,
+     "width": 1477,
+     "height": 1846,
+     "bytes": 492588,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895377145-4W26WDC85ND1HTKM0SAM/Joe-Thomas-Photo-public-New-York-4.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1294919,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895392966-ZJ9ICPH0MY4PF4CR9TR9/Joe-Thomas-Photo-public-New-York-10.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 980746,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895384934-Z9Z0MO29XN10FYH88W6A/Joe-Thomas-Photo-public-New-York-9.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 976152,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895411776-2YUIY6MXQZXWK33NRYZS/Joe-Thomas-Photo-public-New-York-13.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1147623,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895411697-SX3ZU18DS007BLPJUV55/Joe-Thomas-Photo-public-New-York-14.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1747030,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895350164-KNQFSF2Q08FEDMA3RK7A/image-asset+%2822%29.jpeg?format=2500w",
+     "ok": true,
+     "width": 750,
+     "height": 1124,
+     "bytes": 310290,
+     "format": null,
+     "gate": "FAIL: too small (750x937 after crop, need 1080x1350)"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895380604-7C3G4X050MN4JYGWWORI/Joe-Thomas-Photo-public-New-York-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1707319,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895705997-1VJAEWXQ2IIWCVTGI043/Joe-Thomas-Photo-public-New-York-1-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1146329,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895372143-UCEXSGHPOTQPCGM6QV7U/Joe-Thomas-Photo-public-New-York-1.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1668,
+     "bytes": 824946,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895372272-S3LT494W609D321U2ZI7/Joe-Thomas-Photo-public-New-York-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1668,
+     "bytes": 730821,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895393265-OIBXZTZ2IM8BOEKP21DX/Joe-Thomas-Photo-public-New-York-11.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 704501,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895715289-5I4GYOHGWNCY5ZV1654G/Joe-Thomas-Photo-public-New-York-2-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1668,
+     "bytes": 886719,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1581895723328-HUEOM1NANZ6K43SSUK90/Joe-Thomas-Photo-public-New-York-3-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1668,
+     "bytes": 773938,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "public-1.jpg",
+    "public-2.jpg",
+    "public-3.jpg"
+   ]
+  },
+  {
+   "id": "ryder",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621767012-PQDB8XADMYRUIJ2Q1M0L/Ryder-Hotel-joe-thomas-25.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1016402,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621669420-PU0794OBB0GJSOWMM5KV/Ryder-Hotel-joe-thomas-8.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1122494,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625624136783-3VFAVAGOF8JRGJFVROPM/DSC00983.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1423913,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621765935-N98GSV89FOSASTEFMIFY/Ryder-Hotel-joe-thomas-26.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 614629,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621755605-4S1AX1DI6RYHO2CQ0QPL/Ryder-Hotel-joe-thomas-24.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1325537,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621704715-QZ26QW5MN7L6PP812RPV/Ryder-Hotel-joe-thomas-15.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1034335,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621631865-AD77CVODMCHZ9EDE0HI1/Ryder-Hotel-joe-thomas-1.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 2291954,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621654351-WXD83AUA83X2LWAPJQZZ/Ryder-Hotel-joe-thomas-6.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 784397,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621669551-Q2NJ2D53SOUZV423HUYO/Ryder-Hotel-joe-thomas-9.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1612965,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621613105-FZQKF15ZI36W1FRORX4U/Ryder-Hotel-joe-thomas-2.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 564617,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621643383-4AVC7U9ODQHXCP5YWIOP/Ryder-Hotel-joe-thomas-5.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1524840,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621643920-1WVJHAXRN8HM2CUPCU8K/Ryder-Hotel-joe-thomas-4.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 772226,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621824830-1LI43X1GRGU17DBCQ12K/Ryder-Hotel-joe-thomas-3.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1502071,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621704462-Q6ZUM4KR14NXSUNI6J3S/Ryder-Hotel-joe-thomas-14.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1503621,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621800944-TL6FAACKTGVS4GLD8DIA/Ryder-Hotel-joe-thomas-32.jpeg?format=2500w",
+     "ok": true,
+     "width": 1912,
+     "height": 2390,
+     "bytes": 1216385,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1625621744570-LZP4ZUN1V3XMBZGMTOTX/Ryder-Hotel-joe-thomas-21.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 912958,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "ryder-1.jpg",
+    "ryder-2.jpg",
+    "ryder-3.jpg"
+   ]
+  },
+  {
+   "id": "pittman",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/5372022e-7bce-4711-8f58-1faacb264e29/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+1.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 632893,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/b0cc1150-aa16-45c7-8ffc-dce243d3987c/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+3.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 1480057,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/b04f299f-ff93-4ed6-b6d1-99062b69b9a7/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+4.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 2081,
+     "bytes": 878977,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/3f8adaae-3148-4401-b86f-0d0b6d491675/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+5.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 661633,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/dba6cc08-1b78-49d1-b380-679e0c08fc4e/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+6.jpg?format=2500w",
+     "ok": true,
+     "width": 2400,
+     "height": 3000,
+     "bytes": 1557672,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/e6ba59d5-5c5f-4241-8a91-9d7c1492a13f/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+7.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 877595,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/9f2ec67d-330d-4374-af64-d69b00e3f1f8/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+8.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1666,
+     "bytes": 894277,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/c4181f87-6472-4d34-ba17-d127481232ec/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+9.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 1239257,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/38f9cca8-f300-49fb-943a-0c9878103e92/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+10.jpg?format=2500w",
+     "ok": true,
+     "width": 1981,
+     "height": 3000,
+     "bytes": 1266681,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/a440ea3d-8ff8-424c-b3a9-6c4604c83895/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+11.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1753,
+     "bytes": 953110,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/1e368f8a-b5bd-4d09-9d0a-41eec3033036/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+12.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 573185,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/57c88f1bd482e96af7e21eff/80bdd24d-eca8-4c2c-aef4-744ee474135c/Leonid_Furmansky_Perkins_Will_Pittman_Prelims+15.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 1197945,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "pittman-1.jpg",
+    "pittman-2.jpg"
+   ]
+  },
+  {
+   "id": "uchiko",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89233-copy-scaled-e1741801581950.jpg",
+     "ok": true,
+     "width": 1281,
+     "height": 1600,
+     "bytes": 355303,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami88921-e1741801662826.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 310570,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami88953-scaled-e1741801641175.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 183518,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 41, need 60)"
+    },
+    {
+     "n": 4,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami88972-copy-scaled-e1741801627397.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 266710,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami88901-scaled-e1741801676644.jpg",
+     "ok": true,
+     "width": 1279,
+     "height": 1600,
+     "bytes": 298241,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami88895-scaled-e1741801688432.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 279426,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89293-e1741801533646.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 205547,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami_00038-e1741801701698.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 250584,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89316-e1741801511404.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 240488,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.48)"
+    },
+    {
+     "n": 10,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89288-e1741801564693.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 426245,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89193-scaled-e1741801600362.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 269296,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 12,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89030-copy-e1741801614540.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 274954,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89068-e1741802079782.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 341886,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89027-e1741802064923.jpg",
+     "ok": true,
+     "width": 1279,
+     "height": 1600,
+     "bytes": 131918,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 26, need 60)"
+    },
+    {
+     "n": 15,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89034-e1741802052352.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 1600,
+     "bytes": 186933,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://www.islynstudio.com/wp-content/uploads/2025/03/Islyn-Uchiko-Miami89090-scaled-e1741802041337.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 270948,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "uchiko-1.jpg",
+    "uchiko-2.jpg",
+    "uchiko-3.jpg"
+   ]
+  },
+  {
+   "id": "clermont",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/1617309347038-WPQA60P31F90ZQYKCLUP/1+Reunion_Clermont_Lobby.jpg?format=2500w",
+     "ok": true,
+     "width": 2400,
+     "height": 1685,
+     "bytes": 903436,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/e267602a-9d64-4e07-bdbe-fbaffbaedd2e/CLE-L-168.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 898253,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/a4d6d249-dd69-4e8c-93b5-665d273767b4/CLE-A-510-013.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 452601,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/1e48aec8-814d-45e4-bdf6-efd9363f2c3e/CLE-A-023.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 933380,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/1615592738802-9M5T74FAZE8CGDWYSHT9/CLE-L-042.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 363402,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/4a88a1a3-c63a-4c4e-845c-06e665920e73/CLE-L-046-2.jpg?format=2500w",
+     "ok": true,
+     "width": 1920,
+     "height": 2880,
+     "bytes": 886008,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.69)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/8c950d3f-1c75-4498-80ce-329da0a77faa/CLE-L-055.jpg?format=2500w",
+     "ok": true,
+     "width": 1920,
+     "height": 2880,
+     "bytes": 915716,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.37)"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/abc5b545-9f81-4a34-9fc5-7ec42245cacf/CLE-L-361.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 641320,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/2f7902c7-4fa8-4b78-96ce-02a56a45428f/CLE-A-076.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 798869,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/27ca30d9-587b-400b-b278-8a84bff89e31/CLE-A--3.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 920155,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/09d5446b-cdd2-45d3-a75b-9c4846dc4ef9/CLE-A-508-205.jpg+.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 673233,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/604aa8050fcf281ec273d803/605d19a3-1f3b-4a03-ab20-d26dd71bcd9b/CLE-L-074.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 834987,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "clermont-1.jpg",
+    "clermont-2.jpg"
+   ]
+  },
+  {
+   "id": "maxwells",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733287901-3F3VZPEUNI8VOYN1MDRK/image-asset.png?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1406,
+     "bytes": 734,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 0, need 60)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733308782-HV03B4FKSZ9T4WN6SQVB/Maxwells_V.3-10.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1669,
+     "bytes": 1218717,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733349483-SJIFSQDO3OYGA90EJ8FP/image-asset.png?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1406,
+     "bytes": 734,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 0, need 60)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733649571-82FMLWDKPRIX091JD5W3/Maxwells_V.3-8.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1669,
+     "bytes": 829167,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733515274-XH5WDTU20SADNVZNVJS3/Maxwells_V.3-9.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3745,
+     "bytes": 1204904,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733552998-1M68L4QDSRLDT7WTVFF1/image-asset.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3745,
+     "bytes": 1344911,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733686078-8CSZRJ2S0HUTEFTQA4TN/image-asset.png?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1406,
+     "bytes": 734,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 0, need 60)"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/59777eaae58c626d8561f889/1502733704108-XUJVCE188SAA90POGX4X/Maxwells_V.3-13.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3745,
+     "bytes": 1771147,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "maxwells-1.jpg",
+    "maxwells-2.jpg"
+   ]
+  },
+  {
+   "id": "scotts",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/943b894a-66e2-4c15-996f-7298069c01af/SCOTT%27S_103.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 1283626,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/3f88563d-2634-4818-a67e-8d42aa1acb78/Scott%27s+1.jpeg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 1334,
+     "bytes": 542545,
+     "format": null,
+     "gate": "FAIL: too small (1067x1334 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/77084287-d2b3-4056-97d7-8a9e575eeef9/SCOTT%27S_088.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 794845,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/9a47e4cc-edff-483d-ba04-7343d50a7bc8/SCOTT%27S_049.jpg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 773404,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/e93c0389-f666-4f2d-beab-0e99fc10b30a/SCOTT%27S_130.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 885507,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/28c3537f-27bd-4a31-9045-32ccb4834cf0/Scott%27s+4.jpeg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 1334,
+     "bytes": 458147,
+     "format": null,
+     "gate": "FAIL: too small (1067x1334 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "scotts-1.jpg"
+   ]
+  },
+  {
+   "id": "regina",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687427348618-16WVO8C9XTZVCEH0HK6N/Regina+-+Experimental+%C2%A9+mrtripper-23.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 548050,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422027514-FJHNAUOZTP6JGV7A47TT/Regina+-+Experimental+%C2%A9+mrtripper-1.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 767590,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422111980-B4VO475NTPIWY56TQ0CD/Regina+-+Experimental+%C2%A9+mrtripper-23.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 548050,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422582228-0PZ9RLGDYV1LQK4052FS/Regina+-+Experimental+%C2%A9+mrtripper-48.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 514134,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422462914-H3TK9Z1HMONP78CIHAGO/Regina+-+Experimental+%C2%A9+mrtripper-25.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 472596,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422746697-9AOU5KJUQB9JG7JNOW4Y/Regina+-+Experimental+%C2%A9+mrtripper-81.jpg?format=2500w",
+     "ok": true,
+     "width": 1319,
+     "height": 1976,
+     "bytes": 296047,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422714031-DBEFX0BLC41KTQ9572NQ/Regina+-+Experimental+%C2%A9+mrtripper-80.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 510947,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422111719-B41FCY822Q1RLW70TRT3/Regina+-+Experimental+%C2%A9+mrtripper-24.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 460610,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422049804-WBQ8D8DC5D6RT8FDTLX5/Regina+-+Experimental+%C2%A9+mrtripper-4.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 596242,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422563028-B3P02QQ9R2ZJNMRGZS00/Regina+-+Experimental+%C2%A9+mrtripper-41.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 767055,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422769198-UMNLOW1WPPC393XTO794/Regina+-+Experimental+%C2%A9+mrtripper-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1669,
+     "bytes": 618218,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422575657-0G42AMZB7NHJCNT2RK8R/Regina+-+Experimental+%C2%A9+mrtripper-46.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 490098,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422592485-1A2MKTWGSVJJACL1C1TU/Regina+-+Experimental+%C2%A9+mrtripper-50.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 648941,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422513016-CEGIMAR0NZ27S5P3Z47Z/Regina+-+Experimental+%C2%A9+mrtripper-28.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 645315,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422546604-JB67G7TILEE4M3E2CRP1/Regina+-+Experimental+%C2%A9+mrtripper-34.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 778113,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422532202-NTB7GF1DGC79YCY6ZRW1/Regina+-+Experimental+%C2%A9+mrtripper-31.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 701197,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422588241-CKX6ZATXZPMHGBJ3YBVY/Regina+-+Experimental+%C2%A9+mrtripper-49.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1669,
+     "bytes": 507231,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://images.squarespace-cdn.com/content/v1/55d6ed13e4b054689cae39ba/1687422636039-2YHXF35TF0H7792YVSE9/Regina+-+Experimental+%C2%A9+mrtripper-54.jpg?format=2500w",
+     "ok": true,
+     "width": 1669,
+     "height": 2500,
+     "bytes": 569019,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "regina-1.jpg",
+    "regina-2.jpg",
+    "regina-3.jpg"
+   ]
+  },
+  {
+   "id": "ditto",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://media.architecturaldigest.com/photos/6af1e1a422ed8a2ce3acb3d8/master/w_1600%2Cc_limit/26080_Ditto_NY_05.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 1067,
+     "bytes": 152851,
+     "format": null,
+     "gate": "FAIL: too small (853x1067 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://media.architecturaldigest.com/photos/6af1e7673835a8fc21a3d000/master/w_1600%2Cc_limit/26080_Ditto_NY_12.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 1999,
+     "bytes": 333972,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.42)"
+    },
+    {
+     "n": 3,
+     "url": "https://media.architecturaldigest.com/photos/6af1e853c2abab7cff86fe47/master/w_1600%2Cc_limit/26080_Ditto_NY_22.JPG",
+     "ok": true,
+     "width": 1600,
+     "height": 2000,
+     "bytes": 427074,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.54)"
+    },
+    {
+     "n": 4,
+     "url": "https://media.architecturaldigest.com/photos/6af1ec3716a827501932be06/master/w_1600%2Cc_limit/26080_Ditto_NY_17.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 2000,
+     "bytes": 319855,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.51)"
+    },
+    {
+     "n": 5,
+     "url": "https://media.architecturaldigest.com/photos/6af2237e420649d29f13db2a/master/w_1600%2Cc_limit/26080_Ditto_NY_15.jpg",
+     "ok": true,
+     "width": 1600,
+     "height": 2000,
+     "bytes": 320458,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.35)"
+    },
+    {
+     "n": 6,
+     "url": "https://media.architecturaldigest.com/photos/6af2382a72a863feb4e525b5/16:9/w_1280,c_limit/Ditto_AndyB.jpg",
+     "ok": true,
+     "width": 1280,
+     "height": 720,
+     "bytes": 115545,
+     "format": null,
+     "gate": "FAIL: too small (576x720 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://media.architecturaldigest.com/photos/6af2382a72a863feb4e525b5/16:9/w_2560%2Cc_limit/Ditto_AndyB.jpg",
+     "ok": true,
+     "width": 2560,
+     "height": 1440,
+     "bytes": 479864,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.41)"
+    }
+   ],
+   "sheets": [
+    "ditto-1.jpg",
+    "ditto-2.jpg"
+   ]
+  },
+  {
+   "id": "silverlake",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_27.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 557117,
+     "format": null,
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_25.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 565192,
+     "format": null,
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_58.jpg",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 551356,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_1.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1334,
+     "bytes": 454230,
+     "format": null,
+     "gate": "FAIL: too small (1067x1334 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_2.jpg",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 434952,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.51)"
+    },
+    {
+     "n": 6,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_63.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 303081,
+     "format": null,
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_8.jpg",
+     "ok": true,
+     "width": 1334,
+     "height": 2000,
+     "bytes": 416483,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_30.jpg",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 274322,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.51)"
+    },
+    {
+     "n": 9,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_50.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 576649,
+     "format": null,
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
+    },
+    {
+     "n": 10,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_34.jpg",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 484735,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_35.jpg",
+     "ok": true,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 463756,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Silver-Lake-Pool-and-Inn_113.jpg",
+     "ok": true,
+     "width": 2000,
+     "height": 1331,
+     "bytes": 523562,
+     "format": null,
+     "gate": "FAIL: too small (1064x1331 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "silverlake-1.jpg",
+    "silverlake-2.jpg"
+   ]
+  },
+  {
+   "id": "couvent",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/5ce5c47d757936016f8f817920119da45c20b7d5-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 321498,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/edda7a4af4f8759c6859a60894f0a920917b411d-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 994310,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/ba7baaf12cd208b2f354ed41f401626c673ef951-2010x2680.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2010,
+     "height": 2680,
+     "bytes": 572175,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.44)"
+    },
+    {
+     "n": 4,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/6460aaeb2c54841cc4a2c0646b5767efbdf24117-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 372863,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/cdd98740b5eebd7b383373591ae2d1f8072e961f-2010x2680.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2010,
+     "height": 2680,
+     "bytes": 733243,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/1c75fd8eb574d687bb86d2071bf82eadece11f9f-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 396777,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/373bc6851c6abfc68a88f6b166b4e9f4742bea73-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 473104,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/a8337251a4d40022822632c49258fb3d21a87446-2010x2680.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2010,
+     "height": 2680,
+     "bytes": 345340,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.67)"
+    },
+    {
+     "n": 9,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/4400aa11084738e6da305b6dd60c6c9d3339a7d6-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 290713,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/5e0560798104d5e3498eeb4b23e13e41196b75f0-2010x2680.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2010,
+     "height": 2680,
+     "bytes": 460753,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.39)"
+    },
+    {
+     "n": 11,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/7727ca87533dcc33175181fa860cd0acb795b6c4-2680x2010.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 467826,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://cdn.sanity.io/images/mzm4ulfo/production/91c9ce450b3515c7a300a1dc299b5670003bb136-2010x2680.jpg?w=2500&fit=max&auto=format",
+     "ok": true,
+     "width": 2010,
+     "height": 2680,
+     "bytes": 688985,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "couvent-1.jpg",
+    "couvent-2.jpg"
    ]
   }
  ]
