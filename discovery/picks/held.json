@@ -1,38 +1,5 @@
 {
- "about": "Picks viewed and validated but not yet batched. 2026-11-09: 0025 The Dunes Club and 0026 Million Goods went into batch 2026-W46 and were removed from this file. 0027 Skywalker Grill and 0028 The Greenbrier were used in W46. 0024 is retired. Next free index: 0029. Entries under candidates have no index yet; they get one when used. Remove an entry from this file when it is batched.",
+ "about": "Picks viewed and validated but not yet batched. 2026-11-16: Bistrot a Franky (0039) and Echo (0040) went into batch 2026-W47 and were removed. 0024 is retired. Next free index: 0041. Entries under candidates have no index yet; they get one when used. Remove an entry from this file when it is batched.",
  "posts": [],
- "candidates": [
-  {
-   "place": "Bistrot Franky",
-   "city": "Montreal",
-   "category": "Restaurant",
-   "designer": "Atelier Zébulon Perron",
-   "credit": "Alex Lesage",
-   "source_url": "https://www.dezeen.com/2026/10/30/atelier-zebulon-perron-bistrot-franky-montreal/",
-   "photos": [
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_2.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_3.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_5.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_7.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/zebulon-perron-bistrot-a-franky_dezeen_2364_col_10.jpg"
-   ],
-   "notes": "Viewed 2026-11-09 on the preview sheets; these five frames pass the gate and each shows a different part of the room (wide room with bar, bar stools, banquettes, corner booth, dining room with painting). Skip col_0 (signage), col_4 (wall only), col_6 (fixture), col_9 (corner), col_8 (FAIL soft), col_11 (FAIL compression). Held because a second Dezeen post needs a batch of eight (25% cap). Abroad. The Dezeen article text did not come through the harvest, so the card still needs facts from a source; Alex Lesage's own project page for it is not up yet (alexlesage.com/all-projects/...)."
-  },
-  {
-   "place": "Echo",
-   "city": "Rotterdam",
-   "category": "Bar",
-   "designer": "",
-   "credit": "Sophia van den Hoek",
-   "source_url": "https://www.dezeen.com/2026/10/30/echo-rotterdam-listening-bar/",
-   "photos": [
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_0.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_5.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_4.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_3.jpg",
-    "https://static-2026.dezeen.com/uploads/2026/10/echo-listening-bar-rotterdam_dezeen_2364_col_6.jpg"
-   ],
-   "notes": "Viewed 2026-11-09; these five frames pass the gate (bar front, DJ booth, sofa under the orange light, speaker corner, window seats). col_1 and col_8 FAIL soft, col_2 and col_9 FAIL compression, col_7 is shelves only. A listening bar in the Groot Handelsgebouw. Held for the same Dezeen cap reason. Abroad. Designer and card facts still to be taken from a source text."
-  }
- ]
+ "candidates": []
 }
