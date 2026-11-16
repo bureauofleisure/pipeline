@@ -210,6 +210,20 @@
    "status": "DONE",
    "last_check": null,
    "ready_photos": 0
+  },
+  {
+   "index": "0028",
+   "place": "The Greenbrier",
+   "city": "West Virginia",
+   "designer": "Dorothy Draper",
+   "credit": "Carol M. Highsmith, Library of Congress",
+   "source_url": "https://www.loc.gov/item/2015634492/",
+   "pages": [],
+   "added": "2026-11-16",
+   "reason": "photo 3 could not be fetched (RuntimeError: HTTP 429) ; photo 5 HOLD: too cool ; only 3 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
   }
  ]
 }
