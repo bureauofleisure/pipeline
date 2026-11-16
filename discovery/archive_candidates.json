@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-16T01:59:35Z",
+ "searched": "2026-11-16T14:35:05Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,23 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 4,
+  "searches": 3,
+  "results": 1,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Keens Steakhouse; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Childs Restaurant; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 4,
+  "other_collections": 1,
   "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 4
  },
- "next_target": 33,
+ "next_target": 36,
  "targets": [
   {
    "place": "Rainbow Room",

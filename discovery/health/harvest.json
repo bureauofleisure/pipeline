@@ -1,42 +1,42 @@
 {
  "job": "harvest",
- "at": "2026-11-11T01:25:32Z",
+ "at": "2026-11-16T14:32:05Z",
  "ok": true,
  "stats": {
-  "items": 793,
-  "pages_fetched": 793,
+  "items": 447,
+  "pages_fetched": 447,
   "page_errors": 0,
   "feeds": 27,
   "feed_errors": [],
-  "with_4_photos": 693,
+  "with_4_photos": 340,
   "sources": {
    "ArchDaily": {
     "pages": 5,
-    "median_text": 1377,
+    "median_text": 1319,
     "median_photos": 6
    },
    "Architectural Digest": {
-    "pages": 6,
+    "pages": 7,
     "median_text": 6000,
     "median_photos": 2
    },
    "Atlas Obscura": {
-    "pages": 3,
+    "pages": 5,
     "median_text": 6000,
     "median_photos": 2
    },
    "Conde Nast Traveler": {
-    "pages": 5,
+    "pages": 9,
     "median_text": 6000,
-    "median_photos": 4
+    "median_photos": 1
    },
    "Design Milk": {
-    "pages": 1,
+    "pages": 2,
     "median_text": 6000,
-    "median_photos": 40
+    "median_photos": 10
    },
    "Designboom architecture": {
-    "pages": 2,
+    "pages": 3,
     "median_text": 6000,
     "median_photos": 1
    },
@@ -52,13 +52,13 @@
    },
    "Dezeen hotels": {
     "pages": 12,
-    "median_text": 3582,
+    "median_text": 3707,
     "median_photos": 16
    },
    "Dezeen interiors": {
     "pages": 12,
-    "median_text": 3212,
-    "median_photos": 20
+    "median_text": 3289,
+    "median_photos": 15
    },
    "Dezeen restaurants": {
     "pages": 12,
@@ -71,8 +71,8 @@
     "median_photos": 1
    },
    "Eater Los Angeles": {
-    "pages": 7,
-    "median_text": 6000,
+    "pages": 8,
+    "median_text": 4881,
     "median_photos": 1
    },
    "Eater Miami": {
@@ -81,19 +81,19 @@
     "median_photos": 1
    },
    "Eater New York": {
-    "pages": 8,
-    "median_text": 5457,
+    "pages": 7,
+    "median_text": 6000,
     "median_photos": 1
    },
    "Elle Decor": {
-    "pages": 3,
-    "median_text": 4577,
+    "pages": 4,
+    "median_text": 5275,
     "median_photos": 2
    },
    "Galerie": {
-    "pages": 2,
-    "median_text": 6000,
-    "median_photos": 16
+    "pages": 1,
+    "median_text": 5216,
+    "median_photos": 40
    },
    "Hotel Designs": {
     "pages": 12,
@@ -112,7 +112,7 @@
    },
    "Resy": {
     "pages": 5,
-    "median_text": 5881,
+    "median_text": 5878,
     "median_photos": 3
    },
    "Sight Unseen": {
@@ -122,13 +122,18 @@
    },
    "Sleeper": {
     "pages": 12,
-    "median_text": 3178,
+    "median_text": 4238,
+    "median_photos": 1
+   },
+   "The Spaces": {
+    "pages": 1,
+    "median_text": 1795,
     "median_photos": 1
    },
    "Wallpaper": {
-    "pages": 6,
+    "pages": 9,
     "median_text": 6000,
-    "median_photos": 20
+    "median_photos": 11
    }
   }
  },

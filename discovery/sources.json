@@ -2800,6 +2800,102 @@
    "auto": true,
    "platform": "wordpress",
    "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-11."
+  },
+  {
+   "name": "Edi Cliff",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://edicliff.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "Amaury Laparra",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.amaurylaparra.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "format",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "Eric Vitale",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.ericvitalephotography.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "wix",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "Jiri Lizler",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.jirilizler.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "squarespace",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "Dear Margo",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.dearmargo.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "how long",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://howlong.net/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "kate berry",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://www.kateberry.studio/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
+  },
+  {
+   "name": "Douglas Friedman",
+   "category": "photographer",
+   "tier": 1,
+   "region": "global",
+   "url": "https://douglasfriedman.com/",
+   "feed": null,
+   "archive": true,
+   "auto": true,
+   "platform": "unknown",
+   "notes": "Added automatically from 1 credit(s) in the harvest, 2026-11-16."
   }
  ]
 }
