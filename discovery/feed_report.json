@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-11T01:33:46Z",
+  "checked": "2026-11-16T12:31:54Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -7,7 +7,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 6
+      "items": 9
     },
     {
       "name": "Dezeen hotels",
@@ -15,7 +15,7 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 7
+      "items": 4
     },
     {
       "name": "Dezeen bars",
@@ -55,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 11
+      "items": 12
     },
     {
       "name": "Architectural Digest",
@@ -143,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 29
+      "items": 25
     },
     {
       "name": "Roman and Williams",
@@ -869,7 +869,7 @@
       "name": "Ruben Cabrera",
       "tier": 1,
       "category": "photographer",
-      "site": 200,
+      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -1229,7 +1229,7 @@
       "name": "Andrew Meredith",
       "tier": 1,
       "category": "photographer",
-      "site": 200,
+      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -1453,7 +1453,7 @@
       "name": "Rockwell Group",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
@@ -1725,7 +1725,7 @@
       "name": "Laura Gonzalez",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: TimeoutError",
       "feed": null,
       "items": 0
     },
@@ -1821,7 +1821,7 @@
       "name": "Paul Bowyer",
       "tier": 1,
       "category": "photographer",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     }
