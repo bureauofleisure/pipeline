@@ -38,6 +38,67 @@ US_CITIES = ("new york", "brooklyn", "austin", "miami", "los angeles", "chicago"
              "narragansett", "newport", "rhode island", "idlewild", "west virginia", "white sulphur springs")
 
 
+BRING_FROM = "2026-W47"     # batches from here on carry a BRING line on every post (Lewie, 2026-11-16)
+BRING_WINDOW = 20           # no line repeats within this many posts
+
+
+def bring_bank():
+    """APPROVED lines in bank order, and every line in the bank (approved, reserved, conditional)."""
+    approved, every, section = [], set(), ""
+    for raw in open(os.path.join(ROOT, "build", "bring_bank.txt")):
+        l = raw.strip()
+        if l.startswith("#"):
+            section = l.lstrip("# ").split(":")[0].split()[0].upper() if l.lstrip("# ") else section
+            continue
+        line = l.split("|")[0].strip().upper()
+        if not line.startswith("BRING "):
+            continue
+        every.add(line)
+        if section == "APPROVED" and "|" not in l:
+            approved.append(line)
+    return approved, every
+
+
+def recent_brings(before_index):
+    """BRING lines on the last BRING_WINDOW posts before this index, across every batch file."""
+    seen = {}
+    for f in os.listdir(os.path.join(ROOT, "batches")):
+        if not f.endswith(".json") or not f.startswith("20"):
+            continue
+        try:
+            for q in json.load(open(os.path.join(ROOT, "batches", f)))["posts"]:
+                seen[str(q["index"])] = (q.get("bring") or "").strip().upper()
+        except Exception:  # noqa: BLE001
+            continue
+    earlier = sorted(i for i in seen if i < str(before_index))[-BRING_WINDOW:]
+    return [seen[i] for i in earlier if seen[i]]
+
+
+def fill_brings(posts, batch_name, problems):
+    """Every post gets a BRING line from the bank. The review chooses it; when a pick has none, an APPROVED
+    line not used in the last 20 posts is filled in (rotating through the bank) and the batch says so."""
+    if batch_name < BRING_FROM:
+        return
+    approved, every = bring_bank()
+    for n, post in enumerate(posts):
+        used = recent_brings(post["index"]) + [(q.get("bring") or "").strip().upper() for q in posts[:n]]
+        used = used[-BRING_WINDOW:]
+        b = (post.get("bring") or "").strip().upper()
+        if b:
+            if b not in every:
+                problems.append(f"{post['index']}: BRING line not in build/bring_bank.txt: {b}")
+            elif b in used:
+                problems.append(f"{post['index']}: BRING line used within the last {BRING_WINDOW} posts: {b}")
+            continue
+        free = [l for l in approved if l not in used]
+        if not free:
+            problems.append(f"{post['index']}: no APPROVED BRING line left outside the last {BRING_WINDOW} posts")
+            continue
+        start = int(str(post["index"])) % len(free)
+        post["bring"] = free[start]
+        print(f"NOTE {post['index']} {post['place']}: no BRING in the pick, filled in: {post['bring']}")
+
+
 def source_mix_problems(posts, batch_name):
     """The feed must not be a copy of anyone else's. Enforced here so a batch that breaks it cannot build."""
     out = []
@@ -115,6 +176,7 @@ def main(batch_name):
         if bad:
             problems.append(f"{p['index']}: " + "; ".join(bad))
         posts.append(post)
+    fill_brings(posts, batch_name, problems)
     problems += source_mix_problems(posts, batch_name)
     out = out_path
     json.dump({"batch": batch_name, "posts": posts}, open(out, "w"), indent=1, ensure_ascii=False)
