@@ -2,7 +2,7 @@ name: Check sources
 
 on:
   schedule:
-    - cron: "17 11 * * 1"    # Mondays, before the weekly discovery run
+    - cron: "17 9 * * 1"     # Mondays, before the weekly discovery run
   workflow_dispatch:
   push:
     paths: ["discovery/sources.json", "discovery/check_feeds.py"]

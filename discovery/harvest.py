@@ -476,6 +476,32 @@ def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST
     return out
 
 
+def merge_same_day(path, out, pages):
+    """A second harvest on the same day adds to that day's file instead of replacing it.
+
+    2026-11-16: the weekly review dispatched a harvest by hand (451 items) because the scheduled one was
+    late; the scheduled run then landed at 15:25 and overwrote the file with 343 items. Portfolio pages are
+    marked seen when harvested, so items only in the first file would never come back. Now items from the
+    earlier run are kept, and an item harvested again (same link) takes this run's fresher copy.
+    """
+    now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    new = {"harvested": now, "pages_fetched": pages, "items": out}
+    if not os.path.exists(path):
+        return new
+    try:
+        old = json.load(open(path))
+    except (OSError, ValueError):
+        return new
+    fresh = {r.get("link") for r in out if r.get("link")}
+    kept = [r for r in old.get("items", []) if not r.get("link") or r["link"] not in fresh]
+    runs = old.get("runs") or [{"harvested": old.get("harvested"), "pages_fetched": old.get("pages_fetched"),
+                                "items": len(old.get("items", []))}]
+    runs.append({"harvested": now, "pages_fetched": pages, "items": len(out)})
+    print(f"same-day harvest file exists: kept {len(kept)} earlier items, added {len(out)} from this run")
+    return {"harvested": now, "pages_fetched": (old.get("pages_fetched") or 0) + pages,
+            "runs": runs, "items": kept + out}
+
+
 def main():
     shortlist = os.path.join(HERE, "shortlist.json")
     if os.environ.get("HARVEST_SHORTLIST") and os.path.exists(shortlist):
@@ -515,8 +541,8 @@ def main():
     out += portfolio_harvest(src, os.path.join(HERE, "seen_pages.json"))
     os.makedirs(os.path.join(HERE, "harvest"), exist_ok=True)
     path = os.path.join(HERE, "harvest", time.strftime("%Y-%m-%d") + ".json")
-    json.dump({"harvested": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "pages_fetched": pages, "items": out},
-              open(path, "w"), indent=1)
+    saved = merge_same_day(path, out, pages)
+    json.dump(saved, open(path, "w"), indent=1)
     n = sum(1 for r in out if "title" in r)
     print(f"{n} items kept, {pages} pages fetched, {sum(1 for r in out if 'error' in r)} feed errors")
     # what this run produced, for the daily heartbeat; the workflow goes red on problems after the save
