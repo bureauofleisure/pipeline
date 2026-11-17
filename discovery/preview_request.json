@@ -10,6 +10,10 @@
     "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53980u.tif",
     "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53976u.tif"
    ]
+  },
+  {
+   "id": "milliongoods",
+   "urls": []
   }
  ]
 }
