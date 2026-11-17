@@ -1,0 +1,45 @@
+{
+  "index": "0040",
+  "place": "Echo",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 HOLD: too saturated"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "3f985f92d623",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "c61cc43dee0d",
+  "meta": {
+    "neighborhood": "Groot Handelsgebouw",
+    "city": "Rotterdam",
+    "category": "Bar",
+    "word": "SMOKY",
+    "reminds": "Bar Martha in Ebisu",
+    "credit": "Sophia van den Hoek",
+    "designer": "Cloud",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/30/echo-rotterdam-listening-bar/",
+    "bring": "BRING SOMEONE WHO HAS BEEN TO JAPAN. TWICE."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0040/01.jpg?v=3f985f92d623",
+    "https://bureauofleisure.github.io/pipeline/posts/0040/02.jpg?v=3f985f92d623",
+    "https://bureauofleisure.github.io/pipeline/posts/0040/03.jpg?v=3f985f92d623",
+    "https://bureauofleisure.github.io/pipeline/posts/0040/04.jpg?v=3f985f92d623",
+    "https://bureauofleisure.github.io/pipeline/posts/0040/05.jpg?v=3f985f92d623"
+  ],
+  "archive": "4 originals (3.1 MB), 4 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    4,
+    5,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0040\nECHO. GROOT HANDELSGEBOUW, ROTTERDAM.\nA LISTENING BAR IN A POST-WAR OFFICE BLOCK.\nA BAR BUILT FROM WOODEN SHIPPING CRATES.\nOMBR\u00c9 MIRRORS AND A RESIN LAMP BY SABINE MARCELIS.\nINTERIOR BY CLOUD. OPENED SEPTEMBER 2026.\nBRING SOMEONE WHO HAS BEEN TO JAPAN. TWICE.\nIN A WORD: SMOKY.",
+  "alt_text": "Echo, Groot Handelsgebouw, Rotterdam. A concrete-walled listening bar with a crate-built counter, speaker towers, modular vinyl shelving and a sofa under an orange light."
+}

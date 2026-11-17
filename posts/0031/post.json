@@ -1,0 +1,46 @@
+{
+  "index": "0031",
+  "place": "Theodora",
+  "status": "BUILT",
+  "notes": [
+    "photo 2 held: tilt 9.1 deg is over the limit",
+    "photo 3 rejected: compression artifacts (blockiness 1.49)"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "12355f162db8",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "854d624b9784",
+  "meta": {
+    "neighborhood": "Fort Greene",
+    "city": "Brooklyn",
+    "category": "Restaurant",
+    "word": "TERRAZZO",
+    "reminds": "a Jaffa courtyard house",
+    "credit": "Brian W. Ferry",
+    "designer": "Home Studios",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://homestudios.nyc/theodora",
+    "bring": "BRING WHOEVER KEEPS SAYING \"WE SHOULD GET DINNER.\""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0031/01.jpg?v=12355f162db8",
+    "https://bureauofleisure.github.io/pipeline/posts/0031/02.jpg?v=12355f162db8",
+    "https://bureauofleisure.github.io/pipeline/posts/0031/03.jpg?v=12355f162db8",
+    "https://bureauofleisure.github.io/pipeline/posts/0031/04.jpg?v=12355f162db8",
+    "https://bureauofleisure.github.io/pipeline/posts/0031/05.jpg?v=12355f162db8"
+  ],
+  "archive": "4 originals (2.0 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    4,
+    6,
+    5
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0031\nTHEODORA. FORT GREENE, BROOKLYN.\nFROM CHEF TOMER BLECHMAN OF MISS ADA.\nAGED PLASTER, ZELLIGE TILE, CEPPO DI GR\u00c8 SHELVES.\nSEVENTY-SIX SEATS IN THE DINING ROOM.\nINTERIOR ARCHITECTURE BY HOME STUDIOS, 2023.\nBRING WHOEVER KEEPS SAYING \"WE SHOULD GET DINNER.\"\nIN A WORD: TERRAZZO.",
+  "alt_text": "Theodora, Fort Greene, Brooklyn. A plaster-walled restaurant with a long pale bar, rush-seated stools, a barrel-vaulted ceiling and a wood-fired kitchen behind."
+}

@@ -1,0 +1,45 @@
+{
+  "index": "0022",
+  "place": "Mimi Kakushi",
+  "status": "BUILT",
+  "notes": [],
+  "grade": "v1.2",
+  "entry_hash": "7ab00188c323",
+  "built": "2026-11-02",
+  "edited_at": "",
+  "photos_sig": "4d39d69c13bd",
+  "meta": {
+    "neighborhood": "Miami Beach",
+    "city": "Miami",
+    "category": "Restaurant",
+    "word": "RITZY",
+    "reminds": "Sessue Hayakawa's Hollywood years",
+    "credit": "Robert Reiger",
+    "designer": "Pirajean Lees",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://design-milk.com/mimi-kakushi-delano-miami-pirajean-lees/",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0022/01.jpg?v=7ab00188c323",
+    "https://bureauofleisure.github.io/pipeline/posts/0022/02.jpg?v=7ab00188c323",
+    "https://bureauofleisure.github.io/pipeline/posts/0022/03.jpg?v=7ab00188c323",
+    "https://bureauofleisure.github.io/pipeline/posts/0022/04.jpg?v=7ab00188c323",
+    "https://bureauofleisure.github.io/pipeline/posts/0022/05.jpg?v=7ab00188c323",
+    "https://bureauofleisure.github.io/pipeline/posts/0022/06.jpg?v=7ab00188c323"
+  ],
+  "archive": "5 originals (4.7 MB), 5 new",
+  "cover_source_photo": 4,
+  "slide_sources": [
+    4,
+    5,
+    3,
+    1,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0022\nMIMI KAKUSHI. MIAMI BEACH, MIAMI.\nFOURTH FLOOR OF THE DELANO.\n1920S OSAKA BY WAY OF OLD HOLLYWOOD.\nTIMBER BEAD CURTAINS. STAINED GLASS.\nA VIEW-MASTER INSTEAD OF A COCKTAIL LIST.\nIN A WORD: RITZY.",
+  "alt_text": "Mimi Kakushi, Miami Beach, Miami. A warm dining room with woven rattan chairs, fringed banquettes, bead curtains, palms and stained glass at the windows."
+}

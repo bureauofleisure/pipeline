@@ -1,0 +1,47 @@
+{
+  "index": "0038",
+  "place": "Hotel du Couvent",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 keystone corrected -1.7 deg"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "2de4cf5ea016",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "c68de1494711",
+  "meta": {
+    "neighborhood": "Old Town",
+    "city": "Nice",
+    "category": "Hotel",
+    "word": "SUNLIT",
+    "reminds": "an Axel Vervoordt monastery",
+    "credit": "",
+    "designer": "Festen Architecture",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.festenarchitecture.com/projects/hotel-du-couvent",
+    "bring": "BRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0038/01.jpg?v=2de4cf5ea016",
+    "https://bureauofleisure.github.io/pipeline/posts/0038/02.jpg?v=2de4cf5ea016",
+    "https://bureauofleisure.github.io/pipeline/posts/0038/03.jpg?v=2de4cf5ea016",
+    "https://bureauofleisure.github.io/pipeline/posts/0038/04.jpg?v=2de4cf5ea016",
+    "https://bureauofleisure.github.io/pipeline/posts/0038/05.jpg?v=2de4cf5ea016",
+    "https://bureauofleisure.github.io/pipeline/posts/0038/06.jpg?v=2de4cf5ea016"
+  ],
+  "archive": "5 originals (3.3 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    5,
+    2,
+    4,
+    3
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0038\nHOTEL DU COUVENT. OLD TOWN, NICE.\nBUILT IN 1604 FOR THE ORDER OF SAINT CLARE.\nA DECADE OF RESTORATION LED BY VALERY GREGO.\nEIGHTY-EIGHT ROOMS. INTERIORS BY FESTEN.\nROMAN-STYLE BATHS. GARDENS OF 300 PLANT SPECIES.\nBRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT.\nIN A WORD: SUNLIT.",
+  "alt_text": "Hotel du Couvent, Old Town, Nice. A lime-plastered salon in a former convent, with linen sofas, a terracotta floor, paper globe lamps and an arched loggia onto the garden."
+}
