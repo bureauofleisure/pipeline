@@ -17,9 +17,5 @@ jobs:
           python-version: "3.11"
       - run: python discovery/probe.py
       - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add discovery/probe_report.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Probe report $(date -u +%Y-%m-%d)"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done
+          bash .github/save.sh "Probe report $(date -u +%Y-%m-%d)"

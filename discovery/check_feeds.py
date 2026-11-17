@@ -58,6 +58,12 @@ def main():
     print(f"{len(report)} sources checked, {len(bad)} with problems")
     for r in bad:
         print("  PROBLEM", r["name"], r["site"], r["feed"])
+    import health
+    empty = [r["name"] for r in report if r["feed"] and not str(r["feed"]).startswith("error") and not r["items"]]
+    problems = []
+    if report and len(bad) / len(report) > 0.25:
+        problems.append(f"{len(bad)} of {len(report)} sources could not be reached; likely a network or blocking problem, not the sources")
+    health.write("sources", {"checked": len(report), "unreachable": [r["name"] for r in bad][:40], "feeds_with_no_items": empty[:40]}, problems)
     sys.exit(0)
 
 

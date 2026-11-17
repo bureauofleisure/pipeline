@@ -18,7 +18,7 @@ from urllib.parse import urljoin
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (compatible; BureauOfLeisureBot/1.0; +https://bureauofleisure.co)"
 PER_SOURCE = int(os.environ.get("HARVEST_PER_SOURCE", "12"))
-MAX_PAGES = int(os.environ.get("HARVEST_MAX_PAGES", "220"))
+MAX_PAGES = int(os.environ.get("HARVEST_MAX_PAGES", "340"))   # 2026-11-10: raised with the new feeds, so late feeds still get their pages
 
 KEEP = re.compile(r"\b(hotel|hotels|inn|resort|lodge|guesthouse|bar|bars|cocktail|pub|tavern|restaurant|"
                   r"bistro|brasserie|trattoria|osteria|diner|cafe|café|coffee|bakery|club|members|lounge|"
@@ -72,21 +72,98 @@ def _stem(url):
     return name
 
 
+_FORMAT_ID = re.compile(r"/([0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12})/\d+/\d+/[^/?]+\.(?:jpe?g|png|webp)", re.I)
+
+
+def _photo_key(url):
+    """One key per photograph, whatever size or crop of it the page links.
+    2026-11-10: Format portfolio sites (Luke Hayes, Evan Sung) list every srcset size of each photo as a
+    signed URL plus cropped creatorcdn thumbnails, so one project arrived as 11 entries of 2 photos and
+    Evan Sung's 4 pages as 120 entries with 82 repeats. Eater (Vox WordPress) links one image three times
+    with different crop= query strings."""
+    m = _FORMAT_ID.search(url)
+    if m:
+        return "format:" + m.group(1).lower()
+    if "wp-content" in url:
+        return url.split("?")[0]
+    return url
+
+
+def _dedupe(found):
+    """{url: width} -> {url: width} with one entry per _photo_key: the widest rendition, and an uncropped
+    one over a crop of the same width. Order of first appearance is kept."""
+    best = {}
+    for u, w in found.items():
+        k = _photo_key(u)
+        cropped = bool(re.search(r"[?&]crop=(?!0%2C0%2C100%2C100)", u)) or "format.creatorcdn.com" in u
+        rank = (w, not cropped)
+        if k not in best or rank > best[k][1]:
+            best[k] = (u, rank)
+    keep = {u for u, _ in best.values()}
+    return {u: w for u, w in found.items() if u in keep}
+
+
+def _balanced(page, tag):
+    """Every outermost <tag>...</tag> block, matched by depth. A lazy regex stops at the first closing tag, and
+    Dezeen nests a 'Read next' teaser <article> inside the article's own header: from 2026-11-02 that cut every
+    Dezeen article down to its byline (median 121 characters), so cards had no facts to draw on."""
+    out, depth, start = [], 0, 0
+    for m in re.finditer(rf"<(/?){tag}\b[^>]*>", page, re.I):
+        if not m.group(1):
+            if depth == 0:
+                start = m.start()
+            depth += 1
+        elif depth:
+            depth -= 1
+            if depth == 0:
+                out.append(page[start:m.end()])
+    return out
+
+
+def _strip_nested(block, tag):
+    """The block without the <tag> blocks nested inside it (teasers and 'read next' cards)."""
+    m = re.match(rf"<{tag}\b[^>]*>", block, re.I)
+    if not m:
+        return block
+    inner = block[m.end():]
+    for nested in _balanced(inner, tag):
+        inner = inner.replace(nested, " ")
+    return block[:m.end()] + inner
+
+
 def article_html(page):
-    """The article body (inside <article>, or <main>), else the whole page. Navigation, newsletter boxes and
+    """The article body (the largest <article>, or <main>), else the whole page. Navigation, newsletter boxes and
     'read next' rails sit outside it; reading them is how every Wallpaper item got a 'coming soon' warning
     and every Dezeen item the designer 'Aedas opens'."""
     for tag in ("article", "main"):
-        m = re.search(rf"<{tag}[\s>].*?</{tag}>", page, re.S | re.I)
-        if m and len(m.group(0)) > 2000:
-            return m.group(0)
+        blocks = [b for b in _balanced(page, tag) if len(b) > 2000]
+        if blocks:
+            return max(blocks, key=len)
     return page
 
 
-def page_text(page):
-    body = article_html(page)
+def _text_of(body):
     body = re.sub(r"<(script|style|nav|aside|footer|header|form)\b.*?</\1>", " ", body, flags=re.S | re.I)
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body))).strip()
+
+
+MIN_ARTICLE_TEXT = 600   # under this the block found was a header or a teaser, not the article
+
+
+def page_text(page):
+    """The article's words. Tries the article block with nested teasers removed, then <main>, then the whole
+    page, and keeps the first that reads like an article. A thin result is better widened than trusted."""
+    best = ""
+    for tag in ("article", "main"):
+        blocks = [b for b in _balanced(page, tag) if len(b) > 2000]
+        if not blocks:
+            continue
+        text = _text_of(_strip_nested(max(blocks, key=len), tag))
+        if len(text) >= MIN_ARTICLE_TEXT:
+            return text
+        best = max(best, text, key=len)
+    whole = _text_of(page)
+    return whole if len(whole) > len(best) else best
 
 
 def full_text(page):
@@ -95,13 +172,35 @@ def full_text(page):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", t)))
 
 
-def images_from(page, base):
+def images_from(page, base, gallery=False):
     """The article's own photos, largest variant of each.
+    gallery=True is for portfolio project pages (2026-11-10). Their photos rarely share a filename stem, so
+    the cluster rule in step 3 kept one or two photos of a twenty-photo project and the page was thrown away
+    as "not a project": 131 portfolio sources, 13 producing. For those pages every photo in the body is
+    kept, except thumbnails that link to another page of the site (other projects) and anything known to
+    be small.
     1. Only the article body (inside <article>, or <main>, else the whole page).
     2. Picks up src, data-src, data-lazy-src, srcset, data-srcset and direct <a href> to an image.
     3. Keeps the largest cluster of filenames sharing a stem (a gallery), plus the og:image's cluster,
        so related-article thumbnails are left behind."""
+    if gallery == "strict":
+        gallery = True
+    elif gallery:
+        # Try the strict reading first (thumbnails that link elsewhere removed). Some sites wrap every
+        # gallery photo in a link, which leaves nothing; for those fall back to the article rule, which is
+        # what this function did before 2026-11-10. Whichever finds a real gallery (4 or more) wins.
+        strict = images_from(page, base, gallery="strict")
+        if len(strict) >= 4:
+            return strict
+        loose = images_from(page, base)
+        return loose if len(loose) > len(strict) else strict
     body = article_html(page)
+    if gallery:
+        # a photo wrapped in a link to another page is a doorway to a different project, not this one
+        body = re.sub(r'<a\b[^>]*href=["\'](?![^"\']+\.(?:jpe?g|png|webp)\b)[^"\'#][^"\']*["\'][^>]*>(?:(?!</a>).)*?<img\b(?:(?!</a>).)*?</a>',
+                      " ", body, flags=re.S | re.I)
+        # a thumbnail that links to its own full-size file: keep the link, drop the thumbnail
+        body = re.sub(r'(<a\b[^>]*href=["\'][^"\']+\.(?:jpe?g|png|webp)["\'][^>]*>)(?:(?!</a>).)*?</a>', r"\1</a>", body, flags=re.S | re.I)
     og = None
     m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', page)
     if m:
@@ -137,6 +236,9 @@ def images_from(page, base):
 
     if not found:
         return []
+    if gallery:
+        found = _dedupe(found)
+        return [{"url": u, "width_hint": w} for u, w in found.items() if not 0 < w < 600][:60]
     clusters = {}
     for u in found:
         clusters.setdefault(_stem(u), []).append(u)
@@ -150,16 +252,20 @@ def images_from(page, base):
     if not keep:
         keep = set(found)
     # Dezeen serves a 2364-wide version of every gallery image; prefer it
-    out = []
+    out = {}
     for u in sorted(keep):
         if "dezeen.com" in u:
             u2 = re.sub(r"_dezeen_(\d{3,4})_", "_dezeen_2364_", u)
-            u2 = re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u2)
-            out.append({"url": u2, "width_hint": 2364 if "_2364_" in u2 else found.get(u, 0)})
+            u2 = re.sub(r"-(?:\d{3,4}x\d{3,4}|scaled)(\.\w+)$", r"\1", u2)
+            w = 2364 if "_2364_" in u2 else found.get(u, 0)
         else:
-            out.append({"url": re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u) if "wp-content" in u else u,
-                        "width_hint": found.get(u, 0)})
-    return out[:40]
+            u2 = re.sub(r"-\d{3,4}x\d{3,4}(\.\w+)$", r"\1", u) if "wp-content" in u else u
+            w = found.get(u, 0)
+        # one entry per photo: several sizes of one image rewrite to the same address, and counting each
+        # filled the 40-photo cap with repeats (2026-11-10: a Dezeen gallery arrived as 40 entries, 18 photos)
+        out[u2] = max(out.get(u2, 0), w)
+    out = _dedupe(out)
+    return [{"url": u, "width_hint": w} for u, w in out.items()][:40]
 
 
 def _exists(url):
@@ -196,8 +302,12 @@ def expand_dezeen(photos):
                     break
             time.sleep(0.15)
     # gallery frames first, the hero (usually a crop of one of them) last
-    gallery = [p for p in photos + extra if "_col_" in p["url"]]
-    return sorted(gallery, key=lambda p: int(re.search(r"_col_(\d+)", p["url"]).group(1))) + [p for p in photos if "_col_" not in p["url"]]
+    # 2026-11-09: seven articles failed with AttributeError here, on a "_col_" name with no number after it
+    def col(p):
+        m = re.search(r"_col_(\d+)", p["url"])
+        return int(m.group(1)) if m else None
+    gallery = [p for p in photos + extra if col(p) is not None]
+    return sorted(gallery, key=col) + [p for p in photos if col(p) is None]
 
 
 def harvest_links(links, label="shortlist"):
@@ -224,7 +334,7 @@ def harvest_links(links, label="shortlist"):
                                    for m in re.finditer(r'href=["\']([^"\'#?]+)', page)
                                    if not m.group(1).startswith(("mailto:", "tel:", "javascript:"))})[:300]
         except Exception as e:  # noqa: BLE001
-            rec["page_error"] = type(e).__name__
+            rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
         rec.setdefault("photos", [])
         out.append(rec)
         time.sleep(0.4)
@@ -248,33 +358,49 @@ def fullsize(url, platform):
     return url
 
 
-def portfolio_harvest(sources, seen_path, per_source=6):
+SKIP_PATH = re.compile(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\\.well-known|sitemap)", re.I)
+
+
+def project_links(home, base, seen=()):
+    """Links on a portfolio page that could be project pages: same site, at most three levels deep, not
+    housekeeping, not seen before. Used by the weekly harvest and by source_probe.py, so a source is judged
+    on exactly what the harvest would fetch from it."""
+    links = []
+    bare = lambda x: re.sub(r"^https?://(www\.)?", "", x)   # noqa: E731  same site with or without www or https
+    root = bare(base.rstrip("/"))
+    for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
+        u = urljoin(base, html.unescape(m.group(1)))
+        if not bare(u).startswith(root):
+            continue
+        path = bare(u)[len(root):].strip("/")
+        if not path or path.count("/") > 2:
+            continue
+        if SKIP_PATH.search(path) or re.search(r"\.(?:css|js|png|jpe?g|svg|ico|pdf|xml|json|woff2?)$", path, re.I):
+            continue
+        if u not in seen and u not in links:
+            links.append(u)
+    return links
+
+
+def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST_PORTFOLIO_PAGES") or 10)):
     """Walk photographer and studio sites: homepage -> project pages -> full-size images.
-    Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds."""
+    Only pages never seen before are fetched, so a site costs a few requests a week, not hundreds.
+    A source may name an `index` (the page that lists its projects, when the homepage does not) and a
+    `per_run` (pages to take each week; new sources get more so their back catalogue arrives in weeks)."""
     seen = set(json.load(open(seen_path))) if os.path.exists(seen_path) else set()
     out, fetched = [], 0
     for s in sources:
         if s.get("feed") or s.get("disabled") or not s.get("url") or s.get("category") not in ("photographer", "studio"):
             continue
         try:
-            home = get(s["url"])
+            home = get(s.get("index") or s["url"])
         except Exception as e:  # noqa: BLE001
             out.append({"source": s["name"], "error": f"home {type(e).__name__}"})
             continue
         base = s["url"]
-        links = []
-        for m in re.finditer(r'href=["\']([^"\'#?]+)', home):
-            u = urljoin(base, html.unescape(m.group(1)))
-            if not u.startswith(base.rstrip("/")):
-                continue
-            path = u[len(base.rstrip("/")):].strip("/")
-            if not path or path.count("/") > 2:
-                continue
-            if re.search(r"^(about|contact|info|shop|cart|press|news|blog|journal|privacy|terms|legal|cookie|careers|jobs|search|tag|category|page|feed|wp-|xmlrpc|cdn-cgi|collections|products|account|login|\.well-known|sitemap)", path, re.I):
-                continue
-            if u not in seen and u not in links:
-                links.append(u)
-        for u in links[:per_source]:
+        links = project_links(home, base, seen)
+        per_source_now = int(s.get("per_run") or per_source)
+        for u in links[:per_source_now]:
             fetched += 1
             rec = {"source": s["name"], "tier": s.get("tier", 1), "category": s["category"], "link": u, "title": "", "date": "", "summary": ""}
             try:
@@ -283,17 +409,18 @@ def portfolio_harvest(sources, seen_path, per_source=6):
                 rec["title"] = html.unescape(t.group(1).strip()) if t else u
                 text = page_text(page)
                 rec["text"] = text[:4000]
-                photos, uniq = images_from(page, u), {}
+                photos, uniq = images_from(page, u, gallery=True), {}
                 for ph in photos:
                     fu = fullsize(ph["url"], s.get("platform", ""))
                     uniq[fu] = max(uniq.get(fu, 0), ph["width_hint"])
+                uniq = _dedupe(uniq)
                 rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
                 rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                 rec["designers"] = [s["name"]] if s["category"] == "studio" else []
                 rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:3000])})
                 rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
             except Exception as e:  # noqa: BLE001
-                rec["page_error"] = type(e).__name__
+                rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
             seen.add(u)
             if rec.get("photos") and len(rec["photos"]) >= 3:
                 out.append(rec)       # pages without a gallery are not projects
@@ -336,7 +463,7 @@ def main():
                     rec["designers"] = sorted({m.group(1).strip() for m in DESIGN.finditer(text)})[:5]
                     rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
                 except Exception as e:  # noqa: BLE001
-                    rec["page_error"] = type(e).__name__
+                    rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
                 time.sleep(0.4)
             out.append(rec)
     out += portfolio_harvest(src, os.path.join(HERE, "seen_pages.json"))
@@ -346,6 +473,9 @@ def main():
               open(path, "w"), indent=1)
     n = sum(1 for r in out if "title" in r)
     print(f"{n} items kept, {pages} pages fetched, {sum(1 for r in out if 'error' in r)} feed errors")
+    # what this run produced, for the daily heartbeat; the workflow goes red on problems after the save
+    import health
+    health.write("harvest", *health.harvest_health(out, src))
     sys.exit(0)
 
 

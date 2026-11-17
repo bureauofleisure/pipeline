@@ -44,8 +44,17 @@ def fetch(url):
     last = None
     for attempt in range(4 if loc else 2):
         try:
-            with urllib.request.urlopen(req, timeout=180 if loc else 60) as r:
-                return r.read()
+            # a limit on the whole file, not just each read: a trickling download once held a job for 30 minutes
+            t0, limit, chunks = time.time(), (240 if loc else 60), []
+            with urllib.request.urlopen(req, timeout=60 if loc else 30) as r:
+                while True:
+                    if time.time() - t0 > limit:
+                        raise TimeoutError(f"download passed {limit}s")
+                    chunk = r.read1(1 << 18)
+                    if not chunk:
+                        break
+                    chunks.append(chunk)
+            return b"".join(chunks)
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(15 * (attempt + 1) if loc else 3)

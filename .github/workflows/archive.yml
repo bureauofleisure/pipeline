@@ -34,21 +34,9 @@ jobs:
         env:
           ARCHIVE_TARGETS_PER_RUN: "6"
           ARCHIVE_START: ${{ inputs.start }}
+      # Always saved, even when nothing new was found: discovery/health/archive.json is how the daily
+      # heartbeat knows this job ran and whether loc.gov let it search.
       - name: Save
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # commit only when the finds changed, not just the timestamp and stats
-          python - <<'PY' || exit 0
-          import json, subprocess, sys
-          new = json.load(open("discovery/archive_candidates.json"))
-          try:
-              old = json.loads(subprocess.check_output(["git", "show", "HEAD:discovery/archive_candidates.json"]))
-          except Exception:
-              sys.exit(0)
-          sys.exit(0 if new.get("targets") != old.get("targets") or new.get("next_target") != old.get("next_target") else 1)
-          PY
-          git add discovery/archive_candidates.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Archive search $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep $((i*7)); done
+          git add discovery/archive_candidates.json discovery/health
+          bash .github/save.sh "Archive search $(date -u +%Y-%m-%dT%H:%MZ)"

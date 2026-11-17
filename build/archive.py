@@ -33,8 +33,11 @@ def configured():
 
 def _client():
     import boto3  # imported lazily so the build runs without it when the archive is not configured
+    from botocore.config import Config
+    # bounded: an upload that hangs must fail (and be noted on the post), never hold the whole build
     return boto3.client("s3", endpoint_url=ENV["ARCHIVE_ENDPOINT"], aws_access_key_id=ENV["ARCHIVE_KEY_ID"],
-                        aws_secret_access_key=ENV["ARCHIVE_SECRET"], region_name="auto")
+                        aws_secret_access_key=ENV["ARCHIVE_SECRET"], region_name="auto",
+                        config=Config(connect_timeout=15, read_timeout=120, retries={"max_attempts": 3}))
 
 
 def _ext(content_type, url):

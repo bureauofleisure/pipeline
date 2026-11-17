@@ -1,5 +1,19 @@
 /**
- * Bureau of Leisure Publisher v0.18 (MODE: DRYRUN default, QUIET, LIVE)
+ * Bureau of Leisure Publisher v0.19 (MODE: DRYRUN default, QUIET, LIVE)
+ *
+ * v0.19 (2026-11-09):
+ *   Heartbeat     every morning at 7 one email says what each job was expected to do and what it did: the
+ *                 publisher's own timers, the sheet import and sync, the Monday source check, harvest and
+ *                 review, the archive search, the build, the edits job and Meta. No email by 8am means the
+ *                 publisher itself has stopped. Script Property HEARTBEAT = PROBLEMS sends it only on a problem.
+ *   Kill reasons  Kill on the review page asks for one tap: PHOTOS, PLACE, ERA, KNOWN, GONE or OTHER (with a
+ *                 note). Saved in the Kill reason column and synced to discovery/statuses.json, where the
+ *                 weekly review reads them as taste (LENS.md "Kill reasons").
+ *   Launch bank   QUIET or LIVE does not start until LAUNCH_BANK posts (default 30) are approved or held
+ *                 from a dry run. Until then the publisher keeps dry-running and the heartbeat says so. Set
+ *                 LAUNCH_BANK to 0 to launch regardless.
+ *   Cadence       once publishing is on, posts go out on POST_DAYS only (default 0,1,3,5 = Sunday, Monday,
+ *                 Wednesday, Friday: four a week). Set POST_DAYS to ALL for daily. Dry runs stay daily.
  *
  * v0.17: drag to reorder photos on the review page. The new order (cover first) is saved to
  *        batches/orders/photo_order.json in GitHub, which rebuilds that one post in about 10 minutes (labels
@@ -104,6 +118,8 @@ function dailyCheck() {
   const col = indexHeaders_(values[0]);
   const now = new Date();
   const taken = new Set();
+  const days = postDays_();
+  bank_(values, col);
   let lastPosted = 0, queued = 0;
   values.slice(1).forEach(row => {
     const d = row[col['Publish at']];
@@ -116,14 +132,17 @@ function dailyCheck() {
     if (!(d instanceof Date)) {
       d = new Date(now); d.setHours(hour, 0, 0, 0);
       if (d <= now) d.setDate(d.getDate() + 1);
-      while (taken.has(d.toDateString())) d.setDate(d.getDate() + 1);
+      while (taken.has(d.toDateString()) || days.indexOf(d.getDay()) < 0) d.setDate(d.getDate() + 1);
       taken.add(d.toDateString());
       setCell_(sheet, r, col['Publish at'], d);
     }
     if (d > now) queued++;
   }
-  if (queued < 7) notify_(`Only ${queued} approved posts queued`, 'Approve next week in the Bureau of Leisure Index sheet, Posts tab.');
-  if (queued > 0 && now.getTime() - lastPosted > 26 * 3600 * 1000 && !paused_() && !brake_() && live_()) notify_('Nothing posted in 26 hours', 'Check FAILED rows and the Notes column.');
+  // the longest stretch between two post days, plus a morning's grace (26 hours when posting daily)
+  let gap = 1;
+  for (let i = 0; i < days.length; i++) gap = Math.max(gap, ((days[(i + 1) % days.length] - days[i] + 7) % 7) || 7);
+  const since = Math.max(lastPosted, Number(props.getProperty('WENT_LIVE_AT') || 0));
+  if (queued > 0 && since && now.getTime() - since > (gap * 24 + 2) * 3600 * 1000 && !paused_() && !brake_() && live_()) notify_('Nothing posted in ' + Math.round((now.getTime() - since) / 3600000) + ' hours', 'Check FAILED rows and the Notes column.');
 
   // token health: refreshed weekly; warn if two weekly refreshes in a row have failed
   const refreshed = Number(props.getProperty('TOKEN_REFRESHED_AT') || props.getProperty('TOKEN_SET_AT') || 0);
@@ -134,6 +153,123 @@ function dailyCheck() {
   }
 
   if (now.getDay() === 1) weeklySummary_(values, col, now);
+  try { heartbeat_(sheet.getDataRange().getValues(), col, now, queued); }
+  catch (e) { notify_('Heartbeat could not be built', String(e).slice(0, 800)); }
+}
+
+/* ------------------------------------------------------------------ heartbeat (v0.19)
+ * Expected against actual for every job, once a day. A green run is not proof of output, and an email that
+ * only comes when something breaks cannot tell you the alarm itself has died. This one comes every day.
+ */
+const RAW_ = 'https://raw.githubusercontent.com/bureauofleisure/pipeline/main/';
+
+function ageH_(t, now) { return t ? (now.getTime() - new Date(t).getTime()) / 3600000 : Infinity; }
+function ago_(h) { return h === Infinity ? 'never' : h < 1 ? 'under an hour ago' : h < 48 ? Math.round(h) + 'h ago' : Math.round(h / 24) + ' days ago'; }
+
+/** A job's own health record from the repo (discovery/health/<job>.json), or null. */
+function health_(job) {
+  try {
+    const res = UrlFetchApp.fetch(RAW_ + 'discovery/health/' + job + '.json?t=' + Date.now(), { muteHttpExceptions: true });
+    return res.getResponseCode() === 200 ? JSON.parse(res.getContentText()) : null;
+  } catch (e) { return null; }
+}
+
+/** Time of the newest commit on main touching a path, or '' when it cannot be read. */
+function lastCommit_(path) {
+  const token = PropertiesService.getScriptProperties().getProperty('GH_TOKEN');
+  try {
+    const res = UrlFetchApp.fetch('https://api.github.com/repos/bureauofleisure/pipeline/commits?sha=main&per_page=1&path=' + encodeURIComponent(path),
+      { headers: Object.assign({ Accept: 'application/vnd.github+json' }, token ? { Authorization: 'Bearer ' + token } : {}), muteHttpExceptions: true });
+    if (res.getResponseCode() !== 200) return '';
+    const j = JSON.parse(res.getContentText());
+    return j.length ? j[0].commit.committer.date : '';
+  } catch (e) { return ''; }
+}
+
+function heartbeat_(values, col, now, queued) {
+  const props = PropertiesService.getScriptProperties();
+  const lines = [], bad = [];
+  // name, what was expected, age in hours of the last good output, the limit in hours, extra problems
+  const job = (name, expected, age, limit, problems, state) => {
+    const late = age > limit;
+    const probs = (problems || []).filter(Boolean);
+    const ok = !late && !probs.length;
+    if (!ok) bad.push(name);
+    lines.push((ok ? 'OK       ' : 'PROBLEM  ') + name + ': ' + (state ? (ok ? state : 'see below') : age === Infinity ? 'no record' : 'last ' + ago_(age)) + ' (expected ' + expected + ')' +
+      (late ? '  << LATE' : '') + probs.map(p => '\n           ' + p).join(''));
+  };
+  const rec = (name, expected, h, limit) => job(name, expected, h ? ageH_(h.at, now) : Infinity, limit, h ? h.problems : []);
+
+  // the publisher's own timers
+  job('Publisher', 'hourly', ageH_(Number(props.getProperty('LAST_PUBLISH_RUN_AT') || 0) || '', now), 3);
+  job('Sheet import', 'every 6 hours', ageH_(Number(props.getProperty('LAST_IMPORT_OK_AT') || 0) || '', now), 13);
+  job('Status sync', 'every 6 hours', ageH_(Number(props.getProperty('LAST_SYNC_OK_AT') || 0) || '', now), 13);
+  job('Token refresh', 'weekly', ageH_(Number(props.getProperty('TOKEN_REFRESHED_AT') || props.getProperty('TOKEN_SET_AT') || 0) || '', now), 9 * 24);
+
+  // the repo's jobs, from the health record each one writes
+  rec('Source check', 'Mondays', health_('sources'), 8 * 24);
+  rec('Harvest', 'Mondays', health_('harvest'), 8 * 24);
+  rec('Archive search', 'every 6 hours', health_('archive'), 13);
+
+  // weekly review: a new batch of picks each Monday
+  const picks = lastCommit_('discovery/picks');
+  job('Weekly review', 'new picks each Monday', ageH_(picks, now), 8 * 24);
+
+  // build: the manifest must be newer than the last batch or photo-order push, with nothing left unbuilt
+  let man = null;
+  try { const r = UrlFetchApp.fetch((props.getProperty('MANIFEST_URL') || 'https://bureauofleisure.github.io/pipeline/manifest.json') + '?t=' + Date.now(), { muteHttpExceptions: true });
+        if (r.getResponseCode() === 200) man = JSON.parse(r.getContentText()); } catch (e) { man = null; }
+  const batches = lastCommit_('batches');
+  const buildProblems = [];
+  if (!man) buildProblems.push('the manifest could not be read');
+  else {
+    if ((man.pending || []).length) buildProblems.push('not built yet: ' + man.pending.join(', '));
+    if (batches && new Date(batches).getTime() - new Date(man.generated).getTime() > 0 && ageH_(batches, now) > 1.5)
+      buildProblems.push('a batch or photo order pushed ' + ago_(ageH_(batches, now)) + ' has not been built');
+    const errs = (man.posts || []).filter(p => p.status === 'ERROR').map(p => p.index);
+    if (errs.length) buildProblems.push('build errors on: ' + errs.join(', '));
+  }
+  job('Build', 'after every batch push', man ? ageH_(man.generated, now) : Infinity, Infinity, buildProblems);
+
+  // edits job: nothing should sit in EDITS for more than two days
+  const stale = [];
+  let drafts = 0;
+  values.slice(1).forEach(row => {
+    const st = String(row[col['Status']] || '').trim();
+    if (st === 'DRAFT') drafts++;
+    if (st !== 'EDITS') return;
+    const m = String(row[col['Notes']] || '').match(/EDITS (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})/);
+    if (m && ageH_(m[1] + 'T' + m[2] + ':00-05:00', now) > 48) stale.push(String(row[col['Index No.']]));
+  });
+  job('Edits job', 'daily, within 2 days of a note', 0, Infinity, stale.length ? ['waiting more than 2 days: ' + stale.join(', ')] : [], 'nothing waiting');
+
+  // Meta
+  const b = brake_();
+  job('Meta access', 'open', 0, Infinity, b ? [b.kind + ' brake on since ' + new Date(b.at).toISOString().slice(0, 10)] : [], 'open');
+  if (paused_()) { bad.push('PAUSE'); lines.push('PROBLEM  Publishing is paused (a PAUSE tab exists in the sheet).'); }
+
+  // the queue, and what is yours to do
+  const bank = Number(props.getProperty('BANK') || 0), need = launchBank_();
+  const wantMode = props.getProperty('MODE') || 'DRYRUN';
+  const perWeek = postDays_().length;
+  const q = ['', 'Queue'];
+  if (!props.getProperty('WENT_LIVE_AT')) {
+    q.push('Launch bank: ' + bank + ' of ' + need + ' (approved, or held from a dry run).' +
+      (launchHeld_() ? ' MODE is ' + wantMode + ' but publishing waits for the bank; set LAUNCH_BANK to 0 to launch anyway.' : ''));
+    q.push('Good dry runs so far: ' + (props.getProperty('GOOD_DRYRUNS') || 0) + '.');
+  } else {
+    q.push('Approved and queued: ' + queued + ', about ' + (Math.round(queued / perWeek * 10) / 10) + ' weeks at ' + perWeek + ' a week.' +
+      (queued < perWeek * 2 ? '  << under two weeks of posts' : ''));
+    if (queued < perWeek * 2) bad.push('queue');
+  }
+  q.push('Waiting for your review: ' + drafts + ' draft' + (drafts === 1 ? '' : 's') + '.');
+  q.push('MODE: ' + mode_() + (live_() ? '' : ' (nothing posts publicly)') + '.');
+
+  if (String(props.getProperty('HEARTBEAT') || '').toUpperCase() === 'PROBLEMS' && !bad.length) return;
+  const subject = bad.length ? 'Heartbeat: ' + bad.length + ' to look at (' + bad.join(', ') + ')'
+                             : 'Heartbeat: all clear' + (props.getProperty('WENT_LIVE_AT') ? ', ' + queued + ' queued' : ', bank ' + bank + ' of ' + need);
+  notify_(subject, ['Expected against actual, ' + Utilities.formatDate(now, 'America/New_York', 'EEE d MMM, h:mm a') + ' New York.',
+    'This comes every morning. If it does not arrive by 8am, the publisher itself has stopped.', ''].concat(lines, q).join('\n'));
 }
 
 /** Monday: one short email of what went live, what failed and what is queued. */
@@ -151,11 +287,23 @@ function weeklySummary_(values, col, now) {
   const body = [`Went live (${live.length}):`, ...(live.length ? live : ['none']), '',
                 `Failed (${failed.length}):`, ...(failed.length ? failed : ['none']), '',
                 `Dry runs (${dry.length}):`, ...(dry.length ? dry : ['none']), '',
-                `Approved and queued: ${queued}`, 'MODE: ' + mode_() + (quiet_() ? ' (real posts, no tags or @handles)' : live_() ? '' : ' (nothing posts publicly)'), paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : '',
+                `Approved and queued: ${queued}`, killSummary_(values, col, weekAgo), 'MODE: ' + mode_() + (quiet_() ? ' (real posts, no tags or @handles)' : live_() ? '' : ' (nothing posts publicly)'), paused_() ? '\nPUBLISHING IS PAUSED (PAUSE tab exists).' : '',
                 (() => { const b = brake_(); return b ? '\nMETA BRAKE ON (' + b.kind + ' since ' + new Date(b.at).toISOString().slice(0, 10) + '): ' + b.msg.slice(0, 200) : ''; })(),
                 (() => { const p = PropertiesService.getScriptProperties(); const f = Number(p.getProperty('FIRST_GOOD_DRYRUN_AT') || 0);
                          return live_() ? '' : '\nGood dry runs: ' + (p.getProperty('GOOD_DRYRUNS') || 0) + (f ? ', first on ' + new Date(f).toISOString().slice(0, 10) : ', none yet'); })()].join('\n');
   notify_(`Week: ${live.length} live, ${failed.length} failed, ${queued} queued`, body);
+}
+
+/** "Killed this week: 3 (PHOTOS 2, ERA 1)" from the Kill reason column. */
+function killSummary_(values, col, weekAgo) {
+  if (!('Kill reason' in col)) return '';
+  const n = {}; let total = 0;
+  values.slice(1).forEach(row => {
+    const m = String(row[col['Kill reason']] || '').match(/^(\w+) @(\S+)/);
+    if (!m || new Date(m[2]).getTime() < weekAgo) return;
+    n[m[1]] = (n[m[1]] || 0) + 1; total++;
+  });
+  return total ? 'Killed this week: ' + total + ' (' + Object.keys(n).map(k => k + ' ' + n[k]).join(', ') + ')' : '';
 }
 
 function cellByName_(row, col, name) { return name in col ? String(row[col[name]] || '').trim() : ''; }
@@ -164,7 +312,41 @@ function cellByName_(row, col, name) { return name in col ? String(row[col[name]
 function paused_() { return !!SpreadsheetApp.getActive().getSheetByName('PAUSE'); }
 
 /** Public posting only when MODE is exactly LIVE. Anything else, including unset, is a dry run. */
-function mode_() { const m = PropertiesService.getScriptProperties().getProperty('MODE'); return m === 'LIVE' || m === 'QUIET' ? m : 'DRYRUN'; }
+function mode_() { const m = PropertiesService.getScriptProperties().getProperty('MODE'); return (m === 'LIVE' || m === 'QUIET') && !launchHeld_() ? m : 'DRYRUN'; }
+
+/**
+ * Launch bank (v0.19). MODE was set to QUIET or LIVE, publishing has never started, and fewer than LAUNCH_BANK
+ * posts (default 30) are banked: the publisher stays in dry run so the feed cannot start and then stall.
+ * Once the first real run has happened (WENT_LIVE_AT) this never holds again.
+ */
+function launchHeld_() {
+  const p = PropertiesService.getScriptProperties();
+  const m = p.getProperty('MODE');
+  if (m !== 'LIVE' && m !== 'QUIET') return false;
+  if (p.getProperty('WENT_LIVE_AT')) return false;
+  return Number(p.getProperty('BANK') || 0) < launchBank_();
+}
+function launchBank_() { const v = PropertiesService.getScriptProperties().getProperty('LAUNCH_BANK'); return v === null || v === '' || isNaN(Number(v)) ? 30 : Number(v); }
+
+/** Posts ready to go: APPROVED, plus DRY RUN rows (they return to APPROVED on the first real run). Stored so mode_() can read it cheaply. */
+function bank_(values, col) {
+  let n = 0;
+  values.slice(1).forEach(row => {
+    const st = String(row[col['Status']] || '').trim();
+    if (st === 'APPROVED' || st === 'DRY RUN') n++;
+  });
+  PropertiesService.getScriptProperties().setProperty('BANK', String(n));
+  return n;
+}
+
+/** Days of the week that carry a post once publishing is on. 0 = Sunday. Dry runs use every day. */
+function postDays_() {
+  if (!live_()) return [0, 1, 2, 3, 4, 5, 6];
+  const v = String(PropertiesService.getScriptProperties().getProperty('POST_DAYS') || '0,1,3,5').trim();
+  if (/^all$/i.test(v)) return [0, 1, 2, 3, 4, 5, 6];
+  const days = v.split(',').map(x => Number(x.trim())).filter(n => n >= 0 && n <= 6 && Math.floor(n) === n);
+  return days.length ? days : [0, 1, 3, 5];
+}
 function live_() { return mode_() !== 'DRYRUN'; }      // true when real publishing happens (QUIET or LIVE)
 function quiet_() { return mode_() === 'QUIET'; }
 
@@ -268,6 +450,7 @@ function publishDue() {
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(10000)) return;           // never two runs at once
   try {
+    PropertiesService.getScriptProperties().setProperty('LAST_PUBLISH_RUN_AT', String(Date.now()));   // for the heartbeat
     if (paused_()) return;                       // a PAUSE tab stops everything
     if (!verifyConnection_()) return;            // token and account proven before anything goes public
     if (brake_()) return;                        // Meta blocked or rate-limited us: no calls until it clears
@@ -279,10 +462,14 @@ function publishDue() {
     const now = new Date();
 
     const props = PropertiesService.getScriptProperties();
+    bank_(values, col);                          // mode_() reads it: no real post until the launch bank is full
     if (live_() && !props.getProperty('WENT_LIVE_AT')) {
-      // first LIVE run: everything that passed a dry run returns to the queue with a fresh 9am slot
+      // first LIVE run: everything that passed a dry run returns to the queue with a fresh 9am slot, and rows
+      // already approved lose their daily dry-run slots so every post lands on a POST_DAYS day
       for (let r = 1; r < values.length; r++) {
-        if (values[r][col['Status']] !== 'DRY RUN') continue;
+        const st = values[r][col['Status']];
+        if (st === 'APPROVED') { setCell_(sheet, r, col['Publish at'], ''); continue; }
+        if (st !== 'DRY RUN') continue;
         setCell_(sheet, r, col['Status'], 'APPROVED'); setCell_(sheet, r, col['Publish at'], '');
       }
       props.setProperty('WENT_LIVE_AT', String(Date.now()));
@@ -822,6 +1009,7 @@ function importBatch() {
     added++;
   });
   log_('importBatch', `${added} new, ${refreshed} refreshed, ${benched} benched`);
+  props.setProperty('LAST_IMPORT_OK_AT', String(Date.now()));   // for the heartbeat
   if (added) notify_(`${added} new posts to review`, `${added} new DRAFT rows in the Posts tab. Approve by setting Status to APPROVED.`);
 }
 
@@ -857,6 +1045,7 @@ function syncStatuses() {
       publish_at: when instanceof Date ? when.toISOString() : String(when || ''),
       live_link: String(values[r][col['Live link']] || ''),
       notes: String(values[r][col['Notes']] || '').slice(0, 2000),
+      kill_reason: 'Kill reason' in col ? String(values[r][col['Kill reason']] || '') : '',   // "PHOTOS @time: note", read by the weekly review
       caption: String(values[r][col['Caption']] || '').slice(0, 2200),
       updated: new Date().toISOString(),
     };
@@ -871,7 +1060,7 @@ function syncStatuses() {
     sha = j.sha;
     const existing = Utilities.newBlob(Utilities.base64Decode(j.content.replace(/\n/g, ''))).getDataAsString();
     try {
-      if (JSON.stringify(JSON.parse(existing).rows) === JSON.stringify(rows)) return;   // nothing changed
+      if (JSON.stringify(JSON.parse(existing).rows) === JSON.stringify(rows)) { props.setProperty('LAST_SYNC_OK_AT', String(Date.now())); return; }   // nothing changed
     } catch (e) { /* rewrite */ }
   }
   const payload = { message: 'Statuses from the sheet', committer: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, author: { name: 'Bureau of Leisure', email: '41898282+github-actions[bot]@users.noreply.github.com' }, content: Utilities.base64Encode(body, Utilities.Charset.UTF_8) };
@@ -881,6 +1070,7 @@ function syncStatuses() {
     log_('syncStatuses', 'GitHub write failed: ' + res.getResponseCode() + ' ' + res.getContentText().slice(0, 200));
   } else {
     log_('syncStatuses', Object.keys(rows).length + ' rows synced');
+    props.setProperty('LAST_SYNC_OK_AT', String(Date.now()));   // for the heartbeat
   }
 }
 
@@ -924,7 +1114,7 @@ function doGet(e) {
     });
   }
   const t = HtmlService.createTemplate(REVIEW_HTML);
-  t.posts = posts; t.show = show; t.counts = statusCounts_(values, col);
+  t.posts = posts; t.show = show; t.counts = statusCounts_(values, col); t.reasons = KILL_REASONS_;
   t.base = ScriptApp.getService().getUrl();   // absolute links: the page runs inside a Google frame
   return t.evaluate().setTitle('Bureau of Leisure: review').addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
@@ -948,16 +1138,38 @@ function setStatus(rowNumber, status, index, note) {
   const row = values[rowNumber - 1];
   const idx = String(row[col['Index No.']] || '');
   if (idx !== String(index)) throw new Error('Row moved; reload the page');
+  if (status === 'KILLED') {
+    // v0.19: every kill carries a reason, so the weekly review learns from it. "PHOTOS", or "OTHER: the note".
+    const m = String(note || '').trim().match(/^([A-Z]+)(?::\s*([\s\S]*))?$/);
+    const code = m && KILL_REASONS_[m[1]] ? m[1] : '';
+    if (!code) throw new Error('Pick a reason for the kill');
+    const detail = (m[2] || '').trim();
+    if (code === 'OTHER' && !detail) throw new Error('Say why, in a few words');
+    const at = new Date().toISOString().slice(0, 19) + 'Z';
+    sheet.getRange(rowNumber, ensureCol_(sheet, col, 'Kill reason') + 1).setValue(code + ' @' + at + (detail ? ': ' + detail.slice(0, 300) : ''));
+    note = code + (detail ? ': ' + detail : '');
+  }
   if (status === 'EDITS') {
     if (!note || !String(note).trim()) throw new Error('Say what to change');
     const stamp = Utilities.formatDate(new Date(), 'America/New_York', "yyyy-MM-dd HH:mm");
     const existing = cell_(row, col, 'Notes');
     sheet.getRange(rowNumber, col['Notes'] + 1).setValue(('EDITS ' + stamp + ': ' + String(note).trim() + (existing ? '\n' + existing : '')).slice(0, 5000));
   }
+  if (status !== 'KILLED' && 'Kill reason' in col && cell_(row, col, 'Kill reason')) sheet.getRange(rowNumber, col['Kill reason'] + 1).setValue('');   // brought back: the old reason no longer stands
   sheet.getRange(rowNumber, col['Status'] + 1).setValue(status);
   log_('review', idx + ' -> ' + status + (note ? ' (' + String(note).slice(0, 80) + ')' : ''));
   return statusCounts_(sheet.getDataRange().getValues(), col);
 }
+
+/** One tap on the review page. The codes are what the weekly review counts; the labels are what Lewie reads. */
+const KILL_REASONS_ = {
+  PHOTOS: 'Photos not good enough',
+  PLACE: 'Place not special enough',
+  ERA: 'No nostalgia, wrong feel',
+  KNOWN: 'Too well known',
+  GONE: 'Closed or changed',
+  OTHER: 'Other',
+};
 
 const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
@@ -987,6 +1199,9 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
  .empty{padding:60px 20px;font-size:15px}
  .editbox{margin-top:12px}
  .editbox textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Courier Prime",monospace;border:2px solid #2A2420;background:#fff8;padding:10px;margin-bottom:10px;resize:vertical}
+ .killbox{margin-top:12px} .killbox .why{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6E2A22;margin-bottom:8px}
+ .killbox .chips{display:flex;flex-wrap:wrap;gap:8px} .killbox .chips button{font-size:12px;padding:10px 12px;border-color:#6E2A22;color:#6E2A22} .killbox .chips button:hover{background:#6E2A22;color:#F1E9DC}
+ .killbox .other{margin-top:10px} .killbox input{width:100%;box-sizing:border-box;font:13px "Courier Prime",monospace;border:2px solid #6E2A22;background:#fff8;padding:10px;margin-bottom:10px}
  .err{font-size:12px;color:#6E2A22;margin-top:10px;white-space:pre-wrap}
  @media (max-width:900px){.post{grid-template-columns:1fr}.strip img{height:360px}}
 </style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" integrity="sha384-BSxuMLxX+FCbTdYec3TbXlnMGEEM2QXTFdtDaveen71o+jswm2J36+xFqp8k4VHM" crossorigin="anonymous"></script><style>
@@ -1009,12 +1224,17 @@ const REVIEW_HTML = `<!doctype html><html><head><meta charset="utf-8">
   <div class="btns">
    <button class="approve" onclick="go(<?= p.row ?>,'APPROVED','<?= p.index ?>')">Approve</button>
    <button class="edits" onclick="openEdits(<?= p.row ?>)">Edits</button>
-   <button class="kill" onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>')">Kill</button>
+   <button class="kill" onclick="openKill(<?= p.row ?>)">Kill</button>
    <? if (p.status !== 'DRAFT') { ?><button onclick="go(<?= p.row ?>,'DRAFT','<?= p.index ?>')">Back to draft</button><? } ?>
   </div>
   <div class="editbox" id="e<?= p.row ?>" hidden>
    <textarea id="t<?= p.row ?>" rows="4" placeholder="What should change? e.g. slide 2 is crooked, drop the bed photo, cover should be the bar shot, word should be CLUBBY"></textarea>
    <div class="btns"><button class="approve" onclick="sendEdits(<?= p.row ?>,'<?= p.index ?>')">Send edits</button><button onclick="closeEdits(<?= p.row ?>)">Cancel</button></div>
+  </div>
+  <div class="killbox" id="k<?= p.row ?>" hidden>
+   <div class="why">Why? One tap kills it.</div>
+   <div class="chips"><? Object.keys(reasons).forEach(function(code){ if (code === 'OTHER') { ?><button onclick="otherKill(<?= p.row ?>)">Other</button><? } else { ?><button onclick="go(<?= p.row ?>,'KILLED','<?= p.index ?>','<?= code ?>')"><?= reasons[code] ?></button><? } }); ?><button onclick="closeKill(<?= p.row ?>)" style="border-color:#2A2420;color:#2A2420">Cancel</button></div>
+   <div class="other" id="ko<?= p.row ?>" hidden><input id="kt<?= p.row ?>" maxlength="300" placeholder="Why, in a few words"><div class="btns"><button class="kill" onclick="sendOtherKill(<?= p.row ?>,'<?= p.index ?>')">Kill</button></div></div>
   </div>
   <div class="err" id="x<?= p.row ?>"></div>
  </div>
@@ -1047,6 +1267,14 @@ function saveOrder(strip){
     bar.className = 'orderbar pending'; bar.textContent = 'Order NOT saved: ' + e.message;
   }).setStatus(row, 'ORDER', {index: String(strip.dataset.index), order: order, sig: strip.dataset.sig}, '');
 }
+function openKill(row){ document.getElementById('k'+row).hidden=false; closeEdits(row); }
+function closeKill(row){ document.getElementById('k'+row).hidden=true; document.getElementById('ko'+row).hidden=true; }
+function otherKill(row){ document.getElementById('ko'+row).hidden=false; document.getElementById('kt'+row).focus(); }
+function sendOtherKill(row, index){
+  var t=document.getElementById('kt'+row), why=t.value.trim();
+  if (!why) { document.getElementById('x'+row).textContent='Say why first.'; t.focus(); return; }
+  go(row, 'KILLED', index, 'OTHER: ' + why);
+}
 function openEdits(row){ const b=document.getElementById('e'+row); b.hidden=false; document.getElementById('t'+row).focus(); }
 function closeEdits(row){ document.getElementById('e'+row).hidden=true; }
 function sendEdits(row, index){
@@ -1055,17 +1283,19 @@ function sendEdits(row, index){
   go(row, 'EDITS', index, note);
 }
 document.addEventListener('keydown', function(ev){
+  if (ev.target.tagName==='INPUT' && ev.key==='Enter') { ev.target.closest('.other').querySelector('button').click(); return; }
   if (ev.target.tagName==='TEXTAREA' && ev.key==='Enter' && (ev.metaKey||ev.ctrlKey)) { const row=ev.target.id.slice(1); ev.target.closest('.editbox').querySelector('button').click(); }
 });
 function go(row, status, index, note){
   const sec=document.getElementById('p'+row), err=document.getElementById('x'+row);
-  err.textContent=''; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = true);
+  err.textContent=''; sec.querySelectorAll('button,textarea,input').forEach(b => b.disabled = true);
   google.script.run.withSuccessHandler(function(counts){
     document.getElementById('s'+row).textContent = status; sec.classList.add('done');
     const box=document.getElementById('e'+row); if (box) box.hidden=true;
+    const kb=document.getElementById('k'+row); if (kb) kb.hidden=true;
     document.querySelectorAll('header .n').forEach(function(el){ var k = el.getAttribute('data-k');
       el.textContent = k === 'ALL' ? Object.keys(counts).reduce(function(a, x){ return a + counts[x]; }, 0) : (counts[k] || 0); });
-  }).withFailureHandler(function(e){ err.textContent = 'Not saved: ' + e.message; sec.querySelectorAll('button,textarea').forEach(b => b.disabled = false); })
+  }).withFailureHandler(function(e){ err.textContent = 'Not saved: ' + e.message; sec.querySelectorAll('button,textarea,input').forEach(b => b.disabled = false); })
   .setStatus(row, status, {index: String(index), note: note || ''}, note || '');
 }
 </script></body></html>`;
