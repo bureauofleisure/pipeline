@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-16T12:31:54Z",
+  "checked": "2026-11-17T12:53:33Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -7,7 +7,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 9
+      "items": 6
     },
     {
       "name": "Dezeen hotels",
@@ -55,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 12
+      "items": 13
     },
     {
       "name": "Architectural Digest",
@@ -143,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 25
+      "items": 19
     },
     {
       "name": "Roman and Williams",
@@ -469,7 +469,7 @@
       "name": "Design Hotels",
       "tier": 1,
       "category": "booking",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -503,7 +503,7 @@
       "category": "awards",
       "site": 200,
       "feed": "200 lenient",
-      "items": 14
+      "items": 4
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -1226,10 +1226,18 @@
       "items": 0
     },
     {
+      "name": "MOVS STUDIO",
+      "tier": 1,
+      "category": "studio",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
       "name": "Andrew Meredith",
       "tier": 1,
       "category": "photographer",
-      "site": "error: URLError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -1602,6 +1610,14 @@
       "items": 0
     },
     {
+      "name": "The Ingalls",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
       "name": "Andrew Thomas Lee",
       "tier": 1,
       "category": "photographer",
@@ -1654,174 +1670,6 @@
       "tier": 1,
       "category": "studio",
       "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Carpenter + Mason",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Bess Friday",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Jakob Layman",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Method Co",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Design, Bitches",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Michael Kleinberg",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Openhouse",
-      "tier": 2,
-      "category": "design_press",
-      "site": 200,
-      "feed": "200 ok",
-      "items": 100
-    },
-    {
-      "name": "Frank Frances",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Laura Gonzalez",
-      "tier": 1,
-      "category": "studio",
-      "site": "error: TimeoutError",
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Tessa Neustadt",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Nicemakers",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Ignant",
-      "tier": 2,
-      "category": "design_press",
-      "site": 200,
-      "feed": "200 ok",
-      "items": 15
-    },
-    {
-      "name": "Kris Tamburello",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Galerie",
-      "tier": 2,
-      "category": "design_press",
-      "site": 200,
-      "feed": "200 ok",
-      "items": 10
-    },
-    {
-      "name": "Atlas Obscura",
-      "tier": 3,
-      "category": "city_press",
-      "site": 200,
-      "feed": "200 ok",
-      "items": 27
-    },
-    {
-      "name": "L\u00e1zaro Rosa-Viol\u00e1n",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Jonathan Hokklo",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Bells + Whistles",
-      "tier": 1,
-      "category": "studio",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Austin Leis",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Henrik Lundell",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
-      "name": "Paul Bowyer",
-      "tier": 1,
-      "category": "photographer",
-      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     }
