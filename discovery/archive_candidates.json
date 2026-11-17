@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-17T16:33:50Z",
+ "searched": "2026-11-17T18:45:30Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,28 +7,33 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 5,
-  "results": 116,
-  "items_opened": 39,
-  "offtopic": 1,
+  "searches": 1,
+  "results": 49,
+  "items_opened": 1,
+  "offtopic": 4,
   "rights": 0,
-  "size": 16,
-  "type": 1,
+  "size": 7,
+  "type": 0,
   "errors": [
-   "search Hotel Congress Tucson: TimeoutError The read operation timed out"
+   "rate limited by loc.gov at Gadsden Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "tif_header_ok": 52,
-  "other_collections": 59,
+  "other_collections": 37,
   "tif_header_misses": [
-   "ter/pnp/gsc/5a29000/5a29800/5a29866u.tif: TimeoutError",
-   "bshaer/az/az0600/az0682/sheet/00001u.tif: HTTP 404",
-   "vices/master/pnp/highsm/53500/53530u.tif: TimeoutError"
+   "aer/az/az0000/az0024/photos/008761pu.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54346u.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54365u.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54348u.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54345u.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54390u.tif: HTTP 429",
+   "vices/master/pnp/highsm/54300/54391u.tif: HTTP 429"
   ],
-  "targets_tried": 6
+  "tif_header_ok": 1,
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 46,
+ "next_target": 47,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -911,8 +916,21 @@
    "city": "Grand Canyon",
    "era": "1905",
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, lobby (items 2018702401, 2018702384), entrance, trophy heads. Needs the dining room and lounge frames to reach four rooms.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Entrance to the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River across northern i",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54367u.tif",
+     "width": 10970,
+     "height": 5705,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702403/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Gadsden Hotel",
