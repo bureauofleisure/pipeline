@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-17T12:53:33Z",
+  "checked": "2026-11-17T13:07:12Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -165,7 +165,7 @@
       "name": "Dimorestudio",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -1226,14 +1226,6 @@
       "items": 0
     },
     {
-      "name": "MOVS STUDIO",
-      "tier": 1,
-      "category": "studio",
-      "site": "error: HTTPError",
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Andrew Meredith",
       "tier": 1,
       "category": "photographer",
@@ -1610,14 +1602,6 @@
       "items": 0
     },
     {
-      "name": "The Ingalls",
-      "tier": 1,
-      "category": "photographer",
-      "site": 200,
-      "feed": null,
-      "items": 0
-    },
-    {
       "name": "Andrew Thomas Lee",
       "tier": 1,
       "category": "photographer",
@@ -1669,6 +1653,238 @@
       "name": "Clayton Korte",
       "tier": 1,
       "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Carpenter + Mason",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bess Friday",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jakob Layman",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Method Co",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Design, Bitches",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Michael Kleinberg",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Openhouse",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 100
+    },
+    {
+      "name": "Frank Frances",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Laura Gonzalez",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Tessa Neustadt",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Nicemakers",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Ignant",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 15
+    },
+    {
+      "name": "Kris Tamburello",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Galerie",
+      "tier": 2,
+      "category": "design_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 10
+    },
+    {
+      "name": "Atlas Obscura",
+      "tier": 3,
+      "category": "city_press",
+      "site": 200,
+      "feed": "200 ok",
+      "items": 27
+    },
+    {
+      "name": "L\u00e1zaro Rosa-Viol\u00e1n",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jonathan Hokklo",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Bells + Whistles",
+      "tier": 1,
+      "category": "studio",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Austin Leis",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Henrik Lundell",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Paul Bowyer",
+      "tier": 1,
+      "category": "photographer",
+      "site": "error: HTTPError",
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Edi Cliff",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Amaury Laparra",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Eric Vitale",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Jiri Lizler",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Dear Margo",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "how long",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "kate berry",
+      "tier": 1,
+      "category": "photographer",
+      "site": 200,
+      "feed": null,
+      "items": 0
+    },
+    {
+      "name": "Douglas Friedman",
+      "tier": 1,
+      "category": "photographer",
       "site": 200,
       "feed": null,
       "items": 0
