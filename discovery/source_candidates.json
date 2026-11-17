@@ -159,7 +159,12 @@
    "lens": 11,
    "us": 10,
    "mix": 7,
-   "why": "New York interiors and restaurants."
+   "why": "New York interiors and restaurants.",
+   "alts": [
+    "https://www.seandavidson.com/",
+    "https://www.seandavidsonphoto.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Liz Clayman",
@@ -179,7 +184,12 @@
    "lens": 11,
    "us": 10,
    "mix": 7,
-   "why": "New York restaurants and bars."
+   "why": "New York restaurants and bars.",
+   "alts": [
+    "https://www.teddywolffphoto.com/",
+    "https://teddywolff.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Garrett Rowland",
@@ -209,7 +219,13 @@
    "lens": 10,
    "us": 10,
    "mix": 7,
-   "why": "Texas and New York interiors and hotels."
+   "why": "Texas and New York interiors and hotels.",
+   "alts": [
+    "https://www.maxburkhalterphoto.com/",
+    "https://www.maxburkhalterphotography.com/",
+    "https://www.burkhalterphoto.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Christopher Sturman",
@@ -229,7 +245,12 @@
    "lens": 9,
    "us": 10,
    "mix": 7,
-   "why": "New York interiors and hospitality."
+   "why": "New York interiors and hospitality.",
+   "alts": [
+    "https://www.timlenz.com/",
+    "https://www.timlenzphotography.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Julie Soefer",
@@ -279,7 +300,12 @@
    "lens": 12,
    "us": 10,
    "mix": 7,
-   "why": "New Orleans interiors and hospitality."
+   "why": "New Orleans interiors and hospitality.",
+   "alts": [
+    "https://www.paulcostello.com/",
+    "https://www.paulcostellophotography.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Sam Frost",
@@ -289,7 +315,13 @@
    "lens": 10,
    "us": 10,
    "mix": 7,
-   "why": "Los Angeles interiors and restaurants."
+   "why": "Los Angeles interiors and restaurants.",
+   "alts": [
+    "https://www.samfrost.com/",
+    "https://www.samfrostphotography.com/",
+    "https://samfrost.photo/"
+   ],
+   "round": 3
   },
   {
    "name": "Ye Rin Mok",
@@ -329,7 +361,13 @@
    "lens": 9,
    "us": 10,
    "mix": 7,
-   "why": "New York interiors and hospitality."
+   "why": "New York interiors and hospitality.",
+   "alts": [
+    "https://www.hokklo.com/",
+    "https://www.hokklophoto.com/",
+    "https://www.jonathanhokklo.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Ken Fulk",
@@ -449,7 +487,12 @@
    "lens": 11,
    "us": 10,
    "mix": 7,
-   "why": "Los Angeles restaurants and bars."
+   "why": "Los Angeles restaurants and bars.",
+   "alts": [
+    "https://www.bw.design/",
+    "https://www.allthebellsandwhistles.com/"
+   ],
+   "round": 3
   },
   {
    "name": "Studio UNLTD",
@@ -519,7 +562,9 @@
    "lens": 10,
    "us": 10,
    "mix": 7,
-   "why": "New York restaurants and bars."
+   "why": "New York restaurants and bars.",
+   "alts": [],
+   "round": 3
   },
   {
    "name": "Stonehill Taylor",
@@ -605,7 +650,12 @@
    "lens": 7,
    "us": 10,
    "mix": 3,
-   "why": "US design press."
+   "why": "US design press.",
+   "alts": [
+    "https://metropolismag.com/feed/",
+    "https://metropolismag.com/rss"
+   ],
+   "round": 3
   },
   {
    "name": "Surface",
@@ -641,7 +691,12 @@
    "lens": 11,
    "us": 8,
    "mix": 5,
-   "why": "Boutique hotel features."
+   "why": "Boutique hotel features.",
+   "alts": [
+    "https://hotelsabovepar.com/feed/",
+    "https://www.hotelsabovepar.com/rss"
+   ],
+   "round": 3
   },
   {
    "name": "Yatzer",
@@ -689,7 +744,9 @@
    "lens": 8,
    "us": 3,
    "mix": 3,
-   "why": "Australian design press with hospitality coverage."
+   "why": "Australian design press with hospitality coverage.",
+   "alts": [],
+   "round": 3
   },
   {
    "name": "Azure",
@@ -748,7 +805,8 @@
    "us": 10,
    "mix": 7,
    "why": "New York bars and restaurants, dark wood and neon.",
-   "round": 2
+   "round": 3,
+   "alts": []
   },
   {
    "name": "Daniel Krieger",
@@ -803,7 +861,8 @@
    "us": 10,
    "mix": 7,
    "why": "New York bars and restaurants.",
-   "round": 2
+   "round": 3,
+   "alts": []
   },
   {
    "name": "Alex Staniloff",
@@ -847,7 +906,12 @@
    "us": 10,
    "mix": 7,
    "why": "New York interiors and hospitality.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.kyleknodellphoto.com/",
+    "https://kyleknodell.co/",
+    "https://www.knodell.com/"
+   ]
   },
   {
    "name": "Michael Wiltbank",
@@ -880,7 +944,8 @@
    "us": 10,
    "mix": 7,
    "why": "East coast interiors and inns.",
-   "round": 2
+   "round": 3,
+   "alts": []
   },
   {
    "name": "Heidi's Bridge",
@@ -913,7 +978,11 @@
    "us": 10,
    "mix": 7,
    "why": "Washington restaurants and bars.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.suchmanphoto.com/",
+    "https://suchmanphoto.com/"
+   ]
   },
   {
    "name": "Greg Powers",
@@ -935,7 +1004,8 @@
    "us": 10,
    "mix": 7,
    "why": "Chicago restaurants, bars and hotels.",
-   "round": 2
+   "round": 3,
+   "alts": []
   },
   {
    "name": "Aimee Mazzenga",
@@ -1045,7 +1115,11 @@
    "us": 10,
    "mix": 7,
    "why": "Austin restaurants and hotels.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.katelesueurphotography.com/",
+    "https://www.katelesueur.com/"
+   ]
   },
   {
    "name": "Andrea Calo",
@@ -1078,7 +1152,8 @@
    "us": 10,
    "mix": 7,
    "why": "Miami restaurants and hotels.",
-   "round": 2
+   "round": 3,
+   "alts": []
   },
   {
    "name": "Preen Inc",
@@ -1155,7 +1230,12 @@
    "us": 10,
    "mix": 7,
    "why": "New York bars and restaurants.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.carpenterandmason.com/",
+    "https://www.sarahcarpenterstudio.com/",
+    "https://sarahcarpenter.studio/"
+   ]
   },
   {
    "name": "Bryan O'Sullivan Studio",
@@ -1177,7 +1257,13 @@
    "us": 3,
    "mix": 9,
    "why": "British classics: The Goring, The Savoy Grill. Classics supply.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.russellsagestudio.com/",
+    "https://russellsage.studio/",
+    "https://www.russellsagestudio.co.uk/",
+    "https://www.russell-sage.com/"
+   ]
   },
   {
    "name": "Laura Gonzalez",
@@ -1243,7 +1329,11 @@
    "us": 3,
    "mix": 7,
    "why": "Hotels on film; the most nostalgic eye on the list.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.benoitlinero.fr/",
+    "https://benoitlinero.com/"
+   ]
   },
   {
    "name": "Romain Laprade",
@@ -1265,7 +1355,11 @@
    "us": 3,
    "mix": 7,
    "why": "Paris hotels and restaurants.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.francisamiand.fr/",
+    "https://francisamiand.com/"
+   ]
   },
   {
    "name": "Jérôme Galland",
@@ -1276,7 +1370,11 @@
    "us": 3,
    "mix": 7,
    "why": "French hotels and restaurants.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.jeromegalland.fr/",
+    "https://jeromegalland.com/"
+   ]
   },
   {
    "name": "Helen Cathcart",
@@ -1298,7 +1396,11 @@
    "us": 3,
    "mix": 7,
    "why": "British hotels and restaurants.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.jamesmcdonaldphotography.com/",
+    "https://jamesmcdonald.photography/"
+   ]
   },
   {
    "name": "Jake Eastham",
@@ -1309,7 +1411,10 @@
    "us": 3,
    "mix": 8,
    "why": "English country hotels and pubs.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.jakeeastham.co.uk/"
+   ]
   },
   {
    "name": "Oskar Proctor",
@@ -1320,7 +1425,11 @@
    "us": 3,
    "mix": 7,
    "why": "London restaurants and hotels.",
-   "round": 2
+   "round": 3,
+   "alts": [
+    "https://www.oskarproctor.co.uk/",
+    "https://www.oskarproctor.com/"
+   ]
   },
   {
    "name": "Felix Forest",
@@ -1344,5 +1453,11 @@
    "why": "Australian interiors and hospitality.",
    "round": 2
   }
- ]
+ ],
+ "round3": {
+  "decided_before_probe": "2026-11-10",
+  "scope": "Candidates that failed on address, DNS, connection or 'not their site' in the 2026-11-10 probes. Each gets its original address plus likely alternates; refused or failed connections get one retry with no workaround.",
+  "excluded": "A-nrd and AN Interior answered 403 Forbidden to the honest bot: that is a block, not an address, so they are not retried.",
+  "rule": "A fixed candidate is added to sources.json only if it is suitable and scores at least 67.0, the lowest score among the 25 added earlier today. Suitable below 67.0 goes to reserve."
+ }
 }

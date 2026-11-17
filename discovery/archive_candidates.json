@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-10T19:30:17Z",
+ "searched": "2026-11-17T02:02:15Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,29 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 2,
-  "results": 33,
-  "items_opened": 0,
-  "offtopic": 0,
+  "searches": 1,
+  "results": 32,
+  "items_opened": 1,
+  "offtopic": 5,
   "rights": 0,
-  "size": 0,
+  "size": 3,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Schrafft's; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Bathhouse Row; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 33,
+  "other_collections": 23,
+  "tif_header_ok": 1,
+  "tif_header_misses": [
+   "aer/ca/ca0500/ca0567/photos/015007pu.tif: HTTP 429",
+   "bshaer/ca/ca4300/ca4353/sheet/00001u.tif: HTTP 429",
+   "bshaer/ca/ca4300/ca4352/sheet/00001u.tif: HTTP 429"
+  ],
   "rate_limited": true,
-  "targets_tried": 3
+  "targets_tried": 2
  },
- "next_target": 2,
+ "next_target": 40,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -193,8 +199,33 @@
    "place": "The Raleigh",
    "city": "Miami",
    "era": "1940",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Raleigh Hotel, Collins Ave., Miami Beach, Florida. Pool from center",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a06000/5a06500/5a06573u.tif",
+     "width": 7931,
+     "height": 5751,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "dixon, lawrence murray gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1941-01-01",
+     "source_page": "http://www.loc.gov/item/2018739011/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Raleigh Hotel, Collins Ave., Miami Beach, Florida. Pool, to ocean from balcony",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a06000/5a06500/5a06571u.tif",
+     "width": 7959,
+     "height": 5745,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "dixon, lawrence murray gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1941-01-01",
+     "source_page": "http://www.loc.gov/item/2018739009/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Barton Springs Pool",
@@ -339,8 +370,21 @@
    "city": "Coronado",
    "era": "1888",
    "notes": "Added 2026-11-09: HABS CA-1958 (loc.gov item ca0567) has 36 photographs, mostly exteriors; two Crown Room interiors (015020p, 015021p). Viewed 2026-11-09 and not picked: too few interiors. Worth a look if Highsmith or Gottscho interiors turn up.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Hotel Del Coronado, San Diego, California",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/12700/12739u.tif",
+     "width": 3456,
+     "height": 4306,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011630933/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Bathhouse Row",
@@ -384,6 +428,46 @@
    "city": "Tucson",
    "era": "1919",
    "notes": "Added 2026-11-09: Carol M. Highsmith, 2018, lobby (items 2018663112, 2018663113). Two frames found so far; needs four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Arizona Inn",
+   "city": "Tucson",
+   "era": "1930",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, seven high-res frames (highsm 53976 to 53982: library, patio, courtyards, walkway, cactus gardens, lamp). Masters are 227 MB TIFFs; IIIF derivatives 404 for this run. Picked in 2026-W47 if the masters pass the build.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hermosa Inn",
+   "city": "Paradise Valley",
+   "era": "1930s",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, eleven frames (highsm 53529 to 53539: patio, walkway, fountain, entrance, dining room, western artifacts corner, cactus gardens). Lon Megargee's adobe home turned inn; still open. Check the dining room frame and the patio for a set of four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "El Tovar Hotel",
+   "city": "Grand Canyon",
+   "era": "1905",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, lobby (items 2018702401, 2018702384), entrance, trophy heads. Needs the dining room and lounge frames to reach four rooms.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Gadsden Hotel",
+   "city": "Douglas, Arizona",
+   "era": "1929",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018: the white Italian marble staircase (2018703041), front desk (2018703183), exterior. Lobby with Tiffany-style glass; still open. Two interiors so far; needs four.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Marcus Whitman Hotel",
+   "city": "Walla Walla",
+   "era": "1927",
+   "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, grand lobby (2018699165, 2018699166) and lobby mural (2018699201). Still welcoming guests per the item titles. Three frames; needs a fourth room.",
    "candidates": [],
    "count": 0
   }

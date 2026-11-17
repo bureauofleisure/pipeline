@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-10T19:30:27Z",
+  "checked": "2026-11-17T12:53:33Z",
   "sources": [
     {
       "name": "Dezeen interiors",
@@ -15,7 +15,7 @@
       "category": "design_press",
       "site": "error: HTTPError",
       "feed": "200 lenient",
-      "items": 7
+      "items": 4
     },
     {
       "name": "Dezeen bars",
@@ -55,7 +55,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 11
+      "items": 13
     },
     {
       "name": "Architectural Digest",
@@ -143,7 +143,7 @@
       "category": "design_press",
       "site": 200,
       "feed": "200 lenient",
-      "items": 29
+      "items": 19
     },
     {
       "name": "Roman and Williams",
@@ -469,7 +469,7 @@
       "name": "Design Hotels",
       "tier": 1,
       "category": "booking",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -503,7 +503,7 @@
       "category": "awards",
       "site": 200,
       "feed": "200 lenient",
-      "items": 14
+      "items": 4
     },
     {
       "name": "Restaurant & Bar Design Awards",
@@ -869,7 +869,7 @@
       "name": "Ruben Cabrera",
       "tier": 1,
       "category": "photographer",
-      "site": 200,
+      "site": "error: URLError",
       "feed": null,
       "items": 0
     },
@@ -1053,7 +1053,7 @@
       "name": "Josh Greenspan",
       "tier": 1,
       "category": "studio",
-      "site": "error: HTTPError",
+      "site": 200,
       "feed": null,
       "items": 0
     },
@@ -1461,7 +1461,7 @@
       "name": "Rockwell Group",
       "tier": 1,
       "category": "studio",
-      "site": 200,
+      "site": "error: HTTPError",
       "feed": null,
       "items": 0
     },
