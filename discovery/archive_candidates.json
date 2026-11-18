@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-18T01:17:39Z",
+ "searched": "2026-11-18T15:57:59Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,32 +7,23 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 10,
+  "searches": 2,
+  "results": 33,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 6,
+  "size": 0,
   "type": 0,
   "errors": [
-   "search Gadsden Hotel Douglas: TimeoutError The read operation timed out",
-   "rate limited by loc.gov at Rainbow Room; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Schrafft's; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 4,
-  "tif_header_misses": [
-   "vices/master/pnp/highsm/50900/50966u.tif: HTTP 429",
-   "vices/master/pnp/highsm/50900/50963u.tif: HTTP 429",
-   "vices/master/pnp/highsm/50900/50964u.tif: HTTP 429",
-   "vices/master/pnp/highsm/50800/50814u.tif: HTTP 429",
-   "vices/master/pnp/highsm/50900/50999u.tif: HTTP 429",
-   "vices/master/pnp/highsm/50900/50968u.tif: HTTP 429"
-  ],
+  "other_collections": 33,
   "rate_limited": true,
   "targets_tried": 3
  },
- "next_target": 0,
+ "next_target": 2,
  "targets": [
   {
    "place": "Rainbow Room",
