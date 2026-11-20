@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-20T00:57:31Z",
+ "searched": "2026-11-20T15:42:56Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,22 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 5,
-  "results": 4,
-  "items_opened": 2,
+  "searches": 1,
+  "results": 0,
+  "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
   "errors": [
-   "search Grand Central Oyster Bar interior: TimeoutError The read operation timed out"
+   "rate limited by loc.gov at Venetian Pool; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 2,
-  "tif_header_ok": 2,
-  "targets_tried": 6
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 10,
+ "next_target": 11,
  "targets": [
   {
    "place": "Rainbow Room",
