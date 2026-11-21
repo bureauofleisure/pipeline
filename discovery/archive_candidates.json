@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-21T07:38:24Z",
+ "searched": "2026-11-21T19:47:36Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,22 +7,21 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 0,
-  "items_opened": 0,
-  "offtopic": 0,
+  "searches": 6,
+  "results": 44,
+  "items_opened": 11,
+  "offtopic": 1,
   "rights": 0,
-  "size": 0,
+  "size": 5,
   "type": 0,
-  "errors": [
-   "rate limited by loc.gov at Russian and Turkish Baths; stopped searching, kept earlier finds"
-  ],
+  "errors": [],
   "rights_seen": {},
   "sample_files": null,
-  "rate_limited": true,
-  "targets_tried": 2
+  "other_collections": 27,
+  "tif_header_ok": 16,
+  "targets_tried": 6
  },
- "next_target": 13,
+ "next_target": 19,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -164,8 +163,129 @@
    "city": "New York",
    "era": "1962",
    "notes": "Edits 2026-10-23: Lewie wants professional photos to replace the Commons set on 0014. Leads on loc.gov: Gottscho-Schleisner series 'Union News restaurants, TWA, Idlewild' (1962; Lisbon Lounge I, II, III, Lisbon Lounge bar, London Club II; items 2018732786, 2018732788, 2018732789, 2018732794). HABS NY-6371 lists 79 Peter Brandt photographs but they are not digitized. Balthazar Korab collection has interiors (2018673438, 2020714541) but is not an approved collection and rights are not evaluated. 2026-10-26: the IIIF ids 404, but the master TIFF downloads: 5a28548u.tif (item 2018732786, Lisbon Lounge I) is 5411x4299 and was viewed: a composed professional view of the lounge under the shell roof. Sibling negatives are likely 5a28545 to 5a28560.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Union News restaurants, TWA, Idlewild. TWA coffee shop I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28551u.tif",
+     "width": 5652,
+     "height": 4356,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732790/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28549u.tif",
+     "width": 5411,
+     "height": 4300,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732787/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28550u.tif",
+     "width": 5712,
+     "height": 4440,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732788/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28548u.tif",
+     "width": 5411,
+     "height": 4299,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732786/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Coffee shop II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28552u.tif",
+     "width": 5412,
+     "height": 4299,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732791/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Coffee shop III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28553u.tif",
+     "width": 5412,
+     "height": 4300,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732792/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28554u.tif",
+     "width": 5676,
+     "height": 4344,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732793/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28555u.tif",
+     "width": 5556,
+     "height": 4452,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732794/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28556u.tif",
+     "width": 4488,
+     "height": 5544,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732795/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club IV",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28557u.tif",
+     "width": 4300,
+     "height": 5412,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732796/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 10
   },
   {
    "place": "Hotel Chelsea",
@@ -178,8 +298,21 @@
    "place": "Fontainebleau Miami Beach",
    "city": "Miami",
    "era": "1954",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Fontainebleau Hotel, Miami Beach, Florida. General view of lobby",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a30000/5a30200/5a30276u.tif",
+     "width": 5755,
+     "height": 4485,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "lapidus, morris gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1955-01-01",
+     "source_page": "http://www.loc.gov/item/2018727401/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Eden Roc",
