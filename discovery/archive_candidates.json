@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-21T19:47:36Z",
+ "searched": "2026-11-22T07:23:05Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,21 +7,27 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 6,
-  "results": 44,
-  "items_opened": 11,
-  "offtopic": 1,
+  "searches": 1,
+  "results": 3,
+  "items_opened": 0,
+  "offtopic": 0,
   "rights": 0,
-  "size": 5,
+  "size": 3,
   "type": 0,
-  "errors": [],
+  "errors": [
+   "rate limited by loc.gov at Barton Springs Pool; stopped searching, kept earlier finds"
+  ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 27,
-  "tif_header_ok": 16,
-  "targets_tried": 6
+  "tif_header_misses": [
+   "ter/pnp/gsc/5a06000/5a06500/5a06572u.tif: HTTP 429",
+   "ter/pnp/gsc/5a06000/5a06500/5a06573u.tif: HTTP 429",
+   "ter/pnp/gsc/5a06000/5a06500/5a06571u.tif: HTTP 429"
+  ],
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 19,
+ "next_target": 20,
  "targets": [
   {
    "place": "Rainbow Room",
