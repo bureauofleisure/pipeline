@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-17T02:02:15Z",
+ "searched": "2026-11-23T14:28:15Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -8,28 +8,21 @@
  ],
  "stats": {
   "searches": 1,
-  "results": 32,
-  "items_opened": 1,
-  "offtopic": 5,
+  "results": 0,
+  "items_opened": 0,
+  "offtopic": 0,
   "rights": 0,
   "size": 3,
   "type": 0,
   "errors": [
-   "rate limited by loc.gov at Bathhouse Row; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Café Central; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 23,
-  "tif_header_ok": 1,
-  "tif_header_misses": [
-   "aer/ca/ca0500/ca0567/photos/015007pu.tif: HTTP 429",
-   "bshaer/ca/ca4300/ca4353/sheet/00001u.tif: HTTP 429",
-   "bshaer/ca/ca4300/ca4352/sheet/00001u.tif: HTTP 429"
-  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 40,
+ "next_target": 28,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -110,7 +103,7 @@
      "width": 4979,
      "height": 3618,
      "licence": "No known restrictions (Library of Congress)",
-     "author": "lansberry, homer h. harding, warren g. smalling, walter, jr roosevelt, theodore stewart, arthur w. menger, w. a. historic american buildings survey cary, brian pershing, john j. \"black jack\" taft, william howard",
+     "author": "taft, william howard historic american buildings survey menger, w. a. lansberry, homer h. pershing, john j. \"black jack\" smalling, walter, jr roosevelt, theodore cary, brian stewart, arthur w. harding, warren g.",
      "collection": "Historic American Buildings Survey, Library of Congress",
      "date": "",
      "source_page": "http://www.loc.gov/item/tx0164/",
@@ -171,8 +164,129 @@
    "city": "New York",
    "era": "1962",
    "notes": "Edits 2026-10-23: Lewie wants professional photos to replace the Commons set on 0014. Leads on loc.gov: Gottscho-Schleisner series 'Union News restaurants, TWA, Idlewild' (1962; Lisbon Lounge I, II, III, Lisbon Lounge bar, London Club II; items 2018732786, 2018732788, 2018732789, 2018732794). HABS NY-6371 lists 79 Peter Brandt photographs but they are not digitized. Balthazar Korab collection has interiors (2018673438, 2020714541) but is not an approved collection and rights are not evaluated. 2026-10-26: the IIIF ids 404, but the master TIFF downloads: 5a28548u.tif (item 2018732786, Lisbon Lounge I) is 5411x4299 and was viewed: a composed professional view of the lounge under the shell roof. Sibling negatives are likely 5a28545 to 5a28560.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Union News restaurants, TWA, Idlewild. TWA coffee shop I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28551u.tif",
+     "width": 5652,
+     "height": 4356,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732790/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28549u.tif",
+     "width": 5411,
+     "height": 4300,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732787/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28550u.tif",
+     "width": 5712,
+     "height": 4440,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732788/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Lisbon Lounge I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28548u.tif",
+     "width": 5411,
+     "height": 4299,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732786/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Coffee shop II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28552u.tif",
+     "width": 5412,
+     "height": 4299,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732791/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. Coffee shop III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28553u.tif",
+     "width": 5412,
+     "height": 4300,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732792/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club I",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28554u.tif",
+     "width": 5676,
+     "height": 4344,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732793/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club II",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28555u.tif",
+     "width": 5556,
+     "height": 4452,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732794/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28556u.tif",
+     "width": 4488,
+     "height": 5544,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732795/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Union News restaurants, TWA, Idlewild. London Club IV",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a28000/5a28500/5a28557u.tif",
+     "width": 4300,
+     "height": 5412,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman) loewy, raymond",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1962-01-01",
+     "source_page": "http://www.loc.gov/item/2018732796/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 10
   },
   {
    "place": "Hotel Chelsea",
@@ -185,8 +299,21 @@
    "place": "Fontainebleau Miami Beach",
    "city": "Miami",
    "era": "1954",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Fontainebleau Hotel, Miami Beach, Florida. General view of lobby",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a30000/5a30200/5a30276u.tif",
+     "width": 5755,
+     "height": 4485,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "lapidus, morris gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1955-01-01",
+     "source_page": "http://www.loc.gov/item/2018727401/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Eden Roc",
@@ -391,16 +518,186 @@
    "city": "Hot Springs",
    "era": "1915",
    "notes": "Added 2026-11-09: HABS holds Fordyce Bathhouse (ar0035, 38 photographs) and Quapaw Bathhouse (ar0036, 21). Baths. Check which rooms can be visited as photographed (Fordyce is the park visitor centre; Quapaw reopened as a working bathhouse).",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Fordyce Bathhouse gymnasium, Helena, Arkansas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/13000/13097u.tif",
+     "width": 7451,
+     "height": 5843,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011631291/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Bathhouse Row, Fordyce Bathhouse, Central Avenue, Hot Springs, Garland County, AR",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ar/ar0000/ar0035/color/570630cu.tif",
+     "width": 4937,
+     "height": 3658,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "mann & stern boucher, jack e jandoli, liz kliwinski, leonard historic american buildings survey",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ar0035/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Lounge at the Fordyce Bathhouse, Hot Springs, Arkansas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/16500/16591u.tif",
+     "width": 6594,
+     "height": 5129,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011634784/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "The 1915 Renaissance-revival style Fordyce Bathhouse in Hot Springs, a city in central Arkansas' Ouachita Mountains",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/64900/64942u.tif",
+     "width": 12337,
+     "height": 7976,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2020-01-01",
+     "source_page": "http://www.loc.gov/item/2020741781/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "The 1915 Renaissance-revival style Fordyce Bathhouse in Hot Springs, a city in central Arkansas' Ouachita Mountains",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/64900/64943u.tif",
+     "width": 13281,
+     "height": 9545,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2020-01-01",
+     "source_page": "http://www.loc.gov/item/2020741782/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Massage table at the Fordyce Bathhouse, once the most opulent of such establishments along Bathouse Row in Hot Springs, Arkansas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/13400/13463u.tif",
+     "width": 5422,
+     "height": 6961,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011631657/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "'Chiropodist room' at the Fordyce Bathhouse, once the most opulent of such establishments along Bathouse Row in Hot Springs, Arkansas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/13400/13464u.tif",
+     "width": 5422,
+     "height": 6961,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011631658/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "An Indian Maid pours waters for explorer Hernando De Soto in the men's bath at the Fordyce Bathhouse, Helena, Arkansas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/13400/13422u.tif",
+     "width": 3480,
+     "height": 4369,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "1980-01-01",
+     "source_page": "http://www.loc.gov/item/2011631616/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Hot Springs National Park, Bathhouse Row, Fordyce Bathhouse: Mechanical & Piping Systems, State Highway 7, 1 mile north of U.S. Highway 70, Hot Springs, Garland County, AR",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ar/ar0000/ar0056/photos/010102pu.tif",
+     "width": 4853,
+     "height": 3503,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "historic american engineering record",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ar0056/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Bathhouse Row, Quapaw Bathhouse, Central Avenue, Hot Springs, Garland County, AR",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ar/ar0000/ar0036/color/570748cu.tif",
+     "width": 3630,
+     "height": 4970,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "jandoli, liz mccormick, brian historic american buildings survey boucher, jack e",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ar0036/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Bathhouse Row, Maurice Bathhouse, Central Avenue, Hot Springs, Garland County, AR",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ar/ar0000/ar0034/color/570886cu.tif",
+     "width": 4863,
+     "height": 3586,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "wininski, daniel j mccall, gregory c dolinsky, paul d boucher, jack e jandoli, liz historic american buildings survey",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ar0034/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Bathhouse Row & Grand Promenade, Central Avenue, between Reserve & Fountain Streets, Hot Springs, Garland County, AR",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ar/ar0000/ar0031/color/571934cu.tif",
+     "width": 3625,
+     "height": 4893,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "peters, michael schlefer, marion k. boucher, jack e. mann & stern mccall, gregory jandoli, liz wininski, daniel kliwinski, leonard historic american buildings survey mccormick, brian",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/ar0031/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 12
   },
   {
    "place": "Essex House",
    "city": "New York",
    "era": "1931",
    "notes": "Added 2026-11-09: Gottscho-Schleisner high-res frames exist (lobby 1957, Bombay bar and Colonnades 1963). Public rooms only, and only rooms that survive in today's hotel.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Essex House, Central Park South, New York City. Bombay bar III",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a29000/5a29800/5a29812u.tif",
+     "width": 6330,
+     "height": 5095,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "gottscho, samuel h. (samuel herman)",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1963-01-01",
+     "source_page": "http://www.loc.gov/item/2018733178/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Essex House, Central Park South. Lobby, long view to 58th St.",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/gsc/5a25000/5a25500/5a25514u.tif",
+     "width": 6370,
+     "height": 5103,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "raymond loewy associates gottscho-schleisner, inc",
+     "collection": "Gottscho-Schleisner Collection, Library of Congress",
+     "date": "1957-01-01",
+     "source_page": "http://www.loc.gov/item/2018729481/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 2
   },
   {
    "place": "Brown Palace Hotel",
@@ -408,6 +705,18 @@
    "era": "1892",
    "notes": "Added 2026-11-09: Carol M. Highsmith, 2016, the atrium lobby (items 2017885319, 2017885320). Two frames found so far; needs four.",
    "candidates": [
+    {
+     "title": "The historic Brown Palace Hotel in Denver, one of the first to employ an \"atrium style\" with entire floors exposed to the lobby",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/48600/48690u.tif",
+     "width": 6882,
+     "height": 5520,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2016-01-01",
+     "source_page": "http://www.loc.gov/item/2017885320/",
+     "provider": "Library of Congress"
+    },
     {
      "title": "Lobby of the historic Brown Palace Hotel in Denver. The hotel, one of the first to employ an \"atrium style\" with entire floors exposed to the lobby, was built in 1892 of sandstone and red granite",
      "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/48600/48689u.tif",
@@ -419,9 +728,57 @@
      "date": "2016-01-01",
      "source_page": "http://www.loc.gov/item/2017885319/",
      "provider": "Library of Congress"
+    },
+    {
+     "title": "Photographer Carol M. Highsmith pauses in her shoot of the Cliff Palace ruins at Mesa Verde National Park in southwestern Colorado's Montezuma County. Photographer Christy Brown",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/37400/37483u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2016-01-01",
+     "source_page": "http://www.loc.gov/item/2017687406/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Ashton Villa,  built in 1858-59, was the first of Galveston's Broadway \"palaces,\" as well as the first brick house to be built in Texas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/18700/18761u.tif",
+     "width": 6144,
+     "height": 4096,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2012-01-01",
+     "source_page": "http://www.loc.gov/item/2013650805/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Ashton Villa,  built in 1858-59, was the first of Galveston's Broadway \"palaces,\" as well as the first brick house to be built in Texas",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/18700/18760u.tif",
+     "width": 4096,
+     "height": 3864,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2012-01-01",
+     "source_page": "http://www.loc.gov/item/2013650804/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Wall hat rack at Boettcher Fort Lodge at Park Range Ranch, a working cattle ranch and guest ranch, but only for hunters, fishers, and other friends of the owner, in North Park, Colorado. (Coloradans i",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/38000/38068u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2016-01-01",
+     "source_page": "http://www.loc.gov/item/2017687960/",
+     "provider": "Library of Congress"
     }
    ],
-   "count": 1
+   "count": 6
   },
   {
    "place": "Hotel Congress",
@@ -436,24 +793,267 @@
    "city": "Tucson",
    "era": "1930",
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, seven high-res frames (highsm 53976 to 53982: library, patio, courtyards, walkway, cactus gardens, lamp). Masters are 227 MB TIFFs; IIIF derivatives 404 for this run. Picked in 2026-W47 if the masters pass the build.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Courtyards at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53978u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702014/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Library at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53979u.tif",
+     "width": 10913,
+     "height": 6928,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702015/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Walkway at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53981u.tif",
+     "width": 11568,
+     "height": 8678,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702017/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Patio at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53977u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702013/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53980u.tif",
+     "width": 7665,
+     "height": 9829,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702016/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53982u.tif",
+     "width": 8708,
+     "height": 11608,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702018/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Large decorative lamp at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53976u.tif",
+     "width": 8708,
+     "height": 11608,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702012/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "This sign and the motel buildings it advertises remain (in 2018), but the place is long out of business in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49400/49422u.tif",
+     "width": 7241,
+     "height": 7365,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663140/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Art deco-style sign for an unnamed hotel (at least on the sign) in Tucson, Arizona. It belongs to a vintage property that now (2018) is a Quality Inn property",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49400/49407u.tif",
+     "width": 6909,
+     "height": 8770,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018",
+     "source_page": "http://www.loc.gov/item/2018663125/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 9
   },
   {
    "place": "Hermosa Inn",
    "city": "Paradise Valley",
    "era": "1930s",
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, eleven frames (highsm 53529 to 53539: patio, walkway, fountain, entrance, dining room, western artifacts corner, cactus gardens). Lon Megargee's adobe home turned inn; still open. Check the dining room frame and the patio for a set of four.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Patio at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53538u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701574/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Walkway at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53529u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701565/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Entrance to the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53533u.tif",
+     "width": 11067,
+     "height": 7845,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701569/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Entrance to the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53534u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701570/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Scene at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53537u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701573/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Scene at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53539u.tif",
+     "width": 11038,
+     "height": 8280,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701575/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Dining room at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-t-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53531u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701567/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Western artifacts in a corner of the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Ariz",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53532u.tif",
+     "width": 5127,
+     "height": 7989,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018",
+     "source_page": "http://www.loc.gov/item/2018701568/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53535u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701571/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Hermosa Inn, a secluded hotel, restaurant, and lounge or \"boutique hideaway\" in the words of its owners in Paradise Valley, a well-to-do town outside Phoenix, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53500/53536u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018701572/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 10
   },
   {
    "place": "El Tovar Hotel",
    "city": "Grand Canyon",
    "era": "1905",
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, lobby (items 2018702401, 2018702384), entrance, trophy heads. Needs the dining room and lounge frames to reach four rooms.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Entrance to the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River across northern i",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54367u.tif",
+     "width": 10970,
+     "height": 5705,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702403/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Gadsden Hotel",

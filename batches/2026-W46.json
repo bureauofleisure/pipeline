@@ -58,14 +58,22 @@
    "source_url": "https://www.joethomasphoto.com/million-goods/",
    "category": "Bar",
    "designer": "Gjergji Shkurti",
+   "bring": "BRING SOMEONE WHO SPEAKS WINE.",
+   "cover": 1,
    "discovered_via": "https://www.dezeen.com/2026/09/25/gjergji-shkurti-million-goods-ft-green/",
+   "drop_photos": [
+    2
+   ],
+   "edited_at": "2026-11-17T13:18:02Z",
    "photos": [
     "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w"
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629277951-98QQM2PTK0NTC4XJJ26F/MillionGoods-FortGreene-JoeThomas-2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285722-098W95JDKL18E1HDDO57/MillionGoods-FortGreene-JoeThomas-5.jpg?format=2500w"
    ]
   },
   {
@@ -90,6 +98,7 @@
    "source_url": "https://www.dezeen.com/2026/09/26/skywalker-grill-lucas-museum-narrative-art-los-angeles-rockwell-group/",
    "category": "Restaurant",
    "designer": "Rockwell Group",
+   "bring": "BRING SOMEONE WHO DESERVES A LONG LUNCH.",
    "cover": 1,
    "discovered_via": "https://www.dezeen.com/2026/09/26/skywalker-grill-lucas-museum-narrative-art-los-angeles-rockwell-group/",
    "photos": [
@@ -123,6 +132,7 @@
    "source_url": "https://www.loc.gov/item/2015634492/",
    "category": "Hotel",
    "designer": "Dorothy Draper",
+   "bring": "BRING YOUR MOTHER.",
    "cover": 1,
    "discovered_via": "https://www.loc.gov/collections/carol-m-highsmith/",
    "archive": true,

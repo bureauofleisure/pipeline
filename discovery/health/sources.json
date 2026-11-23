@@ -1,18 +1,19 @@
 {
  "job": "sources",
- "at": "2026-11-17T12:53:33Z",
+ "at": "2026-11-17T13:07:12Z",
  "ok": true,
  "stats": {
-  "checked": 209,
+  "checked": 236,
   "unreachable": [
    "Dezeen hotels",
    "Dezeen bars",
    "Dezeen restaurants",
+   "Dimorestudio",
    "Hollie Bowden",
    "Ace Hotel press",
    "Ruben Cabrera",
-   "MOVS STUDIO",
-   "Rockwell Group"
+   "Rockwell Group",
+   "Paul Bowyer"
   ],
   "feeds_with_no_items": [
    "Frame",
