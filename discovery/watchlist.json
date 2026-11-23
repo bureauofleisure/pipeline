@@ -224,6 +224,48 @@
    "status": "DROPPED",
    "last_check": null,
    "ready_photos": 0
+  },
+  {
+   "index": "0044",
+   "place": "Casa Cody",
+   "city": "Palm Springs",
+   "designer": "Electric Bowery",
+   "credit": "Lance Gerber & Josh Cho",
+   "source_url": "https://www.electricbowery.com/casa-cody",
+   "pages": [],
+   "added": "2026-11-23",
+   "reason": "photo 1 HOLD: too saturated ; photo 4 wide-angle lean +3.3 deg left as shot ; only 3 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0046",
+   "place": "Bavel",
+   "city": "Los Angeles",
+   "designer": "Studio UNLTD",
+   "credit": "",
+   "source_url": "https://www.studiounltd.com/work/bavel",
+   "pages": [],
+   "added": "2026-11-23",
+   "reason": "photo 2 HOLD: too saturated ; only 3 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
+  },
+  {
+   "index": "0048",
+   "place": "Bar Bardo",
+   "city": "Milan",
+   "designer": "NM3",
+   "credit": "Piercarlo Quecchia",
+   "source_url": "https://www.dezeen.com/2026/10/19/nm3-classic-bar-milan/",
+   "pages": [],
+   "added": "2026-11-23",
+   "reason": "photo 2 HOLD: brightness ; photo 5 HOLD: brightness ; only 3 photos passed, need 4",
+   "status": "WATCHING",
+   "last_check": null,
+   "ready_photos": 0
   }
  ]
 }
