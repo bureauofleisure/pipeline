@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-23T08:08:47Z",
+ "searched": "2026-11-23T14:28:15Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,20 +7,22 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 6,
-  "results": 1,
+  "searches": 1,
+  "results": 0,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
-  "errors": [],
+  "errors": [
+   "rate limited by loc.gov at Café Central; stopped searching, kept earlier finds"
+  ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 1,
-  "targets_tried": 6
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 27,
+ "next_target": 28,
  "targets": [
   {
    "place": "Rainbow Room",
