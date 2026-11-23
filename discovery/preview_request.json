@@ -1,35 +1,339 @@
 {
  "sets": [
   {
-   "id": "arizonainn",
+   "id": "casacody",
    "urls": [
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53977u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53978u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53979u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53981u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53980u.tif",
-    "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53976u.tif"
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_10.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_14.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_15.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_17.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_18.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_19.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_2.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_22.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_23.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_27.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_3.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_32.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_36.jpg",
+    "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_8.jpg"
    ]
   },
   {
-   "id": "milliongoods",
+   "id": "surrey",
    "urls": [
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629278228-85THL7O8U334PRM9JSLN/MillionGoods-FortGreene-JoeThomas-1.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629277951-98QQM2PTK0NTC4XJJ26F/MillionGoods-FortGreene-JoeThomas-2.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281574-FM5WT1AG3SWTBQ2ULO8Y/MillionGoods-FortGreene-JoeThomas-3.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281616-US4PBYOV3J7A2HZC9QEX/MillionGoods-FortGreene-JoeThomas-4.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285722-098W95JDKL18E1HDDO57/MillionGoods-FortGreene-JoeThomas-5.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285752-ENDUX482KXQAGJCXSW4O/MillionGoods-FortGreene-JoeThomas-6.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629288749-2E2RDAB84ICE5J6WLEGA/MillionGoods-FortGreene-JoeThomas-7.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629297203-W9Q17YHN73YXJOPM4AY0/MillionGoods-FortGreene-JoeThomas-12.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299348-EGRI1S2CXTTJ9LQEIDZL/MillionGoods-FortGreene-JoeThomas-13.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302781-1K6TC5KIIFDIXNYKJ4DZ/MillionGoods-FortGreene-JoeThomas-16.jpg?format=2500w"
+    "http://static1.squarespace.com/static/62d05e3e529a4114ea3388ef/6321b6818580b9135735f777/68b5ada1a9a1e11d654cec9b/1759146744738/2025_CNY_Facilities_Lobby_WhatTheFox-0064.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/5e18fb8b-8d5f-4c00-8e51-5a15dfeeddba/2025_CNY_Facilities_Lobby_WhatTheFox-0057.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/5ea75a13-9e1d-4933-adda-5b0a8e922246/2025_CNY_Facilities_Lobby_WhatTheFox-0015.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/d8eb1b87-7f02-4304-965a-518354ef7b52/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_0068.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/dde977f9-94ec-4496-9754-4bada08ed846/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_1604.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/e10782d6-455e-46b9-b041-1e986f25dea7/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_0014.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "strakers",
+   "urls": [
+    "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=1200",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=1920",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=480",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=750",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=1200",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=1920",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=480",
+    "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=750"
+   ]
+  },
+  {
+   "id": "waldorf",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910821210-6DM8NJGGAVDZZW3MNJS6/WANY-ModelRooms-112024-JoeThomas-v4-1.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910821271-JL7V211JP1O7B6V2373Z/WANY-ModelRooms-112024-JoeThomas-v4-2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910823358-6H9OFBH9S7M7QP9PJVU9/WANY-ModelRooms-112024-JoeThomas-v4-3.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910823894-877CADCXIORQ2X2DBF8I/WANY-ModelRooms-112024-JoeThomas-v4-5.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910825100-HTBNBUKQQG8SLZWNGTRK/WANY-ModelRooms-112024-JoeThomas-v4-6.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910825568-P2UTTI5A8IA4Z9ZFLHFQ/WANY-ModelRooms-112024-JoeThomas-v4-7.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910826795-39KW206DO6CHF1RW1OUI/WANY-ModelRooms-112024-JoeThomas-v4-8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910827487-6QQ5FDGK7VR0OR3614IE/WANY-ModelRooms-112024-JoeThomas-v4-9.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910828416-JIMNDMVZYWPJP48HWAYK/WANY-ModelRooms-112024-JoeThomas-v4-10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910835651-38NEKOZGEP0OG9WUKHEI/WANY-ModelRooms-112024-JoeThomas-v4-11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910838610-ENA5K3KRUUWCC5SJPU6H/WANY-ModelRooms-112024-JoeThomas-v4-14.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910839632-B2ADWGE82CU32Y3EHK73/WANY-ModelRooms-112024-JoeThomas-v4-15.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910840428-CXA742RWQX95XKKSY8N9/WANY-ModelRooms-112024-JoeThomas-v4-16.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910841376-C364RD7UAQRGMW696DSW/WANY-ModelRooms-112024-JoeThomas-v4-17.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910842946-0MFL5QNG1DUX2FEZFKFI/WANY-ModelRooms-112024-JoeThomas-v4-20.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910844020-30MSLTRL560W9OJ5DOKQ/WANY-ModelRooms-112024-JoeThomas-v4-22.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910846786-HG2R3WNL7A61XOQ4D73F/WANY-ModelRooms-112024-JoeThomas-v4-24.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910847025-P1TCSBIX3N98JM8T1E1R/WANY-ModelRooms-112024-JoeThomas-v4-23.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "stonecabin",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865417261-7WAUIAUG2S2Q6UFJ455J/ChatwalLodge-StoneCabin-JoeThomas-1.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865417497-666D5M8QIPQOGDLXZ5LW/ChatwalLodge-StoneCabin-JoeThomas-2.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865421713-IH2J2YSQUKI54M2GL6GS/ChatwalLodge-StoneCabin-JoeThomas-4.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865421732-79OAJGU3N82TTUE8K7PI/ChatwalLodge-StoneCabin-JoeThomas-3.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865424366-B63ROHV4A857UVH5DGLN/ChatwalLodge-StoneCabin-JoeThomas-5.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865424484-R9RRE1C76SFTUFZE3OEV/ChatwalLodge-StoneCabin-JoeThomas-6.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865426742-RX2V7HOVMM3WA2HNCITP/ChatwalLodge-StoneCabin-JoeThomas-7.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865427142-DB2FBHA4QEDN6M5FNTQM/ChatwalLodge-StoneCabin-JoeThomas-8.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865430460-FIM3XN5ZDTB8DW6QXJP1/ChatwalLodge-StoneCabin-JoeThomas-10.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865430885-TR7QYGHE4XSIB308Y68E/ChatwalLodge-StoneCabin-JoeThomas-9.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865432612-SOYMXU9BHI75ARWI62AN/ChatwalLodge-StoneCabin-JoeThomas-11.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865433307-02HB3XTNSSMXBQ2SZBLZ/ChatwalLodge-StoneCabin-JoeThomas-12.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865434777-9PK0X7PJUIHV7NBOSEIF/ChatwalLodge-StoneCabin-JoeThomas-13.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865435785-QGWM12YDIBOYSKPB8PO7/ChatwalLodge-StoneCabin-JoeThomas-14.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865438323-ALO7LSAK2BQY8DTYC0PA/ChatwalLodge-StoneCabin-JoeThomas-15.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865438461-3054FBTNI41036SHD2IF/ChatwalLodge-StoneCabin-JoeThomas-16.jpeg?format=2500w"
+   ]
+  },
+  {
+   "id": "chatwal",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055682102-BSPPSUSRZ0I3ZF273YEZ/ChatwalLodge-JoeThomas-062022-3.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055685316-GUZUVCGJI85PMGIH8GCE/ChatwalLodge-JoeThomas-062022-2.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055686780-MYF9VYYP50V2AUM94BYQ/ChatwalLodge-JoeThomas-062022-7.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055689040-3C48OTDW3DPWHNQ4QPFK/ChatwalLodge-JoeThomas-062022-10.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055692062-NL1IQF7FD1054GVQT1JZ/ChatwalLodge-JoeThomas-062022-18.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055692471-I43ZO7C29EA01QUQSJN4/ChatwalLodge-JoeThomas-062022-21.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055695318-SR7XA05STXX6V4E0WK9T/ChatwalLodge-JoeThomas-062022-22.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055696015-T3D28ZO7N1F3H5X0XYON/ChatwalLodge-JoeThomas-062022-24.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055698595-93QECNXJY578IW0FUSZG/ChatwalLodge-JoeThomas-062022-26.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055699921-WHFOL5OWBF8HOW38ME52/ChatwalLodge-JoeThomas-062022-27.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055700090-JB692I9V364WCUJOL72V/ChatwalLodge-JoeThomas-062022-49.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055701652-HAJYH7UQVV74JQRR1HGV/ChatwalLodge-JoeThomas-062022-51.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055702360-0958REFFES123RCPJDLA/ChatwalLodge-JoeThomas-062022-56.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055704447-YM8WMGQEA3GPIEYJ5J4G/ChatwalLodge-JoeThomas-062022-57.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055704513-S8W8JCMTRMSNRJP9HGON/ChatwalLodge-JoeThomas-062022-63.jpeg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662056193198-5RSM0H3JJ8M80QCQGM2M/ChatwalLodge-JoeThomas-062022-52.jpeg?format=2500w"
+   ]
+  },
+  {
+   "id": "goldbar",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134299727-SZW9M1VD3Q48B4UBTK79/_MG_1813.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134310386-0QQRZ3CY0L4OFWAE2NM6/_MG_1821.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134328132-LW10BK7HSLXSXENY3WXI/_MG_1787.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134328151-AY5F0MJDK8XKI7XPM81L/_MG_1784.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134335503-EQ0UFSLN31UJ3G327EQT/_MG_1798_2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134353692-B0O0OALAOLVFZFTCMCGU/_MG_1810.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "surflodge",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130015026-6VF2Y1YDDAR9QP862QN5/_MG_9428.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130016505-A2W2RWTJGKYXA92WHXAE/6J3E5047.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130019333-JMUZCU68VJYUGNACBERT/6J3E6760.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130028011-IZ18L2MWP4RMAL6FI72O/10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130028586-1377G131ZOBMNRQH7SL5/BackBar.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130037791-YN2RQWHLS6OM5SK8PSWZ/BackPortch_night.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130039749-2SUL6FQRKJT6E6XQ8I4L/BackDeck.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130048370-H2A5FUQ8KP4OS7GB18VI/BackTables_night.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130048463-XNAEVQ88NKI9X3GEU3KS/Bar.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130057481-QQ8KLLUIM3CPD8P7YI79/Baratanight_frontview.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130060208-T6B12KU4J28AOJQ72F71/bathroom+3.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130066055-TEKMTC6Z7MFDSK1JC8HO/BookCase.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130069023-3WHG6BEF6EUOJJ38AV7M/BookShelf.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130075166-SS8S9JXX57UDMZ4HO6NY/DiningRoomSunset.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130077677-VYZARDG49YP5SN9MUVT8/Elephant+tables.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130085242-2LNDSQD3O7KSGCG8HMCN/Entry1.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130085959-PM0SBDIG5OUZ580U70VO/FIRE.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130091847-CYGYCORQWY1WB15RYSNL/Interior_BackLeft.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130093403-LJ3VQAX10DXCT21ADC3W/Hammock.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130099840-UL11ZSNUE1QJM46W7BY4/Interior_Side.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "table50",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133290615-XHUKYRI0AZYCAMN86WOB/Lounge+01.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133290653-Z4BS8ESVV3HKQ0TK0NTZ/Lounge+05.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133298061-NSWCU204RTCQMQO8T2FA/Lounge+06.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133298145-D8ZKN7GECTQEWKXFK36Z/Lounge+04.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133304711-NY1E21KFMHV887F8CFSO/Lounge+02.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133304955-IIJPIIBHP0YKAKRIHWFD/Lounge+03.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "decock",
+   "urls": [
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398846427-OH4K62XBQJGELOJ1709L/NoeDeWitt_GeraldDecock_2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398851650-XV19V38AEIBKSF79A4RA/NoeDeWitt_GeraldDecock_3.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398858016-DMYDD5X1PJNX0Y1Q6BSP/NoeDeWitt_GeraldDecock_4.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398869432-83NUN9WWQCMHPSI4OQHM/NoeDeWitt_GeraldDecock_5.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398875979-ZTMEXX1AVCZNFICCX240/NoeDeWitt_GeraldDecock_6.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398885323-2S30VHNY2NF0QRZHK6FM/NoeDeWitt_GeraldDecock_7.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398892674-PRUHV1NHSMLKU7FCJOCV/NoeDeWitt_GeraldDecock_8.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398900751-STDG6HQDM864USCXXAGP/NoeDeWitt_GeraldDecock_9.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398905791-S47TSC5FBLXXW7G2MD6C/NoeDeWitt_GeraldDecock_10.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398915440-LNIC3ITYKRKR7YINJK3L/NoeDeWitt_GeraldDecock_11.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398922319-VSZ45AR38F9A75G1WRLL/NoeDeWitt_GeraldDecock_12.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398930809-GO7PISAKJLDZLLHKLYOZ/NoeDeWitt_GeraldDecock_13.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398935582-HPZFE6Q0VJY7YNGVV5Z5/NoeDeWitt_GeraldDecock_14.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398942653-1HLM640CWP5BYVNCVNA8/NoeDeWitt_GeraldDecock_15.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398950708-J9VE14VE30D1XPIRJY7O/NoeDeWitt_GeraldDecock_16.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398956701-T2R5551Z7IMRVA3MSVWS/NoeDeWitt_GeraldDecock_17.jpg?format=2500w"
+   ]
+  },
+  {
+   "id": "kimptonera",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_13.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_14.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_15.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_16.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_17.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_18.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_19.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_20.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_21.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_22.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_23.jpg"
+   ]
+  },
+  {
+   "id": "nm3",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_0-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_1-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_3-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_4-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_5-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_6-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_7-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_13.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_14.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_15.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_16.jpg"
+   ]
+  },
+  {
+   "id": "emestudio",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_11.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_13.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_14.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_15.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_16.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_17.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_18.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_19.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_20.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_21.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_22.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_23.jpg"
+   ]
+  },
+  {
+   "id": "spaceage",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_6-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_22.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_34.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_39.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_40.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_42.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors-sq.jpg"
+   ]
+  },
+  {
+   "id": "dive",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_4.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_6.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_10.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_11.jpg"
+   ]
+  },
+  {
+   "id": "jachifi",
+   "urls": [
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_005.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_020.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_086.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_088.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_134.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_137.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_153.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_161.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_170.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_174.jpg",
+    "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_185.jpg"
+   ]
+  },
+  {
+   "id": "arcane17",
+   "urls": [
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_0.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_2-1.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_2.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_3.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_5.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_7.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_8.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_9.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_12.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_13.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-paris-restaurant.jpg",
+    "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-paris-restaurant-2.jpg"
    ]
   }
  ]
