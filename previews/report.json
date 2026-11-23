@@ -1,221 +1,2678 @@
 {
  "sets": [
   {
-   "id": "arizonainn",
+   "id": "casacody",
    "photos": [
     {
      "n": 1,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53977u.tif",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_10.jpg",
      "ok": true,
-     "width": 11608,
-     "height": 8708,
-     "bytes": 303382856,
+     "width": 1429,
+     "height": 2000,
+     "bytes": 816008,
      "format": null,
      "gate": "PASS"
     },
     {
      "n": 2,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53978u.tif",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 429: Too Many Requests"
-    },
-    {
-     "n": 3,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53979u.tif",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 429: Too Many Requests"
-    },
-    {
-     "n": 4,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53981u.tif",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 429: Too Many Requests"
-    },
-    {
-     "n": 5,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53980u.tif",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 429: Too Many Requests"
-    },
-    {
-     "n": 6,
-     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53976u.tif",
-     "ok": false,
-     "error": "HTTPError: HTTP Error 429: Too Many Requests"
-    }
-   ],
-   "sheets": [
-    "arizonainn-1.jpg"
-   ]
-  },
-  {
-   "id": "milliongoods",
-   "photos": [
-    {
-     "n": 1,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629278228-85THL7O8U334PRM9JSLN/MillionGoods-FortGreene-JoeThomas-1.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_14.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 1243970,
-     "format": null,
-     "gate": "PASS"
-    },
-    {
-     "n": 2,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629277951-98QQM2PTK0NTC4XJJ26F/MillionGoods-FortGreene-JoeThomas-2.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1458633,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 691430,
      "format": null,
      "gate": "PASS"
     },
     {
      "n": 3,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281574-FM5WT1AG3SWTBQ2ULO8Y/MillionGoods-FortGreene-JoeThomas-3.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_15.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1709259,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 713153,
      "format": null,
      "gate": "PASS"
     },
     {
      "n": 4,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629281616-US4PBYOV3J7A2HZC9QEX/MillionGoods-FortGreene-JoeThomas-4.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_17.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 961566,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 558259,
      "format": null,
-     "gate": "FAIL: compression artifacts (blockiness 1.53)"
+     "gate": "FAIL: compression artifacts (blockiness 1.49)"
     },
     {
      "n": 5,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285722-098W95JDKL18E1HDDO57/MillionGoods-FortGreene-JoeThomas-5.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_18.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1158248,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 962718,
      "format": null,
      "gate": "PASS"
     },
     {
      "n": 6,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629285752-ENDUX482KXQAGJCXSW4O/MillionGoods-FortGreene-JoeThomas-6.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_19.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 440932,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 244707,
      "format": null,
-     "gate": "PASS"
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
     },
     {
      "n": 7,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629288749-2E2RDAB84ICE5J6WLEGA/MillionGoods-FortGreene-JoeThomas-7.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_2.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3334,
-     "bytes": 1203761,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 448688,
      "format": null,
-     "gate": "PASS"
+     "gate": "FAIL: compression artifacts (blockiness 1.43)"
     },
     {
      "n": 8,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629289784-SYO2YY3V8PD2H6KLMSZS/MillionGoods-FortGreene-JoeThomas-8.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_22.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 757716,
+     "width": 1334,
+     "height": 2000,
+     "bytes": 194323,
      "format": null,
-     "gate": "PASS"
+     "gate": "FAIL: compression artifacts (blockiness 1.70)"
     },
     {
      "n": 9,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294368-U3IP46DFABNPPNEIHYDG/MillionGoods-FortGreene-JoeThomas-9.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_23.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 653355,
+     "width": 2000,
+     "height": 1333,
+     "bytes": 262766,
      "format": null,
-     "gate": "PASS"
+     "gate": "FAIL: too small (1066x1333 after crop, need 1080x1350)"
     },
     {
      "n": 10,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629294896-IWDXI3TKE55CX4QD347L/MillionGoods-FortGreene-JoeThomas-10.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_27.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 699211,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 293657,
      "format": null,
      "gate": "PASS"
     },
     {
      "n": 11,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629296822-5VYT3Z2HDHCLCRNJQZ5M/MillionGoods-FortGreene-JoeThomas-11.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_3.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 926372,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 484607,
      "format": null,
-     "gate": "FAIL: compression artifacts (blockiness 1.44)"
+     "gate": "FAIL: compression artifacts (blockiness 1.38)"
     },
     {
      "n": 12,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629297203-W9Q17YHN73YXJOPM4AY0/MillionGoods-FortGreene-JoeThomas-12.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_32.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 796973,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 188057,
      "format": null,
-     "gate": "FAIL: compression artifacts (blockiness 1.60)"
+     "gate": "FAIL: compression artifacts (blockiness 1.56)"
     },
     {
      "n": 13,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299348-EGRI1S2CXTTJ9LQEIDZL/MillionGoods-FortGreene-JoeThomas-13.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_36.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 781057,
+     "width": 1333,
+     "height": 2000,
+     "bytes": 199878,
      "format": null,
-     "gate": "PASS"
+     "gate": "FAIL: too soft (sharpness 24, need 60)"
     },
     {
      "n": 14,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629299995-MKH89H64BXN6E4VNZD34/MillionGoods-FortGreene-JoeThomas-14.jpg?format=2500w",
+     "url": "https://electricbowery.com/wp-content/uploads/2022/12/Casa-Cody_8.jpg",
      "ok": true,
-     "width": 2500,
-     "height": 1667,
-     "bytes": 825773,
-     "format": null,
-     "gate": "PASS"
-    },
-    {
-     "n": 15,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302019-Q969J92DWSRC2G3CJIXK/MillionGoods-FortGreene-JoeThomas-15.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3750,
-     "bytes": 1533490,
-     "format": null,
-     "gate": "PASS"
-    },
-    {
-     "n": 16,
-     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1790629302781-1K6TC5KIIFDIXNYKJ4DZ/MillionGoods-FortGreene-JoeThomas-16.jpg?format=2500w",
-     "ok": true,
-     "width": 2500,
-     "height": 3333,
-     "bytes": 1357053,
+     "width": 1500,
+     "height": 2000,
+     "bytes": 922327,
      "format": null,
      "gate": "PASS"
     }
    ],
    "sheets": [
-    "milliongoods-1.jpg",
-    "milliongoods-2.jpg",
-    "milliongoods-3.jpg"
+    "casacody-1.jpg",
+    "casacody-2.jpg",
+    "casacody-3.jpg"
+   ]
+  },
+  {
+   "id": "surrey",
+   "photos": [
+    {
+     "n": 1,
+     "url": "http://static1.squarespace.com/static/62d05e3e529a4114ea3388ef/6321b6818580b9135735f777/68b5ada1a9a1e11d654cec9b/1759146744738/2025_CNY_Facilities_Lobby_WhatTheFox-0064.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1666,
+     "bytes": 659481,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/5e18fb8b-8d5f-4c00-8e51-5a15dfeeddba/2025_CNY_Facilities_Lobby_WhatTheFox-0057.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1146751,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.46)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/5ea75a13-9e1d-4933-adda-5b0a8e922246/2025_CNY_Facilities_Lobby_WhatTheFox-0015.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1269972,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/d8eb1b87-7f02-4304-965a-518354ef7b52/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_0068.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1586817,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/dde977f9-94ec-4496-9754-4bada08ed846/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_1604.jpg?format=2500w",
+     "ok": true,
+     "width": 2499,
+     "height": 1666,
+     "bytes": 454554,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/62d05e3e529a4114ea3388ef/e10782d6-455e-46b9-b041-1e986f25dea7/Corinthia_TheSurrey_NewYork_GrandDeluxeKing_0014.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1003928,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.55)"
+    }
+   ],
+   "sheets": [
+    "surrey-1.jpg"
+   ]
+  },
+  {
+   "id": "strakers",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=1200",
+     "ok": true,
+     "width": 1200,
+     "height": 1797,
+     "bytes": 307527,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=1920",
+     "ok": true,
+     "width": 1920,
+     "height": 2876,
+     "bytes": 657395,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=480",
+     "ok": true,
+     "width": 480,
+     "height": 719,
+     "bytes": 55960,
+     "format": null,
+     "gate": "FAIL: too small (480x600 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/3445ffefe8ceeb999c82d8f5209fe8b453cfe725-1800x2696.jpg?auto=format&w=750",
+     "ok": true,
+     "width": 750,
+     "height": 1123,
+     "bytes": 104576,
+     "format": null,
+     "gate": "FAIL: too small (750x937 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg",
+     "ok": true,
+     "width": 1800,
+     "height": 2696,
+     "bytes": 359535,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.76)"
+    },
+    {
+     "n": 6,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=1200",
+     "ok": true,
+     "width": 1200,
+     "height": 1797,
+     "bytes": 232737,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=1920",
+     "ok": true,
+     "width": 1920,
+     "height": 2876,
+     "bytes": 532371,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.36)"
+    },
+    {
+     "n": 8,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=480",
+     "ok": true,
+     "width": 480,
+     "height": 719,
+     "bytes": 42964,
+     "format": null,
+     "gate": "FAIL: too small (480x600 after crop, need 1080x1350)"
+    },
+    {
+     "n": 9,
+     "url": "https://cdn.sanity.io/images/xu6tp6ce/production/88d9f32fab38b31d21a65bc593d2f701f02fa06c-1800x2696.jpg?auto=format&w=750",
+     "ok": true,
+     "width": 750,
+     "height": 1123,
+     "bytes": 76845,
+     "format": null,
+     "gate": "FAIL: too small (750x937 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "strakers-1.jpg",
+    "strakers-2.jpg"
+   ]
+  },
+  {
+   "id": "waldorf",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910821210-6DM8NJGGAVDZZW3MNJS6/WANY-ModelRooms-112024-JoeThomas-v4-1.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 362039,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910821271-JL7V211JP1O7B6V2373Z/WANY-ModelRooms-112024-JoeThomas-v4-2.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 353825,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910823358-6H9OFBH9S7M7QP9PJVU9/WANY-ModelRooms-112024-JoeThomas-v4-3.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 354025,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910823894-877CADCXIORQ2X2DBF8I/WANY-ModelRooms-112024-JoeThomas-v4-5.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 392422,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910825100-HTBNBUKQQG8SLZWNGTRK/WANY-ModelRooms-112024-JoeThomas-v4-6.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1362,
+     "bytes": 313487,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910825568-P2UTTI5A8IA4Z9ZFLHFQ/WANY-ModelRooms-112024-JoeThomas-v4-7.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1366,
+     "bytes": 228720,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 30, need 60)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910826795-39KW206DO6CHF1RW1OUI/WANY-ModelRooms-112024-JoeThomas-v4-8.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 465426,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910827487-6QQ5FDGK7VR0OR3614IE/WANY-ModelRooms-112024-JoeThomas-v4-9.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1364,
+     "bytes": 301317,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910828416-JIMNDMVZYWPJP48HWAYK/WANY-ModelRooms-112024-JoeThomas-v4-10.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 287876,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910835651-38NEKOZGEP0OG9WUKHEI/WANY-ModelRooms-112024-JoeThomas-v4-11.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 409687,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910838610-ENA5K3KRUUWCC5SJPU6H/WANY-ModelRooms-112024-JoeThomas-v4-14.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1366,
+     "bytes": 561952,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910839632-B2ADWGE82CU32Y3EHK73/WANY-ModelRooms-112024-JoeThomas-v4-15.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 433265,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910840428-CXA742RWQX95XKKSY8N9/WANY-ModelRooms-112024-JoeThomas-v4-16.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1366,
+     "bytes": 331802,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910841376-C364RD7UAQRGMW696DSW/WANY-ModelRooms-112024-JoeThomas-v4-17.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1367,
+     "bytes": 341072,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910842946-0MFL5QNG1DUX2FEZFKFI/WANY-ModelRooms-112024-JoeThomas-v4-20.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1366,
+     "bytes": 314645,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910844020-30MSLTRL560W9OJ5DOKQ/WANY-ModelRooms-112024-JoeThomas-v4-22.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 432473,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910846786-HG2R3WNL7A61XOQ4D73F/WANY-ModelRooms-112024-JoeThomas-v4-24.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 316790,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1734910847025-P1TCSBIX3N98JM8T1E1R/WANY-ModelRooms-112024-JoeThomas-v4-23.jpg?format=2500w",
+     "ok": true,
+     "width": 2048,
+     "height": 1365,
+     "bytes": 829589,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "waldorf-1.jpg",
+    "waldorf-2.jpg",
+    "waldorf-3.jpg"
+   ]
+  },
+  {
+   "id": "stonecabin",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865417261-7WAUIAUG2S2Q6UFJ455J/ChatwalLodge-StoneCabin-JoeThomas-1.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 752438,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865417497-666D5M8QIPQOGDLXZ5LW/ChatwalLodge-StoneCabin-JoeThomas-2.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1394811,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865421713-IH2J2YSQUKI54M2GL6GS/ChatwalLodge-StoneCabin-JoeThomas-4.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 870157,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865421732-79OAJGU3N82TTUE8K7PI/ChatwalLodge-StoneCabin-JoeThomas-3.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1159125,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865424366-B63ROHV4A857UVH5DGLN/ChatwalLodge-StoneCabin-JoeThomas-5.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3745,
+     "bytes": 1429677,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865424484-R9RRE1C76SFTUFZE3OEV/ChatwalLodge-StoneCabin-JoeThomas-6.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 746957,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865426742-RX2V7HOVMM3WA2HNCITP/ChatwalLodge-StoneCabin-JoeThomas-7.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 779444,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865427142-DB2FBHA4QEDN6M5FNTQM/ChatwalLodge-StoneCabin-JoeThomas-8.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 774071,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865430460-FIM3XN5ZDTB8DW6QXJP1/ChatwalLodge-StoneCabin-JoeThomas-10.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 910829,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865430885-TR7QYGHE4XSIB308Y68E/ChatwalLodge-StoneCabin-JoeThomas-9.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1407660,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865432612-SOYMXU9BHI75ARWI62AN/ChatwalLodge-StoneCabin-JoeThomas-11.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3750,
+     "bytes": 1481686,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865433307-02HB3XTNSSMXBQ2SZBLZ/ChatwalLodge-StoneCabin-JoeThomas-12.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 833235,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865434777-9PK0X7PJUIHV7NBOSEIF/ChatwalLodge-StoneCabin-JoeThomas-13.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 825866,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865435785-QGWM12YDIBOYSKPB8PO7/ChatwalLodge-StoneCabin-JoeThomas-14.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 3125,
+     "bytes": 1126106,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865438323-ALO7LSAK2BQY8DTYC0PA/ChatwalLodge-StoneCabin-JoeThomas-15.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1166201,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1670865438461-3054FBTNI41036SHD2IF/ChatwalLodge-StoneCabin-JoeThomas-16.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 771913,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "stonecabin-1.jpg",
+    "stonecabin-2.jpg",
+    "stonecabin-3.jpg"
+   ]
+  },
+  {
+   "id": "chatwal",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055682102-BSPPSUSRZ0I3ZF273YEZ/ChatwalLodge-JoeThomas-062022-3.jpeg?format=2500w",
+     "ok": true,
+     "width": 2400,
+     "height": 3000,
+     "bytes": 1507628,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055685316-GUZUVCGJI85PMGIH8GCE/ChatwalLodge-JoeThomas-062022-2.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 561085,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055686780-MYF9VYYP50V2AUM94BYQ/ChatwalLodge-JoeThomas-062022-7.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 696582,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055689040-3C48OTDW3DPWHNQ4QPFK/ChatwalLodge-JoeThomas-062022-10.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 446733,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055692062-NL1IQF7FD1054GVQT1JZ/ChatwalLodge-JoeThomas-062022-18.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1445403,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055692471-I43ZO7C29EA01QUQSJN4/ChatwalLodge-JoeThomas-062022-21.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1426552,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055695318-SR7XA05STXX6V4E0WK9T/ChatwalLodge-JoeThomas-062022-22.jpeg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 2137050,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055696015-T3D28ZO7N1F3H5X0XYON/ChatwalLodge-JoeThomas-062022-24.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1701538,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055698595-93QECNXJY578IW0FUSZG/ChatwalLodge-JoeThomas-062022-26.jpeg?format=2500w",
+     "ok": true,
+     "width": 2000,
+     "height": 3000,
+     "bytes": 1353580,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055699921-WHFOL5OWBF8HOW38ME52/ChatwalLodge-JoeThomas-062022-27.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 516015,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055700090-JB692I9V364WCUJOL72V/ChatwalLodge-JoeThomas-062022-49.jpeg?format=2500w",
+     "ok": true,
+     "width": 2400,
+     "height": 3000,
+     "bytes": 660536,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 2.00)"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055701652-HAJYH7UQVV74JQRR1HGV/ChatwalLodge-JoeThomas-062022-51.jpeg?format=2500w",
+     "ok": true,
+     "width": 2400,
+     "height": 3000,
+     "bytes": 999889,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055702360-0958REFFES123RCPJDLA/ChatwalLodge-JoeThomas-062022-56.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1071344,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055704447-YM8WMGQEA3GPIEYJ5J4G/ChatwalLodge-JoeThomas-062022-57.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 1425256,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662055704513-S8W8JCMTRMSNRJP9HGON/ChatwalLodge-JoeThomas-062022-63.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 805275,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/54f89a5be4b08c1630c14c74/1662056193198-5RSM0H3JJ8M80QCQGM2M/ChatwalLodge-JoeThomas-062022-52.jpeg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1667,
+     "bytes": 648811,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "chatwal-1.jpg",
+    "chatwal-2.jpg",
+    "chatwal-3.jpg"
+   ]
+  },
+  {
+   "id": "goldbar",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134299727-SZW9M1VD3Q48B4UBTK79/_MG_1813.jpg?format=2500w",
+     "ok": true,
+     "width": 1140,
+     "height": 1500,
+     "bytes": 1567994,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134310386-0QQRZ3CY0L4OFWAE2NM6/_MG_1821.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1161,
+     "bytes": 1447173,
+     "format": null,
+     "gate": "FAIL: too small (928x1161 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134328132-LW10BK7HSLXSXENY3WXI/_MG_1787.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1298,
+     "bytes": 1084411,
+     "format": null,
+     "gate": "FAIL: too small (1038x1298 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134328151-AY5F0MJDK8XKI7XPM81L/_MG_1784.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1201,
+     "bytes": 1082620,
+     "format": null,
+     "gate": "FAIL: too small (960x1201 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134335503-EQ0UFSLN31UJ3G327EQT/_MG_1798_2.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1075564,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455134353692-B0O0OALAOLVFZFTCMCGU/_MG_1810.jpg?format=2500w",
+     "ok": true,
+     "width": 1061,
+     "height": 1500,
+     "bytes": 812848,
+     "format": null,
+     "gate": "FAIL: too small (1061x1326 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "goldbar-1.jpg"
+   ]
+  },
+  {
+   "id": "surflodge",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130015026-6VF2Y1YDDAR9QP862QN5/_MG_9428.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 989913,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130016505-A2W2RWTJGKYXA92WHXAE/6J3E5047.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 998,
+     "bytes": 1148130,
+     "format": null,
+     "gate": "FAIL: too small (798x998 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130019333-JMUZCU68VJYUGNACBERT/6J3E6760.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 998,
+     "bytes": 596166,
+     "format": null,
+     "gate": "FAIL: too small (798x998 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130028011-IZ18L2MWP4RMAL6FI72O/10.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1592340,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130028586-1377G131ZOBMNRQH7SL5/BackBar.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1242792,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130037791-YN2RQWHLS6OM5SK8PSWZ/BackPortch_night.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1225260,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130039749-2SUL6FQRKJT6E6XQ8I4L/BackDeck.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1066,
+     "bytes": 1675415,
+     "format": null,
+     "gate": "FAIL: too small (852x1066 after crop, need 1080x1350)"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130048370-H2A5FUQ8KP4OS7GB18VI/BackTables_night.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1422996,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130048463-XNAEVQ88NKI9X3GEU3KS/Bar.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1171501,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130057481-QQ8KLLUIM3CPD8P7YI79/Baratanight_frontview.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1238518,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130060208-T6B12KU4J28AOJQ72F71/bathroom+3.jpg?format=2500w",
+     "ok": true,
+     "width": 1000,
+     "height": 1500,
+     "bytes": 829014,
+     "format": null,
+     "gate": "FAIL: too small (1000x1250 after crop, need 1080x1350)"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130066055-TEKMTC6Z7MFDSK1JC8HO/BookCase.jpg?format=2500w",
+     "ok": true,
+     "width": 1000,
+     "height": 1500,
+     "bytes": 1134833,
+     "format": null,
+     "gate": "FAIL: too small (1000x1250 after crop, need 1080x1350)"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130069023-3WHG6BEF6EUOJJ38AV7M/BookShelf.jpg?format=2500w",
+     "ok": true,
+     "width": 1000,
+     "height": 1500,
+     "bytes": 1183522,
+     "format": null,
+     "gate": "FAIL: too small (1000x1250 after crop, need 1080x1350)"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130075166-SS8S9JXX57UDMZ4HO6NY/DiningRoomSunset.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1258689,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130077677-VYZARDG49YP5SN9MUVT8/Elephant+tables.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1154310,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130085242-2LNDSQD3O7KSGCG8HMCN/Entry1.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 1016108,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 17,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130085959-PM0SBDIG5OUZ580U70VO/FIRE.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 508361,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    },
+    {
+     "n": 18,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130091847-CYGYCORQWY1WB15RYSNL/Interior_BackLeft.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 999,
+     "bytes": 723723,
+     "format": null,
+     "gate": "FAIL: too small (799x999 after crop, need 1080x1350)"
+    },
+    {
+     "n": 19,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130093403-LJ3VQAX10DXCT21ADC3W/Hammock.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 999,
+     "bytes": 1053358,
+     "format": null,
+     "gate": "FAIL: too small (799x999 after crop, need 1080x1350)"
+    },
+    {
+     "n": 20,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455130099840-UL11ZSNUE1QJM46W7BY4/Interior_Side.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 1000,
+     "bytes": 815004,
+     "format": null,
+     "gate": "FAIL: too small (800x1000 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "surflodge-1.jpg",
+    "surflodge-2.jpg",
+    "surflodge-3.jpg",
+    "surflodge-4.jpg"
+   ]
+  },
+  {
+   "id": "table50",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133290615-XHUKYRI0AZYCAMN86WOB/Lounge+01.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 982,
+     "bytes": 1059173,
+     "format": null,
+     "gate": "FAIL: too small (785x982 after crop, need 1080x1350)"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133290653-Z4BS8ESVV3HKQ0TK0NTZ/Lounge+05.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 983,
+     "bytes": 1038746,
+     "format": null,
+     "gate": "FAIL: too small (786x983 after crop, need 1080x1350)"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133298061-NSWCU204RTCQMQO8T2FA/Lounge+06.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 983,
+     "bytes": 1001901,
+     "format": null,
+     "gate": "FAIL: too small (786x983 after crop, need 1080x1350)"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133298145-D8ZKN7GECTQEWKXFK36Z/Lounge+04.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 983,
+     "bytes": 1019357,
+     "format": null,
+     "gate": "FAIL: too small (786x983 after crop, need 1080x1350)"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133304711-NY1E21KFMHV887F8CFSO/Lounge+02.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 982,
+     "bytes": 982045,
+     "format": null,
+     "gate": "FAIL: too small (785x982 after crop, need 1080x1350)"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/565cfcd0e4b02e26d389800e/1455133304955-IIJPIIBHP0YKAKRIHWFD/Lounge+03.jpg?format=2500w",
+     "ok": true,
+     "width": 1500,
+     "height": 983,
+     "bytes": 809094,
+     "format": null,
+     "gate": "FAIL: too small (786x983 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "table50-1.jpg"
+   ]
+  },
+  {
+   "id": "decock",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398846427-OH4K62XBQJGELOJ1709L/NoeDeWitt_GeraldDecock_2.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1985364,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398851650-XV19V38AEIBKSF79A4RA/NoeDeWitt_GeraldDecock_3.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1529546,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398858016-DMYDD5X1PJNX0Y1Q6BSP/NoeDeWitt_GeraldDecock_4.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1652279,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398869432-83NUN9WWQCMHPSI4OQHM/NoeDeWitt_GeraldDecock_5.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1828,
+     "bytes": 2153523,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398875979-ZTMEXX1AVCZNFICCX240/NoeDeWitt_GeraldDecock_6.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 2105013,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398885323-2S30VHNY2NF0QRZHK6FM/NoeDeWitt_GeraldDecock_7.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 2043196,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398892674-PRUHV1NHSMLKU7FCJOCV/NoeDeWitt_GeraldDecock_8.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 2109476,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398900751-STDG6HQDM864USCXXAGP/NoeDeWitt_GeraldDecock_9.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1911208,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398905791-S47TSC5FBLXXW7G2MD6C/NoeDeWitt_GeraldDecock_10.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1611545,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398915440-LNIC3ITYKRKR7YINJK3L/NoeDeWitt_GeraldDecock_11.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1668914,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398922319-VSZ45AR38F9A75G1WRLL/NoeDeWitt_GeraldDecock_12.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1904404,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398930809-GO7PISAKJLDZLLHKLYOZ/NoeDeWitt_GeraldDecock_13.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 2209478,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398935582-HPZFE6Q0VJY7YNGVV5Z5/NoeDeWitt_GeraldDecock_14.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1481444,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398942653-1HLM640CWP5BYVNCVNA8/NoeDeWitt_GeraldDecock_15.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1926659,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398950708-J9VE14VE30D1XPIRJY7O/NoeDeWitt_GeraldDecock_16.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 2165582,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://images.squarespace-cdn.com/content/v1/5785a205f5e2318aa2ee32a5/1607398956701-T2R5551Z7IMRVA3MSVWS/NoeDeWitt_GeraldDecock_17.jpg?format=2500w",
+     "ok": true,
+     "width": 2500,
+     "height": 1641,
+     "bytes": 1754044,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "decock-1.jpg",
+    "decock-2.jpg",
+    "decock-3.jpg"
+   ]
+  },
+  {
+   "id": "kimptonera",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3194,
+     "bytes": 989967,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1760,
+     "bytes": 699130,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3222,
+     "bytes": 1342140,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_3.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1826,
+     "bytes": 421543,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_4.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1775,
+     "bytes": 306719,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 2167,
+     "bytes": 462859,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_6.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1705,
+     "bytes": 612370,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_7.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1740,
+     "bytes": 721042,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_8.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1757,
+     "bytes": 651550,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_9.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1729,
+     "bytes": 594327,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_10.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1769,
+     "bytes": 603154,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_11.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 973195,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_12.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1766,
+     "bytes": 643565,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_13.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1774,
+     "bytes": 535574,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_14.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1765,
+     "bytes": 723390,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_15.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1766,
+     "bytes": 654251,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_16.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1713,
+     "bytes": 479719,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_17.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1625,
+     "bytes": 490009,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 19,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_18.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1728,
+     "bytes": 619830,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 20,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_19.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1716,
+     "bytes": 464226,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 21,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_20.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1751,
+     "bytes": 541146,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 22,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_21.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1769,
+     "bytes": 405974,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 23,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_22.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1762,
+     "bytes": 559686,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 24,
+     "url": "https://static-2026.dezeen.com/uploads/2026/09/rocco-kimpton-era_inc_dezeen_2364_col_23.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1749,
+     "bytes": 533326,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "kimptonera-1.jpg",
+    "kimptonera-2.jpg",
+    "kimptonera-3.jpg",
+    "kimptonera-4.jpg"
+   ]
+  },
+  {
+   "id": "nm3",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_0-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1007680,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1527110,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_1-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1212508,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1642365,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1601428,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_3-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3544,
+     "bytes": 1252434,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_3.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1885365,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_4-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1120640,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_4.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1526084,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_5-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1185621,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2140610,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_6-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3544,
+     "bytes": 995852,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_6.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1526084,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_7-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3544,
+     "bytes": 1287340,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_7.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2101421,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_8.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2101421,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_9.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2140610,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_10.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2252287,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 19,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_11.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 2252287,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 20,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_12.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1885365,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 21,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_13.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1539422,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 22,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_14.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1642365,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 23,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_15.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1527110,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 24,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/bar-bardo-nm3-milan-cocktail-listening-bar-interior_dezeen_2364_col_16.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3547,
+     "bytes": 1226326,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "nm3-1.jpg",
+    "nm3-2.jpg",
+    "nm3-3.jpg",
+    "nm3-4.jpg"
+   ]
+  },
+  {
+   "id": "emestudio",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 539790,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 538923,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 1374923,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_3.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 677866,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_4.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 642702,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 1436427,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_6.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 966727,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_7.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 927388,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_8.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 2101666,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_9.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 2275791,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_10.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 1660066,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_11.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3542,
+     "bytes": 1774953,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_12.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2111847,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_13.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1897616,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 15,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_14.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1864645,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 16,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_15.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2419578,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 17,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_16.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1988561,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 18,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_17.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1578,
+     "bytes": 703048,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 19,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_18.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1302905,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 20,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_19.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2514321,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 21,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_20.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1421090,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 22,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_21.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2636141,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 23,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_22.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1918735,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 24,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/libreria-valladolid_em-estudio_dezeen_2364_col_23.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3545,
+     "bytes": 1599112,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "emestudio-1.jpg",
+    "emestudio-2.jpg",
+    "emestudio-3.jpg",
+    "emestudio-4.jpg"
+   ]
+  },
+  {
+   "id": "spaceage",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_4.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1366161,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 758029,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 402986,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_6-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 551302,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_6.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 551302,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_10.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 805718,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.64)"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_16.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 986733,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.48)"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_22.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 889097,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.54)"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_30.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 266907,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 37, need 60)"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_34.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 358862,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 55, need 60)"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_39.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1233409,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_40.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1637486,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors_dezeen_2364_col_42.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1059233,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.40)"
+    },
+    {
+     "n": 14,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/isern-serra-barcelona-speakeasy-bar-interiors-sq.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 2364,
+     "bytes": 322391,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "spaceage-1.jpg",
+    "spaceage-2.jpg",
+    "spaceage-3.jpg"
+   ]
+  },
+  {
+   "id": "dive",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 2364,
+     "bytes": 1012274,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3150,
+     "bytes": 691127,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 46, need 60)"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 2364,
+     "bytes": 880561,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1718162,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london-b_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1330,
+     "bytes": 493908,
+     "format": null,
+     "gate": "FAIL: too small (1064x1330 after crop, need 1080x1350)"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1280219,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_3.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 857576,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.57)"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_4.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1294380,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3151,
+     "bytes": 1010084,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.45)"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_6.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 498386,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_7.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1086523,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_8.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 1238977,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 13,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_9.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1773,
+     "bytes": 705543,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 14,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_10.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3153,
+     "bytes": 722800,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.64)"
+    },
+    {
+     "n": 15,
+     "url": "https://static-2026.dezeen.com/uploads/2026/06/golem-dive-bar-london_dezeen_2364_col_11.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3152,
+     "bytes": 465075,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.53)"
+    }
+   ],
+   "sheets": [
+    "dive-1.jpg",
+    "dive-2.jpg",
+    "dive-3.jpg"
+   ]
+  },
+  {
+   "id": "jachifi",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_005.jpg",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 501427,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_020.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 453886,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.62)"
+    },
+    {
+     "n": 3,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_086.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 554694,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.38)"
+    },
+    {
+     "n": 4,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_088.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 274642,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 2.54)"
+    },
+    {
+     "n": 5,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_134.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 390048,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 28, need 60)"
+    },
+    {
+     "n": 6,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_137.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 293805,
+     "format": null,
+     "gate": "FAIL: too soft (sharpness 31, need 60)"
+    },
+    {
+     "n": 7,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_153.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 359944,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.95)"
+    },
+    {
+     "n": 8,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_161.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 460040,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.48)"
+    },
+    {
+     "n": 9,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_170.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 505974,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.70)"
+    },
+    {
+     "n": 10,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_174.jpg",
+     "ok": true,
+     "width": 1875,
+     "height": 2500,
+     "bytes": 514719,
+     "format": null,
+     "gate": "FAIL: compression artifacts (blockiness 1.53)"
+    },
+    {
+     "n": 11,
+     "url": "https://openhouse-magazine.com/wp-content/uploads/salvalopez_isernserra_jac_185.jpg",
+     "ok": true,
+     "width": 2500,
+     "height": 1875,
+     "bytes": 752864,
+     "format": null,
+     "gate": "PASS"
+    }
+   ],
+   "sheets": [
+    "jachifi-1.jpg",
+    "jachifi-2.jpg"
+   ]
+  },
+  {
+   "id": "arcane17",
+   "photos": [
+    {
+     "n": 1,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_0.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3168,
+     "bytes": 1964046,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 2,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_2-1.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1764,
+     "bytes": 1182700,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 3,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1764,
+     "bytes": 1182700,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 4,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_3.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2728287,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 5,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_5.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2270186,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 6,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_7.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 1633601,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 7,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_8.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2136181,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 8,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_9.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3168,
+     "bytes": 1635968,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 9,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_12.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3546,
+     "bytes": 2368881,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 10,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-betyle-studio-restaurant-paris-france_dezeen_2364_col_13.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 3168,
+     "bytes": 941384,
+     "format": null,
+     "gate": "PASS"
+    },
+    {
+     "n": 11,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-paris-restaurant.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1330,
+     "bytes": 997590,
+     "format": null,
+     "gate": "FAIL: too small (1064x1330 after crop, need 1080x1350)"
+    },
+    {
+     "n": 12,
+     "url": "https://static-2026.dezeen.com/uploads/2026/10/arcane-17-paris-restaurant-2.jpg",
+     "ok": true,
+     "width": 2364,
+     "height": 1330,
+     "bytes": 997590,
+     "format": null,
+     "gate": "FAIL: too small (1064x1330 after crop, need 1080x1350)"
+    }
+   ],
+   "sheets": [
+    "arcane17-1.jpg",
+    "arcane17-2.jpg"
    ]
   }
  ]
