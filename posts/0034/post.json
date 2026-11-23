@@ -1,0 +1,28 @@
+{
+  "index": "0034",
+  "place": "Hotel Saint Augustine",
+  "status": "BENCHED",
+  "notes": [
+    "HOLD: slides do not match"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "1bd63b17ada4",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "32c389ba092c",
+  "meta": {
+    "neighborhood": "Montrose",
+    "city": "Houston",
+    "category": "Hotel",
+    "word": "GROOVY",
+    "reminds": "a Gio Ponti hotel lobby",
+    "credit": "Julie Soefer",
+    "designer": "Post Company",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.juliesoefer.com/hotels/hotel-saint-augustine",
+    "bring": "BRING SOMEONE WHO STILL SENDS POSTCARDS."
+  }
+}

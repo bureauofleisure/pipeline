@@ -1,0 +1,31 @@
+{
+  "index": "0033",
+  "place": "Bar Moruno",
+  "status": "BENCHED",
+  "notes": [
+    "photo 2 straightened -0.7 deg",
+    "photo 3 straightened -2.7 deg",
+    "photo 5 HOLD: too saturated",
+    "HOLD: slides do not match"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "c49510211011",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "0fdc0d4bf2e7",
+  "meta": {
+    "neighborhood": "Silver Lake",
+    "city": "Los Angeles",
+    "category": "Bar",
+    "word": "LOUCHE",
+    "reminds": "a Barcelona bodega, circa 1965",
+    "credit": "",
+    "designer": "Studio UNLTD",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.studiounltd.com/work/bar-moruno",
+    "bring": "BRING WHOEVER'S \"ONE DRINK\" IS NEVER ONE."
+  }
+}

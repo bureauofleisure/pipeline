@@ -1,0 +1,45 @@
+{
+  "index": "0045",
+  "place": "The Ryder Hotel",
+  "status": "BUILT",
+  "notes": [],
+  "grade": "v1.2",
+  "entry_hash": "f3b10b4a41bb",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "1ba13e0635e5",
+  "meta": {
+    "neighborhood": "Historic District",
+    "city": "Charleston",
+    "category": "Hotel",
+    "word": "SNAZZY",
+    "reminds": "a 1970s Malibu surf shack",
+    "credit": "Joe Thomas",
+    "designer": "",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.joethomasphoto.com/ryder-hotel",
+    "bring": "BRING THE FRIEND WHO SENDS YOU PLACES LIKE THIS."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0045/01.jpg?v=f3b10b4a41bb",
+    "https://bureauofleisure.github.io/pipeline/posts/0045/02.jpg?v=f3b10b4a41bb",
+    "https://bureauofleisure.github.io/pipeline/posts/0045/03.jpg?v=f3b10b4a41bb",
+    "https://bureauofleisure.github.io/pipeline/posts/0045/04.jpg?v=f3b10b4a41bb",
+    "https://bureauofleisure.github.io/pipeline/posts/0045/05.jpg?v=f3b10b4a41bb",
+    "https://bureauofleisure.github.io/pipeline/posts/0045/06.jpg?v=f3b10b4a41bb"
+  ],
+  "archive": "5 originals (5.0 MB), 5 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    1,
+    4,
+    5,
+    3
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0045\nTHE RYDER HOTEL. HISTORIC DISTRICT, CHARLESTON.\nTHE ORIGINAL STRUCTURE DATES TO 1958.\n91 ROOMS ON MEETING STREET.\nLITTLE PALM, A POOLSIDE CAFE AND BAR.\nWHITE, LIGHT WOOD, MIDCENTURY INSPIRATION.\nBRING THE FRIEND WHO SENDS YOU PLACES LIKE THIS.\nIN A WORD: SNAZZY.",
+  "alt_text": "The Ryder Hotel, Historic District, Charleston. A wood-panelled hotel lounge with a fireplace, a tiled coffee table and rattan armchairs under a coffered ceiling."
+}

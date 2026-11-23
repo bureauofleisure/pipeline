@@ -1,0 +1,49 @@
+{
+  "index": "0027",
+  "place": "Skywalker Grill",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 keystone corrected -1.7 deg",
+    "photo 6 straightened -2.2 deg",
+    "photo 3 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "b88e4d5df6bd",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "7872ad300c19",
+  "meta": {
+    "neighborhood": "Exposition Park",
+    "city": "Los Angeles",
+    "category": "Restaurant",
+    "word": "HONEYED",
+    "reminds": "a John Lautner living room",
+    "credit": "Tom McGovern",
+    "designer": "Rockwell Group",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/09/26/skywalker-grill-lucas-museum-narrative-art-los-angeles-rockwell-group/",
+    "bring": "BRING SOMEONE WHO DESERVES A LONG LUNCH."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0027/01.jpg?v=b88e4d5df6bd",
+    "https://bureauofleisure.github.io/pipeline/posts/0027/02.jpg?v=b88e4d5df6bd",
+    "https://bureauofleisure.github.io/pipeline/posts/0027/03.jpg?v=b88e4d5df6bd",
+    "https://bureauofleisure.github.io/pipeline/posts/0027/04.jpg?v=b88e4d5df6bd",
+    "https://bureauofleisure.github.io/pipeline/posts/0027/05.jpg?v=b88e4d5df6bd",
+    "https://bureauofleisure.github.io/pipeline/posts/0027/06.jpg?v=b88e4d5df6bd"
+  ],
+  "archive": "6 originals (3.7 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    4,
+    5,
+    6,
+    2
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0027\nSKYWALKER GRILL. EXPOSITION PARK, LOS ANGELES.\nON TOP OF THE LUCAS MUSEUM. OPENED SEPTEMBER 2026.\nCHERRY WOOD ON THE WALLS AND THE CEILING.\nNO TWO PANELS ALIKE. A BAR CLAD IN SILVER GILT.\nA TERRACE LOOKING OUT OVER DOWNTOWN.\nBRING SOMEONE WHO DESERVES A LONG LUNCH.\nIN A WORD: HONEYED.",
+  "alt_text": "Skywalker Grill, Exposition Park, Los Angeles. A curving restaurant wrapped in cherry wood, with pale leaf-patterned chairs around a sculptural bar under a glowing oval ceiling."
+}

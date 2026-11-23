@@ -1,0 +1,45 @@
+{
+  "index": "0020",
+  "place": "La Padrona",
+  "status": "BUILT",
+  "notes": [
+    "photo 5 rejected: compression artifacts (blockiness 1.44)"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "a5ee0c77cbb1",
+  "built": "2026-11-02",
+  "edited_at": "",
+  "photos_sig": "2edcacc8af60",
+  "meta": {
+    "neighborhood": "Back Bay",
+    "city": "Boston",
+    "category": "Restaurant",
+    "word": "MARBLED",
+    "reminds": "La Dolce Vita's Via Veneto",
+    "credit": "Joe Thomas",
+    "designer": "AvroKO",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.joethomasphoto.com/la-padrona/",
+    "bring": "BRING SOMEONE WHO HAS BEEN TO ITALY."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0020/01.jpg?v=a5ee0c77cbb1",
+    "https://bureauofleisure.github.io/pipeline/posts/0020/02.jpg?v=a5ee0c77cbb1",
+    "https://bureauofleisure.github.io/pipeline/posts/0020/03.jpg?v=a5ee0c77cbb1",
+    "https://bureauofleisure.github.io/pipeline/posts/0020/04.jpg?v=a5ee0c77cbb1",
+    "https://bureauofleisure.github.io/pipeline/posts/0020/05.jpg?v=a5ee0c77cbb1"
+  ],
+  "archive": "4 originals (2.1 MB), 0 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    3,
+    4,
+    1
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0020\nLA PADRONA. BACK BAY, BOSTON.\nINSIDE RAFFLES BOSTON. OPENED MAY 2024.\n8,600 SQUARE FEET OVER TWO FLOORS.\nA STAIR OF TRAVERTINE AND WALNUT.\n200 SEATS AROUND A VIOLET-VEINED MARBLE BAR.\nBRING SOMEONE WHO HAS BEEN TO ITALY.\nIN A WORD: MARBLED.",
+  "alt_text": "La Padrona, Back Bay, Boston. A two-storey restaurant with a curving plaster stair, a long walnut bar and low velvet sofas under glass pendant lights."
+}

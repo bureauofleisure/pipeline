@@ -1,0 +1,46 @@
+{
+  "index": "0041",
+  "place": "The Tusk Bar & Brass",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 HOLD: brightness",
+    "photo 5 straightened -1.9 deg"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "217522889366",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "984cd5c34908",
+  "meta": {
+    "neighborhood": "Tin Pan Alley",
+    "city": "New York",
+    "category": "Bar",
+    "word": "SULTRY",
+    "reminds": "Bemelmans after the theatre",
+    "credit": "",
+    "designer": "Islyn Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.islynstudio.com/projects/the-tusk-bar-brass/",
+    "bring": "BRING A THIRD DATE."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0041/01.jpg?v=217522889366",
+    "https://bureauofleisure.github.io/pipeline/posts/0041/02.jpg?v=217522889366",
+    "https://bureauofleisure.github.io/pipeline/posts/0041/03.jpg?v=217522889366",
+    "https://bureauofleisure.github.io/pipeline/posts/0041/04.jpg?v=217522889366",
+    "https://bureauofleisure.github.io/pipeline/posts/0041/05.jpg?v=217522889366"
+  ],
+  "archive": "4 originals (1.5 MB), 4 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    2,
+    5,
+    4
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0041\nTHE TUSK BAR AND BRASS. TIN PAN ALLEY, NEW YORK.\nINSIDE THE EVELYN, AN ART DECO BUILDING OF 1903.\nAN OYSTER BAR, THEN A GRAND DINING ROOM.\nA VINTAGE TAXIDERMY OSTRICH WATCHES THE ROOM.\nESQUIRE'S BEST BARS IN AMERICA, 2024.\nBRING A THIRD DATE.\nIN A WORD: SULTRY.",
+  "alt_text": "The Tusk Bar & Brass, Tin Pan Alley, New York. A low-lit cocktail bar with a curved fluted bar front, green stools, red velvet curtains and palms under a skylight."
+}

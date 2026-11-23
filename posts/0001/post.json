@@ -1,0 +1,56 @@
+{
+  "index": "0001",
+  "place": "VV's Cocktail Room",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 HOLD: brightness",
+    "photo 3 keystone corrected +2.8 deg",
+    "photo 3 rejected: too small (1064x1330 after crop, need 1080x1350)",
+    "photo 8 straightened -0.4 deg",
+    "photo 9 wide-angle lean +5.4 deg left as shot",
+    "photo 9 repeats photo 3 from a closer or further angle, dropped",
+    "photo 10 HOLD: brightness",
+    "photo 11 HOLD: brightness",
+    "photo 13 HOLD: too cool, too saturated",
+    "photo 5 dropped: did not match the set",
+    "BRING line not in build/bring_bank.txt, left off: BRING THE ONE WHO SAYS THEY DON'T LIKE COCKTAILS."
+  ],
+  "grade": "v1.2",
+  "entry_hash": "7fc55fdd497d",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "Chelsea",
+    "city": "New York",
+    "category": "Bar",
+    "word": "LACQUERED",
+    "reminds": "a Tokyo hi-fi den",
+    "credit": "",
+    "designer": "Josh Greenspan with USM",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/08/josh-greenspan-usm-vvs-cocktail-room-new-york/",
+    "bring": "BRING THE ONE WHO SAYS THEY DON'T LIKE COCKTAILS."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0001/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0001/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0001/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0001/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0001/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0001/06.jpg"
+  ],
+  "archive": "7 originals (4.9 MB), 3 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    4,
+    7,
+    12,
+    8
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0001\nVV'S COCKTAIL ROOM. CHELSEA, NEW YORK.\nEIGHTEEN SEATS. OMAKASE PACE.\nSTEEL BLUE USM HALLER SHELVING, WALL TO WALL.\nWALNUT BAR, BURGUNDY BANQUETTES.\nBUILT BY A RESTAURATEUR AND HIS FATHER.\nIN A WORD: LACQUERED.",
+  "alt_text": "VV's Cocktail Room, Chelsea, New York. A small cocktail bar lined in steel-blue modular shelving with a walnut bar and burgundy seats."
+}

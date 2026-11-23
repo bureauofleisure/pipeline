@@ -1,0 +1,47 @@
+{
+  "index": "0042",
+  "place": "Kimpton Era",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 straightened +1.0 deg",
+    "photo 6 dropped: did not match the set",
+    "photo 3 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "4966741d67c4",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "8bbaa030a393",
+  "meta": {
+    "neighborhood": "Rockefeller Center",
+    "city": "New York",
+    "category": "Hotel",
+    "word": "BURNISHED",
+    "reminds": "the Normandie's first-class salon",
+    "credit": "Read McKendree",
+    "designer": "INC Architecture & Design",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/03/kimpton-era-hotel-new-york-city-inc/",
+    "bring": "BRING WHOEVER YOU OWE A DINNER."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0042/01.jpg?v=4966741d67c4",
+    "https://bureauofleisure.github.io/pipeline/posts/0042/02.jpg?v=4966741d67c4",
+    "https://bureauofleisure.github.io/pipeline/posts/0042/03.jpg?v=4966741d67c4",
+    "https://bureauofleisure.github.io/pipeline/posts/0042/04.jpg?v=4966741d67c4",
+    "https://bureauofleisure.github.io/pipeline/posts/0042/05.jpg?v=4966741d67c4"
+  ],
+  "archive": "6 originals (4.2 MB), 6 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    1,
+    5,
+    4
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0042\nKIMPTON ERA. ROCKEFELLER CENTER, NEW YORK.\nA 33-STOREY TOWER ON WEST 48TH STREET.\nA BLACKENED STEEL STAIR IN A FLUTED ATRIUM.\nA SCARLET CERAMIC BAR, MOSAIC FLOORS.\nOCEAN LINER INTERIORS BY INC.\nBRING WHOEVER YOU OWE A DINNER.\nIN A WORD: BURNISHED.",
+  "alt_text": "Kimpton Era, Rockefeller Center, New York. A hotel brasserie bar with a long scarlet ceramic counter, round leather stools and a patterned mosaic floor."
+}

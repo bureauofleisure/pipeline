@@ -1,0 +1,49 @@
+{
+  "index": "0030",
+  "place": "The Fifth Avenue Hotel",
+  "status": "BUILT",
+  "notes": [
+    "photo 5 wide-angle lean +4.3 deg left as shot",
+    "photo 6 straightened +4.7 deg",
+    "photo 6 dropped: did not match the set"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "0b7e1c43194a",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "c2eac3759dc0",
+  "meta": {
+    "neighborhood": "NoMad",
+    "city": "New York",
+    "category": "Hotel",
+    "word": "PLUSH",
+    "reminds": "an Edith Wharton drawing room",
+    "credit": "Joe Thomas",
+    "designer": "Martin Brudnizki Design Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.joethomasphoto.com/fifth-avenue-hotel",
+    "bring": "BRING SOMEONE WHO ASKS WHO DID THE INTERIORS."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0030/01.jpg?v=0b7e1c43194a",
+    "https://bureauofleisure.github.io/pipeline/posts/0030/02.jpg?v=0b7e1c43194a",
+    "https://bureauofleisure.github.io/pipeline/posts/0030/03.jpg?v=0b7e1c43194a",
+    "https://bureauofleisure.github.io/pipeline/posts/0030/04.jpg?v=0b7e1c43194a",
+    "https://bureauofleisure.github.io/pipeline/posts/0030/05.jpg?v=0b7e1c43194a",
+    "https://bureauofleisure.github.io/pipeline/posts/0030/06.jpg?v=0b7e1c43194a"
+  ],
+  "archive": "6 originals (5.7 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    3,
+    4,
+    2,
+    5
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0030\nTHE FIFTH AVENUE HOTEL. NOMAD, NEW YORK.\nA LANDMARKED MCKIM, MEAD & WHITE MANSION.\n153 ROOMS. INTERIORS BY MARTIN BRUDNIZKI.\nCAFE CARMELLINI BY CHEF ANDREW CARMELLINI.\nOPENED IN 2023 BY FLANEUR HOSPITALITY.\nBRING SOMEONE WHO ASKS WHO DID THE INTERIORS.\nIN A WORD: PLUSH.",
+  "alt_text": "The Fifth Avenue Hotel, NoMad, New York. A hotel restaurant with a tree growing through it, tiered chandeliers of glass globes, blue velvet banquettes and tan leather chairs at white-clothed tables."
+}

@@ -1,0 +1,49 @@
+{
+  "index": "0043",
+  "place": "Mr. C",
+  "status": "BUILT",
+  "notes": [
+    "photo 5 straightened +7.7 deg",
+    "photo 5 wide-angle lean -6.1 deg left as shot",
+    "photo 5 HOLD: too saturated"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "1f4b3280b485",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "0194585b07e4",
+  "meta": {
+    "neighborhood": "Coconut Grove",
+    "city": "Miami",
+    "category": "Hotel",
+    "word": "CRISP",
+    "reminds": "a Riva launch off Portofino",
+    "credit": "",
+    "designer": "Martin Brudnizki Design Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://mbds.com/selected-works/mr-c-miami",
+    "bring": "BRING THE FRIENDS WHO TURN BRUNCH INTO AN AFTERNOON."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0043/01.jpg?v=1f4b3280b485",
+    "https://bureauofleisure.github.io/pipeline/posts/0043/02.jpg?v=1f4b3280b485",
+    "https://bureauofleisure.github.io/pipeline/posts/0043/03.jpg?v=1f4b3280b485",
+    "https://bureauofleisure.github.io/pipeline/posts/0043/04.jpg?v=1f4b3280b485",
+    "https://bureauofleisure.github.io/pipeline/posts/0043/05.jpg?v=1f4b3280b485",
+    "https://bureauofleisure.github.io/pipeline/posts/0043/06.jpg?v=1f4b3280b485"
+  ],
+  "archive": "5 originals (2.0 MB), 0 new",
+  "cover_source_photo": 2,
+  "slide_sources": [
+    2,
+    6,
+    4,
+    3,
+    1
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0043\nMR. C. COCONUT GROVE, MIAMI.\nFROM THE CIPRIANI FAMILY.\nBELLINI, ON THE FIFTH FLOOR, OVER THE HARBOUR.\nTERRAZZO FLOOR, HIGH GLOSS LIMED OAK PANELLING.\nBLUE AND WHITE STRIPES, MURANO CHANDELIERS.\nBRING THE FRIENDS WHO TURN BRUNCH INTO AN AFTERNOON.\nIN A WORD: CRISP.",
+  "alt_text": "Mr. C, Coconut Grove, Miami. A bright hotel restaurant with blue and white striped banquettes, a terrazzo floor and glass chandeliers by tall windows."
+}

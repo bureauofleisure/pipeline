@@ -1,0 +1,29 @@
+{
+  "index": "0047",
+  "place": "Hotel Rochechouart",
+  "status": "BENCHED",
+  "notes": [
+    "photo 3 wide-angle lean +6.7 deg left as shot",
+    "HOLD: slides do not match"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "670cfb3fde58",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "323ea2fcd8f9",
+  "meta": {
+    "neighborhood": "Pigalle",
+    "city": "Paris",
+    "category": "Restaurant",
+    "word": "HUSHED",
+    "reminds": "a Brassai night in Montmartre",
+    "credit": "",
+    "designer": "Festen Architecture",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.festenarchitecture.com/projects/rochechouart",
+    "bring": "BRING SOMEONE WHO TELLS A LONG STORY WELL."
+  }
+}

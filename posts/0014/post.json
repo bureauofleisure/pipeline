@@ -1,0 +1,53 @@
+{
+  "index": "0014",
+  "place": "TWA Hotel",
+  "status": "BUILT",
+  "notes": [
+    "photo 1 wide-angle lean -11.4 deg left as shot",
+    "photo 2 held: tilt 11.8 deg is over the limit",
+    "photo 3 straightened -6.2 deg",
+    "photo 5 repeats photo 4 from a closer or further angle, dropped",
+    "photo 10 repeats photo 9 from a closer or further angle, dropped",
+    "photo 11 held: tilt 11.8 deg is over the limit"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "00a1231f69db",
+  "built": "2026-10-22",
+  "edited_at": "",
+  "meta": {
+    "neighborhood": "JFK Airport",
+    "city": "New York",
+    "category": "Hotel",
+    "word": "SNAZZY",
+    "reminds": "Catch Me If You Can",
+    "credit": "Epicgenius, CC BY-SA 4.0, via Wikimedia Commons",
+    "designer": "Eero Saarinen",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_151.jpg",
+    "bring": ""
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0014/01.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/02.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/03.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/04.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/05.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/06.jpg",
+    "https://bureauofleisure.github.io/pipeline/posts/0014/07.jpg"
+  ],
+  "archive": "7 originals (25.8 MB), 2 new",
+  "cover_source_photo": 8,
+  "slide_sources": [
+    8,
+    4,
+    7,
+    6,
+    3,
+    1
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0014\nTWA HOTEL. JFK AIRPORT, NEW YORK.\nEERO SAARINEN'S FLIGHT CENTER, OPENED 1962.\nTHE SUNKEN LOUNGE, RESTORED WITHOUT ASHTRAYS.\nTWO SOLARI SPLIT-FLAP BOARDS. 512 ROOMS.\nFIFTEEN MILLION PENNY TILES. A HOTEL SINCE 2019.\nIN A WORD: SNAZZY.",
+  "alt_text": "TWA Hotel, JFK Airport, New York. The curved white concrete interior of the 1962 TWA Flight Center with its red sunken lounge and split-flap board."
+}

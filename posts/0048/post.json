@@ -1,0 +1,32 @@
+{
+  "index": "0048",
+  "place": "Bar Bardo",
+  "status": "BENCHED",
+  "notes": [
+    "photo 1 rejected: compression artifacts (blockiness 1.50)",
+    "photo 3 rejected: compression artifacts (blockiness 1.53)",
+    "photo 4 rejected: compression artifacts (blockiness 1.50)",
+    "photo 5 rejected: compression artifacts (blockiness 1.44)",
+    "only 2 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "2298bd4ccdda",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "185f2166a9fe",
+  "meta": {
+    "neighborhood": "",
+    "city": "Milan",
+    "category": "Bar",
+    "word": "MIDNIGHT",
+    "reminds": "Adolf Loos's American Bar, Vienna",
+    "credit": "Piercarlo Quecchia",
+    "designer": "NM3",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/19/nm3-classic-bar-milan/",
+    "bring": "BRING WHOEVER TAUGHT YOU TO DRINK MARTINIS."
+  }
+}

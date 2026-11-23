@@ -1,0 +1,45 @@
+{
+  "index": "0039",
+  "place": "Bistrot \u00e0 Franky",
+  "status": "BUILT",
+  "notes": [],
+  "grade": "v1.2",
+  "entry_hash": "f5debb0adf1c",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "fbbea5baa177",
+  "meta": {
+    "neighborhood": "Mile End",
+    "city": "Montreal",
+    "category": "Restaurant",
+    "word": "SUAVE",
+    "reminds": "a Kurokawa capsule set for dinner",
+    "credit": "Alex Lesage",
+    "designer": "Atelier Z\u00e9bulon Perron",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.dezeen.com/2026/10/30/atelier-zebulon-perron-bistrot-franky-montreal/",
+    "bring": "BRING SOMEONE WHO HAS BEEN TO PARIS ALONE."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0039/01.jpg?v=f5debb0adf1c",
+    "https://bureauofleisure.github.io/pipeline/posts/0039/02.jpg?v=f5debb0adf1c",
+    "https://bureauofleisure.github.io/pipeline/posts/0039/03.jpg?v=f5debb0adf1c",
+    "https://bureauofleisure.github.io/pipeline/posts/0039/04.jpg?v=f5debb0adf1c",
+    "https://bureauofleisure.github.io/pipeline/posts/0039/05.jpg?v=f5debb0adf1c",
+    "https://bureauofleisure.github.io/pipeline/posts/0039/06.jpg?v=f5debb0adf1c"
+  ],
+  "archive": "5 originals (4.6 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    2,
+    5,
+    4,
+    3
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0039\nBISTROT \u00c0 FRANKY. MILE END, MONTREAL.\nCHEF FRANCIS BLAIS. ATELIER Z\u00c9BULON PERRON.\nA ZINC BAR UNDER A MILLED ALUMINIUM WINE CELLAR.\nPYREX TUBE CHANDELIERS BY LAMBERT & FILS.\nART ON THE WALLS CURATED BY XAVIER DOLAN.\nBRING SOMEONE WHO HAS BEEN TO PARIS ALONE.\nIN A WORD: SUAVE.",
+  "alt_text": "Bistrot \u00e0 Franky, Mile End, Montreal. A monochrome white bistro with a zinc bar, blond leather banquettes under big mirrors, butcher block tables and glowing tube chandeliers."
+}

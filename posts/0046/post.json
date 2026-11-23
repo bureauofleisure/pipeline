@@ -1,0 +1,29 @@
+{
+  "index": "0046",
+  "place": "Bavel",
+  "status": "BENCHED",
+  "notes": [
+    "photo 2 HOLD: too saturated",
+    "only 3 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "0a41f08bd2b1",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "761312eb3634",
+  "meta": {
+    "neighborhood": "Arts District",
+    "city": "Los Angeles",
+    "category": "Restaurant",
+    "word": "LEAFY",
+    "reminds": "a Tel Aviv courtyard in June",
+    "credit": "",
+    "designer": "Studio UNLTD",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.studiounltd.com/work/bavel",
+    "bring": "BRING WHOEVER ORDERS FOR THE TABLE."
+  }
+}

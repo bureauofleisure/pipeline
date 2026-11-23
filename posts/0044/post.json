@@ -1,0 +1,30 @@
+{
+  "index": "0044",
+  "place": "Casa Cody",
+  "status": "BENCHED",
+  "notes": [
+    "photo 1 HOLD: too saturated",
+    "photo 4 wide-angle lean +3.3 deg left as shot",
+    "only 3 photos passed, need 4"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "eb8d95ae0990",
+  "built": "2026-11-23",
+  "edited_at": "",
+  "photos_sig": "4b0a53222906",
+  "meta": {
+    "neighborhood": "",
+    "city": "Palm Springs",
+    "category": "Hotel",
+    "word": "UNHURRIED",
+    "reminds": "Joan Didion's Palm Springs",
+    "credit": "Lance Gerber & Josh Cho",
+    "designer": "Electric Bowery",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.electricbowery.com/casa-cody",
+    "bring": "BRING THE FRIEND WHO MOVED AWAY AND IS BACK FOR A WEEK."
+  }
+}

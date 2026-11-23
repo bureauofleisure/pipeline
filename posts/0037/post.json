@@ -1,0 +1,47 @@
+{
+  "index": "0037",
+  "place": "Hotel Regina",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 keystone corrected +1.3 deg",
+    "photo 4 straightened +1.1 deg",
+    "photo 4 keystone corrected -1.3 deg"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "ae8e4196c718",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "ab0e80336eef",
+  "meta": {
+    "neighborhood": "Avenue de l'Imperatrice",
+    "city": "Biarritz",
+    "category": "Hotel",
+    "word": "STARCHED",
+    "reminds": "an Eileen Gray ocean liner",
+    "credit": "Patrick Locqueneux",
+    "designer": "Dorothee Meilichzon",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://chzon.com/hotel-regina-1",
+    "bring": "BRING YOUR SISTER. SHE HAS OPINIONS ABOUT CHAIRS."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0037/01.jpg?v=ae8e4196c718",
+    "https://bureauofleisure.github.io/pipeline/posts/0037/02.jpg?v=ae8e4196c718",
+    "https://bureauofleisure.github.io/pipeline/posts/0037/03.jpg?v=ae8e4196c718",
+    "https://bureauofleisure.github.io/pipeline/posts/0037/04.jpg?v=ae8e4196c718",
+    "https://bureauofleisure.github.io/pipeline/posts/0037/05.jpg?v=ae8e4196c718"
+  ],
+  "archive": "4 originals (2.9 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    4,
+    2,
+    3
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0037\nHOTEL REGINA. AVENUE DE L'IMPERATRICE, BIARRITZ.\nBUILT AS A HOTEL IN 1906 BY HENRY MARTINET.\nA FIFTEEN-METRE-HIGH BELLE EPOQUE ATRIUM.\nEILEEN GRAY STOOLS. ART DECO TILES BY WINCKELMANS.\nREDONE BY DOROTHEE MEILICHZON, 2023.\nBRING YOUR SISTER. SHE HAS OPINIONS ABOUT CHAIRS.\nIN A WORD: STARCHED.",
+  "alt_text": "Hotel Regina, Avenue de l'Imperatrice, Biarritz. A white Belle Epoque atrium three storeys high, with striped sofas, terracotta armchairs, rope lamps and a glass roof."
+}

@@ -1,0 +1,49 @@
+{
+  "index": "0035",
+  "place": "Uchiko Miami",
+  "status": "BUILT",
+  "notes": [
+    "photo 3 straightened -0.3 deg",
+    "photo 3 wide-angle lean +4.6 deg left as shot",
+    "photo 6 HOLD: brightness, too saturated"
+  ],
+  "grade": "v1.2",
+  "entry_hash": "694542bd4de8",
+  "built": "2026-11-16",
+  "edited_at": "",
+  "photos_sig": "06decf7942dd",
+  "meta": {
+    "neighborhood": "Sunset Harbour",
+    "city": "Miami Beach",
+    "category": "Restaurant",
+    "word": "LACQUERED",
+    "reminds": "a Lina Bo Bardi beach house",
+    "credit": "William Jess Laird",
+    "designer": "Islyn Studio",
+    "designer_handle": "",
+    "venue_handle": "",
+    "photographer_handle": "",
+    "source_handle": "",
+    "source_url": "https://www.islynstudio.com/projects/uchiko-miami/",
+    "bring": "BRING THE ONE WHO PHOTOGRAPHS THE BATHROOM."
+  },
+  "slides": [
+    "https://bureauofleisure.github.io/pipeline/posts/0035/01.jpg?v=694542bd4de8",
+    "https://bureauofleisure.github.io/pipeline/posts/0035/02.jpg?v=694542bd4de8",
+    "https://bureauofleisure.github.io/pipeline/posts/0035/03.jpg?v=694542bd4de8",
+    "https://bureauofleisure.github.io/pipeline/posts/0035/04.jpg?v=694542bd4de8",
+    "https://bureauofleisure.github.io/pipeline/posts/0035/05.jpg?v=694542bd4de8",
+    "https://bureauofleisure.github.io/pipeline/posts/0035/06.jpg?v=694542bd4de8"
+  ],
+  "archive": "5 originals (1.6 MB), 0 new",
+  "cover_source_photo": 1,
+  "slide_sources": [
+    1,
+    2,
+    4,
+    5,
+    3
+  ],
+  "caption_card": "BUREAU OF LEISURE NO. 0035\nUCHIKO MIAMI. SUNSET HARBOUR, MIAMI BEACH.\nTROPICAL BRUTALISM MEETS JAPANESE DECO.\nA GLOWING BAR BUILT FROM GLASS BLOCKS.\nTEAK SHUTTERS, CONCRETE, SEA GREEN MARBLE MOSAICS.\nA HOST STAND LIKE A THATCHED ROOF. ISLYN, 2025.\nBRING THE ONE WHO PHOTOGRAPHS THE BATHROOM.\nIN A WORD: LACQUERED.",
+  "alt_text": "Uchiko Miami, Sunset Harbour, Miami Beach. A dim Japanese restaurant with a sushi counter of blue tile, walnut booths, fringed lanterns and palms behind louvred teak shutters."
+}
