@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-22T19:56:43Z",
+ "searched": "2026-11-23T08:08:47Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,20 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
+  "searches": 6,
   "results": 1,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
-  "errors": [
-   "rate limited by loc.gov at Musso & Frank Grill; stopped searching, kept earlier finds"
-  ],
+  "errors": [],
   "rights_seen": {},
   "sample_files": null,
   "other_collections": 1,
-  "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 6
  },
- "next_target": 21,
+ "next_target": 27,
  "targets": [
   {
    "place": "Rainbow Room",
