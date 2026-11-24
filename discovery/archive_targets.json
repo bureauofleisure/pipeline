@@ -429,6 +429,43 @@
     "Marcus Whitman Hotel"
    ],
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, grand lobby (2018699165, 2018699166) and lobby mural (2018699201). Still welcoming guests per the item titles. Three frames; needs a fourth room."
+  },
+  {
+   "place": "Casa Cody",
+   "city": "Palm Springs",
+   "era": "1920s",
+   "queries": [
+    "Casa Cody Palm Springs"
+   ],
+   "notes": "Added 2026-11-23: oldest operating hotel in Palm Springs, Class I Historic Site; current photographs by Lance Gerber & Josh Cho on electricbowery.com/casa-cody (picked as 0044). Archive second."
+  },
+  {
+   "place": "The Surrey",
+   "city": "New York",
+   "era": "1926",
+   "queries": [
+    "Surrey Hotel New York"
+   ],
+   "notes": "Added 2026-11-23: 1926 Upper East Side hotel, reopened 2024 by Corinthia with MBDS interiors (mbds.com/selected-works/the-surrey). MBDS page is mostly guest rooms; needs public-room photographs."
+  },
+  {
+   "place": "Hotel Monteleone",
+   "city": "New Orleans",
+   "era": "1886",
+   "queries": [
+    "Hotel Monteleone",
+    "Carousel Bar New Orleans"
+   ],
+   "notes": "Added 2026-11-23: Carousel Bar. Julie Soefer's set (juliesoefer.com/hotels/hotel-monteleone-new-orleans) is mostly posed models; look for room-only frames."
+  },
+  {
+   "place": "The LaFayette Hotel",
+   "city": "San Diego",
+   "era": "1946",
+   "queries": [
+    "Lafayette Hotel San Diego"
+   ],
+   "notes": "Added 2026-11-23: restored by Post Company (postcompany.co/catalogue/the-lafayette); full-size frames on that page are details and small pool shots so far."
   }
  ]
 }

@@ -12,7 +12,7 @@ permissions:
 jobs:
   preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40   # 2026-11-24: each photo is now graded like the build
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
