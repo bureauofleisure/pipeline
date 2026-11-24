@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-23T14:28:15Z",
+ "searched": "2026-11-24T00:19:23Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,22 +7,21 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 0,
-  "items_opened": 0,
+  "searches": 6,
+  "results": 19,
+  "items_opened": 2,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
-  "errors": [
-   "rate limited by loc.gov at Café Central; stopped searching, kept earlier finds"
-  ],
+  "errors": [],
   "rights_seen": {},
   "sample_files": null,
-  "rate_limited": true,
-  "targets_tried": 2
+  "other_collections": 17,
+  "tif_header_ok": 2,
+  "targets_tried": 6
  },
- "next_target": 28,
+ "next_target": 34,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -414,8 +413,21 @@
    "place": "Café Central",
    "city": "Vienna",
    "era": "1876",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Photographs of buildings in Los Angeles, California and the surrounding area",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/pplot/13700/13725/01297u.tif",
+     "width": 3512,
+     "height": 4336,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2005-01-01",
+     "source_page": "http://www.loc.gov/item/2006675247/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Les Bains Douches",
@@ -435,8 +447,21 @@
    "place": "Deep Eddy Pool",
    "city": "Austin",
    "era": "1915",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "This looks like one of the funky artistic neon signs that are everywhere in the eclectic South Austin neighborhood of Austin, Texas. It is that, perhaps, but it also directs one to the actual Deep Edd",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/28300/28336u.tif",
+     "width": 7218,
+     "height": 4817,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2014-01-01",
+     "source_page": "http://www.loc.gov/item/2014632536/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 1
   },
   {
    "place": "Hotel San José",
@@ -1068,6 +1093,38 @@
    "city": "Walla Walla",
    "era": "1927",
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, grand lobby (2018699165, 2018699166) and lobby mural (2018699201). Still welcoming guests per the item titles. Three frames; needs a fourth room.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Casa Cody",
+   "city": "Palm Springs",
+   "era": "1920s",
+   "notes": "Added 2026-11-23: oldest operating hotel in Palm Springs, Class I Historic Site; current photographs by Lance Gerber & Josh Cho on electricbowery.com/casa-cody (picked as 0044). Archive second.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "The Surrey",
+   "city": "New York",
+   "era": "1926",
+   "notes": "Added 2026-11-23: 1926 Upper East Side hotel, reopened 2024 by Corinthia with MBDS interiors (mbds.com/selected-works/the-surrey). MBDS page is mostly guest rooms; needs public-room photographs.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "Hotel Monteleone",
+   "city": "New Orleans",
+   "era": "1886",
+   "notes": "Added 2026-11-23: Carousel Bar. Julie Soefer's set (juliesoefer.com/hotels/hotel-monteleone-new-orleans) is mostly posed models; look for room-only frames.",
+   "candidates": [],
+   "count": 0
+  },
+  {
+   "place": "The LaFayette Hotel",
+   "city": "San Diego",
+   "era": "1946",
+   "notes": "Added 2026-11-23: restored by Post Company (postcompany.co/catalogue/the-lafayette); full-size frames on that page are details and small pool shots so far.",
    "candidates": [],
    "count": 0
   }
