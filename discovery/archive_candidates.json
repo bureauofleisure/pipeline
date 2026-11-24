@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-24T00:19:23Z",
+ "searched": "2026-11-24T10:21:08Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,21 +7,23 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 6,
-  "results": 19,
-  "items_opened": 2,
+  "searches": 1,
+  "results": 1,
+  "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
   "size": 0,
   "type": 0,
-  "errors": [],
+  "errors": [
+   "rate limited by loc.gov at Waldorf-Astoria; stopped searching, kept earlier finds"
+  ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 17,
-  "tif_header_ok": 2,
-  "targets_tried": 6
+  "other_collections": 1,
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 34,
+ "next_target": 35,
  "targets": [
   {
    "place": "Rainbow Room",
