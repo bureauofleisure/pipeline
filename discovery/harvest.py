@@ -24,9 +24,29 @@ KEEP = re.compile(r"\b(hotel|hotels|inn|resort|lodge|guesthouse|bar|bars|cocktai
                   r"bistro|brasserie|trattoria|osteria|diner|cafe|café|coffee|bakery|club|members|lounge|"
                   r"bathhouse|bath|baths|banya|sauna|spa|pool|lido|supper|speakeasy|wine|listening|"
                   r"hospitality|interiors?|dining)\b", re.I)
-WARN = re.compile(r"\b(render|rendering|renders|visuali[sz]ation|visuali[sz]ed|concept|unbuilt|proposal|"
-                  r"proposed|speculative|midjourney|ai[- ]generated|generated|imagined|coming soon|"
-                  r"will open|set to open|planned)\b", re.I)
+# Render and opening-date warnings for the review. 2026-11-24: bare "concept" (a restaurant concept, open concept),
+# "planned", "imagined", "proposal" and "render" as plaster or as a verb made 34 of 272 items in the 2026-11-23
+# harvest carry false warnings, which hid the real ones (Not A Hotel renders, Casa Cook "will open in 2027").
+WARN = re.compile(r"\b(renders?|renderings?|visuali[sz]ations?|visuali[sz]ed|concept (?:images?|designs?|renders?|visuals?|drawings?)|"
+                  r"unbuilt|design proposal|competition proposal|winning proposal|proposed (?:design|scheme|project|building|hotel|"
+                  r"restaurant|bar|interiors?|extension|redevelopment)|speculative|midjourney|ai[- ]generated|computer[- ]generated|"
+                  r"coming soon|will open|set to open|due to open|slated to open|planned (?:to open|for)|not yet built)\b", re.I)
+RENDER_BEFORE = re.compile(r"\b(?:the|these|those|digital|3d|cgi|new|architectural|released|shared|early|first|latest|"
+                           r"photorealistic|interior|exterior)\s+$", re.I)
+RENDER_AFTER = re.compile(r"^\s+(?:are|is|was|were|of|show|shows|showing|depict|depicts|courtesy|by|released|reveal|reveals|"
+                          r"published|suggest|suggests)\b", re.I)
+def warnings_in(text):
+    """Warning words in text; render words only where they mean images."""
+    out = set()
+    for m in WARN.finditer(text):
+        w = m.group(1).lower()
+        if w.startswith("render") and not (RENDER_BEFORE.search(text[max(0, m.start() - 20):m.start()])
+                                           or RENDER_AFTER.search(text[m.end():m.end() + 14])):
+            continue
+        out.add(w)
+    return sorted(out)
+
+
 CREDIT = re.compile(r"(?:photograph(?:y|s|er|ed)?|photos?|images?)\s*(?:is|are|was|were)?\s*(?:by|:|courtesy of|©)\s*([A-Z][\w.'&\- ]{2,50}?)(?=[,.;]|\s+(?:unless|and|for|at|in|the)\b)", re.I)
 DESIGN = re.compile(r"(?:designed by|design(?:er)?s?:|interiors? by|architects?:|by)\s+([A-Z][\w.'&\- ]{2,60}?)(?:[,.]|\s+(?:for|at|in)\b)", re.I)
 
@@ -328,7 +348,7 @@ def harvest_links(links, label="shortlist"):
                     seen.add(p["url"]); uniq.append(p)
             rec["photos"] = expand_dezeen(uniq) if "dezeen.com" in link else uniq
             rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:8]
-            rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
+            rec["warnings"] = warnings_in(text[:4000])
             # internal links, so a review can walk from a studio's index page to its project pages
             rec["links"] = sorted({urljoin(link, html.unescape(m.group(1)))
                                    for m in re.finditer(r'href=["\']([^"\'#?]+)', page)
@@ -461,7 +481,7 @@ def portfolio_harvest(sources, seen_path, per_source=int(os.environ.get("HARVEST
                 rec["photos"] = [{"url": k, "width_hint": v or 2500} for k, v in uniq.items()][:30]
                 rec["credits"] = [s["name"]] if s["category"] == "photographer" else sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                 rec["designers"] = [s["name"]] if s["category"] == "studio" else []
-                rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:3000])})
+                rec["warnings"] = warnings_in(text[:3000])
                 rec["hospitality"] = bool(KEEP.search(rec["title"] + " " + text[:1500]))
             except Exception as e:  # noqa: BLE001
                 rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
@@ -533,7 +553,7 @@ def main():
                         rec["photos"] = expand_dezeen(rec["photos"])
                     rec["credits"] = sorted({m.group(1).strip() for m in CREDIT.finditer(full_text(page))})[:5]
                     rec["designers"] = sorted({m.group(1).strip() for m in DESIGN.finditer(text)})[:5]
-                    rec["warnings"] = sorted({m.group(1).lower() for m in WARN.finditer(text[:4000])})
+                    rec["warnings"] = warnings_in(text[:4000])
                 except Exception as e:  # noqa: BLE001
                     rec["page_error"] = f"{type(e).__name__}: {str(e)[:80]}".rstrip(": ")
                 time.sleep(0.4)
