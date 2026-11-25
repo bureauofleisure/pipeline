@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-25T09:03:33Z",
+ "searched": "2026-11-25T21:57:17Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,23 +7,26 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 0,
-  "results": 0,
+  "searches": 1,
+  "results": 4,
   "items_opened": 0,
   "offtopic": 0,
   "rights": 0,
-  "size": 0,
+  "size": 1,
   "type": 0,
   "errors": [
-   "search Childs restaurant interior: HTTPError HTTP Error 503: Service Unavailable",
-   "rate limited by loc.gov at Madonna Inn; stopped searching, kept earlier finds"
+   "rate limited by loc.gov at Ahwahnee Hotel; stopped searching, kept earlier finds"
   ],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 3,
+  "tif_header_misses": [
+   "vices/master/pnp/highsm/24200/24282u.tif: HTTP 429"
+  ],
   "rate_limited": true,
   "targets_tried": 2
  },
- "next_target": 37,
+ "next_target": 38,
  "targets": [
   {
    "place": "Rainbow Room",
