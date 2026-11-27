@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-27T08:59:06Z",
+ "searched": "2026-11-27T21:40:01Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,36 +7,25 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 1,
-  "results": 12,
-  "items_opened": 0,
-  "offtopic": 0,
+  "searches": 6,
+  "results": 174,
+  "items_opened": 51,
+  "offtopic": 5,
   "rights": 0,
-  "size": 12,
-  "type": 0,
-  "errors": [
-   "rate limited by loc.gov at Essex House; stopped searching, kept earlier finds"
-  ],
+  "size": 16,
+  "type": 1,
+  "errors": [],
   "rights_seen": {},
   "sample_files": null,
+  "other_collections": 98,
+  "tif_header_ok": 65,
   "tif_header_misses": [
-   "vices/master/pnp/highsm/13000/13097u.tif: HTTP 429",
-   "haer/ar/ar0000/ar0035/color/570630cu.tif: HTTP 429",
-   "vices/master/pnp/highsm/16500/16591u.tif: HTTP 429",
-   "vices/master/pnp/highsm/64900/64942u.tif: HTTP 429",
-   "vices/master/pnp/highsm/64900/64943u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13463u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13464u.tif: HTTP 429",
-   "vices/master/pnp/highsm/13400/13422u.tif: HTTP 429",
-   "aer/ar/ar0000/ar0056/photos/010102pu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0036/color/570748cu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0034/color/570886cu.tif: HTTP 429",
-   "haer/ar/ar0000/ar0031/color/571934cu.tif: HTTP 429"
+   "bshaer/az/az0600/az0682/sheet/00001u.tif: HTTP 404",
+   "vices/master/pnp/highsm/53500/53530u.tif: TimeoutError"
   ],
-  "rate_limited": true,
-  "targets_tried": 2
+  "targets_tried": 6
  },
- "next_target": 41,
+ "next_target": 47,
  "targets": [
   {
    "place": "Rainbow Room",
@@ -825,8 +814,201 @@
    "city": "Tucson",
    "era": "1919",
    "notes": "Added 2026-11-09: Carol M. Highsmith, 2018, lobby (items 2018663112, 2018663113). Two frames found so far; needs four.",
-   "candidates": [],
-   "count": 0
+   "candidates": [
+    {
+     "title": "Entrance of the historic Hotel Congress in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49300/49396u.tif",
+     "width": 9141,
+     "height": 6763,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663114/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Lobby of the historic Hotel Congress in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49300/49395u.tif",
+     "width": 10624,
+     "height": 8306,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663113/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Lobby of the historic Hotel Congress in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49300/49394u.tif",
+     "width": 11502,
+     "height": 8629,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663112/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Rooftop sign for the historic Hotel Congress in downtown Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49400/49489u.tif",
+     "width": 8688,
+     "height": 5792,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663207/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Subtle light and shadows an old-style switchboard (salvaged from another classic hotel in town) in Tucson, Arizona's historic Hotel Congress",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49300/49338u.tif",
+     "width": 9323,
+     "height": 7389,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663056/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Courtyards at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53978u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702014/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Library at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53979u.tif",
+     "width": 10913,
+     "height": 6928,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702015/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Walkway at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53981u.tif",
+     "width": 11568,
+     "height": 8678,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702017/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Patio at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53977u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702013/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53980u.tif",
+     "width": 7665,
+     "height": 9829,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702016/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Cactus garden at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53982u.tif",
+     "width": 8708,
+     "height": 11608,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702018/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Large decorative lamp at the Arizona Inn, a historic resort hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/53900/53976u.tif",
+     "width": 8708,
+     "height": 11608,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702012/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Units of the Downtown Clifton Hotel, portions of which are in motel style, in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49300/49381u.tif",
+     "width": 11577,
+     "height": 8685,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663099/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Artist Danny Martin drew this unusual cowboy-and-cowgirl pair in a mural on a wall of the Downtown Clifton Hotel in Tucson, Arizona",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49500/49524u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663242/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Two of several classic neon signs in Tucson, Arizona, saved from destruction by preservationists and moved to a spot near Pima Community College",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49400/49425u.tif",
+     "width": 8708,
+     "height": 9230,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018663143/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Art deco-style sign for an unnamed hotel (at least on the sign) in Tucson, Arizona. It belongs to a vintage property that now (2018) is a Quality Inn property",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/49400/49407u.tif",
+     "width": 6909,
+     "height": 8770,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018",
+     "source_page": "http://www.loc.gov/item/2018663125/",
+     "provider": "Library of Congress"
+    }
+   ],
+   "count": 16
   },
   {
    "place": "Arizona Inn",
@@ -1081,6 +1263,18 @@
    "notes": "Added 2026-11-16: Carol M. Highsmith, 2018, lobby (items 2018702401, 2018702384), entrance, trophy heads. Needs the dining room and lounge frames to reach four rooms.",
    "candidates": [
     {
+     "title": "El Tovar Hotel, Grand Canyon, Coconino County, AZ",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/az/az0000/az0024/photos/008761pu.tif",
+     "width": 5000,
+     "height": 3562,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "whittlesey, charles historic american buildings survey boucher, jack e.",
+     "collection": "Historic American Buildings Survey, Library of Congress",
+     "date": "",
+     "source_page": "http://www.loc.gov/item/az0024/",
+     "provider": "Library of Congress"
+    },
+    {
      "title": "Entrance to the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River across northern i",
      "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54367u.tif",
      "width": 10970,
@@ -1091,9 +1285,81 @@
      "date": "2018-01-01",
      "source_page": "http://www.loc.gov/item/2018702403/",
      "provider": "Library of Congress"
+    },
+    {
+     "title": "Sign outside the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River across northern ",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54346u.tif",
+     "width": 4677,
+     "height": 4834,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702382/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "The dark and rustic lobby at the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River ",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54365u.tif",
+     "width": 11608,
+     "height": 8078,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702401/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "The dark and rustic lobby at the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colorado River ",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54348u.tif",
+     "width": 11444,
+     "height": 8391,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702384/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "One of several animal trophy heads at the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colora",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54345u.tif",
+     "width": 11608,
+     "height": 8708,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702381/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "One of several animal trophy heads at the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colora",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54390u.tif",
+     "width": 11014,
+     "height": 8262,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702426/",
+     "provider": "Library of Congress"
+    },
+    {
+     "title": "Two of several animal trophy heads at the El Tovar Hotel, the signature 1905 lodge at Grand Canyon National Park, which protects a large portion of a steep-sided and winding gorge carved by the Colora",
+     "url": "https://tile.loc.gov/storage-services/master/pnp/highsm/54300/54391u.tif",
+     "width": 10632,
+     "height": 7941,
+     "licence": "No known restrictions (Library of Congress)",
+     "author": "highsmith, carol m.",
+     "collection": "Carol M. Highsmith Archive, Library of Congress",
+     "date": "2018-01-01",
+     "source_page": "http://www.loc.gov/item/2018702427/",
+     "provider": "Library of Congress"
     }
    ],
-   "count": 1
+   "count": 8
   },
   {
    "place": "Gadsden Hotel",
