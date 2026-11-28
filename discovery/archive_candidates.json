@@ -1,5 +1,5 @@
 {
- "searched": "2026-11-27T21:40:01Z",
+ "searched": "2026-11-28T08:21:59Z",
  "provider": "Library of Congress",
  "collections": [
   "Gottscho-Schleisner Collection, Library of Congress",
@@ -7,25 +7,29 @@
   "Historic American Buildings Survey, Library of Congress"
  ],
  "stats": {
-  "searches": 6,
-  "results": 174,
-  "items_opened": 51,
-  "offtopic": 5,
+  "searches": 1,
+  "results": 7,
+  "items_opened": 0,
+  "offtopic": 0,
   "rights": 0,
-  "size": 16,
-  "type": 1,
-  "errors": [],
+  "size": 4,
+  "type": 0,
+  "errors": [
+   "rate limited by loc.gov at Marcus Whitman Hotel; stopped searching, kept earlier finds"
+  ],
   "rights_seen": {},
   "sample_files": null,
-  "other_collections": 98,
-  "tif_header_ok": 65,
+  "other_collections": 3,
   "tif_header_misses": [
-   "bshaer/az/az0600/az0682/sheet/00001u.tif: HTTP 404",
-   "vices/master/pnp/highsm/53500/53530u.tif: TimeoutError"
+   "vices/master/pnp/highsm/55100/55195u.tif: HTTP 429",
+   "vices/master/pnp/highsm/55100/55143u.tif: HTTP 429",
+   "vices/master/pnp/highsm/55100/55197u.tif: HTTP 429",
+   "vices/master/pnp/highsm/55000/55053u.tif: HTTP 429"
   ],
-  "targets_tried": 6
+  "rate_limited": true,
+  "targets_tried": 2
  },
- "next_target": 47,
+ "next_target": 48,
  "targets": [
   {
    "place": "Rainbow Room",
