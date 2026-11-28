@@ -1,5 +1,5 @@
 {
- "synced": "2026-11-27T23:32:58.951Z",
+ "synced": "2026-11-28T05:32:58.919Z",
  "rows": {
   "0001": {
    "status": "DRY RUN",
@@ -8,7 +8,7 @@
    "notes": "DRY RUN FAILED (would have failed live): Error: {\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"Ajci5NSY0M8nkxZZ2mj2dsX\"}",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0001\nVV'S COCKTAIL ROOM. CHELSEA, NEW YORK.\nEIGHTEEN SEATS. OMAKASE PACE.\nSTEEL BLUE USM HALLER SHELVING, WALL TO WALL.\nWALNUT BAR, BURGUNDY BANQUETTES.\nBUILT BY A RESTAURATEUR AND HIS FATHER.\nIN A WORD: LACQUERED.\n.\nVV's Cocktail Room, New York\nDesign: Josh Greenspan with USM\n.\nDM for credit.",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0003": {
    "status": "DRY RUN",
@@ -17,7 +17,7 @@
    "notes": "DRY RUN passed 2026-10-27T13:22:47.493Z: built 18002343185826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0003\nHOMMALI. WEST VILLAGE, NEW YORK.\nA THAI HOUSE, REBUILT INDOORS.\nTERRACOTTA FLOOR. A CENTRAL COURTYARD.\nFLUTED SAND TILE BAR. LEATHER AND VELVET.\nRICE PLANT LIGHT AT THE DOOR.\nIN A WORD: SUNLIT.\n.\nHommali, New York\nDesign: Surrane Design\n.\nDM for credit.",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0004": {
    "status": "KILLED",
@@ -26,7 +26,7 @@
    "notes": "BRING idea: BRING YOUR MOTHER.\nReminds: a Park Avenue apartment\nSource: https://www.dezeen.com/2026/08/14/busta-studio-kimpton-ashbel-hotel/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0004\nKIMPTON ASHBEL. PARK AVENUE, NEW YORK.\nA 1928 BEAUX-ARTS BUILDING.\nVELVET, LINEN, LEATHER, BOUCLE.\nJEWEL TONES ON A NEUTRAL GROUND.\nLOUVRES AT STREET LEVEL FOR PRIVACY.\nIN A WORD: PLUSH.\n.\nKimpton Ashbel, New York\nDesign: Busta Studio\nPhoto: Courtesy of Kimpton Ashbel",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0005": {
    "status": "KILLED",
@@ -35,7 +35,7 @@
    "notes": "Reminds: a Chicago neighborhood tavern\nSource: https://www.dezeen.com/2026/10/09/nota-taverna-mexico-city-formant-studio/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0005\nNOTA TAVERN. ESCANDÓN, MEXICO CITY.\nHALF OF AN OLD HACIENDA HOUSE.\nTWO FLOORS. ITALIAN-AMERICAN.\nCUSTOM FURNITURE BY FORMANT STUDIO.\nANTIQUES BY GALERÍA CÓRDOBA.\nIN A WORD: CLUBBY.\n.\nNota Tavern, Mexico City\nDesign: Formant Studio\nPhoto: Fabián Martinez",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0006": {
    "status": "DRY RUN",
@@ -44,7 +44,7 @@
    "notes": "DRY RUN passed 2026-10-28T13:22:31.317Z: built 18002640635826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0006\nLÈVE OFFICE BAR. TURIN.\nA 1920S BUILDING, ONCE A CAFE AND A BOOKSHOP.\nSTAINLESS STEEL BAR. CANTILEVER CHAIRS.\nWOOD PANELLING. MIRRORED WALLS.\nPOST-WAR AMERICAN OFFICE, REIMAGINED.\nIN A WORD: BRASSY.\n.\nLève Office Bar, Turin\nDesign: Fabio Fantolino\nPhoto: Luca Argenton",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0009": {
    "status": "DRY RUN",
@@ -53,7 +53,7 @@
    "notes": "DRY RUN passed 2026-10-31T13:22:32.291Z: built 18003518429826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0009\nPERIDOT. THE HENDERSON, HONG KONG.\n38TH FLOOR OF A ZAHA HADID TOWER.\nTWENTY THOUSAND TINY LIGHTS.\nLIME GREEN, FLOOR TO CEILING.\nTIMELESS FUTURISM, SAYS THE STUDIO.\nIN A WORD: GILDED.\n.\nPeridot, Hong Kong\nDesign: Studio Paolo Ferrari\nPhoto: Virgile Simon Bertrand",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0010": {
    "status": "DRY RUN",
@@ -62,7 +62,7 @@
    "notes": "DRY RUN passed 2026-11-03T14:22:38.378Z: built 18004394780826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0010\nCASSETTE. COVENT GARDEN, LONDON.\nA GOTHIC WORKSHOP, GRADE II LISTED.\nDOUBLE HEIGHT. GLASS FACADE.\nFIFTY-TWO SEATS OVER TWO FLOORS.\nA NEIGHBOURHOOD BISTRO IN THE CENTRE OF TOWN.\nIN A WORD: CRISP.\n.\nCassette, London\nDesign: Gundry & Ducker\nPhoto: Ed Reeve",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0011": {
    "status": "DRY RUN",
@@ -71,7 +71,7 @@
    "notes": "DRY RUN passed 2026-10-29T13:22:37.231Z: built 18002938880826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0011\nMINNIBAR. DOWNTOWN, MONTREAL.\nTWENTY-FOOT CEILINGS. A CORNER ROOM.\nTHE STRUCTURE LEFT BARE.\nPALE STONE COUNTER, OMAKASE LEDGE.\nIVY STUDIO'S FIRST CHAIRS.\nIN A WORD: UNHURRIED.\n.\nMinnibar, Montreal\nDesign: Ivy Studio\nPhoto: Alex Lesage",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0014": {
    "status": "KILLED",
@@ -80,7 +80,7 @@
    "notes": "EDITS 2026-10-21 17:15: these photos are no good, they are just a lot of concrete or carpet inside, they do not at all fit the aesthetic. This venue is great, find far better professional photos to replace all of these.\nReminds: Catch Me If You Can\nSource: https://commons.wikimedia.org/wiki/File:TWA_Flight_Center_Dec_2025_151.jpg",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0014\nTWA HOTEL. JFK AIRPORT, NEW YORK.\nEERO SAARINEN'S FLIGHT CENTER, OPENED 1962.\nTHE SUNKEN LOUNGE, RESTORED WITHOUT ASHTRAYS.\nTWO SOLARI SPLIT-FLAP BOARDS. 512 ROOMS.\nFIFTEEN MILLION PENNY TILES. A HOTEL SINCE 2019.\nIN A WORD: SNAZZY.\n.\nTWA Hotel, New York\nDesign: Eero Saarinen\nPhoto: Epicgenius, CC BY-SA 4.0, via Wikimedia Commons",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0015": {
    "status": "KILLED",
@@ -89,7 +89,7 @@
    "notes": "BRING idea: BRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.\nReminds: Hearst Castle's Neptune Pool\nSource: https://commons.wikimedia.org/wiki/File:Coral_Gables_FL_Venetian_Pool01.jpg",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0015\nVENETIAN POOL. CORAL GABLES, MIAMI.\nOPENED 1924 AS THE VENETIAN CASINO.\nCUT FROM A FOUR-ACRE LIMESTONE QUARRY.\nPHINEAS PAIST WITH DENMAN FINK. A GRAND WATERFALL.\n820,000 GALLONS OF WELL WATER. LISTED IN 1981.\nIN A WORD: LEAFY.\n.\nVenetian Pool, Miami\nDesign: Phineas Paist with Denman Fink\nPhoto: Ebyabe, CC BY-SA 3.0, via Wikimedia Commons",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0016": {
    "status": "KILLED",
@@ -98,7 +98,7 @@
    "notes": "Reminds: Goldfinger's opening shot\nSource: https://commons.wikimedia.org/wiki/File:Fontainebleau-1.jpg",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0016\nFONTAINEBLEAU. MIAMI BEACH, MIAMI.\nMORRIS LAPIDUS, 1954. BOW TIES IN THE DESIGN.\nBUILT ON THE OLD HARVEY FIRESTONE ESTATE.\nTHE STAIRCASE TO NOWHERE, PRESERVED.\nGOLDFINGER'S OPENING SHOT. SINATRA'S 1960 SPECIAL.\nIN A WORD: GLAMOROUS.\n.\nFontainebleau, Miami\nDesign: Morris Lapidus\nPhoto: Visitor7, CC BY-SA 3.0, via Wikimedia Commons",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0017": {
    "status": "KILLED",
@@ -107,7 +107,7 @@
    "notes": "BRING idea: BRING SOMEONE WHO LOVES GOSSIP.\nReminds: a Slim Aarons afternoon\nSource: https://commons.wikimedia.org/wiki/File:Polo_Lounge,_inside_(3715406002).jpg",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0017\nTHE POLO LOUNGE. BEVERLY HILLS, LOS ANGELES.\nNAMED FOR THE POLO PLAYERS WHO TOASTED HERE.\nPEACHY PINK WALLS. DARK GREEN BOOTHS.\nA PLUG-IN PHONE AT EVERY BOOTH.\nSOFTENED IN 1974 WITH TABLE LAMPS AND FLOWERS.\nIN A WORD: SWANKY.\n.\nThe Polo Lounge, Los Angeles\nPhoto: Alan Light, CC BY 2.0, via Wikimedia Commons",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0018": {
    "status": "DRY RUN",
@@ -116,7 +116,7 @@
    "notes": "DRY RUN FAILED (would have failed live): Error: {\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AMiqz42b_TZ21Aw_2hUEYpQ\"}",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0018\nTHE BEEKMAN. FINANCIAL DISTRICT, NEW YORK.\nTEMPLE COURT, 1883. SILLIMAN AND FARNSWORTH.\nA NINE-STOREY ATRIUM UNDER A PYRAMID SKYLIGHT.\nCAST-IRON BRACKETS SHAPED LIKE DRAGONS.\nEMPTY FROM 2001. A HOTEL SINCE 2016.\nIN A WORD: BURNISHED.\n.\nThe Beekman, New York\nDesign: Martin Brudnizki\nPhoto: Joe Thomas",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0020": {
    "status": "DRY RUN",
@@ -125,7 +125,7 @@
    "notes": "DRY RUN passed 2026-11-04T14:22:26.889Z: built 18004684280826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0020\nLA PADRONA. BACK BAY, BOSTON.\nINSIDE RAFFLES BOSTON. OPENED MAY 2024.\n8,600 SQUARE FEET OVER TWO FLOORS.\nA STAIR OF TRAVERTINE AND WALNUT.\n200 SEATS AROUND A VIOLET-VEINED MARBLE BAR.\nBRING SOMEONE WHO HAS BEEN TO ITALY.\nIN A WORD: MARBLED.\n.\nLa Padrona, Boston\nDesign: AvroKO\nPhoto: Joe Thomas",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0022": {
    "status": "DRY RUN",
@@ -134,7 +134,7 @@
    "notes": "DRY RUN passed 2026-11-05T14:22:33.735Z: built 18004994306826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0022\nMIMI KAKUSHI. MIAMI BEACH, MIAMI.\nFOURTH FLOOR OF THE DELANO.\n1920S OSAKA BY WAY OF OLD HOLLYWOOD.\nTIMBER BEAD CURTAINS. STAINED GLASS.\nA VIEW-MASTER INSTEAD OF A COCKTAIL LIST.\nIN A WORD: RITZY.\n.\nMimi Kakushi, Miami\nDesign: Pirajean Lees\nPhoto: Robert Reiger",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0023": {
    "status": "KILLED",
@@ -143,7 +143,7 @@
    "notes": "Edited, please re-review.\nEDITS 2026-11-02 19:35: these are photos and descriptions of the original version from 1962, which is not open anymore. They re-built TWA completely. So this post as-is does not make the cut.\nReminds: Catch Me If You Can\nSource: https://www.loc.gov/item/2018732786/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0023\nTWA FLIGHT CENTER. IDLEWILD, NEW YORK.\nEERO SAARINEN'S TERMINAL, OPENED 1962.\nTHE RESTAURANTS WERE RUN BY UNION NEWS.\nTHE LISBON LOUNGE. THE LONDON CLUB.\nPHOTOGRAPHED BY GOTTSCHO-SCHLEISNER, 1962.\nBRING WHOEVER TAUGHT YOU TO DRINK MARTINIS.\nIN A WORD: SWELL.\n.\nTWA Flight Center, New York\nDesign: Eero Saarinen\nPhoto: Gottscho-Schleisner Collection, Library of Congress",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0025": {
    "status": "KILLED",
@@ -152,7 +152,7 @@
    "notes": "Reminds: a Slim Aarons Newport afternoon\nSource: https://www.loc.gov/item/2018736219/",
    "kill_reason": "PHOTOS @2026-11-16T17:00:28Z",
    "caption": "BUREAU OF LEISURE NO. 0025\nTHE DUNES CLUB. NARRAGANSETT, RHODE ISLAND.\nTHE FIRST CLUBHOUSE WASHED AWAY IN 1938.\nREBUILT IN 1939 BY THOMAS PYM COPE.\nCOLONIAL REVIVAL, ON NARRAGANSETT BAY.\nON THE NATIONAL REGISTER SINCE 2015.\nBRING SOMEONE WHO SUMMERED SOMEWHERE WITH A POOL.\nIN A WORD: BREEZY.\n.\nThe Dunes Club, Rhode Island\nDesign: Thomas Pym Cope\nPhoto: Gottscho-Schleisner, Library of Congress",
-   "updated": "2026-11-27T23:32:58.950Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0026": {
    "status": "DRAFT",
@@ -161,7 +161,7 @@
    "notes": "Edited, please re-review.\nEDITS 2026-11-16 12:01: straighten the 2nd image or replace it\nReminds: a Tokyo jazz kissa\nSource: https://www.joethomasphoto.com/million-goods/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0026\nMILLION GOODS. FORT GREENE, BROOKLYN.\nA LANDMARKED BUILDING ON DEKALB AVENUE.\nA GLOSSY RED SPIRAL STAIRCASE.\nA BRECCIA PERNICE STONE WINE BAR.\nHI-FI DOWNSTAIRS. MENSWEAR UPSTAIRS.\nBRING SOMEONE WHO SPEAKS WINE.\nIN A WORD: DAPPER.\n.\nMillion Goods, Brooklyn\nDesign: Gjergji Shkurti\nPhoto: Joe Thomas",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0027": {
    "status": "DRY RUN",
@@ -170,7 +170,7 @@
    "notes": "DRY RUN passed 2026-11-17T14:22:34.537Z: built 18008980022826599 (images and caption, no tags), not published",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0027\nSKYWALKER GRILL. EXPOSITION PARK, LOS ANGELES.\nON TOP OF THE LUCAS MUSEUM. OPENED SEPTEMBER 2026.\nCHERRY WOOD ON THE WALLS AND THE CEILING.\nNO TWO PANELS ALIKE. A BAR CLAD IN SILVER GILT.\nA TERRACE LOOKING OUT OVER DOWNTOWN.\nIN A WORD: HONEYED.\n.\nSkywalker Grill, Los Angeles\nDesign: Rockwell Group\nPhoto: Tom McGovern",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0028": {
    "status": "KILLED",
@@ -179,7 +179,7 @@
    "notes": "Reminds: The Grand Budapest Hotel\nSource: https://www.loc.gov/item/2015634492/",
    "kill_reason": "PHOTOS @2026-11-16T17:02:42Z",
    "caption": "BUREAU OF LEISURE NO. 0028\nTHE GREENBRIER. WHITE SULPHUR SPRINGS, WV.\nWELCOMING GUESTS SINCE 1778.\nDOROTHY DRAPER REDECORATED IT AFTER THE WAR.\nHER FIRM HAS STYLED IT FOR OVER 75 YEARS.\nPHOTOGRAPHED BY CAROL M. HIGHSMITH, 2015.\nIN A WORD: POSH.\n.\nThe Greenbrier, West Virginia\nDesign: Dorothy Draper\nPhoto: Carol M. Highsmith, Library of Congress",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0029": {
    "status": "DRAFT",
@@ -188,7 +188,7 @@
    "notes": "Reminds: a 20th Century Limited dining car\nSource: https://tihanydesign.com/projects/the-penrose-room",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0029\nTHE PENROSE ROOM. THE BROADMOOR, COLORADO SPRINGS.\nOPENED IN 1961 ATOP THE NEW SOUTH TOWER.\nTHE RESORT WAS FOUNDED IN 1918 BY SPENCER PENROSE.\nREIMAGINED BY TIHANY DESIGN. REOPENED IN 2025.\nA LOUNGE LIKE A WESTERN SALOON. THREE DINING ROOMS.\nBRING WHOEVER STILL OWNS A BLAZER.\nIN A WORD: DEBONAIR.\n.\nThe Penrose Room, Colorado Springs\nDesign: Tihany Design\nPhoto: Amaury Laparra",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0030": {
    "status": "DRAFT",
@@ -197,7 +197,7 @@
    "notes": "Reminds: an Edith Wharton drawing room\nSource: https://www.joethomasphoto.com/fifth-avenue-hotel",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0030\nTHE FIFTH AVENUE HOTEL. NOMAD, NEW YORK.\nA LANDMARKED MCKIM, MEAD & WHITE MANSION.\n153 ROOMS. INTERIORS BY MARTIN BRUDNIZKI.\nCAFE CARMELLINI BY CHEF ANDREW CARMELLINI.\nOPENED IN 2023 BY FLANEUR HOSPITALITY.\nBRING SOMEONE WHO ASKS WHO DID THE INTERIORS.\nIN A WORD: PLUSH.\n.\nThe Fifth Avenue Hotel, New York\nDesign: Martin Brudnizki Design Studio\nPhoto: Joe Thomas",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0031": {
    "status": "DRAFT",
@@ -206,7 +206,7 @@
    "notes": "Reminds: a Jaffa courtyard house\nSource: https://homestudios.nyc/theodora",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0031\nTHEODORA. FORT GREENE, BROOKLYN.\nFROM CHEF TOMER BLECHMAN OF MISS ADA.\nAGED PLASTER, ZELLIGE TILE, CEPPO DI GRÈ SHELVES.\nSEVENTY-SIX SEATS IN THE DINING ROOM.\nINTERIOR ARCHITECTURE BY HOME STUDIOS, 2023.\nBRING WHOEVER KEEPS SAYING \"WE SHOULD GET DINNER.\"\nIN A WORD: TERRAZZO.\n.\nTheodora, Brooklyn\nDesign: Home Studios\nPhoto: Brian W. Ferry",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0032": {
    "status": "DRAFT",
@@ -215,7 +215,7 @@
    "notes": "Reminds: a Wes Anderson savings bank\nSource: https://www.robertmckinley.com/the-restaurant-at-hotel-kinsley",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0032\nHOTEL KINSLEY. UPTOWN STOCKADE, KINGSTON, NEW YORK.\nFOUR HISTORIC BUILDINGS IN THE HUDSON VALLEY.\nTHE MAIN HOUSE IS A FORMER BANK ON WALL STREET.\nCHECK IN HAPPENS INSIDE THE OLD VAULT.\nINTERIORS BY STUDIO ROBERT MCKINLEY, 2019.\nBRING SOMEONE YOU'VE BEEN MEANING TO CATCH UP WITH.\nIN A WORD: TWEEDY.\n.\nHotel Kinsley, Kingston, New York\nDesign: Studio Robert McKinley\nPhoto: Nicole Franzen",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0035": {
    "status": "DRAFT",
@@ -224,7 +224,7 @@
    "notes": "Reminds: a Lina Bo Bardi beach house\nSource: https://www.islynstudio.com/projects/uchiko-miami/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0035\nUCHIKO MIAMI. SUNSET HARBOUR, MIAMI BEACH.\nTROPICAL BRUTALISM MEETS JAPANESE DECO.\nA GLOWING BAR BUILT FROM GLASS BLOCKS.\nTEAK SHUTTERS, CONCRETE, SEA GREEN MARBLE MOSAICS.\nA HOST STAND LIKE A THATCHED ROOF. ISLYN, 2025.\nBRING THE ONE WHO PHOTOGRAPHS THE BATHROOM.\nIN A WORD: LACQUERED.\n.\nUchiko Miami, Miami Beach\nDesign: Islyn Studio\nPhoto: William Jess Laird",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0037": {
    "status": "DRAFT",
@@ -233,7 +233,7 @@
    "notes": "Reminds: an Eileen Gray ocean liner\nSource: https://chzon.com/hotel-regina-1",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0037\nHOTEL REGINA. AVENUE DE L'IMPERATRICE, BIARRITZ.\nBUILT AS A HOTEL IN 1906 BY HENRY MARTINET.\nA FIFTEEN-METRE-HIGH BELLE EPOQUE ATRIUM.\nEILEEN GRAY STOOLS. ART DECO TILES BY WINCKELMANS.\nREDONE BY DOROTHEE MEILICHZON, 2023.\nBRING YOUR SISTER. SHE HAS OPINIONS ABOUT CHAIRS.\nIN A WORD: STARCHED.\n.\nHotel Regina, Biarritz\nDesign: Dorothee Meilichzon\nPhoto: Patrick Locqueneux",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0038": {
    "status": "DRAFT",
@@ -242,7 +242,7 @@
    "notes": "Reminds: an Axel Vervoordt monastery\nSource: https://www.festenarchitecture.com/projects/hotel-du-couvent",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0038\nHOTEL DU COUVENT. OLD TOWN, NICE.\nBUILT IN 1604 FOR THE ORDER OF SAINT CLARE.\nA DECADE OF RESTORATION LED BY VALERY GREGO.\nEIGHTY-EIGHT ROOMS. INTERIORS BY FESTEN.\nROMAN-STYLE BATHS. GARDENS OF 300 PLANT SPECIES.\nBRING SOMEONE WHO HAS BEEN TO A BATHHOUSE AND LOVED IT.\nIN A WORD: SUNLIT.\n.\nHotel du Couvent, Nice\nDesign: Festen Architecture\n.\nDM for credit.",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0039": {
    "status": "DRAFT",
@@ -251,7 +251,7 @@
    "notes": "Reminds: a Kurokawa capsule set for dinner\nSource: https://www.dezeen.com/2026/10/30/atelier-zebulon-perron-bistrot-franky-montreal/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0039\nBISTROT À FRANKY. MILE END, MONTREAL.\nCHEF FRANCIS BLAIS. ATELIER ZÉBULON PERRON.\nA ZINC BAR UNDER A MILLED ALUMINIUM WINE CELLAR.\nPYREX TUBE CHANDELIERS BY LAMBERT & FILS.\nART ON THE WALLS CURATED BY XAVIER DOLAN.\nBRING SOMEONE WHO HAS BEEN TO PARIS ALONE.\nIN A WORD: SUAVE.\n.\nBistrot à Franky, Montreal\nDesign: Atelier Zébulon Perron\nPhoto: Alex Lesage",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0040": {
    "status": "DRAFT",
@@ -260,7 +260,7 @@
    "notes": "Reminds: Bar Martha in Ebisu\nSource: https://www.dezeen.com/2026/10/30/echo-rotterdam-listening-bar/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0040\nECHO. GROOT HANDELSGEBOUW, ROTTERDAM.\nA LISTENING BAR IN A POST-WAR OFFICE BLOCK.\nA BAR BUILT FROM WOODEN SHIPPING CRATES.\nOMBRÉ MIRRORS AND A RESIN LAMP BY SABINE MARCELIS.\nINTERIOR BY CLOUD. OPENED SEPTEMBER 2026.\nBRING SOMEONE WHO HAS BEEN TO JAPAN. TWICE.\nIN A WORD: SMOKY.\n.\nEcho, Rotterdam\nDesign: Cloud\nPhoto: Sophia van den Hoek",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0041": {
    "status": "DRAFT",
@@ -269,7 +269,7 @@
    "notes": "Reminds: Bemelmans after the theatre\nSource: https://www.islynstudio.com/projects/the-tusk-bar-brass/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0041\nTHE TUSK BAR AND BRASS. TIN PAN ALLEY, NEW YORK.\nINSIDE THE EVELYN, AN ART DECO BUILDING OF 1903.\nAN OYSTER BAR, THEN A GRAND DINING ROOM.\nA VINTAGE TAXIDERMY OSTRICH WATCHES THE ROOM.\nESQUIRE'S BEST BARS IN AMERICA, 2024.\nBRING A THIRD DATE.\nIN A WORD: SULTRY.\n.\nThe Tusk Bar & Brass, New York\nDesign: Islyn Studio\n.\nDM for credit.",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0042": {
    "status": "DRAFT",
@@ -278,7 +278,7 @@
    "notes": "Reminds: the Normandie's first-class salon\nSource: https://www.dezeen.com/2026/10/03/kimpton-era-hotel-new-york-city-inc/",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0042\nKIMPTON ERA. ROCKEFELLER CENTER, NEW YORK.\nA 33-STOREY TOWER ON WEST 48TH STREET.\nA BLACKENED STEEL STAIR IN A FLUTED ATRIUM.\nA SCARLET CERAMIC BAR, MOSAIC FLOORS.\nOCEAN LINER INTERIORS BY INC.\nBRING WHOEVER YOU OWE A DINNER.\nIN A WORD: BURNISHED.\n.\nKimpton Era, New York\nDesign: INC Architecture & Design\nPhoto: Read McKendree",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0043": {
    "status": "DRAFT",
@@ -287,7 +287,7 @@
    "notes": "Reminds: a Riva launch off Portofino\nSource: https://mbds.com/selected-works/mr-c-miami",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0043\nMR. C. COCONUT GROVE, MIAMI.\nFROM THE CIPRIANI FAMILY.\nBELLINI, ON THE FIFTH FLOOR, OVER THE HARBOUR.\nTERRAZZO FLOOR, HIGH GLOSS LIMED OAK PANELLING.\nBLUE AND WHITE STRIPES, MURANO CHANDELIERS.\nBRING THE FRIENDS WHO TURN BRUNCH INTO AN AFTERNOON.\nIN A WORD: CRISP.\n.\nMr. C, Miami\nDesign: Martin Brudnizki Design Studio\n.\nDM for credit.",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   },
   "0045": {
    "status": "DRAFT",
@@ -296,7 +296,7 @@
    "notes": "Reminds: a 1970s Malibu surf shack\nSource: https://www.joethomasphoto.com/ryder-hotel",
    "kill_reason": "",
    "caption": "BUREAU OF LEISURE NO. 0045\nTHE RYDER HOTEL. HISTORIC DISTRICT, CHARLESTON.\nTHE ORIGINAL STRUCTURE DATES TO 1958.\n91 ROOMS ON MEETING STREET.\nLITTLE PALM, A POOLSIDE CAFE AND BAR.\nWHITE, LIGHT WOOD, MIDCENTURY INSPIRATION.\nBRING THE FRIEND WHO SENDS YOU PLACES LIKE THIS.\nIN A WORD: SNAZZY.\n.\nThe Ryder Hotel, Charleston\nPhoto: Joe Thomas",
-   "updated": "2026-11-27T23:32:58.951Z"
+   "updated": "2026-11-28T05:32:58.919Z"
   }
  }
 }
